@@ -1,0 +1,38 @@
+% +AMDG  This document was begun on 7 July 11EX, the feast
+% of Sts. Cyril and Methodius, EEMM, and it is humbly
+% dedicated to them and to the Immaculate Heart of Mary for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar(oct"100",0.75em#+2ss#,cap#,0); "Aleph";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,h-0.75thinl);
+bot rt z1 = (w-ss,0-o);
+draw z0--z1;
+penpos2(thinl,90);
+z2l = (ss,0);
+penpos3(thinl,90);
+z3l = (w/6,0);
+penpos4(thickl,180);
+z4 = (w/3,curlh);
+penpos5(1.5thinl,180);
+z5r = (ss+hair,0.4h);
+z6 = (w/2,h);
+z7 = (z5--z6) intersectionpoint (z0--z1);
+penpos7(thinl,135);
+penpos8(thickl,90);
+z8r = (2w/3,h+o);
+penpos9(thickl,90);
+z9 = (w-ss,2h/3);
+z10 = ((w/2,h/2)--(w,h)) intersectionpoint (z8--z9);
+z11 = (z10--(x10,0)) intersectionpoint (z0--z1);
+
+penstroke z2e---z3e..z4e..z5e..z7e;
+penstroke z8e..z9e;
+pickup pencircle scaled thinl;
+draw z10--z11;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+penlabels(13,14,15,16,17,18);
+endchar;

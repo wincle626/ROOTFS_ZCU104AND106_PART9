@@ -1,0 +1,80 @@
+% +AMDG
+
+font_identifier:="drm"; font_size:=24pt#; font_coding_scheme "T1";
+pixels_per_inch:=1200;
+mode_setup;
+
+%%%% Define Dimensions for Whole Boxes %%%%
+
+phi=(1+sqrt5)/2;
+cap#=21pt#;
+u#=2cap#/3;
+em#=cap#;
+ex#=0.6cap#;
+exw# = ex#; define_pixels(exw);
+dep#=cap#/3;
+ss#=0.2pt#;
+asch#=12cap#/12;
+digwid#=1ex#;
+slant = 1/3;
+font_slant slant;
+font_normal_space 0.5u#;
+font_normal_stretch 0.2u#;
+font_normal_shrink 0.2u#;
+font_x_height cap#/phi;
+font_quad em#;
+font_extra_space 0.5u#;
+
+penwidth#=0.01pt#;
+
+%%%% Define Dimensions for Letters %%%%
+
+curlw#=0.2u#;
+curlh#=0.2u#;
+define_pixels(curlw,curlh);
+lserc#=0.08u#;
+lserh#=lserc#+lserstep#;
+lhigh#=0.3u#;
+lserstep#=0.05u#;
+userc#=0.08u#;
+userh#=userc#+userstep#;
+lserw#=0.2u#;
+userw#=0.2u#;
+userstep#=0.05u#;
+bulbsh#=0.10u#;
+curvwid#=2.4pt#;
+slantwid#=2.4pt#;
+thickstroke#=2.2pt#;
+loopgap#=1.7pt#;
+thinstroke#=1.2pt#;
+o#=0.0thinstroke#;
+hair#=0.2pt#;
+ssslant#=0.1u#;
+dotwidth#=userw#-o#;
+pwid#=2userw#;
+accwid# = pwid#/8;
+theight#=7asch#/8;
+define_pixels(theight);
+
+define_pixels(accwid,cap,u,em,ex,dep,ss,penwidth,lserh,userh,lhigh,lserw,bulbsh,userw,lserc,userc,lserstep,userstep,ssslant,curvwid,slantwid,pwid,hair,loopgap,dotwidth);
+define_blacker_pixels(accwid,cap,u,em,ex,dep,ss,penwidth,lserh,userh,lhigh,lserw,bulbsh,userw,lserc,userc,lserstep,userstep,ssslant,curvwid,slantwid,pwid,hair);
+define_blacker_pixels(thickstroke,thinstroke,penwidth,o,hair);
+
+pickup pencircle scaled penwidth; cappen:=savepen;
+equalize=thickstroke/2-thinstroke/2;
+
+currenttransform:=identity slanted slant yscaled aspect_ratio scaled granularity;
+
+input drmcap.mf;
+input drmitcap.mf;
+input drmlowmac.mf;
+input drmitlow.mf;
+input drmpunct.mf;
+input drmacc.mf;
+input drmitacclet.mf;
+input drmitpunct.mf;
+input drmitdigs.mf;
+input drmitoldstydigs.mf;
+input drmitligs.mf;
+
+end;

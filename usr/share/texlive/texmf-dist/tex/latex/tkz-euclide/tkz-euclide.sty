@@ -1,0 +1,30 @@
+% tkz-euclide.sty
+% Copyright 2020 by Alain Matthes
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%<------------------------------------------------------------–>
+\def\fileversion{3.02c}
+\def\filedate{2020/01/24} 
+\typeout{2020/01/24 3.02c  tkz-euclide.sty} 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tkz-euclide}[2020/01/24 3.02c  for  euclidan geometry ]
+\RequirePackage{tkz-base}
+\makeatletter
+\@ifpackagelater{tkz-base}{2020/01/24}{%
+    % Package is new enough
+}{%
+    \PackageError{tkz-euclide}{Package tkz-base is too old , you need a recent version}%
+}
+\makeatother
+\DeclareOption*{}%% Ne rien faire quand une option est inconnue
+\ProcessOptions
+%<----------------------------------------------------------–>
+%                          Initialisation
+%<----------------------------------------------------------–>
+\input{tkz-tools-intersections}
+\input{tkz-tools-angles}
+\usetkzobj{eu-angles,eu-arcs,eu-compass,eu-circles,eu-draw-circles,eu-lines,eu-draw-lines,eu-points,eu-points-by,eu-points-rnd,eu-points-with,eu-draw-polygons,eu-polygons,eu-protractor,eu-sectors,eu-show,eu-triangles}
+\endinput

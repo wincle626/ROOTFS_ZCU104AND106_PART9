@@ -1,0 +1,81 @@
+% CM-style ``Sans Serif'' Slanted I, Pi, Xi 12 pt
+% Based on fonts by Donald Knuth
+% By Ariel Barton, 2013/4/12
+if unknown sansfontbase: input sansfontbase fi
+
+font_identifier:="CMSMFI"; font_size 12pt#;
+
+u#:=23.5/36pt#;                 % cmssi12 % unit width
+width_adj#:=17/36pt#;           % cmssi12 % width adjustment for certain characters
+serif_fit#:=-9/36pt#;           % cmssi12 % extra sidebar near lowercase serifs
+cap_serif_fit#:=-13/36pt#;      % cmssi12 % extra sidebar near uppercase serifs
+letter_fit#:=0pt#;              % cmssi12 % extra space added to all sidebars
+
+body_height#:=324/36pt#;        % cmssi12 % height of tallest characters
+asc_height#:=300/36pt#;         % cmssi12 % height of lowercase ascenders
+cap_height#:=300/36pt#;         % cmssi12 % height of caps
+fig_height#:=283/36pt#;         % cmssi12 % height of numerals
+x_height#:=192/36pt#;           % cmssi12 % height of lowercase without ascenders
+math_axis#:=108/36pt#;          % cmssi12 % axis of symmetry for math symbols
+bar_height#:=97/36pt#;          % cmssi12 % height of crossbar in lowercase e
+comma_depth#:=54/36pt#;         % cmssi12 % depth of comma below baseline
+desc_depth#:=84/36pt#;          % cmssi12 % depth of lowercase descenders
+
+crisp#:=0pt#;                   % cmssi12 % diameter of serif corners
+tiny#:=0pt#;                    % cmssi12 % diameter of rounded corners
+fine#:=0pt#;                    % cmssi12 % diameter of sharply rounded corners
+thin_join#:=20/36pt#;           % cmssi12 % width of extrafine details
+hair#:=33/36pt#;                % cmssi12 % lowercase hairline breadth
+stem#:=33/36pt#;                % cmssi12 % lowercase stem breadth
+curve#:=33/36pt#;               % cmssi12 % lowercase curve breadth
+ess#:=33/36pt#;                 % cmssi12 % breadth in middle of lowercase s
+flare#:=30/36pt#;               % cmssi12 % diameter of bulbs or breadth of terminals
+dot_size#:=35/36pt#;            % cmssi12 % diameter of dots
+cap_hair#:=33/36pt#;            % cmssi12 % uppercase hairline breadth
+cap_stem#:=37/36pt#;            % cmssi12 % uppercase stem breadth
+cap_curve#:=37/36pt#;           % cmssi12 % uppercase curve breadth
+cap_ess#:=37/36pt#;             % cmssi12 % breadth in middle of uppercase s
+rule_thickness#:=15.84/36pt#;   % cmssi12 % thickness of lines in math symbols
+
+dish#:=0pt#;                    % cmssi12 % amount erased at top or bottom of serifs
+bracket#:=0pt#;                 % cmssi12 % vertical distance from serif base to tangent
+jut#:=0pt#;                     % cmssi12 % protrusion of lowercase serifs
+cap_jut#:=0pt#;                 % cmssi12 % protrusion of uppercase serifs
+beak_jut#:=0pt#;                % cmssi12 % horizontal protrusion of beak serifs
+beak#:=0.6/36pt#;               % cmssi12 % vertical protrusion of beak serifs
+vair#:=26/36pt#;                % cmssi12 % vertical diameter of hairlines
+notch_cut#:=22/36pt#;           % cmssi12 % maximum breadth above or below notches
+bar#:=25/36pt#;                 % cmssi12 % lowercase bar thickness
+slab#:=27/36pt#;                % cmssi12 % serif and arm thickness
+cap_bar#:=26/36pt#;             % cmssi12 % uppercase bar thickness
+cap_band#:=24/36pt#;            % cmssi12 % uppercase thickness above/below lobes
+cap_notch_cut#:=31/36pt#;       % cmssi12 % max breadth above/below uppercase notches
+serif_drop#:=2/36pt#;           % cmssi12 % vertical drop of sloped serifs
+stem_corr#:=1/36pt#;            % cmssi12 % for small refinements of stem breadth
+vair_corr#:=1/36pt#;            % cmssi12 % for small refinements of hairline height
+apex_corr#:=6/36pt#;            % cmssi12 % extra width at diagonal junctions
+
+o#:=9/36pt#;                    % cmssi12 % amount of overshoot for curves
+apex_o#:=0pt#;                  % cmssi12 % amount of overshoot for diagonal junctions
+
+slant:=0.21255;                 % cmssi12 % tilt ratio
+fudge:=0.98;                    % cmssi12 % factor applied to weights of heavy characters
+math_spread:=-0.2;              % cmssi12 % extra openness of math symbols
+superness:=0.7071;              % cmssi12 % parameter for superellipses
+superpull:=0.05;                % cmssi12 % extra openness inside bowls
+beak_darkness:=0;               % cmssi12 % fraction of triangle inside beak serifs
+ligs:=2;                        % cmssi12 % level of ligatures to be included
+
+square_dots:=true;              % cmssi12 % should dots be square?
+hefty:=true;                    % cmssi12 % should we try hard not to be overweight?
+serifs:=false;                  % cmssi12 % should serifs and bulbs be attached?
+monospace:=false;               % cmssi12 % should all characters have the same width?
+variant_g:=false;               % cmssi12 % should an italic-style g be used?
+low_asterisk:=false;            % cmssi12 % should the asterisk be centered at the axis?
+math_fitting:=false;            % cmssi12 % should math-mode spacing be used?
+
+I_cap_jut#:=41/36pt#;           % cmmi12% Special parameters for serifs on uppercase I and Pi
+I_beak#:=84/36pt#;              % cmmi12% Special parameters for serifs on uppercase I and Pi
+bigdw#:=5/36pt#;                % cmmi12% Adjusted dw for unusually wide strokes
+
+generate sans-IPiXi             % switch to the driver file

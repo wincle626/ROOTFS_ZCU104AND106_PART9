@@ -1,0 +1,106 @@
+% CM-style Sans Serif Bold Math Symbols 10 pt
+% Based on fonts by Donald Knuth and John Sauter
+% By Ariel Barton, 2013/4/12
+if unknown sansfontbase: input sansfontbase fi
+
+font_identifier:="CMSSBSY"; font_size 10pt#;
+
+u#:=22/36pt#;                   % sautercmssxi10 % unit width
+width_adj#:=22/36pt#;           % sautercmssxi10 % width adjustment for certain characters
+serif_fit#:=-9/36pt#;           % sautercmssxi10 % extra sidebar near lowercase serifs
+cap_serif_fit#:=-11/36pt#;      % sautercmssxi10 % extra sidebar near uppercase serifs
+letter_fit#:=0pt#;              % sautercmssxi10 % extra space added to all sidebars
+
+body_height#:=270/36pt#;        % sautercmssxi10 % height of tallest characters
+asc_height#:=250/36pt#;         % sautercmssxi10 % height of lowercase ascenders
+cap_height#:=250/36pt#;         % sautercmssxi10 % height of caps
+fig_height#:=250/36pt#;         % sautercmssxi10 % height of numerals
+x_height#:=165/36pt#;           % sautercmssxi10 % height of lowercase without ascenders
+math_axis#:=90/36pt#;           % sautercmssxi10 % axis of symmetry for math symbols
+bar_height#:=90/36pt#;          % sautercmssxi10 % height of crossbar in lowercase e
+comma_depth#:=38/36pt#;         % sautercmssxi10 % depth of comma below baseline
+desc_depth#:=70/36pt#;          % sautercmssxi10 % depth of lowercase descenders
+
+crisp#:=26/36pt#;               % sautercmssxi10 % diameter of serif corners
+tiny#:=26/36pt#;                % sautercmssxi10 % diameter of rounded corners
+fine#:=9/36pt#;                 % sautercmssxi10 % diameter of sharply rounded corners
+thin_join#:=9/36pt#;            % sautercmssxi10 % width of extrafine details
+hair#:=49/36pt#;                % sautercmssxi10 % lowercase hairline breadth
+stem#:=49/36pt#;                % sautercmssxi10 % lowercase stem breadth
+curve#:=49/36pt#;               % sautercmssxi10 % lowercase curve breadth
+ess#:=43/36pt#;                 % sautercmssxi10 % breadth in middle of lowercase s
+flare#:=40/36pt#;               % sautercmssxi10 % diameter of bulbs or breadth of terminals
+dot_size#:=47/36pt#;            % sautercmssxi10 % diameter of dots
+cap_hair#:=49/36pt#;            % sautercmssxi10 % uppercase hairline breadth
+cap_stem#:=53/36pt#;            % sautercmssxi10 % uppercase stem breadth
+cap_curve#:=53/36pt#;           % sautercmssxi10 % uppercase curve breadth
+cap_ess#:=51/36pt#;             % sautercmssxi10 % breadth in middle of uppercase s
+rule_thickness#:=30/36pt#;      % sautercmssxi10 % thickness of lines in math symbols
+
+dish#:=0pt#;                    % sautercmssxi10 % amount erased at top or bottom of serifs
+bracket#:=0pt#;                 % sautercmssxi10 % vertical distance from serif base to tangent
+jut#:=0pt#;                     % sautercmssxi10 % protrusion of lowercase serifs
+cap_jut#:=0pt#;                 % sautercmssxi10 % protrusion of uppercase serifs
+beak_jut#:=0pt#;                % sautercmssxi10 % horizontal protrusion of beak serifs
+beak#:=1.5/36pt#;               % sautercmssxi10 % vertical protrusion of beak serifs
+vair#:=26/36pt#;                % sautercmssxi10 % vertical diameter of hairlines
+notch_cut#:=49/36pt#;           % sautercmssxi10 % maximum breadth above or below notches
+bar#:=26/36pt#;                 % sautercmssxi10 % lowercase bar thickness
+slab#:=36/36pt#;                % sautercmssxi10 % serif and arm thickness
+cap_bar#:=34/36pt#;             % sautercmssxi10 % uppercase bar thickness
+cap_band#:=31/36pt#;            % sautercmssxi10 % uppercase thickness above/below lobes
+cap_notch_cut#:=45/36pt#;       % sautercmssxi10 % max breadth above/below uppercase notches
+serif_drop#:=2/36pt#;           % sautercmssxi10 % vertical drop of sloped serifs
+stem_corr#:=1/36pt#;            % sautercmssxi10 % for small refinements of stem breadth
+vair_corr#:=2/36pt#;            % sautercmssxi10 % for small refinements of hairline height
+apex_corr#:=18/36pt#;           % sautercmssxi10 % extra width at diagonal junctions
+
+o#:=8/36pt#;                    % sautercmssxi10 % amount of overshoot for curves
+apex_o#:=0pt#;                  % sautercmssxi10 % amount of overshoot for diagonal junctions
+
+slant:=0.21255;                 % sautercmssxi10 % tilt ratio
+fudge:=0.88;                    % sautercmssxi10 % factor applied to weights of heavy characters
+math_spread:=0.5;               % sautercmssxi10 % extra openness of math symbols
+superness:=0.75;                % sautercmssxi10 % parameter for superellipses
+superpull:=0.05556;             % sautercmssxi10 % extra openness inside bowls
+beak_darkness:=0;               % sautercmssxi10 % fraction of triangle inside beak serifs
+ligs:=2;                        % cmmib10 % level of ligatures to be included
+
+square_dots:=true;              % sautercmssxi10 % should dots be square?
+hefty:=true;                    % sautercmssxi10 % should we try hard not to be overweight?
+serifs:=false;                  % sautercmssxi10 % should serifs and bulbs be attached?
+monospace:=false;               % sautercmssxi10 % should all characters have the same width?
+variant_g:=false;               % sautercmssxi10 % should an italic-style g be used?
+low_asterisk:=false;            % sautercmssxi10 % should the asterisk be centered at the axis?
+math_fitting:=true;             % cmmib10 % should math-mode spacing be used?
+
+I_cap_jut#:=39/36pt#;           % cmmib10 % Special parameters for serifs on uppercase I
+I_beak#:=70/36pt#;              % cmmib10 % Special parameters for serifs on uppercase I
+bigdw#:=5/36pt#;                % cmmib10 % Adjusted dw for unusually wide strokes
+cal_cap_curve#:=53/36pt#;       % cmmib10 % Altered parameter for math calligraphy
+cal_stem#:=40/36pt#;            % cmmib10 % Altered parameter for math calligraphy
+cal_curve#:=45/36pt#;           % cmmib10 % Altered parameter for math calligraphy
+cal_cap_stem#:=50/36pt#;        % cmmib10 % Altered parameter for math calligraphy
+cal_cap_hair#:=30/36pt#;    % Altered parameter for math calligraphy
+
+% the following font parameters are explained in {\sl The \TeX book}, Appendix G
+subs:=7/10;  % subscripts to 10pt will normally be in 7pt type
+rth#:=.4pt#;     % assume that rules will come from cmex10
+fontdimen 8:  % parameters $\sigma_8$ through $\sigma_{22}$ will now be listed
+ math_axis#+3.51rth#+54/36pt#+subs*desc_depth#,  % num1
+ math_axis#+1.51rth#+30/36pt#,      % num2
+ math_axis#+1.51rth#+48/36pt#,      % num3
+ -(math_axis#-3.51rth#-subs*fig_height#-124/36pt#),  % denom1
+ -(math_axis#-1.51rth#-subs*fig_height#-30/36pt#),  % denom2
+ 8.99pt#-subs*asc_height#,          % sup1
+ 8.49pt#-subs*asc_height#,          % sup2
+ 104/36pt#,              % sup3
+ 54/36pt#,              % sub1
+ -(8.49pt#-2subs*asc_height#-3.1rule_thickness#),    % sub2
+ subs*asc_height#-36/36pt#,          % sup_drop
+ 18/36pt#,              % sub_drop
+ 23.9pt#,              % delim1
+ 10.1pt#,              % delim2
+ math_axis#;              % axis\_height
+
+generate sans-mathsy      % switch to the driver file

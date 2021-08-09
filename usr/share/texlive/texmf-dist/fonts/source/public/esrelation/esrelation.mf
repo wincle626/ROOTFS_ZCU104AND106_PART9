@@ -1,0 +1,441 @@
+%%
+%% This is file `esrelation.mf',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% esrelation.dtx  (with options: `mf')
+%% 
+%% Copyright (C) 2015
+%% by Byron Cook, Tauba Auerbach, and David Reinfurt
+%% 
+%% This work may be distributed and/or modified under the conditions of the LaTeX Project Public License, either version 1.3c of this license or (at your option) any later version. The latest version of this license is [here](http://www.latex-project.org/lppl.txt) and version 1.3c or later is part of all distributions of LaTeX version 2005/12/01 or later.
+%% 
+
+%% mf setup
+
+font_coding_scheme:="TeX math symbols";
+mode_setup; font_setup;
+
+autorounding:=0;
+font_slant slant; font_x_height x_height#;
+font_quad 18u# if not monospace:+4letter_fit# fi;
+slant:=mono_charic#:=0;  % the remaining characters will not be slanted
+currenttransform:=identity yscaled aspect_ratio scaled granularity;
+
+%% identify symbols
+
+%% brackets
+
+bracket_project_right=oct"025";
+bracket_project_left=oct"024";
+bracket_lifting=oct"026";
+
+%% symbols
+
+restrict_wand=oct"027";
+restrict_barb=oct"030";
+restrict_mallet=oct"021";
+restrict_wand_up=oct"050";
+restrict_barb_up=oct"051";
+restrict_mallet_up=oct"052";
+
+%% arrows
+
+r_arrow22=oct"021";
+
+arrow_project_right=oct"022";
+arrow_project_left=oct"023";
+
+%% bars
+
+barshort=oct"040";
+barlong=oct"043";
+verticalbarlongleft=oct"044";
+verticalbarlongright=oct"046";
+verticalbarshort=oct"045";
+
+%% declare extensible
+
+extensible oct"025": oct"025",0,0,oct"044";
+extensible oct"024": oct"024",0,0,oct"044";
+
+%% define pixels
+
+define_pixels(em, cap, sb, penscaler);    % Convert to device-specific units.
+define_corrected_pixels(o); % Same, but add a device-specific fudge factor.
+
+%% relation utility dims
+
+%% u = (w-(2*sb))/8; % utility measurement
+uu = (h-(2*sb))/8; % utility measurement (using h, not w)
+super = 3.9; % offset utility for curve roundness [2.8]
+
+%% Arrow project Right
+
+iff known arrow_project_right: cmchar "arrow_project_right";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(arrow_project_right,10u#,cap#, 1pt#);
+
+  adjust_fit(0,0);
+  pickup pencircle scaled (penscaler);   % small, circular tip
+
+  %% Points
+
+  z1 = (-5u, math_axis);
+  z2 = (10u, y1);
+  z3 = (x2-5u, y2+5u);
+
+  %% Draw
+
+  draw z1 -- z2 -- z3;    % right arrow
+  penlabels(1,2,3,4,5,6);
+
+endchar;
+
+%% Arrow project Left
+
+iff known arrow_project_left: cmchar "arrow_project_left";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(arrow_project_left,10u#,cap#, 1pt#);
+
+  adjust_fit(0,0);
+  pickup pencircle scaled (penscaler);   % small, circular tip
+
+  %% Points
+
+  z1 = (15u, math_axis);
+  z2 = (0, y1);
+  z3 = (x2+5u, y2+5u);
+
+  %% Draw
+
+  draw z1 -- z2 -- z3;    % right arrow
+  penlabels(1,2,3,4,5,6);
+
+endchar;
+
+%% Bracket project Right
+
+iff known bracket_project_right: cmchar "bracket_project_right";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(bracket_project_right,5u#,cap#, 1pt#);
+
+  adjust_fit(0,0);
+  pickup pencircle scaled (penscaler);   % small, circular tip
+
+  %% Points
+
+  z1 = (0, -3*desc_depth);
+  z2 = (x1, math_axis-4u);
+  z3 = (x1+5u/super, y4-5u/super);
+  z4 = (x1+4u, math_axis);
+  z5 = (15u, y4);
+
+  %% Draw
+
+  draw z1 -- z2 .. z3 .. z4 -- z5;    % right bracket
+  penlabels(1,2,3,4,5,6);
+
+endchar;
+
+%% Bracket project Left
+
+iff known bracket_project_left: cmchar "bracket_project_left";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(bracket_project_left,5u#,cap#, 1pt#);
+
+  adjust_fit(0,0);
+  pickup pencircle scaled (penscaler);   % small, circular tip
+
+  %% Points
+
+  z1 = (w, -3*desc_depth);
+  z2 = (x1, math_axis-4u);
+  z3 = (x1-5u/super, y4-5u/super);
+  z4 = (x1-4u, math_axis);
+  z5 = (-10u, y4);
+
+  %% Draw
+
+  draw z1 -- z2 .. z3 .. z4 -- z5;    % right bracket
+  penlabels(1,2,3,4,5,6);
+
+endchar;
+
+%% Bracket Lifting
+
+iff known bracket_lifting: cmchar "bracket_lifting";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(bracket_lifting,5u#,cap#, 1pt#);
+
+  adjust_fit(0,0);
+  pickup pencircle scaled (penscaler);   % small, circular tip
+
+  %% Points
+
+  z1 = (0, h+10u);
+  z2 = (x1, math_axis+4u);
+  z3 = (x1+5u/super, y4+5u/super);
+  z4 = (4u, math_axis);
+  z5 = (w+10u, y4);
+
+  %% Draw
+
+  draw z1 -- z2 .. z3 .. z4 -- z5;    % bracket
+  penlabels(1,2,3,4,5,6);
+
+endchar;
+
+
+iff known barshort: cmchar "barshort";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(barshort,3u#,v_center(spread#+rule_thickness#));
+
+adjust_fit(0,0);
+pickup pencircle scaled (penscaler);   % small, circular tip
+x1=eps;
+x2=w-eps+1u;
+y1=y2=math_axis;
+draw z1--z2;
+penlabels(1,2);
+
+endchar;
+
+%% Bar Long
+
+iff known barlong: cmchar "barlong";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(barlong,6u#,v_center(spread#+rule_thickness#));
+
+adjust_fit(0,0);
+pickup pencircle scaled (penscaler);   % small, circular tip
+x1=eps;
+x2=w-eps+1u;
+y1=y2=math_axis;
+draw z1--z2;
+penlabels(1,2);
+
+endchar;
+
+%% Vertical Bar Long Left
+
+iff known verticalbarlongleft: cmchar "verticalbarlongleft";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(verticalbarlongleft,5u#,v_center(spread#+rule_thickness#));
+
+adjust_fit(0,0);
+pickup pencircle scaled (penscaler);   % small, circular tip
+x1=x2=0;
+y1=asc_height-5u;
+y2=0;
+draw z1--z2;
+penlabels(1,2);
+
+endchar;
+
+%% Vertical Bar Long Right
+
+iff known verticalbarlongright: cmchar "verticalbarlongright";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(verticalbarlongright,5u#,v_center(spread#+rule_thickness#));
+
+adjust_fit(0,0);
+pickup pencircle scaled (penscaler);   % small, circular tip
+x1=x2=w;
+y1=asc_height-5u;
+y2=0;
+draw z1--z2;
+penlabels(1,2);
+
+endchar;
+
+%% Vertical Bar Short
+
+iff known verticalbarshort: cmchar "verticalbarshort";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(verticalbarshort,5u#,v_center(spread#+rule_thickness#));
+
+adjust_fit(0,0);
+pickup pencircle scaled (penscaler);   % small, circular tip
+x1=x2=0;
+y1=1u;
+y2=0;
+draw z1--z2;
+penlabels(1,2);
+
+endchar;
+
+%% restrict Wand
+
+iff known restrict_wand: cmchar "restrict_wand";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_wand,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);
+
+  %% Points
+
+  z1 = (3u, asc_height);              % bar
+  z2 = (x1, -2*u);
+
+  z3 = (x1-2*u, 0);    % asterisk
+  z4 = (x1+2*u, y3);
+  z5 = (x1-1.4*u, y3+1.4*u);
+  z6 = (x1+1.4*u, y3-1.4*u);
+  z7 = (x6, y5);
+  z8 = (x5, y6);
+
+  %% Draw
+
+  draw z1 -- z2;   % |
+  draw z3 -- z4;   % *
+  draw z5 -- z6;
+  draw z7 -- z8;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+%% restrict Wand Up
+
+iff known restrict_wand_up: cmchar "restrict_wand_up";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_wand_up,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);
+
+  %% Points
+
+  z1 = (3u, -2u);              % bar
+  z2 = (x1, asc_height);
+
+  z3 = (x1-2*u, y2-2u);    % asterisk
+  z4 = (x1+2*u, y3);
+  z5 = (x1-1.4*u, y3+1.4*u);
+  z6 = (x1+1.4*u, y3-1.4*u);
+  z7 = (x6, y5);
+  z8 = (x5, y6);
+
+  %% Draw
+
+  draw z1 -- z2;   % |
+  draw z3 -- z4;   % *
+  draw z5 -- z6;
+  draw z7 -- z8;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+%% restrict Barb
+
+iff known restrict_barb: cmchar "restrict_barb";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_barb,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);   % Use a pen with a small, circular tip.
+
+  %% Points
+
+  z1 = (3u, asc_height);                 % bar
+  z2 = (x1, -2*u);
+
+  z3 = (x1-2*u, 0);                     % diamond
+  z4 = (x1+2*u, y3);
+  z5 = (x1, 2*u);
+
+  %% Draw
+
+  draw z1 -- z2;                          % |
+  draw z3 -- z4 -- z5;                    % _\
+  draw z2 -- z3;                          % \
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+%% restrict Barb Up
+
+iff known restrict_barb_up: cmchar "restrict_barb_up";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_barb_up,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);   % Use a pen with a small, circular tip.
+
+  %% Points
+
+  z1 = (3u, -2u);                 % bar
+  z2 = (x1, asc_height);
+
+  z3 = (x1-2*u, y2-2u);                     % diamond
+  z4 = (x1+2*u, y3);
+  z5 = (x1, y3-2u);
+
+  %% Draw
+
+  draw z1 -- z2;                          % |
+  draw z3 -- z4 -- z5;                    % _\
+  draw z2 -- z3;                          % \
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+%% restrict Mallet
+
+iff known restrict_mallet: cmchar "restrict_mallet";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_mallet,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);   % Use a pen with a small, circular tip.
+
+  %% Points
+
+  z1 = (3u, asc_height);                 % bar
+  z2 = (x1, -2*u);
+
+  z3 = (x1-(4/3)*u, (-2/3)*u);                     % diamond
+  z4 = (x1+(4/3)*u, y3);
+  z5 = (x1, (2/3)*u);
+
+  %% Draw
+
+  draw z1 -- z2;                          % |
+  draw z3 .. z5 .. z4 .. z2 .. z3;        % o
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+%% restrict Mallet up
+
+iff known restrict_mallet_up: cmchar "restrict_mallet_up";
+compute_spread(.45x_height#,.55x_height#);
+beginchar(restrict_mallet_up,5u#,v_center(spread#+rule_thickness#));
+
+  pickup pencircle scaled (penscaler);   % Use a pen with a small, circular tip.
+
+  %% Points
+
+  z1 = (3u, -2u);                 % bar
+  z2 = (x1, asc_height);
+
+  z3 = (x1-(4/3)*u, y2-4/3u);                     % diamond
+  z4 = (x1+(4/3)*u, y3);
+  z5 = (x1, y3-4/3u);
+
+  %% Draw
+
+  draw z1 -- z2;                          % |
+  draw z3 .. z5 .. z4 .. z2 .. z3;        % o
+
+  penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+
+endchar;
+
+bye.
+
+\endinput
+%%
+%% End of file `esrelation.mf'.

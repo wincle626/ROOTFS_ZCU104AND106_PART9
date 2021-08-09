@@ -1,0 +1,31 @@
+% Fetamont parameters (oblique, 10pt)
+if base_name="mf2outline":
+ font_name "Fetamont-Oblique";
+ font_fullname "Fetamont Oblique";
+ font_familyname "Fetamont";
+ font_os_weight 400;
+ font_os_width 5;
+ font_range(9.5,72,4);
+fi
+font_identifier:="FFMO";
+font_size 10pt#;                   % the "design size" of this font
+ht#:=6pt#;                         % height of characters
+x_ht#:=4.5pt#;                     % x-height of characters
+acc_ht#:=2pt#;                     % height of the accents
+barheight#:=.45ht#;                % height of bar lines
+comma_depth#:=designsize*7/36pt#;  % depth of comma
+acc_depth#:=designsize*7/36pt#;    % depth of accents
+u#:=4/9pt#;                        % unit width
+xgap#:=0.6pt#;                     % horizontal adjustment
+ygap#:=(ht#/13.5u#)*xgap#;         % vertical adjustment (N and M)
+s#:=0;                             % extra space at the sides
+o#:=1/9pt#;                        % overshoot
+px#:=2/3pt#;                       % horizontal thickness of pen
+py#:=.9px#;                        % vertical pen thickness
+dotincr:=.4;                       % increasement of dot diameter
+prot:=0;                           % rotation angle of the pen
+slant:=1/4;                        % slanting amount
+craziness:=0;                      % degree of haphazard variation
+superness:=.8;                     % parameter for superellipses
+
+input ffmbase                      % now generate the font

@@ -1,0 +1,67 @@
+% +AMDG
+
+font_identifier:="drmdoz"; font_size:=10pt#; font_coding_scheme "T1";
+pixels_per_inch:=1200;
+mode_setup;
+
+%%%% Define Dimensions for Whole Boxes %%%%
+
+phi=(1+sqrt5)/2;
+cap#=8pt#;
+u#=2.5cap#/3;
+em#=1.1cap#;
+ex#=0.6cap#;
+exw# = 1.1ex#; define_pixels(exw);
+dep#=cap#/3;
+ss#=0.3pt#;
+asch#=12cap#/12;
+digwid#=1ex#;
+slant = 0;
+font_slant 0u#;
+font_normal_space 0.5u#;
+font_normal_stretch 0.2u#;
+font_normal_shrink 0.2u#;
+font_x_height cap#/phi;
+font_quad em#;
+font_extra_space 0.5u#;
+
+penwidth#=0.01pt#;
+
+%%%% Define Dimensions for Letters %%%%
+
+lserc#=0.08u#;
+lserh#=lserc#+lserstep#;
+lhigh#=0.3u#;
+lserstep#=0.05u#;
+userc#=0.08u#;
+userh#=userc#+userstep#;
+lserw#=0.2u#;
+userw#=0.2u#;
+userstep#=0.05u#;
+bulbsh#=0.10u#;
+curvwid#=1.5pt#;
+slantwid#=1.5pt#;
+thickstroke#=1.3pt#;
+thinstroke#=0.7pt#;
+loopgap#=1.0pt#;
+hair#=0.2pt#;
+o#=0.1pt#;
+ssslant#=0.1u#;
+dotwidth#=userw#-o#;
+pwid#=2userw#;
+accwid# = pwid#/8;
+theight#=7asch#/8;
+define_pixels(theight);
+
+define_pixels(accwid,cap,u,em,ex,dep,ss,penwidth,lserh,userh,lhigh,lserw,bulbsh,userw,lserc,userc,lserstep,userstep,ssslant,curvwid,slantwid,pwid,hair,loopgap,dotwidth);
+define_blacker_pixels(accwid,cap,u,em,ex,dep,ss,penwidth,lserh,userh,lhigh,lserw,bulbsh,userw,lserc,userc,lserstep,userstep,ssslant,curvwid,slantwid,pwid,hair);
+define_blacker_pixels(thickstroke,thinstroke,penwidth,o,hair);
+
+pickup pencircle scaled penwidth; cappen:=savepen;
+equalize=thickstroke/2-thinstroke/2;
+
+input drmcap.mf
+input drmlowmac.mf
+input drmdozscdigs.mf
+
+end;

@@ -1,0 +1,66 @@
+% THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+%%AutoEnc_drbxokauno4jddhjnd3wmzcwab
+% Encoding created by otftotfm on Thu Nov  7 13:20:16 2019
+% Command line follows encoding
+/AutoEnc_drbxokauno4jddhjnd3wmzcwab [
+%00
+  /.notdef /Euro /.notdef /.notdef /fraction /dotaccent /hungarumlaut /ogonek
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+%10
+  /dotlessi.sc /uni0237 /grave /acute /caron /breve /macron /ring
+  /cedilla /.notdef /ae.sc /oe.sc /oslash.sc /AE /OE /Oslash
+%20
+  /space /exclam.sc /quotedbl.sc /numbersign /dollar /percent /ampersand.sc /quoteright.sc
+  /parenleft /parenright /asterisk /plus /comma /hyphen /period.sc /slash
+%30
+  /zero /one /two /three /four /five /six /seven
+  /eight /nine /colon /semicolon /less /equal /greater /question.sc
+%40
+  /at /A /B /C /D /E /F /G
+  /H /I /J /K /L /M /N /O
+%50
+  /P /Q /R /S /T /U /V /W
+  /X /Y /Z /bracketleft /backslash /bracketright /circumflex /underscore
+%60
+  /quoteleft.sc /a.sc /b.sc /c.sc /d.sc /e.sc /f.sc /g.sc
+  /h.sc /i.sc /j.sc /k.sc /l.sc /m.sc /n.sc /o.sc
+%70
+  /p.sc /q.sc /r.sc /s.sc /t.sc /u.sc /v.sc /w.sc
+  /x.sc /y.sc /z.sc /braceleft /bar /braceright /tilde /dieresis
+%80
+  /Lslash /quotesingle.sc /quotesinglbase.sc /florin /quotedblbase.sc /ellipsis /dagger /daggerdbl
+  /circumflex /perthousand /Scaron /guilsinglleft.sc /OE /Zcaron /asciicircum /minus
+%90
+  /lslash.sc /quoteleft.sc /quoteright.sc /quotedblleft.sc /quotedblright.sc /bullet /endash /emdash
+  /tilde /trademark /scaron.sc /guilsinglright.sc /oe.sc /zcaron.sc /asciitilde /Ydieresis
+%A0
+  /.notdef /exclamdown.sc /cent /sterling /currency /yen /brokenbar /section
+  /dieresis /copyright /ordfeminine /guillemotleft.sc /logicalnot /uni00AD /registered /macron
+%B0
+  /degree /plusminus /uni00B2 /uni00B3 /acute /uni00B5 /paragraph /periodcentered
+  /cedilla /uni00B9 /ordmasculine /guillemotright.sc /onequarter /onehalf /threequarters /questiondown.sc
+%C0
+  /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+  /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+%D0
+  /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+  /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /.notdef
+%E0
+  /agrave.sc /aacute.sc /acircumflex.sc /atilde.sc /adieresis.sc /aring.sc /ae.sc /ccedilla.sc
+  /egrave.sc /eacute.sc /ecircumflex.sc /edieresis.sc /igrave.sc /iacute.sc /icircumflex.sc /idieresis.sc
+%F0
+  /eth.sc /ntilde.sc /ograve.sc /oacute.sc /ocircumflex.sc /otilde.sc /odieresis.sc /divide
+  /oslash.sc /ugrave.sc /uacute.sc /ucircumflex.sc /udieresis.sc /yacute.sc /thorn.sc /ydieresis.sc
+] def
+% Command line: 'otftotfm --automatic --encoding=fontools_ly1
+% --tfm-directory=texmf/fonts/tfm/public/montserrat
+% --vf-directory=texmf/fonts/vf/public/montserrat
+% --type1-directory=texmf/fonts/type1/public/montserrat
+% --truetype-directory=texmf/fonts/truetype/public/montserrat
+% --encoding-directory=texmf/fonts/enc/dvips/montserrat
+% --map-file=texmf/fonts/map/dvips/montserrat/MontserratAlternates.map
+% --no-updmap --coding-scheme=TEX TYPEWRITER AND WINDOWS ANSI --feature=kern
+% --feature=lnum --feature=pnum --feature=smcp --unicoding=germandbls =:
+% SSsmall --xheight=x MontserratAlternates-Black.otf
+% MontserratAlternates-Black-lf-sc-ly1'

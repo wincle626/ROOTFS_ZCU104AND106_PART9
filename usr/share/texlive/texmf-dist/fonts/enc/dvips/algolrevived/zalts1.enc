@@ -1,0 +1,50 @@
+/zalts1Enc [
+%00
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+  /.notdef /.notdef /.notdef /cedilla /ogonek /quotesinglbase /asterisk /exclamdown
+%10
+  /questiondown /endash /quotedblbase /.notdef /.notdef /.notdef /.notdef /.notdef
+  /arrowleft /arrowright /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+%20
+  /uni2423 /.notdef /.notdef /.notdef /dollar /.notdef /.notdef /quotesingle
+  /.notdef /.notdef /.notdef /.notdef /comma /.notdef /period /fraction
+%30
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+  /.notdef /.notdef /.notdef /.notdef /.notdef /minus /.notdef /.notdef
+%40
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+  /.notdef /.notdef /.notdef /.notdef /.notdef /uni2127 /.notdef /uni25EF
+%50
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /Omega
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /arrowup /arrowdown
+%60
+  /grave /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+%70
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+%80
+  /.notdef /.notdef /.notdef /.notdef /dagger /daggerdbl /uni2225 /.notdef
+  /bullet /uni2103 /.notdef /.notdef /.notdef /.notdef /uni20A9 /.notdef
+%90
+  /.notdef /.notdef /.notdef /.notdef /uni203D /.notdef /.notdef /trademark
+  /uni2031 /.notdef /.notdef /uni2116 /.notdef /.notdef /.notdef /.notdef
+%A0
+  /.notdef /.notdef /cent /sterling /currency /yen /brokenbar /section
+  /.notdef /copyright /ordfeminine /.notdef /logicalnot /.notdef /registered /.notdef
+%B0
+  /degree /plusminus /two.superior /three.superior /.notdef /mu /paragraph /periodcentered
+  /uni203B /one.superior /ordmasculine /radical /.notdef /.notdef /.notdef /Euro
+%C0
+  /minute /second /.notdef /.notdef /arrowboth /arrowupdn /arrowdblleft /arrowdblup 
+ /arrowdblright /arrowdbldown /arrowdblboth /uni21D5 /universal /uni2201 /partialdiff   /existential
+%D0
+ /uni2204 /emptyset /Delta /gradient /element /notelement /multiply /uni220A
+ /suchthat /uni220C /uni220D /uni2216coloneq /uni2219 /logicaland /logicalor /.notdef
+%E0
+ /intersection /union /uni2254 /uni2255 /notequal /equivalence /uni2262 /lessequal 
+ /greaterequal  /propersubset /propersuperset /notsubset /uni2285 /reflexsubset /reflexsuperset /uni2288 
+%F0
+  /uni2289 /uni228F /uni2290 /uni2291 /uni2292 /uni2293 /divide /uni2294
+  /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+] def

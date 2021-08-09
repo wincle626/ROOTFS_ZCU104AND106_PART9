@@ -1,0 +1,46 @@
+% +AMDG  This document was begun on 2 July 11EX, the feast
+% of the Visitation of the Blessed Virgin Mary and the
+% Commemoration of Sts. Processus and Martinian, MM, and it
+% is humbly dedicated to them and to the Immaculate Heart of
+% Mary for their prayers, and to the Sacred Heart of Jesus
+% for His mercy.
+
+beginchar(oct"050",1.5em#,asch#,0); "Leftward upper arrow";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,h/2);
+top z1 = (0.4w,h);
+rt z2 = (w-ss,y0);
+z3 = z1 shifted (0,-3h/8);
+
+path shaft; shaft = z2--z0;
+path head; head = z0{z3-z0}..{up}z1;
+draw shaft; draw head;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"051",1.5em#,asch#,0); "Leftward lower arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft;
+draw head reflectedabout ((0,h/2),(w,h/2));
+
+endchar;
+
+beginchar(oct"052",1.5em#,asch#,0); "Rightward upper arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft;
+draw head reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"053",1.5em#,asch#,0); "Rightward lower arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft;
+draw head reflectedabout ((w/2,h),(w/2,0))
+	reflectedabout ((0,h/2),(w,h/2));
+
+endchar;

@@ -1,0 +1,67 @@
+% THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+%%AutoEnc_vqhfd3nw4jpme6mtehvvsntz4b
+% Encoding created by otftotfm on Wed Dec 11 16:14:15 2019
+% Command line follows encoding
+/AutoEnc_vqhfd3nw4jpme6mtehvvsntz4b [
+%00
+  /grave /acute /circumflex /tilde /dieresis /hungarumlaut /ring /caron
+  /breve /macron /dotaccent /cedilla /ogonek /uni04C0 /f_f_i.liga /f_f_l.liga
+%10
+  /quotedblleft /quotedblright /f_b.liga /f_h.liga /f_j.liga /endash /emdash /f_f.liga
+  /f_k.liga /dotlessi /uni0237 /f_t.liga /fi /fl /g_g.liga /g_y.liga
+%20
+  /space /exclam /quotedbl /numbersign /dollar.lf /percent /ampersand /quoteright
+  /parenleft /parenright /asterisk /plus /comma /hyphen /period.tosf /slash
+%30
+  /zero.tf /one.tf /two.tf /three.tf /four.tf /five.tf /six.tf /seven.tf
+  /eight.tf /nine.tf /colon.tosf /semicolon /less /equal /greater /question
+%40
+  /at /A /B /C /D /E /F /G
+  /H /I /J /K /L /M /N /O
+%50
+  /P /Q /R /S /T /U /V /W
+  /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+%60
+  /quoteleft /a /b /c /d /e /f /g
+  /h /i /j /k /l /m /n /o
+%70
+  /p /q /r /s /t /u /v /w
+  /x /y /z /braceleft /bar /braceright /asciitilde /hyphen
+%80
+  /T_h.liga /uni04B4 /uni04AC /uni0494 /uni04BA /f_f_b.liga /uni048E /uni04E0
+  /f_f_f.liga /uni049A /f_f_h.liga /uni049E /f_f_j.liga /uni04A2 /f_f_k.liga /uni04C7
+%90
+  /uni04E8 /uni04BC /uni04BE /uni048C /f_f_t.liga /uni04B2 /uni040F /uni04A8
+  /uni04B6 /T_T.liga /uni04D8 /.notdef /uni0401 /uni2116.lf /currency /section
+%A0
+  /.notdef /uni04B5 /uni04AD /uni0495 /uni04BB /.notdef /uni048F /uni04E1
+  /.notdef /uni049B /.notdef /uni049F /.notdef /uni04A3 /.notdef /uni04C8
+%B0
+  /uni04E9 /uni04BD /uni04BF /uni048D /.notdef /uni04B3 /uni045F /uni04A9
+  /uni04B7 /.notdef /uni04D9 /.notdef /uni0451 /quotedblbase /guillemotleft /guillemotright
+%C0
+  /uni0410 /uni0411 /uni0412 /uni0413 /uni0414 /uni0415 /uni0416 /uni0417
+  /uni0418 /uni0419 /uni041A /uni041B /uni041C /uni041D /uni041E /uni041F
+%D0
+  /uni0420 /uni0421 /uni0422 /uni0423 /uni0424 /uni0425 /uni0426 /uni0427
+  /uni0428 /uni0429 /uni042A /uni042B /uni042C /uni042D /uni042E /uni042F
+%E0
+  /uni0430 /uni0431 /uni0432 /uni0433 /uni0434 /uni0435 /uni0436 /uni0437
+  /uni0438 /uni0439 /uni043A /uni043B /uni043C /uni043D /uni043E /uni043F
+%F0
+  /uni0440 /uni0441 /uni0442 /uni0443 /uni0444 /uni0445 /uni0446 /uni0447
+  /uni0448 /uni0449 /uni044A /uni044B /uni044C /uni044D /uni044E /uni044F
+] def
+% Command line: 'otftotfm --automatic --encoding=fontools_t2c
+% --tfm-directory=texmf/fonts/tfm/catharsis/cormorantgaramond
+% --vf-directory=texmf/fonts/vf/catharsis/cormorantgaramond
+% --type1-directory=texmf/fonts/type1/catharsis/cormorantgaramond
+% --truetype-directory=texmf/fonts/truetype/catharsis/cormorantgaramond
+% --encoding-directory=texmf/fonts/enc/dvips/cormorantgaramond
+% --map-file=texmf/fonts/map/dvips/cormorantgaramond/CormorantGaramond.map
+% --no-updmap --no-type1 --coding-scheme=TEX CYRILLIC FONT ENCODING - T2C
+% --feature=kern --feature=liga --feature=lnum --feature=tnum --ligkern=f i
+% =: fi --ligkern=f l =: fl --ligkern=f f =: ff --ligkern=ff i =: ffi
+% --ligkern=ff l =: ffl CormorantGaramond-BoldItalic.ttf
+% CormorantGaramond-BoldItalic-tlf-t2c'

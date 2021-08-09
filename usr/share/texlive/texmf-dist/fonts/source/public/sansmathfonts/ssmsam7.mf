@@ -1,0 +1,135 @@
+% AMS-style Sans Serif Math Symbols A 7 pt
+% Based on msam7.mf by the American Mathematical Society
+% and on fonts by Donald Knuth and John Sauter
+% By Ariel Barton, 2013/4/12
+if unknown sansfontbase: input sansfontbase fi
+
+font_identifier:="SSMSAM"; font_size 7pt#;
+
+u#:=15.5/36pt#;                 % sautercmssi7 % unit width
+width_adj#:=11/36pt#;           % sautercmssi7 % width adjustment for certain characters
+serif_fit#:=-5.5/36pt#;         % sautercmssi7 % extra sidebar near lowercase serifs
+cap_serif_fit#:=-8/36pt#;       % sautercmssi7 % extra sidebar near uppercase serifs
+letter_fit#:=0pt#;              % sautercmssi7 % extra space added to all sidebars
+
+body_height#:=189/36pt#;        % sautercmssi7 % height of tallest characters
+asc_height#:=175/36pt#;         % sautercmssi7 % height of lowercase ascenders
+cap_height#:=175/36pt#;         % sautercmssi7 % height of caps
+fig_height#:=166/36pt#;         % sautercmssi7 % height of numerals
+x_height#:=112/36pt#;           % sautercmssi7 % height of lowercase without ascenders
+math_axis#:=63/36pt#;           % sautercmssi7 % axis of symmetry for math symbols
+bar_height#:=55/36pt#;          % sautercmssi7 % height of crossbar in lowercase e
+comma_depth#:=33/36pt#;         % sautercmssi7 % depth of comma below baseline
+desc_depth#:=49/36pt#;          % sautercmssi7 % depth of lowercase descenders
+
+crisp#:=0pt#;                   % msam10 % diameter of serif corners
+tiny#:=0pt#;                    % sautercmssi7 % diameter of rounded corners
+fine#:=0pt#;                    % sautercmssi7 % diameter of sharply rounded corners
+thin_join#:=14/36pt#;           % sautercmssi7 % width of extrafine details
+hair#:=23/36pt#;                % sautercmssi7 % lowercase hairline breadth
+stem#:=23/36pt#;                % sautercmssi7 % lowercase stem breadth
+curve#:=23/36pt#;               % sautercmssi7 % lowercase curve breadth
+ess#:=23/36pt#;                 % sautercmssi7 % breadth in middle of lowercase s
+flare#:=20/36pt#;               % sautercmssi7 % diameter of bulbs or breadth of terminals
+dot_size#:=24/36pt#;            % sautercmssi7 % diameter of dots
+cap_hair#:=23/36pt#;            % sautercmssi7 % uppercase hairline breadth
+cap_stem#:=27/36pt#;            % sautercmssi7 % uppercase stem breadth
+cap_curve#:=27/36pt#;           % sautercmssi7 % uppercase curve breadth
+cap_ess#:=25/36pt#;             % sautercmssi7 % breadth in middle of uppercase s
+rule_thickness#:=12.24/36pt#;   % sautercmssi7 % thickness of lines in math symbols
+
+dish#:=0pt#;                    % sautercmssi7 % amount erased at top or bottom of serifs
+bracket#:=0pt#;                 % sautercmssi7 % vertical distance from serif base to tangent
+jut#:=0pt#;                     % sautercmssi7 % protrusion of lowercase serifs
+cap_jut#:=0pt#;                 % sautercmssi7 % protrusion of uppercase serifs
+beak_jut#:=0pt#;                % sautercmssi7 % horizontal protrusion of beak serifs
+beak#:=0.3/36pt#;               % sautercmssi7 % vertical protrusion of beak serifs
+vair#:=17/36pt#;                % sautercmssi7 % vertical diameter of hairlines
+notch_cut#:=15/36pt#;           % sautercmssi7 % maximum breadth above or below notches
+bar#:=16/36pt#;                 % sautercmssi7 % lowercase bar thickness
+slab#:=18/36pt#;                % sautercmssi7 % serif and arm thickness
+cap_bar#:=17/36pt#;             % sautercmssi7 % uppercase bar thickness
+cap_band#:=15/36pt#;            % sautercmssi7 % uppercase thickness above/below lobes
+cap_notch_cut#:=20/36pt#;       % sautercmssi7 % max breadth above/below uppercase notches
+serif_drop#:=2/36pt#;           % sautercmssi7 % vertical drop of sloped serifs
+stem_corr#:=1/36pt#;            % sautercmssi7 % for small refinements of stem breadth
+vair_corr#:=1/36pt#;            % sautercmssi7 % for small refinements of hairline height
+apex_corr#:=3.5/36pt#;          % sautercmssi7 % extra width at diagonal junctions
+
+o#:=5/36pt#;                    % sautercmssi7 % amount of overshoot for curves
+apex_o#:=0pt#;                  % sautercmssi7 % amount of overshoot for diagonal junctions
+
+slant:=0;                       % msam10 % tilt ratio $(\Delta x/\Delta y)$
+fudge:=0.91;                    % sautercmssi7 % factor applied to weights of heavy characters
+math_spread:=0.6;               % sautercmssi7 % extra openness of math symbols
+superness:=0.7071;              % sautercmssi7 % parameter for superellipses
+superpull:=0.05;                % sautercmssi7 % extra openness inside bowls
+beak_darkness:=0;               % sautercmssi7 % fraction of triangle inside beak serifs
+ligs:=2;                        % cmmi7 % level of ligatures to be included
+
+square_dots:=true;              % sautercmssi7 % should dots be square?
+hefty:=true;                    % sautercmssi7 % should we try hard not to be overweight?
+serifs:=false;                  % sautercmssi7 % should serifs and bulbs be attached?
+monospace:=false;               % sautercmssi7 % should all characters have the same width?
+variant_g:=false;               % sautercmssi7 % should an italic-style g be used?
+low_asterisk:=false;            % sautercmssi7 % should the asterisk be centered at the axis?
+math_fitting:=true;             % cmmi7 % should math-mode spacing be used?
+
+bigdw#:=3/36pt#;                % cmmi7% Adjusted dw for unusually wide strokes
+
+% the following font parameters are explained in {\sl The \TeX book}, Appendix G
+subs:=5/7;  % subscripts to 7pt will normally be in 5pt type
+rth#:=.4pt#;  % assume that rules will come from cmex10
+fontdimen 8:  % parameters $\sigma_8$ through $\sigma_{22}$ will now be listed
+ math_axis#+3.51rth#+36/36pt#+subs*desc_depth#,      % num1
+ math_axis#+1.51rth#+12/36pt#,          % num2
+ math_axis#+1.51rth#+34/36pt#,          % num3
+ -(math_axis#-3.51rth#-subs*fig_height#-86/36pt#),    % denom1
+ -(math_axis#-1.51rth#-subs*fig_height#-12/36pt#),    % denom2
+ 6.99pt#-subs*asc_height#,          % sup1
+ 6.49pt#-subs*asc_height#,          % sup2
+ 72/36pt#,              % sup3
+ 36/36pt#,              % sub1
+ 72/36pt#,              % sub2
+ subs*asc_height#-36/36pt#,          % sup_drop
+ 18/36pt#,              % sub_drop
+ 11.9pt#,              % delim1
+ 8.1pt#,              % delim2
+ math_axis#;              % axis_height
+
+%% include these parameters to shrink R and S so they
+%% fit inside a circle
+%
+lower.u#:=11.51/36pt#;          % eczi0700 % unit width
+lower.width_adj#:=8/36pt#;      % eczi0700 % width adjustment for certain characters
+lower.cap_serif_fit#:=-5.74/36pt#;% eczi0700 % extra sidebar near uppercase serifs
+lower.letter_fit#:=2/36pt#;     % eczi0700 % extra space added to all sidebars
+
+lower.body_height#:=119/36pt#;  % eczi0700 % height of tallest characters
+lower.cap_height#:=112.8/36pt#; % eczi0700 % height of caps
+lower.x_height#:=71.7/36pt#;    % eczi0700 % height of lowercase without ascenders
+lower.bar_height#:=35.16/36pt#; % eczi0700 % height of crossbar in lowercase e
+lower.comma_depth#:=20.91/36pt#;% eczi0700 % depth of comma below baseline
+
+lower.flare#:=13.61/36pt#;      % eczi0700 % diameter of bulbs or breadth of terminals
+lower.cap_hair#:=18.33/36pt#;   % eczi0700 % uppercase hairline breadth
+lower.stem#:=18.74/36pt#;       % eczi0700 % lowercase stem breadth
+lower.cap_stem#:=20.43/36pt#;   % eczi0700 % uppercase stem breadth
+lower.cap_curve#:=21.27/36pt#;  % eczi0700 % uppercase curve breadth
+lower.cap_ess#:=17.95/36pt#;    % eczi0700 % breadth in middle of uppercase s
+
+lower.cap_jut#:=0pt#;           % eczi0700 % protrusion of uppercase serifs
+lower.beak_jut#:=0pt#;          % eczi0700 % horizontal protrusion of beak serifs
+lower.beak#:=0.21/36pt#;        % eczi0700 % vertical protrusion of beak serifs
+lower.slab#:=14.38/36pt#;       % eczi0700 % serif and arm thickness
+lower.cap_bar#:=13.59/36pt#;    % eczi0700 % uppercase bar thickness
+lower.cap_band#:=12/36pt#;      % eczi0700 % uppercase thickness above/below lobes
+lower.cap_notch_cut#:=20.36/36pt#;% eczi0700 % max breadth above/below uppercase notches
+
+lower.o#:=1.98/36pt#;           % eczi0700 % amount of overshoot for curves
+lower.apex_o#:=0pt#;            % eczi0700 % amount of overshoot for diagonal junctions
+
+lower.fudge:=0.91266;           % eczi0700 % factor applied to weights of heavy characters
+
+
+generate sans-amsya                  % switch to the driver file

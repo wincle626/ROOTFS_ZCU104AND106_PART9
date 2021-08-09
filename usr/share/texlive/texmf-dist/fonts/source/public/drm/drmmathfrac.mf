@@ -1,0 +1,85 @@
+% +AMDG  This document was begun on 7 July 11EX, the feast
+% of Sts. Cyril and Methodius, EEMM, and it is humbly
+% dedicated to them and to the Immaculate Heart of Mary for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar(oct"074",em#,cap#,0); "Fraktur R";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinl,90);
+z0 = (w/4,h/2);
+penpos1(thinl,0);
+z1l = (ss,3h/4);
+penpos2(thickl,-90);
+z2l = (x0,h+o);
+penpos3(thickl,180);
+z3 = (w/2,h/2);
+penpos4(thickl,45);
+x4 = x2; y4l = 0-o;
+penpos5(thickl,45);
+x5l = ss; y5r = h/4;
+penpos6(thinl,180);
+z6 = (x3,y1);
+penpos7(1.5thinl,90);
+z7r = (3w/4,h+o);
+penpos8(thickl,0);
+z8r = (w-ss,y6l);
+z9r = z3l; z9l = z3r;
+penpos10(thickl,0);
+z10r = (w-ss,h/2+thickl);
+penpos11(thickl,20);
+z11l = z3;
+penpos12(thickl,0);
+z12l = (x7,h/4);
+penpos13(thickl,0);
+z13l = (x12r,h/12);
+penpos14(thickl,0);
+z14r = (w-ss,0-o);
+
+penstroke z0e..z1e..z2e..z3e..z4e--z5e;
+penstroke z6e..z7e..z8e..z10e--z9e;
+penstroke z11e..{down}z12e..{down}z14e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+penlabels(13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"075",0.75em#,cap#,0); "Fraktur I";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinl,90);
+z0 = (w/4,h/2);
+penpos1(thinl,0);
+z1l = (ss,3h/4);
+penpos2(thickl,-90);
+z2l = (x0,h+o);
+penpos3(thickl,-135);
+z3 = (w/2,11h/12);
+penpos4(thickl,-90);
+z4 = (3w/4,10h/12);
+penpos5(thinl,0);
+z5r = (w-ss,h);
+penpos6(thinl,0);
+z6r = (w-ss,h/2);
+penpos7(thickl,90);
+z7r = (x4,y4r-1.5thinl);
+penpos8(thickl,180);
+z8 = (7w/12,h/2);
+penpos9(thinl,-90);
+z9 = (x7,h/3);
+penpos10(thinl,180);
+z10l = (w-ss,h/6);
+penpos11(thickl,90);
+z11l = (x9,0-o);
+penpos12(thickl,90);
+z12 = (x0,h/4);
+penpos13(thinl,180);
+z13r = (ss,0-o);
+
+penstroke z0e..z1e..z2e..z3e..z4e..z5e;
+penstroke z6e{up}..z7e..z8e..z9e..z10e..z11e..z12e..z13e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+penlabels(13,14,15,16,17,18);
+endchar;

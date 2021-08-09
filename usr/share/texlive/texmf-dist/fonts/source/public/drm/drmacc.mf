@@ -1,0 +1,219 @@
+% +AMDG  This document was begun on 2 May 11EX, the feast of
+% St. Athanasius, BC, and it is humbly dedicated to him and
+% to the Immaculate Heart of Mary for their prayers and to
+% the Sacred Heart of Jesus for His mercy.
+
+picture ringacc;
+picture hungum;
+picture roundcircum;
+picture invcircum;
+picture macron;
+picture overdot;
+picture cedille;
+picture revcid;
+picture grave;
+picture acute;
+picture diaresis;
+picture circumflex;
+picture tilde;
+
+beginchar(oct"000",2pwid#,cap#,0); "The grave accent, `";
+
+z0 = (ss,h-o);
+z1 = z0 shifted (accwid,accwid);
+z2 = z0 shifted (accwid,-accwid);
+z3 = (w-ss,h-o);
+z4 = z3 shifted (-2accwid,2accwid);
+z5 = z3 shifted (-2accwid,-2accwid);
+z6 = (w/2,h-o);
+
+path graveacc; graveacc = z0..z1--z4..z3..z5--z2..cycle;
+fill graveacc rotatedaround (z6,-20);
+
+grave := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"005",2pwid#,cap#,0); "The Hungarian diaresis";
+
+z0 = (w/2-accwid,h-o);
+z2 = z0 shifted (0,-pwid);
+z3 = z0 shifted (2accwid,0);
+z4 = z2 shifted (2accwid,0);
+z5 = 0.5[z0,z3] shifted (0,accwid);
+z6 = 0.5[z2,z4] shifted (0,-accwid);
+z7 = 0.5[z5,z6];
+
+path lthung; lthung = z0..z5..z3--z4..z6..z2--cycle;
+
+fill lthung rotatedaround (z7,-30);
+fill lthung rotatedaround (z7,-30) shifted (w/3,0);
+
+hungum := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"006",2pwid#,cap#,0); "The ring accent";
+
+z0 = (w/2,h-dotwid-accwid);
+
+pickup pencircle scaled thinl;
+path ringaccent;
+ringaccent = fullcircle scaled 3dotwid shifted z0;
+draw ringaccent;
+
+ringacc := currentpicture;
+
+endchar;
+
+beginchar(oct"001",2pwid#,cap#,0); "The acute accent, '";
+
+z6 = (w/2,h-o);
+
+fill graveacc rotatedaround (z6,20);
+
+acute := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"002",2pwid#,cap#,0); "The circumflex, ^";
+
+z0 = (w/2,h-o);
+z1 = (ss,h-pwid);
+z2 = (w-ss,h-pwid);
+z3 = z0 shifted (0,-3accwid);
+z5 = z1 shifted (3accwid,0);
+z7 = z2 shifted (-3accwid,0);
+
+path circum;
+circum = z0--z2--z7--z3--z5--z1--cycle;
+fill circum;
+circumflex := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"007",2pwid#,cap#,0); "The inverted circumflex";
+
+fill circum reflectedabout ((0,h-pwid/2-o),(w,h-pwid/2-o));
+invcircum := currentpicture;
+
+endchar;
+
+beginchar(oct"010",2pwid#,cap#,0); "The rounded inverted circumflex";
+
+z0 = (w/2,h-pwid);
+z1 = (ss,h-o);
+z2 = (w-ss,h-o);
+z3 = z0 shifted (0,-2accwid);
+z4 = z1 shifted (accwid,0);
+z5 = z2 shifted (-accwid,0);
+z6 = 0.5[z2,z5] shifted (0,accwid/2);
+z7 = 0.5[z1,z4] shifted (0,accwid/2);
+
+fill
+z3{right}..{up}z2..z6..z5{down}..{left}z0{left}..{up}z4..z7..z1{down}..{right}cycle;
+
+roundcircum := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"011",2pwid#,cap#,0); "The macron";
+
+z0 = (ss,h-pwid/2);
+z1 = (w-ss,h-pwid/2);
+z2 = z0 shifted (0,-accwid/2);
+z3 = z1 shifted (0,-accwid/2);
+
+fill z0---z1..z3---z2..cycle;
+
+macron := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"012",pwid#,cap#,0); "The overdot";
+
+fill fullcircle scaled 2dotwid shifted (w/2,cap-dotwid);
+
+overdot := currentpicture;
+
+endchar;
+
+beginchar(oct"013",pwid#,0,1.5pwid#); "The cedilla";
+
+cedsize = pwid/3;
+z0 = (w/2-cedsize/2,0);
+z1 = z0 shifted (cedsize,0);
+z2 = z0 shifted (0,-cedsize);
+z3 = z1 shifted (0,-cedsize);
+z4 = z3 shifted (cedsize,-cedsize);
+z5 = z4 shifted (-cedsize,0);
+z6 = z5 shifted (-cedsize,-cedsize);
+z7 = z6 shifted (0,-cedsize);
+z8 = 0.5[z6,z7] shifted (-accwid/2,0);
+
+fill z0..z2..z5..z6..z8..z7..z4..z3--z1--cycle;
+
+cedille := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"014",pwid#,0,1.5pwid#); "The reverse cedilla";
+
+z0 = (w/2-cedsize/2,0);
+z1 = z0 shifted (cedsize,0);
+z2 = z0 shifted (-2cedsize,-2cedsize);
+z3 = z2 shifted (cedsize,0);
+z4 = z2 shifted (4cedsize,-cedsize);
+z5 = z4 shifted (cedsize,0);
+z6 = z2 shifted (2cedsize,-2cedsize);
+z7 = z6 shifted (0,-cedsize);
+
+fill z0{left}..{down}z2{down}..z7..{up}z5..z4..z6..z3..{dir
+	60}z1--cycle;
+
+revcid := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"003",2pwid#,cap#,0); "The tilde, ~";
+
+z0 = (ss,h-pwid-o);
+z1 = (w/3,h-ss);
+z2 = (2w/3,h-pwid);
+z3 = (w-ss,h);
+z4 = z1 shifted (0,-1.5thinl);
+z5 = z2 shifted (0,1.5thinl);
+
+fill z0..{right}z1{right}..{right}z5{right}..
+	{dir 60}z3{dir -95}..{left}z2{left}..{left}z4{left}..
+	cycle;
+
+tilde := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"004",2pwid#,cap#,0); "The diaresis";
+
+z0 = (w/4,h-dotwid);
+z1 = (3w/4,h-dotwid);
+
+fill fullcircle scaled 2dotwid shifted z0;
+fill fullcircle scaled 2dotwid shifted z1;
+
+diaresis := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"015",pwid#,pwid#,0); "The comma accent, ,";
+fill commapost shifted (0,h-2dotwid+o/2);
+endchar;

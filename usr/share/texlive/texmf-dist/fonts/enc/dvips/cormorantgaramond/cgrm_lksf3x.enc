@@ -1,0 +1,67 @@
+% THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+%%AutoEnc_lksf3xckbbgij35niksxccl7af
+% Encoding created by otftotfm on Wed Dec 11 16:14:21 2019
+% Command line follows encoding
+/AutoEnc_lksf3xckbbgij35niksxccl7af [
+%00
+  /T_T.liga /Euro.lf /.notdef /.notdef /fraction /dotaccent.sc /hungarumlaut.sc /ogonek
+  /.notdef /.notdef /uni200C /.notdef /.notdef /.notdef /.notdef /.notdef
+%10
+  /dotlessi.sc /uni0237 /grave.sc /acute.sc /caron.sc /breve.sc /macron /ring
+  /cedilla /.notdef /ae.sc /oe.sc /oslash.sc /AE /OE /Oslash
+%20
+  /space /exclam /quotedbl /numbersign /dollar.lf /percent.sc /ampersand.sc /quoteright
+  /parenleft /parenright /asterisk /plus.sc /comma /hyphen.sc /period.tosf /slash
+%30
+  /zero.tf /one.tf /two.tf /three.tf /four.tf /five.tf /six.tf /seven.tf
+  /eight.tf /nine.tf /colon.tosf /semicolon.sc /less.sc /equal.sc /greater.sc /question
+%40
+  /at.sc /A /B /C /D /E /F /G
+  /H /I /J /K /L /M /N /O
+%50
+  /P /Q /R /S /T /U /V /W
+  /X /Y /Z /bracketleft /backslash /bracketright /circumflex.sc /underscore
+%60
+  /quoteleft /a.sc /b.sc /c.sc /d.sc /e.sc /f.sc /g.sc
+  /h.sc /i.sc /j.sc /k.sc /l.sc /m.sc /n.sc /o.sc
+%70
+  /p.sc /q.sc /r.sc /s.sc /t.sc /u.sc /v.sc /w.sc
+  /x.sc /y.sc /z.sc /braceleft /bar.sc /braceright /tilde.sc /dieresis
+%80
+  /Lslash /quotesingle /quotesinglbase /florin /quotedblbase /ellipsis /dagger.sc /daggerdbl.sc
+  /circumflex.sc /perthousand.sc /Scaron /guilsinglleft.sc /OE /Zcaron /asciicircum.sc /minus.sc
+%90
+  /lslash.sc /quoteleft /quoteright /quotedblleft /quotedblright /bullet.sc /endash.sc /emdash.sc
+  /tilde.sc /trademark /scaron.sc /guilsinglright.sc /oe.sc /zcaron.sc /asciitilde.sc /Ydieresis
+%A0
+  /uni00A0 /exclamdown /cent /sterling.lf /currency /yen.lf /brokenbar.sc /section.sc
+  /dieresis /copyright.sc /ordfeminine /guillemotleft.sc /logicalnot.sc /uni00AD /registered.sc /macron
+%B0
+  /degree /plusminus.sc /uni00B2 /uni00B3 /acute.sc /.notdef /paragraph.sc /periodcentered.sc
+  /cedilla /uni00B9 /ordmasculine /guillemotright.sc /onequarter /onehalf /threequarters /questiondown
+%C0
+  /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+  /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+%D0
+  /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply.sc
+  /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /.notdef
+%E0
+  /agrave.sc /aacute.sc /acircumflex.sc /atilde.sc /adieresis.sc /aring.sc /ae.sc /ccedilla.sc
+  /egrave.sc /eacute.sc /ecircumflex.sc /edieresis.sc /igrave.sc /iacute.sc /icircumflex.sc /idieresis.sc
+%F0
+  /eth.sc /ntilde.sc /ograve.sc /oacute.sc /ocircumflex.sc /otilde.sc /odieresis.sc /divide.sc
+  /oslash.sc /ugrave.sc /uacute.sc /ucircumflex.sc /udieresis.sc /yacute.sc /thorn.sc /ydieresis.sc
+] def
+% Command line: 'otftotfm --automatic --encoding=fontools_ly1
+% --tfm-directory=texmf/fonts/tfm/catharsis/cormorantgaramond
+% --vf-directory=texmf/fonts/vf/catharsis/cormorantgaramond
+% --type1-directory=texmf/fonts/type1/catharsis/cormorantgaramond
+% --truetype-directory=texmf/fonts/truetype/catharsis/cormorantgaramond
+% --encoding-directory=texmf/fonts/enc/dvips/cormorantgaramond
+% --map-file=texmf/fonts/map/dvips/cormorantgaramond/CormorantGaramond.map
+% --no-updmap --no-type1 --coding-scheme=TEX TYPEWRITER AND WINDOWS ANSI
+% --feature=kern --feature=liga --feature=lnum --feature=smcp --feature=tnum
+% --ligkern=f i =: fi --ligkern=f l =: fl --ligkern=f f =: ff --ligkern=ff i
+% =: ffi --ligkern=ff l =: ffl --unicoding=germandbls =: SSsmall
+% CormorantGaramond-Bold.ttf CormorantGaramond-Bold-tlf-sc-ly1'

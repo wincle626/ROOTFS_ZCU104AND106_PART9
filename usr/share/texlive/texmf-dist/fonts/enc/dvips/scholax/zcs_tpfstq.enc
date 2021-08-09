@@ -1,0 +1,66 @@
+% THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+%%AutoEnc_tpfstqhcxklxhbvbynmonphhfe
+% Encoding created by otftotfm on Fri Dec 27 15:01:22 2019
+% Command line follows encoding
+/AutoEnc_tpfstqhcxklxhbvbynmonphhfe [
+%00
+  /grave.superior /acute /circumflex /tilde /dieresis /hungarumlaut /ring /caron
+  /breve /macron /dotaccent /cedilla /ogonek /quotesinglbase /guilsinglleft /guilsinglright
+%10
+  /quotedblleft /quotedblright /quotedblbase /guillemotleft /guillemotright /endash /emdash /cwm
+  /perthousandzero /dotlessi /uni0237 /.notdef /.notdef /.notdef /.notdef /.notdef
+%20
+  /space /exclam.superior /quotedbl.superior /numbersign.superior /dollar.superior /percent.superior /ampersand.superior /quoteright.superior
+  /parenleft.superior /parenright.superior /asterisk.superior /plus.superior /comma.superior /hyphen.superior /period.superior /slash.superior
+%30
+  /zero.superior /one.superior /two.superior /three.superior /four.superior /five.superior /six.superior /seven.superior
+  /eight.superior /nine.superior /colon.superior /semicolon.superior /less.superior /equal.superior /greater.superior /question.superior
+%40
+  /at.superior /A.superior /B.superior /C.superior /D.superior /E.superior /F.superior /G.superior
+  /H.superior /I.superior /J.superior /K.superior /L.superior /M.superior /N.superior /O.superior
+%50
+  /P.superior /Q.superior /R.superior /S.superior /T.superior /U.superior /V.superior /W.superior
+  /X.superior /Y.superior /Z.superior /bracketleft.superior /backslash.superior /bracketright.superior /asciicircum.superior /underscore.superior
+%60
+  /quoteleft /a.superior /b.superior /c.superior /d.superior /e.superior /f.superior /g.superior
+  /h.superior /i.superior /j.superior /k.superior /l.superior /m.superior /n.superior /o.superior
+%70
+  /p.superior /q.superior /r.superior /s.superior /t.superior /u.superior /v.superior /w.superior
+  /x.superior /y.superior /z.superior /braceleft.superior /bar.superior /braceright.superior /asciitilde.superior /hyphen.superior
+%80
+  /Abreve /Aogonek /Cacute /Ccaron /Dcaron /Ecaron /Eogonek /Gbreve
+  /Lacute /Lcaron /Lslash /Nacute /Ncaron /Eng /Ohungarumlaut /Racute
+%90
+  /Rcaron /Sacute /Scaron /Scedilla /Tcaron /Tcedilla /Uhungarumlaut /Uring
+  /Ydieresis /Zacute /Zcaron /Zdotaccent /I_J /Idotaccent /dcroat /section
+%A0
+  /abreve /aogonek /cacute /ccaron /dcaron /ecaron /eogonek /gbreve
+  /lacute /lcaron /lslash /nacute /ncaron /eng /ohungarumlaut /racute
+%B0
+  /rcaron /sacute /scaron /scedilla /tcaron /tcedilla /uhungarumlaut /uring
+  /ydieresis /zacute /zcaron /zdotaccent /i_j /exclamdown.superior /questiondown /sterling
+%C0
+  /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+  /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+%D0
+  /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /OE
+  /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /.notdef
+%E0
+  /agrave /aacute /acircumflex /atilde /adieresis /aring /ae.superior /ccedilla
+  /egrave.superior /eacute.superior /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+%F0
+  /eth /ntilde.superior /ograve /oacute /ocircumflex /otilde /odieresis /oe
+  /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /germandbls
+] def
+% Command line: 'otftotfm --automatic --encoding=fontools_t1
+% --tfm-directory=texmf/fonts/tfm/public/scholax
+% --vf-directory=texmf/fonts/vf/public/scholax
+% --type1-directory=texmf/fonts/type1/public/scholax
+% --truetype-directory=texmf/fonts/truetype/public/scholax
+% --encoding-directory=texmf/fonts/enc/dvips/scholax
+% --map-file=texmf/fonts/map/dvips/scholax/TeXGyreScholaX.map --no-updmap
+% --coding-scheme=EXTENDED TEX FONT ENCODING - LATIN --feature=kern
+% --feature=liga --feature=sups --ligkern=f i =: fi --ligkern=f l =: fl
+% --ligkern=f f =: ff --ligkern=ff i =: ffi --ligkern=ff l =: ffl
+% --ligkern=* {KL} * TeXGyreScholaX-Bold.otf TeXGyreScholaX-Bold-sup-t1'

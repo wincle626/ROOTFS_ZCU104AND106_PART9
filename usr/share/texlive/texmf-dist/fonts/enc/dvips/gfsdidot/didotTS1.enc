@@ -1,0 +1,373 @@
+%!PS-Adobe-3.0 Resource-Encoding
+/didotTS1 [
+% 0x0
+/Grave
+/Acute
+%Uppercase circumflex
+/circumflex 
+%Uppercase tilde
+/tilde
+/Dieresis
+/Hungarumlaut
+/Ring
+/Caron
+
+% 0x8
+/Breve
+/Macron
+/Dotaccent
+/cedilla
+/ogonek
+/quotesinglbase
+/.notdef
+/.notdef
+
+% 0x10
+/.notdef
+/.notdef
+/quotedblbase
+/.notdef
+/.notdef
+%From the TeXGyre Pagella font
+/twelveudash
+%From the TeXGyre Pagella font
+/threequartersemdash
+%From the TeXGyre Pagella font
+/cwmcapital
+
+% 0x18
+%From the TeXGyre Pagella font
+/arrowleft
+%From the TeXGyre Pagella font
+/arrowright
+%From the TeXGyre Pagella font
+/tieaccentlowercase
+%From the TeXGyre Pagella font
+/tieaccentcapital
+%From the TeXGyre Pagella font
+/tieaccentlowercase.new
+%From the TeXGyre Pagella font
+/tieaccentcapital.new
+/.notdef
+%From the TeXGyre Pagella font
+/cwmascender
+
+% 0x20
+%From the TeXGyre Pagella font
+/blanksymbol
+/.notdef
+/.notdef
+/.notdef
+/dollar
+/.notdef
+/.notdef
+/quotesingle
+
+% 0x28
+/.notdef
+/.notdef
+/asterisk
+/.notdef
+/comma
+%From the TeXGyre Pagella font
+/hyphendbl
+/period
+/fraction
+
+% 0x30
+/zerooldstyle
+/oneoldstyle
+/twooldstyle
+/threeoldstyle
+/fouroldstyle
+/fiveoldstyle
+/sixoldstyle
+/sevenoldstyle
+
+% 0x38
+/eightoldstyle
+/nineoldstyle
+/.notdef
+/.notdef
+%From the TeXGyre Pagella font
+/angleleft
+/minus
+%From the TeXGyre Pagella font
+/angleright
+/.notdef
+
+% 0x40
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0x48
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+%From the TeXGyre Pagella font
+/mho
+/.notdef
+%From the TeXGyre Pagella font
+/bigcircle
+
+% 0x50
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/Omega
+
+% 0x58
+/.notdef
+/.notdef
+/.notdef
+%From the TeXGyre Pagella font
+/dblbracketleft
+/.notdef
+%From the TeXGyre Pagella font
+/dblbracketright
+%From the TeXGyre Pagella font
+/arrowup
+%From the TeXGyre Pagella font
+/arrowdown
+
+% 0x60
+/grave
+/.notdef
+%From the TeXGyre Pagella font
+/born
+%From the TeXGyre Pagella font
+/divorced
+%From the TeXGyre Pagella font
+/died
+/.notdef
+/.notdef
+/.notdef
+
+% 0x68
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+%From the TeXGyre Pagella font
+/leaf
+%From the TeXGyre Pagella font
+/married
+%From the TeXGyre Pagella font
+/musicalnote
+/.notdef
+
+% 0x70
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0x78
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/asciitilde
+%From the TeXGyre Pagella font
+/hyphendbl.alt
+
+% 0x80
+/breve
+/caron
+/hungarumlaut
+%From the TeXGyre Pagella font
+/dblgrave.ts1
+/dagger
+/daggerdbl
+/dblverticalbar
+/perthousand
+
+% 0x88
+/bullet
+%From the TeXGyre Pagella font
+/centigrade
+/dollaroldstyle
+/cent
+/florin
+/coloncurrency
+%From the TeXGyre Pagella font
+/won
+%From the TeXGyre Pagella font
+/naira
+
+% 0x90
+%From the TeXGyre Pagella font
+/guarani
+%From the TeXGyre Pagella font
+/peso
+/lira
+%From the TeXGyre Pagella font
+/recipe
+/interrobang
+%From the TeXGyre Pagella font
+/gnaborretni
+%From the TeXGyre Pagella font
+/dong
+/trademark
+
+% 0x98
+%From the TeXGyre Pagella font
+/permyriad
+/paragraphalt
+%From the TeXGyre Pagella font
+/baht
+/Numero
+%From the TeXGyre Pagella font
+/discount
+%From the TeXGyre Pagella font
+/estimated
+%From the TeXGyre Pagella font
+/openbullet
+%From the TeXGyre Pagella font
+/servicemark
+
+% 0xA0
+%From the TeXGyre Pagella font
+/quillbracketleft
+%From the TeXGyre Pagella font
+/quillbracketright
+/cent
+/sterling
+/currency
+/yen
+/brokenbar
+/section
+
+% 0xA8
+/dieresis
+/copyright
+/ordfeminine
+%From the TeXGyre Pagella font
+/copyleft
+/logicalnot
+%From the TeXGyre Pagella font
+/published
+/registered
+/Macronsmall
+
+% 0xB0
+/degree
+/plusminus
+/twosuperior
+/threesuperior
+/acute
+%mu badly named in GFS Didot postscript font
+/uni03BC
+/paragraph
+%From the TeXGyre Pagella font
+/periodcentered
+
+% 0xB8
+%From the TeXGyre Pagella font
+/referencemark
+/onesuperior
+/ordmasculine
+/radical
+/onequarter
+/onehalf
+/threequarters
+/Euro
+
+% 0xC0
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0xC8
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0xD0
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/multiply
+/.notdef
+
+% 0xD8
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0xE0
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0xE8
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+
+% 0xF0
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/divide
+/.notdef
+
+% 0xF8
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+] def

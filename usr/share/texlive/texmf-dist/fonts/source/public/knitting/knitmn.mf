@@ -1,0 +1,22 @@
+% Date: 2019/04/05
+
+mode_setup;
+
+boolean gridfont; gridfont := true;
+fonttype = foretype; % Show symbols only - no grid
+
+input knit_dimens;
+
+if known ps_output:
+	font_identifier := "KnittingSymbols-mixed-foreground";
+fi
+
+string Vtitle; Vtitle := "Knit font with grid and stylized cables";
+
+input knit_symbols;
+
+input knit_nogrid_cables;
+
+end
+
+

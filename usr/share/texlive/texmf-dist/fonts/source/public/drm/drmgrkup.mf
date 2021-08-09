@@ -1,0 +1,293 @@
+% +AMDG  This document was begun on 24 June 11EX, the Eve of
+% the feast of Sts. Peter and Paul, and it is humbly
+% dedicated to them and to the Immaculate Heart of Mary for
+% their prayers, and to the Sacred Heart of Jesus for his
+% mercy.
+
+beginchar(oct"107",5em#/6+2ss#,cap#,0); "The letter Gamma";
+italcorr(ex#*slant);
+
+fill capell reflectedabout ((0,h/2),(w,h/2));
+
+endchar;
+
+beginchar(oct"104",5em#/6+2ss#,cap#,0); "The letter Delta";
+italcorr(ex#*slant);
+
+z0 = (ss,0-o);
+z1 = (x0+1.5thinstroke,y0) rotatedaround(z0,30);
+z2 = (w/2,h);
+z3 = z2 shifted (0,-2thinstroke);
+z4 = (w-ss-1.5thinstroke,0-o);
+z5 = (x4-1.5thinstroke,y4) rotatedaround(z4,-30);
+z6 = z2 shifted (thinstroke,0);
+z7 = z4 shifted (thinstroke,0);
+
+path deltfill; deltfill = z0--z2--z4--cycle;
+fill deltfill;
+path deltunfill; deltunfill = z1--z3--z5--cycle;
+unfill deltunfill;
+path deltfilltwo; deltfilltwo = z2--z6--z7--z4--cycle;
+fill deltfilltwo;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"112",5em#/6+2ss#,cap#,0); "The letter Theta";
+italcorr(ex#*slant);
+
+z1=(ss,h/2);
+z2=(w/2,h+o);
+z3=(w-ss,h/2);
+z4=(w/2,0-o);
+z5=z1 shifted (curvwid,0);
+z6=z2 shifted (0,-thinstroke);
+z7=z3 shifted (-curvwid,0);
+z8=z4 shifted (0,thinstroke);
+
+fill z4..z3..z2..z1..cycle;
+unfill z5..z6..z7..z8..cycle;
+fill capeye rotated (90) xscaled 0.4 shifted (w/2+0.2cap,
+	h/2-lserw-thickstroke/2-ss);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"114",6em#/6+2ss#,cap#,0); "The letter Lambda";
+italcorr(ex#*slant);
+
+z0 = (ss+lserw,lserh);
+z1 = z0 shifted (thinstroke,0);
+z2 = (w-ss-lserw,lserh);
+z3 = z2 shifted (-thickstroke,0);
+llserif(0,4,5,6,7)(1);
+lrserif(1,8,9,10,11)(1);
+llserif(3,12,13,14,15)(1);
+lrserif(2,16,17,18,19)(1);
+z20 = (w/2,h+o);
+z24 = z20 shifted (thinstroke,0);
+z25 = z20 shifted (-thickstroke,0);
+z21 = (z1--z24) intersectionpoint (z3--z25);
+
+fill
+z0..z4..z5--z6--z10--z9..z8..z1--z21--z3..z12..z13--z14--z18--z17..z16..z2--z20--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+
+beginchar(oct"130",5em#/6+2ss#,cap#,0); "The letter Xi";
+italcorr(ex#*slant);
+
+z0 = (ss,h-thickstroke-thinstroke);
+z1 = z0 shifted (thinstroke,0);
+z2 = z1 shifted (0,thinstroke);
+z3 = (w-ss,h-thickstroke-thinstroke);
+z4 = z3 shifted (-thinstroke,0);
+z5 = z4 shifted (0,thinstroke);
+z6 = (ss,h);
+z7 = (w-ss,h);
+
+path xitop; xitop = z0--z6--z7--z3--z4--z5--z2--z1--cycle;
+fill xitop;
+fill xitop reflectedabout ((0,h/2),(w,h/2));
+
+fill capeye rotated (90) xscaled 0.4 shifted (w/2+0.2cap,
+	h/2-lserw-thickstroke/2-ss);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"120",6em#/6+2ss#,cap#,0); "The letter Pi";
+italcorr(ex#*slant);
+
+z0 = (ss+lserw,lserh);
+z1 = z0 shifted (thickstroke,0);
+z2 = (w-ss-lserw,lserh);
+z3 = z2 shifted (-thickstroke,0);
+llserif(0,4,5,6,7)(1);
+lrserif(1,8,9,10,11)(1);
+llserif(3,12,13,14,15)(1);
+lrserif(2,16,17,18,19)(1);
+z20 = (x0,h-lserh);
+z21 = (x1,h-thinstroke);
+z22 = (x3,h-thinstroke);
+z23 = (x2,h-lserh);
+ulserif(20,24,25,26,27)(1);
+urserif(23,28,29,30,31)(1);
+
+fill
+z0..z4..z5--z6--z10--z9..z8..z1--z21--z22--z3..z12..z13--z14--z18--z17..z16..z2--z23..z28..z29--z30--z26--z25..z24..z20--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"123",5em#/6+2ss#,cap#,0); "The letter Sigma";
+italcorr(ex#*slant);
+
+z0 = (w-ss,h);
+z1 = (w-ss,h-thickstroke-thinstroke);
+z2 = z1 shifted (-thinstroke,0);
+z3 = z2 shifted (0,thinstroke);
+z4 = (ss,h);
+z5 = (ss,h-thickstroke);
+z6 = (w/2-1.5thinstroke/2,h/2);
+z7 = z6 shifted (1.5thinstroke,0);
+z8 = (ss,0);
+z9 = z8 shifted (0,thickstroke);
+z10 = (w-ss,0);
+z11 = z10 shifted (0,thickstroke+thinstroke);
+z12 = z11 shifted (-thinstroke,0);
+z13 = z12 shifted (0,-thinstroke);
+z14 = z5 shifted (1.5thinstroke,0);
+z15 = z9 shifted (1.5thinstroke,0);
+
+fill z11--z10--z8--z9--z6--z5--z4--z0--z1--z2--z3--z14--
+	z7--z15--z13--z12--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"125",5em#/6+2ss#,cap#,0); "The letter Upsilon";
+italcorr(ex#*slant);
+
+fill capwhy;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"106",5em#/6+2ss#,cap#,0); "The letter Phi";
+italcorr(ex#*slant);
+
+fill capeye shifted (w/2-lserw-thickstroke/2-ss,0);
+fill fillo yscaled 0.6 shifted (0,0.2h);
+unfill unfillo yscaled 0.6 shifted (0,0.2h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"131",5em#/6+2ss#,cap#,0); "The letter Psi";
+italcorr(ex#*slant);
+
+fill capeye shifted (w/2-lserw-thickstroke/2-ss,0);
+pickup pencircle scaled thickstroke;
+penpos0(0.8thickstroke,0);
+z0 = (w/4,3h/5);
+penpos1(0.8thickstroke,180);
+z1 = (3w/4,3h/5);
+penpos2(0.8thickstroke,0);
+z2 = (w/4,2h/5);
+penpos3(0.8thickstroke,180);
+z3 = (3w/4,2h/5);
+penpos4(thinstroke,90);
+z4 = (w/2,h/5);
+penpos5(thinstroke,90);
+z5 = (ss,4h/5);
+penpos6(thinstroke,90);
+z6 = (w-ss,4h/5);
+
+penstroke z5e..z0e..z2e..z4e..z3e..z1e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+endchar;
+
+beginchar(oct"127",5em#/6+2ss#,cap#,0); "The letter Omega";
+italcorr(ex#*slant);
+
+z0 = (ss,0);
+z1 = (w-ss,0);
+z2 = z0 shifted (thickstroke,0);
+z3 = z1 shifted (-thickstroke,0);
+z4 = z0 shifted (0,2lserh);
+z5 = z1 shifted (0,2lserh);
+z6 = z5 shifted (-lserstep,0);
+z7 = z4 shifted (lserstep,0);
+z8 = z2 shifted (thickstroke,0);
+z9 = z3 shifted (-thickstroke,0);
+z10 = (ss,h/2+2lserh);
+z11 = (w-ss,h/2+2lserh);
+z12 = z10 shifted (curvwid,0);
+z13 = z11 shifted (-curvwid,0);
+z14 = (w/2,h+o);
+z15 = z14 shifted (0,-thinstroke);
+z16 = z8 shifted (0,thinstroke);
+z17 = z9 shifted (0,thinstroke);
+z18 = z9 shifted (-thickstroke,0);
+z19 = z8 shifted (thickstroke,0);
+
+path omega; omega =
+	z8--z0--z4--z7{down}..{right}z16{dir 120}..{up}z10{up}..
+	{right}z14{right}..{down}z11{down}..{dir -120}z17{right}..
+	{up}z6--z5--z1--z18{dir 60}..{up}z13{up}..{left}z15{left}..
+	{down}z12{down}..{dir -60}z19--cycle;
+fill omega;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"033",2ss#+2thinstroke#+thickstroke#+6lserw#+2hair#,cap#,0);
+"Three legs down, curved";
+italcorr(ex#*slant);
+
+penpos0(thickl,90);
+z0r = (ss,h+o);
+penpos1(thickl,0);
+z1r = (w-ss,0-o);
+penpos2(thickl,0);
+z2l = (ss,0);
+penpos3(thickl,0);
+z3l = (w/2,0);
+z4 = z1 rotatedaround (z2,70);
+z5 = (w+thickstroke,0) rotatedaround (z3,70);
+penpos4(thinl,-15);
+penpos5(thinl,-45);
+
+penstroke z0e{right}..z1e;
+penstroke z2e{up}..z4e;
+penstroke z3e{up}..z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+def letbox =
+	pickup pensquare scaled 1.5thinstroke;
+	bot lft z100 = (0,0);
+	top lft z101 = (0,h);
+	top rt z102 = (w,h);
+	bot rt z103 = (w,0);
+	draw z100--z101--z102--z103;
+enddef;
+
+beginchar(oct"002",5em#/6+2ss#,cap#,0); "Delta boxed";
+italcorr(ex#*slant);
+
+fill deltfill scaled 0.9 shifted (0.1w-2ss,0);
+unfill deltunfill scaled 0.9 shifted (0.1w-2ss,0);
+fill deltfilltwo scaled 0.9 shifted (0.1w-2ss,0);
+letbox;
+endchar;
+
+beginchar(oct"003",em#+2ss#,cap#,0); "Eta boxed";
+italcorr(ex#*slant);
+fill capeta scaled 0.9 shifted (0.1w-2ss,0);
+letbox;
+endchar;
+
+beginchar(oct"004",5em#/6+2ss#,cap#,0); "Chi boxed";
+italcorr(ex#*slant);
+fill capchi scaled 0.9 shifted (0.1w-2ss,0);
+letbox;
+endchar;
+
+beginchar(oct"005",em#+2ss#,cap#,0); "Mu boxed";
+italcorr(ex#*slant);
+fill capem scaled 0.9 shifted (0.1w-2ss,0);
+letbox;
+endchar;

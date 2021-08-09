@@ -1,0 +1,126 @@
+%%
+%% This is file `Qinuit2uni.otp',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% oinuit.dtx  (with options: `Qinuit2uni')
+%% 
+%%  (c) copyright 2002 Apostolos Syropoulos
+%%  This program can be redistributed and/or modified under the terms
+%%  of the LaTeX Project Public License Distributed from CTAN
+%%  archives in directory macros/latex/base/lppl.txt; either
+%%  version 1 of the License, or any later version.
+%%  use or alter this file in any way.
+%% 
+%%  Please report errors or suggestions for improvement to
+%% 
+%%     Apostolos Syropoulos
+%%     366, 28th October Str.
+%%     GR-671 00 Xanthi, GREECE
+%%     apostolo@ocean1.ee.duth.gr or apostolo@obelix.ee.duth.gr
+%% 
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%% Omega translation process Qinuit2uni
+%% 2002/07/21 v1.0 Inuktitut Latin transcription to Unicode,
+%% follows the Catholic orthography.
+input : 1;
+output: 2;
+expressions:
+`i' => @"1403;
+`u' => @"1405;
+`a' => @"140A;
+`h' => @"157C;
+`p' end: => @"1449;
+`p' ^(`i'|`a'|`u') => @"1449 <= \2;
+`p' `i' => @"1431;
+`p' `a' => @"1438;
+`p' `u' => @"1433;
+`t' end: => @"1466;
+`t' ^(`i'|`a'|`u') => @"1466 <= \2;
+`t' `i' => @"144E;
+`t' `a' => @"1455;
+`t' `u' => @"1450;
+`k' end: => @"1483;
+`k' ^(`i'|`a'|`u') => @"1483 <= \2;
+`k' `i' => @"146D;
+`k' `a' => @"1472;
+`k' `u' => @"146F;
+`n' `n' `g' end: => @"1596;
+`n' `n' `g' ^(`i'|`a'|`u') => @"1596 <= \2;
+`n' `n' `g' `i' => @"1671;
+`n' `n' `g' `u' => @"1673;
+`n' `n' `g' `a' => @"1675;
+`n' `g' end: => @"1595;
+`n' `g' ^(`i'|`a'|`u') => @"1595 <= \2;
+`n' `g' `i' => @"158F;
+`n' `g' `u' => @"1591;
+`n' `g' `a' => @"1593;
+`g' end: => @"14A1;
+`g' ^(`i'|`a'|`u') => @"14A1 <= \2;
+`g' `i' => @"148B;
+`g' `a' => @"1490;
+`g' `u' => @"148D;
+`m' end: => @"14BB;
+`m' ^(`i'|`a'|`u') => @"14BB <= \2;
+`m' `i' => @"14A5;
+`m' `a' => @"14AA;
+`m' `u' => @"14A7;
+`n' end: => @"14D0;
+`n' ^(`i'|`a'|`u') => @"14D0 <= \2;
+`n' `i' => @"14C2;
+`n' `a' => @"14C7;
+`n' `u' => @"14C4;
+`l' end: => @"14EA;
+`l' ^(`i'|`a'|`u'|`h') => @"14EA <= \2;
+`l' `i' => @"14D5;
+`l' `a' => @"14DA;
+`l' `u' => @"14D7;
+`s' end: => @"1505;
+`s' ^(`i'|`a'|`u') => @"1505 <= \2;
+`s' `i' => @"14EF;
+`s' `a' => @"14F4;
+`s' `u' => @"14F1;
+`j' end: => @"153E;
+`j' ^(`i'|`a'|`u') => @"153E <= \2;
+`j' `i' => @"1528;
+`j' `u' => @"152A;
+`j' `a' => @"152D;
+`r' end: => @"1550;
+`r' ^(`i'|`a'|`u') => @"1550 <= \2;
+`r' `i' => @"1546;
+`r' `u' => @"1548;
+`r' `a' => @"154B;
+`v' end: => @"155D;
+`v' ^(`i'|`a'|`u') => @"155D <= \2;
+`v' `i' => @"1555;
+`v' `u' => @"1559;
+`v' `a' => @"1559;
+`q' end: => @"1585;
+`q' ^(`i'|`a'|`u') => @"1585 <= \2;
+`q' `i' => @"157F;
+`q' `u' => @"1581;
+`q' `a' => @"1583;
+`l' `h' end: => @"15A6;
+`l' `h' ^(`i'|`a'|`u') => @"15A6 <= \2;
+`l' `h' `i' => @"15A0;
+`l' `h' `u' => @"15A2;
+`l' `h' `a' => @"15A4;
+. => \1;
+%% 
+%%
+%% End of file `Qinuit2uni.otp'.

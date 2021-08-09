@@ -1,0 +1,797 @@
+% The Fetamont typeface extends the Logo fonts to
+% complete the T1 encoding. The designs of the glyphs
+% A, E, F, M, N, O, P, S, T are based on the 
+% Metafont constructions by D. E. Knuth. 
+% The glyphs Y and 1 imitate the shapes of the
+% corresponding glyphs in the METATYPE1 logo
+% that is due to the METATYPE1 team (Boguslaw Jackowski, 
+% Janusz M. Nowacki and Piotr Strzelczyk).
+% There exists a LaTeX package for the Fetamont
+% typeface. Both the package and the typeface
+% are distributed under the terms of the 
+% LaTeX Project Public License (LPPL).
+
+if base_name<>"mf2outline":
+ message("This font has to be compiled");
+ message("with METAPOST and the base file");
+ message("mf2outline.mp! Using mf2outline.py");
+ message("makes things even easier.");
+fi
+
+font_slant slant;
+font_normal_space 6u#+2s#;
+font_normal_stretch 3u#;
+font_normal_shrink 2u#;
+font_x_height x_ht#;
+font_quad 18u#+2s#;
+font_extra_space 2u#;
+font_coding_scheme "unicode";
+font_copyright "Copyright (c) 2014-2017 by Linus Romer." 
+ & "This work is released under the LaTeX project public license. " 
+ & "The designs of the letters A, E, F, M, O, P, S and T rely heavily "
+ & "on the original design of the logo font family by "
+ & "Donald E. Knuth. The shapes of the glyphs Y and 1 have been "
+ & "imitated from the METATYPE1 logo.";
+
+ho#:=o#;                                % horizontal overshoot
+leftstemloc#:=2.5u#+s#;                 % position of left stem
+acc_gr#:=1.5acc_ht#;                    % height of Greek accents
+if not known has_variants:
+ has_variants:=0;                       % are random variants contained?
+fi
+variant:=0;                             % current variant
+string variantcode;
+variantcode:="F0000";                   % starting code for variants %F0000
+
+mode_setup;
+currenttransform:=identity slanted slant yscaled aspect_ratio;
+
+define_pixels(s,u);
+define_whole_pixels(xgap);
+define_whole_vertical_pixels(ygap);
+define_blacker_pixels(px,py);
+pickup pencircle xscaled px yscaled py rotated prot;
+logo_pen:=savepen;
+define_good_x_pixels(leftstemloc);
+define_good_y_pixels(barheight,x_ht,ht,acc_ht,acc_gr);
+define_corrected_pixels(o);
+define_horizontal_corrected_pixels(ho);
+
+numeric charwidths_[];
+numeric charheights_[];
+numeric chardepths_[];
+numeric charitalcorrs_[];
+picture charpictures_[];
+pair charanchortops_[]; 
+pair charanchorbots_[]; 
+pair charanchortoprights_[];
+pair charanchorcedillas_[];
+
+% the randomization is fixed
+% but still special for every style
+fixedseed:=2.71828designsize;
+for i=1 upto length font_identifier_: 
+ fixedseed:=fixedseed
+  +sqrt(ASCII(substring (i-1,i) of font_identifier_));
+endfor
+randomseed:=fixedseed;
+
+vardef noise =
+ normaldeviate*craziness
+enddef;
+
+vardef randrt = %random direction towards right
+ (12u,normaldeviate*craziness)
+enddef;
+
+vardef randup = %random direction towards up
+ (normaldeviate*craziness,ht)
+enddef;
+
+% varycode returns a code for a variant, if 
+% variant>0 and 
+vardef varycode(expr code) =
+ if variant>0:
+  variantcode := unicodeeps(epscode(variantcode)+epsilon);
+  unicodeeps(epscode(variantcode)-epsilon)
+ else:
+  code
+ fi
+enddef;
+
+def ffmchar(expr code, unit_width, height, depth) =
+ beginchar(varycode(code),
+  if unit_width=0: 0 else: unit_width*u#+2s# fi,
+  height,depth);
+ if variant>0:
+   addrandvariant(code,charunicode);
+ fi
+ pickup logo_pen 
+enddef;
+
+extra_endchar := 
+ extra_endchar
+ &"charpictures_[charepscode]:=currentpicture;"
+ &"charwidths_[charepscode]=charwd;"
+ &"charheights_[charepscode]=charht;"
+ &"chardepths_[charepscode]=chardp;"
+ &"charitalcorrs_[charepscode]=charic;";
+ 
+% the glyph with code a is anchor wise combined
+% from the glyphs with code b (base) and code c (accent)
+% the new height and depth shall be h and d
+def ffmcombinedchar(expr a,b,c,anchor,h,d) =
+ beginchar(varycode(a),charwidths_[epscode(b)],h,d);
+ if variant>0:
+   addrandvariant(a,charunicode);
+ fi
+ charic:=charitalcorrs_[epscode(b)];
+ charanchortops_[epscode(varycode(a))]=charanchortops_[epscode(b)];
+ charanchorbots_[epscode(varycode(a))]=charanchorbots_[epscode(b)];
+ charanchortoprights_[epscode(varycode(a))]=charanchortoprights_[epscode(b)];
+ charanchorcedillas_[epscode(varycode(a))]=charanchorcedillas_[epscode(b)];
+ if variant>0:
+  picepscode:=randvariants_[epscode(b)][variant];
+ else:
+  picepscode:=epscode(b);
+ fi
+ addto currentpicture also charpictures_[picepscode];
+ if variant>0:
+  picepscode:=randvariants_[epscode(c)][variant];
+ else:
+  picepscode:=epscode(c);
+ fi
+ if anchor="top":
+  addto currentpicture also charpictures_[picepscode] shifted 
+  ((charanchortops_[epscode(b)]-charanchortops_[epscode(c)]) slanted slant);
+ elseif anchor="bot":
+  addto currentpicture also charpictures_[picepscode] shifted 
+  ((charanchorbots_[epscode(b)]-charanchorbots_[epscode(c)]) slanted slant);
+ elseif anchor="topright":
+  addto currentpicture also charpictures_[picepscode] shifted 
+  ((charanchortoprights_[epscode(b)]-charanchortoprights_[epscode(c)]) slanted slant);
+ elseif anchor="cedilla":
+  addto currentpicture also charpictures_[picepscode] shifted 
+  ((charanchorcedillas_[epscode(b)]-charanchorcedillas_[epscode(c)]) slanted slant);
+ else:
+  errmessage "Wrong anchor name";
+ fi
+ endchar;
+enddef;
+
+% ffmchainedchar chains two chars like "f" (code b) 
+% and "l" (code c) to "fl" (code a)
+% inbetween the chars may be a gap
+def ffmchainedchar(expr a,b,c,gap) =
+ beginchar(varycode(a),
+  charwidths_[epscode(b)]
+  +charwidths_[epscode(c)]+gap*u#,
+  max(charheights_[epscode(b)],
+  charheights_[epscode(c)]),
+  max(chardepths_[epscode(b)],
+  chardepths_[epscode(c)])
+ );
+ if variant>0:
+   addrandvariant(a,charunicode);
+ fi
+ charic:=charitalcorrs_[epscode(b)]; 
+ if variant>0:
+  picepscode:=randvariants_[epscode(b)][variant];
+ else:
+  picepscode:=epscode(b);
+ fi
+ addto currentpicture also charpictures_[picepscode];
+ if variant>0:
+  picepscode:=randvariants_[epscode(c)][variant];
+ else:
+  picepscode:=epscode(c);
+ fi
+ addto currentpicture also charpictures_[picepscode] 
+  shifted (charwidths_[epscode(b)]*hppp+gap*u#*hppp,0);
+ endchar;
+enddef;
+
+% copy a letter with code b to code a
+def ffmcopiedchar(expr a,b) =
+ beginchar(varycode(a),
+  charwidths_[epscode(b)],
+  charheights_[epscode(b)],
+  chardepths_[epscode(b)]
+ );
+ if variant>0:
+   addrandvariant(a,charunicode);
+ fi
+ charic:=charitalcorrs_[epscode(b)];
+ charanchortops_[epscode(varycode(a))]=charanchortops_[epscode(b)];
+ charanchorbots_[epscode(varycode(a))]=charanchorbots_[epscode(b)];
+ charanchortoprights_[epscode(varycode(a))]=charanchortoprights_[epscode(b)];
+ charanchorcedillas_[epscode(varycode(a))]=charanchorcedillas_[epscode(b)];
+ if variant>0:
+  picepscode:=randvariants_[epscode(b)][variant];
+ else:
+  picepscode:=epscode(b);
+ fi
+ addto currentpicture also charpictures_[picepscode];
+ endchar;
+enddef;
+
+% add a first kerning class (similar to addkernclassl
+% as in mf2outline.mp) but with random variants
+def addkernclassf(text a) = 
+ begingroup
+  save i,l;
+  numeric i,l;
+  l:=hex(kernclassesl_[0][0])+1;
+  kernclassesl_[0][0]:=hexadecimal l;
+  i:=0; % number of chars in current class
+  for b=a:
+   i:=i+1;
+   kernclassesl_[l][i]:=unicode b;
+   % include also random variants
+   if has_variants=1:
+    if randvariants_[epscode(b)][0]>0:
+     for j=1 upto randvariants_[epscode(b)][0]:
+      i:=i+1;
+      kernclassesl_[l][i]:=unicodeeps(randvariants_[epscode(b)][j]);
+     endfor
+    fi
+   fi
+  endfor
+  % number of chars in current class is stored at 0th position
+  kernclassesl_[l][0]:=hexadecimal i; 
+ endgroup
+enddef;
+
+% add a second kerning class (similar to addkernclassr
+% as in mf2outline.mp) but with random variants
+def addkernclasss(text a) = 
+ begingroup
+  save i,l;
+  numeric i,l;
+  l:=hex(kernclassesr_[0][0])+1;
+  kernclassesr_[0][0]:=hexadecimal l;
+  i:=0; % number of chars in current class
+  for b=a:
+   i:=i+1;
+   kernclassesr_[l][i]:=unicode b;
+   % include also random variants
+   if has_variants=1:
+    if randvariants_[epscode(b)][0]>0:
+     for j=1 upto randvariants_[epscode(b)][0]:
+      i:=i+1;
+      kernclassesr_[l][i]:=unicodeeps(randvariants_[epscode(b)][j]);
+     endfor
+    fi
+   fi
+  endfor
+  % number of chars in current class is stored at 0th position
+  kernclassesr_[l][0]:=hexadecimal i; 
+ endgroup
+enddef;
+
+% an arc is kind of a quarter of a skewed superellipse
+vardef arc(expr zi,diri,zj,dirj) =
+ zi{diri}...
+ begingroup
+  save corner,zij; 
+  pair corner,zij;
+  corner=zi+whatever*diri=zj+whatever*dirj;
+  zij=zi
+   +superness*(corner-zi)
+   +(1-superness)*(zj-corner);
+  zij
+ endgroup{zj-zi}
+ ...zj{dirj}
+enddef;
+
+% two concatenated arcs
+def half(expr zi,diri,zj,dirj,zk,dirk) =
+ arc(zi,diri,zj,dirj) 
+ & arc(zj,dirj,zk,dirk)
+enddef;
+
+% two concatenated halfs
+def full(expr zi,diri,zj,dirj,zk,dirk,zl,dirl) =
+ half(zi,diri,zj,dirj,zk,dirk)
+ & half(zk,dirk,zl,dirl,zi,diri)
+enddef;
+
+% for dots...
+def dotcircle(expr zi,zj) =
+ zi..zj..cycle & zi
+enddef;
+
+% 
+input ffmchars_uni
+if has_variants=1: % make 4 variants for RAND feature
+ variant := 1;
+ input ffmchars_uni
+ variant := 2;
+ input ffmchars_uni
+ variant := 3;
+ input ffmchars_uni
+ variant := 4;
+ input ffmchars_uni
+fi
+
+%------kerning-------
+addkernclassf("A","00C0","00C1","00C2","00C3","00C4","00C5","0100",
+ "0102","0104","0386","038F","0391","03A9","1EA0","1F08","1F09",
+ "1F0A","1F0B","1F0C","1F0D","1F0E","1F0F","1F68","1F69","1F6A",
+ "1F6B","1F6C","1F6D","1F6E","1F6F","1F88","1F89","1F8A","1F8B",
+ "1F8C","1F8D","1F8E","1F8F","1FA8","1FA9","1FAA","1FAB","1FAC",
+ "1FAD","1FAE","1FAF","1FB8","1FB9","1FBA","1FBB","1FBC","1FFA",
+ "1FFB","1FFC");
+addkernclassf("B","0392","1E9E");
+addkernclassf("C","00C7","0106","0108","010A","010C");
+addkernclassf("D","O","00D0","00D2","00D3","00D4","00D5","00D6",
+ "010E","0110","014C","014E","0150","018F","038C","0398","039F","03D8",
+ "1ECC","1F48","1F49","1F4A","1F4B","1F4C","1F4D","1FF8","1FF9");
+addkernclassf("F","03DC");
+addkernclassf("J","U","00D8","00D9","00DA","00DB","00DC","0132","0134",
+ "0168","016A","016C","016E","0170","0172");
+addkernclassf("K","0058","0136","039A","039E","03A3","03A7");
+addkernclassf("L","0139","013B","013D","0141");
+addkernclassf("P","03A1","1FEC");
+addkernclassf("00DE"); % Thorn
+addkernclassf("Q");
+addkernclassf("R","0154","0156","0158");
+addkernclassf("S","015A","015C","015E","0160","0218");
+addkernclassf("T","0162","0164","021A","0393","03A4");
+addkernclassf("V","W","0174","1E80","1E82","1E84");
+addkernclassf("Y","00DD","0176","0178","0232","038E","03A5","03A8",
+ "03AB","1EF2","1EF8","1F59","1F5B","1F5D","1F5F","1FE8","1FE9",
+ "1FEA","1FEB");
+addkernclassf("Z","0179","017B","017D","0396");
+addkernclassf("0394","039B","03E0"); % Delta, Lambda, ...
+addkernclassf("a","00E0","00E1","00E2","00E3","00E4","00E5","0101",
+ "0103","0105","03AC","03B1","03C9","03CE","1EA1","1F00","1F01",
+ "1F02","1F03","1F04","1F05","1F06","1F07","1F60","1F61","1F62",
+ "1F63","1F64","1F65","1F66","1F67","1F70","1F71","1F7C","1F7D",
+ "1F80","1F81","1F82","1F83","1F84","1F85","1F86","1F87","1FA0",
+ "1FA1","1FA2","1FA3","1FA4","1FA5","1FA6","1FA7","1FB0","1FB1",
+ "1FB2","1FB3","1FB4","1FB6","1FB7","1FF2","1FF3","1FF4","1FF6",
+ "1FF7");
+addkernclassf("b","00DF","03B2");
+addkernclassf("c","00E7","0109","010B","010D","03DB");
+addkernclassf("d","o","00F0","010F","0111","01DD","0259","03B8","03BF",
+ "03CC","03D9","1ECD","1F40","1F41","1F42","1F43","1F44","1F45",
+ "1F78","1F79");
+addkernclassf("f","FB00");
+addkernclassf("j","0075","00F9","00FA","00FB","00FC","0133","0135",
+ "016B","016D","016F","0171","0173","1EE5");
+addkernclassf("k","x","0137","0138","03BA","03BE","03C2","03C3","03C7");
+addkernclassf("l","013A","013C","013E","0140","0142","FB02","FB04");
+addkernclassf("p","03C1","1FE4","1FE5");
+addkernclassf("00FE"); % thorn
+addkernclassf("q");
+addkernclassf("r","0155","0157","0159");
+addkernclassf("s","015B","015D","015F","0161","0219");
+addkernclassf("t","0163","0165","021B","03B3","03C4");
+addkernclassf("v","w","0175","1E81","1E83","1E85");
+addkernclassf("y","00FD","0177","03B0","03C5","03C8","03CD","1F50",
+ "1F51","1F52","1F53","1F54","1F55","1F56","1F57","1FE0","1FE1",
+ "1FE2","1FE3");
+addkernclassf("z","017A","017C","017E","03B6");
+addkernclassf("03B4","03BB","03E1"); % delta, lambda, ...
+addkernclassf("0030","0033","0038","0039"); % 0,3,8,9
+addkernclassf("0032"); % 2
+addkernclassf("0034"); % 4
+addkernclassf("0035","0036"); % 5,6
+addkernclassf("0037"); % 7
+
+addkernclasss("A","00C0","00C1","00C2","00C3","00C4","00C5",
+ "00C6","00D8","0102","0104","01FE","0391","1E9E",
+ "1EA0","1FB8","1FB9","1FBC");
+addkernclasss("C","G","O","Q","00C7","00D2","00D3",
+ "00D4","00D5","00D6","0106","0108","010A","010C",
+ "011C","011E","0120","0121","0122","014C","014E",
+ "0150","0152","0398","039F","03D8","1ECC","E001");
+addkernclasss("J");
+addkernclasss("S","015A","015C","015E","0160","0218");
+addkernclasss("T","0162","0164","021A","03A4");
+addkernclasss("U","00D9","00DA","00DB","00DC","016C","016E",
+ "0170","0172");
+addkernclasss("V","W","1E80","1E82","1E84");
+addkernclasss("X","039E","03A3","03A7");
+addkernclasss("Y","00DD","0176","0178","0232","03A5","03A8",
+ "03AB","1EF2","1EF8","1F59","1F5B","1F5D","1F5F",
+ "1FE8","1FE9");
+addkernclasss("0394","039B"); % Delta, Lambda
+addkernclasss("a","00DF","00E6","0105","03B1","1EA1","1FB3");
+addkernclasss("00E0","00E1","00E2","00E3","00E4","00E5","0101",
+ "0103","01FD","03AC","1F00","1F01","1F02","1F03",
+ "1F04","1F05","1F06","1F07","1F70","1F71","1F80",
+ "1F81","1F82","1F83","1F84","1F85","1F86","1F87",
+ "1FB2","1FB4","1FB6","1FB7");
+addkernclasss("b","d","e","f","h","i","k",
+ "l","m","n","p","r","00FE","0119",
+ "012F","0131","0137","0138","013C","013E","0140",
+ "0146","014B","0157","03B3","03B7","03B9","03BA",
+ "03BC","03BD","03C0","03C1","03DD","1EB9","1ECB",
+ "1FC3","FB00","FB01","FB02","FB03","FB04");
+addkernclasss("00E8","00E9","00EA","00EB","00F1","010F","0117",
+ "011B","0125","0129","012B","012D","013A","0144",
+ "0148","0155","0159","03AD","03AE","03CA","1EBD",
+ "1F10","1F11","1F12","1F13","1F14","1F15","1F20",
+ "1F21","1F22","1F23","1F24","1F25","1F26","1F27",
+ "1F30","1F31","1F32","1F33","1F34","1F35","1F36",
+ "1F37","1F72","1F73","1F74","1F75","1F76","1F77",
+ "1F90","1F91","1F92","1F93","1F94","1F95","1F96",
+ "1F97","1FC2","1FC4","1FC6","1FC7","1FD0","1FD1",
+ "1FD2","1FD3","1FD6","1FD7","1FE4","1FE5");
+addkernclasss("c","g","o","00E7","0123","0153","03B8",
+ "03BF","03D9","03DB","1ECD");
+addkernclasss("00F2","00F3","00F4","00F5","00F6","0107","0109",
+ "010B","010D","011D","011F","014D","014F","0151",
+ "03CC","1F40","1F41","1F42","1F43","1F44","1F45");
+addkernclasss("j","0237");
+addkernclasss("0135");
+addkernclasss("s","015F","0219");
+addkernclasss("015B","015D","0161");
+addkernclasss("t","0163","021B","03C4");
+addkernclasss("0165");
+addkernclasss("u","0173","1EE5");
+addkernclasss("00F9","00FA","00FB","00FC","0169","016B","016D",
+ "016F");
+addkernclasss("v","w");
+addkernclasss("1E81","1E83","1E85");
+addkernclasss("x","03BE","03C2","03C3","03C7");
+addkernclasss("y","03C5","03C8");
+addkernclasss("00FD","00FF","0177","0233","03B0","03CB","03CD",
+ "1EF3","1F50","1F51","1F52","1F53","1F54","1F55",
+ "1F56","1F57","1F7A","1F7B","1FE0","1FE1","1FE2",
+ "1FE3","1FE6","1FE7");
+addkernclasss("z","03B6");
+addkernclasss("017A","017C","017E");
+addkernclasss("03B4","03BB"); % delta, lambda
+addkernclasss("002C","002E"); % comma, period
+addkernclasss("0030","0036","0038"); % 0, 6, 8
+addkernclasss("0031"); % 1
+addkernclasss("0032"); % 2
+addkernclasss("0033"); % 3
+addkernclasss("0034"); % 4
+addkernclasss("0035"); % 5
+addkernclasss("0037"); % 7
+addkernclasss("0039"); % 9
+
+addclasskern("A","T",-.5u#); 
+addclasskern("A","V",-.25u#);
+addclasskern("A","0031",-.25u#);
+addclasskern("A","0033",-.5u#);
+addclasskern("A","0037",-u#); 
+addclasskern("B","C",.5u#);  
+addclasskern("B","T",-u#); 
+addclasskern("B","V",-.5u#);
+addclasskern("B","c",.5u#);  
+addclasskern("B","00F2",.5u#);  
+addclasskern("B","0030",.5u#); 
+addclasskern("B","0037",-u#); 
+addclasskern("C","C",-.5u#);  
+addclasskern("C","0030",-.5u#);  
+addclasskern("C","0031",-u#);  
+addclasskern("C","0034",-u#);  
+addclasskern("D","C",u#);  
+addclasskern("D","S",.5u#); % make compatible with METAPOST-logo
+addclasskern("D","T",-.5u#); 
+addclasskern("D","X",-.5u#); 
+addclasskern("D","c",.5u#);  
+addclasskern("D","00F2",.5u#);  
+addclasskern("D","s",.5u#); 
+addclasskern("D","015B",.5u#); 
+addclasskern("D","002C",-u#); 
+addclasskern("D","0030",.5u#);  
+addclasskern("D","0031",.5u#);  
+addclasskern("D","0032",.5u#);  
+addclasskern("D","0034",.5u#); 
+addclasskern("D","0039",u#); 
+addclasskern("F","C",-u#); % original
+addclasskern("F","J",-3u#);
+addclasskern("F","c",-u#); 
+addclasskern("F","00F2",-u#); 
+addclasskern("F","j",-3u#);
+addclasskern("F","0135",-u#);
+addclasskern("F","002C",-3u#);
+addclasskern("F","0030",-u#); 
+addclasskern("F","0031",-.5u#); 
+addclasskern("F","0032",-.5u#); 
+addclasskern("F","0033",-.5u#);
+addclasskern("F","0034",-u#); 
+addclasskern("F","0037",-.5u#); 
+addclasskern("J","002C",-u#);  
+addclasskern("J","0033",-.5u#); 
+addclasskern("J","0034",-.5u#);
+%addclasskern("K","C",-.5u#); 
+addclasskern("K","t",-u#); 
+addclasskern("K","0031",-.5u#); 
+addclasskern("K","0032",.5u#); 
+addclasskern("K","0033",.5u#); 
+addclasskern("K","0034",-.5u#); 
+addclasskern("L","T",-2.5u#);
+addclasskern("L","V",-2u#); 
+addclasskern("L","Y",-2u#); 
+addclasskern("L","t",-2.5u#);
+addclasskern("L","0165",-2.5u#);
+addclasskern("L","v",-1.5u#);
+addclasskern("L","1E81",-1.5u#);
+addclasskern("L","y",-1.5u#);
+addclasskern("L","00FD",-1.5u#);  
+addclasskern("L","0030",.5u#);
+addclasskern("L","0031",-u#);
+addclasskern("L","0032",.5u#);
+addclasskern("L","0033",.5u#);
+addclasskern("L","0037",-u#);
+addclasskern("P","C",u#); % original
+addclasskern("P","J",-2u#);
+addclasskern("P","V",-.25u#);
+addclasskern("P","c",u#); 
+addclasskern("P","00F2",u#); 
+addclasskern("P","j",-2u#);
+addclasskern("P","002C",-3u#); 
+addclasskern("P","0030",.5u#); 
+addclasskern("P","0031",.5u#); 
+addclasskern("P","0032",-.5u#); 
+addclasskern("P","0033",-.5u#); 
+addclasskern("P","0034",-.5u#); 
+addclasskern("P","0037",-.25u#); 
+addclasskern("P","0039",u#);
+addclasskern("00DE","T",-.5u#); 
+addclasskern("00DE","V",-.25u#); 
+addclasskern("00DE","X",-u#); 
+addclasskern("00DE","002C",-3u#); 
+addclasskern("00DE","0031",.5u#); 
+addclasskern("00DE","0033",-u#); 
+addclasskern("00DE","0037",-.5u#); 
+addclasskern("Q","C",u#);  
+addclasskern("Q","S",.5u#); 
+addclasskern("Q","T",-.5u#); 
+addclasskern("Q","c",.5u#);  
+addclasskern("Q","00F2",.5u#);  
+addclasskern("Q","s",.5u#); 
+addclasskern("Q","015B",.5u#); 
+addclasskern("Q","0030",u#);  
+addclasskern("Q","0031",.5u#);  
+addclasskern("Q","0032",u#);
+addclasskern("Q","0033",.5u#); 
+addclasskern("Q","0034",.5u#); 
+addclasskern("Q","0035",.5u#); 
+addclasskern("Q","0039",u#);
+addclasskern("R","C",u#);
+addclasskern("R","0030",u#);
+addclasskern("R","0031",.5u#);  
+addclasskern("R","0032",.5u#); 
+addclasskern("R","0035",.5u#); 
+addclasskern("R","0039",u#);
+addclasskern("S","C",u#);
+addclasskern("S","T",-.5u#); % make compatible with METAPOST-logo
+addclasskern("S","c",.5u#);
+addclasskern("S","00F2",.5u#); 
+addclasskern("S","0030",.5u#);
+addclasskern("S","0033",-.5u#);
+addclasskern("S","0037",-.5u#);
+addclasskern("T","A",-.5u#); % original
+addclasskern("T","C",-.5u#); 
+addclasskern("T","J",-2.5u#); 
+addclasskern("T","T",u#);
+addclasskern("T","0394",-1.5u#);
+addclasskern("T","a",-1.5u#); 
+addclasskern("T","00E0",-u#); 
+addclasskern("T","b",-1.5u#); 
+addclasskern("T","00E8",-u#); 
+addclasskern("T","c",-1.5u#); 
+addclasskern("T","00F2",-u#); 
+addclasskern("T","j",-u#); 
+addclasskern("T","s",-1.5u#); 
+addclasskern("T","015B",-u#); 
+addclasskern("T","t",-1.5u#);
+addclasskern("T","0165",-u#);
+addclasskern("T","u",-1.5u#); 
+addclasskern("T","00F9",-u#);
+addclasskern("T","v",-1.5u#); 
+addclasskern("T","1E81",-u#); 
+addclasskern("T","x",-1.5u#); 
+addclasskern("T","y",-1.5u#);
+addclasskern("T","00FD",-u#); 
+addclasskern("T","z",-1.5u#); 
+addclasskern("T","03B4",-1.5u#);
+addclasskern("T","017A",-u#); 
+addclasskern("T","002C",-3u#); 
+addclasskern("T","0031",-.5u#); 
+addclasskern("T","0032",.5u#); 
+addclasskern("T","0033",.5u#); 
+addclasskern("T","0034",-u#); 
+addclasskern("T","0037",u#);
+addclasskern("V","A",-.25u#);
+addclasskern("V","C",-.25u#);
+addclasskern("V","J",-u#);
+addclasskern("V","V",u#);
+addclasskern("V","a",-u#);
+addclasskern("V","00E0",-.5u#);
+addclasskern("V","b",-.5u#); 
+addclasskern("V","c",-u#);
+addclasskern("V","00F2",-.5u#);
+addclasskern("V","j",-u#);
+addclasskern("V","0135",-.5u#);
+addclasskern("V","s",-u#); 
+addclasskern("V","015B",-.5u#); 
+addclasskern("V","u",-.5u#); 
+addclasskern("V","x",-.5u#); 
+addclasskern("V","00FD",.5u#); 
+addclasskern("V","z",-.5u#); 
+addclasskern("V","002C",-3u#);
+addclasskern("V","0030",-.25u#);
+addclasskern("V","0034",-u#);
+addclasskern("Y","C",-.5u#);
+addclasskern("Y","J",-u#);
+addclasskern("Y","j",-u#);
+addclasskern("Y","0135",-.5u#);
+addclasskern("Y","002C",-u#);
+addclasskern("Y","0030",-.5u#);
+addclasskern("Y","0032",-u#);
+addclasskern("Y","0033",-.5u#);
+addclasskern("Y","0034",-u#);
+addclasskern("Y","0035",-.5u#);
+addclasskern("Y","0037",-.5u#);
+addclasskern("Z","C",-.5u#);  
+addclasskern("Z","0030",-.5u#);  
+addclasskern("Z","0031",-u#);
+addclasskern("Z","0032",-.5u#);
+addclasskern("Z","0033",-.5u#);
+addclasskern("Z","0034",-u#);
+addclasskern("Z","0035",-.5u#);
+addclasskern("Z","0037",-.5u#);
+addclasskern("Z","0039",-.5u#);
+addclasskern("0394","T",-.75u#);
+addclasskern("0394","Y",-u#); 
+addclasskern("0394","0031",-.5u#);
+addclasskern("0394","0033",-.5u#);
+addclasskern("0394","0037",-u#);
+addclasskern("0394","t",-.5u#); 
+addclasskern("0394","y",-.75u#); 
+addclasskern("0394","00FD",-.75u#); 
+
+addclasskern("a","t",-.5u#); 
+addclasskern("a","0165",-.5u#); 
+addclasskern("a","v",-.25u#);
+addclasskern("a","1E81",-.25u#);
+addclasskern("b","c",.5u#);  
+addclasskern("b","00F2",.5u#);  
+addclasskern("b","t",-u#); 
+addclasskern("b","0165",-u#); 
+addclasskern("b","v",-.5u#);
+addclasskern("b","1E81",-.5u#);
+addclasskern("c","c",-.5u#);  
+addclasskern("c","00F2",-.5u#);  
+addclasskern("c","0034",-.5u#);
+addclasskern("d","c",u#);  
+addclasskern("d","00F2",u#);  
+addclasskern("d","s",.5u#); % make compatible with METAPOST-logo
+addclasskern("d","015B",.5u#);
+addclasskern("d","t",-.5u#); 
+addclasskern("d","0165",-.5u#); 
+addclasskern("d","x",-.5u#); 
+addclasskern("d","002C",-u#);
+addclasskern("d","0030",.5u#);   
+addclasskern("d","0032",.5u#); 
+addclasskern("d","0034",.5u#); 
+addclasskern("f","c",-u#); 
+addclasskern("f","00F2",-u#); 
+addclasskern("f","j",-3u#);
+addclasskern("f","0135",-3u#);
+addclasskern("f","002C",-3u#);
+addclasskern("f","0032",-u#);
+addclasskern("f","0034",-.5u#);
+addclasskern("j","002C",-u#); 
+%addclasskern("k","c",-.5u#); 
+%addclasskern("k","00F2",-.5u#); 
+addclasskern("k","0030",.5u#);  
+addclasskern("l","t",-2.5u#);
+addclasskern("l","0165",-2.5u#);
+addclasskern("l","v",-1.5u#);
+addclasskern("l","1E81",-1.5u#);
+addclasskern("l","y",-1.5u#); 
+addclasskern("l","00FD",-1.5u#);
+addclasskern("p","c",u#); 
+addclasskern("p","00F2",u#); 
+addclasskern("p","j",-2u#);
+addclasskern("p","0135",-2u#);
+addclasskern("p","v",-.25u#);
+addclasskern("p","1E81",-.25u#);
+addclasskern("p","002C",-3u#); 
+addclasskern("00FE","t",-.5u#); 
+addclasskern("00FE","0165",-.5u#);
+addclasskern("00FE","v",-.25u#); 
+addclasskern("00FE","0135",-.25u#); 
+addclasskern("00FE","x",-u#); 
+addclasskern("00FE","002C",-3u#); 
+addclasskern("q","t",-.5u#); 
+addclasskern("q","002C",-u#); 
+addclasskern("q","0030",u#);  
+addclasskern("q","0032",u#);
+addclasskern("q","0034",.5u#); 
+addclasskern("q","0035",.5u#); 
+addclasskern("r","c",u#);
+addclasskern("r","00F2",u#);
+addclasskern("s","t",-.5u#); % make compatible with METAPOST-logo
+addclasskern("s","0165",-.5u#);
+addclasskern("s","c",.5u#);
+addclasskern("s","00F2",.5u#); 
+addclasskern("t","a",-.5u#); % original
+addclasskern("t","00E0",-.5u#); 
+addclasskern("t","c",-.5u#); 
+addclasskern("t","00F2",-.5u#); 
+addclasskern("t","j",-2.5u#); 
+addclasskern("t","0135",-2u#); 
+addclasskern("t","t",u#);
+addclasskern("t","0165",u#);
+addclasskern("t","002C",-3u#);
+addclasskern("t","0030",.5u#);  
+addclasskern("v","a",-.25u#);
+addclasskern("v","00E0",-.25u#);
+addclasskern("v","c",-.25u#);
+addclasskern("v","00F2",-.25u#);
+addclasskern("v","j",-u#);
+addclasskern("v","0135",-u#);
+addclasskern("v","v",u#);
+addclasskern("v","1E81",u#);
+addclasskern("v","002C",-3u#);
+addclasskern("v","0030",.5u#);  
+addclasskern("y","j",-u#);
+addclasskern("y","0135",-u#);
+addclasskern("y","002C",-u#);
+addclasskern("y","0030",-.5u#);  
+addclasskern("y","0034",-.5u#);
+addclasskern("03B4","0031",-.25u#);
+addclasskern("03B4","0033",-.25u#);
+addclasskern("03B4","0037",-.5u#);
+addclasskern("03B4","t",-.25u#); 
+addclasskern("03B4","y",-.5u#); 
+addclasskern("03B4","00FD",-.5u#); 
+
+addclasskern("0030","C",.5u#); 
+addclasskern("0030","S",.5u#);
+addclasskern("0030","V",-.5u#); 
+addclasskern("0030","c",.5u#);  
+addclasskern("0030","00F2",.5u#);  
+addclasskern("0030","j",.5u#);  
+addclasskern("0030","s",.5u#); 
+addclasskern("0030","015B",.5u#); 
+addclasskern("0030","t",.5u#); 
+addclasskern("0030","0165",.5u#); 
+addclasskern("0030","v",.5u#); 
+addclasskern("0030","x",.5u#); 
+addclasskern("0030","y",-.5u#);
+addclasskern("0030","00FD",-.5u#);
+addclasskern("0030","002C",-u#); 
+addclasskern("0032","U",-.25u#);
+addclasskern("0032","V",-.5u#);
+addclasskern("0032","Y",-.5u#);
+addclasskern("0032","j",.5u#);
+addclasskern("0032","0135",.5u#);
+addclasskern("0032","t",.5u#);
+addclasskern("0032","0165",.5u#);
+addclasskern("0032","y",-.5u#);
+addclasskern("0032","00FD",-.5u#);
+addclasskern("0034","C",.5u#);  
+addclasskern("0034","V",-.5u#); 
+addclasskern("0034","Y",-.5u#);
+addclasskern("0034","c",.5u#); 
+addclasskern("0034","00F2",.5u#); 
+addclasskern("0034","y",-.5u#);
+addclasskern("0034","00FD",-.5u#);
+addclasskern("0034","z",-.5u#);
+addclasskern("0035","y",-.5u#);
+addclasskern("0035","00FD",-.5u#);
+addclasskern("0037","t",.5u#);
+addclasskern("0037","0165",.5u#);
+ 
+%------ligatures-------
+addligature("FB00","f","f");
+addligature("FB01","f","i");
+addligature("FB02","f","l");
+addligature("FB03","f","f","i");
+addligature("FB03","FB00","i");
+addligature("FB04","f","f","l");
+addligature("FB03","FB00","l");
+
+bye.

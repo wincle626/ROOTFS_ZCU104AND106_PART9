@@ -1,0 +1,23 @@
+% Date: 2019/04/05
+
+mode_setup;
+
+boolean gridfont; gridfont := true;
+slantcutoff = 2; % Draw slant lines if there are 1 or 2 background cables
+fonttype = gridtype; % Show grid only
+
+input knit_dimens;
+
+if known ps_output:
+	font_identifier := "KnittingSymbols-grid-grid";
+fi
+
+string Vtitle; Vtitle := "Knit font with grid";
+
+input knit_symbols;
+
+input knit_grid_cables;
+
+end
+
+

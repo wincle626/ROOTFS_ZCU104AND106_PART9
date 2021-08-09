@@ -1,0 +1,1385 @@
+% +AMDG  This document was begun on 3 July 11EX, the feast
+% of St. Irenaeus, EM, and it is humbly dedicated to him and
+% to the Immaculate Heart of Mary for their prayers, and to
+% the Sacred Heart of Jesus for His mercy.
+
+beginchar(oct"000",3pwid#,ex#,0); "Minus sign";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,3h/4);
+rt z1 = (w-ss,3h/4);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"001",pwid#,ex#,0); "Dot product";
+
+z0 = (w/2,3h/4);
+z1 = z0 shifted (dotwidth,0);
+z2 = z0 shifted (0,dotwidth);
+z3 = z0 shifted (-dotwidth,0);
+z4 = z0 shifted (0,-dotwidth);
+
+path dotprod;
+dotprod = z1..z2..z3..z4..cycle;
+fill dotprod;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"002",ex#,ex#,0); "Cross product";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+bot rt z1 = (w-ss,0);
+top rt z2 = (w-ss,h);
+bot lft z3 = (ss,0);
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"003",ex#,ex#,0); "Asterisk";
+
+pickup pencircle scaled 1.5thinl;
+z12 = (w/2,h/2);
+top z0 = (w/2,h);
+bot z1 = (w/2,0);
+z2 = z0 rotatedaround (z12,60);
+z3 = z2 rotatedaround (z12,60);
+z4 = z3 rotatedaround (z12,60);
+z5 = z4 rotatedaround (z12,60);
+z6 = z5 rotatedaround (z12,60);
+draw z0--z1; draw z2--z5; draw z3--z6;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"004",1.5ex#+2ss#,ex#,2dotwidth#); "The division sign";
+
+pickup pencircle scaled thinl;
+lft z0 = (ss,(h+d)/2-d);
+rt z1 = (w-ss,(h+d)/2-d);
+
+draw z0--z1;
+fill fullcircle scaled 2dotwid shifted (w/2,h-dotwid);
+fill fullcircle scaled 2dotwid shifted (w/2,-d+dotwid);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"005",ex#,ex#,0); "Diamond, lozenge";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h+o);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0-o);
+lft z3 = (ss,h/2);
+draw z0--z1--z2--z3--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"006",em#,cap#,0); "The plus minus";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+bot z1 = (w/2,0);
+lft z3 = (ss,h/2);
+rt z4 = (w-ss,h/2);
+bot lft z5 = (ss,0);
+bot rt z6 = (w-ss,0);
+
+draw z0--z1; draw z3--z4; draw z5--z6;
+picture plusminus; plusminus := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"007",em#,cap#,0); "Inverse plus minus";
+
+currentpicture := plusminus reflectedabout
+	((0,h/2),(w,h/2));
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"010",em#,cap#,0); "oplus";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+draw z0..z1..z2..z3..cycle;
+draw z0--z2;
+draw z1--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"011",em#,cap#,0); "ominus";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+draw z0..z1..z2..z3..cycle;
+draw  z1--z3;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"012",em#,cap#,0); "otimes";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+z5 = z0 rotatedaround ((w/2,h/2),45);
+z6 = z1 rotatedaround ((w/2,h/2),45);
+z7 = z2 rotatedaround ((w/2,h/2),45);
+z8 = z3 rotatedaround ((w/2,h/2),45);
+draw z0..z1..z2..z3..cycle;
+draw z5--z7; draw z8--z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"013",em#,cap#,0); "oslash";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+z5 = z0 rotatedaround ((w/2,h/2),45);
+z6 = z1 rotatedaround ((w/2,h/2),45);
+z7 = z2 rotatedaround ((w/2,h/2),45);
+z8 = z3 rotatedaround ((w/2,h/2),45);
+draw z0..z1..z2..z3..cycle;
+draw z8--z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"014",em#,cap#,0); "odot";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+draw z0..z1..z2..z3..cycle;
+
+fill fullcircle scaled 2dotwidth shifted (w/2,h/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"015",1.1em#,1.1cap#,0); "bigcirc";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+draw z0..z1..z2..z3..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"016",ex#,ex#,0); "circ";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+draw z0..z1..z2..z3..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"017",ex#,ex#,0); "bullet";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+filldraw z0..z1..z2..z3..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"020",em#,cap#,0); "asymp";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+top rt z1 = (w-ss,h);
+bot z2 = (w/2,h/2+thickstroke/2);
+path halfwavy; halfwavy = z0..z2..z1;
+draw halfwavy;
+draw halfwavy reflectedabout ((0,h/2),(w,h/2));
+
+penlabels(0,1,2,3);
+endchar;
+
+beginchar(oct"021",em#,cap#,0); "three horizontal lines";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+top rt z1 = (w-ss,h);
+path hozline; hozline = z0--z1;
+draw hozline;
+draw hozline shifted (0,-w/3);
+draw hozline shifted (0,-2w/3);
+
+
+penlabels(0,1,2,3);
+endchar;
+
+beginchar(oct"022",em#,cap#,0); "subseteq";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,2h/3);
+rt z2 = (w-ss,h/3);
+bot lft z3 = (ss,0);
+bot rt z4 = (w-ss,0);
+top z5 = (w/3,h);
+z6 = (w/3,y2);
+
+draw z0---z5..{down}z1{down}..z6---z2;
+draw z3--z4;
+
+picture subseteq;
+subseteq := currentpicture;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"023",em#,cap#,0); "supseteq";
+
+currentpicture := subseteq reflectedabout ((w/2,h),(w/2,0));
+picture supseteq; supseteq := currentpicture;
+
+endchar;
+
+beginchar(oct"024",em#,cap#,0); "leq";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,2h/3);
+rt z2 = (w-ss,h/3);
+bot lft z3 = (ss,0);
+bot rt z4 = (w-ss,0);
+top z5 = (w/3,h);
+z6 = (w/3,y2);
+
+draw z0--z1--z2;
+draw z3--z4;
+
+picture leq;
+leq := currentpicture;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"025",em#,cap#,0); "geq";
+
+currentpicture := leq reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"026",em#,cap#,0); "preceq";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,2h/3);
+rt z2 = (w-ss,h/3);
+bot lft z3 = (ss,0);
+bot rt z4 = (w-ss,0);
+top z5 = (w/3,h);
+z6 = (w/3,y2);
+
+draw z0..{left}z1; draw z2..{left}z1;
+draw z3--z4;
+
+picture preceq;
+preceq := currentpicture;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"027",em#,cap#,0); "succeq";
+
+currentpicture := preceq reflectedabout ((w/2,h),(w/2,0));
+picture succeq; succeq := currentpicture;
+
+endchar;
+
+beginchar(oct"030",em#,cap#,0); "sim";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinstroke,225);
+z0r = (ss,0.4h);
+penpos1(1.5thinstroke,90);
+z1 = (w/3,0.6h);
+penpos2(1.5thinstroke,90);
+z2 = (2w/3,0.4h);
+penpos3(thinstroke,225);
+z3l = (w-ss,0.6h);
+
+penstroke z0e..z1e..z2e..z3e;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"031",em#,cap#,0); "approx";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinstroke,225);
+z0r = (ss,0.4h);
+penpos1(1.5thinstroke,90);
+z1 = (w/3,0.6h);
+penpos2(1.5thinstroke,90);
+z2 = (2w/3,0.4h);
+penpos3(thinstroke,225);
+z3l = (w-ss,0.6h);
+
+penstroke (z0e..z1e..z2e..z3e) shifted (0,thickl);
+penstroke (z0e..z1e..z2e..z3e) shifted (0,-thickl);
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"032",em#,cap#,0); "subset";
+
+currentpicture := subseteq;
+pickup pencircle scaled 1.5thinl;
+bot lft z3 = (ss,0);
+bot rt z4 = (w-ss,0);
+undraw z3--z4;
+
+endchar;
+
+beginchar(oct"033",em#,cap#,0); "supset";
+
+currentpicture := supseteq;
+pickup pencircle scaled 1.5thinl;
+bot lft z3 = (ss,0);
+bot rt z4 = (w-ss,0);
+undraw z3--z4;
+
+picture supset; supset := currentpicture;
+
+endchar;
+
+beginchar(oct"034",em#,cap#,0); "ll";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss-w/4,h);
+lft z1 = (ss+w/4,2h/3);
+rt z2 = (w-ss-w/4,h/3);
+path lesser; lesser = z0--z1--z2;
+draw lesser shifted (-thickl,0);
+draw lesser shifted (thickl,0);
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"035",em#,cap#,0); "gg";
+
+pickup pencircle scaled 1.5thinl;
+draw lesser reflectedabout ((w/2,h),(w/2,0)) shifted (-thickl,0);
+draw lesser reflectedabout ((w/2,h),(w/2,0)) shifted (thickl,0);
+
+endchar;
+
+beginchar(oct"036",em#,cap#,0); "prec";
+
+pickup pencircle scaled 1.5thinl;
+currentpicture := preceq;
+bot z0 = (ss,0); bot z1 = (w-ss,0);
+undraw z0--z1;
+picture prec; prec := currentpicture;
+
+endchar;
+
+beginchar(oct"037",em#,cap#,0); "succ";
+
+currentpicture := prec reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"040",1em#,cap#,0); "left arrow";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,h/2);
+top z1 = (0.3w,13h/16);
+rt z2 = (w-ss,y0);
+z3 = z1 shifted (0,-3h/16);
+bot z4 = (0.3w,3h/16);
+z5 = (x3,y4+3h/16);
+
+path shaft; shaft = z2--z0;
+path head; head = z4{up}..{z0-z5}z0{z3-z0}..{up}z1;
+draw shaft; draw head;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"041",em#,cap#,0); "right arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft; draw head reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"042",em#,cap#,0); "up arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),-90);
+draw head rotatedaround ((w/2,h/2),-90);
+
+endchar;
+
+beginchar(oct"043",em#,cap#,0); "down arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),90);
+draw head rotatedaround ((w/2,h/2),90);
+
+endchar;
+
+beginchar(oct"044",em#,cap#,0); "left-right arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft; draw head;
+draw head reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"045",em#,cap#,0); "northeast arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),-135);
+draw head rotatedaround ((w/2,h/2),-135);
+
+endchar;
+
+beginchar(oct"046",em#,cap#,0); "southeast arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),-225);
+draw head rotatedaround ((w/2,h/2),-225);
+
+endchar;
+
+beginchar(oct"055",em#,cap#,0); "northwest arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),-45);
+draw head rotatedaround ((w/2,h/2),-45);
+
+endchar;
+
+beginchar(oct"056",em#,cap#,0); "southwest arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),45);
+draw head rotatedaround ((w/2,h/2),45);
+
+endchar;
+
+beginchar(oct"047",em#,cap#,0); "simeq";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinstroke,225);
+z0r = (ss,0.4h);
+penpos1(1.5thinstroke,90);
+z1 = (w/3,0.6h);
+penpos2(1.5thinstroke,90);
+z2 = (2w/3,0.4h);
+penpos3(thinstroke,225);
+z3l = (w-ss,0.6h);
+bot lft z4 = (ss,0);
+bot rt z5 = (w-ss,0);
+
+penstroke z0e..z1e..z2e..z3e;
+draw z4--z5;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"050",em#,cap#,0); "double-width left arrow";
+
+pickup pencircle scaled 1.5thinl;
+rt z0 = (w-ss,h/2+thickl);
+rt z1 = (w-ss,h/2-thickl);
+z2 = (ss,y0);
+z3 = (ss,y1);
+z4 = (z0--z2) intersectionpoint head;
+z5 = (z1--z3) intersectionpoint head;
+draw head;
+draw z0--z4; draw z5--z1;
+
+picture doubleftarrow; doubleftarrow := currentpicture;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"051",em#,cap#,0); "double-width right arrow";
+
+currentpicture := doubleftarrow reflectedabout
+	((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"052",em#,cap#,0); "double-width up arrow";
+
+currentpicture := doubleftarrow rotatedaround
+	((w/2,h/2),-90);
+
+endchar;
+
+beginchar(oct"053",em#,cap#,0); "double-width down arrow";
+
+currentpicture := doubleftarrow rotatedaround
+	((w/2,h/2),90);
+
+endchar;
+
+beginchar(oct"054",em#,cap#,0); "double-width left-right arrow";
+
+pickup pencircle scaled 1.5thinl;
+rt z0 = (w/2,h/2+thickl);
+rt z1 = (w/2,h/2-thickl);
+z2 = (ss,y0);
+z3 = (ss,y1);
+z4 = (z0--z2) intersectionpoint head;
+z5 = (z1--z3) intersectionpoint head;
+draw head; draw head reflectedabout ((w/2,h),(w/2,0));
+draw z0--z4; draw z5--z1;
+draw z0--z4 reflectedabout ((w/2,h),(w/2,0));
+draw z1--z5 reflectedabout ((w/2,h),(w/2,0));
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"057",em#,ex#,0); "propto";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinl,-90);
+z0l = (w-ss,h);
+penpos1(thinl,-90);
+z1l = (5w/6,h);
+penpos2(thickl,0);
+z2 = (0.55w,h/2);
+penpos3(thinl,-90);
+z3r = (0.3w,0-o);
+penpos4(curvl,180);
+z4r = (ss,h/2);
+penpos5(thinl,90);
+z5r = (x3,h+o);
+penpos6(thickl,0);
+z6 = (0.55w,h/2);
+penpos7(thinl,90);
+z7l = (x1,0);
+penpos8(thinl,90);
+z8l = (x0,0);
+
+penstroke z0e---z1e..z2e..z3e..z4e..z5e..z6e..z7e---z8e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"060",1.4pwid#+2ss#,cap#,0); "large prime";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,h+o);
+z1 = z0 shifted (-pwid/3,-pwid/3);
+z2 = z0 shifted (pwid/3,-pwid/3);
+z3 = (x0,h/4);
+z4 = z3 shifted (-pwid/6,pwid/6);
+z5 = z3 shifted (pwid/6,pwid/6);
+fill z0..z2---z5..z3..z4---z1..cycle
+	rotatedaround ((w/2,(y0+y3)/2),-15);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"061",em#,ex#,0); "infty";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thickl,180);
+z0l = (w-ss,h/2);
+penpos2(thickl,0);
+z2 = (0.5w,h/2);
+penpos4(thickl,180);
+z4r = (ss,h/2);
+penpos6(thickl,0);
+z6 = (0.5w,h/2);
+penpos7(thinl,90);
+z7l = (x1,0-o);
+penpos8(thinl,90);
+z8l = (x0,0);
+penpos1(thinl,-90);
+z1l = ((x0+x2)/2,h+o);
+penpos5(thinl,90);
+z5r = (x3,h+o);
+penpos3(thinl,-90);
+z3r = ((x6+x4)/2,0-o);
+
+penstroke z0e..z1e..z2e..z3e..z4e..z5e..z6e..z7e..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"062",1.5ex#,cap#,0); "in";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+top z1 = (w/2,h);
+lft z2 = (ss,h/2);
+bot z3 = (w/2,0);
+bot rt z4 = (w-ss,0);
+rt z5 = (w-ss,h/2);
+draw z0{left}..z2..{right}z4;
+draw z2--z5;
+
+picture inset; inset := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"063",1.5ex#,cap#,0); "ni";
+currentpicture := inset reflectedabout ((w/2,h),(w/2,0));
+endchar;
+
+beginchar(oct"064",em#,cap#,0); "upward triangle";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h+o);
+bot lft z1 = (ss,0-o);
+bot rt z2 = (w-ss,0-o);
+
+draw z0--z1--z2--cycle;
+picture triangle; triangle := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"065",em#,cap#,0); "downward triangle";
+currentpicture := triangle reflectedabout ((0,h/2),(w,h/2));
+endchar;
+
+beginchar(oct"066",2pwid#,cap#,0); "slash, solidus";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot lft z1 = (ss,0-o);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"067",pwid#,ex#,0); "straight prime";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h+o);
+z1 = (w/2,h/2);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"070",1.2ex#,cap#,0); "inverse A";
+
+pickup pencircle scaled 1.5thinl;
+bot z0 = (w/2,0-o);
+top lft z1 = (ss,h+o);
+top rt z2 = (w-ss,h+o);
+draw z0--z1; draw z0--z2;
+z3 = 0.618[z0,z1]; z4 = 0.618[z0,z2];
+draw z3--z4;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"071",1.2ex#,cap#,0); "inverse E";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot rt z2 = (w-ss,0-o);
+bot lft z3 = (ss,0-o);
+draw z0--z1--z2--z3;
+lft z4 = (ss,h/2);
+rt z5 = (w-ss,h/2);
+draw z4--z5;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"072",1.6ex#,ex#,0); "neg";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,3h/4);
+rt z1 = (w-ss,y0);
+bot rt z2 = (w-ss,0);
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"073",digwid#+2ss#,cap#,0); "null set";
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thickl,0);
+z0r = (w-ss,h/2);
+penpos1(thinl,-90);
+z1r = (w/2,0-o);
+penpos2(thickl,180);
+z2r = (ss,h/2);
+penpos3(thinl,90);
+z3r = (w/2,h+o);
+top rt z4 = (w-ss,h+o);
+bot lft z5 = (ss,0-o);
+draw z4--z5;
+penstroke z0e..z1e..z2e..z3e..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"076",1.4ex#,cap#,0); "top";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot z2 = (w/2,0-o);
+top z3 = (w/2,h+o);
+draw z0--z1; draw z2--z3;
+picture toppic; toppic := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"077",1.4ex#,cap#,0); "perp";
+currentpicture := toppic reflectedabout ((0,h/2),(w,h/2));
+endchar;
+
+beginchar(oct"133",0.75em#+2ss#,cap#,0); "union";
+currentpicture := supset rotatedaround ((em/2,cap/2),-90)
+	shifted (-1/3cap+1.5thinl,0);
+endchar;
+
+beginchar(oct"134",0.75em#+2ss#,cap#,0); "intersection";
+currentpicture := supset rotatedaround ((em/2,cap/2),90)
+	shifted (1.5thinl/2,0);
+endchar;
+
+beginchar(oct"135",0.75em#+2ss#,cap#,0); "union";
+currentpicture := supset rotatedaround ((em/2,cap/2),-90)
+	shifted (-1/3cap+1.5thinl,0);
+pickup pencircle scaled 1.5thinl;
+z0 = (-w/2,h-w/2-thinl/2);
+z1 = (w/2,h-w/2-thinl/2);
+z2 = (0,h);
+z3 = (0,h-w-2ss);
+draw (z0--z1) scaled 0.5 shifted (w/2,w/4);
+draw (z2--z3) scaled 0.5 shifted (w/2,w/4);
+penlabels (0,1,2,3,4);
+endchar;
+
+beginchar(oct"136",0.75em#+2ss#,cap#,0); "upward pointing";
+pickup pencircle scaled 1.5thinl;
+draw lesser rotatedaround ((w/2,h/2),-90)
+	shifted (-w/4+2ss,h/8);
+endchar;
+
+beginchar(oct"137",0.75em#+2ss#,cap#,0); "downward pointing";
+pickup pencircle scaled 1.5thinl;
+draw lesser rotatedaround ((w/2,h/2),90)
+	shifted (w/4-2ss,-h/8);
+endchar;
+
+beginchar(oct"140",0.75em#+2ss#,cap#,0); "leftward T";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+bot lft z1 = (ss,0-o);
+lft z2 = (ss,h/2);
+rt z3 = (w-ss,h/2);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"141",0.75em#+2ss#,cap#,0); "rightward T";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot rt z1 = (w-ss,0-o);
+rt z2 = (w-ss,h/2);
+lft z3 = (ss,h/2);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"142",0.25em#+2ss#,cap#,dep#); "left floor";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+bot lft z1 = (ss,-dep);
+bot rt z2 = (w-ss,-dep);
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"143",0.25em#+2ss#,cap#,dep#); "right floor";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot rt z1 = (w-ss,-dep);
+bot lft z2 = (ss,-dep);
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"144",0.25em#+2ss#,cap#,dep#); "left ceil";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+bot lft z1 = (ss,-dep);
+top rt z2 = (w-ss,h+o);
+draw z1--z0--z2;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"145",0.25em#+2ss#,cap#,dep#); "right ceil";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot rt z1 = (w-ss,-dep);
+top lft z2 = (ss,h+o);
+draw z2--z0--z1;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"146",1.8pwid#,cap#+ss#,dep#); "The open curly bracket, {";
+
+brackwid = 2thinl;
+toth = h+d;
+pickup pencircle xscaled brackwid yscaled (thinl);
+top rt z0 = (w-ss,h);
+bot rt z1 = (w-ss,-dep);
+lft z2 = (ss,h-toth/2);
+z3 = (3(x0-x2)/4,h-toth/4);
+z4 = (3(x0-x2)/4,h-3toth/4);
+
+path curlybrack;
+curlybrack = z0{left}..{down}z3..{left}z2{right}..z4{down}..{right}z1;
+draw curlybrack;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"147",1.8pwid#,cap#+ss#,dep#); "The close curly bracket, }";
+pickup pencircle xscaled brackwid yscaled (thinl);
+draw curlybrack rotatedaround ((w/2,(h-dep)/2),180);
+endchar;
+
+beginchar(oct"150",1.8pwid#,cap#+ss#,dep#); "Open angle bracket";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,(h+d)/2-dep);
+bot rt z2 = (w-ss,-dep);
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"151",1.8pwid#,cap#+ss#,dep#); "Close angle bracket";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+rt z1 = (w-ss,(h+d)/2-dep);
+bot lft z2 = (ss,-dep);
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"152",0.9pwid#,cap#+ss#,dep#); "Pipe";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+bot z1 = (w/2,-d);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"153",1.5pwid#,cap#+ss#,dep#); "Double pipe";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2-thickstroke,h);
+bot z1 = (w/2-thickstroke,-d);
+top z2 = (w/2+thickstroke,h);
+bot z3 = (w/2+thickstroke,-d);
+draw z0--z1;
+draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"154",em#,cap#,0); "up-down arrow";
+
+pickup pencircle scaled 1.5thinl;
+draw shaft rotatedaround ((w/2,h/2),-90);
+draw head rotatedaround ((w/2,h/2),-90);
+draw head rotatedaround ((w/2,h/2),90);
+
+endchar;
+
+beginchar(oct"155",em#,cap#,0); "double-width up-down arrow";
+
+pickup pencircle scaled 1.5thinl;
+rt z0 = (w/2,h/2+thickl);
+rt z1 = (w/2,h/2-thickl);
+z2 = (ss,y0);
+z3 = (ss,y1);
+z4 = (z0--z2) intersectionpoint head;
+z5 = (z1--z3) intersectionpoint head;
+z6 = (w-x4,y4);
+z7 = (w-x5,y5);
+draw head rotatedaround ((w/2,h/2),-90);
+draw head rotatedaround ((w/2,h/2),90);
+draw (z4--z6) rotatedaround ((w/2,h/2),-90);
+draw (z5--z7) rotatedaround ((w/2,h/2),-90);
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"156",2pwid#,cap#,0); "backslash";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+bot rt z1 = (w-ss,0-o);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(oct"157",2pwid#,cap#,0); "Vertical tilde";
+
+penpos0(thinstroke,90);
+z0r = (ss,h+o);
+penpos1(curvwid,0);
+z1r = (w-ss,2h/3);
+penpos2(curvwid,0);
+z2l = (ss,h/3);
+penpos3(thinstroke,90);
+z3l = (w-ss,0-o);
+
+penstroke z0e{right}..z1e..z2e..{right}z3e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"160",em#+2ss#,cap#,0); "Square root sign";
+
+pickup pencircle scaled 1.5thinl;
+
+penpos0(thinl,-45);
+lft z0 = (ss,h/4);
+penpos1(thinl,-45);
+z1 = (w/6,h/3);
+penpos3(1.5thinl,-90);
+bot z3 = (3w/4,h+o+thinl);
+penpos4(1.5thinl,-90);
+z4 = (w-ss,y3);
+penpos5(thickl,45);
+z5l = z1l;
+penpos6(thickl,45);
+z6l = (w/3,0-o);
+penpos2(1.5thinl,-45);
+z2r = z6r;
+penpos7(1.5thinl,-45);
+z7r = z3r;
+
+penstroke z0e--z1e;
+penstroke z5e--z6e;
+penstroke z2e--z7e..z3e--z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"161",6em#/6+2ss#,cap#,0); "Inverted Pi";
+italcorr(ex#*slant);
+
+z0 = (ss+lserw,lserh);
+z1 = z0 shifted (thickstroke,0);
+z2 = (w-ss-lserw,lserh);
+z3 = z2 shifted (-thickstroke,0);
+llserif(0,4,5,6,7)(1);
+lrserif(1,8,9,10,11)(1);
+llserif(3,12,13,14,15)(1);
+lrserif(2,16,17,18,19)(1);
+z20 = (x0,h-lserh);
+z21 = (x1,h-thinstroke);
+z22 = (x3,h-thinstroke);
+z23 = (x2,h-lserh);
+ulserif(20,24,25,26,27)(1);
+urserif(23,28,29,30,31)(1);
+y26 := y27 := y31 := y30 := h;
+y6 := y10 := y14 := y18 := 0;
+
+fill
+(z0..z4..z5--z6--z10--z9..z8..z1--z21--z22--z3..z12..z13--z14--z18--z17..z16..z2--z23..z28..z29--z30--z26--z25..z24..z20--cycle)
+	rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+penlabels(19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+penlabels(35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50);
+endchar;
+
+beginchar(oct"162",5em#/6+2ss#,cap#,0); "Inverted Delta";
+italcorr(ex#*slant);
+
+z0 = (ss,0-o);
+z1 = (x0+1.5thinstroke,y0) rotatedaround(z0,30);
+z2 = (w/2,h);
+z3 = z2 shifted (0,-2thinstroke);
+z4 = (w-ss-1.5thinstroke,0-o);
+z5 = (x4-1.5thinstroke,y4) rotatedaround(z4,-30);
+z6 = z2 shifted (thinstroke,0);
+z7 = z4 shifted (thinstroke,0);
+
+fill (z0--z2--z4--cycle) rotatedaround ((w/2,h/2),180);
+unfill (z1--z3--z5--cycle)rotatedaround ((w/2,h/2),180);
+fill (z2--z6--z7--z4--cycle)rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"163",ex#+2ss#,asch#,dep#); "Integral";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0 = (w/2,h-curlh);
+penpos1(thickl,0);
+z1 = (w/2,-d+curlh);
+penpos2(thinl,-90);
+z2 = (3w/4,h+o);
+penpos3(thinl,-90);
+z3 = (x1-curlw,-d-o);
+penpos4(thickl,180);
+z4 = (x2+curlw,y0);
+penpos5(thickl,-180);
+z5 = (x3-curlw,y1);
+penpos6(thinl,70);
+z6r = (w/2,ex);
+penpos7(thinl,70);
+z7 = (ss,y6);
+penpos8(thinl,70);
+z8 = (w-ss,y6);
+penpos9(thinl,0);
+z9r = z4r;
+penpos10(thinl,225);
+z10r = z9r;
+penpos11(thinl,0);
+z11l = z5l;
+penpos12(thinl,225);
+z12l = z11l;
+
+penstroke
+z12e..z11e..z5e..{right}z3e{right}..z1e---z0e..{right}z2e{right}..z4e..z9e..z10e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar(oct"164",1.5ex#,cap#,0); "upward square cup";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot lft z2 = (ss,0-o);
+bot rt z3 = (w-ss,0-o);
+draw z0--z2--z3--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar(oct"165",1.5ex#,cap#,0); "downward square cup";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot lft z2 = (ss,0-o);
+bot rt z3 = (w-ss,0-o);
+draw z2--z0--z1--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar(oct"166",1.5ex#,cap#,0); "rightward square cup, line";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot lft z2 = (ss,2thickstroke);
+rt z3 = (w-ss,y2);
+bot lft z4 = (ss,0-o);
+bot rt z5 = (w-ss,0-o);
+
+draw z1--z0--z2--z3; draw z4--z5;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar(oct"167",1.5ex#,cap#,0); "leftward square cup, line";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot lft z2 = (ss,2thickstroke);
+rt z3 = (w-ss,y2);
+bot lft z4 = (ss,0-o);
+bot rt z5 = (w-ss,0-o);
+
+draw z0--z1--z3--z2; draw z4--z5;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar(oct"170",4ex#/5,cap#,dep#); "The section symbol";
+
+sh = 2toth/3-thinl+o;
+z0 = (w-ss,h-sh/4);
+z1 = (w/2,h+o);
+z2 = z1 shifted (0,-thinl);
+z3 = (ss,h-sh/4);
+z4 = z3 shifted (thinl,0);
+z5 = (w-ss,h-3sh/4);
+z6 = z5 shifted (-thinl,0);
+z7 = (w/2,h-sh);
+z8 = z7 shifted (0,-thinl);
+z9 = (w/2,h-sh/2+curvl/2);
+z10 = z9 shifted (0,-curvl);
+z11 = z0 shifted (-thinl,0);
+z12 = 0.5[z0,z11] shifted (0,-o);
+z13 = (ss,h-3sh/4);
+z14 = z13 shifted (thinl,0);
+z15 = 0.5[z13,z14] shifted (0,hair/2);
+
+path halfsect;
+halfsect = 
+z0{up}..{left}z1{left}..{down}z3{down}..z10..{down}z6{down}..{left}z7{left}..{up}z14..z15..{down}z13{down}..{right}z8{right}..{up}z5{up}..z9..{up}z4{up}..{right}z2{right}..{down}z11..z12..cycle;
+fill halfsect;
+fill halfsect shifted (0,-sh/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"171",ex#+2ss#,cap#,dep#); "dagger";
+
+z0 = (w/2,h+o);
+z1 = (w/2,-dep);
+z2 = (ss,2h/3);
+z3 = (w-ss,2h/3);
+z4 = (w/2,2h/3);
+z5 = 0.75[z4,z3];
+z6 = 0.75[z4,z2];
+z7 = z6 rotatedaround (z4,-90);
+z8 = z6 rotatedaround (z4,90);
+z9 = z5 shifted (0,thickl/2);
+z10 = z5 shifted (0,-thickl/2);
+z11 = z6 shifted (0,thickl/2);
+z12 = z6 shifted (0,-thickl/2);
+z13 = z7 shifted (thickl/2,0);
+z14 = z7 shifted (-thickl/2,0);
+z15 = z8 shifted (thickl/2,0);
+z16 = z8 shifted (-thickl/2,0);
+z17 = 1.0[z4,z8];
+z18 = z17 shifted (thickl/2,0);
+z19 = z17 shifted (-thickl/2,0);
+z20 = z0 shifted (thickl/2,-hair);
+z21 = z0 shifted (-thickl/2,-hair);
+z22 = z3 shifted (-hair,thickl/2);
+z23 = z3 shifted (-hair,-thickl/2);
+z24 = z2 shifted (hair,thickl/2);
+z25 = z2 shifted (hair,-thickl/2);
+z26 = z4 shifted (hair,hair);
+z27 = z4 shifted (hair,-hair);
+z28 = z4 shifted (-hair,-hair);
+z29 = z4 shifted (-hair,hair);
+z30 = z1 shifted (hair,hair);
+z31 = z1 shifted (-hair,hair);
+
+fill
+z0..z20--z13--z26--z9--z22..z3..z23--z10--z27--z15--z18--z30..z1..z31--z19--z16--z28--z12--z25..z2..z24--z11--z29--z14--z21..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"172",ex#+2ss#,cap#,dep#); "double dagger";
+
+z0 = (w/2,h+o);
+z1 = (w/2,(h-dep)/2);
+z2 = (ss,(3h-dep)/4);
+z3 = (w-ss,(3h-dep)/4);
+z4 = (w/2,(3h-dep)/4);
+z5 = 0.75[z4,z3];
+z6 = 0.75[z4,z2];
+z7 = z6 rotatedaround (z4,-90);
+z8 = z6 rotatedaround (z4,90);
+z9 = z5 shifted (0,thickl/2);
+z10 = z5 shifted (0,-thickl/2);
+z11 = z6 shifted (0,thickl/2);
+z12 = z6 shifted (0,-thickl/2);
+z13 = z7 shifted (thickl/2,0);
+z14 = z7 shifted (-thickl/2,0);
+z15 = z8 shifted (thickl/2,0);
+z16 = z8 shifted (-thickl/2,0);
+z17 = 1.0[z4,z8];
+z18 = z17 shifted (thickl/2,0);
+z19 = z17 shifted (-thickl/2,0);
+z20 = z0 shifted (thickl/2,-hair);
+z21 = z0 shifted (-thickl/2,-hair);
+z22 = z3 shifted (-hair,thickl/2);
+z23 = z3 shifted (-hair,-thickl/2);
+z24 = z2 shifted (hair,thickl/2);
+z25 = z2 shifted (hair,-thickl/2);
+z26 = z4 shifted (hair,hair);
+z27 = z4 shifted (hair,-hair);
+z28 = z4 shifted (-hair,-hair);
+z29 = z4 shifted (-hair,hair);
+z30 = z1 shifted (thickl/2,hair);
+z31 = z1 shifted (-thickl/2,hair);
+
+path halfdag;
+halfdag = 
+z0..z20--z13--z26--z9--z22..z3..z23--z10--z27--z15--z18--z30..z1..z31--z19--z16--z28--z12--z25..z2..z24--z11--z29--z14--z21..cycle;
+
+fill halfdag;
+fill halfdag shifted (0,-(h-dep)-o);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"173",4em#/5+2ss#,cap#,0); "double-line pilcrow";
+
+pickup pencircle scaled thinl;
+z0 = (w-ss-lserw,lserhl);
+z1 = z0 shifted (-1.5thickstroke,0);
+z2 = (w-ss-userw,h-userhl);
+z3 = z2 shifted (-1.5thickstroke,0);
+urserif(2,4,5,6,7)(1);
+llserif(1,8,9,10,11)(1);
+lrserif(0,12,13,14,15)(1);
+lft z16 = (ss,3h/4);
+z17 = z16 shifted (curvwid,0);
+z18 = (x1,h/2);
+z19 = z18 shifted (1.5thickstroke,0);
+z20 = (x3,h);
+
+filldraw z20{left}..{down}z16{down}..{right}z18--cycle;
+draw
+z1..z8..z9--z10--z14--z13..z12..z0--z2..z4..z5--z6--z20--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"174",em#+2ss#,cap#,0); "Clubs";
+
+z0 = (w/2-thinstroke,0);
+z1 = z0 shifted (2thinstroke,0);
+z2 = z0 shifted (0,2thickstroke);
+z3 = z1 shifted (0,2thickstroke);
+z4 = (w/4,thickstroke/2);
+z5 = (ss,h/3);
+z6 = (x4,2h/3);
+z7 = (x2,y5);
+z8 = (x6,3h/4);
+z9 = (w/2,h);
+z10 = (3w/4,y8);
+z11 = (x3,y7);
+z12 = (x10,y6);
+z13 = (w-ss,y5);
+z14 = (x10,y4);
+
+path leftleaf;
+leftleaf = z0--z2..z4..z5..z6..z7;
+path topleaf;
+topleaf = z7..z8..z9..z10..z11;
+path rightleaf;
+rightleaf = z11..z12..z13..z14..z3--z1--z0;
+
+fill leftleaf & topleaf & rightleaf & cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"175",em#+2ss#,cap#,0); "Diamonds";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,h+o);
+z1 = (w-ss,h/2);
+z2 = (w/2,0-o);
+z3 = (ss,h/2);
+draw z0--z1--z2--z3--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"176",em#+2ss#,cap#,0); "Hearts";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,3h/4);
+z1 = (w/4,h+o);
+z2 = (3w/4,h+o);
+z3 = (ss,3h/4);
+z4 = (w-ss,3h/4);
+z5 = (w/2,0);
+
+draw z5---z4..z2..z0;
+draw z5---z3..z1..z0;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"177",em#+2ss#,cap#,0); "Spades";
+
+z0 = (w/2-thinstroke,0);
+z1 = z0 shifted (2thinstroke,0);
+z2 = z0 shifted (0,2thickstroke);
+z3 = z1 shifted (0,2thickstroke);
+z4 = (w/4,thickstroke/2);
+z5 = (ss,h/3);
+z6 = (w/4,2h/3);
+z7 = (w/2,h+o);
+z8 = (3w/4,2h/3);
+z9 = (w-ss,h/3);
+z10 = (3w/4,thickstroke/2);
+
+fill z0--z2..z4..z5..z6..{dir 70}z7{dir -70}..z8..z9..z10..z3--z1--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;

@@ -1,0 +1,3703 @@
+%written by Basil Solomykov, Russia
+%(C) Copyright 2011 LPPL (LaTeX Project Public License)
+%Font Ordinary New (Obyknovennaya novaya), Slanted
+
+design_size := 17.28pt#;
+o# := .7776pt#;
+u# := 32/35pt#;
+bar# := 17.28/36pt#;
+slab# := 17.28/36pt#;
+cap_bar# := 17.28/36pt#;
+vair# := 17.28/36pt#;
+hair# := 17.28/36pt#;
+jut# := 34.56/36pt#;
+cap_jut# := 44.928/36pt#;
+stem# := 51.84/36pt#;
+curve# := 53.568/36pt#;
+cap_stem# := 62.21/36pt#;
+cap_curve# := 64.28/36pt#;
+s# := 0.65pt#;
+c# := .32pt#;
+
+input obn_lcyw_code.mf;
+font_identifier "OBNSL";
+mode_setup;
+clear_pen_memory;
+
+font_size design_size*pt#;
+asc_height# := 24/36*design_size*pt#;
+cap_height# := 24/36*design_size*pt#;
+body_height# := 27/36*design_size*pt#;
+x_height# := 15.4/36*design_size*pt#;
+desc_depth# := 8/36*design_size*pt#;
+body_depth# := 9/36*design_size*pt#;
+comma_depth# := 5/36*design_size*pt#;
+x_depth# := 4/5comma_depth#;
+bar_height# := .52x_height#;
+cap_bar_height# := .52cap_height#;
+cap_bar2_height# := .45cap_height#;
+border_height# := comma_depth#;
+cap_drop_round# := 3.8*slab#;
+drop_round# := 6.65/8cap_drop_round#;
+A_bracket# := 1.6pt#;
+bracket# := pt#;
+
+font_slant sind 16;
+font_x_height x_height#;
+font_normal_space 6u#;
+font_normal_stretch 4u#;
+font_normal_shrink 2u#;
+font_quad 13u#;
+font_extra_space 6u#;
+
+k# := .8u#;
+kk# := 1.5u#;
+kkk# := 3u#;
+
+serif_darkness := 1/30;
+define_pixels(bracket,cap_o_width,sss_width,css_width);
+define_pixels(c,s,cap_bar_height,cap_bar2_height);
+define_pixels(border_height,A_bracket,cap_drop_round,x_depth,drop_round);
+define_whole_blacker_pixels(stem,cap_stem,curve,cap_curve,bar,slab,cap_bar);
+define_whole_pixels(asc_height,cap_height,x_height,u,desc_depth,comma_depth,bar_height,body_height,body_depth,u,o,cap_jut,jut);
+define_good_x_pixels(vair);
+define_good_y_pixels(hair);
+lowres_fix(stem,curve) 1.2;
+lowres_fix(cap_stem,cap_curve) 1.2;
+if jut=cap_jut: jut:=jut-1; fi
+numeric sl_parameter;
+sl_parameter := sind 18;
+currenttransform  := identity slanted sl_parameter;
+
+def serif(suffix $)(expr breadth, theta, left_jut, right_jut)=
+penpos$(breadth/abs sind theta, 0);
+z$a-z$l=z$f-z$r=(bracket/abs sind theta)*dir theta;
+y$c=y$d; y$b=y$e=y$; y$b-y$c=if theta < 0: -fi slab;
+x$b=x$c=x$g if left_jut=0: -1/2slab fi +1/2slab; x$d=x$e=x$h if right_jut=0: +1/2slab fi-1/2slab;
+x$g=x$l-left_jut; x$h=x$r+right_jut;
+y$g=y$h; y$-y$g=y$g-y$c;
+labels($a,$b,$c,$d,$e,$f,$g,$h) enddef;
+
+def serif_edge suffix $ =
+(serif_bracket($a,$l,$b)..z$g..z$c--z$d..z$h..reverse serif_bracket($f,$r,$e)) enddef;
+
+def serif_bracket (suffix i,j,k) = 
+(z.i{z.j-z.i}...serif_darkness[z.j, .5[z.i, z.k]]{z.k-z.i}...z.k{z.k-z.j}) enddef;
+
+def T_serif(suffix $)(expr slab, bord_height, direction)=	%Direction: 0-left, 1-right;
+penpos$(slab,if direction=1: - fi 90);
+x$=x$a=x$g; y$g-y$=y$-y$a=1/2slab;
+x$b=x$a + if direction=0: - fi .882bord_height; y$b=y$d=y$c+1/2slab;
+x$c=x$b + if direction=0: - fi 1/2slab; y$c=y$a-bord_height;
+x$d=x$e=x$b + if direction=0: - fi slab; 
+y$e=y$g-1/2slab; y$f=y$g; x$f=x$c;
+labels($a,$b,$c,$d,$e,$f,$g) enddef;
+
+def T_edge suffix $ = 
+(z$a..{down}z$b..z$c..z$d--z$e{up}..z$f--z$g--cycle) enddef;
+
+def A_serif(suffix $)(expr breadth, theta, left_jut, right_jut)=
+penpos$(breadth/abs sind theta, 0);
+z$a-z$l=z$f-z$r=(A_bracket/abs sind theta)*dir theta;
+y$c=y$d; y$b=y$e=y$; y$b-y$c=if theta < 0: -fi slab;
+x$b=x$c=x$g+1/2slab; x$d=x$e=x$h-1/2slab;
+x$g=x$l-left_jut; x$h=x$r+right_jut;
+y$g=y$h; y$-y$g=y$g-y$c;
+labels($a,$b,$c,$d,$e,$f,$g,$h) enddef;
+
+def A_serif_edge suffix $ =
+(A_serif_bracket($a,$l,$b)..z$g..z$c--z$d..z$h..reverse A_serif_bracket($f,$r,$e)) enddef;
+
+def A_serif_bracket (suffix i,j,k) = 
+(z.i{z.j-z.i}...0.6[z.j, .5[z.i, z.k]]{z.k-z.i}...z.k{z.k-z.j}) enddef;
+
+def ur_drop(suffix $)(expr drop_round, drop_length, drop_height, slab)=	
+penpos$(round slab, 90);
+x$=x$a=x$f; y$f-y$=y$-y$a= 1/2slab;
+x$e=x$a + drop_length; y$e=y$f- drop_height;
+x$d=x$e - 1/2drop_round; y$d=y$e - 1/2drop_round;
+x$c=x$e - drop_round; y$c=y$e;
+y$b=round (y$d + drop_round); x$b=round (x$d - 1/5drop_round);
+labels($a,$b,$c,$d,$e,$f) enddef;
+
+def ur_drop_edge suffix $ =
+(z$f{right}..tension.9..{down}z$e{down}..{left}z$d{left}..{up}z$c{up}..z$b...{left}z$a--cycle) enddef;
+
+def ul_drop(suffix $)(expr drop_round, drop_length, drop_height, slab)=	
+penpos$(round slab, 90);
+x$=x$a=x$f; y$f-y$=y$-y$a=1/2slab;
+x$e=x$a - drop_length; y$e=y$f- drop_height;
+x$d=x$e + 1/2drop_round; y$d=y$e - 1/2drop_round;
+x$c=x$e + drop_round; y$c=y$e;
+y$b=round (y$d + drop_round); x$b=round (x$d + 1/5drop_round);
+labels($a,$b,$c,$d,$e,$f) enddef;
+
+def ul_drop_edge suffix $ =
+(z$f{left}..tension.9..{down}z$e{down}..{right}z$d{right}..{up}z$c{up}..z$b...{right}z$a--cycle) enddef;
+
+def dl_drop(suffix $)(expr drop_round, drop_length, drop_height, slab)=	
+penpos$(round slab, -90);
+x$=x$a=x$f; y$f-y$=y$-y$a=1/2slab;
+x$e=x$a - drop_length; y$e=y$a + drop_height;
+x$d=x$e + 1/2drop_round; y$d=y$e + 1/2drop_round;
+x$c=x$e + drop_round; y$c=y$e;
+y$b=round (y$d - drop_round); x$b=x$d + 1/90drop_round;
+labels($a,$b,$c,$d,$e,$f) enddef;
+
+def dl_drop_edge suffix $ =
+(z$a{left}..tension.9..{up}z$e{up}..{right}z$d{right}..{down}z$c..{dir 250}z$b{dir -80}..{right}z$f--cycle) enddef;
+
+def S_serif (suffix $)(expr serif_slab, serif_length, serif_height)=
+%penpos$(serif_slab,90);
+x$a=x$i=x$; y$i=y$+1/2serif_slab; y$a=y$-1/2serif_slab;
+x$f=x$e=x$a+serif_length; y$f=y$g-1/2serif_slab; y$e=y$c=y$d+1/2serif_slab;
+x$g=x$f-1/2serif_slab; y$g=y$i-1/2serif_slab;
+y$h=y$f-1/4serif_slab; x$h=x$g-serif_slab;
+x$c=x$e-serif_slab; x$d=x$e-1/2serif_slab; y$d=y$g-serif_height;
+x$b=x$h-6/18serif_length; y$b=y$h-1/2slab;
+labels ($a,$b,$c,$d,$e,$f,$g,$h,$i) enddef;
+
+def S_serif_edge suffix $ =
+(z$a{right}...z$b..{dir -80}z$c..z$d..z$e--z$f{up}..z$g{left}..z$h{dir 150}..{left}z$i--cycle) enddef;
+
+beginchar(CYR_A,13u#+s#,cap_height#,0);
+z1=(.5w,h+1/13h);
+x4l=w-x5r=s+cap_jut; y4l=y5r=slab; 
+numeric theta[];
+theta4=angle(z1-z4l);
+theta5=angle(z1-z5r);
+A_serif(4,1.3cap_bar,theta4,cap_jut,1.2cap_jut);
+serif(5,cap_stem,theta5,cap_jut,cap_jut);
+z0=z4r+whatever*dir theta4=z5l+whatever*dir theta5;
+fill z1--A_serif_edge4--z0&z0--serif_edge5--z1&cycle;
+penpos2(whatever,theta4);
+penpos3(whatever,theta5);
+y2r=y3r=20/52h;
+y2l=y3l=y2r-cap_bar;
+z2=whatever[z1,z4r];
+z3=whatever[z1,z5l];
+penstroke z2e--z3e;
+y6=y7=h; z6=whatever[z1,z4l]; z7=whatever[z1,z5e];
+unfill z1..z6--z7..z1&cycle;
+unfill z1..z6--z7..z1&cycle;
+penlabels(range 0 thru 7);
+endchar;
+
+beginchar(CYR_BE,11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.6u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x10=x1d; y3=y4=y5=h-1/2slab; 
+y1c=h; y2c=0; x5e=w-s-1/2cap_stem;
+y6=y7=cap_bar_height; x6=x2r; x7=x9=x6+5u-cap_stem;
+y7-y8=y8-y9; x8=w-1/2cap_curve-s;
+y9=y10=y2h; x4=w-s-1/2cap_stem-border_height;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+penpos3(slab,90);
+penpos4(slab,90);
+penstroke z3e--z4e;
+T_serif(5,slab,border_height,1);
+fill T_edge5;
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penpos8(cap_curve,0);
+penpos9(cap_bar,-90);
+penpos10(cap_bar,-90);
+penstroke z6e--z7e{right}..tension.8..z8e..tension.8..{left}z9e--z10e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_VE,11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.17u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x10=x1d; y3=y4=h-1/2slab; x4=x3+u;
+y1c=h; y2c=0; 
+y6=y7=cap_bar_height; x6=x2r; x7=x9=x6+4.5u-cap_stem;
+y7-y8=y8-y9; x8=w-1/2cap_curve-s;
+y9=y10=y2h;
+y4-y5=y5-y7; x5=x8-2/5cap_curve; y77=y7; x77=x4;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+penpos3(slab,90);
+penpos4(slab,90);
+penpos5(cap_curve,0);
+penpos77(slab,-90);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penpos8(cap_curve,0);
+penpos9(cap_bar,-90);
+penpos10(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z77e;
+penstroke z6e--z7e{right}..tension.8..z8e..tension.8..{left}z9e--z10e;
+css_width := x8 - x2r; save css_width;
+penlabels(range 1 thru 10,77);
+endchar;
+
+beginchar(CYR_GHE,9u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.77u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y4=y3=h-1/2slab; x4=x1d;
+y1c=h; y2c=0; x3=x4+2u;
+y5=y3; x5e=w-s;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penstroke z3e--z4e;
+T_serif(5,slab,border_height,1);
+fill T_edge5;
+penlabels(1,2,3,4,5);
+endchar;
+
+beginchar(CYR_DE,12u#,cap_height#,comma_depth#);
+italcorr cap_height#*sind 18-.99u#;
+x10e=w-s; y10c=-d;
+y4c=h; x4h=w-s-1/2slab;
+x9=x4; y9c=0;
+x3=x8=x9d; y8=y7=1/2cap_bar; y3=y2=h-y8; 
+x6e=s; y6=y10; x7=border_height+s;
+y5=y9; x5g=s+.5u; y1=y4; x1=x5+1.5u;
+x2=x1c; 
+A_serif(1,1.2cap_bar,-96,10/7cap_jut,cap_jut);
+A_serif(5,1.2cap_bar,81,6/7cap_jut,cap_jut);
+serif(4,cap_stem,-90,cap_jut,cap_jut);
+serif(9,cap_stem,90,cap_jut,cap_jut);
+penpos2(cap_bar,90);
+penpos3(cap_bar,90);
+penpos7(cap_bar,90);
+penpos8(cap_bar,90);
+penstroke z7e--z8e; penstroke z2e--z3e;
+fill A_serif_edge5...reverse A_serif_edge1...cycle;
+fill serif_edge9--reverse serif_edge4--cycle;
+T_serif(6,slab,border_height,0);
+T_serif(10,slab,border_height,1);
+fill T_edge6;
+fill T_edge10;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_IE,10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.1u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y4=y3=h-1/2slab; x4=x1d;
+y1c=h; y2c=0; 
+y5=y3; x5e=w-s-c;
+y6=y7=y8=cap_bar_height;x6=x1r; x7=x8=x6+u;
+T_serif(5,slab,border_height,1);
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x5a;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penstroke z3e--z4e;
+fill T_edge5;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penstroke z6e--z7e;
+T_serif(8,cap_bar,.8border_height,1);
+fill T_edge8;
+fill T_edge8 reflectedabout(z6,z7);
+y9=y10=y11=y2h; x9=x2d; x11e=w-s;
+T_serif(11,cap_bar,border_height,1); x10=x11;
+penpos9(cap_bar,90);
+penpos10(cap_bar,90);
+penstroke z9e--z10e;
+fill T_edge11 reflectedabout(z9,z10);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar(CYR_YE,10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.1u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y4=y3=h-1/2slab; x4=x1d;
+y1c=h; y2c=0; 
+y5=y3; x5e=w-s-c;
+y6=y7=y8=cap_bar_height;x6=x1r; x7=x8=x6+u;
+T_serif(5,slab,border_height,1);
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x5a;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penstroke z3e--z4e;
+fill T_edge5;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penstroke z6e--z7e;
+T_serif(8,cap_bar,.8border_height,1);
+fill T_edge8;
+fill T_edge8 reflectedabout(z6,z7);
+y9=y10=y11=y2h; x9=x2d; x11e=w-s;
+T_serif(11,cap_bar,border_height,1); x10=x11;
+penpos9(cap_bar,90);
+penpos10(cap_bar,90);
+penstroke z9e--z10e;
+fill T_edge11 reflectedabout(z9,z10);
+x12=x13=x2r; y12=h+1/4cap_stem; y13=y12+cap_stem;
+x14=x15=x12+2cap_stem; y14=y12; y15=y13;
+fill z12..z13..cycle; fill z14..z15..cycle;
+penlabels(range 1 thru 15);
+endchar;
+
+beginchar(CYR_ZHE,round (16u#+s#),cap_height#,0);
+italcorr cap_height#*sind 18-1.2u#;
+if .5w = good.x .5w: change_width; fi
+x8=x9=.5w; y8c=h; y9c=0;
+serif(8,cap_stem,-90,cap_jut,cap_jut);
+serif(9,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge9--reverse serif_edge8--cycle;
+x7=x8l;  y7=y4=y10=y11=cap_bar_height; x4=x7-1.5u;
+x10=x8r; x11=x10+1.5u; x16=w-s; y16=0; x16-x15=x15-x11; y11-y15=y15-y16;
+x6=s; y6=0; y4-y5=y5-y6; x4-x5=x5-x6;
+penpos7(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,180);
+penpos6(cap_bar,90);
+penpos10(cap_bar,90);
+penpos11(cap_bar,90);
+penpos15(cap_curve,0);
+penpos16(cap_bar,90);
+penstroke z6e{right}..tension.8..{up}z5e{up}..tension.8..{right}z4e--z7e;
+penstroke z16e{left}..tension.8..{up}z15e{up}..tension.8..{left}z11e--z10e;
+x12=x15-1/2cap_stem; y13=h; x13-x12=x12-x11; y13-y12=y12-y11;
+penpos12(hair,180);
+penpos13(cap_bar,90);
+penstroke z11e{right}..tension.8..{up}z12e{up}..tension.8..{right}z13e;
+y14=h; x14a=x13;
+ur_drop(14,cap_drop_round,.9cap_drop_round,cap_drop_round,cap_bar);
+fill ur_drop_edge14;
+x3=x5+1/2cap_stem; y2=h; x4-x3=x3-x2; y2-y3=y3-y4;
+penpos3(hair,0);
+penpos2(cap_bar,90);
+penstroke z4e{left}..tension.8..{up}z3e{up}..tension.8..{left}z2e;
+y1=h; x1a=x2; fill z6l..z6r..cycle;
+ul_drop(1,cap_drop_round,.9cap_drop_round,cap_drop_round,cap_bar);
+fill ul_drop_edge1; fill z16l..z16r..cycle;
+penlabels(range 1 thru 16);
+endchar;
+
+beginchar(CYR_ZE,10u#+.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-2u#;
+x7=18/39w; y7=0; y4=y5=y44=cap_bar_height;
+x4=x6-3/2cap_stem; x5=x4-3u;
+x6=w-s-1/2cap_curve; y4-y6=y6-y7;
+x2=.5w; y2=h; x3=x6-1/3cap_curve; y2-y3=y3-y4;
+x44=x2; z1=z2;
+penpos2(cap_bar,90);
+penpos3(cap_curve,0);
+penpos44(cap_bar,-90);
+penpos4(cap_bar,90);
+penpos5(cap_bar,90);
+penpos6(cap_curve,0);
+penpos7(cap_bar,-90);
+penstroke z2e{right}..tension.9..{down}z3e{down}..tension.9..{left}z44e;
+penstroke z5e--z4e{right}..tension.8..{down}z6e{down}..tension.8..{left}z7e;
+fill z5r..z5l..cycle;
+S_serif(1,slab,.5w-3c,1.4border_height);
+fill S_serif_edge1 reflectedabout(z2r,z2l);
+x8e=s; y8=0;
+dl_drop(8,cap_drop_round,18/39w-s,1.5cap_drop_round,slab);
+fill dl_drop_edge8;
+%currentpicture := currentpicture shifted(-.7u,0);
+penlabels(range 1 thru 8,44);
+endchar;
+
+beginchar(CYR_I,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.76u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x5=x1+1/3cap_stem; x6=x4-1/3cap_stem;
+x3=x4=w-x1;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,-30); penpos6(cap_bar,-30);
+y5=.05h; y6=.95h; penstroke z5e--z6e;
+penlabels(range 1 thru 6);
+endchar;
+
+beginchar(CYR_SHORT_I,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.76u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x5=x1+1/3cap_stem; x6=x4-1/3cap_stem;
+x3=x4=w-x1;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,-30); penpos6(cap_bar,-30);
+y5=.05h; y6=.95h; penstroke z5e--z6e;
+x7=.5w; y7=h+cap_bar;
+ur_drop(7,.8cap_drop_round,1/2(x3l-x1r),.8cap_drop_round,1.2cap_bar);
+fill ur_drop_edge7 rotatedaround(z7,180) shifted(.05c,0);
+fill ur_drop_edge7 reflectedabout(z7a,z7f) rotatedaround(z7,180);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_KA,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.17u#;
+x8g=x9g=s; y8c=h; y9c=0;
+serif(8,cap_stem,-90,cap_jut,cap_jut);
+serif(9,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge9--reverse serif_edge8--cycle;
+y10=y11=cap_bar_height; 
+x10=x8r; x11=x10+2.5u; x16=w-s; y16=0; x16-x15=x15-x11; y11-y15=y15-y16;
+penpos10(cap_bar,90);
+penpos11(cap_bar,90);
+penpos15(cap_curve,0);
+penpos16(cap_bar,90);
+penstroke z16e{left}..tension.8..{up}z15e{up}..tension.8..{left}z11e--z10e;
+x12=x15-1/2cap_stem; y13=h; x13-x12=x12-x11; y13-y12=y12-y11;
+penpos12(hair,180);
+penpos13(cap_bar,90);
+penstroke z11e{right}..tension.8..{up}z12e{up}..tension.8..{right}z13e;
+y14=h; x14a=x13; fill z16l..z16r..cycle;
+ur_drop(14,cap_drop_round,.9cap_drop_round,cap_drop_round,cap_bar);
+fill ur_drop_edge14;
+penlabels(range 1 thru 16);
+endchar;
+
+beginchar(CYR_EL,13u#+1/2s#,cap_height#,0);
+italcorr cap_height#*sind 18-.75u#;
+x7h=x8h=w-s;
+y7c=h; y8c=0;
+y1=0; x1e=s; z2=z1; x3=x2+cap_drop_round; y3=1.1cap_drop_round;
+dl_drop(1,1.1cap_drop_round,1.1cap_drop_round,1.2cap_drop_round,slab);
+fill dl_drop_edge1;
+penpos2(cap_bar,-90);
+penpos3(cap_bar,0);
+penstroke z2e{right}..{up}z3e;
+x4=x3r; y4=h-slab;
+numeric theta[];
+theta1=angle(z3-z4);
+A_serif(4,cap_bar,theta1,1.3cap_jut,1.3cap_jut);
+fill A_serif_edge4..z3r--z3l..cycle;
+serif(7,cap_stem,-90,cap_jut,cap_jut);
+serif(8,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge8--reverse serif_edge7--cycle;
+x5=x4d; y5=y6=y7h; x6=x7c;
+penpos5(cap_bar,90);
+penpos6(cap_bar,90);
+penstroke z5e--z6e;
+%currentpicture := currentpicture shifted(-.5u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(CYR_EM,13u#+1.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1g=s; y1c=0;  y2=h-cap_bar;
+A_serif(1,cap_bar,90,jut,jut);
+x2=x1; serif(2,cap_bar,-90,jut,jut);
+fill A_serif_edge1--reverse serif_edge2--cycle;
+x3h=x4h=w-s; y3g=h-1/2cap_bar; y4c=0;
+serif(3,cap_stem,-90,1/2cap_bar, jut);
+serif(4,cap_stem,90,jut,jut);
+fill serif_edge4--reverse serif_edge3--cycle;
+z5l=z3g; penpos5(bar,0); penpos6(bar,0);
+z6=z5+whatever*dir -108; y6=0;
+penstroke z5e--z6e;
+z7l=z6l+whatever*dir 110; y7l=10/54h;
+z8l=whatever[z6l,z7l]; y8l=h;
+penpos7(cap_stem,0); penpos8(cap_stem,0);
+penstroke z7e--z8e; fill z6l--z7l--z7r--cycle;
+fill z6l..tension1.3..z6r..tension1.3..cycle;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_EN,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x4=w-x1; x5=x1r; x6=x3l;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+y5=y6=cap_bar_height; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_O,11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.2u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2cap_curve+s; x7=w-1/2cap_curve-s;
+y2=y8=0.1h-c; y4=y6=0.9h+c; x2=x4=x3+7/16(x5-x3); x6=x8=x5+9/16(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+cap_o_width := x7-x3; save cap_o_width;
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(CYR_PE,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x4=w-x1; x5=x1d; x6=x3c;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+y5=y6=y1h; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_ER,10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.56u#;
+x1=x2=x3=cap_jut+1/2cap_stem+s;
+y3=y4=cap_bar2_height; y7=y6=h-1/2slab; x7=x3+c;
+y1c=h; y2c=0; x6=x4=x3+3u;
+y5-y4=y6-y5; x5=w-1/2cap_curve-s;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penpos5(cap_curve,0);
+penpos7(cap_bar,90);
+penpos6(cap_bar,90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_ES,10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.1u#;
+x1=x5=23/42w; y1=0; y5=h;
+y3=.5h; x3=1/2cap_curve+s;
+y2=0.1h-c; y4=0.9h+c; x2=x4=x3+7/16(x1-x3); 
+penpos1(cap_bar,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(cap_bar,-90);
+penstroke z1e{left}..z2e..z3e..z4e..{right}z5e;
+z6=z5; y7=y1; x7e=w-s; y8=y1; x8=x1-.1w;
+S_serif(6,slab,w-s-c-x1,1.5border_height);
+S_serif(7,slab,w-s-x1,1.5border_height);
+fill S_serif_edge6; fill S_serif_edge7 reflectedabout(z1,z8);
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(CYR_TE,round (11u#+s#),cap_height#,0);
+italcorr cap_height#*sind 18-.7u#;
+x1=x2=.5w;
+y1c=h; y2c=0;
+y3=y4=h-1/2slab; x3e=s; x1-x3e=x4e-x1;
+serif(1,cap_stem,-90,1.2cap_jut,1.2cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+T_serif(3,cap_bar,round border_height,0);
+T_serif(4,cap_bar,round border_height,1);
+fill T_edge3;
+fill T_edge4;
+if x1c>x3: y5=y6=y7=y8=h-1/2cap_bar; x5=x3a; x6=x1c; x7=x1e; x8=x4a;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+penpos7(cap_bar,90); penpos8(cap_bar,90);
+penstroke z5e--z6e;
+penstroke z7e--z8e; fi
+%currentpicture := currentpicture shifted(-2.9u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_U,13u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.8u#;
+x1l=s+cap_jut; y1l=.98h-cap_bar;
+x3r=w-s-.8cap_jut; y3r=.98h-cap_bar;
+x4=33/60w; y4=6/53h;
+numeric theta[];
+theta1 = angle(z4-z1l);
+theta2 = angle(z4-z3r);
+serif(1,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(3,cap_bar,theta2,1.2cap_jut,.8cap_jut);
+z2 = z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+fill z4--serif_edge1--z2&z2--A_serif_edge3--z4&cycle;
+z5r=z4; y6=0; x6=x4-1.2cap_stem; z7l=z2;
+penpos7(cap_bar,theta2+90);
+penpos5(cap_bar,theta2+90);
+penpos6(cap_bar,-90);
+penstroke z7e--z5e{dir theta2}...{left}z6e;
+z8=z6;
+dl_drop(8,cap_drop_round,2u,10/53h,cap_bar);
+fill dl_drop_edge8;
+%currentpicture := currentpicture shifted(-2.95u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_EF,round (14u#+s#),cap_height#,0);
+italcorr cap_height#*sind 18-2.2u#;
+if .5w = good.x .5w: change_width; fi
+x1=x2=.5w; y2c=0; y1h=h;
+y6=y7=y8=y9=1.3cap_jut; y4=y3=y11=y12=h-1.3cap_jut+1/2slab;
+x3=x7=x2l; x8=x12=x2r; x4=x6=x3-u; x11=x9=x12+u;
+x5=s+1/2cap_curve; x10-x1=x1-x5; y4-y5=y5-y6; y10=y5;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,180);
+penpos6(cap_bar,270);
+penpos7(cap_bar,270);
+penpos8(cap_bar,-90);
+penpos9(cap_bar,-90);
+penpos10(cap_curve,0);
+penpos11(cap_bar,90);
+penpos12(cap_bar,90);
+penstroke z3e--z4e{left}..tension.8..{down}z5e{down}..tension.8..{right}z6e--z7e;
+penstroke z8e--z9e{right}..tension.8..{up}z10e{up}..tension.8..{left}z11e--z12e;
+%currentpicture := currentpicture shifted(-1.55u,0);
+penlabels (range 1 thru 12);
+endchar;
+
+beginchar(CYR_HA,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.2u#;
+y3=y4=slab; x3=w-s-cap_jut-1/2cap_stem; x4=s+cap_jut+1/2slab;
+y1=y2=h-slab; x1=s+cap_jut+1/2cap_stem+c; x2=w-s-1.5c-cap_jut-1/2slab;
+numeric theta[];
+theta1 = angle(z1-z3);
+theta2 = angle(z2-z4);
+serif(1,cap_stem,theta1-180,cap_jut,cap_jut);
+A_serif(2,1.2cap_bar,theta2-180,cap_jut,cap_jut);
+serif(3,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(4,1.2cap_bar,theta2,cap_jut,cap_jut);
+fill serif_edge3--reverse serif_edge1--cycle;
+fill A_serif_edge4--reverse A_serif_edge2--cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar(CYR_TSE,12.5u#+s#,cap_height#,comma_depth#);
+italcorr cap_height#*sind 18-1.26u#;
+x1=x2=x5=cap_jut+1/2cap_stem+s;
+x3=x4=x6=w-x1-.5u; y5=y6=y2h;
+y1c=y3c=h; y2c=y4c=0; x7e=w-s; y7=y2h;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+penstroke z5e--z6e;
+T_serif(7,cap_bar,border_height,1);
+fill T_edge7;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_CHE,12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=cap_jut+1/2cap_stem+s; x2=x3=w-x1; 
+y1c=y2c=h; y3c=0; y4=y4r=y4l=30/52h; x4=x1; x4r=x1r; x4l=x1l;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,-90,cap_jut,cap_jut);
+serif(3,cap_stem,90,cap_jut,cap_jut);
+fill z4r--reverse serif_edge1--z4l--cycle;
+fill serif_edge3--reverse serif_edge2--cycle;
+x5=x2l+.1c; y5=cap_bar_height-1/2cap_bar; z6=z4;
+x5-x7=x7-x4r; y7=y5-2cap_bar;
+penpos6(cap_stem,180);
+penpos5(1.2vair,270);
+penpos7(1.2vair,270);
+penstroke z6e{down}...z7e..z5e;
+%currentpicture := currentpicture shifted(-3.5u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_SHA,16u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+if .5w <> good.x .5w: change_width; fi
+x1=x2=good.x (cap_jut+1/2cap_stem+s);
+y1c=h; y2c=0; x3=x2e; y3=y4=y7=y8=y2h;
+x4=x6c; x7=x6d; x8=x9c;
+x5=x6=good.x .5w; y5=y1; y6=y2;
+y9b=slab; x9=good.x w-x1;
+x10=x9; y10b=h-slab; 
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+serif(5,cap_stem,-90,cap_jut,cap_jut);
+serif(6,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge6--reverse serif_edge5--cycle;
+serif(9,cap_stem,90,cap_jut,cap_jut);
+serif(10,cap_stem,-90,cap_jut,cap_jut);
+fill serif_edge9--reverse serif_edge10--cycle;
+penpos3(slab,90);
+penpos4(slab,90);
+penpos7(slab,90);
+penpos8(slab,90);
+penstroke z3e--z4e;
+penstroke z7e--z8e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_SHCHA,16.5u#+s#,cap_height#,comma_depth#);
+italcorr cap_height#*sind 18-1.25u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0; x3=x2e; y3=y4=y7=y8=y2h;
+x4=x6c; x7=x6d; x8=x9c;
+y9b=slab; x9h=w-s-.5u;
+x10=x9; y10b=h-slab; 
+x11e=w-s; y11=y9h;
+serif(9,cap_stem,90,cap_jut,cap_jut);
+serif(10,cap_stem,-90,cap_jut,cap_jut);
+fill serif_edge9--reverse serif_edge10--cycle;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x5=x6=x1+(x10-x1)/2; y5=y1; y6=y2;
+serif(5,cap_stem,-90,cap_jut,cap_jut);
+serif(6,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge6--reverse serif_edge5--cycle;
+penpos3(slab,90);
+penpos4(slab,90);
+penpos7(slab,90);
+penpos8(slab,90);
+penstroke z3e--z4e;
+penstroke z7e--z8e;
+T_serif(11,slab,border_height,1);
+fill T_edge11;
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar(CYR_HARD_SIGN,13.5u#-c#,cap_height#,0);
+italcorr cap_height#*sind 18-3.32u#;
+x2r=x5-css_width; x1=x2; x8e=0; y8g=h;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+x7=x1d; y1c=h; y2c=0; 
+y4-y5=y5-y6; x5=w-1/2cap_curve-s;
+y3=y4=cap_bar_height; x3=x2r-.1c; x4=x6=round(x3+5u-cap_stem);
+y6=y7=y2h;
+fill serif_edge2--reverse serif_edge1--cycle;
+T_serif(8,cap_bar,border_height,0);
+fill T_edge8;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,0);
+penpos6(cap_bar,-90);
+penpos7(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+%currentpicture := currentpicture shifted(-1.4u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(CYR_YERU,16u#+c#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x7=x1d;
+y1c=h; y2c=0; 
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+y3=y4=cap_bar_height; x3=round x2r; x4=x6=round (x3+5u-cap_stem) - 1;
+y4-y5=y5-y6; x5=x2r+css_width; y8b=slab; x8h=w-s;
+y6=y7=y2h; x9=x8; y9b=h-slab;
+fill serif_edge2--reverse serif_edge1--cycle;
+serif(8,cap_stem,90,cap_jut,cap_jut);
+serif(9,cap_stem,-90,cap_jut,cap_jut);
+fill serif_edge8--reverse serif_edge9--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,0);
+penpos6(cap_bar,-90);
+penpos7(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_SOFT_SIGN,11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-3.32u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x7=x1d; y1c=h; y2c=0; 
+y3=y4=cap_bar_height; x3=x2r; x4=x6=x3+5u-cap_stem;
+y4-y5=y5-y6; x5=w-1/2cap_curve-s;
+y6=y7=y2h;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,0);
+penpos6(cap_bar,-90);
+penpos7(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_E,10u#+.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.15u#;
+x1=16/39w; x5=.5w; y1=0; y5=h;
+y7=.5h; x7=w-1/2cap_curve-s;
+x9e=s; y9=0;
+dl_drop(9,cap_drop_round,16/39w-s,1.7cap_drop_round,slab);
+y8=0.1h-c; y6=0.9h+c; x8=x9+9/16(x7-x9); x6=x5+9/16(x7-x5);
+penpos5(cap_bar,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+penpos1(cap_bar,-270);
+penstroke z5e{right}..z6e..{down}z7e{down}..z8e..{left}z1e;
+y2=y5; x2=x5-c; 
+S_serif(2,slab,x1+c,1.5border_height);
+x3=x7-1/2cap_stem; y3=y4=cap_bar_height; x4=x2b-x1;
+penpos3(cap_bar,90); penpos4(cap_bar,90);
+penstroke z3e--z4e; fill z4r..z4l..cycle;
+fill S_serif_edge2 reflectedabout(z5r,z5l);
+fill dl_drop_edge9;
+%currentpicture := currentpicture shifted(-.8u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(CYR_YU,16u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.25u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos9(vair,90);
+penpos10(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+y3=y7=.5h; x7=w-1/2cap_curve-s; x3=x7-cap_o_width; y9=0; y5=h; x7-x5=x5-x3; x9=x5;
+y10=y8=0.1h-c; y4=y6=0.9h+c; x10=x4=x3+7/16(x5-x3); x6=x8=x5+9/16(x7-x5);
+penstroke z9e..z10e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x11=x1r; x12=x3-1/3cap_stem; y11=y12=cap_bar_height;
+penpos11(cap_bar,90); penpos12(cap_bar,90);
+penstroke z11e--z12e;
+penlabels(range 1 thru 12);
+endchar;
+
+beginchar(CYR_YA,11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=w-cap_jut-1/2cap_stem-s;
+y6=y10=y7=cap_bar_height; y3=y4=h-1/2slab; x7=x2l;
+y1c=h; y2c=0; x6=x4=x7-2.5u; x3=x1c;
+y4-y5=y5-y6; x5=x8-1.5c; x9=s; y9=0; y6-y8=y8-y9; x7-x10=3(x10-x6); x10-x8=x8-x9;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,180);
+penpos7(cap_bar,270);
+penpos6(cap_bar,270);
+penpos8(cap_curve,0);
+penpos9(cap_bar,-90);
+penpos10(cap_bar,-90); fill z9l..z9r..cycle;
+penstroke z3e--z4e{left}..tension.9..z5e..tension.9..{right}z6e--z7e;
+penstroke z9e{right}..tension1..{up}z8e{up}..tension1..{right}z10e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_a,9u#-s#+2/7stem#,x_height#,0);
+x5=w-s-1/2bar; y5=0; y4=6/7stem; x4=x3=x5-5/7stem-1/2stem;
+y3=bar_height+2bar; y2=y1=h; x2=s+c+6/20w; x1e=s+c; 
+ul_drop(1,drop_round,x2-s-c,5/4drop_round,bar);
+fill ul_drop_edge1;
+penpos2(bar,90);
+penpos3(stem,0);
+penpos4(stem,0);
+penpos5(bar,90);
+penstroke z2e{right}..{down}z3e--z4e{down}..{right}z5e;
+fill z5r..z5l..cycle;
+y6=bar_height+1/2bar; x6=x3+1/2stem; x7=s+1/2stem; y7=7/17bar_height;
+y8=0; x9=x4-1/2stem+1/2bar; x9-x8=x8-x7; y9=y4+3/2bar; x66=x8; y66=y6-c;
+numeric theta[]; theta1=angle(z66-z6);
+penpos6(vair,90);
+penpos66(vair,90);
+penpos7(curve,180);
+penpos8(vair,270);
+penpos9(bar,360);
+penstroke z6e{left}..z66e{dir theta1}..tension.8..{down}z7e{down}..tension.8..z8e{right}..{up}z9e;
+%currentpicture := currentpicture shifted(-.4u,0);
+penlabels(range 1 thru 9,66);
+endchar;
+
+beginchar(CYR_be,8u#,asc_height#,0);
+italcorr asc_height#*sind 18-.75u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=x_height;
+y3=y7=.5x_height; x3=1/2stem+s; x7=w-1/2stem-s;
+y2=y8=0.1x_height; y4=y6=0.9x_height; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+y9=y3; x9=s+1/2bar; y10=44/51h; x10=x5+c; x11=w-s-1/2bar; y11=h-1/2bar; %x11=w-1/2bar*sind 45; y11=h-1/2bar*sind 45;
+penpos9(hair,180);
+penpos10(curve,90);
+penpos11(hair,180);
+penstroke z9e{up}..{right}z10e{right}..tension1..z11e;
+fill z11l..tension2..z11r..tension2..cycle;
+%currentpicture := currentpicture shifted(-.95u,0);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar(CYR_ve,9u#-s#,x_height#,0);
+italcorr x_height#*sind 18-1.57u#;
+x1=x2=jut+1/2stem+s;
+x7=x1d; y1c=h; y2c=0; 
+y3=y4=bar_height; x3=x2r; x4=x6=x9=x3+2.5u-stem; 
+y4-y5=y5-y6; x5=w-1/2curve-s;
+y6=y7=y2h; y8=y9=h-1/2bar; x8=x1d;
+y9-y10=y10-y4; x10=x5-c;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos5(curve,0);
+penpos6(bar,-90);
+penpos7(bar,-90);
+penpos8(bar,270);
+penpos9(bar,270);
+penpos10(curve,180);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penstroke z8e--z9e{right}..tension.8..z10e..tension.8..{left}z4e;
+sss_width := x5 - x2r; save sss_width;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_ghe,7u#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+y1c=h; y2c=0; y3=y4=y5=h-1/2bar; x3=x1d; x5e=w-s; 
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+T_serif(5,bar,4/5border_height,1);
+x4=x5;
+fill serif_edge2--reverse serif_edge1--cycle;
+fill T_edge5;
+penpos3(bar,90);
+penpos4(bar,90);
+penstroke z3e--z4e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_de,9u#,x_height#,x_depth#);
+italcorr x_height#*sind 18-.86u#;
+x3=x4=w-jut-1/2stem-s-.1u; 
+y3c=h; y4c=0;
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge4--reverse serif_edge3--cycle;
+x7e=s; x10e=w-s; y7=y8=y9=y10=y4h; x8=x7; x9=x4c;
+T_serif(7,bar,4/5border_height,0);
+T_serif(10,bar,4/5border_height,1);
+fill T_edge7; fill T_edge10;
+penpos8(bar,90); penpos9(bar,90);
+penstroke z8e--z9e;
+x2=s+1.3jut+1/2bar; y2=bar; x1=x2+3/2bar; y1=h-bar;
+numeric theta[]; theta1=angle(z1-z2);
+A_serif(1,bar,theta1-180,1.3jut,jut);
+A_serif(2,bar,theta1,1.3jut,.8jut);
+fill A_serif_edge2..reverse A_serif_edge1..cycle;
+y5=y6=y3h; x5=x1d; x6=x3c;
+penpos5(bar,90);
+penpos6(bar,90);
+penstroke z5e--z6e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_ie,8u#,x_height#,0);
+italcorr x_height#*sind 18-1.62u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(bar,90);
+penpos9(bar,90);
+penpos10(.9hair,180);
+x1=x5=.5w; y1=0; y5=h;
+y3=.5h; x3=x9=1/2curve+s; x7=w-1/2curve-s; x8=w-s; y8=y9=bar_height; y7=y8r;
+y2=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x5+5/8(x7-x5);
+x10=w-s-1/2bar; y10=y7-5/4stem;
+penstroke z10e{down}..tension1.1..z1e..z2e..z3e..z4e..z5e..z6e..{down}z7e;
+penstroke z9e--z8e; fill z10r..z10l..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_ye,8u#,asc_height#,0);
+italcorr asc_height#*sind 18-2.05u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(bar,90);
+penpos9(bar,90);
+penpos10(.9hair,180);
+x1=x5=.5w; y1=0; y5=x_height;
+y3=.5x_height; x3=x9=1/2curve+s; x7=w-1/2curve-s; x8=w-s; y8=y9=bar_height; y7=y8r;
+y2=0.1x_height; y4=y6=0.9x_height; x2=x4=x3+3/8(x5-x3); x6=x5+5/8(x7-x5);
+x10=w-s-1/2bar; y10=y7-5/4stem;
+penstroke z10e{down}..tension1.1..z1e..z2e..z3e..z4e..z5e..z6e..{down}z7e;
+penstroke z9e--z8e;
+fill z10r..z10l..cycle;
+y12=y14=h; y11=y13=h-stem; x11=x12=x3r+c; x13=x14=x7r-c;
+fill z11..z12..cycle; fill z13..z14..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 14);
+endchar;
+
+beginchar(CYR_zhe,round (13u#+s#),x_height#,0);
+italcorr x_height#*sind 18-1.26u#;
+if .5w = good.x .5w: change_width; fi
+x8=x9=.5w; y8c=h; y9c=0;
+serif(8,stem,-90,jut,jut);
+serif(9,stem,90,jut,jut);
+fill serif_edge9--reverse serif_edge8--cycle;
+x7=x8l; x4=x7-u; y4=y7=y10=y11=bar_height; x10=x8r; x11=x10+u;
+x6=s+1/2bar; y6=y16=0; y4-y5=y5-y6; x4-x5=1.3(x5-x6);
+x16=w-s-1/2bar; 1.3(x16-x15)=x15-x11; y11-y15=y15-y16;
+x2=x5-c; y2=y1=h; x4-x3=x3-x2; y2-y3=y3-y4; x1e=s+c;
+y13=y14=h; x13=x15+c; x13-x12=x12-x11; y13-y12=y12-y11; x14e=w-s-c;
+penpos2(bar,90);
+penpos3(hair,0);
+penpos4(bar,90);
+penpos5(curve,180);
+penpos6(bar,90);
+penpos7(bar,90);
+penpos10(bar,90);
+penpos11(bar,90);
+penpos12(hair,180);
+penpos13(bar,90);
+penpos15(curve,0);
+penpos16(bar,90);
+penstroke z7e--z4e{left}..tension.9..{down}z5e{down}..tension.9..{left}z6e;
+fill z6r..z6l..cycle;
+penstroke z10e--z11e{right}..tension.9..{down}z15e{down}..tension.9..{right}z16e;
+fill z16r..z16l..cycle;
+penstroke z4e{left}..z3e..{left}z2e;
+penstroke z11e{right}..z12e..{right}z13e;
+ul_drop(1,drop_round,x2-s-c,.9drop_round,bar);
+ur_drop(14,drop_round,x2-s-c,.9drop_round,bar);
+fill ul_drop_edge1; fill z1e..z1c..cycle;
+fill ur_drop_edge14; fill z14e..z14c..cycle;
+penlabels(range 1 thru 16);
+endchar;
+
+beginchar(CYR_ze,6u#+2s#,x_height#,0);
+italcorr x_height#*sind 18-1.45u#;
+x7=18/39w; y7=0; y4=y5=y44=bar_height;
+x4=x6-3/2stem; x5=x4-u;
+x6=w-s-1/2curve; y4-y6=y6-y7;
+x2=.45w; y2=h; x3=x6-1/5curve; y2-y3=y3-y4;
+x44=x2; z1=z2;
+penpos2(bar,90);
+penpos3(curve,0);
+penpos44(bar,-90);
+penpos4(bar,90);
+penpos5(bar,90);
+penpos6(curve,0);
+penpos7(bar,-90);
+penstroke z2e{right}..tension.9..{down}z3e{down}..tension.9..{left}z44e;
+penstroke z5e--z4e{right}..tension.8..{down}z6e{down}..tension.8..{left}z7e;
+fill z5r..z5l..cycle;
+S_serif(1,slab,.5w-3.5c,border_height);
+fill S_serif_edge1 reflectedabout(z2r,z2l);
+x8e=s; y8=0;
+dl_drop(8,drop_round,18/39w-s,1.5drop_round,bar);
+fill dl_drop_edge8;
+%currentpicture := currentpicture shifted(-.5u,0);
+penlabels(range 1 thru 8,44);
+endchar;
+
+beginchar(CYR_i,9u#+s#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+x3=x4=w-x1; x5=x1r-1/2bar; x6=x3l+1/2bar;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(bar,-30); penpos6(bar,-30);
+y5=.1h; y6=.9h; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_short_i,9u#+s#,asc_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+x3=x4=w-x1; x5=x1r-1/2bar; x6=x3l+1/2bar;
+y1c=y3c=x_height; y2c=y4c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(bar,-30); penpos6(bar,-30);
+y5=.1x_height; y6=.9x_height; penstroke z5e--z6e;
+x7=.5w; y7=h-3/2drop_round;
+ur_drop(7,drop_round,x3-.5w,1.1drop_round,1.2bar);
+fill ur_drop_edge7 rotatedaround(z7,180);
+fill ur_drop_edge7 reflectedabout(z7a,z7f) rotatedaround(z7,180);
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_ka,9u#+.5s#,x_height#,0);
+italcorr x_height#*sind 18-1.26u#;
+x1g=x2g=s; y1c=h; y2c=y9=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+y3=y4=bar_height; x3=x1r; x4=x3+1.25u;
+x9=w-s-1/2bar; 1.3(x9-x8)=x8-x4; y4-y8=y8-y9;
+y6=y7=h; x6=x8+c; x6-x5=x5-x4; y6-y5=y5-y4; x7e=w-s-c;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos5(hair,180);
+penpos6(bar,90);
+penpos8(curve,0);
+penpos9(bar,90);
+penstroke z3e--z4e{right}..tension.9..{down}z8e{down}..tension.9..{right}z9e;
+fill z9r..z9l..cycle;
+penstroke z4e{right}..z5e..{right}z6e;
+ur_drop(7,drop_round,w-x6-s,.9drop_round,bar);
+fill ur_drop_edge7; fill z7e..z7c..cycle;
+penlabels(range 1 thru 9);
+endchar;
+
+beginchar(CYR_el,9u#+s#,x_height#,0);
+italcorr x_height#*sind 18-.75u#;
+x7h=x8h=w-s;
+y7c=h; y8c=0;
+y1=0; x1e=s; z2=z1; x3=x2+.7drop_round; y3=1.1drop_round;
+dl_drop(1,drop_round,drop_round,drop_round,bar);
+fill dl_drop_edge1;
+fill z1c..z1e..cycle;
+penpos2(bar,-90);
+penpos3(bar,0);
+penstroke z2e{right}..{up}z3e;
+x4=x3r; y4=h-bar;
+numeric theta[];
+theta1=angle(z3-z4);
+A_serif(4,bar,theta1,1.4jut,1.3jut);
+fill A_serif_edge4..z3r--z3l..cycle;
+serif(7,stem,-90,jut,jut);
+serif(8,stem,90,jut,jut);
+fill serif_edge8--reverse serif_edge7--cycle;
+x5=x4d; y5=y6=y7h; x6=x7c;
+penpos5(bar,90); penpos6(bar,90);
+penstroke z5e--z6e;
+%currentpicture := currentpicture shifted(-.4u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_em,10u#+1.5s#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1g=s; y1c=0;  y2=h-bar;
+A_serif(1,bar,90,jut,jut);
+x2=x1; serif(2,bar,-90,jut,jut);
+fill A_serif_edge1--reverse serif_edge2--cycle;
+x3h=x4h=w-s; y3g=h-1/2bar; y4c=0;
+serif(3,stem,-90,1/2bar, jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge4--reverse serif_edge3--cycle;
+z5l=z3g; penpos5(bar,0); penpos6(bar,0);
+z6=z5+whatever*dir -110; y6=0;
+penstroke z5e--z6e;
+z7l=z6l+whatever*dir 110; y7l=6/28h;
+z8l=whatever[z6l,z7l]; y8l=h;
+penpos7(stem,0); penpos8(stem,0);
+penstroke z7e--z8e; fill z6l--z7l--z7r--cycle;
+fill z6l..tension1.3..z6r..tension1.3..cycle;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_en,9u#+s#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+x3=x4=w-x1; x5=x1r; x6=x3l;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(bar,90); penpos6(bar,90);
+y5=y6=bar_height; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_o,8u#+s#,x_height#,0);
+italcorr x_height#*sind 18-1.7u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2curve+s; x7=w-1/2curve-s;
+y2=y8=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_pe,9u#+s#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+x3=x4=w-x1; x5=x1d; x6=x3c;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(bar,90); penpos6(bar,90);
+y5=y6=y1h; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(CYR_er,8u#+jut#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-1.65u#;
+penpos1(vair,90);
+penpos2(.7o,30);
+penpos3(stem,0);
+penpos4(.7o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=jut+.2s+.6(w-jut-2s); y1=0; y5=h;
+y3=y7=.5h; x3=1/2stem+s+jut; x7=w-1/2curve-s;
+y2=y8=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x10g=x9g=s; y9c=h; y10c=-desc_depth;
+serif(9,stem,-90,jut,0);
+serif(10,stem,90,jut,jut);
+fill serif_edge10--reverse serif_edge9--cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_es,8u#,x_height#,0);
+italcorr x_height#*sind 18-1.7u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(.9hair,180);
+x1=x5=.5w; y1=0; y5=h;
+y3=.5h; x3=1/2curve+s; 
+y2=0.1h; y4=0.9h; x2=x4=x3+3/8(x5-x3);
+x6=w-s-1/2hair; y6=y3-4/5stem;
+penstroke z6e{down}..tension1.1..z1e..z2e..z3e..z4e..z5e;
+fill z6r..z6l..cycle;
+z7=z5;
+ur_drop(7,drop_round,7/8(x6l-x1),3/2drop_round,bar);
+fill ur_drop_edge7;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 7);
+endchar;
+
+beginchar(CYR_te,round (8u#-.5s#),x_height#,0);
+italcorr x_height#*sind 18-.75u#;
+if .5w = good.x .5w: change_width; fi
+x2=x3=.5w; x1e=s; x4e=w-s; y1=y4=y2h;
+y2c=h; y3c=0;
+serif(2,stem,-90,jut,jut);
+serif(3,stem,90,jut,jut);
+T_serif(1,bar,4/5border_height,0);
+T_serif(4,bar,4/5border_height,1);
+fill serif_edge3--reverse serif_edge2--cycle;
+fill T_edge1; fill T_edge4;
+%currentpicture := currentpicture shifted(-1.4u,0);
+penlabels(1,2,3,4);
+endchar;
+
+beginchar(CYR_u,9u#+s#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-.7u#;
+x1l=s+jut; y1l=h-bar;
+x3r=w-s-.8jut; y3r=h-bar;
+x4=33/60w; y4=-2/5d;
+numeric theta[];
+theta1 = angle(z4-z1l);
+theta2 = angle(z4-z3r);
+serif(1,stem,theta1,jut,jut);
+A_serif(3,1.2bar,theta2,1.2jut,.8jut);
+z2 = z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+fill z4--serif_edge1--z2&z2--A_serif_edge3--z4&cycle;
+z5r=z4; y6=-d+bar; x6=x4-1.5stem; z7l=z2;
+penpos7(1.2bar,theta2+90);
+penpos5(1.2bar,theta2+90);
+penpos6(1.2bar,-90);
+penstroke z7e--z5e{dir theta2}...{left}z6e;
+z8=z6;
+dl_drop(8,1.1stem,1.3u,drop_round,1.2bar);
+fill dl_drop_edge8; fill z8e..z8c..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 7);
+endchar;
+
+beginchar(CYR_ef,12u#,asc_height#,desc_depth#);
+italcorr x_height#*sind 18-1.7u#;
+if .5w = good.x .5w: change_width; fi
+penpos1(vair,90);
+penpos2(.7o,30);
+penpos3(stem,0);
+penpos4(.7o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=.5w+.5(.5w-s)-c; y1=0; y5=x_height;
+y3=y7=y12=.5x_height; x3=.5w; x7=w-1/2curve-s;
+y2=y8=y9=y11=0.1x_height; y4=y6=y13=y15=0.9x_height;
+x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+z16=z3; x14=x10=.5w-.5(.5w-s)+c; y10=0; y14=x_height;
+x12=s+1/2curve; x9=x15=x16-3/8(x16-x14); x11=x13=x14-5/8(x14-x12);
+penpos10(vair,90);
+penpos11(o,30);
+penpos12(curve,0);
+penpos13(o,-30);
+penpos14(vair,-90);
+penpos15(.7o,-150);
+penpos16(stem,-180);
+penpos9(.7o,-210);
+penstroke z10e..z11e..z12e..z13e..z14e..z15e..z16e..z9e..cycle;
+x99=x155=x3l; x44=x222=x3r; y99=y222=.5x_height-3/2stem; y155=y44=.5x_height+3/2stem;
+unfill z99--z155--z44--z222--cycle; penlabels(44,99,155,222);
+x20=.5w; y20=-.75d; x17=x30=x3l; x23=x24=x3r; y17=y23=-1/2d;
+x18=x19=x17-4/5stem; x21=x22=x23+4/5stem; y18=y22=-d+bar; y19=y21=-d;
+y24=y30=x_height+3/5(asc_height-x_height);x25=x22-c; x29=x18+c; y29=y25=h-1/2bar;
+y28=y26=h; x28=x29+1/2bar; x26=x25-1/2bar; x27=.5w; y27=h-bar;
+fill z30---z17{dir -100}..tension2..z18{left}..{right}z19{right}..{dir 20}z20{dir -20}..{right}z21{right}..{left}z22..tension2..{dir 100}z23---z24{dir 80}..{dir 20}z25{dir 160}..{left}z26{left}..{dir -160}z27{dir 160}..{left}z28{left}..{dir -160}z29{dir -20}..{dir -80}z30&cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels (range 1 thru 30);
+endchar;
+
+beginchar(CYR_ha,9u#+c#,x_height#,0);
+italcorr x_height#*sind 18-1.12u#;
+y3=y4=bar; x3=w-s-jut-1/2stem; x4=s+jut+1/2bar;
+y1=y2=h-bar; x1=s+jut+1/2stem+c; x2=w-s-1.25c-jut-1/2bar;
+numeric theta[];
+theta1 = angle(z1-z3);
+theta2 = angle(z2-z4);
+serif(1,stem,theta1-180,jut,jut);
+A_serif(2,1.2bar,theta2-180,jut,jut);
+serif(3,stem,theta1,jut,jut);
+A_serif(4,1.2bar,theta2,jut,1.3jut);
+fill serif_edge3--reverse serif_edge1--cycle;
+fill A_serif_edge4--reverse A_serif_edge2--cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar(CYR_tse,9.1u#+s#,x_height#,x_depth#);
+italcorr x_height#*sind 18-.87u#;
+x1=x2=jut+1/2stem+s;
+x3=x4=w-x1-.1u; x5=x1d; x6=x3c;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(3,stem,-90,jut,jut);
+serif(4,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(bar,90); penpos6(bar,90);
+y5=y6=y2h; penstroke z5e--z6e;
+x7e=w-s; y7=y4h;
+T_serif(7,bar,4/5border_height,1);
+fill T_edge7;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_che,9u#+s#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=jut+1/2stem+s; x2=x3=w-x1; 
+y1c=y2c=h; y3c=0; y4=y4r=y4l=30/52h; x4=x1; x4r=x1r; x4l=x1l;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,-90,jut,jut);
+serif(3,stem,90,jut,jut);
+fill z4r--reverse serif_edge1--z4l--cycle;
+fill serif_edge3--reverse serif_edge2--cycle;
+x5=x2l+.1c; y5=bar_height-1/2bar; z6=z4;
+x5-x7=x7-x4r; y7=y5-.8bar;
+penpos6(stem,180);
+penpos5(1.2vair,270);
+penpos7(1.2vair,270);
+penstroke z6e{down}...z7e..z5e;
+%currentpicture := currentpicture shifted(-2.4u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_sha,round (13u#+3/2s#),x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+if .5w = good.x .5w: change_width; fi
+x1=x2=jut+1/2stem+s;
+y1c=h; y2c=0; x3=x2e; y3=y4=y7=y8=y2h;
+x4=x6c; x7=x6d; x8=x9c;
+x5=x6=.5w; y5=y1; y6=y2;
+y9b=bar; x9h=w-s;
+x10=x9; y10b=h-bar; 
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+serif(5,stem,-90,jut,jut);
+serif(6,stem,90,jut,jut);
+fill serif_edge6--reverse serif_edge5--cycle;
+serif(9,stem,90,jut,jut);
+serif(10,stem,-90,jut,jut);
+fill serif_edge9--reverse serif_edge10--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos7(bar,90);
+penpos8(bar,90);
+penstroke z3e--z4e;
+penstroke z7e--z8e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_shcha,13.1u#+3/2s#,x_height#,x_depth#);
+italcorr x_height#*sind 18-.87u#;
+if .5w <> good.x .5w: change_width; fi
+x1=x2=jut+1/2stem+s;
+y1c=h; y2c=0; x3=x2e; y3=y4=y7=y8=y2h;
+x4=x6c; x7=x6d; x8=x9c;
+y9b=bar; x9h=w-s-.1u;
+x10=x9; y10b=h-bar;
+x11e=w-s; y11=y9h;
+serif(9,stem,90,jut,jut);
+serif(10,stem,-90,jut,jut);
+fill serif_edge9--reverse serif_edge10--cycle;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x5=x6=x1+(x10-x1)/2; y5=y1; y6=y2;
+serif(5,stem,-90,jut,jut);
+serif(6,stem,90,jut,jut);
+fill serif_edge6--reverse serif_edge5--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos7(bar,90);
+penpos8(bar,90);
+penstroke z3e--z4e;
+penstroke z7e--z8e;
+T_serif(11,bar,4/5border_height,1);
+fill T_edge11;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar(CYR_hard_sign,10u#-s#,x_height#,0);
+x2r=x5-sss_width; x1=x2;
+x7=x1d; y1c=h; y2c=0;
+y3=y4=bar_height; x3=x2r-.1c; x4=x6=x3+2.5u-stem;
+y4-y5=y5-y6; x5=w-1/2curve-s;
+y6=y7=y2h; x8e=0; y8g=h;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+T_serif(8,bar,4/5border_height,0);
+fill T_edge8;
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos5(curve,0);
+penpos6(bar,-90);
+penpos7(bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+x9=c; y9=y10=h; x10=-.1c;
+unfill z8d{up}..z9--z10--cycle;
+%currentpicture := currentpicture shifted(-.95u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_yeru,12u#-c#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=jut+1/2stem+s;
+x7=x1d; y1c=h; y2c=0; 
+y3=y4=bar_height; x3=x2r-.1c; x4=x6=x3+2.5u-stem;
+y4-y5=y5-y6; x5=x2r+sss_width;
+y6=y7=y2h; x8h=x9h=w-s; y8c=h; y9c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+serif(8,stem,-90,jut,jut);
+serif(9,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge9--reverse serif_edge8--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos5(curve,0);
+penpos6(bar,-90);
+penpos7(bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(range 1 thru 9);
+endchar;
+
+beginchar(CYR_soft_sign,9u#-s#,x_height#,0);
+x1=x2=jut+1/2stem+s;
+x7=x1d;
+y1c=h; y2c=0; 
+y3=y4=bar_height; x3=x2r-.1c; x4=x6=x3+2.5u-stem;
+y4-y5=y5-y6; x5=w-1/2curve-s;
+y6=y7=y2h;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(bar,90);
+penpos4(bar,90);
+penpos5(curve,0);
+penpos6(bar,-90);
+penpos7(bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(CYR_e,6u#+2s#,x_height#,0);
+italcorr x_height#*sind 18-1.5u#;
+x1=16/39w; x5=.5w-c; y1=0; y5=h;
+y7=.5h; x7=w-1/2curve-s;
+x9e=s; y9=0;
+dl_drop(9,drop_round,18/39w-s,1.5drop_round,bar);
+y2=y5; x2=x5; 
+S_serif(2,bar,x5-s-c,border_height);
+x3=x7-1/2stem; y3=y4=bar_height; x4=x9c-c;
+penpos3(bar,90); penpos4(bar,90);
+penstroke z3e--z4e; fill z4r..z4l..cycle;
+y8=0.1h-c; y6=0.9h+c; x8=x1+5/8(x7-x9)+.1c; x6=x2+5/8(x7-x5);
+penpos5(bar,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+penpos1(bar,-270);
+penstroke z5e{right}..z6e..{down}z7e{down}..z8e..{left}z1e;
+fill S_serif_edge2 reflectedabout(z5r,z5l);
+fill dl_drop_edge9;
+%currentpicture := currentpicture shifted(-.5u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar(CYR_yu,12u#+.5s#,x_height#,0);
+italcorr x_height#*sind 18-1.72u#;
+x1=x2=jut+1/2stem+s;
+y1c=h; y2c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos9(vair,90);
+penpos10(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x3l=x1h+.3bar; y9=0; y5=h;
+y3=y7=.5h; x7=w-1/2curve-s; x7-x5=x5-x3; x9=x5;
+y10=y8=0.1h-c; y4=y6=0.9h+c; x10=x4=x3+c+3/8(x5-x3); x6=x8=x5-c+5/8(x7-x5);
+penstroke z9e..z10e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x11=x1r; x12=x3-1/3stem; y11=y12=bar_height;
+penpos11(bar,90); penpos12(bar,90);
+penstroke z11e--z12e;
+penlabels(range 1 thru 12);
+endchar;
+
+beginchar(CYR_ya,8u#+s#+1/2bar#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x1=x2=w-jut-1/2stem-s;
+x7=x1d; y1c=h; y2c=0;
+y3=y4=bar_height; x3=x2l; x4=x6=x3-2.5u+stem;
+y5-y4=y6-y5; x5=1/2stem+2s;
+y6=y7=y1h; x9=s; y9=0; x4-x8=x8-x9; y4-y8=y8-y9;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(bar,-90);
+penpos4(bar,-90);
+penpos5(curve,180);
+penpos6(bar,90);
+penpos7(bar,90);
+penpos8(curve,0);
+penpos9(bar,-90);
+penstroke z3e--z4e{left}..tension.8..z5e..tension.8..{right}z6e--z7e;
+penstroke z9e{right}..{up}z8e{up}..{right}z4e;
+fill z9r..z9l..cycle;
+penlabels(range 1 thru 9);
+endchar;
+
+beginchar("A",13u#+s#,cap_height#,0);
+z1=(.5w,h+1/13h);
+x4l=w-x5r=s+cap_jut; y4l=y5r=slab; 
+numeric theta[];
+theta4=angle(z1-z4l);
+theta5=angle(z1-z5r);
+A_serif(4,1.3cap_bar,theta4,cap_jut,1.2cap_jut);
+serif(5,cap_stem,theta5,cap_jut,cap_jut);
+z0=z4r+whatever*dir theta4=z5l+whatever*dir theta5;
+fill z1--A_serif_edge4--z0&z0--serif_edge5--z1&cycle;
+penpos2(whatever,theta4);
+penpos3(whatever,theta5);
+y2r=y3r=20/52h;
+y2l=y3l=y2r-cap_bar;
+z2=whatever[z1,z4r];
+z3=whatever[z1,z5l];
+penstroke z2e--z3e;
+y6=y7=h; z6=whatever[z1,z4l]; z7=whatever[z1,z5e];
+unfill z1..z6--z7..z1&cycle;
+unfill z1..z6--z7..z1&cycle;
+penlabels(range 0 thru 7);
+endchar;
+
+beginchar("B",11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.17u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x10=x1d; y3=y4=h-1/2slab; x4=x3+u;
+y1c=h; y2c=0; 
+y6=y7=cap_bar_height; x6=x2r; x7=x9=x6+4.5u-cap_stem;
+y7-y8=y8-y9; x8=w-1/2cap_curve-s;
+y9=y10=y2h;
+y4-y5=y5-y7; x5=x8-2/5cap_curve; y77=y7; x77=x4;
+serif(1,cap_stem,-90,1/2cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+penpos3(slab,90);
+penpos4(slab,90);
+penpos5(cap_curve,0);
+penpos77(slab,-90);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penpos8(cap_curve,0);
+penpos9(cap_bar,-90);
+penpos10(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z77e;
+penstroke z6e--z7e{right}..tension.8..z8e..tension.8..{left}z9e--z10e;
+penlabels(range 1 thru 10,77);
+endchar;
+
+beginchar("C",10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.1u#;
+x1=x5=23/42w; y1=0; y5=h;
+y3=.5h; x3=1/2cap_curve+s;
+y2=0.1h-c; y4=0.9h+c; x2=x4=x3+7/16(x1-x3); 
+penpos1(cap_bar,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(cap_bar,-90);
+penstroke z1e{left}..z2e..z3e..z4e..{right}z5e;
+z6=z5; y7=y1; x7e=w-s; y8=y1; x8=x1-.1w;
+S_serif(6,slab,w-s-c-x1,1.5border_height);
+S_serif(7,slab,w-s-x1,1.5border_height);
+fill S_serif_edge6; fill S_serif_edge7 reflectedabout(z1,z8);
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("D",12u#,cap_height#,0);
+italcorr cap_height#*sind 18-2.23u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0; 
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(o,30);
+penpos6(cap_curve,0);
+penpos7(o,-30);
+penpos8(cap_bar,-90);
+penpos9(cap_bar,-90);
+x3=x9=x1d; 
+x8=x4=.5w; y8=y9=1/2cap_bar; y4=y3=h-1/2cap_bar;
+y6=.5h; x6=w-1/2cap_curve-s;
+y7=.09h-c+1/2cap_bar; y5=0.91h+c-1/2cap_bar; x5=x7=x4+4.5/8(x6-x4);
+penstroke z3e--z4e{right}..z5e..z6e..z7e..{left}z8e--z9e;
+penlabels(range 1 thru 10,77);
+endchar;
+
+beginchar("E",10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.1u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y4=y3=h-1/2slab; x4=x1d;
+y1c=h; y2c=0; 
+y5=y3; x5e=w-s-c;
+y6=y7=y8=cap_bar_height;x6=x1r; x7=x8=x6+u;
+T_serif(5,slab,border_height,1);
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x5a;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penstroke z3e--z4e;
+fill T_edge5;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penstroke z6e--z7e;
+T_serif(8,cap_bar,.8border_height,1);
+fill T_edge8;
+fill T_edge8 reflectedabout(z6,z7);
+y9=y10=y11=y2h; x9=x2d; x11e=w-s;
+T_serif(11,cap_bar,border_height,1); x10=x11;
+penpos9(cap_bar,90);
+penpos10(cap_bar,90);
+penstroke z9e--z10e;
+fill T_edge11 reflectedabout(z9,z10);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar("F",10u#+.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y4=y3=h-1/2slab; x4=x1d;
+y1c=h; y2c=0; 
+y5=y3; x5e=w-s;
+y6=y7=y8=cap_bar_height;x6=x1r; x7=x8=x6+u;
+T_serif(5,slab,border_height,1);
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x5a;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penstroke z3e--z4e;
+fill T_edge5;
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penstroke z6e--z7e;
+T_serif(8,cap_bar,.8border_height,1);
+fill T_edge8;
+fill T_edge8 reflectedabout(z6,z7);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("G",10u#+cap_jut#+c#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.78u#;
+x1=x5=23/42(w-cap_jut-c); y1=0; y5=h;
+y3=.5h; x3=1/2cap_curve+s;
+y2=0.1h-c; y4=0.9h+c; x2=x4=x3+7/16(x1-x3); 
+penpos1(cap_bar,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(cap_bar,-90);
+penstroke z1e{left}..z2e..z3e..z4e..{right}z5e;
+z6=z5; y7=y1; x7e=w-s-cap_jut-c; y8=y1; x8=x1-.1(w-cap_jut-c);
+S_serif(6,slab,w-s-2c-x1-cap_jut,1.5border_height);
+S_serif(7,slab,w-s-x1-cap_jut+c,7/4border_height);
+fill S_serif_edge6; fill S_serif_edge7 reflectedabout(z1,z8);
+x9r=x7e; y9r=7/4border_height-1/2cap_bar;
+serif(9,cap_stem,-90,cap_jut,cap_jut);
+x10=x9l; x11=x9r; y10=y11=3/4cap_bar;
+fill reverse serif_edge9--z10--z11--cycle;
+%currentpicture := currentpicture shifted(-1.6u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("H",12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+x3=x4=w-x1; x5=x1r; x6=x3l;
+y1c=y3c=h; y2c=y4c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+serif(3,cap_stem,-90,cap_jut,cap_jut);
+serif(4,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+fill serif_edge4--reverse serif_edge3--cycle;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+y5=y6=cap_bar_height; penstroke z5e--z6e;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar("I",2cap_jut#+cap_stem#+2s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+endchar;
+
+beginchar("J",7u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.75u#;
+x1=x4=w-cap_jut-1/2cap_stem-s;
+y1c=h; y2=y3=y4=13/53h; x2=x1r; x3=x1l;
+y5=0; x5=x3-.55cap_stem;
+serif(1,cap_stem,-90,1.2cap_jut,cap_jut);
+fill z3--z2--reverse serif_edge1--cycle;
+penpos4(cap_stem,0);
+penpos5(cap_bar,-90);
+penstroke z4e{down}..{left}z5e;
+x6e=s; y6=0;
+dl_drop(6,cap_drop_round,x5-s,1.3drop_round,cap_bar);
+fill dl_drop_edge6;
+%currentpicture := currentpicture shifted(-.4u,0);
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar("K",13u#-c#,cap_height#,0);
+italcorr cap_height#*sind 18-1.8u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+y7=cap_bar_height; x3l=w-cap_jut-.5cap_jut-cap_bar-s; y3l=h-cap_bar;
+x5=x6=x1r-.1c; y5=cap_bar_height-cap_bar; y6=y5-1.2cap_bar;
+numeric theta[];
+theta1=angle(z5-z3l);
+A_serif(3,cap_bar,theta1,1.5cap_jut,.6cap_jut);
+x4l=w-s-1.2cap_jut-cap_stem; y4l=cap_bar;
+z7=z3r+whatever*dir theta1;
+theta2=angle(z7-z4l);
+serif(4,cap_stem,theta2,.8cap_jut,cap_jut);
+z8=z3r+whatever*dir theta1=z4r+whatever*dir theta2;
+fill z5--z6--z7--serif_edge4--z8--reverse A_serif_edge3--cycle;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("L",10u#+c#,cap_height#,0);
+x1=x2=cap_jut+1/2cap_stem+s;
+y1c=h; y2c=0;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+y3=y4=y5=y2h; x3=x2d; x5e=w-s;
+T_serif(5,cap_bar,border_height,1); x4=x5;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penstroke z3e--z4e;
+fill T_edge5 reflectedabout(z3,z4);
+penlabels(1,2,3,4,5);
+endchar;
+
+beginchar("M",13u#+1.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1g=s; y1c=0;  y2=h-cap_bar;
+A_serif(1,cap_bar,90,jut,jut);
+x2=x1; serif(2,cap_bar,-90,jut,jut);
+fill A_serif_edge1--reverse serif_edge2--cycle;
+x3h=x4h=w-s; y3g=h-1/2cap_bar; y4c=0;
+serif(3,cap_stem,-90,1/2cap_bar, jut);
+serif(4,cap_stem,90,jut,jut);
+fill serif_edge4--reverse serif_edge3--cycle;
+z5l=z3g; penpos5(bar,0); penpos6(bar,0);
+z6=z5+whatever*dir -108; y6=0;
+penstroke z5e--z6e;
+z7l=z6l+whatever*dir 110; y7l=10/54h;
+z8l=whatever[z6l,z7l]; y8l=h;
+penpos7(cap_stem,0); penpos8(cap_stem,0);
+penstroke z7e--z8e; fill z6l--z7l--z7r--cycle;
+fill z6l..tension1.3..z6r..tension1.3..cycle;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("N",12u#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=x2=cap_jut+1/2cap_bar+s;
+x3=w-x1; y1c=y3c=h; y2c=y4=y5=0;
+x4=x3r; x5=x3l;
+serif(1,cap_bar,-90,cap_jut,1.3cap_jut);
+A_serif(2,cap_bar,90,cap_jut,cap_jut);
+A_serif(3,cap_bar,-90,cap_jut,cap_jut);
+fill A_serif_edge2--reverse serif_edge1--cycle;
+numeric theta[]; y7=y1h; x7=x1h-1.1cap_stem;
+theta1=angle(z5-z7);
+z6=z3l+whatever*dir -90=z1h+whatever*dir theta1;
+fill z6--z1h--z7--z5{down}..{up}z4--reverse A_serif_edge3--cycle;
+unfill z1b--z1l--z1a--cycle;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("O",11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.2u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2cap_curve+s; x7=w-1/2cap_curve-s;
+y2=y8=0.1h-c; y4=y6=0.9h+c; x2=x4=x3+7/16(x5-x3); x6=x8=x5+9/16(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("P",10u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.56u#;
+x1=x2=x3=cap_jut+1/2cap_stem+s;
+y3=y4=cap_bar2_height; y7=y6=h-1/2slab; x7=x3+c;
+y1c=h; y2c=0; x6=x4=x3+3u;
+y5-y4=y6-y5; x5=w-1/2cap_curve-s;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,-90);
+penpos4(cap_bar,-90);
+penpos5(cap_curve,0);
+penpos7(cap_bar,90);
+penpos6(cap_bar,90);
+penstroke z3e--z4e{right}..tension.8..z5e..tension.8..{left}z6e--z7e;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("Q",11u#+s#,cap_height#,comma_depth#);
+italcorr cap_height#*sind 18-2.2u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2cap_curve+s; x7=w-1/2cap_curve-s;
+y2=y8=0.1h-c; y4=y6=0.9h+c; x2=x4=x3+7/16(x5-x3); x6=x8=x5+9/16(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x11=x12-1.5c; x12=x7l-c; y11=y12=-comma_depth;
+y9=0; x9=x1-c; y9-y10=y10-y11; x11-x10=x10-x9;
+penpos9(cap_bar,90); penpos10(cap_curve,0);
+penpos11(cap_bar,90); penpos12(cap_bar,90);
+penstroke z9e{dir -20}..tension.8..z10e..tension.8..{right}z11e--z12e;
+fill z12r..z12l..cycle;
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(range 1 thru 12);
+endchar;
+
+beginchar("R",11u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.7u#;
+x1=x2=cap_jut+1/2cap_stem+s;
+y6=y10=y7=cap_bar_height; y3=y4=h-1/2slab; x7=x2r;
+y1c=h; y2c=0; x6=x4=x7+2.5u; x3=x1d;
+y4-y5=y5-y6; x5=x8; x9=w-s-1/2cap_bar; y9=0; y6-y8=y8-y9; x10=x6; x9-x8=6/7(x8-x10);
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penpos3(cap_bar,90);
+penpos4(cap_bar,90);
+penpos5(cap_curve,0);
+penpos7(cap_bar,-90);
+penpos6(cap_bar,-90);
+penpos8(cap_curve,-180);
+penpos9(cap_bar,-90);
+penpos10(cap_bar,-90);
+penstroke z3e--z4e{right}..tension.9..z5e..tension.9..{left}z6e--z7e;
+penstroke z9e{left}..tension.8..{up}z8e{up}..tension.8..{left}z10e;
+fill z9l..z9r..cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("S",9u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.7u#;
+x6=x7=1/2w; y6=y7=0;
+S_serif(7,cap_bar,x6-s,1.5border_height);
+y5=11/53h; x5=w-s-1/2(1.9hair);
+y4=28/53h; x4=18/38w; y3=42/53h; x3=s+c+1/2(1.9cap_bar);
+x2=.5w-c; y2=h; z1=z2;
+penpos6(cap_bar,-90);
+penpos5(1.9hair,0);
+penpos4(1.1cap_curve,90);
+penpos3(1.9hair,0);
+penpos2(cap_bar,-90);
+penstroke z6e{right}..tension.9..z5e..tension.9..z4e..tension.9..z3e..tension.9..{right}z2e;
+fill S_serif_edge7 rotatedaround(z6,180);
+S_serif(1,cap_bar,x5-x2-cap_bar,1.2border_height);
+fill S_serif_edge1;
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("T",round (11u#+s#),cap_height#,0);
+italcorr cap_height#*sind 18-.7u#;
+x1=x2=.5w; y1c=h; y2c=0;
+y3=y4=h-1/2slab; x3e=s; x1-x3e=x4e-x1;
+serif(1,cap_stem,-90,1.2cap_jut,1.2cap_jut);
+serif(2,cap_stem,90,cap_jut,cap_jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+T_serif(3,cap_bar,round border_height,0);
+T_serif(4,cap_bar,round border_height,1);
+fill T_edge3;
+fill T_edge4;
+if x1c>x3: y5=y6=y7=y8=h-1/2cap_bar; x5=x3a; x6=x1c; x7=x1e; x8=x4a;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+penpos7(cap_bar,90); penpos8(cap_bar,90);
+penstroke z5e--z6e;
+penstroke z7e--z8e; fi
+%currentpicture := currentpicture shifted(-2.9u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("U",12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1=cap_jut+1/2cap_stem+s;
+x3=w-s-cap_jut-1/2cap_bar; 
+y1c=y3c=h; y2=y4=y5=y6=y24=y56=16/53h; x2=x1l;
+x4=x1r; x5=x3l; x6=x3r;
+serif(1,cap_stem,-90,cap_jut,cap_jut);
+A_serif(3,cap_bar,-90,cap_jut,cap_jut);
+fill z2--z4--reverse serif_edge1--cycle;
+fill z5--z6--reverse A_serif_edge3--cycle;
+x7=x1+.5(x3-x1); y7=0; x4-x24=x24-x2; x6-x56=x56-x5;
+penpos24(cap_stem,-180); penpos7(vair,-90);
+penpos56(cap_bar,0);
+penstroke z24e{down}..tension.9..{right}z7e{right}..tension.9..{up}z56e;
+%currentpicture := currentpicture shifted(-2.3u,0);
+penlabels(range 1 thru 7,24,56);
+endchar;
+
+beginchar("V",12u#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1l=cap_jut+s; x3r=w-s-cap_jut; 
+y1l=y3r=h-cap_bar; x4=.5w-1/2cap_bar; x5=.5w+1/2cap_bar;
+y4=y5=1/2cap_bar;
+numeric theta[];
+theta1=angle(z4-z1l);
+theta2=angle(z5-z3r);
+serif(1,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(3,cap_bar,theta2,1.3cap_jut,cap_jut);
+z2=z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+fill z4{down}..{up}z5--reverse A_serif_edge3--z2--reverse serif_edge1--z4&cycle;
+%currentpicture := currentpicture shifted(-3.8u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("W",17u#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x9l=.5w-.3cap_stem; x7r=w-s-cap_jut;
+y9l=y7r=y1l=h-cap_bar; x5=x9l+.5(x7r-x9l)-1/2cap_bar; x6=x9l+.5(x7r-x9l)+1/2cap_bar;
+y5=y6=y2=y3=1/2cap_bar;
+numeric theta[];
+theta1=angle(z5-z9l);
+theta2=angle(z6-z7r);
+serif(9,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(7,cap_bar,theta2,1.3cap_jut,cap_jut);
+z8=z9r+whatever*dir theta1=z7l+whatever*dir theta2;
+x1l=s+cap_jut;
+serif(1,cap_stem,theta1,cap_jut,cap_jut);
+z2=z1l+whatever*dir theta1; x3=x2+cap_bar;
+z4=z3+whatever*dir (theta2-180)=z9l+whatever*dir theta1;
+y11=y8; z11=z1r+whatever*dir theta1;
+z10=z11+whatever*dir (theta2-180)=z9l+whatever*dir theta1;
+fill z5{down}..{up}z6--reverse A_serif_edge7--z8--reverse serif_edge9--z10--z11--reverse serif_edge1--z2{down}..{up}z3--z4--z5&cycle;
+%currentpicture := currentpicture shifted(-3.8u,0);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar("X",12u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-1.2u#;
+y3=y4=slab; x3=w-s-cap_jut-1/2cap_stem; x4=s+cap_jut+1/2slab;
+y1=y2=h-slab; x1=s+cap_jut+1/2cap_stem+c; x2=w-s-1.5c-cap_jut-1/2slab;
+numeric theta[];
+theta1 = angle(z1-z3);
+theta2 = angle(z2-z4);
+serif(1,cap_stem,theta1-180,cap_jut,cap_jut);
+A_serif(2,1.2cap_bar,theta2-180,cap_jut,cap_jut);
+serif(3,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(4,1.2cap_bar,theta2,cap_jut,cap_jut);
+fill serif_edge3--reverse serif_edge1--cycle;
+fill A_serif_edge4--reverse A_serif_edge2--cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar("Y",12u#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x1l=cap_jut+s;
+x3r=w-s-cap_jut; 
+y1l=y3r=h-cap_bar; x4=.5w; 
+y4=8/25h;
+numeric theta[];
+theta1=angle(z4-z1l);
+theta2=angle(z4-z3r);
+serif(1,cap_stem,theta1,cap_jut,cap_jut);
+A_serif(3,cap_bar,theta2,1.3cap_jut,cap_jut);
+z2=z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+y5c=0; x5=.5w+.5c;
+serif(5,cap_stem,90,cap_jut,cap_jut);
+x6=x5l; x7=x5r;
+z6=z1l+whatever*dir theta1;
+z7=z3r+whatever*dir theta2;
+fill z6--serif_edge5--z7--reverse A_serif_edge3--z2--reverse serif_edge1--z6&cycle;
+%currentpicture := currentpicture shifted(-3.3u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("Z",9u#+1.5s#,cap_height#,0);
+italcorr cap_height#*sind 18-.78u#;
+x6=s+1/2cap_bar; y6=y7=y8=1/2cap_bar;
+x8e=w-s; x7=x8;
+T_serif(8,cap_bar,border_height,1);
+penpos6(cap_bar,90);
+penpos7(cap_bar,90);
+penstroke z6e--z7e; fill z6r..z6l..cycle;
+fill T_edge8 reflectedabout(z6,z7);
+x9=w-s-c; y9=y10=0; x10=w-s; z11=z8d reflectedabout(z6,z7);
+unfill z11{down}..z9--z10--cycle;
+y5l=y6r; x5l=x6r-1/4cap_bar;
+x4r=w-s-1/4cap_bar; y4=h-cap_bar;
+penpos4(cap_stem,0);
+penpos5(cap_stem,0);
+penstroke z4e--z5e;
+y3=y2=y1=h-1/2cap_bar;
+x3=w-s-1/2cap_bar; x1e=s+c;
+T_serif(1,cap_bar,border_height,0);
+x2=x1;
+penpos3(cap_bar,90);
+penpos2(cap_bar,90);
+penstroke z2e--z3e; fill z3l..z3r..cycle;
+fill T_edge1;
+x12=x1e-.1c; y12=y13=h; x13=x1e+.5c;
+unfill z1d{up}..z13--z12--cycle;
+penlabels(range 1 thru 13);
+endchar;
+
+beginchar("a",9u#-s#+2/7stem#,x_height#,0);
+x5=w-s-1/2bar; y5=0; y4=6/7stem; x4=x3=x5-5/7stem-1/2stem;
+y3=bar_height+2bar; y2=y1=h; x2=s+c+6/20w; x1e=s+c; 
+ul_drop(1,drop_round,x2-s-c,5/4drop_round,bar);
+fill ul_drop_edge1;
+penpos2(bar,90);
+penpos3(stem,0);
+penpos4(stem,0);
+penpos5(bar,90);
+penstroke z2e{right}..{down}z3e--z4e{down}..{right}z5e;
+fill z5r..z5l..cycle;
+y6=bar_height+1/2bar; x6=x3+1/2stem; x7=s+1/2stem; y7=7/17bar_height;
+y8=0; x9=x4-1/2stem+1/2bar; x9-x8=x8-x7; y9=y4+3/2bar; x66=x8; y66=y6-c;
+numeric theta[]; theta1=angle(z66-z6);
+penpos6(vair,90);
+penpos66(vair,90);
+penpos7(curve,180);
+penpos8(vair,270);
+penpos9(bar,360);
+penstroke z6e{left}..z66e{dir theta1}..tension.8..{down}z7e{down}..tension.8..z8e{right}..{up}z9e;
+%currentpicture := currentpicture shifted(-.4u,0);
+penlabels(range 1 thru 9,66);
+endchar;
+
+beginchar("b",8u#+jut#,asc_height#,0);
+italcorr asc_height#*sind 18-3.04u#;
+penpos1(vair,90);
+penpos2(.7o,30);
+penpos3(stem,0);
+penpos4(.7o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=jut+.2s+.6(w-jut-2s); y1=0; y5=x_height;
+y3=y7=.5x_height; x3=1/2stem+s+jut; x7=w-1/2curve-s;
+y2=y8=0.1x_height; y4=y6=0.9x_height; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x10g=x9g=s; y9c=h; y10c=0;
+serif(9,stem,-90,jut,0);
+serif(10,stem,90,jut,0);
+fill serif_edge10--reverse serif_edge9--cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("c",8u#,x_height#,0);
+italcorr x_height#*sind 18-1.7u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(.9hair,180);
+x1=x5=.5w; y1=0; y5=h;
+y3=.5h; x3=1/2curve+s; 
+y2=0.1h; y4=0.9h; x2=x4=x3+3/8(x5-x3);
+x6=w-s-1/2hair; y6=y3-4/5stem;
+penstroke z6e{down}..tension1.1..z1e..z2e..z3e..z4e..z5e;
+fill z6r..z6l..cycle;
+z7=z5;
+ur_drop(7,drop_round,7/8(x6l-x1),3/2drop_round,bar);
+fill ur_drop_edge7;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("d",8u#+jut#,asc_height#,0);
+italcorr asc_height#*sind 18-1.76u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(.7o,-150);
+penpos7(stem,-180);
+penpos8(.7o,-210);
+x1=x5=1.8s+.4(w-jut-2s); y1=0; y5=x_height;
+y3=y7=.5x_height; x3=1/2curve+s; x7=w-1/2stem-s-jut;
+y2=y8=0.1x_height; y4=y6=0.9x_height; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x10h=w-s; x9=x10; y9c=h; y10c=0;
+serif(9,stem,-90,jut,0);
+serif(10,stem,90,0,jut);
+fill serif_edge10--reverse serif_edge9--cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("e",8u#,x_height#,0);
+italcorr x_height#*sind 18-1.62u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(bar,90);
+penpos9(bar,90);
+penpos10(.9hair,180);
+x1=x5=.5w; y1=0; y5=h;
+y3=.5h; x3=x9=1/2curve+s; x7=w-1/2curve-s; x8=w-s; y8=y9=bar_height; y7=y8r;
+y2=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x5+5/8(x7-x5);
+x10=w-s-1/2bar; y10=y7-5/4stem;
+penstroke z10e{down}..tension1.1..z1e..z2e..z3e..z4e..z5e..z6e..{down}z7e;
+penstroke z9e--z8e; fill z10r..z10l..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("f",2jut#+stem#+2c#+2s#,asc_height#,0);
+italcorr asc_height#*sind 18-1.08u#;
+x1g=x2g=s; y1c=x_height; y2c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x1; y3=x_height; x4r=x1l-.1stem; y4=x_height+1/2(asc_height-x_height);
+x5l=x4l-.05stem; y5=y4+1.5bar; x6=x1r+.2stem; y6=h-1/2bar;
+penpos3(stem,180);
+penpos4(.75curve,180);
+penpos5(.6curve,180);
+penpos6(bar,90);
+penstroke z3e{dir 95}...{up}z4e..z5e..{right}z6e;
+y6=y7; x7e=w-s;
+ur_drop(7,stem,x7e-x6,drop_round,bar);
+fill ur_drop_edge7; fill z7e..z7c..cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("g",9u#+c#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-.96u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+y3=y7=2/3h; x3=1/2curve+s+c; x7=w-3/2stem-s;
+x1=x5=x3+1/2(x7-x3); y1=3/11h; y5=h;
+y2=y8=y1+0.1(8/11h); y4=y6=y1+0.9(8/11h); x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x9=x7; y9=y7+1/2(y6-y7); y10=h; x10=x7l+c;
+x11e=w-s; y11=y10;
+ur_drop(11,.8stem,x11e-x10,drop_round,bar);
+penpos9(hair,180); penpos10(vair,90);
+penstroke z9e{up}..{right}z10e;
+fill ur_drop_edge11;
+y12=y1; x12=x1; y13=y12/2; x13=s+1/4stem+.5c;
+y14=y15=0; x14=x2r; x15=x8r; y16=y18=-d/2; x16=w-s-1/2stem;
+x18=s+.7hair; y17=-d+1/2bar; x17=s+.6bar+9/20(x16-x18); x19=x14; y19l=y14r;
+penpos12(vair,90); penpos13(1/2curve,180); penpos14(curve,270);
+z144=z14; penpos144(curve,90); penpos15(curve,90);penpos16(1/2curve,0);
+penpos17(vair,-90); penpos18(1.4hair,-180); penpos19(1.4vair,-270);
+penstroke z12e{left}..{down}z13e{down}..{right}z14e;
+penstroke z144e--z15e{right}..tension.8..{down}z16e{down}..{left}z17e{left}..{up}z18e{up}..{right}z19e;
+penlabels(range 1 thru 19);
+endchar;
+
+beginchar("h",round (10u#-1.5c#),asc_height#,0);
+w:=w+1;
+x1g=x2g=s; y1c=h; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x6h=w-s; y6c=0;
+serif(6,stem,90,jut,jut);
+x5=x6; y5=23/33x_height;
+penpos5(stem,0);
+fill serif_edge6--z5r--z5l--cycle;
+x4=x6g; y4=x_height; y3=y5-1/4bar; x3l=x2r;
+penpos4(vair,90);
+penpos3(bar,180);
+penstroke z5e{up}..{left}z4e{left}..z3e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("i",2jut#+stem#+2s#,x_height#+2.1stem#,0);
+italcorr asc_height#*sind 18-2.25u#;
+x1g=x2g=s; y1c=x_height; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+z3=(x1,h); z4=(x1,h-1.1stem);
+fill z3..z4..cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar("j",5u#,x_height#+2.1stem#,desc_depth#);
+italcorr (x_height#+2.1stem#)*sind 18-.9u#;
+x1h=w-s; y1c=x_height; y2=0; x2=x1;
+serif(1,stem,-90,1.5jut,0);
+penpos2(stem,0);
+fill z2l--z2r--reverse serif_edge1--cycle;
+z3=(x1-.05stem,h); z4=(x1-.05stem,h-1.1stem);
+fill z3..z4..cycle;
+y5=-1/4desc_depth; x5r=x2r;
+y6=-d+1/2bar; x6=x2l-.4stem;
+penpos5(.97stem,0);
+penpos6(bar,-90);
+penstroke z2e--z5e{down}..{left}z6e;
+x7e=s; y7=-d+1/2bar;
+dl_drop(7,stem,x6-x7e,drop_round,bar);
+fill dl_drop_edge7; fill z7e..z7c..cycle;
+penlabels(range 1 thru 7);
+endchar;
+
+beginchar("k",round (10u#-c#),asc_height#,0);
+w:=w+1; italcorr asc_height#*sind 18-2.4u#;
+x1=x2=jut+1/2stem+s;
+y1c=h; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+y7=bar_height; x3l=w-jut-.7jut-s; y3l=x_height-bar;
+x5=x6=x1r-.1c; y5=bar_height-bar;
+numeric theta[];
+theta1=angle(z5-z3l);
+y6=y5-bar/cosd (theta1+180);
+A_serif(3,bar,theta1,1.8jut,.8jut);
+x4l=w-s-1.2jut-stem; y4l=bar;
+z7=z3r+whatever*dir theta1;
+theta2=angle(z7-z4l);
+serif(4,stem,theta2,.8jut,jut);
+z8=z3r+whatever*dir theta1=z4r+whatever*dir theta2;
+fill z5--z6--z7--serif_edge4--z8--reverse A_serif_edge3--cycle;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("l",2.4jut#+stem#+2s#,asc_height#,0);
+italcorr asc_height#*sind 18-1.93u#;
+x1g=x2g=s; y1c=h; y2c=0;
+serif(1,stem,-90,1.2jut,0);
+serif(2,stem,90,1.2jut,1.2jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penlabels(1,2);
+endchar;
+
+beginchar("m",14u#,x_height#,0);
+if .5w = good.x .5w: change_width; fi
+x1g=x2g=s; y1c=h; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x6=.5w; y6c=0;
+serif(6,stem,90,jut,jut);
+x5=x6; y5=23/33h;
+penpos5(stem,0);
+fill serif_edge6--z5r--z5l--cycle;
+x4=x6g; y4=h; y3=y5-1/4bar; x3l=x2r;
+penpos4(vair,90);
+penpos3(bar,180);
+penstroke z5e{up}..{left}z4e{left}..z3e;
+x10h=w-s; y10c=0;
+serif(10,stem,90,jut,jut);
+x9=x10; y9=y5;
+penpos9(stem,0);
+fill serif_edge10--z9r--z9l--cycle;
+x8=x10g; y8=h; y7=y9-1/4bar; x7l=x6r;
+penpos8(vair,90);
+penpos7(bar,180);
+penstroke z9e{up}..{left}z8e{left}..z7e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("n",round (10u#-1.5c#),x_height#,0);
+w:=w+1;
+x1g=x2g=s; y1c=h; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x6h=w-s; y6c=0;
+serif(6,stem,90,jut,jut);
+x5=x6; y5=23/33h;
+penpos5(stem,0);
+fill serif_edge6--z5r--z5l--cycle;
+x4=x6g; y4=h; y3=y5-1/4bar; x3l=x2r;
+penpos4(vair,90);
+penpos3(bar,180);
+penstroke z5e{up}..{left}z4e{left}..z3e;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("o",8u#+s#,x_height#,0);
+italcorr x_height#*sind 18-1.7u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2curve+s; x7=w-1/2curve-s;
+y2=y8=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("p",8u#+jut#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-1.65u#;
+penpos1(vair,90);
+penpos2(.7o,30);
+penpos3(stem,0);
+penpos4(.7o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(curve,-180);
+penpos8(o,-210);
+x1=x5=jut+.2s+.6(w-jut-2s); y1=0; y5=h;
+y3=y7=.5h; x3=1/2stem+s+jut; x7=w-1/2curve-s;
+y2=y8=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x10g=x9g=s; y9c=h; y10c=-desc_depth;
+serif(9,stem,-90,jut,0);
+serif(10,stem,90,jut,jut);
+fill serif_edge10--reverse serif_edge9--cycle;
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("q",8u#+jut#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-.7u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(.7o,-150);
+penpos7(stem,-180);
+penpos8(.7o,-210);
+x1=x5=1.8s+.4(w-jut-2s); y1=0; y5=h;
+y3=y7=.5h; x3=1/2curve+s; x7=w-1/2stem-s-jut;
+y2=y8=0.1h; y4=y6=0.9h; x2=x4=x3+3/8(x5-x3); x6=x8=x5+5/8(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+x10h=w-s; x9=x10; y9c=h; y10c=-d;
+serif(9,stem,-90,0,jut);
+serif(10,stem,90,jut,jut);
+fill serif_edge10--reverse serif_edge9--cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 10);
+endchar;
+
+beginchar("r",7u#+c#,x_height#,0);
+italcorr x_height#*sind 18-1.02u#;
+x1g=x2g=s; y1c=h; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,1.2jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x4=round (x2h+1/2bar+c); y4=h; y3=23/33h-1/4bar; x3l=x2r;
+penpos4(bar,90);
+penpos3(bar,180);
+penstroke z4e{left}...{down}z3e;
+x5e=w-s; y5=h;
+ur_drop(5,1.1stem,x5e-x4,drop_round,bar);
+fill ur_drop_edge5;
+penlabels(range 1 thru 5);
+endchar;
+
+beginchar("s",7u#+c#,x_height#,0);
+italcorr x_height#*sind 18-1.21u#;
+x6=x7=1/2w; y6=y7=1/2bar;
+S_serif(7,bar,x6-s,border_height);
+y5=11/53h; x5=w-s-1/2(1.4hair);
+y4=29/53h; x4=18/38w; y3=42/53h; x3=s+c+1/2hair;
+x2=.5w; y2=h; z1=z2;
+penpos6(bar,-90);
+penpos5(1.4hair,0);
+penpos4(1.1curve,90);
+penpos3(1.4hair,0);
+penpos2(bar,-90);
+penstroke z6e{right}..tension.9..z5e..tension.9..z4e..tension.9..z3e..tension.9..{right}z2e;
+fill S_serif_edge7 rotatedaround(z6,180);
+S_serif(1,cap_bar,x5-x2-1/3bar,.9border_height);
+fill S_serif_edge1;
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("t",7u#-s#,asc_height#,0);
+italcorr asc_height#*sind 18-2.9u#;
+y1=y2=46/53h; y4c=x_height; x4g=s;
+serif(4,stem,-90,jut,1.4jut);
+x1=x4r; x2=x1-bar;
+y5=7/33x_height; x5=x4; x3=x4l; y3=42/53h;
+penpos5(stem,180); numeric theta[];
+theta1=angle(z3-z2);
+fill z5l--reverse serif_edge4--z5r--cycle;
+fill z4r--z1{up}..{dir theta1}z2--z3--z4l--cycle;
+y6=1/4bar; x6=x4r+.7jut; x7=w-.5s-1/2bar; y7=13/53h;
+penpos6(vair,270); penpos7(hair,360);
+penstroke z5e{down}..{right}z6e{right}..{up}z7e;
+fill z7r..z7l..cycle;
+%currentpicture := currentpicture shifted(-1.5u,0);
+penlabels(range 1 thru 7);
+endchar;
+
+beginchar("u",round (10u#-1.5c#),x_height#,0);
+italcorr x_height#*sind 18-1.8u#;
+w:=w+1; x2h=w-s; y1c=h; y2c=0; x1=x2;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,0,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x6g=s; y6c=h;
+serif(6,stem,-90,jut,0);
+x5=x6; y5=10/33h;
+penpos5(stem,180);
+fill serif_edge6--z5l--z5r--cycle;
+x4=x6+1/2stem+jut; y4=0; y3=y5+1/4bar; x3l=x2l;
+penpos4(vair,270);
+penpos3(bar,360);
+penstroke z5e{down}..{right}z4e{right}..z3e;
+%currentpicture := currentpicture shifted(-1.6u,0);
+penlabels(range 1 thru 6);
+endchar;
+
+beginchar("v",10u#-1.5c#,x_height#,0);
+italcorr x_height#*sind 18-.78u#;
+x1l=jut+s; x3r=w-s-jut; 
+y1l=y3r=h-bar; x4=.5w-1/2bar; x5=.5w+1/2bar;
+y4=y5=1/2bar;
+numeric theta[];
+theta1=angle(z4-z1l);
+theta2=angle(z5-z3r);
+serif(1,stem,theta1,jut,jut);
+A_serif(3,bar,theta2,1.3jut,jut);
+z2=z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+fill z4{down}..{up}z5--reverse A_serif_edge3--z2--reverse serif_edge1--z4&cycle;
+%currentpicture := currentpicture shifted(-2.4u,0);
+penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar("w",13u#,x_height#,0);
+italcorr x_height#*sind 18-.78u#;
+x9l=.5w-.3stem; x7r=w-s-jut; 
+y9l=y7r=y1l=h-bar; x5=x9l+.5(x7r-x9l)-1/2bar; x6=x9l+.5(x7r-x9l)+1/2bar;
+y5=y6=y2=y3=1/2bar;
+numeric theta[];
+theta1=angle(z5-z9l);
+theta2=angle(z6-z7r);
+serif(9,stem,theta1,jut,jut);
+A_serif(7,bar,theta2,1.1jut,jut);
+z8=z9r+whatever*dir theta1=z7l+whatever*dir theta2;
+x1l=s+jut;
+serif(1,stem,theta1,jut,jut);
+z2=z1l+whatever*dir theta1; x3=x2+bar;
+z4=z3+whatever*dir (theta2-180)=z9l+whatever*dir theta1;
+y11=y8; z11=z1r+whatever*dir theta1;
+z10=z11+whatever*dir (theta2-180)=z9l+whatever*dir theta1;
+fill z5{down}..{up}z6--reverse A_serif_edge7--z8--reverse serif_edge9--z10--z11--reverse serif_edge1--z2{down}..{up}z3--z4--z5&cycle;
+%currentpicture := currentpicture shifted(-2.4u,0);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar("x",9u#+c#,x_height#,0);
+italcorr x_height#*sind 18-1.1u#;
+y3=y4=bar; x3=w-s-jut-1/2stem; x4=s+jut+1/2bar;
+y1=y2=h-bar; x1=s+jut+1/2stem+c; x2=w-s-1.25c-jut-1/2bar;
+numeric theta[];
+theta1 = angle(z1-z3);
+theta2 = angle(z2-z4);
+serif(1,stem,theta1-180,jut,jut);
+A_serif(2,1.2bar,theta2-180,jut,jut);
+serif(3,stem,theta1,jut,jut);
+A_serif(4,1.2bar,theta2,jut,1.3jut);
+fill serif_edge3--reverse serif_edge1--cycle;
+fill A_serif_edge4--reverse A_serif_edge2--cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar("y",9u#+s#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-.7u#;
+x1l=s+jut; y1l=h-bar;
+x3r=w-s-.8jut; y3r=h-bar;
+x4=33/60w; y4=-2/5d;
+numeric theta[];
+theta1 = angle(z4-z1l);
+theta2 = angle(z4-z3r);
+serif(1,stem,theta1,jut,jut);
+A_serif(3,1.2bar,theta2,1.2jut,.8jut);
+z2 = z1r+whatever*dir theta1=z3l+whatever*dir theta2;
+fill z4--serif_edge1--z2&z2--A_serif_edge3--z4&cycle;
+z5r=z4; y6=-d+bar; x6=x4-1.5stem; z7l=z2;
+penpos7(1.2bar,theta2+90);
+penpos5(1.2bar,theta2+90);
+penpos6(1.2bar,-90);
+penstroke z7e--z5e{dir theta2}...{left}z6e;
+z8=z6;
+dl_drop(8,1.1stem,1.3u,drop_round,1.2bar);
+fill dl_drop_edge8; fill z8e..z8c..cycle;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 8);
+endchar;
+
+beginchar("z",7u#+c#,x_height#,0);
+italcorr x_height#*sind 18-.77u#;
+x6=s+1/2bar; y6=y7=y8=1/2bar;
+x8e=w-s; x7=x8;
+T_serif(8,bar,.8border_height,1);
+penpos6(bar,90);
+penpos7(bar,90);
+penstroke z6e--z7e; fill z6r..z6l..cycle;
+fill T_edge8 reflectedabout(z6,z7);
+x9=w-s-.5c; y9=y10=0; x10=w-s; z11=z8d reflectedabout(z6,z7);
+unfill z11{down}..z9--z10--cycle;
+y5l=y6r; x5l=x6r-1/4bar;
+x4r=w-s-1/4bar; y4=h-bar;
+penpos4(stem,0);
+penpos5(stem,0);
+penstroke z4e--z5e;
+y3=y2=y1=h-1/2bar;
+x3=w-s-1/2bar; x1e=s+c;
+T_serif(1,bar,.8border_height,0);
+x2=x1;
+penpos3(bar,90);
+penpos2(bar,90);
+penstroke z2e--z3e; fill z3l..z3r..cycle;
+fill T_edge1;
+x12=x1e; y12=y13=h; x13=x1e+.5c;
+unfill z1d{up}..z13--z12--cycle;
+penlabels(range 1 thru 13);
+endchar;
+
+beginchar(hex"30",9u#+s#,cap_height#,0);
+italcorr cap_height#*sind 18-2.1u#;
+penpos1(vair,90);
+penpos2(o,30);
+penpos3(cap_curve,0);
+penpos4(o,-30);
+penpos5(vair,-90);
+penpos6(o,-150);
+penpos7(cap_curve,-180);
+penpos8(o,-210);
+x1=x5=.5w; y1=0; y5=h;
+y3=y7=.5h; x3=1/2cap_curve+s; x7=w-1/2cap_curve-s;
+y2=y8=0.1h-c; y4=y6=0.9h+c; x2=x4=x3+7/16(x5-x3); x6=x8=x5+9/16(x7-x5);
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..z7e..z8e..cycle;
+%currentpicture := currentpicture shifted(-1.4u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(hex"31",6u#+3/2c#,cap_height#,0);
+y1c=0; x1h=w-s; italcorr cap_height#*sind 18-2u#;
+serif(1,cap_stem,90,cap_jut,cap_jut);
+x6=x1f; y5=y6=h; x5=x1; x2=x1a; y2=42/53h;
+penpos4(1.1cap_bar,theta1+45);
+penpos3(1.1cap_bar,theta1+45);
+x4l=s; y4=30/53h; numeric theta[]; theta1=angle(z5-z4l);
+z3l=z5; penstroke z3e--z4e; fill z4l..z4r..cycle;
+fill serif_edge1--z6{dir 110}..{dir 250}z5--z2--cycle;
+penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(hex"32",9u#,cap_height#,0);
+italcorr cap_height#*sind 18-1.6u#;
+z4=(9/33w,14/53h); z5=(s+11/20cap_bar,0);
+z3=(w-s-.5c-7/16cap_curve,40/53h); z2=(15/33w,h);
+penpos2(cap_bar,90);
+penpos3(cap_curve,0);
+penpos4(1.1cap_bar,-45);
+penpos5(1.1cap_bar,0);
+x6=x5r; y6=y7=7/16cap_stem; y8=1/2cap_bar;
+x8e=w-s; x7=x8e;
+T_serif(8,cap_bar,3/5border_height,1);
+penpos6(7/8cap_stem,90);
+penpos7(7/8cap_stem,90);
+penstroke z6e--z7e; %fill z6r..z6l..cycle;
+fill T_edge8 reflectedabout(z6,z7);
+x9=w-s-c; y9=y10=0; x10=w-s; z11=z8d reflectedabout(z6,z7);
+unfill z11{down}..z9--z10--cycle;
+unfill z11{down}..z9--z10--cycle;
+penstroke z5e{up}..z4e..{up}z3e{up}..{left}z2e;
+z1=z2; ul_drop(1,cap_drop_round,15/33w-3c,1.4cap_drop_round,slab);
+fill ul_drop_edge1;
+penlabels(range 1 thru 12);
+endchar;
+
+beginchar(hex"33",9u#,cap_height#,0);
+italcorr cap_height#*sind 18-2.05u#;
+x7=18/39w; y7=0; y4=y5=y44=cap_bar_height+c;
+x4=x6-3/2cap_stem; x5=x4-2u;
+x6=w-s-1/2cap_curve; y4-y6=y6-y7;
+x2=.5w; y2=h; x3=x6-1/3cap_curve; y2-y3=y3-y4;
+x44=x2; z1=z2;
+penpos2(cap_bar,90);
+penpos3(cap_stem,0);
+penpos44(cap_bar,-90);
+penpos4(cap_bar,90);
+penpos5(cap_bar,90);
+penpos6(cap_curve,0);
+penpos7(cap_bar,-90);
+penstroke z2e{right}..{down}z3e{down}..{left}z44e;
+penstroke z5e--z4e{right}..tension.9..{down}z6e{down}..tension.9..{left}z7e;
+fill z5r..z5l..cycle;
+ul_drop(1,cap_drop_round,17/39w-s,1.1cap_drop_round,slab);
+fill ul_drop_edge1;
+x8e=s; y8=0;
+dl_drop(8,cap_drop_round,18/39w-s,1.3cap_drop_round,slab);
+fill dl_drop_edge8;
+%currentpicture := currentpicture shifted(-.6u,0);
+penlabels(1,2,3,4,5,6,7,8,44);
+endchar;
+
+beginchar(hex"34",9u#+c#,cap_height#,0);
+italcorr cap_height#*sind 18-2.15u#;
+y1=y2=33/53h; y4c=0; x4h=w-s;
+serif(4,7/8cap_stem,90,cap_jut,cap_jut);
+x1=x4r; x2=x1-bar;
+x3=x4l; y3=28/53h;
+numeric theta[]; theta1=angle(z2-z3);
+fill z3{dir theta1}--z2{dir theta1}..{down}z1--reverse serif_edge4--z3&cycle;
+y5=y6=15/53h; x5=x4e; x6=s+cap_bar;
+penpos5(cap_bar,90); penpos6(cap_bar,90);
+penstroke z5e--z6e; fill z5r..z5l..cycle;
+y7=y6l; x7l=x6; z8=(6/36w, 21/53h);
+z9=(2/3w,h);
+penpos7(cap_bar,180); penpos8(cap_bar,150);
+penpos9(cap_stem,180);
+penstroke z7e{up}..z8e..{dir 70}z9e;
+%currentpicture := currentpicture shifted(-u,0);
+penlabels(range 1 thru 12);
+endchar;
+
+beginchar(hex"35",9u#,cap_height#,0);
+italcorr cap_height#*sind 18-1.45u#;
+x7=x4=18/39w; y7=0; y5=cap_bar_height+c; y4=y5+s;
+x8e=s; y8=0; x5=x8d;
+dl_drop(8,cap_drop_round,18/39w-s,1.3cap_drop_round,slab);
+x6=w-s-1/2cap_curve; y4-y6=y6-y7;
+penpos4(cap_bar,90);
+penpos5(cap_bar,90);
+penpos6(cap_curve,0);
+penpos7(cap_bar,-90);
+penstroke z5e..z4e{right}..tension.85..{down}z6e{down}..tension.85..{left}z7e;
+fill z5r..z5l..cycle;
+fill dl_drop_edge8;
+z3=z5; x2=x3; y2=h;
+penpos3(cap_bar,0); penpos2(cap_bar,0);
+penstroke z3e--z2e; fill z2l..tension 1.7..z2r..tension 1.7..cycle;
+y1r=h; x1=x2r; x13=x6; y13=h; 2(x12-x1)=x13-x12; y12=h-.6cap_stem; 
+penpos1(7/8cap_stem,90); penpos13(1.1cap_bar,90); penpos12(3/4cap_stem,90);
+penstroke z1e..z12e..z13e; fill z13r..tension 1.7..z13l..tension 1.7..cycle;
+%currentpicture := currentpicture shifted(-.6u,0);
+penlabels(1,2,3,4,5,6,7,8,12,13);
+endchar;
+
+beginchar(hex"36",9u#,cap_height#,0);
+italcorr cap_height#*sind 18-1.85u#;
+penpos1(vair,-90);
+penpos2(o,-30);
+penpos3(cap_stem,0);
+penpos4(o,30);
+penpos5(vair,90);
+penpos6(o,150);
+penpos7(.9cap_stem,180);
+penpos8(o,210);
+penpos9(vair,270);
+penpos10(.7o,330);
+penpos11(hair,360);
+x1=.42w; x5=x9=.45w; y1=0; y5=h;
+y3=.5h; x3=w-1/2cap_stem-s; x7=9/20cap_stem+s;
+y2=0.1h-c; y4=y6=0.9h+c; x8=x6=x7+11/32(x5-x7); x4=x10=x5+9/16(x3-x5); x2=x4-1/2c;
+y9=20/53h; y5-y7=y7-y9; y8=y9+.1h-c; y11=y7;
+x11l=x3l; y10=y8;
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..{down}z7e{down}..z8e..z9e..z10e..z11e;
+z12 = z1;
+dl_drop(12,cap_drop_round,.45w-4c,1.1cap_drop_round,slab);
+fill dl_drop_edge12;
+z13 = (.5w,.5h);
+currentpicture := currentpicture rotatedaround(z13,180) shifted(sl_parameter*w*1.3,0);
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12);
+endchar;
+
+beginchar(hex"37",9u#-c#,cap_height#,0);
+italcorr cap_height#*sind 18-.7u#;
+x4=w-s-1/2cap_bar; y4=h-1/2cap_bar;
+penpos4(cap_bar,0);
+y3=y2=h-7/16cap_stem; y1=h-7/8cap_stem+1/2cap_bar;
+x3=x4l; x1e=s;
+T_serif(1,cap_bar,3/5border_height,0);
+x2=x1e;
+penpos3(7/8cap_stem,90);
+penpos2(7/8cap_stem,90);
+penstroke z2e--z3e; fill T_edge1; z44=(x4,h); fill z4r{up}..{left}z44--z3r--z4l--cycle;
+x10=s+c; x11=.95s; y10=y11=h;
+unfill z1d{up}..z10--z11--cycle;
+unfill z1d{up}..z10--z11--cycle;
+x5r=x3; y5=h-7/8cap_stem;
+x6=14/30w; y6=1/3cap_curve;
+penpos5(cap_bar,0); penpos6(cap_curve,0);
+penstroke z4e{dir -105}..z5e..{dir -95}z6e; fill z6l..z6r..cycle;
+%currentpicture := currentpicture shifted(-2.4u,0);
+penlabels(1,2,3,4,5,6,10,11,12);
+endchar;
+
+beginchar(hex"38",10u#-s#,cap_height#,0);
+italcorr cap_height#*sind 18-2u#;
+x6=x4=x2=x8=1/2w; y6=0; y2=h;
+y5=11/53h; y7=13/53h; x5=w-s-1/2(1.9hair);
+y4=y8=28/53h; y3=42/53h; y1=40/53h; x3=2s+1/2(1.9cap_bar);
+x1=w-2s-1/2(1.9cap_bar); x7=w-x5;
+penpos6(cap_bar,-90);
+penpos5(2.5hair,0);
+penpos4(cap_curve,90);
+penpos3(2.5hair,0);
+penpos2(cap_bar,-90);
+penpos1(2.5hair,-180);
+penpos7(2.5hair,-180);
+penpos8(cap_bar,-270);
+penstroke z6e{right}..tension.9..z5e..tension.9..z4e..tension.9..z3e..tension.9..{right}z2e{right}..tension.9..z1e{down}..tension.9..z8e..tension.9..{down}z7e..tension.9..{right}z6e;
+%currentpicture := currentpicture shifted(-.6u,0);
+penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(hex"39",9u#,cap_height#,0);
+italcorr cap_height#*sind 18-2.1u#;
+penpos1(vair,-90);
+penpos2(o,-30);
+penpos3(cap_stem,0);
+penpos4(o,30);
+penpos5(vair,90);
+penpos6(o,150);
+penpos7(.9cap_stem,180);
+penpos8(o,210);
+penpos9(vair,270);
+penpos10(.7o,330);
+penpos11(hair,360);
+x1=.42w; x5=x9=.45w; y1=0; y5=h;
+y3=.5h; x3=w-1/2cap_stem-s; x7=9/20cap_stem+s;
+y2=0.1h-c; y4=y6=0.9h+c; x8=x6=x7+11/32(x5-x7); x4=x10=x5+9/16(x3-x5); x2=x4-1/2c;
+y9=20/53h; y5-y7=y7-y9; y8=y9+.1h-c; y11=y7;
+x11l=x3l; y10=y8;
+penstroke z1e..z2e..z3e..z4e..z5e..z6e..{down}z7e{down}..z8e..z9e..z10e..z11e;
+z12 = z1;
+dl_drop(12,cap_drop_round,.45w-4c,1.1cap_drop_round,slab);
+fill dl_drop_edge12;
+%currentpicture := currentpicture shifted(-.8u,0);
+penlabels(range 1 thru 11);
+endchar;
+
+beginchar(oct"56",cap_stem#+2s#,cap_stem#,0);
+	z1=(s,1/2cap_stem); z2=(w-s,1/2cap_stem);
+	fill z1..z2..cycle;
+endchar;
+
+beginchar(oct"54",cap_stem#+2s#+c#,cap_stem#,comma_depth#);
+	z1=(s,1/2cap_stem); z2=(w-s,1/2cap_stem);
+	z6=(.5w-.5c,0); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=-d+c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(.5w-.5c,h);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle;
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(hex"60",cap_stem#+2s#+c#,asc_height#,comma_depth#); 
+	z1=(s,1/2cap_stem); z2=(w-s,1/2cap_stem);
+	z6=(.5w-.5c,0); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=-d+c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(.5w-.5c,cap_stem); z8=(.5w,.5h-1/2d+1/2c);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle rotatedaround(z8,180);
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(oct"41", cap_stem#+2s#,cap_height#,0); "Exclamation mark";
+	italcorr cap_height#*sind 18-.64u#;
+	z1=(s,1/2cap_stem); z2=(w-s,1/2cap_stem);
+	fill z1..z2..cycle;
+	x3=.5w-1/2cap_bar; x4=.5w+1/2cap_bar; y3=y4=3/2cap_stem;
+	x6=x1; x5=x2; y5=y6=h;
+	fill z6--z3..z4--z5{up}..z6&cycle;	
+endchar;
+
+beginchar(hex"22",2cap_stem#+3s#+2c#,cap_height#,0);
+	italcorr cap_height#*sind 18-2.6u#;
+	z1=(s,h-1/2cap_stem); z2=(x1+cap_stem+c,h-1/2cap_stem);
+	z6=(s+.5(x2-x1)-.5c,h-cap_stem); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=h-cap_stem-comma_depth+c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(s+1/2cap_stem-.5c,h);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle;
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle shifted(cap_stem+3c,0);
+	currentpicture := currentpicture shifted(-1.7u,0);
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(hex"5C",2cap_stem#+3s#+2c#,cap_height#,comma_depth#);
+	z1=(s,1/2cap_stem); z2=(x1+cap_stem+c,1/2cap_stem);
+	z6=(s+.5(x2-x1)-.5c,0); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=-d+c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(s+1/2cap_stem-.5c,cap_stem); z8=(.5w,.5h-1/2d+1/2c);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle;
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle shifted(cap_stem+3c,0);
+	currentpicture := currentpicture rotatedaround(z8,180);
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(hex"7b",10u#-1.5c#,x_height#,0); "En dash";
+	italcorr x_height#*sind 18-1.9u#;
+	z1=(s+1/2bar,bar_height); z2=(w-s-1/2bar,bar_height);
+	penpos1(bar,90); penpos2(bar,90);
+	fill z1l{left}..{right}z1r--z2r{right}..{left}z2l--z1l&cycle;
+	%currentpicture := currentpicture shifted(-1.3u,0);
+	penlabels(1,2);
+endchar;
+
+beginchar(hex"3D",10u#+1.5c#,x_height#,0);
+	italcorr x_height#*sind 18-1.6u#;
+	z1=(s+1/2bar,bar_height-3c); z2=(w-s-1/2bar,bar_height-3c);
+	penpos1(bar,90); penpos2(bar,90);
+	fill z1l{left}..{right}z1r--z2r{right}..{left}z2l--z1l&cycle;
+	z3=(s+1/2bar,bar_height+3c); z4=(w-s-1/2bar,bar_height+3c);
+	penpos3(bar,90); penpos4(bar,90);
+	fill z3l{left}..{right}z3r--z4r{right}..{left}z4l--z3l&cycle;
+	%currentpicture := currentpicture shifted(-1.2u,0);
+	penlabels(1,2,3,4);
+endchar;
+
+beginchar(hex"23",13u#,asc_height#,body_depth#);
+	italcorr asc_height#*sind 18-2.31u#;
+	z1=(s+1/2bar,bar_height-5c); z2=(w-s-1/2bar,bar_height-5c);
+	penpos1(1.5bar,90); penpos2(1.5bar,90);
+	fill z1l{left}..{right}z1r--z2r{right}..{left}z2l--z1l&cycle;
+	z3=(s+1/2bar,bar_height+5c); z4=(w-s-1/2bar,bar_height+5c);
+	penpos3(1.5bar,90); penpos4(1.5bar,90);
+	fill z3l{left}..{right}z3r--z4r{right}..{left}z4l--z3l&cycle;
+	z5=(.5w-5c,bar_height); z6=(.5w+5c,bar_height);
+	z7=z5+whatever*dir 76; y7=h; z8=whatever[z5,z7]; y8=-d;
+	penpos7(1.5bar,0); penpos8(1.5bar,0);
+	fill z7l{up}..{down}z7r--z8r{down}..{up}z8l--z7l&cycle;
+	z9=z6+whatever*dir 76; y9=h; z10=whatever[z6,z9]; y10=-d;
+	penpos9(1.5bar,0); penpos10(1.5bar,0);
+	fill z9l{up}..{down}z9r--z10r{down}..{up}z10l--z9l&cycle;
+	penlabels(1,2,3,4,5,6,7,8,9,10);
+endchar;
+
+beginchar(hex"7c",14u#,x_height#,0); "Em dash";
+	italcorr x_height#*sind 18-1.9u#;
+	z1=(s+1/2bar,bar_height); z2=(w-s-1/2bar,bar_height);
+	penpos1(bar,90); penpos2(bar,90);
+	fill z1l{left}..{right}z1r--z2r{right}..{left}z2l--z1l&cycle;
+	%currentpicture := currentpicture shifted(-1.3u,0);
+	penlabels(1,2);
+endchar;
+
+beginchar(oct"55",2cap_jut#+cap_stem#+2s#,x_height#,0); "hyphen";
+	italcorr x_height#*sind 18-1.7u#;
+	x1=s+.9cap_bar; x2=w-s-.9cap_bar;
+	y1l=y2l=17/33h;
+	penpos1(1.8bar,90); penpos2(1.8bar,90);
+	penstroke z1e--z2e;
+	fill z1r..z1l..cycle; fill z2r..z2l..cycle;
+	%currentpicture := currentpicture shifted(-1.45u,0);
+	penlabels(1,2);
+endchar;
+
+beginchar(hex"5F",1.1stem#+2s#,x_height#+2.1stem#,0);
+	italcorr (2.1stem#+x_height#)*sind 18-.97u#;
+	z1=(.5w,h); z2=(.5w,h-1.1stem);
+	fill z1..z2..cycle;
+	%currentpicture := currentpicture shifted(-3.2u,0);
+	penlabels(1,2);
+endchar;
+
+beginchar(hex"7E",7u#,body_height#,0);
+	italcorr body_height#*sind 18-.95u#;
+	pickup pencircle xscaled .9pt yscaled .2pt rotated 55;
+	z4=(w-s-c,h-s); x1=s+c; y1=y4-1/2cap_stem;
+	y2-y1=y4-y3=3(y4-y1); z2-z1=z4-z3=whatever * dir 55;
+	draw z1..controls z2 and z3..z4;
+	%currentpicture := currentpicture shifted(-4u,0);
+	penlabels(1,2,3,4);
+endchar;
+
+beginchar(hex"3C",7u#-2c#,x_height#,0); "looks like <<";
+	italcorr x_height#*sind 18-u#;
+	x2l=x3l=s+1/2bar; y2l=.5h+1/2bar; y3l=.5h-1/2bar;
+	x1l=x4l=.5w; y1l=h-1/2bar; y4l=1/2bar;
+	penpos1(bar,0); penpos2(stem,0);
+	penpos3(stem,0); penpos4(bar,0);
+	numeric theta[];
+	theta1=angle(z2l-z1l); theta2=angle(z4l-z3l);
+	theta3=theta1+180; theta4=theta2+180;
+	fill z1r{up}..{dir theta1}z1l--z2l{dir theta1}..{dir theta2}z3l--z4l{dir theta2}..{up}z4r--z3r{dir theta4}..{dir theta3}z2r--z1r&cycle;
+	x5r=x8r=w-s; y5r=h-2bar; y8r=2bar; x6r=x7r=w-s-.6stem;
+	y6r=y2l; y7r=y3l;
+	penpos5(bar,0); penpos6(.8stem,0);
+	penpos7(.8stem,0); penpos8(bar,0);
+	theta5=angle(z6r-z5r); theta6=angle(z8r-z7r);
+	theta7=theta5+180; theta8=theta6+180;
+	fill z5r{up}..{dir theta5}z5l--z6l{dir theta5}..{dir theta6}z7l--z8l{dir theta6}..{up}z8r--z7r{dir theta8}..{dir theta7}z6r--z5r&cycle;
+	%currentpicture := currentpicture shifted(-1.8u,0);
+	penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(hex"3E",7u#-2c#,x_height#,0);
+	italcorr x_height#*sind 18-u#;
+	x2l=x3l=s+1/2bar; y2l=.5h+1/2bar; y3l=.5h-1/2bar;
+	x1l=x4l=.5w; y1l=h-1/2bar; y4l=1/2bar;
+	penpos1(bar,0); penpos2(stem,0);
+	penpos3(stem,0); penpos4(bar,0);
+	numeric theta[];
+	theta1=angle(z2l-z1l); theta2=angle(z4l-z3l);
+	theta3=theta1+180; theta4=theta2+180;
+	fill z1r{up}..{dir theta1}z1l--z2l{dir theta1}..{dir theta2}z3l--z4l{dir theta2}..{up}z4r--z3r{dir theta4}..{dir theta3}z2r--z1r&cycle;
+	x5r=x8r=w-s; y5r=h-2bar; y8r=2bar; x6r=x7r=w-s-.6stem;
+	y6r=y2l; y7r=y3l;
+	penpos5(bar,0); penpos6(.8stem,0);
+	penpos7(.8stem,0); penpos8(bar,0);
+	theta5=angle(z6r-z5r); theta6=angle(z8r-z7r);
+	theta7=theta5+180; theta8=theta6+180;
+	z10=(.5w,.5h);
+	fill z5r{up}..{dir theta5}z5l--z6l{dir theta5}..{dir theta6}z7l--z8l{dir theta6}..{up}z8r--z7r{dir theta8}..{dir theta7}z6r--z5r&cycle;
+	currentpicture := currentpicture rotatedaround(z10,180) shifted(3.6u,0);
+	penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(hex"3B",cap_stem#+2s#+c#,x_height#+c#,comma_depth#);
+	italcorr x_height#*sind 18-.8u#;
+	z1=(s,1/2cap_stem); z2=(w-s,1/2cap_stem);
+	z6=(.5w-.5c,0); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=-d+3/2c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(.5w-.5c,cap_stem);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle;
+	z8=(s,h-1/2cap_stem); z9=(w-s,h-1/2cap_stem);
+	fill z8..z9..cycle;
+	penlabels(1,2,3,4,5,6,7,8,9);
+endchar;
+
+beginchar(hex"3A",cap_stem#+2s#+c#,x_height#+c#,comma_depth#);
+	italcorr x_height#*sind 18-.8u#;
+	z1=(s,h-1/2cap_stem); z2=(w-s,h-1/2cap_stem);
+	fill z1..z2..cycle;
+	penlabels(1,2,3,4);
+	z3=(s,1/2cap_stem); z4=(w-s,1/2cap_stem);
+	fill z3..z4..cycle;
+	penlabels(1,2,3,4);
+endchar;
+
+beginchar(hex"2B",2cap_jut#+cap_stem#+2s#,x_height#,0);
+	italcorr x_height#*sind 18-1.75u#;
+	x1=s+.9cap_bar; x2=w-s-.9cap_bar;
+	y1l=y2l=17/33h;
+	penpos1(1.8bar,90); penpos2(1.8bar,90);
+	penstroke z1e--z2e;
+	fill z1r..z1l..cycle; fill z2r..z2l..cycle;
+	x3=x4=.5w; y3=y2+1/2(x2-x1); y4=y2-1/2(x2-x1);
+	penpos3(1.8bar,0); penpos4(1.8bar,0);
+	penstroke z3e--z4e;
+	fill z3r..z3l..cycle; fill z4r..z4l..cycle;
+	%currentpicture := currentpicture shifted(-1.4u,0);
+	penlabels(1,2,3,4);	
+endchar;
+
+beginchar(hex"2F",2s#+bar#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-.78u#;
+	z1=(.5w,h-.5bar); z2=(.5w,-d+.5bar);
+	%pickup pencircle xscaled bar yscaled bar;
+	penpos1(bar,0); penpos2(bar,0);
+	penstroke z1e--z2e; fill z1r..z1l..cycle;
+	fill z2r..z2l..cycle;
+	penlabels(1,2);
+endchar;
+
+beginchar(hex"27",cap_stem#+2s#+c#,x_height#+2.1stem#,0);
+	italcorr (2.1stem#+x_height#)*sind 18-u#;
+	z1=(s,h-1/2cap_stem); z2=(w-s,h-1/2cap_stem);
+	z6=(.5w-.5c,h-cap_stem); x5=x6+1/2bar+.5c; y5=y6-1/2bar;
+	x3=x6; y3=h-stem-comma_depth+c; x4=x3-bar*sind 45; y4=y3+bar*sind 45;
+	z7=(.5w-.5c,h);
+	fill z1..z7..z2{down}..{dir -135}z3..z4{dir 45}...{up}z5{up}..{left}z6{left}..z1&cycle;
+	%currentpicture := currentpicture shifted(-3u,0);
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(hex"28",5u#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-.85u#;
+	x1=x3=w-s-bar*sind 45; y1=h-bar*sind 30; y3=-d+bar*sind 30;
+	x2=s+1/2stem; y2=-d+1/2(h+d);
+	penpos1(bar,150); penpos2(curve,180);
+	penpos3(bar,210);
+	penstroke z1e..z2e..z3e;
+	fill z1r..z1l..cycle; fill z3r..z3l..cycle;
+	penlabels(1,2,3);
+endchar;
+
+beginchar(hex"29",5u#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-1.8u#;
+	x1=x3=w-s-bar*sind 45; y1=h-bar*sind 30; y3=-d+bar*sind 30;
+	x2=s+1/2stem; y2=-d+1/2(h+d);
+	penpos1(bar,150); penpos2(curve,180);
+	penpos3(bar,210);
+	penstroke z1e..z2e..z3e;
+	fill z1r..z1l..cycle; fill z3r..z3l..cycle;
+	z4=(.5w,-d+1/2(h+d));
+	currentpicture := currentpicture rotatedaround(z4,180) shifted(4u,0);
+	penlabels(1,2,3);
+endchar;
+
+beginchar(hex"86",5u#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-.85u#;
+	x1=x3=w-s-bar*sind 45; y1=h-bar*sind 30; y3=-d+bar*sind 30;
+	x2=s+1/2bar; y2=-d+1/2(h+d);
+	penpos1(bar,0); penpos2(bar,0);
+	penpos3(bar,0);
+	penstroke z1e--z2e--z3e;
+	fill z1r..z1l..cycle; fill z3r..z3l..cycle;
+	penlabels(1,2,3);
+endchar;
+
+beginchar(hex"87",5u#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-2.56u#;
+	x1=x3=w-s-bar*sind 45; y1=h-bar*sind 30; y3=-d+bar*sind 30;
+	x2=s+1/2bar; y2=-d+1/2(h+d);
+	penpos1(bar,0); penpos2(bar,0);
+	penpos3(bar,0);
+	penstroke z1e--z2e--z3e;
+	fill z1r..z1l..cycle; fill z3r..z3l..cycle;
+	z4=(.5w,-d+1/2(h+d));
+	currentpicture := currentpicture rotatedaround(z4,180) shifted(4u,0);
+	penlabels(1,2,3);
+endchar;
+
+beginchar(hex"5B",2s#+3cap_bar#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-.77u#;
+	z1=(w-s-1/2cap_bar,h-1/2bar); z2=(s+1/2cap_bar,h-1/2cap_bar);
+	z3=(x2,h); z4=(x3,-d); z5=(x2,-d+1/2bar);
+	z6=(x1,y5); penpos1(bar,90); penpos2(bar,90);
+	penpos3(bar,0); penpos4(bar,0);
+	penpos5(bar,90); penpos6(bar,90);
+	penstroke z1e--z2e; penstroke z3e--z4e; penstroke z5e--z6e;
+	fill z1r..z1l..cycle; fill z6r..z6l..cycle;
+	penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(hex"5D",2s#+3cap_bar#,body_height#,body_depth#);
+	italcorr body_height#*sind 18-.73u#;
+	z1=(w-s-1/2cap_bar,h-1/2bar); z2=(s+1/2cap_bar,h-1/2cap_bar);
+	z3=(x1,h); z4=(x3,-d); z5=(x2,-d+1/2bar);
+	z6=(x1,y5); penpos1(bar,90); penpos2(bar,90);
+	penpos3(bar,0); penpos4(bar,0);
+	penpos5(bar,90); penpos6(bar,90);
+	penstroke z1e--z2e; penstroke z3e--z4e; penstroke z5e--z6e;
+	fill z2r..z2l..cycle; fill z5r..z5l..cycle;
+	penlabels(1,2,3,4,5,6);
+endchar;
+
+beginchar(hex"B9",16u#,cap_height#,0);
+	italcorr cap_height#*sind 18-1.86u#;
+	x1=x2=cap_jut+1/2cap_bar+s+cap_stem;
+	x3=w-x1-1/2cap_stem; y1c=h; y4=y5=0;
+	x4=x3r; x5=x3l; y2=12/53h; y3=h-y2;
+	x8=x2-stem; y8=0; z9=z8;
+	dl_drop(9,cap_drop_round,x8-s,1.1drop_round,cap_bar);
+	fill dl_drop_edge9; penpos8(bar,-90);
+	serif(1,cap_bar,-90,cap_jut,1.3cap_jut);
+	penpos2(bar,0); penpos3(bar,0);
+	penstroke z2e{down}..{left}z8e;
+	fill z2l--z2r--reverse serif_edge1--cycle;
+	numeric theta[]; y7=y1h; x7=x1h-cap_stem;
+	theta1=angle(z5-z7); x10=x3+stem; y10=h; z11=z10;
+	penpos10(bar,-90); penstroke z3e{up}..{right}z10e;
+	ur_drop(11,cap_drop_round,x8-s,1.1drop_round,cap_bar);
+	fill ur_drop_edge11;
+	z6=z3l+whatever*dir -90=z1h+whatever*dir theta1;
+	fill z6--z1h--z7--z5{down}..{up}z4--z3r--z3l--cycle;
+	unfill z1b--z1l--z1a--cycle;
+	y12=y13=2cap_bar; x12=x4+2cap_bar+.5s; x13=w-1.5s;
+	penpos12(.4stem,90); penpos13(.4stem,90);
+	penstroke z12e--z13e; y16=y11d-5cap_bar;
+	x13-x14=x14-x12; x16=x14; y14=y13+5cap_bar;
+	x17=w-s-1/4stem; x17-x16=x16-x15; y16-y15=y15-y14;
+	y17=y15; penpos17(.6stem,0); penpos16(bar,90);
+	penpos15(.6stem,180); penpos14(bar,270);
+	penstroke z17e{up}..{left}z16e{left}..{down}z15e{down}..{right}z14e{right}..{up}z17e;
+	fill z12l..tension1.2..z12r..tension1.2..cycle;
+	fill z13l..tension1.2..z13r..tension1.2..cycle;
+	penlabels(range 1 thru 17);
+endchar;
+
+beginchar(hex"24",9u#-s#,body_height#,body_height#-cap_height#);
+	italcorr body_height#*sind 18-1.72u#;
+	x6=x7=1/2w-c; y6=y7=0;
+	dl_drop(7,cap_drop_round,x6-s,1.3cap_drop_round,cap_bar);
+	y5=10/53cap_height; x5=w-s-1/2(1.9hair);
+	y4=1/2cap_height; x4=19/38w; y3=42/53cap_height; x3=s+1/2(1.9cap_bar);
+	x2=.5w+c; y2=cap_height; z1=z2;
+	penpos6(cap_bar,-90); penpos5(1.9hair,0);
+	penpos4(1.1cap_curve,90); penpos3(1.9hair,0);
+	penpos2(cap_bar,-90);
+	penstroke z6e{right}..z5e..tension1..z4e..tension.9..z3e..{right}z2e;
+	fill dl_drop_edge7;
+	ur_drop(1,cap_drop_round,w-s-x2,1.3cap_drop_round,cap_bar);
+	fill ur_drop_edge1;
+	z8=(.5w,h); z9=(.5w,-d);
+	penpos8(cap_bar,0); penpos9(cap_bar,0);
+	penstroke z8e--z9e;
+	fill z9r..z9l..cycle; fill z8r..z8l..cycle;
+	%currentpicture := currentpicture shifted(-.6u,0);
+	penlabels(1,2,3,4,5,6,7);
+endchar;
+
+beginchar(hex"25",12u#,asc_height#,0);
+italcorr asc_height#*sind 18-2.31u#;
+penpos1(vair,90); penpos2(.6curve,0);
+penpos3(vair,-90); penpos4(.6curve,-180);
+y1=.55h; y3=h; y3-y4=y4-y1; y2=y4; x2=1/4curve+s; x4=5/2curve+s;
+x4-x1=x1-x2; x3=x1;
+penstroke z1e{left}..tension.9..{up}z2e{up}..tension1.2..{right}z3e..tension.9..{down}z4e{down}..tension1.2..{left}z1e..cycle;
+penpos5(vair,90); penpos6(.6curve,0);
+penpos7(vair,-90); penpos8(.6curve,-180);
+y5=0; y7=.45h; y7-y8=y8-y5; y6=y8; x8=w-1/4curve-s; x6=w-5/2curve-s;
+x8-x5=x5-x6; x7=x5;
+penstroke z5e{left}..tension.9..{up}z6e{up}..tension1.2..{right}z7e..tension.9..{down}z8e{down}..tension1.2..{left}z5e..cycle;
+x9l=x7; y9=h; x10r=x1; y10=0;
+penpos9(1.2bar,0); penpos10(1.2bar,0);
+penstroke z9e--z10e;
+%currentpicture := currentpicture shifted(-1.9u,0);
+penlabels(1,2,3,4,5,6,7,8,9,10);
+endchar;
+
+beginchar(hex"26",14u#,cap_height#,0);
+italcorr cap_height#*sind 18-2.57u#;
+x4=x8=x3+.5curve; y6=0; y2=h; x2=x3+1.3cap_curve;
+y7=13/53h; y5=9/53h; x5=x7+3.5cap_curve; x6=x7+1.8cap_curve;
+y4=y8=30/53h; y1=44/53h; y3=42/53h; x3=4s+curve;
+x1=x3+2.1cap_curve; x7=s+1/2cap_curve;
+x10=w-s; y10=9/53h; x10-x9=x9-x5; y9=1/5cap_curve;
+th:=angle(z4-z5)+5; th1:=th-11; x11h=w-s-c; y11h=y1-4s;
+A_serif(11,cap_bar,-110,cap_jut,cap_jut); z12l=z11a;
+penpos6(cap_bar,-90); penpos5(cap_stem,45);
+penpos4(cap_stem,45); penpos3(2.5hair,0);
+penpos2(cap_bar,-90); penpos1(2hair,-180);
+penpos7(cap_curve,-180); penpos8(cap_bar,-250);
+penpos9(.5cap_curve,70); penpos10(cap_bar,150);
+penpos12(cap_bar,0);
+penstroke z10e..z9e..z5e{dir th}..{dir th1}z4e..tension.9..{up}z3e{up}..tension1..z2e{right}..tension.9..z1e{down}..tension.9..z8e..tension.9..{down}z7e..tension.9..{right}z6e{dir 8}..{dir 70}z12e;
+fill z12l--z12r..reverse A_serif_edge11--cycle;
+fill z10l..tension1.3..z10r..tension1.3..cycle;
+%currentpicture := currentpicture shifted(-.7u,0);
+penlabels(range 1 thru 12);
+endchar;
+currenttransform := identity;
+
+beginchar(hex"40",14u#,x_height#+2curve#,2curve#);
+a_width:=9u+c-2s;
+x1=2s+a_width-s-3/4stem+1.5curve; y1=x_height; y2=7/33x_height; z2=z1+whatever*dir -104;
+x3=x2+1/2stem+c; y3=2epsilon; x4=3s+a_width+1.5curve; y4=15/33x_height;
+penpos1(stem,180); penpos2(stem,180);
+penpos3(1.2vair,270); penpos4(bar,360);
+x5=x1-3/2stem; y5=x_height; z7=z5+whatever*dir -104; y7=-2epsilon;
+x6=s+1/2curve+c+1.5curve; y6=.54x_height; y8=.46x_height; z8l=whatever[z1r,z2r];
+x13=x5; y13=h-1/2bar; x14=s+1/2bar; y14=y6; y15=-d+1/2bar; x15=x7;
+x16=x4; y16=-d+3bar; penpos7(vair,270); penpos16(bar,270);
+penpos13(bar,90); penpos14(bar,180); penpos15(bar,270);
+penpos8(2bar,0); penpos5(vair,90); penpos6(curve,180); 
+penstroke z1e--z2e{down}..{right}z3e{right}..tension1.2..{dir 80}z4e..z13e{left}..z14e..{right}z15e..z16e;
+penstroke z5e{left}..tension1.1..{dir 256}z6e{dir 256}..tension.9..{right}z7e..tension1.3..{dir 76}z8e{dir 76}..tension1..{dir 166}z5e..cycle;
+z9=whatever[z1r,z2r]; y9=y12=x_height-c; z10=(x1r+c,x_height); z11=(x1l-c,x_height);
+z12=whatever[z1l,z2l];
+unfill z9{up}..z10--z1r--z9..cycle;
+unfill z11--z1l--z12{up}..z11..cycle;
+fill z16r..z16l..cycle;
+penlabels(range 1 thru 66);
+endchar;
+currenttransform  := identity slanted sl_parameter;
+
+beginchar(hex"12",2cap_stem#+s#,body_height#,0);
+italcorr body_height#*sind 18-1.1u#;
+y1=h-.45cap_stem*cosd 45; x1=s+.45cap_stem*cosd 45;
+x2=w-s+cap_bar*cosd 45; z2=z1+whatever*dir -45;
+penpos1(.9cap_stem,45); penpos2(cap_bar,45);
+penstroke z1e--z2e;
+fill z1r..tension1.2..z1l..tension1.2..cycle;
+fill z2r..tension1.2..z2l..tension1.2..cycle;
+%currentpicture := currentpicture shifted(-3.9u,0);
+penlabels(range 1 thru 5);
+endchar;
+
+beginchar(hex"13",2cap_stem#+s#,body_height#,0);
+italcorr body_height#*sind 18-.7u#;
+y1=h-.45cap_stem*cosd 45; x1=w-s-.45cap_stem*cosd 45;
+x2=s-cap_bar*cosd 45; z2=z1+whatever*dir -135;
+penpos1(.9cap_stem,135); penpos2(cap_bar,135);
+penstroke z1e--z2e;
+fill z1r..tension1.2..z1l..tension1.2..cycle;
+fill z2r..tension1.2..z2l..tension1.2..cycle;
+%currentpicture := currentpicture shifted(-2.7u,0);
+penlabels(range 1 thru 5);
+endchar;
+
+beginchar(hex"3F",7u#+s#,cap_height#,0);
+	italcorr cap_height#*sind 18-1.5u#;
+	x1=s+4/5cap_stem; y1=1/2cap_stem;
+	penpos1(cap_stem,0); 
+	fill z1r..z1l..cycle;
+	y2=cap_stem+cap_bar; x2=x1;
+	z3l=z2l+whatever*dir 96; y3l=25/53h;
+	penpos2(cap_bar,0); penpos3(cap_bar,0);
+	penstroke z2e--z3e;
+	z4l=z3l; penpos4(cap_bar,0);
+	y5=y4-2bar; x5=x4+3cap_bar; penpos7(cap_bar,-90);
+	x6=w-s-1/2cap_curve; y6=37/51h; x7=12/31w; y7=h;
+	penpos5(cap_bar,90); penpos6(cap_curve,180); z8=z7;
+	penstroke z4e{dir -69}..z5e{dir 10}..tension1..{up}z6e{up}..tension.9..{left}z7e;
+	ul_drop(8,.8cap_drop_round,x7-s,cap_curve,cap_bar);
+	fill ul_drop_edge8;.
+	fill z3r..tension1.2..z3l..tension1.2..cycle;
+	%currentpicture := currentpicture shifted(-.7u,0);
+	penlabels(1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(hex"10",2jut#+stem#+2s#,x_height#,0);
+italcorr x_height#*sind 18-1.75u#;
+x1g=x2g=s; y1c=x_height; y2c=0;
+serif(1,stem,-90,jut,0);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+penlabels(1,2,3,4);
+endchar;
+
+beginchar(hex"11",5u#,x_height#,desc_depth#);
+italcorr x_height#*sind 18-.72u#;
+x1h=w-s; y1c=x_height; y2=0; x2=x1;
+serif(1,stem,-90,1.5jut,0);
+penpos2(stem,0);
+fill z2l--z2r--reverse serif_edge1--cycle;
+y5=-1/4desc_depth; x5r=x2r;
+y6=-d+1/2bar; x6=x2l-.4stem;
+penpos5(.97stem,0);
+penpos6(bar,-90);
+penstroke z2e--z5e{down}..{left}z6e;
+x7e=s; y7=-d+1/2bar;
+dl_drop(7,stem,x6-x7e,drop_round,bar);
+fill dl_drop_edge7; fill z7e..z7c..cycle;
+penlabels(range 1 thru 7);
+endchar;
+
+currenttransform := identity;
+
+beginchar(hex"2A",3cap_stem#+3s#,body_height#,0);
+	x1=x2=x3=x4=.5w; y1=h-1/2stem; y2=y1-cap_stem; y3=y2-bar; y4=y3-bar;
+	penpos1(stem,0); penpos2(cap_bar,0); penpos3(2cap_bar,0);
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle;
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle rotatedaround(z4,60);
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle rotatedaround(z4,120);
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle rotatedaround(z4,180);
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle rotatedaround(z4,240);
+	fill z1l{down}..z2l{down}..z3l--z4--z3r..{up}z2r..{up}z1r{up}..{down}z1l..cycle rotatedaround(z4,300);
+	penlabels(range 1 thru 12);
+endchar;
+currenttransform := identity slanted sl_parameter;
+
+beginchar(hex"0B",4jut#+2stem#+2c#+3s#,asc_height#,0);
+w:=w+1; italcorr asc_height#*sind 18-1.08u#;
+numeric dist; dist := 2jut+2stem-3c;
+x1g=x2g=s+dist; y1c=x_height; y2c=0;
+serif(1,stem,-90,jut,jut);
+serif(2,stem,90,jut,jut);
+fill serif_edge2--reverse serif_edge1--cycle;
+x3=x1; y3=x_height; x4r=x1l-.1stem; y4=x_height+1/2(asc_height-x_height);
+x5l=x4l-.05stem; y5=y4+1.5bar; x6=round (x1r+.2stem); y6=h-1/2bar;
+penpos3(stem,180);
+penpos4(.75curve,180);
+penpos5(.6curve,180);
+penpos6(bar,90);
+penstroke z3e{dir 95}...{up}z4e..z5e..{right}z6e;
+y6=y7; x7e=w-s;
+ur_drop(7,stem,x7e-x6,drop_round,bar);
+fill ur_drop_edge7; fill z7e..z7c..cycle;
+x11g=x12g=s; y11c=x_height; y12c=0;
+serif(11,stem,-90,jut,jut);
+serif(12,stem,90,jut,jut);
+fill serif_edge12--reverse serif_edge11--cycle;
+x13=x11; y13=x_height; x14l=x13l; y14=x_height+1/2(asc_height-x_height);
+x15l=x14l; y15=y14+1.5bar; x16=x11r+.8stem; y16=h-1/2bar;
+x17r=x5l; y17=y5;
+penpos13(stem,180);
+penpos14(.75curve,180);
+penpos15(.6curve,180);
+penpos16(bar,90);
+penpos17(bar,0);
+penstroke z13e{dir 95}...{up}z14e..z15e..{right}z16e{right}..{down}z17e;
+fill z11d--z1c--z1b--z11e--cycle;
+penlabels(1,2,3,4,5,6,7,11,12,13,14,15,16,17);
+endchar;
+
+beginchar(hex"5E",6u#,body_height#,0);
+	italcorr body_height#*sind 18-1.4u#;
+	x1=s+.45cap_bar*cosd 45; x2=w/2; y2=h-bar;
+	z1=z2+whatever*dir -135; x3=w-x1; z3=z2+whatever*dir -45;
+	penpos1(bar,135); penpos2(2bar,90); penpos3(bar,45);
+	penstroke z1e--z2e--z3e;
+	fill z1r..z1l..cycle; fill z3r..z3l..cycle;
+	%currentpicture := currentpicture shifted(-3.55u,0);
+	penlabels(1,2,3);
+endchar;
+
+beginchar(hex"16",6u#,body_height#,0);
+	italcorr body_height#*sind 18-1.1u#;
+	x1=s; x2=w-x1; y1=y2=h-4bar;
+	penpos1(.8bar,90); penpos2(.8bar,90);
+	penstroke z1e--z2e;
+	fill z1r..z1l..cycle; fill z2r..z2l..cycle;
+	%currentpicture := currentpicture shifted(-3.75u,0);
+	penlabels(1,2);
+endchar;
+
+beginchar(hex"7F",2stem#+4s#,x_height#+2.1stem#,0);
+	italcorr body_height#*sind 18-1.71u#;
+	z1=(s+.5stem,h); z2=(s+.5stem,h-stem);
+	fill z1..z2..cycle;
+	z3=(w-s-.5stem,h); z4=(w-s-.5stem,h-stem);
+	fill z3..z4..cycle;
+	%currentpicture := currentpicture shifted(-3.2u,0);
+	penlabels(1,2,3,4);
+endchar;
+
+ligtable CYR_A: "A":
+	CYR_O kern -k#,
+	"O" kern -k#,
+	CYR_ES kern -k#,
+	"C" kern -k#,
+	CYR_TE kern -k#,
+	CYR_U kern -kk#,
+	CYR_EF kern -k#,
+	CYR_CHE kern -kkk#,
+	CYR_HARD_SIGN kern -k#,
+	"W" kern -kkk#,
+	"V" kern -kkk#,
+	"Y" kern -kkk#,
+	"T" kern -k#,
+	"w" kern -kk#,
+	"v" kern -kk#,
+	%CYR_o kern -k#,
+	%CYR_es kern -k#,
+	CYR_che kern -kk#;
+	%CYR_ie kern -k#,
+	%CYR_ye kern -k#;
+
+ligtable CYR_GHE: CYR_TE: "T":
+	CYR_A kern -kk#,
+	"A" kern -kk#,
+	CYR_DE kern -k#,
+	CYR_EL kern -kk#,
+	CYR_o kern -k#,
+	"o" kern -k#,
+	"c" kern -k#,
+	CYR_es kern -k#;
+
+ligtable CYR_O: CYR_E: CYR_YU: "D": "O": "Q":
+	CYR_U kern -k#,
+	"X" kern -k#,
+	"V" kern -k#,
+	"W" kern -k#,
+	"Y" kern -kk#,
+	CYR_HA kern -k#;
+
+ligtable CYR_ER: "P":
+	CYR_A kern -kk#,
+	"A" kern -kk#,
+	CYR_el kern -k#;
+
+ligtable CYR_U:
+	CYR_A kern -kkk#,
+	"A" kern -kkk#,
+	CYR_O kern -k#,
+	"O" kern -k#,
+	CYR_ES kern -k#,
+	"C" kern -k#,
+	CYR_EL kern -k#,
+	CYR_el kern -kk#,
+	CYR_EF kern -k#;
+
+ligtable CYR_HA: "X":
+	"O" kern -k#,
+	CYR_O kern -k#,
+	"Q" kern -k#,
+	"C" kern -k#,
+	CYR_ES kern -k#,
+	"G" kern -k#;
+	
+ligtable CYR_ghe: CYR_te:
+	CYR_de kern -k#,
+	CYR_el kern -k#;
+
+ligtable CYR_o: CYR_er: CYR_e: CYR_yu: CYR_ye:
+	"V" kern -kk#,
+	"W" kern -kk#,
+	"Y" kern -kk#,
+	"x" kern -k#,
+	CYR_ha kern -k#;
+
+ligtable CYR_u: "y":
+	CYR_de kern -k#,
+	CYR_el kern -k#,
+	CYR_ie kern -k#,
+	"e" kern -k#,
+	CYR_es kern -k#,
+	"c" kern -k#,
+	CYR_ye kern -k#,
+	CYR_ef kern -k#;
+
+ligtable CYR_ha: "x":
+	CYR_ie kern -k#,
+	"d" kern -k#,
+	"e" kern -k#,
+	"o" kern -k#,
+	"q" kern -k#,
+	CYR_o kern -k#;
+
+ligtable "L":
+	"T" kern -kk#,
+	CYR_TE kern -kk#,
+	"Y" kern -kk#;
+
+ligtable "V": "W":
+	"A" kern -kkk#,
+	CYR_A kern -kkk#,
+	"o" kern -k#,
+	CYR_o kern -k#,
+	"c" kern -k#,
+	CYR_es kern -k#,
+	"e" kern -k#,
+	CYR_ie kern -k#,
+	"a" kern -k#,
+	CYR_a kern -k#,
+	"d" kern -k#;
+
+ligtable "Y":
+	"o" kern -k#,
+	CYR_o kern -k#,
+	"e" kern -k#,
+	CYR_ie kern -k#,
+	"a" kern -k#,
+	CYR_a kern -k#,
+	"c" kern -k#,
+	CYR_es kern -k#,
+	"d" kern -k#,
+ 	"A" kern -kk#,
+	CYR_A kern -kk#;
+
+ligtable "a": CYR_a:
+	"V" kern -kk#,
+	"W" kern -kk#,
+	"T" kern -k#,
+	CYR_TE kern -k#,
+	"y" kern -k#,
+	CYR_u kern -k#,
+	"v" kern -kk#,
+	"u" kern -k#,
+	CYR_che kern -kk#,
+	"Y" kern -kk#;
+
+ligtable "e": CYR_ie:
+	CYR_ha kern -k#,	
+	"v" kern -k#,
+	"w" kern -k#,
+	"V" kern -kk#,
+	"W" kern -kk#,
+	"Y" kern -kk#;
+
+ligtable "f":
+	"f" =: hex"0B";
+
+ligtable "k": "l":
+	CYR_o kern -k#,
+	"o" kern -k#;
+
+ligtable "m": "n":
+	"y" kern -k#,
+	CYR_u kern -k#,
+	CYR_o kern -k#,
+	"u" kern -k#,
+	"o" kern -k#;
+
+ligtable "o": "b": "p":
+	"e" kern k#,
+	CYR_ie kern k#,
+	"o" kern k#,
+	CYR_o kern k#,
+	"v" kern -k#,
+	"w" kern -k#,
+	"V" kern -kk#,
+	"W" kern -kk#,
+	"Y" kern -kk#,
+	"x" kern -k#,
+	CYR_ha kern -k#, 1:: "!" kern kk#;
+
+ligtable "v": "w":
+	"A" kern -kk#,
+	CYR_A kern -kk#,
+	"o" kern -k#,
+	CYR_o kern -k#,
+	"c" kern -k#,
+	CYR_es kern -k#,
+	"e" kern -k#,
+	CYR_ie kern -k#,
+	"a" kern -k#,
+	CYR_a kern -k#,
+	"d" kern -k#;
+
+ligtable hex"37":
+	CYR_A kern -kk#,
+	"A" kern -kk#;
+ligtable oct"55":
+	oct"55" =: hex"7b";
+ligtable hex"7b":
+	oct"55" =: hex"7c";
+end

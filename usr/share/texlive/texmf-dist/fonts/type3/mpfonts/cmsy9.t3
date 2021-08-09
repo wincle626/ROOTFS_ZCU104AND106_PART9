@@ -1,0 +1,2566 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 0 /ch0 put
+Encoding 1 /ch1 put
+Encoding 2 /ch2 put
+Encoding 3 /ch3 put
+Encoding 4 /ch4 put
+Encoding 5 /ch5 put
+Encoding 6 /ch6 put
+Encoding 7 /ch7 put
+Encoding 8 /ch8 put
+Encoding 9 /ch9 put
+Encoding 10 /ch10 put
+Encoding 11 /ch11 put
+Encoding 12 /ch12 put
+Encoding 13 /ch13 put
+Encoding 14 /ch14 put
+Encoding 15 /ch15 put
+Encoding 16 /ch16 put
+Encoding 17 /ch17 put
+Encoding 18 /ch18 put
+Encoding 19 /ch19 put
+Encoding 20 /ch20 put
+Encoding 21 /ch21 put
+Encoding 22 /ch22 put
+Encoding 23 /ch23 put
+Encoding 24 /ch24 put
+Encoding 25 /ch25 put
+Encoding 26 /ch26 put
+Encoding 27 /ch27 put
+Encoding 28 /ch28 put
+Encoding 29 /ch29 put
+Encoding 30 /ch30 put
+Encoding 31 /ch31 put
+Encoding 32 /ch32 put
+Encoding 33 /ch33 put
+Encoding 34 /ch34 put
+Encoding 35 /ch35 put
+Encoding 36 /ch36 put
+Encoding 37 /ch37 put
+Encoding 38 /ch38 put
+Encoding 39 /ch39 put
+Encoding 40 /ch40 put
+Encoding 41 /ch41 put
+Encoding 42 /ch42 put
+Encoding 43 /ch43 put
+Encoding 44 /ch44 put
+Encoding 45 /ch45 put
+Encoding 46 /ch46 put
+Encoding 47 /ch47 put
+Encoding 48 /ch48 put
+Encoding 49 /ch49 put
+Encoding 50 /ch50 put
+Encoding 51 /ch51 put
+Encoding 52 /ch52 put
+Encoding 53 /ch53 put
+Encoding 54 /ch54 put
+Encoding 55 /ch55 put
+Encoding 56 /ch56 put
+Encoding 57 /ch57 put
+Encoding 58 /ch58 put
+Encoding 59 /ch59 put
+Encoding 60 /ch60 put
+Encoding 61 /ch61 put
+Encoding 62 /ch62 put
+Encoding 63 /ch63 put
+Encoding 64 /ch64 put
+Encoding 65 /ch65 put
+Encoding 66 /ch66 put
+Encoding 67 /ch67 put
+Encoding 68 /ch68 put
+Encoding 69 /ch69 put
+Encoding 70 /ch70 put
+Encoding 71 /ch71 put
+Encoding 72 /ch72 put
+Encoding 73 /ch73 put
+Encoding 74 /ch74 put
+Encoding 75 /ch75 put
+Encoding 76 /ch76 put
+Encoding 77 /ch77 put
+Encoding 78 /ch78 put
+Encoding 79 /ch79 put
+Encoding 80 /ch80 put
+Encoding 81 /ch81 put
+Encoding 82 /ch82 put
+Encoding 83 /ch83 put
+Encoding 84 /ch84 put
+Encoding 85 /ch85 put
+Encoding 86 /ch86 put
+Encoding 87 /ch87 put
+Encoding 88 /ch88 put
+Encoding 89 /ch89 put
+Encoding 90 /ch90 put
+Encoding 91 /ch91 put
+Encoding 92 /ch92 put
+Encoding 93 /ch93 put
+Encoding 94 /ch94 put
+Encoding 95 /ch95 put
+Encoding 96 /ch96 put
+Encoding 97 /ch97 put
+Encoding 98 /ch98 put
+Encoding 99 /ch99 put
+Encoding 100 /ch100 put
+Encoding 101 /ch101 put
+Encoding 102 /ch102 put
+Encoding 103 /ch103 put
+Encoding 104 /ch104 put
+Encoding 105 /ch105 put
+Encoding 106 /ch106 put
+Encoding 107 /ch107 put
+Encoding 108 /ch108 put
+Encoding 109 /ch109 put
+Encoding 110 /ch110 put
+Encoding 111 /ch111 put
+Encoding 112 /ch112 put
+Encoding 113 /ch113 put
+Encoding 114 /ch114 put
+Encoding 115 /ch115 put
+Encoding 116 /ch116 put
+Encoding 117 /ch117 put
+Encoding 118 /ch118 put
+Encoding 119 /ch119 put
+Encoding 120 /ch120 put
+Encoding 121 /ch121 put
+Encoding 122 /ch122 put
+Encoding 123 /ch123 put
+Encoding 124 /ch124 put
+Encoding 125 /ch125 put
+Encoding 126 /ch126 put
+Encoding 127 /ch127 put
+/CharProcs 129 dict def
+CharProcs /.notdef { } put
+CharProcs /ch0 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20403 249.06598 moveto
+687.96419 249.06598 lineto stroke
+} put
+CharProcs /ch1 {
+285.492 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 98.05241 249.06598 moveto
+98.05241 225.29044 117.32632 206.01653 141.10187 206.01653 curveto
+164.87741 206.01653 184.15132 225.29044 184.15132 249.06598 curveto
+184.15132 272.84152 164.87741 292.11543 141.10187 292.11543 curveto
+117.32632 292.11543 98.05241 272.84152 98.05241 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch2 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 171.34558 475.4781 moveto
+622.82263 22.65388 lineto stroke
+newpath 622.82263 475.47807 moveto
+171.34558 22.65388 lineto stroke
+} put
+CharProcs /ch3 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 249.45102 258.36337 moveto
+249.43732 258.357 81.02592 180.10191 81.01222 180.09554 curveto
+66.97392 173.57242 62.84404 155.70226 70.93213 141.82922 curveto
+79.02019 127.95622 96.6058 122.7464 109.19844 131.74913 curveto
+109.21075 131.7579 260.2796 239.75981 260.29192 239.76859 curveto
+ closepath fill
+newpath 244.10944 249.06598 moveto
+244.10803 249.05081 226.8916 62.58893 226.8902 62.57376 curveto
+225.467 47.1596 238.81854 34.5925 254.87148 34.5925 curveto
+270.92441 34.5925 284.27594 47.1596 282.85274 62.57376 curveto
+282.85135 62.58893 265.6349 249.05081 265.63351 249.06598 curveto
+ closepath fill
+newpath 249.45102 239.76859 moveto
+249.46333 239.75981 400.53218 131.7579 400.5445 131.74913 curveto
+413.13715 122.7464 430.72276 127.95622 438.81082 141.82922 curveto
+446.89891 155.70226 442.76901 173.57242 428.73071 180.09554 curveto
+428.71701 180.10191 260.30562 258.357 260.29192 258.36337 curveto
+ closepath fill
+newpath 260.29192 239.76859 moveto
+260.30562 239.77496 428.71701 318.03004 428.73071 318.03642 curveto
+442.76901 324.55954 446.89891 342.4297 438.81082 356.30273 curveto
+430.72276 370.17574 413.13715 375.38556 400.5445 366.38283 curveto
+400.53218 366.37405 249.46333 258.37215 249.45102 258.36337 curveto
+ closepath fill
+newpath 265.63351 249.06598 moveto
+265.6349 249.08115 282.85135 435.54303 282.85274 435.5582 curveto
+284.27594 450.97235 270.92441 463.53946 254.87148 463.53946 curveto
+238.81854 463.53946 225.467 450.97235 226.8902 435.5582 curveto
+226.8916 435.54303 244.10803 249.08115 244.10944 249.06598 curveto
+ closepath fill
+newpath 260.29192 258.36337 moveto
+260.2796 258.37215 109.21075 366.37405 109.19844 366.38283 curveto
+96.6058 375.38556 79.02019 370.17574 70.93213 356.30273 curveto
+62.84404 342.4297 66.97392 324.55954 81.01222 318.03642 curveto
+81.02592 318.03004 249.43732 239.77496 249.45102 239.76859 curveto
+ closepath fill
+} put
+CharProcs /ch4 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.84087 249.06598 moveto
+716.32735 249.06598 lineto stroke
+newpath 354.03465 472.11879 moveto
+354.03465 448.34325 373.30856 429.06934 397.0841 429.06934 curveto
+420.85965 429.06934 440.13356 448.34325 440.13356 472.11879 curveto
+440.13356 495.89433 420.85965 515.16824 397.0841 515.16824 curveto
+373.30856 515.16824 354.03465 495.89433 354.03465 472.11879 curveto closepath
+gsave fill grestore stroke
+newpath 354.03465 26.01317 moveto
+354.03465 2.23763 373.30856 -17.03629 397.0841 -17.03629 curveto
+420.85965 -17.03629 440.13356 2.23763 440.13356 26.01317 curveto
+440.13356 49.78871 420.85965 69.06262 397.0841 69.06262 curveto
+373.30856 69.06262 354.03465 49.78871 354.03465 26.01317 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch5 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 476.85667 249.06598 moveto
+254.87148 27.08076 lineto
+32.88626 249.06598 lineto
+254.87148 471.0512 lineto
+ closepath stroke
+} put
+CharProcs /ch6 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 654.35017 moveto
+397.0841 13.96066 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84087 334.15543 moveto
+716.32735 334.15543 lineto stroke
+newpath 77.84087 13.96066 moveto
+716.32735 13.96066 lineto stroke
+} put
+CharProcs /ch7 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 484.1713 moveto
+397.0841 -156.21822 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84087 163.97653 moveto
+716.32735 163.97653 lineto stroke
+newpath 77.84087 484.1713 moveto
+716.32735 484.1713 lineto stroke
+} put
+CharProcs /ch8 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 27.674 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 576.53938 moveto
+483.73187 576.53938 566.78871 541.98413 627.96945 480.6249 curveto
+689.25778 419.15776 723.60492 335.86844 723.60492 249.06598 curveto
+723.60492 162.26352 689.25778 78.9742 627.96945 17.50706 curveto
+566.78871 -43.85217 483.73187 -78.40742 397.0841 -78.40742 curveto
+310.43634 -78.40742 227.3795 -43.85217 166.19876 17.50706 curveto
+104.91045 78.9742 70.5633 162.26352 70.5633 249.06598 curveto
+70.5633 335.86844 104.91045 419.15776 166.19876 480.6249 curveto
+227.3795 541.98413 310.43634 576.53938 397.0841 576.53938 curveto closepath stroke
+ 1 setlinecap
+newpath 723.60492 249.06598 moveto
+70.5633 249.06598 lineto stroke
+ 27.674 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 397.0841 -78.40742 moveto
+397.0841 576.53938 lineto stroke
+} put
+CharProcs /ch9 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 27.674 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 576.53938 moveto
+483.73187 576.53938 566.78871 541.98413 627.96945 480.6249 curveto
+689.25778 419.15776 723.60492 335.86844 723.60492 249.06598 curveto
+723.60492 162.26352 689.25778 78.9742 627.96945 17.50706 curveto
+566.78871 -43.85217 483.73187 -78.40742 397.0841 -78.40742 curveto
+310.43634 -78.40742 227.3795 -43.85217 166.19876 17.50706 curveto
+104.91045 78.9742 70.5633 162.26352 70.5633 249.06598 curveto
+70.5633 335.86844 104.91045 419.15776 166.19876 480.6249 curveto
+227.3795 541.98413 310.43634 576.53938 397.0841 576.53938 curveto closepath stroke
+ 1 setlinecap
+newpath 723.60492 249.06598 moveto
+70.5633 249.06598 lineto stroke
+} put
+CharProcs /ch10 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 27.674 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 576.53938 moveto
+483.73187 576.53938 566.78871 541.98413 627.96945 480.6249 curveto
+689.25778 419.15776 723.60492 335.86844 723.60492 249.06598 curveto
+723.60492 162.26352 689.25778 78.9742 627.96945 17.50706 curveto
+566.78871 -43.85217 483.73187 -78.40742 397.0841 -78.40742 curveto
+310.43634 -78.40742 227.3795 -43.85217 166.19876 17.50706 curveto
+104.91045 78.9742 70.5633 162.26352 70.5633 249.06598 curveto
+70.5633 335.86844 104.91045 419.15776 166.19876 480.6249 curveto
+227.3795 541.98413 310.43634 576.53938 397.0841 576.53938 curveto closepath stroke
+ 1 setlinecap
+newpath 627.96945 480.6249 moveto
+166.19876 17.50706 lineto stroke
+newpath 627.96945 17.50706 moveto
+166.19876 480.6249 lineto stroke
+} put
+CharProcs /ch11 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 27.674 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 576.53938 moveto
+483.73187 576.53938 566.78871 541.98413 627.96945 480.6249 curveto
+689.25778 419.15776 723.60492 335.86844 723.60492 249.06598 curveto
+723.60492 162.26352 689.25778 78.9742 627.96945 17.50706 curveto
+566.78871 -43.85217 483.73187 -78.40742 397.0841 -78.40742 curveto
+310.43634 -78.40742 227.3795 -43.85217 166.19876 17.50706 curveto
+104.91045 78.9742 70.5633 162.26352 70.5633 249.06598 curveto
+70.5633 335.86844 104.91045 419.15776 166.19876 480.6249 curveto
+227.3795 541.98413 310.43634 576.53938 397.0841 576.53938 curveto closepath stroke
+ 1 setlinecap
+newpath 627.96945 480.6249 moveto
+166.19876 17.50706 lineto stroke
+} put
+CharProcs /ch12 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 27.674 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 576.53938 moveto
+483.73187 576.53938 566.78871 541.98413 627.96945 480.6249 curveto
+689.25778 419.15776 723.60492 335.86844 723.60492 249.06598 curveto
+723.60492 162.26352 689.25778 78.9742 627.96945 17.50706 curveto
+566.78871 -43.85217 483.73187 -78.40742 397.0841 -78.40742 curveto
+310.43634 -78.40742 227.3795 -43.85217 166.19876 17.50706 curveto
+104.91045 78.9742 70.5633 162.26352 70.5633 249.06598 curveto
+70.5633 335.86844 104.91045 419.15776 166.19876 480.6249 curveto
+227.3795 541.98413 310.43634 576.53938 397.0841 576.53938 curveto closepath stroke
+newpath 467.03906 249.06598 moveto
+467.03906 267.62 459.66737 285.41188 446.54869 298.53056 curveto
+433.43001 311.64923 415.63812 319.02092 397.0841 319.02092 curveto
+378.53009 319.02092 360.7382 311.64923 347.61952 298.53056 curveto
+334.50085 285.41188 327.12917 267.62 327.12917 249.06598 curveto
+327.12917 230.51196 334.50085 212.72008 347.61952 199.6014 curveto
+360.7382 186.48271 378.53009 179.11104 397.0841 179.11104 curveto
+415.63812 179.11104 433.43001 186.48271 446.54869 199.6014 curveto
+459.66737 212.72008 467.03906 230.51196 467.03906 249.06598 curveto closepath fill
+} put
+CharProcs /ch13 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 510.85423 692.25833 moveto
+626.21536 692.25833 736.38936 644.979 817.01543 562.45065 curveto
+898.78302 478.75386 943.83105 366.08617 943.83105 249.06598 curveto
+943.83105 132.04578 898.78302 19.3781 817.01543 -64.3187 curveto
+736.38936 -146.84706 626.21536 -194.12637 510.85423 -194.12637 curveto
+395.49309 -194.12637 285.31912 -146.84702 204.69307 -64.3187 curveto
+122.92546 19.3781 77.87743 132.04578 77.87743 249.06598 curveto
+77.87743 366.08617 122.92546 478.75386 204.69307 562.45065 curveto
+285.31912 644.97897 395.49309 692.25833 510.85423 692.25833 curveto closepath stroke
+} put
+CharProcs /ch14 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 254.87144 427.04805 moveto
+301.84589 427.04805 346.89648 408.38768 380.11244 375.17172 curveto
+413.3284 341.95576 431.98877 296.90521 431.98877 249.93076 curveto
+431.98877 202.95631 413.3284 157.90572 380.11244 124.68976 curveto
+346.89648 91.4738 301.84589 72.81343 254.87144 72.81343 curveto
+207.89699 72.81343 162.84644 91.4738 129.63048 124.68976 curveto
+96.41452 157.90572 77.75415 202.95631 77.75415 249.93076 curveto
+77.75415 296.90521 96.41452 341.95576 129.63048 375.17172 curveto
+162.84644 408.38768 207.89699 427.04805 254.87144 427.04805 curveto closepath stroke
+} put
+CharProcs /ch15 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 254.87144 427.04805 moveto
+301.84589 427.04805 346.89648 408.38768 380.11244 375.17172 curveto
+413.3284 341.95576 431.98877 296.90521 431.98877 249.93076 curveto
+431.98877 202.95631 413.3284 157.90572 380.11244 124.68976 curveto
+346.89648 91.4738 301.84589 72.81343 254.87144 72.81343 curveto
+207.89699 72.81343 162.84644 91.4738 129.63048 124.68976 curveto
+96.41452 157.90572 77.75415 202.95631 77.75415 249.93076 curveto
+77.75415 296.90521 96.41452 341.95576 129.63048 375.17172 curveto
+162.84644 408.38768 207.89699 427.04805 254.87144 427.04805 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch16 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.84087 471.70285 moveto
+169.1244 395.30988 278.12837 338.11935 397.0841 338.11935 curveto
+516.03984 338.11935 625.04381 395.30988 716.32735 471.70285 curveto stroke
+newpath 77.84087 26.42911 moveto
+169.1244 102.82208 278.12837 160.0126 397.0841 160.0126 curveto
+516.03984 160.0126 625.04381 102.82208 716.32735 26.42911 curveto stroke
+} put
+CharProcs /ch17 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.84087 453.55565 moveto
+716.32735 453.55565 lineto stroke
+newpath 77.84087 249.06598 moveto
+716.32735 249.06598 lineto stroke
+newpath 77.84087 44.57631 moveto
+716.32735 44.57631 lineto stroke
+} put
+CharProcs /ch18 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 687.96419 628.60002 moveto
+687.94052 628.60002 397.10779 628.60002 397.0841 628.60002 curveto
+238.36519 628.60002 106.20403 505.21844 106.20403 348.53902 curveto
+106.20403 191.85959 238.36519 68.47801 397.0841 68.47801 curveto
+397.10779 68.47801 687.94052 68.47801 687.96419 68.47801 curveto stroke
+newpath 687.96419 -136.01166 moveto
+127.31969 -136.01166 lineto stroke
+} put
+CharProcs /ch19 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20403 628.60002 moveto
+106.22769 628.60002 397.06044 628.60002 397.0841 628.60002 curveto
+555.80302 628.60002 687.96419 505.21844 687.96419 348.53902 curveto
+687.96419 191.85959 555.80302 68.47801 397.0841 68.47801 curveto
+397.06044 68.47801 106.22769 68.47801 106.20403 68.47801 curveto stroke
+newpath 106.20403 -136.01166 moveto
+666.84853 -136.01166 lineto stroke
+} put
+CharProcs /ch20 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 687.96419 628.60002 moveto
+106.20403 348.53902 lineto
+687.96419 68.47801 lineto stroke
+newpath 687.96419 -136.01166 moveto
+106.20403 -136.01166 lineto stroke
+} put
+CharProcs /ch21 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20403 628.60002 moveto
+687.96419 348.53902 lineto
+106.20403 68.47801 lineto stroke
+newpath 106.20403 -136.01166 moveto
+687.96419 -136.01166 lineto stroke
+} put
+CharProcs /ch22 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 687.96419 628.60002 moveto
+664.135 393.30766 371.89061 348.53902 106.20403 348.53902 curveto stroke
+newpath 687.96419 68.47801 moveto
+664.135 303.77037 371.89061 348.53902 106.20403 348.53902 curveto stroke
+newpath 687.96419 -136.01166 moveto
+106.20403 -136.01166 lineto stroke
+} put
+CharProcs /ch23 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20403 628.60002 moveto
+130.03322 393.30766 422.2776 348.53902 687.96419 348.53902 curveto stroke
+newpath 106.20403 68.47801 moveto
+130.03322 303.77037 422.2776 348.53902 687.96419 348.53902 curveto stroke
+newpath 106.20403 -136.01166 moveto
+687.96419 -136.01166 lineto stroke
+} put
+CharProcs /ch24 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 59.12361 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.5072 156.79227 moveto
+71.5072 253.82477 135.26134 341.33969 226.90512 341.33969 curveto
+364.26625 341.33969 429.90196 156.79227 567.26309 156.79227 curveto
+658.90689 156.79227 722.66101 244.30719 722.66101 341.33969 curveto
+0.5 1 scale stroke grestore
+} put
+CharProcs /ch25 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 59.12361 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.5072 316.93422 moveto
+71.5072 399.10657 142.84564 462.30028 226.90512 462.30028 curveto
+355.4369 462.30028 438.73132 316.93422 567.26309 316.93422 curveto
+651.32257 316.93422 722.66101 380.12793 722.66101 462.30028 curveto
+0.5 1 scale stroke grestore
+gsave newpath 71.5072 72.43591 moveto
+71.5072 154.60826 142.84564 217.80197 226.90512 217.80197 curveto
+355.4369 217.80197 438.73132 72.43591 567.26309 72.43591 curveto
+651.32257 72.43591 722.66101 135.62962 722.66101 217.80197 curveto
+0.5 1 scale stroke grestore
+} put
+CharProcs /ch26 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 687.96419 529.12698 moveto
+687.94052 529.12698 397.10779 529.12698 397.0841 529.12698 curveto
+238.36519 529.12698 106.20403 405.7454 106.20403 249.06598 curveto
+106.20403 92.38655 238.36519 -30.99503 397.0841 -30.99503 curveto
+397.10779 -30.99503 687.94052 -30.99503 687.96419 -30.99503 curveto stroke
+} put
+CharProcs /ch27 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20403 529.12698 moveto
+106.22769 529.12698 397.06044 529.12698 397.0841 529.12698 curveto
+555.80302 529.12698 687.96419 405.7454 687.96419 249.06598 curveto
+687.96419 92.38655 555.80302 -30.99503 397.0841 -30.99503 curveto
+397.06044 -30.99503 106.22769 -30.99503 106.20403 -30.99503 curveto stroke
+} put
+CharProcs /ch28 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 631.64459 558.02156 moveto
+77.8774 249.06598 lineto
+631.64459 -59.8896 lineto stroke
+newpath 943.8311 558.02156 moveto
+390.06389 249.06598 lineto
+943.8311 -59.8896 lineto stroke
+} put
+CharProcs /ch29 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.8774 558.02156 moveto
+631.64459 249.06598 lineto
+77.8774 -59.8896 lineto stroke
+newpath 390.06389 558.02156 moveto
+943.8311 249.06598 lineto
+390.06389 -59.8896 lineto stroke
+} put
+CharProcs /ch30 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 687.96315 527.7987 moveto
+664.13402 292.5071 371.89082 247.7377 106.20508 247.7377 curveto stroke
+newpath 687.96315 -32.32329 moveto
+664.13402 202.9683 371.89082 247.7377 106.20508 247.7377 curveto stroke
+} put
+CharProcs /ch31 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.20508 527.7987 moveto
+130.03421 292.5071 422.2774 247.7377 687.96315 247.7377 curveto stroke
+newpath 106.20508 -32.32329 moveto
+130.03421 202.9683 422.2774 247.7377 687.96315 247.7377 curveto stroke
+} put
+CharProcs /ch32 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 69.0617 249.06598 moveto
+182.13205 212.5822 265.98376 116.88243 287.29356 -0.00153 curveto
+304.92612 -0.00153 lineto
+286.08467 103.34357 221.20172 191.28976 130.4339 240.25063 curveto
+130.29227 240.32701 943.72969 240.24976 943.83105 240.24971 curveto
+955.58862 240.24718 955.58862 257.88481 943.83105 257.88228 curveto
+943.72969 257.88223 130.29227 257.80495 130.4339 257.88132 curveto
+221.20172 306.8422 286.08467 394.78839 304.92612 498.13348 curveto
+287.29356 498.13348 lineto
+265.98376 381.24953 182.13205 285.54976 69.0617 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch33 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 952.64677 249.06598 moveto
+839.57648 212.5822 755.72476 116.88243 734.41496 -0.00153 curveto
+716.7824 -0.00153 lineto
+735.62386 103.34357 800.50676 191.28976 891.27458 240.25063 curveto
+891.41621 240.32701 77.9788 240.24976 77.87743 240.24971 curveto
+66.11986 240.24718 66.11986 257.88481 77.87743 257.88228 curveto
+77.9788 257.88223 891.41621 257.80495 891.27458 257.88132 curveto
+800.50676 306.8422 735.62386 394.78839 716.7824 498.13348 curveto
+734.41496 498.13348 lineto
+755.72476 381.24953 839.57648 285.54976 952.64677 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch34 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 254.87201 679.55 moveto
+273.81064 560.50267 363.69481 465.18462 481.427 439.2988 curveto
+481.427 421.66624 lineto
+383.22067 443.2589 303.05766 510.519 263.68776 600.084 curveto
+263.62492 600.22699 263.68828 -172.50452 263.68831 -172.60233 curveto
+263.69092 -184.35997 246.05315 -184.35997 246.05576 -172.60233 curveto
+246.05579 -172.50452 246.11911 600.22699 246.05626 600.084 curveto
+206.68636 510.519 126.52335 443.2589 28.31703 421.66624 curveto
+28.31703 439.2988 lineto
+146.04922 465.18462 235.9334 560.50267 254.87201 679.55 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch35 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 254.87201 -181.41805 moveto
+273.81064 -62.37068 363.69481 32.94737 481.427 58.83319 curveto
+481.427 76.46576 lineto
+383.22067 54.8731 303.05766 -12.38701 263.68776 -101.95204 curveto
+263.62492 -102.09503 263.68828 670.63647 263.68831 670.73428 curveto
+263.69092 682.49193 246.05315 682.49193 246.05576 670.73428 curveto
+246.05579 670.63647 246.11911 -102.09503 246.05626 -101.95204 curveto
+206.68636 -12.38701 126.52335 54.8731 28.31703 76.46576 curveto
+28.31703 58.83319 lineto
+146.04922 32.94737 235.9334 -62.37068 254.87201 -181.41805 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch36 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 69.0617 249.06598 moveto
+182.13205 212.5822 265.98376 116.88243 287.29356 -0.00153 curveto
+304.92612 -0.00153 lineto
+286.08467 103.34357 221.20172 191.28976 130.4339 240.25063 curveto
+130.36766 240.28635 510.80684 240.24971 510.85426 240.24971 curveto
+522.61186 240.24718 522.61186 257.88481 510.85426 257.88228 curveto
+510.80684 257.88228 130.36766 257.84561 130.4339 257.88132 curveto
+221.20172 306.8422 286.08467 394.78839 304.92612 498.13348 curveto
+287.29356 498.13348 lineto
+265.98376 381.24953 182.13205 285.54976 69.0617 249.06598 curveto closepath
+gsave fill grestore stroke
+newpath 952.64677 249.06598 moveto
+839.57648 212.5822 755.72476 116.88243 734.41496 -0.00153 curveto
+716.7824 -0.00153 lineto
+735.62386 103.34357 800.50676 191.28976 891.27458 240.25063 curveto
+891.34082 240.28635 510.90167 240.24971 510.85426 240.24971 curveto
+499.09665 240.24718 499.09665 257.88481 510.85426 257.88228 curveto
+510.90167 257.88228 891.34082 257.84561 891.27458 257.88132 curveto
+800.50676 306.8422 735.62386 394.78839 716.7824 498.13348 curveto
+734.41496 498.13348 lineto
+755.72476 381.24953 839.57648 285.54976 952.64677 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch37 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 952.64677 679.55 moveto
+898.49216 573.79964 906.87 446.83803 974.4509 349.12064 curveto
+961.9828 336.65253 lineto
+902.15858 423.15425 885.96582 531.4206 915.85542 630.28769 curveto
+915.92282 630.51062 84.21516 -201.34969 84.11148 -201.4534 curveto
+75.79941 -209.769 63.32777 -197.29736 71.64337 -188.98529 curveto
+71.74709 -188.8816 903.60739 642.82603 903.38448 642.75865 curveto
+804.51736 612.86905 696.25104 629.06181 609.74931 688.88603 curveto
+622.2174 701.35413 lineto
+719.9348 633.77322 846.89641 625.39539 952.64677 679.55 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch38 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 952.64677 -181.41805 moveto
+846.89641 -127.26343 719.9348 -135.64127 622.2174 -203.22217 curveto
+609.74931 -190.75407 lineto
+696.25104 -130.92986 804.51736 -114.73709 903.38448 -144.6267 curveto
+903.60739 -144.69408 71.74709 687.01357 71.64337 687.11725 curveto
+63.32777 695.42932 75.79941 707.90096 84.11148 699.58536 curveto
+84.21516 699.48164 915.92282 -132.37866 915.85542 -132.15573 curveto
+885.96582 -33.28864 902.15858 74.97769 961.9828 161.47943 curveto
+974.4509 149.01132 lineto
+906.87 51.29393 898.49216 -75.66768 952.64677 -181.41805 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch39 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 59.12361 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.5072 278.50444 moveto
+71.5072 367.41885 139.54248 442.14104 226.90512 442.14104 curveto
+359.32727 442.14104 434.84094 278.50444 567.26309 278.50444 curveto
+654.62573 278.50444 722.66101 353.22661 722.66101 442.14104 curveto
+0.5 1 scale stroke grestore
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84087 44.57631 moveto
+716.32735 44.57631 lineto stroke
+} put
+CharProcs /ch40 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 943.83214 351.31082 moveto
+77.87634 351.31082 lineto stroke
+newpath 943.83214 146.82114 moveto
+77.87634 146.82114 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 69.06062 249.06598 moveto
+217.7136 281.5535 343.2451 380.44403 409.63225 517.35968 curveto
+0 517.35968 lineto
+0 -19.22772 lineto
+409.63225 -19.22772 lineto
+343.2451 117.68793 217.7136 216.57846 69.06062 249.06598 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 69.06062 249.06598 moveto
+214.06483 213.46768 335.67297 115.12204 400.816 -19.22772 curveto
+418.44855 -19.22772 lineto
+357.34164 106.79807 249.00818 202.98004 117.78635 249.06612 curveto
+117.78635 249.06584 lineto
+249.00818 295.1519 357.34164 391.3339 418.44855 517.35968 curveto
+400.816 517.35968 lineto
+335.67297 383.00992 214.06483 284.66428 69.06062 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch41 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.87634 351.31082 moveto
+943.83214 351.31082 lineto stroke
+newpath 77.87634 146.82114 moveto
+943.83214 146.82114 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 952.64786 249.06598 moveto
+803.9949 281.5535 678.46338 380.44403 612.07623 517.35968 curveto
+1021.70848 517.35968 lineto
+1021.70848 -19.22772 lineto
+612.07623 -19.22772 lineto
+678.46338 117.68793 803.9949 216.57846 952.64786 249.06598 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 952.64786 249.06598 moveto
+807.64366 213.46768 686.03554 115.12204 620.89253 -19.22772 curveto
+603.25996 -19.22772 lineto
+664.36688 106.79807 772.70033 202.98001 903.92216 249.06612 curveto
+903.92216 249.06584 lineto
+772.70033 295.15195 664.36688 391.3339 603.25996 517.35968 curveto
+620.89253 517.35968 lineto
+686.03554 383.00992 807.64366 284.66428 952.64786 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch42 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 414.00134 -172.60341 moveto
+414.00134 670.73428 lineto stroke
+newpath 209.51167 -172.60341 moveto
+209.51167 670.73428 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 311.75652 679.55109 moveto
+276.14844 533.24109 175.95985 411.05194 39.46352 347.46497 curveto
+39.46352 691.84996 lineto
+584.04951 691.84996 lineto
+584.04951 347.46497 lineto
+447.55318 411.05194 347.36458 533.24109 311.75652 679.55109 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 311.75652 679.55109 moveto
+350.48364 536.95229 450.10641 418.6788 584.04951 356.28127 curveto
+584.04951 338.64871 lineto
+457.84824 397.43971 360.30923 503.31653 311.7574 632.81412 curveto
+311.75563 632.81412 lineto
+263.2038 503.31653 165.6648 397.43971 39.46352 338.64871 curveto
+39.46352 356.28127 lineto
+173.4066 418.6788 273.02939 536.95229 311.75652 679.55109 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch43 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 414.00134 670.73537 moveto
+414.00134 -172.60233 lineto stroke
+newpath 209.51167 670.73537 moveto
+209.51167 -172.60233 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 311.75652 -181.41913 moveto
+276.14804 -35.10985 175.95944 87.07843 39.46352 150.66481 curveto
+39.46352 -193.718 lineto
+584.04951 -193.718 lineto
+584.04951 150.66481 lineto
+447.55359 87.07843 347.36499 -35.10985 311.75652 -181.41913 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 311.75652 -181.41913 moveto
+350.48405 -38.82104 450.1068 79.4516 584.04951 141.84856 curveto
+584.04951 159.48111 lineto
+457.84857 100.69061 360.30954 -5.18541 311.75726 -134.6823 curveto
+311.75577 -134.6823 lineto
+263.20349 -5.18541 165.66446 100.69061 39.46352 159.48111 curveto
+39.46352 141.84856 lineto
+173.40623 79.4516 273.02898 -38.82104 311.75652 -181.41913 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch44 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 943.83214 351.31082 moveto
+77.87634 351.31082 lineto stroke
+newpath 943.83214 146.82114 moveto
+77.87634 146.82114 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 47.53766 249.06598 moveto
+176.6519 292.97543 280.25595 390.91531 331.34753 517.35968 curveto
+0 517.35968 lineto
+0 -19.22772 lineto
+331.34753 -19.22772 lineto
+280.25595 107.21664 176.6519 205.15652 47.53766 249.06598 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 47.53766 249.06598 moveto
+172.7019 202.04784 272.44081 104.73897 322.53127 -19.22772 curveto
+340.16383 -19.22772 lineto
+292.41687 98.9391 202.17812 194.50034 87.79924 249.06534 curveto
+87.79924 249.06662 lineto
+202.17812 303.63162 292.41687 399.19286 340.16383 517.35968 curveto
+322.53127 517.35968 lineto
+272.44081 393.39299 172.7019 296.08412 47.53766 249.06598 curveto closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 974.17082 249.06598 moveto
+845.05658 292.97543 741.45255 390.91531 690.36095 517.35968 curveto
+1021.70848 517.35968 lineto
+1021.70848 -19.22772 lineto
+690.36095 -19.22772 lineto
+741.45255 107.21664 845.05658 205.15652 974.17082 249.06598 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 974.17082 249.06598 moveto
+849.00662 202.04784 749.26772 104.73894 699.17725 -19.22772 curveto
+681.5447 -19.22772 lineto
+729.29164 98.9391 819.53038 194.50034 933.90924 249.06534 curveto
+933.90924 249.06662 lineto
+819.53038 303.63162 729.29164 399.19286 681.5447 517.35968 curveto
+699.17725 517.35968 lineto
+749.26772 393.39302 849.00662 296.08412 974.17082 249.06598 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch45 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 69.0617 679.55 moveto
+174.81207 625.39539 301.77368 633.77322 399.49107 701.35413 curveto
+411.95918 688.88603 lineto
+325.45746 629.06181 217.19112 612.86905 118.32402 642.75865 curveto
+118.10109 642.82603 949.9614 -188.8816 950.06511 -188.98529 curveto
+958.3807 -197.29736 945.90907 -209.769 937.597 -201.4534 curveto
+937.49333 -201.34969 105.78568 630.51062 105.85306 630.28769 curveto
+135.74266 531.4206 119.5499 423.15425 59.7257 336.65253 curveto
+47.25758 349.12064 lineto
+114.8385 446.83803 123.21632 573.79964 69.0617 679.55 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch46 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 69.0617 -181.41805 moveto
+123.21632 -75.66768 114.8385 51.29393 47.25758 149.01132 curveto
+59.7257 161.47943 lineto
+119.5499 74.97769 135.74266 -33.28864 105.85306 -132.15573 curveto
+105.78568 -132.37866 937.49333 699.48164 937.597 699.58536 curveto
+945.90907 707.90096 958.3807 695.42932 950.06511 687.11725 curveto
+949.9614 687.01357 118.10109 -144.69408 118.32402 -144.6267 curveto
+217.19112 -114.73709 325.45746 -130.92986 411.95918 -190.75407 curveto
+399.49107 -203.22217 lineto
+301.77368 -135.64127 174.81207 -127.26343 69.0617 -181.41805 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch47 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 70.5889 214.47348 moveto
+70.5889 313.73424 130.44225 405.92574 222.51671 405.92574 curveto
+301.1006 405.92574 356.29128 339.04562 400.38222 272.39279 curveto
+400.38991 272.38115 494.9575 129.42209 494.96521 129.41046 curveto
+542.895 56.95444 615.41191 -0.00189 701.48955 -0.00189 curveto
+803.75789 -0.00189 868.8689 103.6896 868.8689 214.47348 curveto
+868.8689 324.86108 805.65247 428.94887 704.22188 428.94887 curveto
+588.01118 428.94887 504.59189 329.11116 460.33005 217.59332 curveto
+417.27174 109.10785 338.07985 10.1751 225.24902 10.1751 curveto
+129.28758 10.1751 70.5889 109.63599 70.5889 214.47348 curveto
+67.512 214.47348 lineto
+67.512 104.08588 130.72847 -0.00189 232.15904 -0.00189 curveto
+348.36974 -0.00189 431.78906 99.8358 476.0509 211.35364 curveto
+519.10922 319.83911 598.30109 418.77187 711.1319 418.77187 curveto
+807.09334 418.77187 865.79199 319.311 865.79199 214.47348 curveto
+865.79199 115.21272 805.93864 23.02122 713.86418 23.02122 curveto
+635.28029 23.02122 580.08969 89.90134 535.99875 156.55418 curveto
+535.99104 156.56581 441.42345 299.52487 441.41574 299.5365 curveto
+393.48596 371.99257 320.96901 428.94887 234.89134 428.94887 curveto
+132.623 428.94887 67.512 325.25735 67.512 214.47348 curveto
+ closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 737.75603 450.47101 moveto
+936.38089 450.47101 lineto
+936.38089 -21.52405 lineto
+737.75603 -21.52405 lineto
+ closepath fill
+} put
+CharProcs /ch48 {
+279.321 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 167.54305 514.00523 moveto
+39.72266 62.00581 lineto
+64.36902 53.30246 lineto
+248.72845 485.33626 lineto
+272.79251 541.7288 184.22725 573.00404 167.54305 514.00523 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch49 {
+1027.771 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 70.60071 214.47348 moveto
+70.60071 313.87791 142.58435 399.87361 238.75624 399.87361 curveto
+320.55318 399.87361 378.6434 331.54146 430.01067 266.84427 curveto
+430.01988 266.83264 543.52428 123.87358 543.53351 123.86195 curveto
+599.80145 52.99232 678.86124 -0.00189 768.91202 -0.00189 curveto
+876.98161 -0.00189 954.1847 100.97476 954.1847 214.47348 curveto
+954.1847 327.46832 879.11606 428.94887 772.12495 428.94887 curveto
+650.25494 428.94887 560.03633 329.41068 501.74927 219.29288 curveto
+445.11162 112.29112 360.18996 12.64383 241.96918 12.64383 curveto
+141.27199 12.64383 70.60071 108.13423 70.60071 214.47348 curveto
+67.5238 214.47348 lineto
+67.5238 101.47865 142.59242 -0.00189 249.58353 -0.00189 curveto
+371.45354 -0.00189 461.67223 99.53625 519.95924 209.65405 curveto
+576.59691 316.6558 661.51852 416.30315 779.7393 416.30315 curveto
+880.43651 416.30315 951.10779 320.81273 951.10779 214.47348 curveto
+951.10779 115.06906 879.12416 29.07335 782.95229 29.07335 curveto
+701.15535 29.07335 643.06511 97.40553 591.69786 162.10272 curveto
+591.68863 162.11436 478.18425 305.07341 478.17502 305.08505 curveto
+421.90707 375.95467 342.84724 428.94887 252.79651 428.94887 curveto
+144.72688 428.94887 67.5238 327.9722 67.5238 214.47348 curveto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch50 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 574.2321 529.12698 moveto
+574.21768 529.12698 396.91443 529.12698 396.90001 529.12698 curveto
+238.23618 529.12698 106.166 405.71777 106.166 249.06598 curveto
+106.166 92.41418 238.23618 -30.99503 396.90001 -30.99503 curveto
+396.91443 -30.99503 574.21768 -30.99503 574.2321 -30.99503 curveto stroke
+newpath 106.166 249.06598 moveto
+574.2321 249.06598 lineto stroke
+} put
+CharProcs /ch51 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 106.166 529.12698 moveto
+106.18042 529.12698 283.4837 529.12698 283.49812 529.12698 curveto
+442.16193 529.12698 574.2321 405.71777 574.2321 249.06598 curveto
+574.2321 92.41418 442.16193 -30.99503 283.49812 -30.99503 curveto
+283.4837 -30.99503 106.18042 -30.99503 106.166 -30.99503 curveto stroke
+newpath 574.2321 249.06598 moveto
+106.166 249.06598 lineto stroke
+} put
+CharProcs /ch52 {
+913.574 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 81.9329 21.11568 moveto
+826.00546 21.11568 lineto
+453.96918 692.25833 lineto
+ closepath stroke
+} put
+CharProcs /ch53 {
+913.574 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 81.9329 477.01628 moveto
+826.00546 477.01628 lineto
+453.96918 -194.12637 lineto
+ closepath stroke
+} put
+CharProcs /ch54 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 631.23575 692.25833 moveto
+162.93248 -194.12637 lineto stroke
+} put
+CharProcs /ch55 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.84195 83.01712 moveto
+77.84195 415.11484 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84195 249.06598 moveto
+106.20511 249.06598 lineto stroke
+} put
+CharProcs /ch56 {
+570.984 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 21.11568 670.73428 moveto
+283.314 -0.40839 lineto
+545.51231 670.73428 lineto stroke
+newpath 115.5749 428.94696 moveto
+451.05057 428.94696 lineto stroke
+} put
+CharProcs /ch57 {
+570.984 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.7767 670.73428 moveto
+488.85126 670.73428 lineto
+488.85126 21.11568 lineto
+77.7767 21.11568 lineto stroke
+newpath 488.85126 345.92496 moveto
+91.94221 345.92496 lineto stroke
+} put
+CharProcs /ch58 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81554 334.85555 moveto
+602.58257 334.85555 lineto
+602.58257 109.0367 lineto stroke
+} put
+CharProcs /ch59 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 254.87148 688.77414 moveto
+205.04352 688.77414 162.72522 654.6254 143.32008 608.154 curveto
+117.49295 546.30316 117.48663 443.87929 117.48663 359.76492 curveto
+117.48663 268.37024 117.49295 156.3092 143.32008 89.2548 curveto
+162.00183 40.7518 203.76015 3.07582 254.87148 3.07582 curveto
+305.9828 3.07582 347.74107 40.7518 366.42282 89.2548 curveto
+392.24997 156.3092 392.25627 268.37024 392.25627 359.76492 curveto
+392.25627 443.87929 392.24997 546.30316 366.42282 608.154 curveto
+347.01773 654.6254 304.69939 688.77414 254.87148 688.77414 curveto
+254.87148 713.37401 lineto
+319.75862 713.37401 378.6503 676.62576 410.49435 619.92908 curveto
+457.3824 536.44745 462.97833 438.43958 462.97833 342.85088 curveto
+462.97833 248.74588 457.24138 152.21979 410.49435 70.37032 curveto
+378.42906 14.22704 319.43599 -21.52405 254.87148 -21.52405 curveto
+190.30696 -21.52405 131.31392 14.22704 99.24858 70.37032 curveto
+52.50157 152.21979 46.76459 248.74588 46.76459 342.85088 curveto
+46.76459 438.43958 52.36055 536.44748 99.24858 619.92908 curveto
+131.09265 676.62576 189.98431 713.37401 254.87148 713.37401 curveto
+ closepath fill
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 375.35138 747.60635 moveto
+134.39153 -55.7564 lineto stroke
+} put
+CharProcs /ch60 {
+742.279 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 67.47652 325.17032 moveto
+67.47652 289.10649 82.8923 252.91376 114.80133 252.91376 curveto
+175.52126 252.91376 187.73865 330.17894 187.73865 400.89403 curveto
+187.73865 445.81523 156.96638 482.41673 123.6866 512.93303 curveto
+102.30338 532.54063 78.83327 553.48038 78.83327 582.34932 curveto
+78.83327 638.57053 116.72838 688.77495 170.14343 688.77495 curveto
+209.29578 688.77495 236.45313 654.25493 252.40363 617.08853 curveto
+275.70859 562.78546 275.7143 502.01636 275.7143 442.78354 curveto
+275.7143 252.38986 lineto
+275.7143 190.43794 275.71063 118.65472 260.70926 68.12628 curveto
+249.90889 31.74785 234.04941 -7.6851 198.5007 -7.6851 curveto
+150.91653 -7.6851 114.44751 30.50595 96.69914 75.97197 curveto
+96.69762 75.9759 77.79524 124.39806 77.79372 124.402 curveto
+73.4443 120.05257 lineto
+73.44583 120.04863 92.34819 71.62648 92.34972 71.62254 curveto
+110.36528 25.47205 149.83421 -10.76201 198.5007 -10.76201 curveto
+243.51472 -10.76201 276.94536 25.82738 298.75919 66.31317 curveto
+329.38391 123.15175 340.28745 187.86655 340.28745 252.38986 curveto
+340.28745 442.78354 lineto
+340.28745 505.18765 325.66054 567.36325 290.45357 618.90164 curveto
+262.24289 660.19829 219.76929 691.85185 170.14343 691.85185 curveto
+111.7636 691.85185 67.47652 640.38655 67.47652 580.34683 curveto
+67.47652 550.33737 87.76729 525.78665 109.03944 504.4765 curveto
+139.75629 473.70485 174.61523 441.96318 174.61523 398.58006 curveto
+174.61523 331.85077 172.3326 255.99066 114.80133 255.99066 curveto
+85.20215 255.99066 73.62755 291.18716 73.62755 325.17032 curveto
+ closepath
+gsave fill grestore stroke
+newpath 57.80232 87.46887 moveto
+114.5168 109.60805 lineto
+112.34111 111.78374 lineto
+55.62663 89.64456 lineto
+ closepath
+gsave fill grestore stroke
+newpath 312.61343 518.88748 moveto
+312.61343 634.3508 441.37149 693.38678 571.06847 693.38678 curveto
+571.06847 702.61197 lineto
+436.33698 702.61197 303.38824 639.2599 303.38824 518.88748 curveto
+ closepath
+gsave fill grestore stroke
+newpath 502.42583 692.39471 moveto
+571.06847 702.61197 lineto
+720.8493 442.78354 lineto
+664.90546 410.53438 lineto
+ closepath
+gsave fill grestore stroke
+newpath 664.90546 410.53438 moveto
+616.66216 382.72421 566.22456 355.15178 510.42523 355.15178 curveto
+510.40874 355.15178 308.01733 355.15178 308.00085 355.15178 curveto
+308.00085 364.37695 lineto
+308.01733 364.37695 510.40874 364.37695 510.42523 364.37695 curveto
+564.61661 364.37695 613.44931 391.5204 660.2982 418.52673 curveto
+ closepath
+gsave fill grestore stroke
+newpath 478.13866 364.37695 moveto
+492.31728 121.45898 lineto
+475.49316 54.31111 526.27347 -10.76201 595.49693 -10.76201 curveto
+660.0701 -10.76201 lineto
+590.84663 -10.76201 540.06633 54.31111 556.89044 121.45898 curveto
+542.71182 364.37695 lineto
+ closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 604.7221 -10.76201 moveto
+660.0701 -10.76201 lineto
+708.92589 62.26398 lineto
+ closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 595.49693 -10.76201 moveto
+700.93663 66.87659 lineto
+708.92589 62.26398 lineto
+604.7221 -10.76201 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch61 {
+742.279 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 283.5724 335.16295 moveto
+174.39647 335.16295 76.7017 408.36981 76.7017 511.96896 curveto
+76.7017 614.39433 171.02094 688.77495 278.01744 688.77495 curveto
+371.64561 688.77495 414.23207 585.213 483.94579 526.65086 curveto
+514.2804 501.16867 551.45473 484.19757 591.05481 484.19757 curveto
+643.56096 484.19757 698.16385 501.45584 698.16385 547.10985 curveto
+688.93866 547.10985 lineto
+688.93866 504.88872 639.34479 487.27448 591.05481 487.27448 curveto
+570.35678 487.27448 558.66115 507.93378 548.51895 526.65086 curveto
+494.30884 626.69371 391.54645 691.85185 278.01744 691.85185 curveto
+166.91391 691.85185 67.47652 617.38605 67.47652 511.96896 curveto
+67.47652 405.34431 170.27225 332.08604 283.5724 332.08604 curveto
+ closepath
+gsave fill grestore stroke
+newpath 67.47652 172.96248 moveto
+67.48178 172.96248 132.04443 172.96248 132.04968 172.96248 curveto
+262.57137 172.96248 327.12099 -0.00081 457.64267 -0.00081 curveto
+457.64267 -0.00189 lineto
+457.6374 -0.00189 393.07475 -0.00189 393.0695 -0.00189 curveto
+263.29259 -0.00189 197.25345 169.88557 67.47652 169.88557 curveto
+ closepath
+gsave fill grestore stroke
+newpath 393.0695 -0.00081 moveto
+481.85793 -0.00081 563.21036 55.82562 563.21036 138.88214 curveto
+627.78352 138.88214 lineto
+627.78352 55.82524 546.43126 -0.00189 457.64267 -0.00189 curveto
+457.6374 -0.00189 393.07475 -0.00189 393.0695 -0.00189 curveto
+ closepath
+gsave fill grestore stroke
+newpath 563.21036 138.88214 moveto
+563.21036 208.77449 469.76717 242.59251 469.76717 312.48485 curveto
+469.76717 373.91339 526.72333 418.18492 591.05481 418.18492 curveto
+646.56776 418.18492 698.16385 384.78822 698.16385 333.31718 curveto
+688.93866 333.31718 lineto
+688.93866 381.71631 642.42336 415.10802 591.05481 415.10802 curveto
+547.9978 415.10802 534.34033 362.32787 534.34033 312.48485 curveto
+534.34033 242.59251 627.78352 208.77449 627.78352 138.88214 curveto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch62 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 21.11568 moveto
+397.0841 659.59999 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84195 659.59999 moveto
+716.32626 659.59999 lineto stroke
+} put
+CharProcs /ch63 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 21.11568 moveto
+397.0841 659.59999 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.84195 21.11568 moveto
+716.32626 21.11568 lineto stroke
+} put
+CharProcs /ch64 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 84.15611 681.08792 moveto
+67.69032 665.72513 67.44331 641.34131 67.44331 618.71494 curveto
+67.44331 586.43623 109.92645 538.99377 141.7059 503.51035 curveto
+141.73358 503.47945 481.77945 123.80066 481.80713 123.76976 curveto
+511.0709 91.09525 539.35692 54.56314 539.35692 10.76204 curveto
+555.82271 26.12482 556.0697 50.50865 556.0697 73.13503 curveto
+556.0697 105.41704 513.58722 152.85883 481.80713 188.34293 curveto
+481.77945 188.37383 141.73358 568.05261 141.7059 568.08351 curveto
+112.4428 600.7573 84.15611 637.28784 84.15611 681.08792 curveto closepath
+gsave fill grestore stroke
+newpath 424.25734 681.08792 moveto
+407.79155 665.72513 407.54454 641.34131 407.54454 618.71494 curveto
+407.54454 586.43634 449.43098 547.46596 481.80713 517.34998 curveto
+511.17021 490.03664 539.35692 458.08809 539.35692 418.18495 curveto
+555.82271 433.54773 556.0697 457.93156 556.0697 480.55794 curveto
+556.0697 525.43199 505.53705 545.8221 481.80713 581.92314 curveto
+460.22342 614.75903 424.25734 669.47812 424.25734 681.08792 curveto closepath
+gsave fill grestore stroke
+newpath 477.19455 549.63654 moveto
+477.19455 432.9632 434.68275 320.19627 434.68275 203.52293 curveto
+443.90794 203.52293 lineto
+443.90794 320.19627 486.41974 432.9632 486.41974 549.63654 curveto
+ closepath
+gsave fill grestore stroke
+newpath 192.93787 476.43985 moveto
+145.18324 402.49197 95.78558 325.27428 95.78558 237.06679 curveto
+95.78558 172.14209 158.49596 123.40857 158.49596 58.48386 curveto
+235.36908 58.48386 lineto
+235.36908 129.00127 144.98468 166.5494 144.98468 237.06679 curveto
+144.98468 319.2122 156.32942 402.7678 200.92712 471.82724 curveto
+ closepath
+gsave fill grestore stroke
+newpath 235.36908 58.48386 moveto
+235.36908 20.71764 188.20157 10.76204 144.31752 10.76204 curveto
+144.31128 10.76204 67.45064 10.76204 67.4444 10.76204 curveto
+67.4444 13.83894 lineto
+110.92429 13.83894 158.49596 21.15294 158.49596 58.48386 curveto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch65 {
+821.116 0 setcharwidth
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 49.64905 64.64482 moveto
+52.39932 46.03804 65.87326 27.55702 83.51782 14.55531 curveto
+97.30182 4.39836 114.24915 -1.76602 132.98383 -3.43729 curveto
+186.54967 -8.21574 265.9121 106.54451 325.17497 192.25525 curveto
+432.12138 346.92986 524.58983 508.2343 601.11246 673.6082 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 136.51009 664.19527 moveto
+953.43199 664.19527 lineto
+967.41756 720.13751 lineto
+150.49565 720.13751 lineto
+ closepath fill
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 627.92998 692.16638 moveto
+626.0853 523.11293 633.47415 356.25461 650.06723 192.25525 curveto
+655.85396 135.06116 666.98589 79.73706 683.3213 26.88823 curveto
+691.83707 -0.6622 724.98326 -9.48502 756.56049 6.44643 curveto
+773.32208 14.90305 lineto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+ 0 55.94226 dtransform truncate idtransform setlinewidth pop
+gsave newpath 368.46974 192.25525 moveto
+650.06723 192.25525 lineto
+[1.52324 0.87944 -0.27481 0.476 0 0] concat stroke grestore
+} put
+CharProcs /ch66 {
+673.623 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 167.18552 637.43408 moveto
+240.32043 674.33261 lineto
+220.48485 519.2135 190.95146 363.0864 151.88354 206.81476 curveto
+134.93472 139.01953 108.49544 71.56409 73.34906 6.44708 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 151.88354 206.81476 moveto
+205.64946 421.87842 307.5802 656.14064 502.65115 674.33261 curveto
+585.22517 682.03331 647.5758 630.34502 628.583 554.37375 curveto
+605.18434 460.7793 463.44205 413.47067 346.42247 374.43091 curveto
+501.44464 400.61111 623.8009 310.85608 589.09656 172.03868 curveto
+562.5385 65.80638 432.95187 6.44708 315.04027 6.44708 curveto
+257.36882 6.44708 207.39238 28.4976 175.34737 68.08212 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch67 {
+542.572 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 444.86206 476.5437 moveto
+464.34096 509.52365 480.61635 543.52885 493.45772 578.01099 curveto
+507.34819 615.3102 502.92981 653.90984 472.18214 666.60667 curveto
+459.93567 671.66368 446.16205 674.33261 431.42899 674.33261 curveto
+248.993 674.33261 120.29741 534.63197 71.73688 340.38985 curveto
+32.52522 183.5433 70.60535 29.48703 211.20471 6.44708 curveto
+303.10417 -8.61243 409.7415 45.54832 466.58493 136.15385 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch68 {
+793.76 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 326.3224 652.80856 moveto
+319.47916 549.74524 302.85678 445.17589 276.6603 340.38985 curveto
+250.46378 235.6038 214.80145 131.03445 170.11305 27.97113 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+326.33022 652.80856 422.32082 652.80856 422.32861 652.80856 curveto
+643.79305 652.80856 781.24538 552.34671 729.81737 346.63478 curveto
+681.04243 151.53502 451.73479 27.97113 240.14214 27.97113 curveto
+240.1329 27.97113 126.82751 27.97113 126.81828 27.97113 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+214.16278 652.80856 88.68698 612.42801 64.19016 514.44067 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch69 {
+542.435 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 512.9105 566.1395 moveto
+515.37753 570.06168 517.7288 574.02538 519.96172 578.02446 curveto
+538.93466 612.00443 529.32738 648.03139 498.8475 660.36699 curveto
+476.14688 669.55421 450.7848 674.33261 423.85725 674.33261 curveto
+324.05843 674.33261 215.84639 616.32425 192.86078 524.38179 curveto
+168.29533 426.12009 263.91968 374.43091 373.90999 374.43091 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 373.90999 374.43091 moveto
+243.71057 374.43091 107.63571 279.7474 76.10844 153.63838 curveto
+53.09776 61.59567 135.70613 6.44708 236.666 6.44708 curveto
+322.434 6.44708 412.7411 57.42342 466.44814 136.15385 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch70 {
+736.335 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 469.2656 652.80856 moveto
+448.46657 545.0007 418.13712 436.8612 378.62439 329.62784 curveto
+345.24055 239.02766 305.66644 149.32759 260.20978 61.2018 curveto
+241.91342 25.7311 208.10445 -4.4838 172.52504 -4.80254 curveto
+120.38176 -5.26965 76.7109 21.25757 60.09314 68.08212 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+ 0 55.94226 dtransform truncate idtransform setlinewidth pop
+gsave newpath 233.07664 618.21396 moveto
+241.72319 652.80011 304.3707 652.80856 355.82654 652.80856 curveto
+355.85512 652.80856 706.93365 652.80856 706.96223 652.80856 curveto
+754.27008 652.80856 808.83125 652.79877 798.80597 612.69757 curveto
+[1.52324 0.87944 -0.27481 0.476 0 0] concat stroke grestore
+gsave newpath 378.62439 329.62784 moveto
+646.63306 329.62784 lineto
+644.17297 319.78763 lineto
+[1.52324 0.87944 -0.27481 0.476 0 0] concat stroke grestore
+} put
+CharProcs /ch71 {
+610.908 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 504.53517 498.06775 moveto
+527.15807 524.41083 546.06836 552.99332 560.67743 582.75339 curveto
+577.2084 616.42863 566.12741 650.5552 535.52725 660.74278 curveto
+508.559 669.72119 479.22284 674.33261 448.44994 674.33261 curveto
+276.27922 674.33261 143.6782 560.0714 99.9586 385.19295 curveto
+63.2928 238.52975 114.93443 101.02225 250.62721 96.05325 curveto
+376.65448 91.4382 501.35608 207.1548 534.66487 340.38985 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 534.66487 340.38985 moveto
+484.64726 140.31943 426.92297 -90.41191 257.25975 -90.41191 curveto
+198.12097 -90.41191 143.47522 -76.0022 98.05067 -48.4295 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch72 {
+871.048 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 64.09892 514.44067 moveto
+112.04001 610.90257 196.06297 652.75871 297.78937 652.80853 curveto
+331.0449 652.82481 354.09882 629.55522 351.46713 596.94896 curveto
+345.85893 527.46344 334.18428 457.08058 316.54904 386.5396 curveto
+283.1381 252.89581 240.26463 119.42122 188.25308 -12.87401 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 759.13231 652.80856 moveto
+706.66122 518.67767 663.33344 383.3833 629.46812 247.92203 curveto
+611.53127 176.1746 599.59639 104.5843 593.77003 33.8882 curveto
+591.06715 1.09161 614.0077 -22.66565 647.52754 -21.12129 curveto
+709.58087 -18.2623 766.79156 -6.05301 779.82648 46.08664 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+ 0 55.94226 dtransform truncate idtransform setlinewidth pop
+gsave newpath 195.18062 306.34753 moveto
+601.37639 306.34749 lineto
+[1.52324 0.87944 -0.27481 0.476 0 0] concat stroke grestore
+} put
+CharProcs /ch73 {
+562.718 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.73647 544.62582 moveto
+98.21577 650.54312 238.86598 652.80856 361.55591 652.80856 curveto
+361.57585 652.80856 606.38704 652.80856 606.40698 652.80856 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 483.98146 652.80856 moveto
+390.0214 652.80856 347.0875 481.16463 311.8938 340.38985 curveto
+275.7204 195.6962 233.75974 27.97113 113.52504 27.97113 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 21.70357 27.97113 moveto
+21.73344 27.97113 388.95963 27.97113 388.9895 27.97113 curveto
+444.06528 27.97113 505.00485 53.0744 517.26443 102.11281 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch74 {
+696.599 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 811.68146 652.80856 moveto
+811.66338 652.80856 589.66573 652.80856 589.64764 652.80856 curveto
+469.8582 652.80856 342.69357 572.09941 314.24376 458.3001 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 811.68146 652.80856 moveto
+645.88904 652.80856 575.2881 370.56665 516.68492 136.15385 curveto
+486.3175 14.68423 372.1013 -90.41191 254.58891 -90.41191 curveto
+144.27875 -90.41191 69.22719 -10.04037 95.95204 96.85898 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch75 {
+782.159 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 167.18552 637.43408 moveto
+240.32043 674.33261 lineto
+237.28056 586.54005 224.42686 496.98814 201.97546 407.18248 curveto
+168.45477 273.09976 125.47159 139.18565 73.34906 6.44708 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+ 63.14734 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 711.20119 612.69757 moveto
+720.29353 649.06697 701.12215 680.17067 665.71436 680.17067 curveto
+581.73965 680.17067 296.15167 506.2578 276.84389 429.02667 curveto
+258.11209 354.0995 421.5422 0.60902 527.4071 0.60902 curveto
+606.67271 0.60902 693.40764 42.68248 711.39444 114.6298 curveto
+[0.96991 0.55997 -0.24345 0.42169 0 0] concat stroke grestore
+} put
+CharProcs /ch76 {
+707.928 0 setcharwidth
+ 0 0 0 setrgbcolor 97.09077
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 79.28448 9.18625 moveto
+100.84985 43.3938 139.29633 66.00478 175.89558 66.00478 curveto
+288.20943 66.00478 379.00922 9.18625 491.32306 9.18625 curveto
+548.66084 9.18625 606.24231 56.83258 620.6916 114.6298 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+gsave newpath 79.28448 9.18625 moveto
+149.78107 77.31938 191.90805 164.15996 213.564 250.78368 curveto
+263.04106 448.69193 332.16196 671.59344 502.40941 671.59344 curveto
+564.66467 671.59344 591.75304 611.01239 575.1564 544.62582 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+} put
+CharProcs /ch77 {
+1229.16 0 setcharwidth
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 49.53712 30.60378 moveto
+56.37952 22.88573 67.07437 15.61755 79.23192 9.79486 curveto
+94.91391 2.28416 112.50291 -2.19014 131.24886 -3.43729 curveto
+186.71979 -7.12773 240.8047 135.30106 282.31575 244.6454 curveto
+338.46349 392.54439 376.1936 542.28062 394.59892 690.25426 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 372.42094 658.60277 moveto
+633.99309 658.60277 lineto
+653.53828 736.78357 lineto
+164.87177 736.78357 lineto
+ closepath fill
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 410.48601 676.99455 moveto
+436.02496 529.34631 470.01349 385.03612 512.31464 244.6454 curveto
+532.31416 178.27023 560.57605 116.13008 596.58853 59.35023 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+ 86.58951 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 1084.29333 665.58174 moveto
+1051.64899 504.29625 1028.50296 343.59213 1014.972 184.27979 curveto
+1010.51645 131.82059 1011.3383 80.36165 1017.40013 30.60869 curveto
+1020.83994 2.37614 1051.95824 -8.84567 1082.26819 6.44643 curveto
+1099.02979 14.90305 lineto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 568.92726 34.04106 moveto
+483.82979 -306.34879 lineto
+614.78497 -306.34879 lineto
+754.65553 253.13336 lineto
+700.41917 193.29985 643.45114 135.6904 584.0138 80.57037 curveto
+ closepath fill
+newpath 1127.5881 687.42592 moveto
+1212.68555 1027.81577 lineto
+948.32611 1027.81577 lineto
+754.65553 253.13336 lineto
+874.39935 385.23466 991.35437 519.4906 1105.41013 655.77443 curveto
+ closepath fill
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+gsave newpath 584.0138 80.57037 moveto
+643.45114 135.6904 700.41917 193.29985 754.65553 253.13336 curveto
+874.39935 385.23466 991.35437 519.4906 1105.41013 655.77443 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+} put
+CharProcs /ch78 {
+842.085 0 setcharwidth
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath -6.38515 30.60378 moveto
+0.64964 22.79807 11.63828 15.45601 24.09296 9.60307 curveto
+39.84373 2.20117 57.45665 -2.20636 76.20354 -3.43729 curveto
+131.86311 -7.09195 170.58908 109.6345 201.58685 203.10045 curveto
+255.47873 365.59775 290.60905 529.08824 306.26491 690.25426 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+gsave newpath 621.26627 -13.2597 moveto
+656.6619 148.6375 696.82549 310.6487 741.70544 472.56577 curveto
+761.74771 544.87386 794.53047 663.13438 813.63918 680.7797 curveto
+858.73483 722.42177 918.37054 727.309 973.00894 727.309 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 284.08693 658.60277 moveto
+553.2235 658.60277 lineto
+643.8652 1021.16953 lineto
+148.17474 1021.16953 lineto
+ closepath fill
+newpath 643.44424 18.3918 moveto
+393.17076 18.3918 lineto
+303.47533 -340.38985 lineto
+780.3027 -340.38985 lineto
+ closepath fill
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 322.152 676.99455 moveto
+370.96959 515.00317 427.62628 356.89478 491.96762 203.10045 curveto
+522.30974 130.574 560.26921 62.5952 605.37918 0 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+} put
+CharProcs /ch79 {
+816.321 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 360.32729 674.33261 moveto
+238.6261 611.63272 145.08011 497.60895 114.2856 374.43091 curveto
+65.75568 180.31117 152.15538 6.44708 336.25966 6.44708 curveto
+513.41089 6.44708 688.48775 159.47969 733.7153 340.38985 curveto
+776.19356 510.30289 728.53189 674.33261 574.6883 674.33261 curveto
+469.50401 674.33261 385.29497 577.85861 336.72614 462.89767 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch80 {
+716.77 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 326.3224 652.80856 moveto
+317.40274 541.4174 298.72035 428.63016 270.47339 315.64227 curveto
+242.22643 202.65436 204.51514 89.86711 157.73926 -21.52405 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+214.16278 652.80856 88.68698 612.42801 64.19016 514.44067 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+326.33275 652.80856 453.25932 652.80856 453.26967 652.80856 curveto
+600.47997 652.80856 734.57178 593.19266 702.1584 463.53918 curveto
+666.83533 322.24692 501.14456 232.2071 348.11931 232.2071 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch81 {
+839.345 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 468.99423 170.19492 moveto
+423.15114 144.03886 373.50389 130.08392 326.29208 130.08392 curveto
+199.28456 130.08392 132.66196 243.69864 165.48582 374.99417 curveto
+206.32669 538.35751 367.39566 674.33261 528.69147 674.33261 curveto
+696.92351 674.33261 777.75273 517.09357 733.5768 340.38985 curveto
+698.55563 200.30531 577.41708 76.94064 433.4383 27.97113 curveto
+351.2184 0.00682 264.00755 0 181.00594 0 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 181.00594 0 moveto
+341.81227 0 463.45824 -96.85898 624.26457 -96.85898 curveto
+684.09732 -96.85898 747.67595 -56.76701 761.86772 0 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch82 {
+873.881 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 326.3224 652.80856 moveto
+318.57594 546.12222 301.05775 437.97975 273.9698 329.62784 curveto
+246.8818 221.27592 210.32874 113.13342 164.73204 6.44708 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+214.16278 652.80856 88.68698 612.42801 64.19016 514.44067 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 326.3224 652.80856 moveto
+326.33083 652.80856 429.70871 652.80856 429.71712 652.80856 curveto
+595.25595 652.80856 735.81575 636.46619 700.242 494.17125 curveto
+670.64264 375.77383 531.83095 300.27885 403.61903 300.27885 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 403.61903 300.27885 moveto
+514.75766 300.27885 538.62965 6.44708 649.76828 6.44708 curveto
+712.38275 6.44708 778.25543 44.22284 816.58842 102.11281 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch83 {
+622.372 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 603.1353 544.62582 moveto
+605.93195 555.81253 lineto
+614.94923 591.88158 607.43452 626.94585 579.51956 642.92226 curveto
+543.63033 663.46255 500.87553 674.33261 454.48022 674.33261 curveto
+361.81831 674.33261 260.71457 623.59694 239.58723 539.08762 curveto
+218.42894 454.45442 289.89517 404.6668 365.32147 373.78613 curveto
+462.5228 333.9905 565.11418 280.34677 537.96465 171.74857 curveto
+511.1321 64.41841 379.18396 6.44708 259.46448 6.44708 curveto
+182.68185 6.44708 117.94559 37.7223 78.94418 91.6013 curveto
+59.50449 118.4565 56.60751 155.98592 71.91284 192.95984 curveto
+82.61322 218.80931 97.69925 238.27704 122.31587 238.27704 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch84 {
+563.156 0 setcharwidth
+ 0 0 0 setrgbcolor 97.09077
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 452.16246 619.3591 moveto
+452.1533 619.32243 339.54752 168.8993 339.53836 168.86264 curveto
+322.2083 99.54243 297.61703 30.4154 266.1725 -37.37183 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+gsave newpath 83.06549 510.58476 moveto
+84.50603 584.95798 169.86319 650.0694 253.71202 650.0694 curveto
+696.08641 650.0694 lineto
+741.30836 650.0694 794.99745 650.0777 803.50566 684.11046 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+} put
+CharProcs /ch85 {
+642.2615 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 50.44688 618.7675 moveto
+82.14732 640.75589 118.27351 652.80856 152.48029 652.80856 curveto
+269.78572 652.80856 81.89705 370.47562 36.04213 187.05583 curveto
+13.23138 95.81288 35.44218 6.44708 117.32642 6.44708 curveto
+300.94923 6.44708 605.42465 441.60219 658.22623 652.80856 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 658.22623 652.80856 moveto
+600.09648 496.06778 551.16386 338.32925 511.69348 180.44778 curveto
+499.32115 130.9584 491.99315 81.64462 489.79123 33.25333 curveto
+488.52386 5.40016 517.12646 -8.06978 545.89859 6.44643 curveto
+562.66019 14.90305 lineto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch86 {
+632.065 0 setcharwidth
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.31242 655.4705 moveto
+345.24669 655.4705 229.47041 -13.18002 229.44203 -13.2597 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 191.37697 -31.65149 moveto
+106.27953 -372.04134 lineto
+429.99164 -372.04134 lineto
+647.52718 498.09651 lineto
+647.5261 498.09651 lineto
+596.14757 292.58235 278.71458 42.43585 213.55495 0 curveto
+ closepath fill
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+gsave newpath 213.55495 0 moveto
+278.71458 42.43585 596.14757 292.58235 647.5261 498.09651 curveto
+665.94623 571.77707 626.08038 634.25038 554.01947 634.25038 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+} put
+CharProcs /ch87 {
+1017.478 0 setcharwidth
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 71.31242 655.4705 moveto
+339.29845 655.4705 189.0127 -13.18027 188.97827 -13.2597 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 150.91322 -31.65149 moveto
+65.81577 -372.04134 lineto
+345.72723 -372.04134 lineto
+597.30017 634.25038 lineto
+543.32661 526.11679 481.93906 420.1202 413.63824 317.1252 curveto
+340.84126 207.35016 260.41063 101.31442 173.0912 0 curveto
+ closepath fill
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+gsave newpath 173.0912 0 moveto
+260.41063 101.31442 340.84123 207.35016 413.63824 317.1252 curveto
+481.93906 420.1202 543.32661 526.11679 597.30017 634.25038 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 371.5008 630.16133 moveto
+1086.69363 630.16133 lineto
+1099.3482 680.7797 lineto
+384.15536 680.7797 lineto
+ closepath fill
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth
+gsave newpath 602.6052 655.4705 moveto
+641.93063 548.43924 672.09296 436.68127 692.84685 321.10542 curveto
+712.35165 212.48572 723.49718 100.76306 726.20338 -13.2597 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 688.13832 -31.65149 moveto
+603.04088 -372.04134 lineto
+813.96498 -372.04134 lineto
+1031.5005 498.09651 lineto
+1031.49942 498.09651 lineto
+985.7346 315.03722 757.96738 49.79814 710.3163 0 curveto
+ closepath fill
+ 0 0 0 setrgbcolor 0 93.05867 dtransform truncate idtransform setlinewidth pop
+gsave newpath 710.3163 0 moveto
+757.96738 49.79814 985.7346 315.03722 1031.49942 498.09651 curveto
+1048.93466 567.83742 1027.04697 634.25038 963.36084 634.25038 curveto
+[0.36163 0.99359 -0.31049 0.113 0 0] concat stroke grestore
+} put
+CharProcs /ch88 {
+732.426 0 setcharwidth
+ 0 0 0 setrgbcolor 86.58951
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 274.72418 605.13751 moveto
+284.03233 642.37007 321.64288 652.80856 364.1908 652.80856 curveto
+424.19063 652.80856 435.87076 587.46297 442.30247 527.84299 curveto
+442.30577 527.81247 482.74344 152.96722 482.74672 152.93669 curveto
+489.17844 93.31673 500.85858 27.97113 560.85841 27.97113 curveto
+603.40631 27.97113 641.01688 38.4096 650.32501 75.64218 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+gsave newpath 737.92747 652.80856 moveto
+772.92188 652.80856 785.61295 616.79388 776.08119 578.66689 curveto
+751.30554 479.56427 122.04115 201.21541 97.2655 102.11281 curveto
+87.73375 63.98581 100.42482 27.97113 135.41922 27.97113 curveto
+[0.9841 0.56816 -0.17754 0.30753 0 0] concat stroke grestore
+} put
+CharProcs /ch89 {
+684.999 0 setcharwidth
+ 0 0 0 setrgbcolor 76.13017
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 102.48337 621.42944 moveto
+118.87851 642.38036 143.95293 655.4705 167.68953 655.4705 curveto
+446.62541 655.4705 371.7528 -7.02032 371.73131 -7.09938 curveto
+[0.97939 0.56544 -0.20193 0.34978 0 0] concat stroke grestore
+ 1 1 1 setrgbcolor
+newpath 703.97723 505.26521 moveto
+629.34015 206.71681 261.42738 -96.85898 173.99118 -96.85898 curveto
+553.44618 -96.85898 lineto
+703.97832 505.26521 lineto
+ closepath fill
+ 0 0 0 setrgbcolor 0 78.7212 dtransform truncate idtransform setlinewidth pop
+gsave newpath 51.91719 0 moveto
+62.14096 -58.72035 110.20808 -96.85898 173.99118 -96.85898 curveto
+261.42738 -96.85898 629.34015 206.71681 703.97723 505.26521 curveto
+722.27885 578.4716 684.34724 641.41908 613.28491 641.41908 curveto
+[0.3607 0.99103 -0.36703 0.13359 0 0] concat stroke grestore
+} put
+CharProcs /ch90 {
+742.0025 0 setcharwidth
+ 0 0 0 setrgbcolor 97.09077
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 239.7999 533.3643 moveto
+258.1222 606.65352 346.1506 650.0694 426.70894 650.0694 curveto
+508.84682 650.0694 581.73114 622.42714 663.86903 622.42714 curveto
+687.23894 622.42714 711.99316 632.50063 731.79611 650.0694 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+gsave newpath 731.79611 650.0694 moveto
+649.35234 553.03534 561.57501 459.93137 469.03188 371.3597 curveto
+345.34161 252.97758 217.06477 139.2907 84.6655 30.7103 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+gsave newpath 84.6655 30.7103 moveto
+115.05464 48.70686 148.24187 58.35254 179.7723 58.35254 curveto
+297.91037 58.35254 407.51517 30.7103 525.65326 30.7103 curveto
+594.11812 30.7103 653.66022 101.75876 672.36845 176.59167 curveto
+[0.98738 0.57005 -0.15834 0.27426 0 0] concat stroke grestore
+ 0 44.26614 dtransform truncate idtransform setlinewidth pop
+gsave newpath 327.35124 371.3597 moveto
+469.03188 371.3597 lineto
+519.05658 371.3597 582.3747 371.35295 575.46582 343.71745 curveto
+[1.3836 0.79881 -0.3473 0.60155 0 0] concat stroke grestore
+} put
+CharProcs /ch91 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81662 575.00572 moveto
+77.81662 574.97452 77.81662 191.42458 77.81662 191.39339 curveto
+77.81662 70.1562 206.52098 -0.40839 340.19907 -0.40839 curveto
+473.87715 -0.40839 602.58148 70.1562 602.58148 191.39339 curveto
+602.58148 191.42458 602.58148 574.97452 602.58148 575.00572 curveto stroke
+} put
+CharProcs /ch92 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81662 -0.40839 moveto
+77.81662 -0.37718 77.81662 383.17276 77.81662 383.20395 curveto
+77.81662 504.44113 206.52098 575.00572 340.19907 575.00572 curveto
+473.87715 575.00572 602.58148 504.44113 602.58148 383.20395 curveto
+602.58148 383.17276 602.58148 -0.37718 602.58148 -0.40839 curveto stroke
+} put
+CharProcs /ch93 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81662 575.00572 moveto
+77.81662 574.97452 77.81662 191.42458 77.81662 191.39339 curveto
+77.81662 70.1562 206.52098 -0.40839 340.19907 -0.40839 curveto
+473.87715 -0.40839 602.58148 70.1562 602.58148 191.39339 curveto
+602.58148 191.42458 602.58148 574.97452 602.58148 575.00572 curveto stroke
+newpath 162.28038 304.56038 moveto
+518.11772 304.56038 lineto stroke
+ 42.23134 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 340.19907 126.64172 moveto
+340.19907 482.47903 lineto stroke
+} put
+CharProcs /ch94 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81554 -0.40839 moveto
+340.19907 575.00572 lineto
+602.58257 -0.40839 lineto stroke
+} put
+CharProcs /ch95 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.81554 575.00572 moveto
+340.19907 -0.40839 lineto
+602.58257 575.00572 lineto stroke
+} put
+CharProcs /ch96 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.79803 670.73428 moveto
+77.79803 21.11568 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.79803 345.92499 moveto
+545.715 345.92499 lineto stroke
+} put
+CharProcs /ch97 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 545.715 670.73428 moveto
+545.715 21.11568 lineto stroke
+ 0 42.23134 dtransform truncate idtransform setlinewidth pop
+newpath 77.79803 345.92499 moveto
+545.715 345.92499 lineto stroke
+} put
+CharProcs /ch98 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 198.1282 726.0823 moveto
+198.1282 -227.95035 lineto
+410.40947 -227.95035 lineto stroke
+} put
+CharProcs /ch99 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 254.72963 726.0823 moveto
+254.72963 -227.95035 lineto
+42.44836 -227.95035 lineto stroke
+} put
+CharProcs /ch100 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 410.40947 726.0823 moveto
+198.1282 726.0823 lineto
+198.1282 -227.95035 lineto stroke
+} put
+CharProcs /ch101 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 42.44836 726.0823 moveto
+254.72963 726.0823 lineto
+254.72963 -227.95035 lineto stroke
+} put
+CharProcs /ch102 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 423.2462 736.43593 moveto
+327.58513 736.43593 230.27249 699.0092 230.27249 614.97806 curveto
+230.27249 614.95828 230.27249 372.0821 230.27249 372.06233 curveto
+230.27249 299.8602 160.2954 250.60443 83.4198 250.60443 curveto
+83.4198 247.52753 lineto
+160.2954 247.52753 230.27249 198.27176 230.27249 126.06963 curveto
+230.27249 126.04985 230.27249 -116.82634 230.27249 -116.8461 curveto
+230.27249 -200.87724 327.58513 -238.30394 423.2462 -238.30394 curveto
+426.3231 -238.30394 lineto
+426.3231 -235.22704 lineto
+349.91206 -235.22704 279.47157 -188.05536 279.47157 -116.8461 curveto
+279.47157 -116.82634 279.47157 126.04985 279.47157 126.06963 curveto
+279.47157 210.46335 182.36145 249.06598 86.4967 249.06598 curveto
+182.36145 249.06598 279.47157 287.66861 279.47157 372.06233 curveto
+279.47157 372.0821 279.47157 614.95828 279.47157 614.97806 curveto
+279.47157 686.18732 349.91206 733.35902 426.3231 733.35902 curveto
+426.3231 736.43593 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch103 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 86.4967 736.43593 moveto
+182.15779 736.43593 279.47046 699.00923 279.47046 614.97806 curveto
+279.47046 614.95828 279.47046 372.0821 279.47046 372.06233 curveto
+279.47046 299.8602 349.44753 250.60443 426.3231 250.60443 curveto
+426.3231 247.52753 lineto
+349.44753 247.52753 279.47046 198.27176 279.47046 126.06963 curveto
+279.47046 126.04985 279.47046 -116.82634 279.47046 -116.8461 curveto
+279.47046 -200.87727 182.15779 -238.30394 86.4967 -238.30394 curveto
+83.4198 -238.30394 lineto
+83.4198 -235.22704 lineto
+159.83089 -235.22704 230.27136 -188.05536 230.27136 -116.8461 curveto
+230.27136 -116.82634 230.27136 126.04985 230.27136 126.06963 curveto
+230.27136 210.46335 327.3815 249.06598 423.2462 249.06598 curveto
+327.3815 249.06598 230.27136 287.66861 230.27136 372.06233 curveto
+230.27136 372.0821 230.27136 614.95828 230.27136 614.97806 curveto
+230.27136 686.18735 159.83089 733.35902 83.4198 733.35902 curveto
+83.4198 736.43593 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch104 {
+399.689 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 318.29065 726.08339 moveto
+132.02693 249.06598 lineto
+318.29065 -227.95143 lineto stroke
+} put
+CharProcs /ch105 {
+399.689 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.68211 726.08339 moveto
+263.94583 249.06598 lineto
+77.68211 -227.95143 lineto stroke
+} put
+CharProcs /ch106 {
+285.492 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 141.10132 726.08339 moveto
+141.10132 -227.9514 lineto stroke
+} put
+CharProcs /ch107 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 152.62663 726.0823 moveto
+152.62663 -227.95035 lineto stroke
+newpath 357.11627 726.0823 moveto
+357.11627 -227.95035 lineto stroke
+} put
+CharProcs /ch108 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 254.87201 -258.29007 moveto
+273.81064 -139.2427 363.69481 -43.92465 481.427 -18.03883 curveto
+481.427 -0.40628 lineto
+383.22067 -21.99893 303.05766 -89.25905 263.68776 -178.82407 curveto
+263.65297 -178.90326 263.68831 249.01186 263.68831 249.06601 curveto
+263.69092 260.82365 246.05315 260.82368 246.05576 249.06601 curveto
+246.05576 249.01186 246.09106 -178.90326 246.05626 -178.82407 curveto
+206.68636 -89.25905 126.52335 -21.99893 28.31703 -0.40628 curveto
+28.31703 -18.03883 lineto
+146.04922 -43.92465 235.9334 -139.2427 254.87201 -258.29007 curveto closepath
+gsave fill grestore stroke
+newpath 254.87201 756.42207 moveto
+273.81064 637.37473 363.69481 542.05667 481.427 516.17085 curveto
+481.427 498.5383 lineto
+383.22067 520.13097 303.05766 587.39107 263.68776 676.95605 curveto
+263.65297 677.03525 263.68831 249.12018 263.68831 249.06601 curveto
+263.69092 237.30838 246.05315 237.30833 246.05576 249.06601 curveto
+246.05576 249.12018 246.09106 677.03525 246.05626 676.95605 curveto
+206.68636 587.39107 126.52335 520.13097 28.31703 498.5383 curveto
+28.31703 516.17085 lineto
+146.04922 542.05667 235.9334 637.37473 254.87201 756.42207 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch109 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 42.23134
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 414.00134 -227.9514 moveto
+414.00134 726.0823 lineto stroke
+newpath 209.51167 -227.9514 moveto
+209.51167 726.0823 lineto stroke
+ 1 1 1 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 311.75652 756.42207 moveto
+264.8114 629.43848 165.67056 528.67966 39.46352 479.68523 curveto
+39.46352 747.19797 lineto
+584.04951 747.19797 lineto
+584.04951 479.68523 lineto
+457.84247 528.67966 358.70163 629.43848 311.75652 756.42207 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 311.75652 756.42207 moveto
+361.79712 633.45815 460.29172 536.54517 584.04951 488.50151 curveto
+584.04951 470.86896 lineto
+465.64787 516.8333 368.81592 604.89963 311.75635 717.61177 curveto
+311.75668 717.61177 lineto
+254.69711 604.89963 157.86516 516.8333 39.46352 470.86896 curveto
+39.46352 488.50151 lineto
+163.2213 536.54517 261.71591 633.45815 311.75652 756.42207 curveto closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 311.75652 -258.29007 moveto
+264.81091 -131.3073 165.67012 -30.54933 39.46352 18.4446 curveto
+39.46352 -249.06598 lineto
+584.04951 -249.06598 lineto
+584.04951 18.4446 lineto
+457.84291 -30.54933 358.7021 -131.3073 311.75652 -258.29007 curveto closepath
+gsave fill grestore stroke
+ 0 0 0 setrgbcolor
+newpath 311.75652 -258.29007 moveto
+361.79756 -135.32693 460.2921 -38.4148 584.04951 9.62834 curveto
+584.04951 27.2609 lineto
+465.6481 -18.70297 368.81615 -106.76865 311.75621 -219.4802 curveto
+311.75682 -219.4802 lineto
+254.69687 -106.76865 157.86493 -18.70297 39.46352 27.2609 curveto
+39.46352 9.62834 lineto
+163.22093 -38.4148 261.71547 -135.32693 311.75652 -258.29007 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch110 {
+513.8855 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 77.75305 726.08339 moveto
+431.98985 -227.9514 lineto stroke
+} put
+CharProcs /ch111 {
+285.492 0 setcharwidth
+ 0 0 0 setrgbcolor 59.12361
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinecap 1 setlinejoin 10 setmiterlimit
+gsave newpath 86.00266 566.37305 moveto
+157.69676 566.37305 196.19998 487.75198 196.19998 407.71951 curveto
+196.19998 292.56702 86.00266 205.56494 86.00266 90.41245 curveto
+86.00266 10.37997 124.5059 -68.24104 196.19998 -68.24104 curveto
+1 0.5 scale stroke grestore
+} put
+CharProcs /ch112 {
+856.476 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 378.24591 -933.08327 moveto
+852.16464 21.11568 lineto stroke
+ 0 24.59987 dtransform truncate idtransform setlinewidth pop
+newpath 84.55089 -540.19293 moveto
+156.21869 -487.78722 lineto
+369.42966 -941.89899 lineto
+378.24591 -941.89899 lineto
+401.61913 -886.02379 lineto
+199.70976 -455.98378 lineto
+84.55011 -540.19215 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch113 {
+770.674 0 setcharwidth
+ 0 0 0 setrgbcolor 0 24.59987 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 153.53975 668.47974 moveto
+153.53975 12.29996 lineto
+215.0371 12.29996 lineto
+215.0371 668.47974 lineto
+ closepath
+gsave fill grestore stroke
+newpath 550.53493 668.47974 moveto
+550.53493 12.29996 lineto
+612.03227 12.29996 lineto
+612.03227 668.47974 lineto
+ closepath
+gsave fill grestore stroke
+newpath 184.2884 0 moveto
+581.28358 0 lineto
+581.28358 30.74815 lineto
+184.2884 30.74815 lineto
+ closepath fill
+newpath 153.53975 613.13173 moveto
+153.53975 629.48535 150.92403 647.20392 136.67899 654.13165 curveto
+119.82231 662.32948 81.02173 662.3315 52.37357 662.3315 curveto
+52.37357 668.48082 lineto
+184.2884 668.48082 lineto
+184.2884 613.13173 lineto
+ closepath
+gsave fill grestore stroke
+newpath 215.0371 613.13173 moveto
+215.0371 629.48535 217.65282 647.20392 231.89786 654.13165 curveto
+248.75453 662.32948 287.55511 662.3315 316.20328 662.3315 curveto
+316.20328 668.48082 lineto
+184.2884 668.48082 lineto
+184.2884 613.13173 lineto
+ closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 52.37357 680.7797 moveto
+96.3153 678.73056 140.29887 677.70557 184.2884 677.70557 curveto
+228.27794 677.70557 272.26149 678.73056 316.20328 680.7797 curveto
+ closepath fill
+ 0 0 0 setrgbcolor
+newpath 153.53975 67.64796 moveto
+153.53975 51.29434 150.92403 33.57578 136.67899 26.64804 curveto
+119.82231 18.4502 81.02173 18.4482 52.37357 18.4482 curveto
+52.37357 12.29886 lineto
+184.2884 12.29886 lineto
+184.2884 67.64796 lineto
+ closepath
+gsave fill grestore stroke
+newpath 215.0371 67.64796 moveto
+215.0371 53.98131 215.0371 34.31476 215.03726 26.64804 curveto
+215.03734 23.41869 215.03743 18.4482 215.03818 18.4482 curveto
+215.03818 12.29886 lineto
+184.2884 12.29886 lineto
+184.2884 67.64796 lineto
+ closepath
+gsave fill grestore stroke
+newpath 550.53493 613.13173 moveto
+550.53493 629.48535 547.91922 647.20392 533.67416 654.13165 curveto
+516.81749 662.32948 478.0169 662.3315 449.36876 662.3315 curveto
+449.36876 668.48082 lineto
+581.28358 668.48082 lineto
+581.28358 613.13173 lineto
+ closepath
+gsave fill grestore stroke
+newpath 612.03227 613.13173 moveto
+612.03227 629.48535 614.648 647.20392 628.89305 654.13165 curveto
+645.74971 662.32948 684.55031 662.3315 713.19846 662.3315 curveto
+713.19846 668.48082 lineto
+581.28358 668.48082 lineto
+581.28358 613.13173 lineto
+ closepath
+gsave fill grestore stroke
+ 1 1 1 setrgbcolor
+newpath 449.36876 680.7797 moveto
+493.3105 678.73056 537.29405 677.70557 581.28358 677.70557 curveto
+625.27312 677.70557 669.25668 678.73056 713.19846 680.7797 curveto
+ closepath fill
+ 0 0 0 setrgbcolor
+newpath 550.53493 67.64796 moveto
+550.53493 53.98131 550.53493 34.31476 550.53476 26.64804 curveto
+550.5347 23.41869 550.53459 18.4482 550.53384 18.4482 curveto
+550.53384 12.29886 lineto
+581.28358 12.29886 lineto
+581.28358 67.64796 lineto
+ closepath
+gsave fill grestore stroke
+newpath 612.03227 67.64796 moveto
+612.03227 51.29434 614.648 33.57578 628.89305 26.64804 curveto
+645.74971 18.4502 684.55031 18.4482 713.19846 18.4482 curveto
+713.19846 12.29886 lineto
+581.28358 12.29886 lineto
+581.28358 67.64796 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch114 {
+856.476 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 48.86166 668.47974 moveto
+45.97934 674.09998 50.06018 680.7797 56.3761 680.7797 curveto
+794.6778 680.7797 lineto
+800.99406 680.7797 805.07529 674.09998 802.19295 668.47974 curveto
+449.11371 -19.98804 lineto
+445.24094 -27.53952 437.4674 -32.288 428.98068 -32.288 curveto
+422.07207 -32.288 lineto
+413.58595 -32.288 405.81345 -27.53908 401.94092 -19.98804 curveto
+ closepath fill
+ 1 1 1 setrgbcolor
+newpath 456.62672 62.04376 moveto
+177.15599 606.98264 lineto
+736.09749 606.98264 lineto
+ closepath fill
+} put
+CharProcs /ch115 {
+428.24 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 402.22682 699.53506 moveto
+438.4991 699.53506 464.62378 665.8845 464.62378 627.89015 curveto
+470.77481 627.89015 lineto
+470.77481 668.082 441.25967 702.61197 402.22682 702.61197 curveto
+ closepath
+gsave fill grestore stroke
+newpath 409.27577 627.89015 moveto
+409.27577 658.76729 444.15672 666.39046 461.38005 650.75967 curveto
+470.77481 627.89015 lineto
+470.77481 586.89081 409.27577 586.89081 409.27577 627.89015 curveto closepath
+gsave fill grestore stroke
+newpath 135.96031 -201.4031 moveto
+99.68803 -201.4031 73.56334 -167.75255 73.56334 -129.7582 curveto
+67.41232 -129.7582 lineto
+67.41232 -169.95004 96.92746 -204.48001 135.96031 -204.48001 curveto
+ closepath
+gsave fill grestore stroke
+newpath 128.91136 -129.7582 moveto
+128.91136 -160.63533 94.03041 -168.2585 76.80708 -152.62772 curveto
+67.41232 -129.7582 lineto
+67.41232 -88.75885 128.91136 -88.75885 128.91136 -129.7582 curveto closepath
+gsave fill grestore stroke
+newpath 402.22682 699.53506 moveto
+346.02847 699.53506 336.01682 618.69064 327.5719 550.40436 curveto
+315.16487 450.08014 311.33623 374.19342 293.69366 249.06598 curveto
+244.49458 249.06598 lineto
+260.31586 361.27635 276.9086 450.24011 295.59177 550.40436 curveto
+309.21474 623.43994 334.42888 702.61197 402.22682 702.61197 curveto
+ closepath
+gsave fill grestore stroke
+newpath 244.49461 249.06598 moveto
+226.85205 123.93854 223.0234 48.05182 210.61638 -52.2724 curveto
+202.17146 -120.5589 192.1598 -201.4031 135.96031 -201.4031 curveto
+135.96031 -204.48001 lineto
+203.75848 -204.48001 228.97351 -125.30818 242.59651 -52.2724 curveto
+261.27968 47.89185 277.87242 136.8556 293.6937 249.06598 curveto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch116 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 83.48706 575.00572 moveto
+83.44812 574.96906 83.44812 21.15233 83.48706 21.11568 curveto
+83.52226 21.0825 596.87584 21.0825 596.91104 21.11568 curveto
+596.94998 21.15233 596.94998 574.96906 596.91104 575.00572 curveto stroke
+} put
+CharProcs /ch117 {
+685.181 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 83.48706 21.11568 moveto
+83.44812 21.15233 83.44812 574.96906 83.48706 575.00572 curveto
+83.52226 575.03888 596.87584 575.03888 596.91104 575.00572 curveto
+596.94998 574.96906 596.94998 21.15233 596.91104 21.11568 curveto stroke
+} put
+CharProcs /ch118 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 709.07986 628.60002 moveto
+116.96906 628.60002 lineto
+116.96906 68.47801 lineto
+709.07986 68.47801 lineto stroke
+newpath 709.07986 -136.01166 moveto
+106.20403 -136.01166 lineto stroke
+} put
+CharProcs /ch119 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 85.08835 628.60002 moveto
+677.19917 628.60002 lineto
+677.19917 68.47801 lineto
+85.08835 68.47801 lineto stroke
+newpath 85.08835 -136.01166 moveto
+687.96419 -136.01166 lineto stroke
+} put
+CharProcs /ch120 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 226.42891 688.77495 moveto
+292.54851 688.77495 351.03267 643.17204 351.03267 580.00154 curveto
+357.1837 580.00154 lineto
+357.1837 645.5154 295.45009 691.85185 226.42891 691.85185 curveto
+ closepath
+gsave fill grestore stroke
+newpath 307.9846 580.00154 moveto
+307.9846 604.47548 335.37717 610.68768 349.2833 598.63817 curveto
+357.1837 580.00154 lineto
+357.1837 547.20213 307.9846 547.20213 307.9846 580.00154 curveto closepath
+gsave fill grestore stroke
+newpath 226.42891 -190.64299 moveto
+160.30933 -190.64299 101.82516 -145.04008 101.82516 -81.86958 curveto
+95.67413 -81.86958 lineto
+95.67413 -147.38344 157.40775 -193.7199 226.42891 -193.7199 curveto
+ closepath
+gsave fill grestore stroke
+newpath 144.87323 -81.86958 moveto
+144.87323 -106.34352 117.48067 -112.55573 103.57454 -100.50621 curveto
+95.67413 -81.86958 lineto
+95.67413 -49.07018 144.87323 -49.07018 144.87323 -81.86958 curveto closepath
+gsave fill grestore stroke
+newpath 226.42891 688.77495 moveto
+160.60568 688.77495 119.9592 620.88943 119.9592 549.11552 curveto
+119.9592 481.84833 163.73323 423.12123 226.42891 397.68692 curveto
+299.7769 367.93123 371.33568 319.28177 371.33568 243.18143 curveto
+371.33568 163.95267 306.06718 100.44507 226.42891 100.44507 curveto
+226.42891 103.52197 lineto
+292.25215 103.52197 332.8986 171.40752 332.8986 243.18143 curveto
+332.8986 310.44862 289.1246 369.17572 226.42891 394.61003 curveto
+153.08093 424.36572 81.52211 473.01515 81.52211 549.11552 curveto
+81.52211 628.34428 146.79065 691.85185 226.42891 691.85185 curveto
+ closepath
+gsave fill grestore stroke
+newpath 226.42891 397.68692 moveto
+146.79068 397.68692 81.52216 334.17929 81.52216 254.95053 curveto
+81.52216 178.85019 153.08098 130.20073 226.42891 100.44507 curveto
+289.12463 75.01077 332.89864 16.28366 332.89864 -50.98354 curveto
+332.89864 -122.75748 292.25215 -190.64299 226.42891 -190.64299 curveto
+226.42891 -193.7199 lineto
+306.06718 -193.7199 371.33572 -130.2123 371.33572 -50.98354 curveto
+371.33572 25.11685 299.7769 73.7663 226.42891 103.52197 curveto
+163.73323 128.95627 119.95923 187.68333 119.95923 254.95053 curveto
+119.95923 326.72447 160.60568 394.61003 226.42891 394.61003 curveto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch121 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 201.82939 667.25287 moveto
+201.82939 586.5271 226.42838 507.68677 226.42838 426.961 curveto
+226.42838 364.94273 201.82939 305.38914 201.82939 243.37088 curveto
+201.82939 93.82875 209.01233 -55.6271 223.35341 -204.48001 curveto
+229.50443 -204.48001 lineto
+243.84554 -55.6271 251.02847 93.82875 251.02847 243.37088 curveto
+251.02847 305.38914 226.42946 364.94273 226.42946 426.961 curveto
+226.42946 507.68674 251.02847 586.52713 251.02847 667.25287 curveto
+251.02847 700.05228 201.82939 700.05228 201.82939 667.25287 curveto closepath
+gsave fill grestore stroke
+newpath 91.96909 402.36147 moveto
+137.90788 402.36147 180.49011 426.96045 226.42891 426.96045 curveto
+226.42891 426.96153 lineto
+180.49008 426.96153 137.90791 451.56056 91.96909 451.56056 curveto
+59.16968 451.56056 59.16968 402.36147 91.96909 402.36147 curveto closepath
+gsave fill grestore stroke
+newpath 360.88875 402.36147 moveto
+314.94995 402.36147 272.36772 426.96045 226.42891 426.96045 curveto
+226.42891 426.96153 lineto
+272.36775 426.96153 314.94992 451.56056 360.88875 451.56056 curveto
+393.68816 451.56056 393.68816 402.36147 360.88875 402.36147 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch122 {
+456.787 0 setcharwidth
+ 0 0 0 setrgbcolor 0 21.52405 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 201.82939 667.25287 moveto
+201.82939 603.00598 226.42838 541.1365 226.42838 476.88962 curveto
+226.42946 476.88962 lineto
+226.42946 541.1365 251.02847 603.00598 251.02847 667.25287 curveto
+251.02847 700.05228 201.82939 700.05228 201.82939 667.25287 curveto closepath
+gsave fill grestore stroke
+newpath 201.82939 286.52635 moveto
+201.82939 350.77325 226.42838 412.64272 226.42838 476.88962 curveto
+226.42946 476.88962 lineto
+226.42946 412.64272 251.02847 350.77325 251.02847 286.52635 curveto
+251.02847 253.72694 201.82939 253.72694 201.82939 286.52635 curveto closepath
+gsave fill grestore stroke
+newpath 91.96909 452.29008 moveto
+137.90788 452.29008 180.49011 476.88907 226.42891 476.88907 curveto
+226.42891 476.89015 lineto
+180.49008 476.89015 137.90791 501.48918 91.96909 501.48918 curveto
+59.16968 501.48918 59.16968 452.29008 91.96909 452.29008 curveto closepath
+gsave fill grestore stroke
+newpath 360.88875 452.29008 moveto
+314.94995 452.29008 272.36772 476.88907 226.42891 476.88907 curveto
+226.42891 476.89015 lineto
+272.36775 476.89015 314.94992 501.48918 360.88875 501.48918 curveto
+393.68816 501.48918 393.68816 452.29008 360.88875 452.29008 curveto closepath
+gsave fill grestore stroke
+newpath 201.82939 213.5816 moveto
+201.82939 149.00941 226.42838 86.80252 226.42838 22.23035 curveto
+226.42946 22.23035 lineto
+226.42946 86.80252 251.02847 149.00941 251.02847 213.5816 curveto
+251.02847 246.38101 201.82939 246.38101 201.82939 213.5816 curveto closepath
+gsave fill grestore stroke
+newpath 201.82939 -169.12091 moveto
+201.82939 -104.54874 226.42838 -42.34184 226.42838 22.23035 curveto
+226.42946 22.23035 lineto
+226.42946 -42.34184 251.02847 -104.54874 251.02847 -169.12091 curveto
+251.02847 -201.92032 201.82939 -201.92032 201.82939 -169.12091 curveto closepath
+gsave fill grestore stroke
+newpath 91.96909 -2.36919 moveto
+137.90788 -2.36919 180.49011 22.2298 226.42891 22.2298 curveto
+226.42891 22.23088 lineto
+180.49008 22.23088 137.90791 46.82991 91.96909 46.82991 curveto
+59.16968 46.82991 59.16968 -2.36919 91.96909 -2.36919 curveto closepath
+gsave fill grestore stroke
+newpath 360.88875 -2.36919 moveto
+314.94995 -2.36919 272.36772 22.2298 226.42891 22.2298 curveto
+226.42891 22.23088 lineto
+272.36775 22.23088 314.94992 46.82991 360.88875 46.82991 curveto
+393.68816 46.82991 393.68816 -2.36919 360.88875 -2.36919 curveto closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch123 {
+628.082 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 375.67484 670.73428 moveto
+311.75652 670.73428 lineto
+186.54132 670.73428 77.79803 580.78429 77.79803 459.89986 curveto
+77.79803 324.21533 224.87236 249.06543 375.67484 249.06543 curveto
+ closepath
+gsave fill grestore stroke
+ 1 setlinecap
+newpath 574.05618 670.73428 moveto
+375.67484 670.73428 lineto
+375.67484 -172.60341 lineto stroke
+ 42.23134 0 dtransform exch truncate exch idtransform pop setlinewidth
+newpath 489.03264 670.73428 moveto
+489.03264 -172.60341 lineto stroke
+} put
+CharProcs /ch124 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 703.02228 moveto
+306.39261 703.02228 237.46306 623.23828 237.46306 530.03609 curveto
+237.46306 436.83391 306.39261 357.04993 397.0841 357.04993 curveto
+487.77562 357.04993 556.70518 436.83391 556.70518 530.03609 curveto
+556.70518 623.23831 487.77565 703.02228 397.0841 703.02228 curveto closepath
+gsave fill grestore stroke
+newpath 174.4918 345.56396 moveto
+94.9733 345.56396 49.47882 260.50955 49.47882 172.5778 curveto
+49.47882 80.94235 112.13402 -0.40839 199.49591 -0.40839 curveto
+249.96342 -0.40839 299.50476 23.96 299.50476 69.18922 curveto
+299.50476 199.76588 286.66557 345.56396 174.4918 345.56396 curveto closepath
+gsave fill grestore stroke
+newpath 619.6764 345.56396 moveto
+507.50264 345.56396 494.66347 199.76588 494.66347 69.18922 curveto
+494.66347 23.96 544.2048 -0.40839 594.6723 -0.40839 curveto
+682.0342 -0.40839 744.68939 80.94235 744.68939 172.5778 curveto
+744.68939 260.50955 699.19492 345.56396 619.6764 345.56396 curveto closepath
+gsave fill grestore stroke
+newpath 397.0841 69.18922 moveto
+397.0841 9.0006 387.06734 -50.71281 368.71986 -108.03021 curveto
+425.44835 -108.03021 lineto
+407.10089 -50.71281 397.0841 9.0006 397.0841 69.18922 curveto closepath
+gsave fill grestore stroke
+newpath 397.0841 530.03609 moveto
+174.4918 91.97192 lineto
+619.6764 91.97192 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch125 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 703.02228 moveto
+477.23766 544.2164 582.78314 398.94543 716.32626 281.35204 curveto stroke
+newpath 397.0841 703.02228 moveto
+316.93056 544.2164 211.38509 398.94543 77.84195 281.35204 curveto stroke
+newpath 397.0841 -140.3182 moveto
+316.93056 18.48767 211.38509 163.75864 77.84195 281.35204 curveto stroke
+newpath 397.0841 -140.3182 moveto
+477.23766 18.48767 582.78314 163.75864 716.32626 281.35204 curveto stroke
+} put
+CharProcs /ch126 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 532.72743 moveto
+408.92169 621.50256 479.30374 692.25833 567.26309 692.25833 curveto
+673.09778 692.25833 716.32626 601.56238 716.32626 484.29285 curveto
+716.32626 343.51527 599.70537 236.16171 493.43544 138.36787 curveto
+449.1891 97.65065 418.36061 45.03224 397.0841 -11.17232 curveto stroke
+newpath 397.0841 532.72743 moveto
+385.24654 621.50256 314.86449 692.25833 226.90512 692.25833 curveto
+121.07045 692.25833 77.84195 601.56238 77.84195 484.29285 curveto
+77.84195 343.51527 194.46286 236.16171 300.73277 138.36787 curveto
+344.97913 97.65065 375.80762 45.03224 397.0841 -11.17232 curveto stroke
+} put
+CharProcs /ch127 {
+799.377 0 setcharwidth
+ 0 0 0 setrgbcolor 0 42.23134 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 397.0841 703.02228 moveto
+365.62454 620.80313 322.58832 542.16978 256.15189 484.29285 curveto
+168.78789 408.18456 77.84195 322.63573 77.84195 207.55711 curveto
+77.84195 107.08478 102.121 -0.40839 188.67337 -0.40839 curveto
+243.5937 -0.40839 299.50473 20.96443 299.50476 69.18922 curveto
+299.50476 69.1911 299.50476 91.97006 299.50476 91.97192 curveto
+494.66347 91.97192 lineto
+494.66347 91.97006 494.66347 69.1911 494.66347 69.18922 curveto
+494.66347 20.96443 550.57451 -0.40839 605.49484 -0.40839 curveto
+692.04721 -0.40839 716.32626 107.08478 716.32626 207.55711 curveto
+716.32626 322.63573 625.38033 408.18456 538.01633 484.29285 curveto
+471.5799 542.16978 428.54367 620.80313 397.0841 703.02228 curveto closepath
+gsave fill grestore stroke
+newpath 397.0841 69.18922 moveto
+397.0841 9.0006 387.06734 -50.71281 368.71986 -108.03021 curveto
+425.44835 -108.03021 lineto
+407.10089 -50.71281 397.0841 9.0006 397.0841 69.18922 curveto closepath
+gsave fill grestore stroke
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/cmsy9 exch definefont pop

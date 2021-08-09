@@ -1,0 +1,96 @@
+% +AMDG  This document was begun on 17 Feb 11EE, the day
+% after the Comm. of St. Simeon, EM, and it is humbly
+% dedicated to him and to the Immaculate Heart of Mary, for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar("X",digwid#+2ss#,cap#,0); "The digit X, oldstyle";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0 = (w/2,5h/6);
+penpos1(thinl,0);
+z1 = (3w/5,3h/4);
+penpos2(thinl,-90);
+z2 = (w/2,3h/5);
+penpos3(thinl,180);
+z3 = (2w/5,(y0l+y2l)/2);
+penpos4(thickl,180);
+z4r = (ss,3h/4);
+penpos5(thinl,90);
+z5r = (w/2,h+o);
+penpos6(thickl,0);
+z6r = (w-ss,y4);
+penpos8(0.7thickl,-45);
+z8 = (w/2,2h/5);
+penpos7(thinl,-90);
+z7r = (ss,0-o);
+penpos9(1.75thinl,-90);
+z9r = (w/3,y7l);
+penpos10(2thinl,-90);
+z10r = (2w/3,0-o);
+penpos11(thickl,-90);
+z11r = (w-ss,y10);
+
+path p;
+p = z3r..z0r..z1r..z2r..z4r..z5r..z6r..z8r..z7r--z7l..z8l..
+	z6l..z5l..z4l..z2l..z1l..z0l..z3l--cycle;
+path q;
+q = z7r..z9r..z10r..z11r--z11l..z10l..z9l..z7l--cycle;
+fill p rotatedaround ((w/2,h/2),180);
+fill q rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("x",digwid#+2ss#,cap#,0); "The digit X, lining";
+italcorr(ex#*slant);
+fill p rotatedaround ((w/2,h/2),180);
+fill q rotatedaround ((w/2,h/2),180);
+endchar;
+
+beginchar("E",digwid#+2ss#,cap#,dep#); "The digit E, oldstyle";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,3h/4);
+penpos1(thinl,-90);
+z1l = (w/2,h+o);
+penpos2(thickl,180);
+z2l = (w-ss,3h/4);
+penpos3(thinl,90);
+z3 = (w/2,h/2);
+penpos4(thickl,0);
+z4r = (w-ss,h/4);
+penpos5(thinl,-90);
+z5r = (w/2,0-o);
+penpos6(thickl,180);
+z6r = (ss,h/4);
+penpos7(1.5thinl,90);
+z7 = z0 shifted (curlw,-curlh);
+penpos8(thinl,180);
+z8 = z7 shifted (curlw,curlh);
+penpos9(thinl,-90);
+z9 = z8 shifted (-curlw/2,curlh/2);
+penpos10(1.5thinl,90);
+z10 = z6 shifted (curlw,curlh);
+penpos11(thinl,0);
+z11 = z10 shifted (curlw,-curlh);
+penpos12(thinl,-90);
+z12 = z11 shifted (-curlw/2,-curlh/2);
+
+path throne; throne = z9l..z8l..z7l..z0l{up}..z1l..z2l..z3l--z3r..z2r..
+	z1r..z0r{down}..z7r..z8r..z9r--cycle;
+path thrtwo; thrtwo = z3r..z4r..z5r..z6r{up}..z10r..
+	z11r..z12r--z12l..z11l..z10l..z6l{down}..z5l..z4l..z3l--cycle;
+fill throne rotatedaround ((w/2,h/2),180) shifted (0,-d);
+fill thrtwo rotatedaround ((w/2,h/2),180) shifted (0,-d);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("e",digwid#+2ss#,cap#,0); "The digit E, lining";
+italcorr(ex#*slant);
+fill throne rotatedaround ((w/2,h/2),180);
+fill thrtwo rotatedaround ((w/2,h/2),180);
+endchar;

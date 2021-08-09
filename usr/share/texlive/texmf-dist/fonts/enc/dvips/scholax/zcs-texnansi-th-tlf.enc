@@ -1,0 +1,68 @@
+
+/enczcs-texnansi-th-tlf[
+%00
+  /f_f /Euro /f_l /f_f_l /fraction /dotaccent /hungarumlaut /ogonek
+  /f_i /f_f_i /cwm /.notdef /.notdef /.notdef /.notdef /.notdef
+%10
+  /dotlessi /uni0237 /grave /acute /caron /breve /macron /ring
+  /cedilla /germandbls /ae /oe /oslash /AE /OE /Oslash
+%20
+  /space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+  /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+%30
+ /zero.up /one.up /two.up /three.up /four.up /five.up /six.up /seven.up /eight.up /nine.up /colon.up /semicolon.up /less /equal /greater /question.up
+%40
+  /at /A /B /C /D /E /F /G
+  /H /I /J /K /L /M /N /O
+%50
+  /P /Q /R /S /T /U /V /W
+  /X /Y /Z /bracketleft.up /backslash /bracketright.up /circumflex /underscore
+%60
+  /quoteleft /a /b /c /d /e /f /g
+  /h /i /j /k /l /m /n /o
+%70
+  /p /q /r /s /t /u /v /w
+  /x /y /z /braceleft.up /bar /braceright.up /tilde /dieresis
+%80
+  /Lslash /quotesingle /quotesinglbase /florin /quotedblbase /ellipsis /dagger /daggerdbl
+  /circumflex /perthousand /Scaron /guilsinglleft /OE /Zcaron /asciicircum /minus
+%90
+  /lslash /quoteleft /quoteright /quotedblleft /quotedblright /bullet /endash /emdash
+  /tilde /trademark /scaron /guilsinglright /oe /zcaron /asciitilde /Ydieresis
+%A0
+  /cwm /exclamdown.up /cent /sterling /currency /yen /brokenbar /section
+  /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /uni00AD /registered /macron
+%B0
+  /degree /plusminus /two.superior /three.superior /acute /uni00B5 /paragraph /periodcentered
+  /cedilla /one.superior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown.up
+%C0
+  /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+  /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+%D0
+  /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+  /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+%E0
+  /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+  /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+%F0
+  /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+  /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis
+] def
+% LIGKERN f f =: f_f ; f i =: f_i ; f l =: f_l ;
+% LIGKERN f_f i =: f_f_i ; f_f l =: f_f_l ;
+% LIGKERN hyphen hyphen =: endash ; endash hyphen =: emdash ;
+% LIGKERN quoteleft quoteleft =: quotedblleft ;
+% LIGKERN quoteright quoteright =: quotedblright ;
+% LIGKERN comma comma =: quotedblbase ;
+% LIGKERN less less =: guillemotleft ;
+% LIGKERN greater greater =: guillemotright ;
+% LIGKERN question quoteleft =: questiondown ;
+% LIGKERN exclam quoteleft =: exclamdown ;
+%
+% Kerns to eliminate
+% LIGKERN space {} * ; * {} space ;
+% LIGKERN zero {} * ; * {} zero ; one {} * ; * {} one ;
+% LIGKERN two {} * ; * {} two ; three {} * ; * {} three ;
+% LIGKERN four {} * ; * {} four ; five {} * ; * {} five ;
+% LIGKERN six {} * ; * {} six ; seven {} * ; * {} seven ;
+% LIGKERN eight {} * ; * {} eight ; nine {} * ; * {} nine ;

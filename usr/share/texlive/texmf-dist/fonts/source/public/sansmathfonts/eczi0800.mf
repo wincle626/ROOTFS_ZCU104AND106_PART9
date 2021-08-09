@@ -1,0 +1,6 @@
+% This is eczi0800.mf in text format as of May 3, 2012
+if unknown exbase: input exbase fi;
+
+
+gensize:=8;
+generate eczi

@@ -1,0 +1,27 @@
+% Date: 2019/04/05
+
+mode_setup;
+
+boolean gridfont; gridfont := false;
+boolean debugcables; debugcables := false;
+fonttype = foretype; % Show symbols
+
+bottomgap# = standardgap#;
+topgap# = ht#-topcableheight#+cablevertgap#;
+
+input knit_dimens;
+
+if known ps_output:
+	font_identifier :="KnittingSymbols-nogrid-lowered";
+fi
+
+string Vtitle; Vtitle := "Knit font, no grid";
+
+input knit_symbols;
+
+pickup symbol_pen;
+
+input knit_nogrid_cables;
+
+
+end

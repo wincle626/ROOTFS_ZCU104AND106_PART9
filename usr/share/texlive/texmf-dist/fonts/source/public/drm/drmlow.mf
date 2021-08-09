@@ -1,0 +1,1359 @@
+% +AMDG  This document was begun on 1X April 11EX, Easter
+% Tuesday, and it is humbly dedicated to Our Risen Lord
+% Jesus Christ, for His mercy.
+
+beginchar("a",exw#+2ss#,ex#,0); "The Letter a";
+
+z0 = (ss,3h/4);
+z1 = (x3/2,h+o);
+z2 = (w-ss-lserwl,3h/4);
+z3 = (x2,lserhl);
+z8 = z7 shifted (0,lserhl);
+z9 = 0.5[z18,z19]; y9 := 0-o;
+z10 = (ss-o,h/4);
+z15 = z2 shifted (-thickl,0);
+z16 = z1 shifted (0,-thinl);
+z17 = z9 shifted (0,thinl);
+z18 = z10 shifted (thickl,0);
+z19 = z3 shifted (-thickl,lserhl);
+z20 = (w/2-thickl,h/2);
+z21 = z20 shifted (thickl/2,-thinl);
+z22 = 0.2[z15,z19];
+z23 = z19 shifted (-thinl,0);
+z24 = z22 shifted (0,-thickl/2);
+z25 = z16 shifted (.5thickl,0);
+
+lrserif(3,4,5,6,7)(1);
+drtbulb(0,11,12,13,14);
+
+fill
+z13..z12..z11..z0{up}..{right}z1{right}..{down}z2--z3..z4..z5--z6--z7--z8..z9..{up}z10..z20..z22--z15{up}..{left}z16{left}..z13..cycle;
+unfill z18..z21..z24--z19..z17..cycle;
+
+lowa := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("b",1.2exw#+2ss#,asch#,0); "The Letter b";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,lserhl);
+z3 = z2 shifted (thickl,0);
+z12 = z1 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z19 = 0.5[z15,z17];
+z20 = (w-ss,(ex+o)/2);
+z21 = (x2,y19);
+z14 = 0.5[z22,z23] shifted (0,ex/2);
+z15 = z14 shifted (0,-thinl);
+z16 = 0.5[z22,z23] shifted (0,-ex/2-o);
+z17 = z16 shifted (0,thinl);
+z22 = z21 shifted (thickl,0);
+z23 = z20 shifted (-curvl,0);
+
+ulserif(0,4,5,6,7)(1);
+llserif(2,8,9,10,11)(1);
+
+fill z0..z4..z5--z6--z12--z13--z10--z9..z8..z2--cycle;
+fill
+z21{up}..{right}z14{right}..{down}z20{down}..{left}z16{left}..{up}z21..cycle;
+unfill
+z22{up}..{right}z15{right}..{down}z23{down}..{left}z17{left}..{up}z22..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("d",1.2exw#+2ss#,asch#,0); "The Letter d";
+
+z0 = (w-ss-lserwl,h-userhl);
+z1 = z0 shifted (-thickl,0);
+z2 = (x0,lserhl);
+z3 = z2 shifted (-thickl,0);
+z12 = z0 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z19 = 0.5[z15,z17]; y19 := ex/2;
+z20 = (x2,(ex+o)/2);
+z21 = (ss,(ex+o)/2);
+z14 = 0.5[z22,z23] shifted (0,ex/2);
+z15 = z14 shifted (0,-thinl);
+z16 = 0.5[z22,z23] shifted (0,-ex/2-o);
+z17 = z16 shifted (0,thinl);
+z22 = z21 shifted (curvl,0);
+z23 = z20 shifted (-thickl,0);
+
+ulserif(1,4,5,6,7)(1);
+lrserif(2,8,9,10,11)(1);
+
+fill z1..z4..z5--z6--z12--z2..z8..z9--z10--z13--z1--cycle;
+fill
+z21{up}..{right}z14{right}..{down}z20{down}..{left}z16{left}..{up}z21..cycle;
+unfill
+z22{up}..{right}z15{right}..{down}z23{down}..{left}z17{left}..{up}z22..cycle;
+
+lowd := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("l",0.6exw#+2ss#,asch#,0); "The Letter l";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-userhl);
+z3 = z2 shifted (thickl,0);
+z16 = z3 shifted (0,userhl);
+
+ulserif(2,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+lrserif(1,12,13,14,15)(1);
+
+fill
+z0--z2..z4..z5--z6--z7--z16--z1..z12..z13--z14--z10--z9..z8..z0..cycle;
+
+lowl := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("h",exw#+2ss#+5hair#,asch#,0); "The Letter h";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-userhl);
+z3 = z2 shifted (thickl,0);
+z16 = z3 shifted (0,userhl);
+z50 = 0.5[z0,z19];
+z17 = (x50,ex+o);
+z18 = z17 shifted (0,-thinl);
+z44 = z17;
+z45 = z44 shifted (0,-thinl);
+z19 = (w-ss-lserwl,lserhl);
+z20 = z19 shifted (-thickl,0);
+z25 = z20 shifted (0,-lserhl);
+z26 = z1 shifted (0,-lserhl);
+z27 = z19 shifted (0,w/3);
+z28 = z27 shifted (-thickl,0);
+z29 = z1 shifted (0,w/3);
+z30 = z29 shifted (-thickl,0);
+z35 = (x28,ex-thickl-thinl);
+z36 = (x27,ex-thickl-thinl);
+z37 = (x30,ex-thickl);
+z38 = (x29,ex-thickl);
+
+ulserif(2,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+lrserif(19,21,22,23,24)(1);
+llserif(20,40,41,42,43)(1);
+lrserif(1,31,32,33,34)(1);
+
+path hone; path htwo;
+hone =
+z26--z10--z9..z8..z0--z2..z4..z5--z6--z16--z1..z31..z32--z33--cycle;
+htwo =
+z1--z29--z38{up}..{right}z18{right}..{right}z45{right}..{down}z35---z28--z20..z40..z41--z42--z23--z22..z21..z19--z27---z36{up}..{left}z44{left}..{left}z17{left}..{down}z37--z30--z0--cycle;
+fill hone; fill htwo;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("p",1.2exw#+2ss#,ex#,dep#); "The Letter p";
+
+z0 = (ss+lserwl,-d+lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-userhl);
+z3 = z2 shifted (thickl,0);
+z16 = z3 shifted (0,userhl);
+z22 = z1 shifted (0,userhl);
+z23 = z3 shifted (0,-lserhl);
+z50 = 0.5[z2,(w-ss,y2)];
+z24 = (x50,h);
+z25 = z24 shifted (0,-thinl);
+z26 = (x50,0);
+z27 = z26 shifted (0,thinl);
+z29 = 0.5[z25,z27];
+z30 = (w-ss,y29);
+z31 = (x0,y30);
+z32 = z31 shifted (thickl,0);
+z33 = z30 shifted (-curvl,0);
+
+ulserif(2,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+lrserif(1,12,13,14,15)(1);
+
+fill z0..z8..z9--z10--z14--z13..z12..z1--z16--z6--z5..z4..z2--cycle;
+fill
+z31{up}..{right}z24{right}..{down}z30{down}..{left}z26{left}..{up}z31..cycle;
+unfill
+z32{up}..{right}z25{right}..{down}z33{down}..{left}z27{left}..{up}z32..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("q",1.2exw#+2ss#,ex#,dep#); "The Letter q";
+
+z0 = (w-(ss+lserwl),-d+lserhl);
+z1 = z0 shifted (-thickl,0);
+z2 = (w-(ss+userwl),h-userhl);
+z3 = z2 shifted (-thickl,0);
+z16 = z3 shifted (0,userhl);
+z17 = 0.5[z16 shifted (thickl,0),(ss,y16)];
+z18 = z17 shifted (0,-thinl);
+z19 = (x17,0);
+z20 = z19 shifted (0,thinl);
+z21 = 0.5[z18,z20];
+z22 = (ss,h/2);
+z23 = z22 shifted (curvl,0);
+z24 = z16 shifted (0,-h/2);
+z25 = z24 shifted (thickl,0);
+
+lrserif(0,4,5,6,7)(1);
+llserif(1,8,9,10,11)(1);
+urserif(2,12,13,14,15)(1);
+
+fill
+z16--z14--z13..z12..z2--z0..z4..z5--z6--z10--z9..z8..z1--z16--cycle;
+fill
+z22{up}..{right}z17{right}..{down}z25{down}..{left}z19{left}..{up}z22..cycle;
+unfill
+z23{up}..{right}z18{right}..{down}z24{down}..{left}z20{left}..{up}z23..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("t",exw#/phi+2ss#,theight#,0); "The Letter t";
+
+z0 = (ss+hair,ex);
+z1 = z0 shifted (0,-thinl);
+z2 = (w-ss/2-hair,ex);
+z3 = z2 shifted (0,-thinl);
+z4 = (w/2+thickl/2,h+o);
+z5 = (w/2,0-o);
+z6 = z5 shifted (-thickl/2,2lserh);
+z7 = z6 shifted (thickl,0);
+z8 = (x7,y2);
+z9 = (x7,y3);
+z10 = (x6,y1);
+z11 = (w-ss,y7);
+z12 = z11 shifted (-thinl/2,0);
+z13 = 0.5[z7,z12] shifted (0,-y7/2);
+z14 = (x7,y5);
+z15 = 0.5[z2,z3] shifted (hair,0);
+z16 = 0.5[z0,z1] shifted (-hair,0);
+z17 = (x10,y0);
+z18 = 0.5[z0,z17];
+z19 = z4 shifted (-hair/4,0);
+
+pickup pencircle scaled 2;
+fill
+z4--z8--z2..z15..z3--z9--z7{down}..{right}z13{right}..{up}z12..z11{down}..{left}z14{left}..{up}z6--z10--z1..z16..z0--z18{right}..{dir
+80}z19--z4--cycle;
+
+lowt := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("f",exw#/phi+2ss#,asch#,0); "The Letter f";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = (x0,ex-thinl);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z13 shifted (0,thinl);
+z16 = (ss+hair,y12);
+armlen = x12 - x16;
+z17 = z13 shifted (armlen,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = 0.5[z16,z18] shifted (-hair,0);
+z21 = 0.5[z19,z17] shifted (hair,0);
+z22 = (x19,y3);
+z27 = 0.5[z3,z22]; y27 := h+o;
+z28 = z27 shifted (0,-thinl);
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+z29 = 0.5[z25,z23];
+z30 = (z29..z28..z3) intersectionpoint
+	(z24..z23..z22..z25);
+
+fill
+z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--z14--z2{up}..{right}z27{right}..{down}z24..z23..{up}z22{up}..{dir 0}z30{dir 160}..z28..{down}z3--z15--z19..z21..z17--z13--cycle;
+%z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..{right}z25{dir 160}..z28..{down}z3--z15--z19..z21..z17--z13--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("o",exw#+2ss#,ex#,0); "The Letter o";
+
+z0 = (w/2,h+o);
+z1 = (w/2,-o);
+z2 = (ss,h/2);
+z3 = (w-ss,h/2);
+z4 = z3 shifted (-curvl,0);
+z5 = z2 shifted (curvl,0);
+z6 = z0 shifted (0,-thinl);
+z7 = z1 shifted (0,thinl);
+
+fill z1..z3..z0..z2..cycle;
+unfill z4..z6..z5..z7..cycle;
+
+lowo := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("u",1.2exw#+2ss#,ex#,0); "The Letter u";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w-ss-lserwl,lserhl);
+z3 = z2 shifted (-thickl,0);
+z12 = z1 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z14 = (w/2,-o);
+z15 = z14 shifted (0,1.5thinl);
+z16 = (x0,h/3);
+z17 = 0.5[z16,z14] shifted (0,-lserwl);
+z18 = z17 shifted (3o,lserhl);
+z19 = z16 shifted (thickl,0);
+z20 = (w-ss-userwl,h-userhl);
+z21 = z20 shifted (-thickl,0);
+z22 = (x21,h/3);
+z23 = z22 shifted (thickl,0);
+z24 = 0.5[z23,z14] shifted (-2o,-lserwl);
+z29 = z20 shifted (0,userhl);
+z30 = z24 shifted (0,lserhl);
+
+ulserif(0,4,5,6,7)(1);
+lrserif(2,8,9,10,11)(1);
+ulserif(21,25,26,27,28)(1);
+
+fill
+z1--z12--z6--z5..z4..z0--z16{down}..{right}z14{right}..{up}z23--z29--z27--z26..z25..z21--z22{down}..z15..{up}z19--cycle;
+fill z13--z10--z9..z8..z2--z23--z22--cycle;
+
+lowu := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("i",0.6exw#+2ss#,ex#,0); "The Letter i";
+
+z0 = (w/2-thickl/2,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w/2-thickl/2,h-userhl);
+z3 = z2 shifted (thickl,0);
+z16 = z3 shifted (0,userhl);
+% dot
+z17 = (w/2,h+2userh+dotwid);
+z18 = z17 shifted (0,dotwid);
+z19 = z17 shifted (0,-dotwid);
+z20 = z17 shifted (dotwid,0);
+z21 = z17 shifted (-dotwid,0);
+
+ulserif(2,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+lrserif(1,12,13,14,15)(1);
+
+fill z0..z8..z9--z10--z14--z13..z12..z1--z16--z6--z5..z4..z2--cycle;
+dotlessi := currentpicture;
+fill z18..z20..z19..z21..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("j",0.4exw#+2ss#,ex#,dep#); "The Letter j";
+
+z0 = (w-thickl-ss,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w-thickl-ss,h-userhl);
+z3 = z2 shifted (thickl,0);
+z8 = z3 shifted (0,userhl);
+z9 = (x0-lserwl,-dep);
+z10 = z9 shifted (0,thinl);
+z11 = (x0-2lserwl,-dep/2);
+% dot
+z17 = (w-thickl+userw/3-ss,h+2userh+dotwid);
+z18 = z17 shifted (0,dotwid);
+z19 = z17 shifted (0,-dotwid);
+z20 = z17 shifted (dotwid,0);
+z21 = z17 shifted (-dotwid,0);
+
+ulserif(2,4,5,6,7)(1);
+ulftbulb(11,12,13,14,15);
+
+fill
+z5--z6--z8--z1{down}..z9..z11..z12..z13..z14..z10..{up}z0--z2..z4..cycle;
+dotlessj := currentpicture;
+fill z18..z20..z19..z21..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"031",exw#/phi+2ss#,ex#,0); "dotless i";
+
+currentpicture := dotlessi;
+
+endchar;
+
+beginchar(oct"032",0.4exw#+2ss#,ex#,dep#); "dotless j";
+
+currentpicture := dotlessj;
+
+endchar;
+
+beginchar("c",exw#+2ss#,ex#,0); "The Letter c";
+
+z0 = (w/2+hair,h+o);
+z1 = (w/2+hair,-o);
+z2 = (w-ss,0.7h);
+z3 = (w-ss,h/4);
+z4 = (ss,h/2);
+z9 = z0 shifted (0,-thinl);
+z10 = z4 shifted (curvl,0);
+z11 = z1 shifted (0,thinl);
+z12 = z3 shifted (0,hair/2);
+z13 = z12 shifted (-hair/2,0);
+z14 = (w-ss,h/2);
+
+urtbulb(2,5,6,7,8);
+
+fill
+z1{right}..z3..z12..z13{dir -135}..{left}z11{left}..{up}z10{up}..{right}z9{right}..{dir
+-40}z7{left}..{down}z6..z5..z2..{left}z0{left}..z4..{right}z1..cycle;
+
+lowc := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("e",exw#+2ss#,ex#,0); "The Letter e";
+
+z0 = (w/2,h+o);
+z1 = (w/2,-o);
+z2 = (w-ss,h/2);
+z3 = (w-ss-hair,h/4);
+z4 = (ss,h/2);
+z9 = z0 shifted (0,-thinl);
+z10 = z4 shifted (curvl,0);
+z11 = z1 shifted (0,thinl);
+z12 = z3 shifted (0,hair/2);
+z13 = z12 shifted (-hair/2,0);
+z14 = z2 shifted (-curvl,thinl);
+z15 = z10 shifted (0,thinl);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{right}z1{right}..z3..z12..z13{dir
+-120}..{left}z11{left}..{up}z10{up}..z9..{down}z14--z15--z10--cycle;
+
+lowe := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"034",(exw#/phi)*2+2ss#,asch#,0); "The ligature fi";
+
+singwid = (ex/phi)/2;
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = (x2,ex-thinl);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z12 shifted (thickl,thinl);
+z16 = z12 shifted (-lserwl,0);
+z17 = z13 shifted (lserwl+2thickl,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = z16 shifted (-hair/2,hair/2);
+z21 = z17 shifted (o,o);
+z22 = z17 shifted (-thickl+o,h/3-userhl); x22 := x32;
+z27 = 0.5[z13,z32]; y27 := h+o;
+z28 = z27 shifted (0,-thinl);
+z30 = z1 shifted (2lserwl+hair,0);
+z31 = z30 shifted (thickl,0);
+z32 = (x30,y12);
+z33 = z32 shifted (thickl,0);
+z46 = (x31,ex);
+
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+ulserif(32,34,35,36,37)(1);
+llserif(30,38,39,40,41)(1);
+lrserif(31,42,43,44,45)(1);
+
+y34 := y13;
+y46 := y15;
+y32 := y34;
+
+fill
+z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..{right}z25{dir
+120}..{left}z28{left}..{down}z3--z15--z46--z31..z42..z43--z44--z40--z39..z38..z30--z32..z34--z13--cycle;
+
+filig := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("g",exw#+2ss#,ex#,dep#); "The Letter g";
+
+gtailwid = thinl/2;
+z0 = (w/2,h+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (w/2,1.5lserwl);
+z3 = z2 shifted (0,thinl);
+z4 = 0.5[z1,z3];
+z5 = (ss,y4);
+z7 = z5 shifted (curvl,0);
+z6 = (w-ss,y4);
+z8 = z6 shifted (-curvl,0);
+z10 = (w-ss,h+o);
+z9 = (z0{right}..{down}z6) intersectionpoint (z10--z4);
+z11 = z10 shifted (thinl,-1.5thinl);
+z12 = z11 shifted (-gtailwid,0);
+z13 = z10 shifted (0,-gtailwid);
+z14 = z9 shifted (0,-gtailwid);%FFF
+z15 = (ss+lserwl/2,lserhl);
+z16 = z15 shifted (1.3thinl,0);
+z17 = (z5{down}..{right}z2) intersectionpoint (z15--z4);
+z21 = (w/2,thinl);
+z22 = (w/2,-dep);
+z23 = (ss,-dep/2);
+z24 = (w-ss,-dep/2);
+z25 = z21 shifted (0,-thinl);
+z26 = z22 shifted (0,thinl);
+z27 = z23 shifted (curvl,0);
+z28 = z24 shifted (-curvl,0);
+z29 = 0.5[z26,z25];
+z30 = (z23{up}..{right}z21) intersectionpoint (z15--z29);
+z31 = (4w/7,y21);
+z32 = (3w/7,y21);
+z33 = (4w/7,y22);
+z34 = (3w/7,y22);
+z35 = 0.3[z29,z8];
+z36 = (x35,y25);
+z37 = (x35,y26);
+z38 = 0.7[z27,z29];
+z39 = (x38,y25);
+z40 = (x38,y26);
+
+fill
+z21{right}..{right}z31..z24..z33{left}..{left}z22{left}..{left}z34{left}..z23..{right}z32{right}..cycle;
+unfill
+z25{right}..{right}z36..z28..z37{left}..{left}z26{left}..{left}z40..z27..{right}z39..cycle;
+fill z5..z0..z6..z2..cycle;
+unfill z7..z1..z8..z3..cycle;
+fill z9..z10..{down}z11..z12..z13{dir 140}..z14..cycle;
+fill z17{up}..z15..{up}z30..z16..z17..cycle;
+
+lowg := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("m",1.1em#+2ss#,ex#,0); "The Letter m";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w/2-thickl/2,lserhl);
+z3 = z2 shifted (thickl,0);
+z4 = (w-ss-lserwl-thickl,lserhl);
+z5 = z4 shifted (thickl,0);
+z30 = (ss+userwl,h-userhl);
+z31 = z30 shifted (thickl,0);
+z32 = z31 shifted (hair+2userwl,0);
+z33 = z32 shifted (thickl/2,0);
+z34 = z33 shifted (hair+2userwl+thickl/2,-thinl);
+z35 = z34 shifted (thickl,0);
+z40 = z31 shifted (0,userhl);
+x35 := x5;
+x32 := x2;
+x34 := x4;
+z45 = 0.5[z32,z33];
+z46 = 0.5[z34,z35] shifted (0,thinl);
+z41 = 0.5[z40,z45];
+z42 = 0.5[z45,z46] shifted (0,userhl);
+z43 = z41 shifted (0,-thinl);
+z44 = z42 shifted (0,-thinl);
+z47 = 0.5[z31,z33] shifted (0,userhl+o);
+z48 = 0.5[z55,(x34,y34+thinl)] shifted (0,userhl+o);
+z49 = z33 shifted (0,-thinl);
+z50 = z31 shifted (0,-thinl);
+looph = y47-y41;
+z51 = z48 shifted (0,-looph);
+z52 = z47 shifted (0,-0.8thinl);
+z53 = z49 shifted (-hair/2,hair);
+z54 = z49 shifted (-thickl/2,hair);
+z55 = z33 shifted (thickl/2,0);
+x54 := x2;
+x55 := x3;
+y31 := y31 + thinl/2;
+
+llserif(0,6,7,8,9)(1);
+lrserif(1,10,11,12,13)(1);
+llserif(2,14,15,16,17)(1);
+lrserif(3,18,19,20,21)(1);
+llserif(4,22,23,24,25)(1);
+lrserif(5,26,27,28,29)(1);
+ulserif(30,36,37,38,39)(1);
+
+fill
+z1..z10..z11--z12--z8--z7..z6..z0--z30..z36..z37--z38--z40--z31{dir
+60}..{right}z47{right}..z55--z32..{right}z48{right}..{down}z35--z5..z26..z27--z28--z24--z23..z22..z4--z34{up}..{left}z51{left}..z55--z3..z18..z19--z20--z16--z15..z14..z2--z54..z41..z50--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar("n",1.2exw#+2ss#,ex#,0); "The Letter n";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w-ss-lserwl-thickstroke,lserhl);
+z3 = z2 shifted (thickl,0);
+z20 = (ss+userwl,h-userhl);
+z21 = z20 shifted (thickl,0);
+z22 = z21 shifted (0,userhl);
+z23 = (x2,y21);
+z24 = z23 shifted (thickl,-thinl);
+z29 = z20 shifted (0,userhl);
+z30 = z24 shifted (0,userhl+thinl);
+z31 = 0.5[z30,z29] shifted (0,o);
+z32 = z31 shifted (0,-0.8thinl);
+z33 = z28 shifted (0,-userhl);
+
+llserif(0,4,5,6,7)(1);
+lrserif(1,8,9,10,11)(1);
+llserif(2,12,13,14,15)(1);
+lrserif(3,16,17,18,19)(1);
+ulserif(20,25,26,27,28)(1);
+y21 := y23 := (y21 - thinl);
+
+fill
+z6--z5..z4..z0--z20..z25..z26--z27--z28--z33--z20..{right}z31{right}..{down}z24--z3..z16..z17--z18--z14--z13..z12..z2--z23..z32..z21--z1..z8..z9--z10--z6--cycle;
+
+lown := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar("r",exw#+2ss#,ex#,0); "The Letter r";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z10 = (ss+userwl,h-userhl);
+z11 = z10 shifted (thickl,-thinl);
+z16 = 0.5[(x11,y10),z10];
+llserif(0,2,3,4,5)(1);
+lrserif(1,6,7,8,9)(1);
+ulserif(10,12,13,14,15)(1);
+hookw = w-x15-ss-bulbsh;
+z17 = z16 shifted (hookw,userh/2);
+rbulb(17,19,20,21,22);
+z18 = 0.5[z16,z17]; y18 := h+o;
+z23 = z18 shifted (0,-thinl);
+z24 = 0.5[z17,z20];
+z25 = z16 shifted (thickl/2,-thinl);
+z26 = (z11..z23..z24) intersectionpoint (z21..z17..z19..z20);
+
+fill
+z1..z6..z7--z8--z4--z3..z2..z0--z10..z12..z13--z14--z15--z16--z10..{right}z18{right}..z17..z19..z20..z21{up}..z26..{down}z24{dir
+160}..z23..z11--cycle;
+
+lowr := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar("k",1.2exw#+2ss#,asch#,0); "The Letter k";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-userhl);
+z3 = z2 shifted (thickl,0);
+z16 = z3 shifted (0,userhl);
+z17 = (w-ss-lserwl,lserhl);
+z18 = z17 shifted (-slantl,0);
+z27 = (w-ss-hair-userwl,ex-userhl);
+z41 = (x17,y27);
+z28 = z27 shifted (-1.5thinl,0);
+z37 = 0.5[z41,z17]; x37 := x1;
+z38 = z37 shifted (0,slantl-o/2);
+z39 = 0.25[z38,z17];
+z40 = 0.30[z39,z38];
+z42 = z37 shifted (0,thinl);
+z43 = 0.1[z37,z27];
+z44 = 0.3[z43,z27];
+
+ulserif(2,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+lrserif(1,12,13,14,15)(1);
+llserif(18,19,20,21,22)(1);
+lrserif(17,23,24,25,26)(1);
+urserif(27,29,30,31,32)(1);
+ulserif(28,33,34,35,36)(1);
+
+fill
+z3--z16--z6--z5..z4..z2--z0..z8..z9--z10--z14--z13..z12..z1--z37--z43--z18..z19..z20--z21--z25--z24..z23..z17--z44--z27..z29..z30--z31--z35--z34..z33..z28--z42--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar("x",1.2exw#+2ss#,ex#,0); "The Letter x";
+
+z0 = (w/2,h/2);
+z1 = (ss+userwl,h-userhl);
+z2 = (w-ss-userwl,h-userhl);
+z3 = (ss+lserwl,lserhl);
+z4 = (w-ss-lserwl,lserhl);
+z5 = z1 shifted (curvl,0);
+z6 = z4 shifted (-curvl,0);
+z7 = z2 shifted (-thinl,0);
+z8 = z3 shifted (thinl,0);
+z41 = ba[z1,z6];
+z41 = bb[z7,z3];
+z42 = bc[z5,z4];
+z42 = bd[z7,z3];
+z43 = be[z8,z2];
+z43 = bf[z6,z1];
+z44 = bg[z8,z2];
+z44 = bh[z5,z4];
+
+ulserif(1,9,10,11,12)(1);
+urserif(5,13,14,15,16)(1);
+ulserif(7,17,18,19,20)(1);
+urserif(2,21,22,23,24)(1);
+llserif(3,25,26,27,28)(1);
+lrserif(8,29,30,31,32)(1);
+llserif(6,33,34,35,36)(1);
+lrserif(4,37,38,39,40)(1);
+
+fill z1--z41--z3..z25..z26--z27--z31--z30..z29..z8--z43--z6..z33..z34--z35--z39--z38..z37..z4--z44--z2..z21..z22--z23--z19--z18..z17..z7--z42--z5..z13..z14--z15--z11--z10..z9..z1--cycle;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar("s",0.8exw#+2ss#,ex#,0); "The Letter s";
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (w-ss-userhl,h-userhl/2);
+z3 = (w-ss,h/4);
+z4 = (ss,3h/4);
+z5 = (userhl+ss,curvl+userhl/2-o);
+z14 = z0 shifted (0,-thinstroke);
+z15 = z1 shifted (0,thinstroke);
+z16 = z4 shifted (curvl,0);
+z17 = z3 shifted (-curvl,0);
+z18 = z2 shifted (0,-curvl);
+z19 = z11 shifted (0,-curvl);
+z20 = z5 shifted (0,-curvl);
+z21 = z18 shifted (0,-userwl/3);
+z22 = z21 shifted (userhl,0);
+z24 = z2 shifted (0,userhl/2);
+z23 = z24 shifted (userhl,0);
+z25 = (w/2,h/2+1.3thinstroke/2);
+z26 = (w/2,h/2-1.3thinstroke/2);
+z10 = z5 shifted (0,userhl/2);
+z11 = z10 shifted (-userhl,0);
+z12 = z11 shifted (0,-0.5userhl-curvl-userwl/3);
+z13 = z12 shifted (userhl,0);
+
+%sctbackserif(5,10,11,12,13,20)(2);
+
+pickup pencircle scaled 1;
+
+fill
+z2..{left}z0{left}..{down}z4{down}..z26..{down}z17{down}..{left}z15{left}..z5--z10..z11--z12..z13--z20..{right}z1{right}..{up}z3{up}..z25..{up}z16{up}..{right}z14{right}..z18--z21..z22--z23..z24--cycle;
+
+%path outcurves; path incurves; path toprt;
+%outcurves = z2..tension 1.1..z0..tension
+%	1.1..z4..z26..z17..z15..tension 1.1..z5;
+%incurves = z20..tension 1.1..z1..tension
+%	1.1..z3..z25..z16..z14..tension 1.1..z18;
+%toprt = z18---z21..tension 2..z22---z23..tension 2..z24---z2;
+
+%fill outcurves & botlftserif & incurves & toprt & cycle;
+
+lows := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("v",1.2exw#+2ss#,ex#,0); "The Letter v";
+
+z1=(ss+userwl,h-userhl);
+z2=z1 shifted (slantwid,0);
+z3=z1-(0,2h/3);
+z4=z3+(thickl,0);
+z5=(w-ss-userwl,h-userhl);
+z6=z5 shifted (-thinl,0);
+z7=z5-(0,2h/3);
+z8=z7-(thinl,0);
+z9=(w/2,-o);
+z30=0.25[z9,z5];
+z10=z30-(thinl,0);
+z31 = 0.1[z9,z1];
+z32 = da[z2,z30];
+z32 = db[z6,z31];
+
+ulserif(1,11,12,13,14)(1);
+urserif(2,15,16,17,18)(1);
+ulserif(6,19,20,21,22)(1);
+urserif(5,23,24,25,26)(1);
+
+pickup cappen;
+
+fill z9--z5..z23..z24--z25--z21--z20..z19..z6--z32--z2..z15..z16--z17--z13--z12--z11..z1--z9--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("z",exw#+2ss#,ex#,0); "The Letter z";
+
+z0 = (ss+ssslant,h);
+z1 = (w-ss,h);
+z3 = (ss,0);
+z4 = (w-ss-ssslant,0);
+z9 = z0 shifted (lserw,-thinstroke);
+z10 = z1 shifted (-1.2curvwid,-thinstroke);
+z11 = z3 shifted (1.2curvwid,thinstroke);
+z12 = z4 shifted (-lserw,thinstroke);
+
+lftdownsideserif(0,5,6);
+upsideserif(4,7,8);
+
+fill z1--z0--z5..z6..z9--z10--z3--z4--z7..z8..z12--z11--z1--cycle;
+
+lowz := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("w",1.05em#+ss#,ex#,0); "The Letter w";
+
+dubbots=w/3;
+
+z1=(ss+userwl,h-userhl);
+z2=z1+(slantwid,0);
+z5=(w-ss-userwl,h-userhl);
+z6=z5 shifted (-thinl,0);
+z3 = 0.5[z2,z6] shifted (-thickl/2,0);
+z4 = z3 shifted (thickl,0);
+z7=(dubbots,-o);
+z8=(2dubbots,-o);
+z33=(w/2-o/2,3h/4-2.5o);
+pair lined; lined = z4-z33;
+%z44 = z8 shifted lined;
+z44 = z8 shifted (thickl,0) rotatedaround (z8,60);
+z45 = z8 shifted (-thinl,0);
+z34 = (z4--z44) intersectionpoint (z6..z45);
+lined := z1-z2;
+z46 = z7 shifted lined rotatedaround (z7,-120);
+z47 = z7 shifted (-thinl,0);
+z35 = (z3--z47) intersectionpoint (z2--z46);
+z36=0.94[z8,z3];
+
+pickup cappen;
+
+ulserif(1,9,10,11,12)(1);
+urserif(2,13,14,15,16)(1);
+ulserif(3,17,18,19,20)(1);
+urserif(4,21,22,23,24)(1);
+ulserif(6,25,26,27,28)(1);
+urserif(5,29,30,31,32)(1);
+
+fill z8--z5..z29..z30--z31--z27--z26..z25..z6--z34--z4..z21..z22--z23--z19--z18..z17..z3--z35--z2..z13..z14--z15--z11--z10..z9..z1--z7--z33--z8--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("y",1.2exw#+2ss#,ex#,dep#); "The Letter y";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (slantl,0);
+z2 = (w-ss-userwl,h-userhl);
+z3 = z2 shifted (-thinl,0);
+z4 = 0.6[z0,z2] shifted (0,-h+2lserhl);
+z21 = z4 shifted (-slantl,0);
+z23 = z4 shifted (-thinl,0);
+z22 = ca[z1,z4];
+z22 = cb[z3,z23];
+z24 = 1.4[z2,z4] shifted (-1.5thinl,0);
+x25 = x24-lserwl;
+y25 = -dep;
+z26 = z25 shifted (-1.5lserwl,2lserhl);
+z29 = z26 shifted (bulbsh,bulbsh);
+z30 = z26 shifted (2bulbsh,0);
+z31 = z29 shifted (0,-2bulbsh-hair);
+z33 = z31 shifted (0,bulbsh);
+z27 = z25 shifted (0,1.3thinl);
+z28 = z24 shifted (1.5thinl,0);
+
+ulserif(0,5,6,7,8)(1);
+urserif(1,9,10,11,12)(1);
+ulserif(3,13,14,15,16)(1);
+urserif(2,17,18,19,20)(1);
+
+fill
+z22--z1..z9..z10--z11--z7--z6..z5..z0---z21..z24..{left}z27{left}..{up}z33{down}..z30..z29..z26..z31..{right}z25{right}..z28---z4--z2..z17..z18--z19--z15--z14..z13..z3--cycle;
+
+lowy := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar(oct"370",exw#+2ss#,ex#,0); "The Letter slash o";
+
+pickup pencircle scaled thinl;
+bot lft z0 = (o,0);
+top rt z1 = (w-o,h);
+
+currentpicture := lowo;
+
+draw z0--z1;
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"033",1.3exw#+2ss#,asch#,0); "The ligature ff";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = (x0,ex-thinl);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z12 shifted (thickl,thinl);
+z16 = (ss+o,y12);
+z17 = z13 shifted (lserwl,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = 0.5[z18,z16] shifted (-o,0);
+z21 = z17 shifted (o,o);
+z22 = z33 shifted (-3bulbsh,0);
+z27 = 0.5[z3,z32]; y27 := h+o;
+z28 = z27 shifted (0,-thinl);
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+
+z30 = z1 shifted (2lserwl+hair,0);
+z31 = z30 shifted (thickl,0);
+z33 = (x31,y2);
+z32 = z33 shifted (-thickl,0);
+z42 = (x30,y12);
+z43 = z42 shifted (thickl,0);
+z44 = z42 shifted (0,thinl);
+z45 = z43 shifted (0,thinl);
+z46 = z42 shifted (-lserwl,0);
+z47 = z43 shifted (lserwl,0);
+z48 = z46 shifted (0,thinl);
+z49 = z47 shifted (0,thinl);
+z50 = z46 shifted (-o,o);
+z51 = z47 shifted (o,o);
+z52 = z47 shifted (o,h/3-o);
+z57 = 0.5[z33,z52]; y57 := (h+o);
+z58 = z57 shifted (0,-thinl);
+
+lrserif(31,34,35,36,37)(1);
+llserif(30,38,39,40,41)(1);
+dlftbulb(52,53,54,55,56);
+
+fill z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--
+	z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..
+	{right}z25{down}..{left}z28{left}..{down}z3--z15--
+	z19..z45--z43--z13--cycle;
+flig := currentpicture;
+fill z31..z34..z35--z36--z40--z39..z38..z30--z42--z13--z15--
+	z44--z32{up}..{right}z57{right}..{down}z54..z53..z52..
+	{right}z55{down}..{left}z58{left}..{down}z33--z45--z49..
+	z51..z47--z43--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62);
+endchar;
+
+beginchar(oct"035",1.2exw#+2ss#,asch#,0); "The ligature fl";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = (x0,ex-thinl);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z13 shifted (0,thinl);
+z16 = z12 shifted (-lserwl,0);
+z17 = z13 shifted (lserwl,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = 0.5[z18,z16] shifted (-o,0);
+z21 = z17 shifted (o,o);
+z27 = z3 shifted (userwl,thickl);
+z28 = z27 shifted (0,-thinl);
+% the l part
+z30 = z1 shifted (2lserwl+hair,0);
+z31 = z30 shifted (thickl,0);
+z32 = (x30,h-userhl);
+z33 = z32 shifted (thickl,0);
+z46 = z33 shifted (0,userhl);
+z47 = aca[z32,z30];
+z47 = acb[z19,(w,y19)];
+z48 = acc[z32,z30];
+z48 = acd[z17,(w,y17)];
+z49 = z47 shifted (2o,0);
+z50 = z48 shifted (2o,0);
+z22 = (x47-(2bulbsh-thickl),y3);
+llserif(30,38,39,40,41)(1);
+lrserif(31,42,43,44,45)(1);
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+fill z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--
+	z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..
+	{right}z25--z22--z32..{left}z28{left}..{down}z3--z15--
+	z49--z50--z13--cycle;
+
+fill z30--z32--z33--z31..z42..z43--z44--z40--z39..z38..
+	z30..cycle;
+
+fllig := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar(oct"036",1.85exw#+2ss#,asch#,0); "The ligature ffi";
+
+currentpicture := flig + filig shifted (hair+2lserwl+thickl,0);
+
+endchar;
+
+beginchar(oct"040",((exw#/phi)*2)+ss#+2o#,asch#,0); "The ligature ft";
+
+currentpicture := flig + lowt shifted (1.5lserwl+thickl,0);
+
+endchar;
+
+beginchar(oct"037",1.85exw#+2ss#,asch#,0); "The ligature ffl";
+
+currentpicture := flig + fllig shifted
+	(hair+2lserwl+thickl,0);
+
+endchar;
+
+beginchar(oct"376",1.2exw#+2ss#,asch#,dep#); "The Letter thorn";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+userwl,lserhl);
+z3 = z2 shifted (thickl,0);
+z12 = z1 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+x19 = (w-x13); y19 = ex/2;
+z20 = (w-ss,y19);
+z21 = (x2,y19);
+z22 = z21 shifted (thickl,0);
+z23 = z20 shifted (-curvl,0);
+x24 = x2; y24 = -dep+lserhl;
+x25 = x3; y25 = -dep+lserhl;
+z26 = z25 shifted (0,-lserhl);
+z14 = 0.5[z21,z20]; y14 := ex+o;
+z15 = z14 shifted (0,-thinl);
+z16 = (x14,0-o);
+z17 = z16 shifted (0,thinl);
+
+ulserif(0,4,5,6,7)(1);
+llserif(24,8,9,10,11)(1);
+lrserif(25,27,28,29,30)(1);
+
+fill z0..z4..z5--z6--z12--z25..z27..z28--z29--z10--z9..z8..z24--z2--cycle;
+fill
+z21{up}..{right}z14{right}..{down}z20{down}..{left}z16{left}..{up}z21..cycle;
+unfill
+z22{up}..{right}z15{right}..{down}z23{down}..{left}z17{left}..{up}z22..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+
+beginchar(oct"027",exw#+2ss#,asch#,dep#); "The ligature fj";
+
+z0 = (ss+lserwl,lserh);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = z2 shifted (0,-h/3+o);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z13 shifted (0,thinl);
+z16 = z12 shifted (-lserwl,0);
+z17 = z13 shifted (lserwl+2thickl-o,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = z16 shifted (-o,o);
+z21 = z17 shifted (o,o);
+z22 = z17 shifted (-2bulbsh,h/3-userhl);
+z27 = z3 shifted (thickl+2o,thickl);
+z28 = z27 shifted (0,-thinl);
+z30 = (w-ss-thickl,lserhl);
+z31 = z30 shifted (thickl,0);
+z32 = (w-ss-thickl,y13);
+z33 = z32 shifted (thickl,0);
+z46 = z33 shifted (0,userhl);
+z49 = (x30-thickl,-dep);
+z50 = z49 shifted (0,thinl);
+z51 = (x30-2.5thickl,-dep/2);
+
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+ulserif(32,34,35,36,37)(1);
+ulftbulb(51,52,53,54,55);
+
+y34 := y13;
+y46 := y15;
+
+fill
+z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..{right}z25{dir
+160}..{left}z28{left}..{down}z3--z15--z46--z31{down}..z49..z51..z52..z53..{left}z54{down}..z50..{up}z30--z32..z34--z13--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57);
+
+endchar;
+
+beginchar(oct"255",exw#+2ss#,ex#,dep#); "The Letter ng";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = z1 shifted (o+2lserwl,0);
+z3 = z2 shifted (thickl,0);
+z20 = (ss+userwl,h-userhl);
+z21 = z20 shifted (thickl,0);
+z22 = z21 shifted (0,userhl);
+z23 = z21 shifted (o+2userwl,0);
+z24 = z23 shifted (thickl,-thinl);
+z29 = z20 shifted (0,userhl);
+z30 = z24 shifted (0,userhl+thinl);
+z31 = 0.5[z30,z29] shifted (0,o/2);
+z32 = z31 shifted (0,-0.8thinl);
+z33 = z28 shifted (0,-userhl);
+z40 = z2;
+z41 = z3;
+z49 = (x40-6o,-dep);
+z50 = z49 shifted (0,thinl);
+z51 = (x1,-dep/2);
+z56 = 0.5[z2,(x2,-dep)];
+
+llserif(0,4,5,6,7)(1);
+lrserif(1,8,9,10,11)(1);
+ulserif(20,25,26,27,28)(1);
+ulftbulb(51,52,53,54,55);
+
+fill
+z6--z5..z4..z0--z20..z25..z26--z27--z28--z33--z20..{right}z31{right}..{down}z24--z3{down}..z49..{up}z51..z52..z53..{left}z54{down}..z50..z56..{up}z2--z23..z32..z21--z1..z8..z9--z10--z6--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56);
+endchar;
+
+beginchar(oct"236",1.2exw#+2ss#,asch#,0); "The Letter d-bar";
+
+currentpicture := lowd;
+
+pickup pencircle scaled thinl;
+lft z24 = (w/2,h-2userw);
+rt z25 = (w-ss,h-2userw);
+
+draw z24--z25;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"377",1.1exw#+2ss#,asch#,0); "The Letter Eszett";
+
+z0 = (w/2,h+o/2);
+z1 = (w-ss-thickl/2,3h/4);
+z2 = (w-ss,h/4);
+z3 = (ss+lserwl,lserhl);
+z4 = (x3,h-userwl);
+z5 = z3 shifted (thickl,0);
+z6 = z2 shifted (-thickl,0);
+z7 = z1 shifted (-thickl,0);
+z8 = z0 shifted (0,-thinl);
+z9 = z5 shifted (0,-lserhl);
+z14 = z4 shifted (thickl,0);
+z15 = (w/2,h/2+thinl);
+z16 = z15 shifted (0,-thinl);
+z17 = (x14,y15);
+z18 = (x5,y16);
+z19 = (x5+thickl,y5);
+z20 = z19 shifted (bulbsh,bulbsh);
+z21 = z20 shifted (-bulbsh,bulbsh);
+z22 = z21 shifted (-bulbsh,-bulbsh);
+z23 = (x19,0);
+
+llserif(3,10,11,12,13)(1);
+
+pickup pencircle scaled 1;
+
+fill
+z9--z12--z11..z10..z3--z4{up}..{right}z0{right}..{down}z1{down}..{left}z16--z15{right}..{down}z2{down}..{left}z23..z22..z21..z20{down}..{left}z19{right}..{up}z6{up}..{left}z16--z18--z17--z15{right}..{up}z7{up}..{left}z8{left}..{down}z14---cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"360",exw#+2ss#,asch#,0); "The Letter eth";
+
+z0 = (ss,h);
+z1 = z0 shifted (0,-thinl);
+z2 = 0.5[z0,z1] shifted (-o,0);
+z3 = (w/2,ex+o/2);
+z4 = z3 shifted (0,-thinl);
+z5 = (w/2,-o/2);
+z6 = z5 shifted (0,thinl);
+z7 = (ss,ex/2);
+z8 = z7 shifted (thickl,0);
+z9 = (w-ss,ex/2);
+z10 = z9 shifted (-thickl,0);
+
+fill
+z7{up}..{right}z3{right}..{down}z9{down}..{left}z5{left}..{up}cycle;
+unfill
+z8{up}..{right}z4{right}..{down}z10{down}..{left}z6{left}..{up}cycle;
+fill z9{up}..{left}z0..z2..z1{right}..{down}z10--cycle;
+
+pickup pencircle scaled thinl;
+top rt z11 = (3w/4,h);
+z13 = (0,h/2);
+bot lft z14 = (z11--z13) intersectionpoint
+	(z10{up}..{left}z1);
+z12 = 2.5[z11,z14];
+draw z11--z12;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"346",1.4exw#+2ss#,ex#,0); "the ligature ae (aesc)";
+
+hw = w/2;
+z0 = (ss,3h/4);
+z1 = (hw/2+ss/2,h+o);
+z2 = (hw+thickl/2,2h/3);
+z3 = (hw+thickl/2,lserhl);
+z8 = z3 shifted (-thickl/2,0);
+z9 = (hw/2+ss,-o);
+z10 = (ss-o,h/4);
+z15 = z2 shifted (-thickl,0);
+z16 = z1 shifted (0,-thinl);
+z17 = z9 shifted (0,thinl);
+z18 = z10 shifted (thickl,0);
+z19 = z3 shifted (-thickl,lserhl);
+z20 = (hw/2-thickl,3h/8);
+z21 = z20 shifted (thickl/2,-thinl);
+z22 = 0.2[z15,z19];
+z23 = z19 shifted (-thinl,0);
+z24 = z22 shifted (0,-thickl/2);
+z25 = z16 shifted (.5thickl,0);
+% e part
+z30 = (w-hw/2-ss,h+o);
+z31 = (w-ss,h/2);
+z33 = z30 shifted (0,-thinl);
+z34 = (hw-thickl/2,h/2);
+z35 = z34 shifted (thickl,0);
+z36 = z30 shifted (0,-h-o);
+z37 = z36 shifted (0,thinl);
+z38 = z31 shifted (0,-h/4);
+z39 = z38 shifted (0,hair/2);
+z40 = z39 shifted (-hair/2,0);
+z41 = z31 shifted (-thickl,thinl);
+z42 = z35 shifted (0,thinl);
+
+drtbulb(0,11,12,13,14);
+
+fill
+z13..z12..z11..z0{up}..z1..{down}z2--z3--z8..z9..{up}z10..z22--z15{up}..z25{left}..z16..z13..cycle;
+unfill z18{up}..z24--z19..{left}z17..cycle;
+
+fill
+z31{up}..{left}z30{left}..{down}z34{down}..{right}z36{right}..z38..z39..z40..{left}z37{left}..{up}z35{up}..{right}z33{right}..{down}z41--z42--z35--z31--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"367",1.4exw#+2ss#,ex#,0); "the ligature oe";
+
+z30 = (hw+hw/2-ss,h+o);
+z31 = (w-ss,h/2);
+z33 = z30 shifted (0,-thinl);
+z34 = (w/2-thickl/2,h/2);
+z35 = z34 shifted (thickl,0);
+z36 = z30 shifted (0,-h-o);
+z37 = z36 shifted (0,thinl);
+z38 = z31 shifted (0,-h/4);
+z39 = z38 shifted (0,hair/2);
+z40 = z39 shifted (-hair/2,0);
+z41 = z31 shifted (-thickl,thinl);
+z42 = z35 shifted (0,thinl);
+% o part
+z0 = (ss,h/2);
+z1 = (hw/2+ss,h+o);
+z2 = z0 shifted (thickl,0);
+z3 = z1 shifted (0,-thinl);
+z4 = (hw/2+ss,-o/2);
+z5 = z4 shifted (0,thinl);
+
+fill z1..z35..z4..z0..cycle;
+unfill z3..z34..z5..z2..cycle;
+
+fill
+z31{up}..{left}z30{left}..{down}z34{down}..{right}z36{right}..z38..z39..z40..{left}z37{left}..{up}z35{up}..{right}z33{right}..{down}z41--z42--z35--z31--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"136",exw#+ss#+5em#/6,cap#,0);"The ligature Th";
+
+z1=(ss+userh,h);
+z2=z1-(0,thinstroke);
+z3=(5em/6-ss,h);
+z4=z3-(0,thinstroke);
+z5=((5em/6)/2-thickstroke/2,y2);
+z6=((5em/6)/2+thickstroke/2,y2);
+z7=(x5,lserh);
+z8=z7+(thickstroke,0);
+
+llserif(7,9,10,11,12)(1);
+lrserif(8,13,14,15,16)(1);
+tlsideserif(1,17,18,19,20);
+trsideserif(3,21,22,23,24);
+y11 := 0; y15 := 0;
+
+fill z7..z9..z10--z11--z15--z14..z13..z8--z6--z4--z3--z1..z17{left}..{left}z18{down}..tension 2..z19..z20{up}---z2--z5--z7--cycle;
+fill hone shifted (x3-userwl-ss,0);
+fill htwo shifted (x3-userwl-ss,0);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

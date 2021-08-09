@@ -1,0 +1,113 @@
+% CM-style Sans Serif Slanted Caps and Small Caps 8 point
+% Based on fonts by Donald Knuth
+% By Ariel Barton, 2013/4/21
+if unknown cmbase: input cmbase fi
+
+font_identifier:="CMSSCSCI"; font_size 8pt#;
+% first come parameters used to set the uppercase letters
+% (including some for lowercase that aren't actually used)
+u#:=18/36pt#;                   % eczi0800 % unit width
+width_adj#:=12/36pt#;           % cmssi8 % width adjustment for certain characters
+serif_fit#:=-6/36pt#;           % cmssi8 % extra sidebar near lowercase serifs
+cap_serif_fit#:=-8.5/36pt#;     % cmssi8 % extra sidebar near uppercase serifs
+letter_fit#:=5/36pt#;           % eczi0800 % extra space added to all sidebars
+
+body_height#:=216/36pt#;        % cmssi8 % height of tallest characters
+asc_height#:=200/36pt#;         % cmssi8 % height of lowercase ascenders
+cap_height#:=200/36pt#;         % cmssi8 % height of caps
+fig_height#:=189/36pt#;         % cmssi8 % height of numerals
+x_height#:=128/36pt#;           % cmssi8 % height of lowercase without ascenders
+math_axis#:=72/36pt#;           % cmssi8 % axis of symmetry for math symbols
+bar_height#:=63/36pt#;          % cmssi8 % height of crossbar in lowercase e
+comma_depth#:=37/36pt#;         % cmssi8 % depth of comma below baseline
+desc_depth#:=56/36pt#;          % cmssi8 % depth of lowercase descenders
+
+crisp#:=0pt#;                   % cmssi8 % diameter of serif corners
+tiny#:=0pt#;                    % cmssi8 % diameter of rounded corners
+fine#:=0pt#;                    % cmssi8 % diameter of sharply rounded corners
+thin_join#:=15/36pt#;           % cmssi8 % width of extrafine details
+hair#:=25/36pt#;                % cmssi8 % lowercase hairline breadth
+stem#:=25/36pt#;                % cmssi8 % lowercase stem breadth
+curve#:=25/36pt#;               % cmssi8 % lowercase curve breadth
+ess#:=25/36pt#;                 % cmssi8 % breadth in middle of lowercase s
+flare#:=22/36pt#;               % cmssi8 % diameter of bulbs or breadth of terminals
+dot_size#:=26/36pt#;            % cmssi8 % diameter of dots
+cap_hair#:=25/36pt#;            % cmssi8 % uppercase hairline breadth
+cap_stem#:=29/36pt#;            % cmssi8 % uppercase stem breadth
+cap_curve#:=29/36pt#;           % cmssi8 % uppercase curve breadth
+cap_ess#:=28/36pt#;             % cmssi8 % breadth in middle of uppercase s
+rule_thickness#:=12.96/36pt#;   % cmssi8 % thickness of lines in math symbols
+
+dish#:=0pt#;                    % cmssi8 % amount erased at top or bottom of serifs
+bracket#:=0pt#;                 % cmssi8 % vertical distance from serif base to tangent
+jut#:=0pt#;                     % cmssi8 % protrusion of lowercase serifs
+cap_jut#:=0pt#;                 % cmssi8 % protrusion of uppercase serifs
+beak_jut#:=0pt#;                % cmssi8 % horizontal protrusion of beak serifs
+beak#:=0.4/36pt#;               % cmssi8 % vertical protrusion of beak serifs
+vair#:=19/36pt#;                % cmssi8 % vertical diameter of hairlines
+notch_cut#:=16/36pt#;           % cmssi8 % maximum breadth above or below notches
+bar#:=18/36pt#;                 % cmssi8 % lowercase bar thickness
+slab#:=20/36pt#;                % cmssi8 % serif and arm thickness
+cap_bar#:=19/36pt#;             % cmssi8 % uppercase bar thickness
+cap_band#:=17/36pt#;            % cmssi8 % uppercase thickness above/below lobes
+cap_notch_cut#:=22/36pt#;       % cmssi8 % max breadth above/below uppercase notches
+serif_drop#:=2/36pt#;           % cmssi8 % vertical drop of sloped serifs
+stem_corr#:=1/36pt#;            % cmssi8 % for small refinements of stem breadth
+vair_corr#:=1/36pt#;            % cmssi8 % for small refinements of hairline height
+apex_corr#:=4/36pt#;            % cmssi8 % extra width at diagonal junctions
+
+o#:=6/36pt#;                    % cmssi8 % amount of overshoot for curves
+apex_o#:=0pt#;                  % cmssi8 % amount of overshoot for diagonal junctions
+
+slant:=0.21255;                 % cmssi8 % tilt ratio $(\Delta x/\Delta y)$
+fudge:=0.93;                    % cmssi8 % factor applied to weights of heavy characters
+math_spread:=0.4;               % cmssi8 % extra openness of math symbols
+superness:=0.7071;              % cmssi8 % parameter for superellipses
+superpull:=0.05;                % cmssi8 % extra openness inside bowls
+beak_darkness:=0;               % cmssi8 % fraction of triangle inside beak serifs
+ligs:=1;                        % cmcsc10 % level of ligatures to be included
+
+square_dots:=true;              % cmssi8 % should dots be square?
+hefty:=true;                    % cmssi8 % should we try hard not to be overweight?
+serifs:=false;                  % cmssi8 % should serifs and bulbs be attached?
+monospace:=false;               % cmssi8 % should all characters have the same width?
+variant_g:=false;               % cmssi8 % should an italic-style g be used?
+low_asterisk:=false;            % cmssi8 % should the asterisk be centered at the axis?
+math_fitting:=false;            % cmcsc10 % should math-mode spacing be used?
+
+
+% now come replacements used to set the lowercase caps
+
+lower.u#:=13/36pt#;             % eczi0800 % unit width
+lower.width_adj#:=9/36pt#;      % eczi0800 % width adjustment for certain characters
+lower.cap_serif_fit#:=-6.43/36pt#;% eczi0800 % extra sidebar near uppercase serifs
+lower.letter_fit#:=2/36pt#;     % eczi0800 % extra space added to all sidebars
+
+lower.body_height#:=146/36pt#;  % eczi0800 % height of tallest characters
+lower.cap_height#:=138/36pt#;   % eczi0800 % height of caps
+lower.x_height#:=87.7/36pt#;    % eczi0800 % height of lowercase without ascenders
+lower.bar_height#:=43.1/36pt#;  % eczi0800 % height of crossbar in lowercase e
+lower.comma_depth#:=25.1/36pt#; % eczi0800 % depth of comma below baseline
+
+lower.flare#:=15.48/36pt#;      % eczi0800 % diameter of bulbs or breadth of terminals
+lower.cap_hair#:=20/36pt#;      % eczi0800 % uppercase hairline breadth
+lower.stem#:=20.45/36pt#;       % eczi0800 % lowercase stem breadth
+lower.cap_stem#:=22.43/36pt#;   % eczi0800 % uppercase stem breadth
+lower.cap_curve#:=23.19/36pt#;  % eczi0800 % uppercase curve breadth
+lower.cap_ess#:=20.74/36pt#;    % eczi0800 % breadth in middle of uppercase s
+
+lower.cap_jut#:=0pt#;           % eczi0800 % protrusion of uppercase serifs
+lower.beak_jut#:=0pt#;          % eczi0800 % horizontal protrusion of beak serifs
+lower.beak#:=0.27/36pt#;        % eczi0800 % vertical protrusion of beak serifs
+lower.slab#:=16/36pt#;          % eczi0800 % serif and arm thickness
+lower.cap_bar#:=15.2/36pt#;     % eczi0800 % uppercase bar thickness
+lower.cap_band#:=13.6/36pt#;    % eczi0800 % uppercase thickness above/below lobes
+lower.cap_notch_cut#:=22/36pt#; % eczi0800 % max breadth above/below uppercase notches
+
+lower.o#:=3/36pt#;              % eczi0800 % amount of overshoot for curves
+lower.apex_o#:=0pt#;            % eczi0800 % amount of overshoot for diagonal junctions
+
+lower.fudge:=0.93;              % eczi0800 % factor applied to weights of heavy characters
+
+
+generate csc      % switch to the driver file

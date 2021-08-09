@@ -1,0 +1,82 @@
+% tkz-tools-text.tex
+% Copyright 2020 by Alain Matthes
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+\def\fileversion{3.02c}
+\def\filedate{2020/01/24} 
+\typeout{2020/01/24 3.02c  tkz-tools-text.tex}   
+\makeatletter
+%<--------------------------------------------------------------------------–>
+%                                         tkzText
+%<--------------------------------------------------------------------------–>
+\def\tkz@parsenode#1{%
+\tkz@getvirg#1,\@nil
+\iftkz@node  
+\else
+  \tkz@getfromcart#1\@nil   
+\fi  
+}   
+\def\tkz@getvirg#1,#2\@nil{%
+\ifx\tkzempty#2\tkzempty%
+   \tkz@nodetrue 
+\else
+   \tkz@nodefalse  
+\fi
+}      
+\def\tkzText{\pgfutil@ifnextchar[{\tkz@Text}{\tkz@Text[]}}
+\def\tkz@Text[#1](#2)#3{%
+ \begingroup
+    \tkz@parsenode{#2} 
+ \iftkz@node 
+   \node[#1] at (#2){#3}; 
+ \else
+  \edef\tkzpt@xa{\fpeval{(\tkz@absc-\tkz@init@xorigine)/\tkz@init@xstep}}
+  \edef\tkzpt@ya{\fpeval{(\tkz@ord-\tkz@init@yorigine)/\tkz@init@ystep}}
+  \node[#1] at (\tkzpt@xa,\tkzpt@ya){#3};% 
+  \fi
+\endgroup
+}%
+% %<--------------------------------------------------------------------------–>
+% %                                    légende
+% %<--------------------------------------------------------------------------–>
+\pgfkeys{/tkzlegend/.cd,  
+   line/.is if                 =    tkz@legend@line,
+   line/.default               =    true,
+   line                 =  false,
+   /tkzlegend/.search also     =    {/tikz}, 
+}
+\def\tkzLegend{\pgfutil@ifnextchar[{\tkz@Legend}{\tkz@Legend[]}} 
+\def\tkz@Legend[#1](#2,#3)#4{%
+\pgfqkeys{/tkzlegend}{#1}
+\begingroup  
+  \c@pgfmath@counta=0 %
+  \edef\tkzpt@xa{\fpeval{(#2-\tkz@init@xorigine)/\tkz@init@xstep}}
+  \edef\tkzpt@ya{\fpeval{(#3-\tkz@init@yorigine)/\tkz@init@ystep}}
+  \node[/tkzlegend/.cd,#1] at (\tkzpt@xa,\tkzpt@ya) {%
+\begin{tikzpicture}
+   \foreach \motif/\size/\col/\mtext in {#4}{%
+       \iftkz@legend@line
+          \draw[color      = \col,
+                line width = \size,
+                style      = \motif,
+                text       = \tkz@mainlinecolor]%
+          (0cm ,\the\c@pgfmath@counta ex)--%
+               (\tkz@legend@line@len,\the\c@pgfmath@counta ex) 
+       \else  
+          \draw plot[mark size    = \size,%
+                     mark         = \motif,%
+                     mark options = {color=\col}]%
+           coordinates{(0 ex,\the\c@pgfmath@counta ex)}%
+         \fi
+           node[right=1ex] {\mtext};
+          \global\advance\c@pgfmath@counta by 3 %  
+       }% 
+
+\end{tikzpicture}%
+};% 
+\endgroup
+}   
+
+\makeatother
+\endinput

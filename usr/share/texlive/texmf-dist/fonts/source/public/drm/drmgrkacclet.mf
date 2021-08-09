@@ -1,0 +1,651 @@
+% +AMDG  This document was begun on 12 July 11EX, the feast
+% of St. Bonaventure, BCD, and it is humbly dedicated to him
+% and to the Immaculate Heart of Mary for their prayers, and
+% to the Sacred Heart of Jesus for His mercy.
+
+beginchar(oct"011",em#+2ss#,cap#,0); "The Letter A, iota";
+italcorr(ex#*slant);
+
+currentpicture := capa + capiotasub shifted (w-0.25lserw,-0.25h);
+
+endchar;
+
+beginchar(oct"012",em#+2ss#,cap#,0); "The Letter H, iota";
+italcorr(ex#*slant);
+
+currentpicture := caph + capiotasub shifted (w-0.25lserw,-0.25h);
+
+endchar;
+
+beginchar(oct"013",5em#/6+2ss#,cap#,0); "The Letter Omega, iota";
+italcorr(ex#*slant);
+
+currentpicture := capiotasub shifted (w-0.25lserw,-0.25h);
+fill omega;
+
+endchar;
+
+beginchar(oct"014",em#+2ss#,cap#,0); "The Letter A";
+italcorr(ex#*slant);
+
+currentpicture := capa;
+
+endchar;
+
+beginchar(oct"015",5em#/6+2ss#,cap#,0); "Upsilon with diaresis";
+italcorr(ex#*slant);
+
+currentpicture := diaresis shifted
+	(pwid/2+ss,h-ex/2-1.5pwid);
+fill capwhy;
+
+endchar;
+
+beginchar(oct"016",ex#+2ss#,ex#,0); "The letter alpha";
+italcorr(ex#*slant);
+
+currentpicture := alpha;
+
+endchar;
+
+beginchar(oct"017",1.2ex#+2ss#,ex#,0); "upsilon with diaresis";
+italcorr(ex#*slant);
+
+currentpicture := upsilon + diaresis shifted
+	(pwid/2+ss,0);
+
+endchar;
+
+beginchar(oct"200",ex#+2ss#,ex#,0); "alpha with grave";
+italcorr(ex#*slant);
+currentpicture := alpha + highgrave;
+endchar;
+
+beginchar(oct"201",ex#+2ss#,ex#,0); "alpha with rough";
+italcorr(ex#*slant);
+currentpicture := alpha + roughbreath shifted (pwid,0);
+endchar;
+
+beginchar(oct"202",ex#+2ss#,ex#,0); "alpha with smooth";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothbreath shifted (pwid,0);
+endchar;
+
+beginchar(oct"203",ex#+2ss#,ex#,0); "alpha with roughgrave";
+italcorr(ex#*slant);
+currentpicture := alpha + roughgrave shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"204",ex#+2ss#,ex#,0); "alpha with grave iota";
+italcorr(ex#*slant);
+currentpicture := alpha + highgrave + iotasub;
+endchar;
+
+beginchar(oct"205",ex#+2ss#,ex#,0); "alpha with rough iota";
+italcorr(ex#*slant);
+currentpicture := alpha + roughbreath shifted (pwid,0) + iotasub;
+endchar;
+
+beginchar(oct"206",ex#+2ss#,ex#,0); "alpha with smooth iota";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothbreath shifted (pwid,0) + iotasub;
+endchar;
+
+beginchar(oct"207",ex#+2ss#,ex#,0); "alpha with roughacute iota";
+italcorr(ex#*slant);
+currentpicture := alpha + roughgrave shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"210",ex#+2ss#,ex#,0); "alpha with acute";
+italcorr(ex#*slant);
+currentpicture := alpha + highacute;
+endchar;
+
+beginchar(oct"211",ex#+2ss#,ex#,0); "alpha with roughacute";
+italcorr(ex#*slant);
+currentpicture := alpha + roughacute shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"212",ex#+2ss#,ex#,0); "alpha with smoothacute";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothacute shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"213",ex#+2ss#,ex#,0); "alpha with smoothgrave";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothgrave shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"214",ex#+2ss#,ex#,0); "alpha with acute iota";
+italcorr(ex#*slant);
+currentpicture := alpha + highacute + iotasub;
+endchar;
+
+beginchar(oct"215",ex#+2ss#,ex#,0); "alpha with roughacute iota";
+italcorr(ex#*slant);
+currentpicture := alpha + roughacute shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"216",ex#+2ss#,ex#,0); "alpha with smoothacute iota";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothacute shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"217",ex#+2ss#,ex#,0); "alpha with smoothgrave iota";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothgrave shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"220",ex#+2ss#,ex#,0); "alpha with tilde";
+italcorr(ex#*slant);
+currentpicture := alpha + tilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"221",ex#+2ss#,ex#,0); "alpha with roughtilde";
+italcorr(ex#*slant);
+currentpicture := alpha + roughtilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"222",ex#+2ss#,ex#,0); "alpha with smoothilde";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothtilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"224",ex#+2ss#,ex#,0); "alpha with iota and tilde";
+italcorr(ex#*slant);
+currentpicture := alpha + tilde shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"225",ex#+2ss#,ex#,0); "alpha with iota and roughtilde";
+italcorr(ex#*slant);
+currentpicture := alpha + roughtilde shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"226",ex#+2ss#,ex#,0); "alpha with iota and smoothilde";
+italcorr(ex#*slant);
+currentpicture := alpha + smoothtilde shifted (pwid/2,0) + iotasub;
+endchar;
+
+beginchar(oct"230",ex#+2ss#,ex#,dep#); "eta grave";
+currentpicture := eta + highgrave shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"231",ex#+2ss#,ex#,dep#); "eta rough";
+currentpicture := eta + roughbreath shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"232",ex#+2ss#,ex#,dep#); "eta smooth";
+currentpicture := eta + smoothbreath shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"234",ex#+2ss#,ex#,dep#); "eta grave iota";
+currentpicture := eta + highgrave shifted (pwid/4,0) +
+	iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"235",ex#+2ss#,ex#,dep#); "eta rough iota";
+currentpicture := eta + roughbreath shifted (3pwid/4,0) +
+	iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"236",ex#+2ss#,ex#,dep#); "eta smooth iota";
+currentpicture := eta + smoothbreath shifted (3pwid/4,0) +
+	iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"240",ex#+2ss#,ex#,dep#); "eta acute";
+currentpicture := eta + highacute shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"241",ex#+2ss#,ex#,dep#); "eta rough acute";
+currentpicture := eta + roughacute shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"242",ex#+2ss#,ex#,dep#); "eta smooth acute";
+currentpicture := eta + smoothacute shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"243",ex#+2ss#,ex#,dep#); "eta rough grave";
+currentpicture := eta + roughgrave shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"244",ex#+2ss#,ex#,dep#); "eta acute iota";
+currentpicture := eta + highacute shifted (pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"245",ex#+2ss#,ex#,dep#); "eta rough acute iota";
+currentpicture := eta + roughacute shifted (3pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"246",ex#+2ss#,ex#,dep#); "eta smooth acute iota";
+currentpicture := eta + smoothacute shifted (3pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"247",ex#+2ss#,ex#,dep#); "eta rough grave iota";
+currentpicture := eta + roughgrave shifted (3pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"250",ex#+2ss#,ex#,dep#); "eta tilde";
+currentpicture := eta + tilde shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"251",ex#+2ss#,ex#,dep#); "eta rough tilde";
+currentpicture := eta + roughtilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"252",ex#+2ss#,ex#,dep#); "eta smooth tilde";
+currentpicture := eta + smoothtilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"253",ex#+2ss#,ex#,dep#); "eta smooth grave";
+currentpicture := eta + smoothgrave shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"254",ex#+2ss#,ex#,dep#); "eta tilde iota";
+currentpicture := eta + tilde shifted (pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"255",ex#+2ss#,ex#,dep#); "eta rough tilde iota";
+currentpicture := eta + roughtilde shifted (pwid/2,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"256",ex#+2ss#,ex#,dep#); "eta smooth tilde iota";
+currentpicture := eta + smoothtilde shifted (pwid/2,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"257",ex#+2ss#,ex#,dep#); "eta smooth tilde iota";
+currentpicture := eta + smoothgrave shifted (3pwid/4,0)
+	+ iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"260",1.5ex#+2ss#,ex#,0); "omega grave";
+italcorr(ex#*slant);
+currentpicture := omlow + highgrave shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"261",1.5ex#+2ss#,ex#,0); "omega rough";
+italcorr(ex#*slant);
+currentpicture := omlow + roughbreath shifted (5pwid/4,0);
+endchar;
+
+beginchar(oct"262",1.5ex#+2ss#,ex#,0); "omega smooth";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothbreath shifted (5pwid/4,0);
+endchar;
+
+beginchar(oct"263",1.5ex#+2ss#,ex#,0); "omega roughgrave";
+italcorr(ex#*slant);
+currentpicture := omlow + roughgrave shifted (pwid,0);
+endchar;
+
+beginchar(oct"264",1.5ex#+2ss#,ex#,0); "omega grave iota";
+italcorr(ex#*slant);
+currentpicture := omlow + highgrave shifted (3pwid/4,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"265",1.5ex#+2ss#,ex#,0); "omega rough iota";
+italcorr(ex#*slant);
+currentpicture := omlow + roughbreath shifted (5pwid/4,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"266",1.5ex#+2ss#,ex#,0); "omega smooth iota";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothbreath shifted (5pwid/4,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"267",1.5ex#+2ss#,ex#,0); "omega roughgrave iota";
+italcorr(ex#*slant);
+currentpicture := omlow + roughgrave shifted (pwid,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"270",1.5ex#+2ss#,ex#,0); "omega acute";
+italcorr(ex#*slant);
+currentpicture := omlow + highacute shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"271",1.5ex#+2ss#,ex#,0); "omega rough acute";
+italcorr(ex#*slant);
+currentpicture := omlow + roughacute shifted (pwid,0);
+endchar;
+
+beginchar(oct"272",1.5ex#+2ss#,ex#,0); "omega smooth acute";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothacute shifted (pwid,0);
+endchar;
+
+beginchar(oct"273",1.5ex#+2ss#,ex#,0); "omega smoothgrave";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothgrave shifted (pwid,0);
+endchar;
+
+beginchar(oct"274",1.5ex#+2ss#,ex#,0); "omega acute iota";
+italcorr(ex#*slant);
+currentpicture := omlow + highacute shifted (3pwid/4,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"275",1.5ex#+2ss#,ex#,0); "omega rough acute";
+italcorr(ex#*slant);
+currentpicture := omlow + roughacute shifted (pwid,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"276",1.5ex#+2ss#,ex#,0); "omega smooth acute";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothacute shifted (pwid,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"277",1.5ex#+2ss#,ex#,0); "omega smoothgrave";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothgrave shifted (pwid,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"300",1.5ex#+2ss#,ex#,0); "omega tilde";
+italcorr(ex#*slant);
+currentpicture := omlow + tilde shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"301",1.5ex#+2ss#,ex#,0); "omega tilde rough";
+italcorr(ex#*slant);
+currentpicture := omlow + roughtilde shifted (7pwid/6,0);
+endchar;
+
+beginchar(oct"302",1.5ex#+2ss#,ex#,0); "omega tilde smooth";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothtilde shifted (7pwid/6,0);
+endchar;
+
+beginchar(oct"304",1.5ex#+2ss#,ex#,0); "omega tilde iota";
+italcorr(ex#*slant);
+currentpicture := omlow + tilde shifted (5pwid/6,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"305",1.5ex#+2ss#,ex#,0); "omega tilde rough iota";
+italcorr(ex#*slant);
+currentpicture := omlow + roughtilde shifted (7pwid/6,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"306",1.5ex#+2ss#,ex#,0); "omega tilde smooth iota";
+italcorr(ex#*slant);
+currentpicture := omlow + smoothtilde shifted (7pwid/6,0)
+	+ iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"310",0.4ex#+2ss#,ex#,0); "iota grave";
+italcorr(ex#*slant);
+currentpicture := iota + highgrave shifted (-pwid/2,0);
+endchar;
+
+beginchar(oct"311",0.4ex#+2ss#,ex#,0); "iota rough breath";
+italcorr(ex#*slant);
+currentpicture := iota + roughbreath shifted (0,0);
+endchar;
+
+beginchar(oct"312",0.4ex#+2ss#,ex#,0); "iota smooth breath";
+italcorr(ex#*slant);
+currentpicture := iota + smoothbreath shifted (0,0);
+endchar;
+
+beginchar(oct"313",0.4ex#+2ss#,ex#,0); "iota rough grave";
+italcorr(ex#*slant);
+currentpicture := iota + roughgrave shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"320",0.4ex#+2ss#,ex#,0); "iota acute";
+italcorr(ex#*slant);
+currentpicture := iota + highacute shifted (-pwid/2,0);
+endchar;
+
+beginchar(oct"321",0.4ex#+2ss#,ex#,0); "iota rough acute";
+italcorr(ex#*slant);
+currentpicture := iota + roughacute shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"322",0.4ex#+2ss#,ex#,0); "iota smooth acute";
+italcorr(ex#*slant);
+currentpicture := iota + smoothacute shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"323",0.4ex#+2ss#,ex#,0); "iota smooth grave";
+italcorr(ex#*slant);
+currentpicture := iota + smoothgrave shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"330",0.4ex#+2ss#,ex#,0); "iota tilde";
+italcorr(ex#*slant);
+currentpicture := iota + tilde shifted (-pwid/2,0);
+endchar;
+
+beginchar(oct"331",0.4ex#+2ss#,ex#,0); "iota tilde rough";
+italcorr(ex#*slant);
+currentpicture := iota + roughtilde shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"332",0.4ex#+2ss#,ex#,0); "iota tilde smooth";
+italcorr(ex#*slant);
+currentpicture := iota + smoothtilde shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"333",thickstroke#+2lserw#+2ss#,cap#,0); "Iota diaresis";
+italcorr(ex#*slant);
+currentpicture := capi + diaresis shifted (-pwid/6,ex/2);
+endchar;
+
+beginchar(oct"314",1.2ex#+2ss#,ex#,0); "upsilon grave";
+italcorr(ex#*slant);
+currentpicture := upsilon + highgrave shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"315",1.2ex#+2ss#,ex#,0); "upsilon rough";
+italcorr(ex#*slant);
+currentpicture := upsilon + roughbreath shifted (pwid,0);
+endchar;
+
+beginchar(oct"316",1.2ex#+2ss#,ex#,0); "upsilon smooth";
+italcorr(ex#*slant);
+currentpicture := upsilon + smoothbreath shifted (pwid,0);
+endchar;
+
+beginchar(oct"317",1.2ex#+2ss#,ex#,0); "upsilon roughgrave";
+italcorr(ex#*slant);
+currentpicture := upsilon + roughgrave shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"324",1.2ex#+2ss#,ex#,0); "upsilon acute";
+italcorr(ex#*slant);
+currentpicture := upsilon + highacute shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"325",1.2ex#+2ss#,ex#,0); "upsilon roughacute";
+italcorr(ex#*slant);
+currentpicture := upsilon + roughacute shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"326",1.2ex#+2ss#,ex#,0); "upsilon smoothacute";
+italcorr(ex#*slant);
+currentpicture := upsilon + smoothacute shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"327",1.2ex#+2ss#,ex#,0); "upsilon smoothgrave";
+italcorr(ex#*slant);
+currentpicture := upsilon + smoothgrave shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"334",1.2ex#+2ss#,ex#,0); "upsilon tilde";
+italcorr(ex#*slant);
+currentpicture := upsilon + tilde shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"335",1.2ex#+2ss#,ex#,0); "upsilon tilde rough";
+italcorr(ex#*slant);
+currentpicture := upsilon + roughtilde shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"336",1.2ex#+2ss#,ex#,0); "upsilon tilde smooth";
+italcorr(ex#*slant);
+currentpicture := upsilon + smoothtilde shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"337",5em#/6+2ss#,cap#,0); "Upsilon diaresis";
+italcorr(ex#*slant);
+currentpicture := capy + diaresis shifted (4pwid/6,ex/2);
+endchar;
+
+beginchar(oct"340",0.8ex#+2ss#,ex#,0); "epsilon grave";
+italcorr(ex#*slant);
+currentpicture := epsilon + highgrave;
+endchar;
+
+beginchar(oct"341",0.8ex#+2ss#,ex#,0); "epsilon rough";
+italcorr(ex#*slant);
+currentpicture := epsilon + roughbreath shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"342",0.8ex#+2ss#,ex#,0); "epsilon smooth";
+italcorr(ex#*slant);
+currentpicture := epsilon + smoothbreath shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"343",0.8ex#+2ss#,ex#,0); "epsilon roughgrave";
+italcorr(ex#*slant);
+currentpicture := epsilon + roughgrave shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"350",0.8ex#+2ss#,ex#,0); "epsilon acute";
+italcorr(ex#*slant);
+currentpicture := epsilon + highacute;
+endchar;
+
+beginchar(oct"351",0.8ex#+2ss#,ex#,0); "epsilon roughacute";
+italcorr(ex#*slant);
+currentpicture := epsilon + roughacute shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"352",0.8ex#+2ss#,ex#,0); "epsilon smoothacute";
+italcorr(ex#*slant);
+currentpicture := epsilon + smoothacute shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"353",0.8ex#+2ss#,ex#,0); "epsilon smoothgrave";
+italcorr(ex#*slant);
+currentpicture := epsilon + smoothgrave shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"344",ex#+2ss#,ex#,0); "omicron grave";
+italcorr(ex#*slant);
+currentpicture := lowo + highgrave shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"345",ex#+2ss#,ex#,0); "omicron rough";
+italcorr(ex#*slant);
+currentpicture := lowo + roughbreath shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"346",ex#+2ss#,ex#,0); "omicron smooth";
+italcorr(ex#*slant);
+currentpicture := lowo + smoothbreath shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"347",ex#+2ss#,ex#,0); "omicron rough grave";
+italcorr(ex#*slant);
+currentpicture := lowo + roughgrave shifted (pwid/3,0);
+endchar;
+
+beginchar(oct"354",ex#+2ss#,ex#,0); "omicron acute";
+italcorr(ex#*slant);
+currentpicture := lowo + highacute shifted (pwid/4,0);
+endchar;
+
+beginchar(oct"355",ex#+2ss#,ex#,0); "omicron rough acute";
+italcorr(ex#*slant);
+currentpicture := lowo + roughacute shifted (pwid/3,0);
+endchar;
+
+beginchar(oct"356",ex#+2ss#,ex#,0); "omicron smooth acute";
+italcorr(ex#*slant);
+currentpicture := lowo + smoothacute shifted (pwid/3,0);
+endchar;
+
+beginchar(oct"357",ex#+2ss#,ex#,0); "omicron smooth grave";
+italcorr(ex#*slant);
+currentpicture := lowo + smoothgrave shifted (pwid/3,0);
+endchar;
+
+beginchar(oct"360",0.4ex#+2ss#,ex#,0); "iota diaresis";
+italcorr(ex#*slant);
+currentpicture := iota + diaresis shifted (-pwid/2,-pwid/2);
+endchar;
+
+beginchar(oct"361",0.4ex#+2ss#,ex#,0); "iota diaresis grave";
+italcorr(ex#*slant);
+currentpicture := iota + graveumlaut shifted (-pwid/2,-pwid/2);
+endchar;
+
+beginchar(oct"362",0.4ex#+2ss#,ex#,0); "iota diaresis acute";
+italcorr(ex#*slant);
+currentpicture := iota + acuteumlaut shifted (-pwid/2,-pwid/2);
+endchar;
+
+beginchar(oct"363",0.4ex#+2ss#,ex#,0); "iota tilde diaresis";
+italcorr(ex#*slant);
+currentpicture := iota + tildeumlaut shifted (-pwid/2,0);
+endchar;
+
+beginchar(oct"364",1.2ex#+2ss#,ex#,0); "upsilon diaresis";
+italcorr(ex#*slant);
+currentpicture := upsilon + diaresis shifted (3pwid/4,-pwid/2);
+endchar;
+
+beginchar(oct"365",1.2ex#+2ss#,ex#,0); "upsilon diaresis grave";
+italcorr(ex#*slant);
+currentpicture := upsilon + graveumlaut shifted (3pwid/4,-pwid/2);
+endchar;
+
+beginchar(oct"366",1.2ex#+2ss#,ex#,0); "upsilon diaresis acute";
+italcorr(ex#*slant);
+currentpicture := upsilon + acuteumlaut shifted (3pwid/4,-pwid/2);
+endchar;
+
+beginchar(oct"367",1.2ex#+2ss#,ex#,0); "upsilon diaresis acute";
+italcorr(ex#*slant);
+currentpicture := upsilon + tildeumlaut shifted (3pwid/4,0);
+endchar;
+
+beginchar(oct"370",ex#+2ss#,ex#,0); "alpha with iota";
+italcorr(ex#*slant);
+currentpicture := alpha + iotasub;
+endchar;
+
+beginchar(oct"371",ex#+2ss#,ex#,dep#); "eta iota";
+currentpicture := eta + iotasub shifted (-pwid/4,0);
+endchar;
+
+beginchar(oct"372",1.5ex#+2ss#,ex#,0); "omega iota";
+italcorr(ex#*slant);
+currentpicture := omlow + iotasub shifted (5pwid/6,0);
+endchar;
+
+beginchar(oct"373",ex#+2ss#,ex#,dep#); "rho rough";
+italcorr(ex#*slant);
+currentpicture := rho + roughbreath shifted (pwid/2,0);
+endchar;
+
+beginchar(oct"374",ex#+2ss#,ex#,dep#); "rho smooth";
+italcorr(ex#*slant);
+currentpicture := rho + smoothbreath shifted (pwid/2,0);
+endchar;

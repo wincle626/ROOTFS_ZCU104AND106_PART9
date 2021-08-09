@@ -1,0 +1,20 @@
+% Based on the file mathint.mf by Eddie Saudrais
+
+% Edited by Ariel Barton to produce sans serif symbols
+
+% Date: 2013/03/22
+
+
+font_coding_scheme:="TeX math extension"; %
+mode_setup; font_setup;
+
+define_pixels(tdec,ddec);
+
+input sans-bigint;  % large operators (integral signs)
+
+font_x_height x_height#;
+font_quad 18u#+4letter_fit#;
+bye.
+\endinput
+%%
+%% End of file `mathint.mf'.

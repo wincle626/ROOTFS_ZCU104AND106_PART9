@@ -1,0 +1,185 @@
+% beuronkern.mf
+% Unterschneidung der Schrift der Beuroner Kunst
+% Kerning of the Beuronese art font
+% 22. Dezember 2017
+
+kAA#:=1/2klAb#;    % AA, [UVW]U, [UVW]V, [UVW]W, [UVW]Y, YU, YV, YW
+kAE#:=1/8klAb#;    % AE
+kAS#:=1/4klAb#;    % AS
+kAT#:=-1/2klAb#;   % AT, TA
+kAV#:=-5/8klAb#;   % AU, AV, AW, AY, [UVW]A, YA
+
+kBA#:=-1/8klAb#;   % BA
+kBE#:=-1/8klAb#;   % BE
+kBT#:=-1/8klAb#;   % BT
+kBV#:=-3/8klAb#;   % BU, BV, BW, BY
+
+kCC#:=1/4klAb#;    % CC, CG, CO, CQ
+kCE#:=1/4klAb#;    % CE
+
+kDA#:=-1/8klAb#;   % DA, DU, DV, DW, DY
+kDC#:=1/8klAb#;    % DC, DG, DO, DQ
+kDE#:=-1/8klAb#;   % DE
+
+kEC#:=-1/8klAb#;   % EC, EG, EO, EQ
+kES#:=-1/4klAb#;   % ES
+kET#:=-1/2klAb#;   % ET
+kEV#:=-1/8klAb#;   % EU, EV, EW, EY
+kEX#:=-1/4klAb#;   % EX
+
+kFA#:=-1/2klAb#;   % FA, LU, LV, LW
+kFC#:=-3/8klAb#;   % FC, FG, FO, FQ, LC, LG, LO, LQ
+kFE#:=-1/4klAb#;   % FE
+kFS#:=-1/4klAb#;   % FS
+kFT#:=1/2klAb#;    % FT
+kFV#:=1/2klAb#;    % FU, FV, FW, FY, LA
+
+kGG#:=1/8klAb#;    % GG
+kGY#:=-1/8klAb#;   % GY
+
+kJA#:=-1/8klAb#;   % JA
+
+kKC#:=-1/8klAb#;   % [KX]C, [KX]G, [KX]O, [KX]Q, OX
+kKE#:=-1/4klAb#;   % [KX]E 
+kKBs#:=-1/2klAb#;  % [KX]-, -X
+
+kLT#:=-3/4klAb#;   % LT
+kLY#:=-5/8klAb#;   % LY
+kLBs#:=-5/8klAb#;  % L-
+
+kOC#:=1/4klAb#;    % OC, OG, OO, OQ
+kOE#:=1/8klAb#;    % OE
+kOT#:=-1/8klAb#;   % DT, OT, QT, TC, TG, TO, TQ
+kOY#:=-1/4klAb#;   % OY, QY, YC, YG, YO, YQ
+
+kPA#:=-1/2klAb#;   % PA
+kPE#:=-1/4klAb#;   % PE
+kPS#:=-1/8klAb#;   % PS
+
+kOBs#:=1/4klAb#;   % O-, -C, -G, -O, -Q
+
+kQV#:=-1/8klAb#;   % QU, QV, QW
+
+kRA#:=1/2klAb#;    % RA
+kRC#:=-1/4klAb#;   % RC, RG, RO, RQ
+kRS#:=1/4klAb#;    % RS
+kRT#:=-1/4klAb#;   % RT
+kRV#:=-1/4klAb#;   % RU, RV, RW, RY
+kRZ#:=1/8klAb#;    % RZ
+kRBs#:=-1/4klAb#;  % R-
+
+kSC#:=1/8klAb#;    % SC, SG, SO, SQ
+kSE#:=1/8klAb#;    % SE
+kST#:=-1/4klAb#;   % ST
+kSV#:=-1/8klAb#;   % SU, SV, SW, SY
+
+kTE#:=-1/4klAb#;   % TE
+kTS#:=-1/2klAb#;   % TS
+kTT#:=1/2klAb#;    % TT
+kTV#:=1/2klAb#;    % TU, TV, TW, [UVW]T
+kTZ#:=1/4klAb#;    % TZ, ZT
+kTBs#:=-3/4klAb#;  % T-, -T
+
+kVE#:=-1/4klAb#;   % [UVW]E, YE
+kVJ#:=-3/8klAb#;   % [UVW]J, YJ
+kVS#:=-1/4klAb#;   % [UVW]S
+kVZ#:=1/4klAb#;    % [UVW]Z, ZU, ZV, ZW
+
+kYS#:=-3/8klAb#;   % YS
+
+
+ligtable "A": "a": "A" kern kAA#, "a" kern kAA#, "E" kern kAE#, "e" kern kAE#,
+   "S" kern kAS#, "s" kern kAS#, "T" kern kAT#, "t" kern kAT#, "U" kern kAV#,
+   "u" kern kAV#, "V" kern kAV#, "v" kern kAV#, "W" kern kAV#, "w" kern kAV#,
+   "Y" kern kAV#, "y" kern kAV#;
+
+ligtable "B": "b": "A" kern kBA#, "a" kern kBA#, "E" kern kBE#, "e" kern kBE#,
+   "T" kern kBT#, "t" kern kBT#, "U" kern kBV#, "u" kern kBV#, "V" kern kBV#,
+   "v" kern kBV#, "W" kern kBV#, "w" kern kBV#, "Y" kern kBV#, "y" kern kBV#;
+
+ligtable "C": "c": "C" kern kCC#, "c" kern kCC#, "E" kern kCE#, "e" kern kCE#,
+   "G" kern kCC#, "g" kern kCC#, "O" kern kCC#, "o" kern kCC#, "Q" kern kCC#,
+   "q" kern kCC#;
+
+ligtable "D": "d": "A" kern kDA#, "a" kern kDA#, "C" kern kDC#, "c" kern kDC#,
+   "E" kern kDE#, "e" kern kDE#, "G" kern kDC#, "g" kern kDC#, "O" kern kDC#,
+   "o" kern kDC#, "Q" kern kDC#, "q" kern kDC#, "T" kern kOT#, "t" kern kOT#,
+   "U" kern kDA#, "u" kern kDA#, "V" kern kDA#, "v" kern kDA#, "W" kern kDA#,
+   "W" kern kDA#, "Y" kern kDA#, "y" kern kDA#;
+
+ligtable "E": "e": "C" kern kEC#, "c" kern kEC#, "G" kern kEC#, "g" kern kEC#,
+   "O" kern kEC#, "o" kern kEC#, "Q" kern kEC#, "q" kern kEC#, "S" kern kES#,
+   "s" kern kES#, "T" kern kET#, "t" kern kET#, "U" kern kEV#, "u" kern kEV#,
+   "V" kern kEV#, "v" kern kEV#, "W" kern kEV#, "w" kern kEV#, "X" kern kEX#,
+   "x" kern kEX#, "Y" kern kEV#, "y" kern kEV#;
+
+ligtable "F": "f": "A" kern kFA#, "a" kern kFA#, "C" kern kFC#, "c" kern kFC#,
+   "E" kern kFE#, "e" kern kFE#, "G" kern kFC#, "g" kern kFC#, "O" kern kFC#,
+   "o" kern kFC#, "Q" kern kFC#, "q" kern kFC#, "S" kern kFS#, "s" kern kFS#,
+   "T" kern kFT#, "t" kern kFT#, "U" kern kFV#, "u" kern kFV#, "V" kern kFV#,
+   "v" kern kFV#, "W" kern kFV#, "w" kern kFV#, "Y" kern kFV#, "y" kern kFV#;
+
+ligtable "G": "g": "G" kern kGG#, "g" kern kGG#, "Y" kern kGY#, "y" kern kGY#;
+
+ligtable "J": "j": "A" kern kJA#, "a" kern kJA#;
+
+ligtable "K": "k": "X": "x": "C" kern kKC#, "c" kern kKC#, "E" kern kKE#,
+   "e" kern kKE#, "G" kern kKC#, "g" kern kKC#, "O" kern kKC#, "o" kern kKC#,
+   "Q" kern kKC#, "q" kern kKC#, "-" kern kKBs#;
+
+ligtable "L": "l": "A" kern kFV#, "a" kern kFV#, "C" kern kFC#, "c" kern kFC#,
+   "G" kern kFC#, "g" kern kFC#, "O" kern kFC#, "o" kern kFC#, "Q" kern kFC#,
+   "q" kern kFC#, "T" kern kLT#, "t" kern kLT#, "U" kern kFA#, "u" kern kFA#,
+   "V" kern kFA#, "v" kern kFA#, "W" kern kFA#, "w" kern kFA#, "Y" kern kLY#,
+   "y" kern kLY#, "-" kern kLBs#;
+
+ligtable "O": "o": "C" kern kOC#, "c" kern kOC#, "E" kern kOE#, "e" kern kOE#,
+   "G" kern kOC#, "g" kern kOC#, "O" kern kOC#, "o" kern kOC#, "Q" kern kOC#,
+   "q" kern kOC#, "T" kern kOT#, "t" kern kOT#, "X" kern kKC#, "x" kern kKC#,
+   "Y" kern kOY#, "y" kern kOY#, "-" kern kOBs#;
+
+ligtable "P": "p": "A" kern kPA#, "a" kern kPA#, "E" kern kPE#, "e" kern kPE#,
+   "S" kern kPS#, "s" kern kPS#;
+
+ligtable "Q": "q": "T" kern kOT#, "t" kern kOT#, "U" kern kQV#, "u" kern kQV#,
+   "V" kern kQV#, "v" kern kQV#, "W" kern kQV#, "w" kern kQV#, "Y" kern kOY#,
+   "y" kern kOY#;
+
+ligtable "R": "r": "A" kern kRA#, "a" kern kRA#, "C" kern kRC#, "c" kern kRC#,
+   "G" kern kRC#, "g" kern kRC#, "O" kern kRC#, "o" kern kRC#, "Q" kern kRC#,
+   "q" kern kRC#, "S" kern kRS#, "s" kern kRS#, "T" kern kRT#, "t" kern kRT#,
+   "U" kern kRV#, "u" kern kRV#, "V" kern kRV#, "v" kern kRV#, "W" kern kRV#,
+   "w" kern kRV#, "Y" kern kRV#, "y" kern kRV#, "Z" kern kRZ#, "z" kern kRZ#,
+   "-" kern kRBs#;
+
+ligtable "S": "s": "C" kern kSC#, "c" kern kSC#, "E" kern kSE#, "e" kern kSE#,
+   "G" kern kSC#, "g" kern kSC#, "O" kern kSC#, "o" kern kSC#, "Q" kern kSC#,
+   "q" kern kSC#, "T" kern kST#, "t" kern kST#, "U" kern kSV#, "u" kern kSV#,
+   "V" kern kSV#, "v" kern kSV#, "W" kern kSV#, "w" kern kSV#, "Y" kern kSV#,
+   "y" kern kSV#;
+
+ligtable "T": "t": "A" kern kAT#, "a" kern kAT#, "C" kern kOT#, "c" kern kOT#,
+   "E" kern kTE#, "e" kern kTE#, "G" kern kOT#, "g" kern kOT#, "O" kern kOT#,
+   "o" kern kOT#, "Q" kern kOT#, "q" kern kOT#, "S" kern kTS#, "s" kern kTS#,
+   "T" kern kTT#, "t" kern kTT#, "U" kern kTV#, "u" kern kTV#, "V" kern kTV#,
+   "v" kern kTV#, "W" kern kTV#, "w" kern kTV#, "Z" kern kTZ#, "z" kern kTZ#,
+   "-" kern kTBs#;
+
+ligtable "U": "u": "V": "v": "W": "w": "A" kern kAV#, "a" kern kAV#,
+   "E" kern kVE#, "e" kern kVE#, "J" kern kVJ#, "j" kern kVJ#, "S" kern kVS#,
+   "s" kern kVS#, "T" kern kTV#, "t" kern kTV#, "U" kern kAA#, "u" kern kAA#,
+   "V" kern kAA#, "v" kern kAA#, "W" kern kAA#, "w" kern kAA#, "Y" kern kAA#,
+   "y" kern kAA#, "Z" kern kVZ#, "z" kern kVZ#;
+
+ligtable "Y": "y": "A" kern kAV#, "a" kern kAV#, "C" kern kOY#, "c" kern kOY#,
+   "E" kern kVE#, "e" kern kVE#, "G" kern kOY#, "g" kern kOY#, "J" kern kVJ#,
+   "j" kern kVJ#, "O" kern kOY#, "o" kern kOY#, "Q" kern kOY#, "q" kern kOY#,
+   "S" kern kYS#, "s" kern kYS#, "U" kern kAA#, "u" kern kAA#, "V" kern kAA#,
+   "v" kern kAA#, "W" kern kAA#, "w" kern kAA#;
+
+ligtable "Z": "z": "T" kern kTZ#, "t" kern kTZ#, "U" kern kVZ#, "u" kern kVZ#,
+   "V" kern kVZ#, "v" kern kVZ#, "W" kern kVZ#, "w" kern kVZ#;
+
+ligtable "-": "C" kern kOBs#, "c" kern kOBs#, "G" kern kOBs#, "g" kern kOBs#,
+   "O" kern kOBs#, "o" kern kOBs#, "Q" kern kOBs#, "q" kern kOBs#,
+   "T" kern kTBs#, "t" kern kTBs#, "X" kern kKBs#, "x" kern kKBs#;

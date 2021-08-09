@@ -1,0 +1,82 @@
+% tkz-tools-misc.tex
+% Copyright 2020 by Alain Matthes
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+\def\fileversion{3.02c}
+\def\filedate{2020/01/24} 
+\typeout{2020/01/24 3.02c  tkz-tools-misc.tex}   
+\makeatletter
+%<--------------------------------------------------------------------------–>
+%                                 hline  pb  avec line
+%<--------------------------------------------------------------------------–>
+\def\tkzHLine{\pgfutil@ifnextchar[{\tkz@HLine}{\tkz@HLine[]}}  
+\def\tkz@HLine[#1]#2{%
+\begingroup
+ \edef\tkz@ptya{\fpeval{(#2-\tkz@init@yorigine)/\tkz@init@ystep}}
+ \draw[#1] (\tkz@xa,\tkz@ptya)--(\tkz@xb,\tkz@ptya);%
+\endgroup
+}
+%<--------------------------------------------------------------------------–>
+%                                 hlines  pb  avec line
+%<--------------------------------------------------------------------------–>
+\def\tkzHLines{\pgfutil@ifnextchar[{\tkz@HLines}{\tkz@HLines[]}}  
+\def\tkz@HLines[#1]#2{%
+ \begingroup 
+ \foreach \tkz@vy in {#2}{%
+  \edef\my@tkz@vy{\fpeval{(\tkz@vy)}}
+  \tkz@HLine[#1]{\my@tkz@vy}}   
+\endgroup
+}  
+%<--------------------------------------------------------------------------->
+%                                      vline
+%<--------------------------------------------------------------------------->
+\def\tkzVLine{\pgfutil@ifnextchar[{\tkz@VLine}{\tkz@VLine[]}}
+\def\tkz@VLine[#1]#2{%
+\begingroup
+  \edef\tkz@ptxa{\fpeval{(#2-\tkz@init@xorigine)/\tkz@init@xstep}}
+  \draw[#1](\tkz@ptxa,\tkz@ya)--(\tkz@ptxa,\tkz@yb);
+\endgroup
+}  
+%<--------------------------------------------------------------------------->
+%                                      vlines
+%<--------------------------------------------------------------------------->
+\def\tkzVLines{\pgfutil@ifnextchar[{\tkz@VLines}{\tkz@VLines[]}}
+\def\tkz@VLines[#1]#2{%
+\begingroup  
+ \foreach \tkz@vx in {#2}{% 
+   \edef\my@tkz@vx{\fpeval{(\tkz@vx)}} 
+   \tkz@VLine[#1]{\my@tkz@vx}}  
+\endgroup
+} 
+%<--------------------------------------------------------------------------–>
+\def\tkzHTick{\pgfutil@ifnextchar[{\tkz@HTick}{\tkz@HTick[]}}  
+\def\tkz@HTick[#1]#2{%
+ \begingroup  
+ \edef\tkz@ptxa{\fpeval{(round(#2,5)-\tkz@init@xorigine)/\tkz@init@xstep}}
+ \draw plot[mark style,#1] coordinates {(\tkz@ptxa,0)};  
+\endgroup
+}
+\def\tkzHTicks{\pgfutil@ifnextchar[{\tkz@HTicks}{\tkz@HTicks[]}}  
+\def\tkz@HTicks[#1]#2{%
+ \begingroup 
+	\foreach \tkz@hy in {#2} {\tkz@HTick[#1]{\tkz@hy}}
+\endgroup
+}
+%<--------------------------------------------------------------------------–>
+\def\tkzVTick{\pgfutil@ifnextchar[{\tkz@VTick}{\tkz@VTick[]}}  
+\def\tkz@VTick[#1]#2{%
+ \begingroup
+ \edef\tkz@ptya{\fpeval{(round(#2,5)-\tkz@init@yorigine)/\tkz@init@ystep}}
+ \draw plot[mark style,#1] coordinates {(0,\tkz@ptya)};
+\endgroup
+}
+%<--------------------------------------------------------------------------–>
+\def\tkzVTicks{\pgfutil@ifnextchar[{\tkz@VTicks}{\tkz@VTicks[]}}  
+\def\tkz@VTicks[#1]#2{%
+\begingroup 
+	\foreach \tkz@hy in {#2} {\tkz@VTick[#1]{\tkz@hy}}
+\endgroup
+} 
+\makeatother
+\endinput

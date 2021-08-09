@@ -1,0 +1,213 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 48 /ch48 put
+Encoding 49 /ch49 put
+Encoding 50 /ch50 put
+Encoding 51 /ch51 put
+Encoding 52 /ch52 put
+Encoding 53 /ch53 put
+Encoding 54 /ch54 put
+Encoding 55 /ch55 put
+Encoding 56 /ch56 put
+Encoding 57 /ch57 put
+Encoding 65 /ch65 put
+Encoding 66 /ch66 put
+Encoding 67 /ch67 put
+Encoding 68 /ch68 put
+Encoding 69 /ch69 put
+Encoding 70 /ch70 put
+Encoding 71 /ch71 put
+Encoding 72 /ch72 put
+Encoding 73 /ch73 put
+Encoding 74 /ch74 put
+Encoding 75 /ch75 put
+Encoding 76 /ch76 put
+Encoding 77 /ch77 put
+Encoding 78 /ch78 put
+Encoding 79 /ch79 put
+Encoding 80 /ch80 put
+Encoding 81 /ch81 put
+Encoding 82 /ch82 put
+Encoding 83 /ch83 put
+Encoding 84 /ch84 put
+Encoding 85 /ch85 put
+Encoding 86 /ch86 put
+Encoding 87 /ch87 put
+Encoding 88 /ch88 put
+Encoding 89 /ch89 put
+Encoding 90 /ch90 put
+/CharProcs 37 dict def
+CharProcs /.notdef { } put
+CharProcs /ch48 {
+0 0 setcharwidth
+} put
+CharProcs /ch49 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch50 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch51 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch52 {
+0 0 setcharwidth
+} put
+CharProcs /ch53 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch54 {
+0 0 setcharwidth
+} put
+CharProcs /ch55 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch56 {
+0 0 setcharwidth
+} put
+CharProcs /ch57 {
+0 0 setcharwidth
+} put
+CharProcs /ch65 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch66 {
+0 0 setcharwidth
+} put
+CharProcs /ch67 {
+0 0 setcharwidth
+} put
+CharProcs /ch68 {
+0 0 setcharwidth
+} put
+CharProcs /ch69 {
+0 0 setcharwidth
+} put
+CharProcs /ch70 {
+0 0 setcharwidth
+} put
+CharProcs /ch71 {
+0 0 setcharwidth
+} put
+CharProcs /ch72 {
+0 0 setcharwidth
+} put
+CharProcs /ch73 {
+0 0 setcharwidth
+} put
+CharProcs /ch74 {
+0 0 setcharwidth
+} put
+CharProcs /ch75 {
+0 0 setcharwidth
+} put
+CharProcs /ch76 {
+0 0 setcharwidth
+} put
+CharProcs /ch77 {
+0 0 setcharwidth
+} put
+CharProcs /ch78 {
+0 0 setcharwidth
+} put
+CharProcs /ch79 {
+0 0 setcharwidth
+} put
+CharProcs /ch80 {
+0 0 setcharwidth
+} put
+CharProcs /ch81 {
+0 0 setcharwidth
+} put
+CharProcs /ch82 {
+0 0 setcharwidth
+} put
+CharProcs /ch83 {
+0 0 setcharwidth
+} put
+CharProcs /ch84 {
+0 0 setcharwidth
+} put
+CharProcs /ch85 {
+0 0 setcharwidth
+} put
+CharProcs /ch86 {
+0 0 setcharwidth
+} put
+CharProcs /ch87 {
+0 0 setcharwidth
+} put
+CharProcs /ch88 {
+0 0 setcharwidth
+} put
+CharProcs /ch89 {
+0 0 setcharwidth
+} put
+CharProcs /ch90 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/title exch definefont pop

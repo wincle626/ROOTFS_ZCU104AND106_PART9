@@ -1,0 +1,31 @@
+% Fetamont parameters (bold, 9pt)
+if base_name="mf2outline":
+ font_name "Fetamont-Bold9";
+ font_fullname "Fetamont Bold 9";
+ font_familyname "Fetamont";
+ font_os_weight 700;
+ font_os_width 5;
+ font_range(8.5,9.4,5);
+fi
+font_identifier:="FFMB";
+font_size 9pt#;                    % the "design size" of this font
+ht#:=.9*6pt#;                      % height of characters
+x_ht#:=.9*4.5pt#;                  % x-height of characters
+acc_ht#:=.9*2pt#;                  % height of the accents
+barheight#:=.45ht#;                % height of bar lines
+comma_depth#:=designsize*7/36pt#;  % depth of comma
+acc_depth#:=designsize*7/36pt#;    % depth of accents
+u#:=.91*21/20*4/9pt#;              % unit width
+xgap#:=.9*21/20*0.6pt#;            % horizontal adjustment
+ygap#:=(ht#/13.5u#)*xgap#;         % vertical adjustment (N and M)
+s#:=.08pt#;                        % extra space at the sides
+o#:=1/12pt#;                       % overshoot
+px#:=.9*.5[2/3pt#,44/36pt#];       % horizontal thickness of pen
+py#:=.9px#;                        % vertical pen thickness
+dotincr:=.4;                       % increasement of dot diameter
+prot:=0;                           % rotation angle of the pen
+slant:=0;                          % slanting amount
+craziness:=0;                      % degree of haphazard variation
+superness:=.8;                     % parameter for superellipses
+
+input ffmbase                      % now generate the font

@@ -1,0 +1,712 @@
+% +AMDG  This document was begun on 7 July 11EX, the feast
+% of Sts. Cyril and Methodius, EEMM, and it is humbly
+% dedicated to them and to the Immaculate Heart of Mary for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar(oct"101",em#+2ss#,cap#,0); "Calligraphic A";
+italcorr(ex#*slant);
+
+penpos0(thickstroke,0);
+z0l = (ss,h/4);
+penpos1(thinstroke,90);
+z1l = (w/5,0-o);
+penpos2(thinstroke,135);
+z2r = (w/3,h+o);
+penpos3(thinstroke,180);
+z3 = (x2,h/2);
+penpos4(thickstroke,180);
+z4r = z2r;
+penpos5(thickstroke,180);
+z5 = (2w/3,h/2);
+penpos6(thinstroke,-90);
+z6r = (w-ss,0-o);
+penpos7(thinstroke,-90);
+z7 = z3;
+penpos8(thinstroke,-90);
+z8 = z5;
+
+penstroke z0e{down}..z1e{right}..{up}z3e..{up}z2e;
+penstroke z4e..z5e..{right}z6e;%..z7e;
+penstroke z7e--z8e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar(oct"102",3em#/4+2ss#,cap#,0); "Calligraphic B";
+italcorr(ex#*slant);
+
+penpos0(curvwid,-30);
+x0l = ss; y0 = h+o;
+penpos1(0.75curvwid,0);
+z1r = (x0r,0-o);
+penpos2(1.5thinstroke,0);
+z2 = (x0,3h/4);
+penpos3(thinstroke,-90);
+z3l = (w/2,h+o);
+penpos4(curvwid,180);
+z4l = (w-ss-3hair,3h/4);
+penpos5(curvwid,0);
+z5r = (w-ss,h/4);
+penpos6(thinstroke,-90);
+z6 = (x2r,h/2);
+penpos7(thinstroke,-90);
+z7r = (x1r+thinstroke,curlh);
+penpos8(thinstroke,90);
+z8 = z6;
+
+penstroke z0e--z1e;
+penstroke z2e{up}..z3e..z4e..{left}z8e;
+penstroke z8e{right}..z5e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar(oct"103",5em#/6+ss#,cap#,0); "Calligraphic Letter C";
+italcorr(ex#*slant);
+
+penpos0(curvwid,0);
+z0r = (w-ss,h-2.5curlh);
+penpos1(curvwid,0);
+z1r = (w-ss,h-1.5curlh);
+penpos2(thinstroke,90);
+z2r = (w/2,h+o);
+penpos3(curvwid,180);
+z3r = (ss,h/2);
+penpos4(thinstroke,-90);
+z4r = (w/2,0-o);
+penpos5(thinstroke,0);
+z5r = (w-ss,h/4);
+
+penstroke z0e---z1e..z1e..z2e..z3e..z4e..z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar(oct"104",5em#/6+2ss#,cap#,0); "Calligraphic Letter D";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(thinstroke,-90);
+z1l = (curlw,h+o);
+penpos2(curvwid,180);
+z2l = (w-ss,h/2);
+penpos3(thinstroke,90);
+z3l = (w/2,0-o);
+penpos4(thinstroke,90);
+z4l = (x1,0.5curlh);
+penpos5(thinstroke,-90);
+z5l = (w/2,h+o);
+penpos6(thickstroke,0);
+z6l = z1;
+penpos7(thickstroke,0);
+z7l = (x1,0);
+penpos8(thinstroke,0);
+z8l = (ss,curlh);
+
+penstroke z0e..z1e{right}..z5e..z2e..z3e{left}..z4e..z8e;
+penstroke z6e--z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar(oct"105",4em#/6+2ss#,cap#,0); "Calligraphic Letter E";
+italcorr(ex#*slant);
+
+penpos0(curvwid,0);
+z0r = (w-ss,3h/4);
+penpos1(thinstroke,90);
+z1r = (w/2,h+o);
+penpos2(curvwid,180);
+z2r = (ss,3h/4);
+penpos3(thinstroke,-90);
+z3 = (2w/3,h/2+thickstroke/2);
+penpos4(curvwid,0);
+z4l = (ss,h/4);
+penpos5(thinstroke,90);
+z5l = (w/2,0-o);
+penpos6(curvwid,180);
+z6l = (w-ss,h/4);
+
+penstroke z0e..{left}z1e..z2e..{right}z3e;
+penstroke z3e{left}..z4e..z5e{right}..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("F",5em#/6+2ss#,cap#,0); "Calligraphic Letter F";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(0.8thickstroke,-90);
+z1l = (ss+curlw,h+o);
+penpos2(0.8thickstroke,-90);
+z2l = (w-ss-curlw,h+o);
+penpos3(thinstroke,180);
+z3l = (w-ss,y2r-curlh/2);
+penpos4(thickstroke,0);
+z4 = (w/3,h-thickstroke/2);
+penpos5(thickstroke,0);
+z5 = (x4,curlh);
+penpos6(thinstroke,-90);
+z6r = (x5-curlw,0-o);
+penpos7(thinstroke,180);
+z7r = (ss,curlh);
+penpos8(1.5thinstroke,45);
+z8 = (x4,h/2+thinstroke/2);
+penpos9(1.5thinstroke,45);
+x9r = x2; y9 = h/2+thinstroke/2;
+
+penstroke z0e..z1e---z2e..z3e;
+penstroke z4e---z5e..z6e..z7e;
+penstroke z8e--z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("G",5em#/6+2ss#,cap#,dep#); "Calligraphic Letter G";
+italcorr(ex#*slant);
+
+penpos0(curvwid,0);
+z0r = (w-ss,h-1.5curlh);
+penpos1(curvwid,0);
+z1r = (w-ss,h-1.5curlh);
+penpos2(thinstroke,90);
+z2r = (w/2,h+o);
+penpos3(curvwid,180);
+z3r = (ss,h/2);
+penpos4(thinstroke,-90);
+z4r = (w/2,0-o);
+penpos5(thickstroke,0);
+z5r = (w-ss,h/2-thickstroke/2);
+penpos6(1.5thinstroke,-45);
+z6l = z5;
+penpos7(1.5thinstroke,-45);
+z7 = (x2,y6);
+penpos8(thickstroke,0);
+z8 = (x5,0);
+penpos9(thickstroke,0);
+z9 = (x5,-d/2);
+penpos10(thinstroke,-90);
+z10r = (3w/4,-d);
+penpos11(thinstroke,180);
+z11r = (w/2,-d/2);
+penpos12(thinstroke,90);
+z12l = z11l;
+penpos13(thinstroke,0);
+z13l = z12l;
+penpos14(thinstroke,-90);
+z14l = z13l;
+penstroke z0e---z1e..z1e..z2e..z3e..z4e..z5e;
+penstroke z6e--z7e;
+penstroke z5e--z8e---z9e..z10e..z11e..z12e..z13e..z14e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("H",em#+2ss#,cap#,0); "Calligraphic Letter H";
+italcorr(ex#*slant);
+
+penpos0(thickstroke,45);
+z0l = (ss+curlw/2,h-2curlh);
+penpos1(thinstroke,-90);
+z1l = (ss+curlw,h+o);
+penpos2(thickstroke,180);
+z2 = (ss+2curlw,h-curlh);
+penpos3(thickstroke,180);
+z3 = (x2,curlh);
+penpos4(thinstroke,90);
+z4l = (x1,0-o);
+penpos5(thickstroke,-45);
+z5l = (ss+curlw/2,2curlh);
+penpos6(1.5thinl,90);
+z6 = (x2,h/2+thickstroke/2);
+penpos7(1.5thinl,90);
+z7 = (w/2+thickstroke,y6);
+
+penstroke z0e..z1e..z2e---z3e..z4e..z5e;
+penstroke z6e--z7e;
+penstroke (z0e..z1e..z2e---z3e..z4e..z5e) reflectedabout 
+	((w/2,h),(w/2,0));
+penstroke (z6e--z7e) reflectedabout ((w/2,h),(w/2,0));
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("I",0.75em#+2ss#,cap#,0); "Calligraphic Letter I";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(1.5thinstroke,-90);
+z1l = (w/4,h+o);
+penpos2(1.5thinstroke,-90);
+z2l = (w-ss,h+o);
+penpos3(thickstroke,0);
+z3 = (w/2,h);
+penpos4(thickstroke,0);
+z4 = (x3,0);
+
+penstroke z0e..z1e---z2e;
+penstroke z3e--z4e;
+penstroke (z0e..z1e---z2e) reflectedabout ((w/2,h),(w/2,0))
+	reflectedabout ((0,h/2),(w,h/2));
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("J",0.75em#+2ss#,cap#,dep#); "Calligraphic Letter J";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(1.5thinstroke,-90);
+z1l = (w/4,h+o);
+penpos2(1.5thinstroke,-90);
+z2l = (w-ss,h+o);
+penpos3(thickstroke,0);
+z3 = (w/2,h);
+penpos4(thickstroke,0);
+z4 = (x3,-d/2);
+penpos5(thinstroke,-90);
+z5r = (w/4,-d);
+penpos6(thinstroke,180);
+z6r = (ss,-d/2);
+penpos7(thinstroke,90);
+z7l = z6l;
+penpos8(thinstroke,0);
+z8l = z7l;
+penpos9(thinstroke,-90);
+z9l = z8l;
+
+penstroke z0e..z1e---z2e;
+penstroke z3e---z4e..z5e..z6e..z7e..z8e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("K",0.75em#+2ss#,cap#,0); "Calligraphic Letter K";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h+o);
+penpos1(thickstroke,0);
+z1r = (w/4,h/2);
+penpos2(thinstroke,0);
+z2l = (ss,0-o);
+penpos3(thinstroke,0);
+z3r = (w-ss,h-curlh);
+penpos4(thinstroke,90);
+z4 = (w-ss-curlw,h+o);
+penpos5(thinstroke,180);
+z5 = (h/2,5h/6);
+penpos6(thickstroke,180);
+z6 = z1;
+penpos7(1.5thinstroke,90);
+z7 = z6;
+penpos8(1.5thinstroke,45);
+z8 = (w/2,0.4h);
+penpos9(1.5thinstroke,0);
+z9r = (w-ss,0-o);
+
+penstroke z0e..z1e..z2e;
+penstroke z3e..z4e..z5e..z6e;
+penstroke z7e..z8e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("L",5em#/6+2ss#,cap#,0); "Calligraphic Letter L";
+italcorr(ex#*slant);
+
+penpos0(2thinstroke,0);
+z0 = (w/2,h-2curlh);
+penpos1(thinstroke,90);
+z1r = (w/4,h+o);
+penpos2(thickstroke,180);
+z2r = (ss,h-curlh);
+penpos3(thickstroke,180);
+z3l = (w/4,h/4);
+penpos4(thinstroke,135);
+x4r = ss; y4l = 0-o;
+penpos5(thickstroke,90);
+z5l = (3w/4,0-o);
+penpos6(thinstroke,135);
+x6r = w-ss; y6l = curlh;
+penpos7(thickstroke,90);
+z7 = (w/3,curlh);
+
+penstroke z0e..z1e..z2e..z3e..z4e;
+penstroke z4e..z7e..z5e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("M",em#+2ss#,cap#,0); "Calligraphic Letter M";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,h-curlh);
+penpos1(thinl,-90);
+z1l = (curlw,h+o);
+penpos2(thickl,-180);
+z2 = (2curlw,y0);
+penpos3(thickl,-180);
+z3 = (x2,0);
+penpos4(thinl,90);
+z4r = (x2+w/6,h+o);
+penpos5(thickl,0);
+z5 = (x4+w/6,y2);
+penpos6(thickl,0);
+z6 = (x5,0);
+penpos7(thinl,-90);
+z7l = (x5+w/6,h+o);
+penpos8(thickl,-180);
+z8 = (x7+w/6,y5);
+penpos9(thickl,-180);
+z9 = (x8,0);
+
+penstroke z0e..z1e..z2e---z3e;
+penstroke z3e---z2e..z4e..z5e---z6e;
+penstroke z6e---z5e..z7e..z8e---z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("N",0.75em#+2ss#,cap#,0); "Calligraphic Letter N";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,h-curlh);
+penpos1(thinl,-90);
+z1l = (curlw,h+o);
+penpos2(thickl,-180);
+z2 = (2curlw,y0);
+penpos3(thickl,-180);
+z3 = (x2,0);
+penpos4(thinl,90);
+z4r = (x2+w/4,h+o);
+penpos5(thickl,0);
+z5 = (x4+w/4,y2);
+penpos6(thickl,0);
+z6 = (x5,0);
+
+penstroke z0e..z1e..z2e---z3e;
+penstroke z3e---z2e..z4e..z5e---z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("O",5em#/6+2ss#,cap#,0); "Calligraphic Letter O";
+italcorr(ex#*slant);
+
+penpos0(thinl,-90);
+z0l = (w/2,h-curlh);
+penpos1(curvl,0);
+z1l = (ss,h/2);
+penpos2(thinl,90);
+z2l = (w/2,0-o);
+penpos3(curvl,180);
+z3l = (w-ss,h/2);
+penpos4(1.5thinl,-90);
+z4l = (w/2,h+o);
+penpos5(1.5thinl,-90);
+z5l = (w/4,h+o);
+penpos6(thinl,180);
+z6 = 0.5[z0,z3];
+
+penstroke z6e..z0e..z1e..z2e..z3e..z4e..z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("P",5em#/6+2ss#,cap#,0); "Calligraphic Letter P";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(thickstroke,-90);
+z1l = (2curlw,h+o);
+penpos2(thickstroke,-90);
+z2l = (w/2,h+o);
+penpos3(1.5thinstroke,180);
+z3l = (w-ss,3h/4);
+penpos4(thinstroke,90);
+z4 = (x1+thickstroke,h/2);
+penpos5(thickstroke,0);
+z5 = z1;
+penpos6(thickstroke,0);
+z6 = z1 shifted (thinstroke,-h/2);
+penpos7(thickstroke,0);
+z7 = (x1,0);
+
+penstroke z0e..z1e---z2e..z3e..{left}z4e;
+penstroke z5e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("Q",5em#/6+2ss#,cap#,dep#); "Calligraphic Letter Q";
+italcorr(ex#*slant);
+
+penpos0(thinl,-90);
+z0l = (w/2,h-curlh);
+penpos1(curvl,0);
+z1l = (ss,h/2);
+penpos2(thinl,90);
+z2l = (w/2,0-o);
+penpos3(curvl,180);
+z3l = (w-ss,h/2);
+penpos4(1.5thinl,-90);
+z4l = (w/2,h+o);
+penpos5(1.5thinl,-90);
+z5l = (w/4,h+o);
+penpos6(thinl,180);
+z6 = 0.5[z0,z3];
+penpos7(1.5thinstroke,90);
+z7l = (ss,curlh);
+penpos8(1.5thinstroke,90);
+z8 = ((x7+x2)/2,2curlh);
+penpos9(1.5thinstroke,90);
+z9l = (w-ss,-dep/2);
+penpos10(1.5thinstroke,90);
+z10 = ((x2+x9)/2,-dep/2);
+
+penstroke z6e..z0e..z1e..z2e..z3e..z4e..z5e;
+penstroke z7e..z8e..z10e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("R",5em#/6+2ss#,cap#,0); "Calligraphic Letter R";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(thickstroke,-90);
+z1l = (2curlw,h+o);
+penpos2(thickstroke,-90);
+z2l = (w/2,h+o);
+penpos3(1.5thinstroke,180);
+z3l = (w-ss,3h/4);
+penpos4(thinstroke,90);
+z4 = (x1+thickstroke,h/2);
+penpos5(thickstroke,0);
+z5 = z1;
+penpos6(thickstroke,0);
+z6 = z1 shifted (thinstroke,-h/2);
+penpos7(thickstroke,0);
+z7 = (x1,0);
+penpos9(thickstroke,0);
+z9r = (w-ss,0);
+penpos8(thickstroke,15);
+z8 = (z3..{left}z4) intersectionpoint (z9--z2);
+
+penstroke z0e..z1e---z2e..z3e..{left}z4e;
+penstroke z5e..z6e..z7e;
+penstroke z8e{down}..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("S",2em#/3+2ss#,cap#,0); "Calligraphic Letter S";
+italcorr(ex#*slant);
+
+penpos0(curvwid,45);
+z0r = (w-ss,3h/4);
+penpos1(thinstroke,90);
+z1r = (w/2,h+o);
+penpos2(curvwid,180);
+z2r = (ss,3h/4);
+penpos3(thinstroke,-90);
+z3 = (w/2,h/2+thinstroke);
+penpos4(curvwid,180);
+z4r = (w-ss,h/4);
+penpos5(thinstroke,90);
+z5l = (w/2,0-o);
+penpos6(curvwid,-30);
+z6l = (ss,h/4);
+
+penstroke z0e..z1e..z2e..z3e..z4e..z5e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("T",5em#/6+2ss#,cap#,0); "Calligraphic Letter T";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-2curlh);
+penpos1(0.8thickstroke,-90);
+z1l = (ss+curlw,h+o);
+penpos2(0.8thickstroke,-90);
+z2l = (w-ss-curlw,h+o);
+penpos3(thinstroke,180);
+z3l = (w-ss,y2r-curlh/2);
+penpos4(thickstroke,0);
+z4 = (w/2,h);
+penpos5(thickstroke,0);
+z5 = (w/2-thickstroke,0);
+
+penstroke z0e..z1e---z2e..z3e;
+penstroke z4e{down}..z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("U",5em#/6+2ss#,cap#,0); "Calligraphic Letter U";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-curlh);
+penpos1(thinstroke,-90);
+z1l = (curlw,h+o);
+penpos2(thickstroke,180);
+z2 = (2curlw,h-curlh);
+penpos3(thickstroke,180);
+z3 = (x2,2curlh);
+penpos4(thinstroke,-90);
+z4r = (w/2+curlw/2,0-o);
+penpos5(thickstroke,0);
+z5r = (w-ss,2curlh);
+penpos6(thickstroke,0);
+z6r = (w-ss,h);
+penpos7(thinstroke,90);
+z7l = (x5r,0-o);
+penpos8(thinstroke,180);
+z8 = z7 shifted (curlw,curlh);
+
+penstroke z0e..z1e..z2e---z3e..z4e..z5e---z6e;
+penstroke z5e{down}..z7e..z8e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("V",2em#/3+2ss#,cap#,0); "Calligraphic Letter V";
+italcorr(ex#*slant);
+
+penpos0(thickstroke,135);
+z0r = (ss-thickstroke,h-curlh);
+penpos1(thickstroke,45);
+z1r = (ss+curlw,h+o);
+penpos2(thickstroke,45);
+z2l = (w/2,0-o);
+penpos3(1.5thinstroke,-45);
+z3 = (3w/4,3h/4);
+penpos4(thinstroke,-45);
+x4r = w-ss; y4 = h+o;
+
+penstroke z0e{up}..z1e;
+penstroke z1e--z2e;
+penstroke z2e..z3e..z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("W",em#+2ss#,cap#,0); "Calligraphic Letter W";
+italcorr(ex#*slant);
+
+penpos0(thickstroke,135);
+z0r = (ss-thickstroke,h-curlh);
+penpos1(thickstroke,45);
+z1r = (ss+curlw,h+o);
+penpos2(thickstroke,45);
+z2l = ((w/2)/2,0-o);
+penpos3(1.5thinstroke,-45);
+z3 = ((3w/4)/2,3h/4);
+penpos4(thinstroke,-45);
+x4r = (w-ss)/2; y4 = h+o;
+penpos5(thickstroke,45);
+z5l = (w/2,0-o);
+penpos6(1.5thinstroke,-45);
+z6 = (3w/4,3h/4);
+penpos7(thinstroke,-45);
+x7r = w-ss; y7 = h+o;
+
+penstroke z0e{up}..z1e;
+penstroke z1e--z2e;
+penstroke z2e..z3e..z4e;
+penstroke z4e..z5e;
+penstroke z5e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("X",2em#/3+2ss#,cap#,0); "Calligraphic Letter X";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-curlh);
+penpos1(thinstroke,-90);
+z1l = (curlw,h+o);
+penpos2(thickstroke,180);
+z2 = (2curlw,y0);
+penpos4(thinstroke,0);
+z4r = (w-ss,curlh);
+penpos5(thinstroke,-90);
+z5r = (w-ss-curlw,0-o);
+penpos3(thickstroke,180);
+z3 = (w-2curlw,y4);
+penpos6(1.5thinstroke,0);
+z6r = (w-ss,h+o);
+penpos7(1.5thinstroke,0);
+z7l = (ss,0-o);
+
+penstroke z0e..z1e..z2e---z3e..z5e..z4e;
+penstroke z6e--z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("Y",5em#/6+2ss#,cap#,dep#); "Calligraphic Letter Y";
+italcorr(ex#*slant);
+
+penpos0(thinstroke,0);
+z0l = (ss,h-curlh);
+penpos1(thinstroke,-90);
+z1l = (curlw,h+o);
+penpos2(thickstroke,180);
+z2 = (2curlw,h-curlh);
+penpos3(thickstroke,180);
+z3 = (x2,2curlh);
+penpos4(thinstroke,-90);
+z4r = (w/2+curlw/2,0-o);
+penpos5(thickstroke,0);
+z5r = (w-ss,2curlh);
+penpos6(thickstroke,0);
+z6r = (w-ss,h);
+penpos7(thickstroke,0);
+z7r = (w-ss,-dep/2);
+penpos8(thinstroke,180);
+z8r = (x3r,-dep/2);
+penpos9(thinstroke,-90);
+z9r = (w/2,-dep);
+
+penstroke z0e..z1e..z2e---z3e..z4e..z5e---z6e;
+penstroke z6e---z7e..z9e..z8e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;
+
+beginchar("Z",5em#/6+2ss#,cap#,0); "Calligraphic Letter Z";
+italcorr(ex#*slant);
+
+penpos0(thickstroke,-90);
+z0l = (ss,h-curlh);
+penpos1(thickstroke,-90);
+z1l = (w/4,h+o);
+penpos2(thickstroke,-90);
+z2l = (2w/3,h-curlh);
+penpos3(1.5thinstroke,0);
+z3r = (w-ss,h+o);
+penpos4(1.5thinstroke,0);
+z4l = (ss,0-o);
+
+penstroke z0e..z1e..z2e..z3e;
+penstroke z3e--z4e;
+penstroke (z0e..z1e..z2e..z3e) shifted (0,-h+curlh);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+endchar;

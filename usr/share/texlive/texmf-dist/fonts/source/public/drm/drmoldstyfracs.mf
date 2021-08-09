@@ -1,0 +1,73 @@
+% +AMDG  This document was begun on 6 Aug 11EX, the Feast of
+% the Transfiguration of Our Lord Jesus Christ, and the
+% commemorations of St Xystus, PM, and Felicissimus and
+% Agapitus, MM, and it is humbly dedicated to them and to
+% the Immaculate Heart of Mary for their prayers, and to the
+% Sacred Heart of Jesus for His mercy.
+
+beginchar(oct"275",em#+2ss#,cap#,0); "old-style fraction 1/2";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss-pwid,h);
+bot lft z1 = (ss,0);
+draw z0--z1;
+
+fill one scaled 0.85 shifted (0,h/2);
+fill two scaled 0.85 shifted (w/2-pwid/2,0);
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"274",em#+2ss#,cap#,dep#); "old-style fraction 1/4";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss-pwid,h);
+bot lft z1 = (ss,0);
+draw z0--z1;
+
+fill one scaled 0.85 shifted (0,h/2);
+fill fourfill scaled 0.85 shifted (w/2-pwid/2,dep/2);
+unfill fourun scaled 0.85 shifted (w/2-pwid/2,dep/2);
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"276",em#+2ss#,cap#,dep#); "old-style fraction 3/4";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss,h);
+bot lft z1 = (ss+pwid,0);
+draw z0--z1;
+
+fill three scaled 0.85 shifted (0,h/2+pwid/2);
+fill fourfill scaled 0.85 shifted (w/2,dep/2);
+unfill fourun scaled 0.85 shifted (w/2,dep/2);
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"304",em#+2ss#,cap#,dep#); "old-style fraction 1/3";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss-pwid,h);
+bot lft z1 = (ss,0);
+draw z0--z1;
+
+fill one scaled 0.85 shifted (0,h/2);
+fill three scaled 0.85 shifted (w/2-ss,dep/2);
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"305",7em#/6+2ss#,cap#,dep#); "old-style fraction 2/3";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss-pwid,h);
+bot lft z1 = (ss+pwid,0);
+draw z0--z1;
+
+fill two scaled 0.85 shifted (0,h/2);
+fill three scaled 0.85 shifted (w/2,0);
+
+penlabels(0,1);
+endchar;

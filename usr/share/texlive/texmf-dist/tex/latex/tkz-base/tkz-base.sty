@@ -1,0 +1,124 @@
+% tkz-base.sty % this file
+% Copyright 2020\"\" by Alain Matthes
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License. 
+% This work consists of the main source file interfaces.dtx
+% and the derived files 
+% tkz-base.sty % this file
+%<--------------------------------------------------------------------------–>
+%  Objet :  Outils pour la création de graphiques géométriques
+%<--------------------------------------------------------------------------–>
+\typeout{2020/01/24 3.02c tkz-base.sty}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tkz-base}[2020/01/24 3.02c  tkz-base]
+\ifx\e@alloc\@undefined
+  \RequirePackage{etex}
+\fi
+\RequirePackage{tikz}   
+\usetikzlibrary{%
+                angles,
+                arrows,
+                arrows.meta,
+                babel,
+                calc,
+                decorations,
+                decorations.markings,
+                decorations.pathreplacing,
+                decorations.shapes,
+                decorations.text,
+                decorations.pathmorphing,
+                intersections,
+                patterns,
+                plotmarks,
+                positioning,
+                quotes,
+                shadows,  
+                shapes.misc,
+                snakes,
+                through
+                }
+%  Pour les les labels sur les axes
+\@ifpackageloaded{numprint}{}
+{\RequirePackage[autolanguage]{numprint}} %
+\RequirePackage{xfp,fp}
+%\FPmessagesfalse  % pas de messages de la part de fp !
+%---------------------
+\newdimen\tkzRadius
+\newdimen\tkzLength
+\newdimen\tkz@radi
+%--------------------- tkz registres
+\newdimen\tkz@ax
+\newdimen\tkz@ay
+\newdimen\tkz@bx
+\newdimen\tkz@by
+\newdimen\tkz@cx
+\newdimen\tkz@cy
+\newdimen\tkz@dx
+\newdimen\tkz@dy
+% 2017
+\newdimen\tkz@tax 
+\newdimen\tkz@tay
+\newdimen\tkz@tbx
+\newdimen\tkz@tby
+\newdimen\tkz@tcx
+\newdimen\tkz@tcy
+\newdimen\tkz@tdx
+\newdimen\tkz@tdy
+%--------------------- points
+\newif\iftkz@polar\tkz@polarfalse
+\newif\iftkz@pt@polar 
+\newif\iftkz@pt@show 
+\newif\iftkz@pt@noname 
+\newif\iftkz@coord@noxdraw
+\newif\iftkz@coord@noydraw
+\newif\iftkz@vec@normed
+%--------------------- lines
+\newif\iftkz@line@normed
+%--------------------- tkz axis
+\newif\iftkz@X@noticks
+\newif\iftkz@Y@noticks
+\newif\iftkz@X@nograd
+\newif\iftkz@Y@nograd
+\newif\iftkz@X@orig
+\newif\iftkz@Y@orig
+\newif\iftkz@X@unit
+\newif\iftkz@Y@unit
+\newif\iftkz@np 
+\newif\iftkz@swap
+\newif\iftkz@init@NO
+\newif\iftkz@Rep@orig%--------------------- Rep
+\newif\iftkzLengthIncm%--------------------- Math
+\newif\iftkz@sop@show%--------------------- marks
+\newif\iftkz@equi@show
+\newif\iftkz@gd@sub% sub grid ?%--------------------- about grid
+\newif\iftkz@node\tkz@nodefalse  
+\newif\iftkz@legend@line%--------------------- legend
+\newif\iftkz@TestSubString
+\newif\ifnormtkzcode@execute% german ? right angle
+\newif\iftkz@sawp@sc%---------------------- semi circle
+\newif\ifpgf@unknown % math arith
+\newif\ifpgf@isaprime    
+\newcount\tkz@cntmk
+\newif\iftkz@RappReturn % protractor
+\newif\iftkz@RappFull
+%--------------------- Init
+\def\tkz@xgrad{1}
+\def\tkz@ygrad{1}
+\def\tkz@xa{0}
+\def\tkz@xb{10}
+\def\tkz@ya{0}
+\def\tkz@yb{10}
+%----------------------
+\def\tkz@mathresult{}
+\InputIfFileExists{tkz-base.cfg}{%
+\typeout{Local configuration file tkz-base.cfg found and used}}{%
+\typeout{tkz-base.cfg not found} }
+\input{tkz-tools-modules}
+\input{tkz-lib-marks}
+\usetkztool{base,utilities,math,text,BB,arith,print,misc}
+\usetkzobj{axes,grids,marks,points,rep}
+\endinput
+

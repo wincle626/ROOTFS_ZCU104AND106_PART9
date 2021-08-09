@@ -1,0 +1,284 @@
+% +AMDG  This document was begun on 23 June 11EX, the feast
+% of the Sacred Heart, and it is humbly dedicated to the
+% Sacred Heart of Jesus, for His mercy.
+
+beginchar(oct"173",0.6ex#+2ss#,ex#,0); "dotless i";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+currentpicture := dotlessi;
+
+endchar;
+
+beginchar(oct"174",0.6ex#+2ss#,ex#,dep#); "dotless j";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+currentpicture := dotlessj;
+
+endchar;
+
+beginchar(oct"054",0.3ex#+2ss#,ex#,0); "open c";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,4h/5);
+rt z2 = (w-ss,3h/5);
+path mathc; mathc = z0{left}..z1..{right}z2;
+draw mathc;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"055",0.3ex#+2ss#,ex#,0); "close c";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+draw mathc reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"056",ex#+2ss#,ex#,0); "right-pointing triangle";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+
+rt z0 = (w-ss,h/2);
+top lft z1 = (ss,h);
+bot lft z2 = (ss,0);
+path mathtri; mathtri = z0--z1--z2--cycle;
+draw mathtri;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+endchar;
+
+beginchar(oct"057",ex#+2ss#,ex#,0); "left-pointing triangle";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+draw mathtri reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"072",pwid#,pwid#,0); "The decimal point, .";
+fill period;
+endchar;
+
+beginchar(oct"073",pwid#,pwid#,0); "The comma, ,";
+fill commapost;
+endchar;
+
+beginchar(oct"075",ex#/2+2ss#,cap#,0); "The forward slash, /";
+
+currentpicture := slash;
+
+endchar;
+
+beginchar(oct"077",theight#+2ss#,theight#,0); "solid five-pointed star";
+
+z0 = (w/2,h/2);
+z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,72);
+z3 = z2 rotatedaround (z0,72);
+z4 = z3 rotatedaround (z0,72);
+z5 = z4 rotatedaround (z0,72);
+z6 = (z2--z5) intersectionpoint (z1--z4);
+z7 = (z2--z5) intersectionpoint (z1--z3);
+z8 = (z3--z5) intersectionpoint (z4--z1);
+z9 = (z4--z2) intersectionpoint (z3--z1);
+z10 = (z2--z4) intersectionpoint (z3--z5);
+
+path fivestar; fivestar = z1--z6--z5--z8--z4--z10--z3--z9--z2--z7--cycle;
+fill fivestar;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"100",ex#+2ss#,cap#,0); "partial differential";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,h-1.5curlh);
+penpos1(thinl,90);
+z1r = z0r;
+penpos2(thinl,180);
+z2r = z1r;
+penpos3(thinl,-90);
+z3r = z2r;
+penpos4(thinl,-90);
+z4l = (w/2,h+o);
+penpos5(thickl,180);
+z5l = (w-ss,3h/4);
+penpos6(thickl,180);
+z6l = (w-ss,h/4);
+penpos7(thinl,90);
+z7l = (w/2,0-o);
+penpos8(curvl,0);
+z8l = (ss,h/4);
+penpos9(thinl,-90);
+z9l = (w/2,ex+o);
+
+penstroke z3e..z2e..z1e..z0e;
+penstroke z0e{up}..z4e..z5e---z6e..z7e..z8e..z9e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"133",0.6ex#+2ss#,asch#,0); "musical flat";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,h);
+penpos1(thinl,0);
+z1l = (ss,0);
+penpos2(thinl,90);
+z2l = z1;
+penpos3(curvl,180);
+z3l = (w-ss,0.4h);
+penpos5(thinl,-90);
+z5 = (x1,0.4h);
+
+penstroke z0e--z1e;
+penstroke z2e{right}..z3e..z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"134",0.6ex#+2ss#,asch#,dep#); "musical natural";
+italcorr(ex#*slant);
+
+penpos0(thinl,30);
+z0l = (ss,h);
+penpos1(thinl,30);
+z1l = (ss,-dep/2);
+penpos2(thinl,30);
+z2r = (w-ss,h-dep/2);
+penpos3(thinl,30);
+z3r = (w-ss,-dep);
+penpos4(thickl,-90);
+z4r = z1r;
+penpos5(thickl,-90);
+z5l = z2l;
+z6 = (w,y4);
+penpos7(thickl,-90);
+z7 = z6 rotatedaround(z4,30);
+z8 = (0,y5);
+z9 = z8 rotatedaround(z5,30);
+penpos9(thickl,-90);
+
+penstroke z0e--z1e;
+penstroke z2e--z3e;
+penstroke z4e--z7e;
+penstroke z9e--z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"135",ex#+2ss#,asch#,dep#); "musical sharp";
+italcorr(ex#*slant);
+
+penpos0(thinl,30);
+z0l = (w/4,h);
+penpos1(thinl,30);
+z1l = (w/4,-dep/2);
+penpos2(thinl,30);
+z2r = (3w/4,h-dep/2);
+penpos3(thinl,30);
+z3r = (3w/4,-dep);
+penpos4(thickl,120);
+x4r = (ss); y4r = 0;
+penpos5(thickl,120);
+x5l = w-ss; y5l = h-dep;
+z6 = (ss,y5);
+z7 = (w-ss,y4);
+penpos8(thickl,120);
+z8 = z6 rotatedaround (z5,15);
+penpos9(thickl,120);
+z9 = z7 rotatedaround (z4,15);
+penpos10(thinl,30);
+z10 = (x1,-dep);
+penpos11(thinl,30);
+z11 = (x2,h+o);
+
+penstroke z0e--z10e;
+penstroke z11e--z3e;
+penstroke z8e--z5e;
+penstroke z4e--z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"136",cap#+dep#+2ss#,asch#,dep#); "curve open up";
+italcorr(ex#*slant);
+
+currentpicture := paren rotated (90) shifted
+	(w/2+dep,h/2-pwid); 
+
+endchar;
+
+beginchar(oct"137",cap#+dep#+2ss#,asch#,dep#); "curve open down";
+italcorr(ex#*slant);
+
+currentpicture := paren rotated (-90) shifted
+	(w/2-dep,h/2+pwid/2); 
+
+endchar;
+
+beginchar(oct"176",ex#+2ss#,cap#,0); "vector arrow";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,h-curlh);
+rt z1 = (w-ss,h-curlh);
+z2 = (2w/3,h+o);
+z3 = (2w/3,h-2curlh);
+
+draw z0--z1;
+filldraw z2--z1--z3--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"177",ex#+2ss#,cap#,0); "tie";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w-ss,h-curlh);
+top z1 = (w+w/2,h+o);
+top z2 = (2w,h-curlh);
+
+draw z0..z1..z2;
+
+penlabels(0,1,2,3,4,5,6);
+endchar;
+
+beginchar(oct"175",1.2ex#+2ss#,ex#,dep#); "wp";
+italcorr(ex#*slant);
+
+penpos0(thinl,-90);
+z0 = (w/4,h);
+penpos1(thickl,0);
+z1l = (ss,3h/4);
+penpos2(thickl,0);
+z2l = (w/4,0);
+penpos3(thinl,-90);
+z3r = (w/8+hair,-dep);
+penpos4(thinl,180);
+z4r = (ss,-dep/2);
+penpos5(thinl,90);
+z5r = (0.6w,h+o);
+penpos6(thickl,0);
+z6r = (w-ss,h/2);
+penpos7(thinl,-90);
+z7r = (0.6w,0-o);
+penpos8(thinl,0);
+z8 = (x1r,h/4);
+penpos9(thinl,180);
+z9r = (x2r,y8);
+
+penstroke z0e{left}..z1e..z8e..z2e..z3e..z4e..{right}z5e..
+	z6e..z7e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

@@ -1,0 +1,63 @@
+% tkz-tools-BB.tex
+% Copyright 2020 by Alain Matthes
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+\def\fileversion{3.02c}
+\def\filedate{2020/01/24} 
+\typeout{2020/01/24 3.02c  tkz-obj-BB.tex}  
+\makeatletter
+%<--------------------------------------------------------------------------–>
+\pgfkeys{/tkzClip/.cd, 
+space/.store in    = {\tkz@CLI@space},
+space    = {}} 
+
+\def\tkzClip{\pgfutil@ifnextchar[{\tkz@Clip}{\tkz@Clip[]}} 
+\def\tkz@Clip[#1]{%
+
+\pgfqkeys{/tkzClip}{#1} 
+\ifx\tkzutil@empty\tkz@CLI@space
+    \clip (\tkz@xa,\tkz@ya) rectangle (\tkz@xb,\tkz@yb);
+ \else
+ \edef\tkz@xxa{\fpeval{\tkz@xa-\tkz@CLI@space}}
+ \edef\tkz@yya{\fpeval{\tkz@ya-\tkz@CLI@space}}
+ \edef\tkz@xxb{\fpeval{\tkz@xb+\tkz@CLI@space}} % correction bug 2020
+ \edef\tkz@yyb{\fpeval{\tkz@yb+\tkz@CLI@space}}
+  \clip (\tkz@xxa,\tkz@yya) rectangle (\tkz@xxb,\tkz@yyb);
+\fi
+} 
+%<--------------------------------------------------------------------------–>
+\def\tkzSetBB(#1)(#2){%
+  \pgfresetboundingbox
+   \path coordinate (tkz@SW) at (#1)
+         coordinate (tkz@NE) at (#2);
+  \path[use as bounding box](#1) rectangle (#2);
+  }
+%<--------------------------------------------------------------------------–>
+\def\tkzSaveBB{%
+\path coordinate (tkz@SW) at (current bounding box.north east)
+      coordinate (tkz@NE) at (current bounding box.south west);
+}
+%<--------------------------------------------------------------------------–>
+\def\tkzRestoreBB{%
+  \pgfresetboundingbox
+  \path[use as bounding box] (tkz@SW) rectangle (tkz@NE) ;
+}
+%<--------------------------------------------------------------------------–>
+\def\tkzShowBB{\pgfutil@ifnextchar[{\tkz@ShowBB}{\tkz@ShowBB[]}} 
+\def\tkz@ShowBB[#1]{%
+ \draw[#1]  (current bounding box.south west) rectangle 
+ 			(current bounding box.north east);
+}
+%<--------------------------------------------------------------------------–>
+\def\tkzClipBB{%
+\clip   (current bounding box.south west) rectangle 
+ 		(current bounding box.north east);
+}
+%<--------------------------------------------------------------------------–>
+\tikzset{tkzreverseclip/.style={insert path={%
+	(\tkz@xa,\tkz@ya) rectangle (\tkz@xb,\tkz@yb)}}}
+%todo add options
+%<--------------------------------------------------------------------------–>
+\makeatother
+\endinput

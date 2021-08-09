@@ -1,0 +1,6 @@
+% beuronc.mf
+% schmale Schrift der Beuroner Kunst (Beuronese art font condensed)
+% 28. Dezember 2015
+
+f:=0.8;	% horizontaler Streckfaktor
+input beuronbuchst;

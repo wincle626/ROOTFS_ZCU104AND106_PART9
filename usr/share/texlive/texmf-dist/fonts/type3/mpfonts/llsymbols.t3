@@ -1,0 +1,199 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 0 /ch0 put
+Encoding 1 /ch1 put
+Encoding 2 /ch2 put
+Encoding 3 /ch3 put
+Encoding 4 /ch4 put
+Encoding 5 /ch5 put
+Encoding 6 /ch6 put
+Encoding 7 /ch7 put
+Encoding 8 /ch8 put
+Encoding 9 /ch9 put
+Encoding 10 /ch10 put
+Encoding 11 /ch11 put
+Encoding 12 /ch12 put
+Encoding 13 /ch13 put
+Encoding 14 /ch14 put
+Encoding 15 /ch15 put
+Encoding 16 /ch16 put
+Encoding 17 /ch17 put
+Encoding 18 /ch18 put
+/CharProcs 20 dict def
+CharProcs /.notdef { } put
+CharProcs /ch0 {
+0 0 setcharwidth
+} put
+CharProcs /ch1 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch2 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch3 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch4 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch5 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch6 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch7 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch8 {
+0 0 setcharwidth
+} put
+CharProcs /ch9 {
+0 0 setcharwidth
+} put
+CharProcs /ch10 {
+0 0 setcharwidth
+} put
+CharProcs /ch11 {
+0 0 setcharwidth
+} put
+CharProcs /ch12 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch13 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch14 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0.15628 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0.07814 moveto
+0 0.22055 -0.08057 0 0 0 curveto
+0.0521 0 -0.0521 0.07814 0 0.07814 curveto
+0.08057 0.07814 0 -0.14241 0 0 curveto stroke
+ 0 0 dtransform truncate idtransform setlinewidth pop
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch15 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch16 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch17 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch18 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/llsymbols exch definefont pop

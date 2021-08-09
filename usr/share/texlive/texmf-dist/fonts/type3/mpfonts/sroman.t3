@@ -1,0 +1,50 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 65 /ch65 put
+Encoding 66 /ch66 put
+Encoding 67 /ch67 put
+Encoding 68 /ch68 put
+Encoding 69 /ch69 put
+Encoding 70 /ch70 put
+Encoding 71 /ch71 put
+Encoding 72 /ch72 put
+/CharProcs 9 dict def
+CharProcs /.notdef { } put
+CharProcs /ch65 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch66 {
+0 0 setcharwidth
+} put
+CharProcs /ch67 {
+0 0 setcharwidth
+} put
+CharProcs /ch68 {
+0 0 setcharwidth
+} put
+CharProcs /ch69 {
+0 0 setcharwidth
+} put
+CharProcs /ch70 {
+0 0 setcharwidth
+} put
+CharProcs /ch71 {
+0 0 setcharwidth
+} put
+CharProcs /ch72 {
+0 0 setcharwidth
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/sroman exch definefont pop

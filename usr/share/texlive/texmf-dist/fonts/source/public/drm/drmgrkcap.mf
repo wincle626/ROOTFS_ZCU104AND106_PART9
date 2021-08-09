@@ -1,0 +1,759 @@
+% +AMDG  This document was begun on 15 August 2007, the
+% Feast of the Assumption of the Blessed Virgin Mary, and it
+% is humbly offered to her for her prayers, and to the
+% Sacred Heart of Jesus for His mercy.
+
+picture capo;
+picture capa;
+picture capl;
+picture capc;
+picture capd;
+picture cape;
+picture capg;
+picture capn;
+picture capu;
+picture capr;
+picture caps;
+picture capt;
+picture capy;
+picture capz;
+picture capi;
+
+def ulftbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (bulbsh,bulbsh);
+z.k=z.j shifted (bulbsh,-bulbsh);
+z.l=z.k shifted (-bulbsh,-bulbsh);
+enddef;
+
+%%%FFF  Fix W, M, A from dependence on stroke widths FFF%%%
+
+%%%% Define Lower Right Serif on Caps %%%%
+
+def lrserif(suffix i,j,k,l,m)(expr strokewidth) = 
+if strokewidth = 1:
+z.j=z.i+(lserw/3,-lserc/2);
+z.k=z.i+(lserw,-lserc);
+z.l=z.k-(0,lserstep);
+z.m=z.l-(lserw+thickstroke/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(lserw/3,-lserc/2);
+z.k=z.i+(lserw+equalize/2,-lserc);
+z.l=z.k-(0,lserstep);
+z.m=z.l-(lserw+thickstroke/2,0);
+fi
+enddef;
+
+%%%% Define Lower Left Serif on Caps %%%%
+
+def llserif(suffix i,j,k,l,m)(expr strokewidth) =
+if strokewidth = 1:
+z.j=z.i-(lserw/3,lserc/2);
+z.k=z.i-(lserw,lserc);
+z.l=z.k-(0,lserstep);
+z.m=z.l+(lserw+thickstroke/2,0);
+elseif strokewidth = 2:
+z.j=z.i-(lserw/3,lserc/2);
+z.k=z.i-(lserw+equalize/2,lserc);
+z.l=z.k-(0,lserstep);
+z.m=z.l+(lserw+thickstroke/2,0);
+fi
+enddef;
+
+%%%% Define Upper Right Serif on Caps %%%%
+
+def urserif(suffix i,j,k,l,m)(expr strokewidth) =
+if strokewidth = 1:
+z.j=z.i+(userw/3,lserc/2);
+z.k=z.i+(userw,userc);
+z.l=z.k+(0,userstep);
+z.m=z.l-(userw+thickstroke/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(userw/3,lserc/2);
+z.k=z.i+(userw+equalize/2,userc);
+z.l=z.k+(0,userstep);
+z.m=z.l-(userw+thickstroke/2,0);
+fi
+enddef;
+
+%%%% Define Upper Left Serif on Caps %%%%
+
+def ulserif(suffix i,j,k,l,m)(expr strokewidth) = 
+if strokewidth = 1:
+z.j=z.i+(-userw/3,lserc/2);
+z.k=z.i+(-userw,userc);
+z.l=z.k+(0,userstep);
+z.m=z.l+(userw+thickstroke/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(-userw/3,lserc/2);
+z.k=z.i+(-(userw+equalize/2),userc);
+z.l=z.k+(0,userstep);
+z.m=z.l+(userw+thickstroke/2,0);
+fi
+enddef;
+
+%%%% Define T Side Serifs on Caps %%%%
+
+def tlsideserif(suffix i,j,k,l,m) = 
+z.j=z.i+(0,seriftail);
+z.k=z.j-((userh/2),0);
+z.l=z.k-(userh/2,1.5userw);
+z.m=z.l+(userh/2,0);
+enddef;
+
+def trsideserif(suffix i,j,k,l,m) =
+z.j=z.i+(0,seriftail);
+z.k=z.j+((userh/2),0);
+z.l=z.k+(userh/2,-1.5userw);
+z.m=z.l-(userh/2,0);
+enddef;
+
+%%%% Define C Side Serifs on Caps %%%%
+
+def ctsideserif(suffix i,j,k,l,m,n)(expr topbot) = 
+z.j=z.i+(0,userw/2);
+z.k=z.j+(userh,0);
+z.l=z.k-(0,2userw);
+z.m=z.l-(userh,0);
+if topbot = 1:
+path topserif; topserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+elseif topbot = 2:
+path botserif; botserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+fi;
+enddef;
+
+def ctbackserif(suffix i,j,k,l,m,n)(expr topbot) =
+z.j=z.i+(0,userh/2);
+z.k=z.j-(userh,0);
+z.l=z.k+(0,-2userw);
+z.m=z.l+(userh,0);
+if topbot = 1:
+path toplftserif; toplftserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+elseif topbot = 2:
+path botlftserif; botlftserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+fi;
+enddef;
+
+%%%% Define L, E, Z, and F side serifs on Caps %%%%
+
+def upsideserif(suffix i,j,k) = 
+z.j=z.i+(ssslant,2lserw);
+z.k=z.j-(lserh,lserw);
+enddef;
+
+def downsideserif(suffix i,j,k) = 
+z.j=z.i+(ssslant,-2lserw);
+z.k=z.j+(-lserh,lserw);
+enddef;
+
+def lftdownsideserif(suffix i,j,k) =
+z.j=z.i-(ssslant,2lserw);
+z.k=z.j+(lserh,lserw);
+enddef;
+
+beginchar("I",thickstroke#+2lserw#+2ss#,cap#,0); "The Letter I";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+lrserif(2,9,10,11,25)(1);
+llserif(1,12,13,14,26)(1);
+urserif(4,15,16,17,27)(1);
+ulserif(3,18,19,20,28)(1);
+
+path capeye; capeye = z14--z11--z10..z9..z2--z4..z15..z16--z17--z20--z19..
+	z18..z3--z1..z12..z13--z14--cycle;
+fill capeye;
+
+capi := currentpicture;
+
+penlabels(1,2,3,4,9,10,11,12,13,14,15,16,17,18,19,20,25);
+
+endchar;
+
+beginchar("O",5em#/6+2ss#,cap#,0); "The Letter O";
+italcorr(ex#*slant);
+
+z1=(ss,h/2);
+z2=(w/2,h+o);
+z3=(w-ss,h/2);
+z4=(w/2,0-o);
+z5=z1 shifted (curvwid,0);
+z6=z2 shifted (0,-thinstroke);
+z7=z3 shifted (-curvwid,0);
+z8=z4 shifted (0,thinstroke);
+
+path fillo; path unfillo;
+fillo = z4..z3..z2..z1..cycle;
+unfillo = z5..z6..z7..z8..cycle;
+fill fillo;
+unfill unfillo;
+
+capo := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+
+endchar;
+
+beginchar("A",em#+2ss#,cap#,0); "The Letter A";
+italcorr(ex#*slant);
+
+crossh = 1/phi;
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thinstroke,0);
+z3 = (w-ss-lserw,lserh);
+z4 = z3 shifted (-thickstroke,0);
+z5 = (w/2+thickstroke/2,h+o);
+z6 = z5 shifted (-thickstroke,0) rotatedaround (z5,30);
+lrserif(3,7,8,9,10)(1);
+llserif(4,11,12,13,14)(1);
+lrserif(2,15,16,17,18)(1);
+llserif(1,19,20,21,22)(1);
+z23 = crossh[z6,z1];
+z24 = z23 shifted (thinstroke,0);
+z25 = (w,y23);
+z26 = letaa[z23,z25];
+z26 = letab[z3,z5];
+z27 = z26 shifted (-thickstroke,0);
+z28 = 0.9[z27,z6];
+z29 = 0.1[z27,z28];
+z30 = 0.1[z24,z28];
+
+fill z3--z5--z6--z1..z19..z20--z21--z17--z16..z15..z2
+	--z24--z27--z4..z11..z12--z13--z9--z8..z7..cycle;
+unfill z30--z28--z29--cycle;
+
+capa := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36);
+endchar;
+
+beginchar("H",em#+2ss#,cap#,0); "The Letter H";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+z5 = (w-ss-lserw-thickstroke,lserh);
+z6 = z5 shifted (thickstroke,0);
+z7 = (w-ss-lserw-thickstroke,h-lserh);
+z8 = z7 shifted (thickstroke,0);
+z46=(0.5)[z4,z2];
+z47=z46+(0,thinstroke/2);
+z48=z46-(0,thinstroke/2);
+z49=(0.5)[z7,z5];
+z50=z49+(0,thinstroke/2);
+z51=z49-(0,thinstroke/2);
+lrserif(2,9,10,11,25)(1);
+llserif(1,12,13,14,26)(1);
+urserif(4,15,16,17,27)(1);
+ulserif(3,18,19,20,28)(1);
+lrserif(6,30,31,32,33)(1);
+llserif(5,34,35,36,37)(1);
+urserif(8,38,39,40,41)(1);
+ulserif(7,42,43,44,45)(1);
+
+path capeta; capeta = z36--z32--z31..z30..z6--z8..z38..z39--z40--z44--
+	z43..z42..z7--z50--z47--z4..z15..z16--z17--z20--
+	z19..z18..z3--z1..z12..z13--z14--z11--z10..z9..z2
+	--z48--z51--z5..z34..z35--cycle;
+fill capeta;
+
+picture caph; caph := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"122",2em#/3+2ss#,cap#,0); "The Letter P";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = (x3 + thickstroke,h-thinstroke);
+z17=((ss+(thickstroke/2)+lserw),h);
+z18=(w/2,h);
+z19=(w/2,h-thinstroke);
+z20 = (w-ss,3h/4);
+z21 = z20 shifted (-curvwid,0);
+z22=(x18,h/2);
+z23=z22+(0,thinstroke);
+z30=(x4,0);
+z26 = z2 shifted (0,-lserh);
+z27 = z4 shifted (0,thinstroke);
+z24 = 0.5[z26,z27];
+z25 = z24 shifted (0,thinstroke);
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+
+fill z18--z17--z12--z11--z10..z9..z3--z1..z5..z6--
+	z7--z8--z15--z14..z13..z2--z24..z22..z20..{left}z18..cycle;
+unfill z25{right}..{right}z23..z21..z19{left}..{left}z4--z25--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,2223,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("B",3em#/4+2ss#,cap#,0); "The Letter B";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = (x1+thickstroke,thinstroke);
+z3 = (ss+userw,h-userh);
+z4 = (x3+thickstroke,h-thinstroke);
+z30=(x4,0);
+z40 = z4 shifted (0,thinstroke);
+z25 = 0.5[z30,z40] shifted (0,thinstroke);
+z32 = z25 shifted (0,-thinstroke); 
+z24 = 0.5[z25,z32];
+z17=((ss+(thickstroke/2)+lserw),h);
+z18=(w/2,h);
+z19=(w/2,h-thinstroke);
+z20 = (w-ss-2o,3h/4);
+z21=z20-(curvwid,0);
+z23=z22+(0,thinstroke/2);
+z26 = z32 shifted (loopgap,0);
+z27 = (w-ss,h/4);
+z28=z27-(1.1curvwid,0);
+z29=(x18,0);
+z31=z29+(0,thinstroke);
+z33=z22-(0,thinstroke/2);
+z34 = z25 shifted (loopgap,0);
+z22 = 0.5[z34,z26];
+llserif(1,5,6,7,8)(1);
+ulserif(3,9,10,11,12)(1);
+
+path stemtoploop; stemtoploop = z33{right}..{up}z20{up}..{left}z18{left}..z40--z11--z10..z9..z3--z1..z5..z6--z7--z29;
+path stembotloop; stembotloop =
+z30..{right}z29{right}..{up}z27{up}..{left}z34--z33;
+path topinncirc; topinncirc = z25{right}..{right}z23..{up}z21{up}..{left}z19{left}..{left}z4--z25..cycle;
+path botinncirc; botinncirc = z2..{right}z31{right}..{up}z28{up}..z33{left}..{left}z32--cycle;
+
+fill stembotloop & stemtoploop..cycle;
+unfill topinncirc;
+unfill botinncirc;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("M",em#+2ss#,cap#,0); "The Letter M";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thinstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thinstroke,0);
+z5 = (w/2-thickstroke/3,0);
+z6 = (w-ss-lserw,lserh);
+z7 = z6 shifted (-thickstroke,0);
+z8 = (w-ss-userw,h-userh);
+z9 = z8 shifted (-thickstroke,0);
+z14 = z13 shifted (-2thickstroke/3,0);
+z23 = 0.22[z5,z9];
+z28 = 0.1[z23,z29];
+%z28 = z23 shifted (-thinstroke/2,thinstroke/2);
+z29=z27+(2curvwid/3,0);
+
+urserif(8,10,11,12,13)(1);
+lrserif(6,15,16,17,18)(1);
+llserif(7,19,20,21,22)(1);
+ulserif(3,24,25,26,27)(1);
+llserif(1,30,31,32,33)(2);
+lrserif(2,34,35,36,37)(2);
+
+path capem; capem =
+z5--z9--z7..z19..z20--z21--z17--z16..z15..z6--z8..z10..z11--z12--z14--z28--z29--z26--z25..z24..z3--z1..z30..z31--z32--z36--z35..z34..z2--z4--z5--cycle;
+fill capem;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("T",5em#/6+2ss#,cap#,0);"The Letter T";
+italcorr(ex#*slant);
+
+seriftail=userw/5;
+
+z1=(ss+userh,h);
+z2=z1-(0,thinstroke);
+z3=(w-ss-userh,h);
+z4=z3-(0,thinstroke);
+z5=(w/2-thickstroke/2,y2);
+z6=(w/2+thickstroke/2,y2);
+z7=(x5,lserh);
+z8=z7+(thickstroke,0);
+
+llserif(7,9,10,11,12)(1);
+lrserif(8,13,14,15,16)(1);
+tlsideserif(1,17,18,19,20);
+trsideserif(3,21,22,23,24);
+
+pickup cappen;
+
+path tpath;
+tpath = z7..z9..z10--z11--z15--z14..z13..z8--z6--z4---{down}z24..z23..tension 2..{up}z22{left}..{left}z21{down}..z3--z1..z17{left}..{left}z18{down}..tension 2..z19..z20{up}---z2--z5--z7--cycle;
+fill tpath;
+
+capt := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar("N",5em#/6+2ss#,cap#,0); "The Letter N";
+italcorr(ex#*slant);
+
+z1 = (ss+userw,h-userh);
+z2=z1+(thinstroke,-0.3thickstroke);
+z3 = (ss+lserw,lserh);
+z4=z3+(thinstroke,0);
+z5=(w-ss-userw,h-userh);
+z6=z5-(thinstroke,0);
+z7=(w-ss-userw,-o);
+z28=z7+(-thinstroke,2.5thickstroke);
+z29=z27+(thickstroke/2,0);
+
+llserif(3,8,9,10,11)(1);
+lrserif(4,12,13,14,15)(1);
+ulserif(6,16,17,18,19)(1);
+urserif(5,20,21,22,23)(1);
+ulserif(1,24,25,26,27)(1);
+
+fill z7--z5..z20..z21--z22--z18--z17..z16..z6--z28--z29--z27--z26--z25..z24..z1--z3..z8..z9--z10--z14--z13..z12..z4--z2--z7--cycle;
+
+capn := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("L",5em#/6+2ss#,cap#,0); "The Letter L";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = (x1+thickstroke,thinstroke);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+z5=(x4,thinstroke);
+z6=(w-ss-ssslant,0);
+z30=z6+(-thickstroke,thinstroke);
+upsideserif(6,7,29);
+
+llserif(1,12,13,14,26)(1);
+urserif(4,15,16,17,27)(1);
+ulserif(3,18,19,20,28)(1);
+
+%pickup pencircle scaled 2;
+%draw z5--z4..z16..z16--z17--z20--z19..z18..z3--z1..z12..z13--z14--z6--z7..z29..z30--z5--cycle;
+path capell; capell = z5--z4..z16..z16--z17--z20--z19..z18..z3--z1..z12..z13--z14--z6--z7..z29..z30--z5--cycle;
+fill capell;
+
+capl := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("E",5em#/6+2ss#,cap#,0); "The Letter E";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+lserw,h-lserh);
+z4 = (x3+thickstroke,h-thinstroke);
+z5=(x4,thinstroke);
+z6=(w-ss-ssslant,0);
+z30=z6+(-thickstroke,thinstroke);
+z8=(x6,h);
+z9=(x30,h-thinstroke);
+upsideserif(6,7,29);
+downsideserif(8,10,11);
+z15=.5[z4,z5];
+z16=z15+(0,thinstroke/2);
+z17=z16-(0,thinstroke);
+z21=(w/2,y16);
+z22=(w/2,y17);
+z23=z21+(1.5ssslant,lserw/2);
+z24=z23+(ssslant,lserw);
+z25=z22+(1.5ssslant,-lserw/2);
+z27=z25+(ssslant,-lserw);
+
+draw z21--z24;
+
+llserif(1,12,13,14,26)(1);
+ulserif(3,18,19,20,28)(1);
+
+fill
+z1--z3..z18..z19--z20--z8--z10---z11..{left}z9--z4--z16--z21..z23..z24--z27..z25..z22--z17--z5--z30{right}..z29---z7--z6--z14--z13..z12..z1..cycle;
+
+cape := currentpicture;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("K",5em#/6+2ss#,cap#,0); "The Letter K";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+z17=z3 shifted (thickstrike,0);
+z22=z2 shifted (0,h/2+thinstroke-lserh);
+z23=z2 shifted (0,h/2-lserh);
+z24=(w-userw-ss,h);
+z25=z24 shifted (-thinstroke/2-thinstroke,-userh);
+z30=z25 shifted (thinstroke,0);
+z35=0.08[z23,z30];
+z46=0.28[z23,z30];
+z37 = (w-ss-lserw,lserh);
+z36 = z37 shifted (-thickstroke,0);
+
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+urserif(4,18,19,20,21)(1);
+ulserif(25,26,27,28,29)(1);
+urserif(30,31,32,33,34)(1);
+lrserif(37,38,39,40,41)(1);
+llserif(36,42,43,44,45)(1);
+
+fill
+z1..z5..z6--z7--z16--z15--z14..z13..z2--z23--z35--z36..z42..z43--z44--z40--z39..z38..z37--z46--z23--z30..z31..z32--z33--z28--z27..z26..z25--z22--z4..z18..z19--z20--z21--z11--z10..z9..z3--z1--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("Y",5em#/6+2ss#,cap#,0); "The Letter Y";
+italcorr(ex#*slant);
+
+z0 = (w/2-thickstroke/2,h/2);
+z1 = (w/2+thickstroke/2,h/2);
+z2 = (ss+userw,h-userh);
+z3 = z2 shifted (thickstroke,0);
+z4 = (w-ss-userw,h-userh);
+z5 = z4 shifted (-thinstroke,0);
+z6 = (w/2-thickstroke/2,lserh);
+z7 = (w/2+thickstroke/2,lserh);
+z8 = 0.8[z0,z1] shifted (0,lserh/2);
+
+lrserif(7,14,15,16,17)(1);
+llserif(6,10,11,12,13)(1);
+ulserif(2,18,19,20,21)(1);
+urserif(3,22,23,24,25)(1);
+ulserif(5,26,27,28,29)(1);
+urserif(4,30,31,32,33)(1);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+path capwhy;
+capwhy = z0--z6..z10..z11--z12--z16--z15..z14..z7--z1--z4..z30..z31--z32--z24--z28--z27..z26..z5--z8--z3..z22..z23--z24--z20--z19..z18..z2--z0--cycle;
+fill capwhy;
+
+capy := currentpicture;
+
+endchar;
+
+beginchar("Z",5em#/6+2ss#,cap#,0); "The Letter Z";
+italcorr(ex#*slant);
+
+z0 = (ss+ssslant,h);
+z1 = (w-ss,h);
+z3 = (ss,0);
+z4 = (w-ss-ssslant,0);
+z9 = z0 shifted (lserw,-thinstroke);
+z10 = z1 shifted (-1.2curvwid,-thinstroke);
+z11 = z3 shifted (1.2curvwid,thinstroke);
+z12 = z4 shifted (-lserw,thinstroke);
+
+lftdownsideserif(0,5,6);
+upsideserif(4,7,8);
+
+fill z1--z0--z5..z6..z9--z10--z3--z4--z7..z8..z12--z11--z1--cycle;
+
+capz := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"121",5em#/6+2ss#,cap#,0); "The Letter X";
+italcorr(ex#*slant);
+
+z0 = (w/2,h/2);
+z1 = (ss+userw,h-userh);
+z2 = (w-ss-userw,h-userh);
+z3 = (ss+lserw,lserh);
+z4 = (w-ss-lserw,lserh);
+z5 = z1 shifted (slantwid,0);
+z6 = z4 shifted (-slantwid,0);
+z7 = z2 shifted (-thinstroke,0);
+z8 = z3 shifted (thinstroke,0);
+z41 = aa[z1,z6];
+z41 = ab[z7,z3];
+z42 = ac[z5,z4];
+z42 = ad[z7,z3];
+z43 = ae[z8,z2];
+z43 = af[z6,z1];
+z44 = ag[z8,z2];
+z44 = ah[z5,z4];
+
+ulserif(1,9,10,11,12)(1);
+urserif(5,13,14,15,16)(1);
+ulserif(7,17,18,19,20)(1);
+urserif(2,21,22,23,24)(1);
+llserif(3,25,26,27,28)(1);
+lrserif(8,29,30,31,32)(1);
+llserif(6,33,34,35,36)(1);
+lrserif(4,37,38,39,40)(1);
+
+path capchi; capchi =
+z1--z41--z3..z25..z26--z27--z31--z30..z29..z8--z43--z6..z33..z34--z35--z39--z38..z37..z4--z44--z2..z21..z22--z23--z19--z18..z17..z7--z42--z5..z13..z14--z15--z11--z10..z9..z1--cycle;
+fill capchi;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"026",7em#/6+2ss#,cap#,0); "OT ligature";
+italcorr(ex#*slant);
+
+z1=(ss+3em/6+userh,h);
+z2=z1-(0,thinstroke);
+z3=(w-ss-userh,h);
+z4=z3-(0,thinstroke);
+z5=(4.5em/6-thickstroke/2,y2);
+z6=(4.5em/6+thickstroke/2,y2);
+z7=(x5,lserh);
+z8=z7+(thickstroke,0);
+z25 = (x5,h);
+z50 = (x7,0);
+
+llserif(7,9,10,11,12)(1);
+lrserif(8,13,14,15,16)(1);
+tlsideserif(1,17,18,19,20);
+trsideserif(3,21,22,23,24);
+
+path halftpath;
+halftpath = z50--z15--z14..z13..z8--z6--z4---{down}z24..z23..tension 2..{up}z22{left}..{left}z21{down}..z3--z25--cycle;
+fill halftpath;
+
+z31=(ss,h/2);
+z32=((ss+x6)/2,h);
+z33=(x5+thickstroke,h/2);
+z34=((ss+x6)/2,0-o);
+z35=z31 shifted (curvwid,0);
+z36=z32 shifted (0,-thinstroke);
+z37=z33 shifted (-curvwid,0);
+z38=z34 shifted (0,thinstroke);
+
+path fillot; path unfillot;
+fillot = z34..{up}z33---z6--z25---z32..z31..cycle;
+unfillot = z38..{up}z37---z5---z36..z35..cycle;
+fill fillot;
+unfill unfillot;
+
+fill z25--z32--z36--z5--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"027",2ss#+2thinstroke#+thickstroke#+6lserw#+2hair#,cap#,0);
+"Three lines down, straight";
+italcorr(ex#*slant);
+
+z0 = (ss+lserw,lserh);
+z1 = z0 shifted (thinstroke,0);
+z2 = (x1+2lserw+hair,lserh);
+z3 = z2 shifted (thinstroke,0);
+z4 = (w-ss-lserw,lserh);
+z5 = z4 shifted (-thickstroke,0);
+llserif(0,6,7,8,9)(1);
+lrserif(1,10,11,12,13)(1);
+llserif(2,14,15,16,17)(1);
+lrserif(3,18,19,20,21)(1);
+llserif(5,22,23,24,25)(1);
+lrserif(4,26,27,28,29)(1);
+z30 = (ss,h+o);
+z31 = z30 shifted (0,-thickstroke);
+z32 = z4 rotatedaround (z3,70);
+z33 = z5 rotatedaround (z2,70);
+z34 = z4 rotatedaround (z1,70);
+z35 = z5 rotatedaround (z0,70);
+z36 = (z0--z35) intersectionpoint (z5--z31);
+z37 = (z1--z34) intersectionpoint (z5--z31);
+z38 = (z2--z33) intersectionpoint (z5--z31);
+z39 = (z3--z32) intersectionpoint (z5--z31);
+
+fill
+z0..z6..z7--z8--z12--z11..z10..z1--z37--z38--z2..z14..z15--z16--z20--z19..z18..z3--z39--z5..z22..z23--z24--z28--z27..z26..z4--z30--z31--z36--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"030",5em#/6+2ss#,cap#,0); "The Euro sign";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+lserw,h-lserh);
+z4 = (x3+thickstroke,h-thinstroke);
+z5=(x4,thinstroke);
+z6=(w-ss-ssslant,0);
+z30=z6+(-thickstroke,thinstroke);
+z8=(x6,h);
+z9=(x30,h-thinstroke);
+upsideserif(6,7,29);
+downsideserif(8,10,11);
+
+llserif(1,12,13,14,26)(1);
+ulserif(3,18,19,20,28)(1);
+
+y14 := y26 := y6 := 0;
+y20 := y28 := y8 := h;
+
+fill
+z1--z3..z18..z19--z20--z8--z10---z11..{left}z9--z4--z5--z30{right}..z29---z7--z6--z14--z13..z12..z1..cycle;
+
+pickup pencircle scaled 1.5thinstroke;
+lft z40 = (ss,0.35h);
+lft z41 = (ss,0.6h);
+rt z42 = (2w/3,0.35h);
+rt z43 = (5w/6,0.6h);
+draw z40--z42; draw z41--z43;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"303",5em#/6+2ss#,cap#,0); "Digamma";
+italcorr(ex#*slant);
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = (x3+thickstroke,h-thinstroke);
+z5=(x4,lserh);
+z6=(w-ss-ssslant,0);
+z30=z6+(-thickstroke,thinstroke);
+z8=(x6,h);
+z9=(x30,h-thinstroke);
+upsideserif(6,7,29);
+downsideserif(8,10,11);
+z15=.5[z4,z5];
+z16=z15+(0,thinstroke/2);
+z17=z16-(0,thinstroke);
+z21=(w/2,y16);
+z22=(w/2,y17);
+z23=z21+(1.5ssslant,lserw/2);
+z24=z23+(ssslant,lserw);
+z25=z22+(1.5ssslant,-lserw/2);
+z27=z25+(ssslant,-lserw);
+
+draw z21--z24;
+
+llserif(1,12,13,14,26)(1);
+lrserif(5,31,32,33,34)(1);
+ulserif(3,18,19,20,28)(1);
+
+fill z5--z17--z22..z25..z27--z24..z23..z21--z16--z4--z9..z11..z10--z8--z20--z19..z18..z3--z1..z12..z13--z14--z33--z32..z31..z5..cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;

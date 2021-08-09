@@ -1,0 +1,65 @@
+% tkz-tools-angles.tex
+% Copyright 2020 by Alain Matthes
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+\def\fileversion{3.02c}
+\def\filedate{2020/01/24} 
+\typeout{2020/01/24 3.02c tkz-tools-angles.tex}   
+\makeatletter
+%<--------------------------------------------------------------------------–>
+%<--------------------------------------------------------------------------–>
+% thanks karu : http://tex.stackexchange.com/questions/151667/tkzgetangle-strange-behavior/196224#196224  \tkzGetAngle strange behavior
+% defines \tkz@FirstAngle and \tkz@SecondAngle sens  trigo
+%<--------------------------------------------------------------------------–>
+ \def\tkzNormalizeAngle(#1,#2){%
+ \begingroup
+   \pgfmathparse{#1}\xdef\tkz@FirstAngle{\pgfmathresult}%
+   \pgfmathparse{#2}\xdef\tkz@SecondAngle{\pgfmathresult}%
+   \pgfmathgreaterthan{\tkz@FirstAngle}{0}
+   \ifdim\pgfmathresult pt=1 pt\relax%
+     \pgfmathgreaterthan{\tkz@FirstAngle}{\tkz@SecondAngle}
+     \ifdim\pgfmathresult pt=1 pt\relax%
+       \pgfmathsubtract{\tkz@FirstAngle}{360}
+       \xdef\tkz@FirstAngle{\pgfmathresult}%
+     \fi
+   \else
+     \pgfmathgreaterthan{\tkz@FirstAngle}{\tkz@SecondAngle}
+     \ifdim\pgfmathresult pt=1 pt\relax%
+       		\pgfmathadd{\tkz@SecondAngle}{360}
+       	 	\xdef\tkz@SecondAngle{\pgfmathresult}%
+     \fi
+   \fi
+ \endgroup
+ }  
+%<--------------------------------------------------------------------------–>
+%                          Angle 
+% Recherche l'angle formé par #1 et #2 par rapport à l'horizontale
+%<--------------------------------------------------------------------------–>
+\def\tkzFindSlopeAngle(#1,#2){%
+\begingroup
+	\pgfmathanglebetweenpoints{\pgfpointanchor{#1}{center}}{%
+                               \pgfpointanchor{#2}{center}} 
+	\global\let\tkzAngleResult\pgfmathresult  
+\endgroup
+}
+%<--------------------------------------------------------------------------–>
+%                          Angle  avec trois nodes
+%<--------------------------------------------------------------------------–>
+\def\tkzFindAngle(#1,#2,#3){% new code 2016
+\begingroup
+  	\tkzFindSlopeAngle(#2,#1)\tkzGetAngle{tkz@FirstAngle}
+  	\tkzFindSlopeAngle(#2,#3)\tkzGetAngle{tkz@SecondAngle}
+  	\tkzNormalizeAngle(\tkz@FirstAngle,\tkz@SecondAngle)
+	\edef\tkz@Angle{\fpeval{\tkz@SecondAngle-\tkz@FirstAngle}}
+  	\global\let\tkzAngleResult\tkz@Angle
+\endgroup
+}
+%<--------------------------------------------------------------------------–>
+% Find angle
+%<--------------------------------------------------------------------------–>
+\def\tkzGetAngle#1{%
+	\global\expandafter\edef\csname #1\endcsname{\tkzAngleResult}
+}  
+\makeatother
+\endinput

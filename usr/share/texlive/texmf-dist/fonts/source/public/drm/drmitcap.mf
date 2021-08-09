@@ -1,0 +1,264 @@
+% +AMDG  This document was begun on 4 June 11EX, the feast
+% of St. Francis Caracciolo, C, and it is humbly dedicated
+% to him and to the Immaculate Heart of Mary for their
+% prayers, and to the Sacred Heart of Jesus for His mercy.
+
+def topcurl(suffix i,j,k) =
+	top z.j = z.i shifted (-curlw,curlh);
+	z.k = z.j shifted (-curlw/2,-curlh);
+	penpos.j(thickstroke/2,90);
+	penpos.k(thinstroke,180);
+enddef;
+
+def botcurl(suffix i,j,k) =
+	bot z.j = z.i shifted (curlw,-curlh);
+	z.k = z.j shifted (curlw/2,curlh);
+	penpos.j(thickstroke/2,90);
+	penpos.k(thinstroke,180);
+enddef;
+
+beginchar("J",0.75em#+2ss#,cap#,dep#); "The Letter J";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinstroke;
+penpos0(thickstroke,0);
+z0l = (ss,h-curlh);
+penpos1(thickstroke,-90);
+z1l = (ss+curlw,h+o);
+penpos2(0.75thickstroke,-90);
+z2l = (w/2,y1);
+penpos3(thinstroke,-90);
+z3l = (2w/3,y2);
+penpos4(thickstroke,0);
+z4r = (w-ss,h+o);
+penpos5(thickstroke,0);
+z5 = (5w/6,h/2);
+penpos6(thickstroke,0);
+z6 = (3w/4,0);
+penpos7(thinstroke,-90);
+z7r = (w/3,-d);
+penpos8(thickstroke,180);
+z8r = (ss,-d/2);
+penpos9(1.5thinstroke,90);
+z9l = z8l;
+penpos10(1.5thinstroke,0);
+z10l = z9l;
+penpos11(1.5thinstroke,-90);
+z11l = z10l;
+z12 = z5;
+penpos13(1.5thinstroke,45);
+z13 = (x2,y12);
+penpos14(1.5thinstroke,45);
+z14 = 2[z13,z12];
+
+penstroke z0e..z1e..z2e..z3e..z4e;
+penstroke z4e..z5e..z6e..{left}z7e..z8e..z9e..z10e..z11e;
+penstroke z13e--z14e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;
+
+beginchar("Q",em#+2ss#,cap#,dep#+thickstroke#/2); "The Letter Q";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinstroke;
+penpos0(thinstroke,0);
+z0 = (w/2,0.60h);
+penpos1(thinstroke,90);
+z1l = z0l;
+penpos2(thinstroke,180);
+z2l = z1l;
+penpos3(thinstroke,-90);
+z3l = z2l;
+penpos4(thinstroke,0);
+z4 = (x0 + 0.1w,y0);
+penpos5(thinstroke,-90);
+z5 = (x1,y1 - 0.2w);
+penpos6(thinstroke,180);
+z6 = (x0 - 0.2w,y2);
+penpos7(1.25thinstroke,90);
+z7 = (x1,y1 + 0.15w);
+penpos8(1.5thinstroke,0);
+z8 = (x4r + 0.1w,y0);
+penpos9(1.75thinstroke,-90);
+z9 = (x5,y5-0.15w);
+penpos10(2thinstroke,180);
+z10r = (ss,y6);
+penpos11(thickstroke,90);
+z11r = (x7,h+o);
+penpos12(thickstroke,0);
+z12r = (w-ss,y8);
+penpos13(0.8thickstroke,-90);
+z13 = (2w/3,0-o);
+penpos14(thinstroke,-90);
+z14l = (ss+1.5curlw,0-curlh);
+penpos15(thickstroke,180);
+z15r = (ss,0-curlh/2);
+penpos16(thinstroke,90);
+z16 = (x14,0+o);
+penpos17(thickstroke,60);
+z17 = (2w/3,-d/2);
+penpos18(thickstroke,90);
+z18l = (w-ss,-d);
+penpos19(0.7thickstroke,120);
+z19 = (x18 + 2qtailunit + thickstroke,-2d/3);
+penpos20(thinstroke,120);
+z20 = z19 shifted (thickstroke,curlh/3);
+penpos21(0.5thinstroke,120);
+z21 = z20 shifted (thickstroke,curlh/3);
+penpos22(0.1thinstroke,120);
+z22 = z21 shifted (thickstroke,curlh/3);
+penpos23(thickstroke,90);
+z23l = (x18 + qtailunit+2thickstroke,-d);
+penpos24(0.5thickstroke,-90);
+z24l = (z16r--z17l) intersectionpoint (z14--z13);
+
+penstroke
+z2e..z1e..z0e..z3e..z2e{up}..z4e..z5e..z6e..z7e..z8e..z9e..z10e..z11e..z12e..z13e..z24e..z14e..z15e..{right}z16e..z17e..z18e..z23e..z19e..z20e..z21e..z22e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24);
+endchar;
+
+beginchar("T",5em#/6+2ss#,cap#,0);"The Letter T";
+italcorr(ex#*slant);
+
+z0 = (w/2-thickstroke/2,lserh);
+z1 = z0 shifted (thickstroke,0);
+llserif(0,2,3,4,5)(1);
+lrserif(1,6,7,8,9)(1);
+z10 = (x0,h-thickstroke);
+z11 = z10 shifted (thickstroke,0);
+fill z0..z2..z3--z4--z8--z7..z6..z1--z11--z10--cycle;
+penpos12(thickstroke,90);
+z12l = z10;
+penpos13(thickstroke,90);
+z13l = z11;
+penpos14(thickstroke,90);
+z14r = (ss+curlw,h);
+penpos15(thickstroke,90);
+z15r = (w-ss-curlw,h);
+penpos16(0.8thickstroke,180);
+z16r = (ss,y14l-hair);
+penpos17(0.5thickstroke,-90);
+z17l = z16l shifted (0,-thinstroke);
+penpos18(0.8thinstroke,-90);
+z18 = ((x12+x14)/2,y17);
+penpos19(0.8thickstroke,180);
+z19l = (w-ss,y15r+hair);
+penpos20(0.5thickstroke,-90);
+z20r = z19r shifted (0,thinstroke);
+penpos21(0.8thinstroke,-90);
+z21 = ((x15+x13)/2,y20);
+
+penstroke z18e..z17e..z16e..z14e--z15e..z19e..z20e..z21e;
+
+capt := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24);
+endchar;
+
+beginchar("Y",5em#/6+2ss#,cap#,0); "The Letter Y";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinstroke;
+z0 = (w/2-thickstroke/2,lserh);
+z1 = z0 shifted (thickstroke,0);
+llserif(0,2,3,4,5)(1);
+lrserif(1,6,7,8,9)(1);
+z10 = (x0,h/2);
+z11 = z10 shifted (thickstroke,0);
+fill z0..z2..z3--z4--z8--z7..z6..z1--z11--z10--cycle;
+penpos12(thickstroke,0);
+z12l = z10;
+penpos13(thickstroke,0);
+z13 = (w-2curlw,h-curlh);
+penpos14(thickstroke,0);
+z14 = (2curlw,h-curlh);
+topcurl(14,15,16);
+penpos17(thickstroke/2,-90);
+z17 = (x13 + curlw,y15);
+penpos18(thinstroke,180);
+z18 = (x17 + curlw/2,y16);
+penpos19(thinstroke,0);
+z19r = z12r;
+
+penstroke z12e---z14e..z15e..z16e;
+penstroke z12e---z13e..z17e..z18e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24);
+endchar;
+
+beginchar("Z",5em#/6+2ss#,cap#,dep#); "The Letter Z";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinstroke;
+penpos0(thickstroke,90);
+z0r = (ss,h-o);
+penpos1(thickstroke,180);
+z1l = (w-ss,h);
+penpos2(0.7thickstroke,90);
+z2 = 0.666[z0,z1] shifted (-thinstroke,-thinstroke);
+penpos3(thickstroke,180);
+z3r = (ss,0-o);
+penpos4(thinstroke,70);
+z4r = (x0l+thinstroke/2,y0l);
+penpos5(0.8thickstroke,90);
+z5r = ((x0+x2)/2,h+o);
+penpos6(thickstroke,-90);
+z6r = (w-ss,-2d/3);
+penpos7(0.7thickstroke,-90);
+z7 = (w/2,0);
+penpos8(0.8thickstroke,-90);
+z8 = 0.5[(x7,0),(x6,0)] shifted (0,-d/3);
+penpos9(1.5thinstroke,230);
+z9l = z3l;
+
+penstroke z4e--z0e;
+penstroke z0e..z5e..z2e..z1e;
+penstroke z1e--z3e;
+penstroke z3e..z9e{right}..z7e..z8e..z6e;
+
+capz := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24);
+endchar;
+
+beginchar("G",em#+2ss#,cap#,dep#); "The Letter G";
+italcorr(ex#*slant);
+
+z1=(w-ss-userw-thickstroke/2,h-userh);
+z2=z1-(0,thickstroke);
+z3=(w-ss-userw,2userh);
+z5=(w/2,h+o);
+z6=z5-(0,thinstroke);
+z7=(w/2,0);
+z8=z7+(0,thinstroke);
+z9=(ss,h/2);
+z10=z9+(curvwid,0);
+z4=z3-(thickstroke,0);
+z11=(x3,h/2-userh);
+z12=z11-(thickstroke,0);
+z30 = (x3,-dep/2);
+z31 = ((x4+x8)/2,-dep);
+z32 = (x8,-2dep/3);
+z33 = z32 shifted (dotwidth/2,dotwidth/2);
+z34 = z33 shifted (dotwidth/2,-dotwidth/2);
+z35 = z34 shifted (-dotwidth/2,-dotwidth/4);
+z36 = z30 shifted (-thickstroke,0);
+z37 = z31 shifted (0,thinstroke);
+
+ulserif(12,15,16,17,18)(1);
+urserif(11,19,20,21,22)(1);
+ctsideserif(1,23,24,25,26,2)(1);
+
+path gbody; gbody =
+z17--z21--z20..z19..z11--z3..{left}z7{left}..{up}z9{up}..{right}z5{right}..z1;
+path ginbody; ginbody = z2..{left}z6{left}..{down}z10{down}..{right}z8{right}..z4--z12..z15..z16--z17;
+
+fill gbody & topserif & ginbody & cycle;
+
+fill z11---z3---z30..z31..z32..z33..z34..z35..z37..
+	z36--z4--z12--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

@@ -1,0 +1,118 @@
+% CM-style ``Sans Serif'' Bold Caps and Small Caps serifed I, Pi, Xi 10 point
+% Based on fonts by Donald Knuth
+% By Ariel Barton, 2013/4/21
+if unknown sansfontbase: input sansfontbase fi
+
+font_identifier:="CMSMFBXCSC"; font_size 10pt#;
+% first come parameters used to set the uppercase letters
+% (including some for lowercase that aren't actually used)
+u#:=24/36pt#;                   % eczx1000 % unit width
+width_adj#:=22/36pt#;           % cmssbx10 % width adjustment for certain characters
+serif_fit#:=-9/36pt#;           % cmssbx10 % extra sidebar near lowercase serifs
+cap_serif_fit#:=-11/36pt#;      % cmssbx10 % extra sidebar near uppercase serifs
+letter_fit#:=5/36pt#;           % eczx1000 % extra space added to all sidebars
+
+body_height#:=270/36pt#;        % cmssbx10 % height of tallest characters
+asc_height#:=250/36pt#;         % cmssbx10 % height of lowercase ascenders
+cap_height#:=250/36pt#;         % cmssbx10 % height of caps
+fig_height#:=250/36pt#;         % cmssbx10 % height of numerals
+x_height#:=165/36pt#;           % cmssbx10 % height of lowercase without ascenders
+math_axis#:=90/36pt#;           % cmssbx10 % axis of symmetry for math symbols
+bar_height#:=90/36pt#;          % cmssbx10 % height of crossbar in lowercase e
+comma_depth#:=38/36pt#;         % cmssbx10 % depth of comma below baseline
+desc_depth#:=70/36pt#;          % cmssbx10 % depth of lowercase descenders
+
+crisp#:=26/36pt#;               % cmssbx10 % diameter of serif corners
+tiny#:=26/36pt#;                % cmssbx10 % diameter of rounded corners
+fine#:=9/36pt#;                 % cmssbx10 % diameter of sharply rounded corners
+thin_join#:=9/36pt#;            % cmssbx10 % width of extrafine details
+hair#:=49/36pt#;                % cmssbx10 % lowercase hairline breadth
+stem#:=49/36pt#;                % cmssbx10 % lowercase stem breadth
+curve#:=49/36pt#;               % cmssbx10 % lowercase curve breadth
+ess#:=43/36pt#;                 % cmssbx10 % breadth in middle of lowercase s
+flare#:=40/36pt#;               % cmssbx10 % diameter of bulbs or breadth of terminals
+dot_size#:=47/36pt#;            % cmssbx10 % diameter of dots
+cap_hair#:=49/36pt#;            % cmssbx10 % uppercase hairline breadth
+cap_stem#:=53/36pt#;            % cmssbx10 % uppercase stem breadth
+cap_curve#:=53/36pt#;           % cmssbx10 % uppercase curve breadth
+cap_ess#:=51/36pt#;             % cmssbx10 % breadth in middle of uppercase s
+rule_thickness#:=30/36pt#;      % cmssbx10 % thickness of lines in math symbols
+
+dish#:=0pt#;                    % cmssbx10 % amount erased at top or bottom of serifs
+bracket#:=0pt#;                 % cmssbx10 % vertical distance from serif base to tangent
+jut#:=0pt#;                     % cmssbx10 % protrusion of lowercase serifs
+cap_jut#:=0pt#;                 % cmssbx10 % protrusion of uppercase serifs
+beak_jut#:=0pt#;                % cmssbx10 % horizontal protrusion of beak serifs
+beak#:=1.5/36pt#;               % cmssbx10 % vertical protrusion of beak serifs
+vair#:=26/36pt#;                % cmssbx10 % vertical diameter of hairlines
+notch_cut#:=49/36pt#;           % cmssbx10 % maximum breadth above or below notches
+bar#:=26/36pt#;                 % cmssbx10 % lowercase bar thickness
+slab#:=36/36pt#;                % cmssbx10 % serif and arm thickness
+cap_bar#:=34/36pt#;             % cmssbx10 % uppercase bar thickness
+cap_band#:=31/36pt#;            % cmssbx10 % uppercase thickness above/below lobes
+cap_notch_cut#:=45/36pt#;       % cmssbx10 % max breadth above/below uppercase notches
+serif_drop#:=2/36pt#;           % cmssbx10 % vertical drop of sloped serifs
+stem_corr#:=1/36pt#;            % cmssbx10 % for small refinements of stem breadth
+vair_corr#:=2/36pt#;            % cmssbx10 % for small refinements of hairline height
+apex_corr#:=18/36pt#;           % cmssbx10 % extra width at diagonal junctions
+
+o#:=8/36pt#;                    % cmssbx10 % amount of overshoot for curves
+apex_o#:=0pt#;                  % cmssbx10 % amount of overshoot for diagonal junctions
+
+slant:=0;                       % cmssbx10 % tilt ratio $(\Delta x/\Delta y)$
+fudge:=0.88;                    % cmssbx10 % factor applied to weights of heavy characters
+math_spread:=0.5;               % cmssbx10 % extra openness of math symbols
+superness:=0.75;                % cmssbx10 % parameter for superellipses
+superpull:=0.05556;             % cmssbx10 % extra openness inside bowls
+beak_darkness:=0;               % cmssbx10 % fraction of triangle inside beak serifs
+ligs:=1;                        % cmcsc10 % level of ligatures to be included
+
+square_dots:=true;              % cmssbx10 % should dots be square?
+hefty:=true;                    % cmssbx10 % should we try hard not to be overweight?
+serifs:=false;                  % cmssbx10 % should serifs and bulbs be attached?
+monospace:=false;               % cmssbx10 % should all characters have the same width?
+variant_g:=false;               % cmssbx10 % should an italic-style g be used?
+low_asterisk:=false;            % cmssbx10 % should the asterisk be centered at the axis?
+math_fitting:=false;            % cmcsc10 % should math-mode spacing be used?
+
+I_cap_jut#:=39/36pt#;           % cmbx10% Special parameters for serifs on uppercase I and Pi
+I_beak#:=70/36pt#;              % cmbx10% Special parameters for serifs on uppercase I and Pi
+bigdw#:=5/36pt#;                % cmbx10% Adjusted dw for unusually wide strokes
+
+% now come replacements used to set the lowercase caps
+
+lower.u#:=18.3/36pt#;           % eczx1000 % unit width
+lower.width_adj#:=22/36pt#;     % eczx1000 % width adjustment for certain characters
+lower.cap_serif_fit#:=-9.43/36pt#;% eczx1000 % extra sidebar near uppercase serifs
+lower.letter_fit#:=1.44/36pt#;  % eczx1000 % extra space added to all sidebars
+
+lower.body_height#:=200/36pt#;  % eczx1000 % height of tallest characters
+lower.cap_height#:=188.2/36pt#; % eczx1000 % height of caps
+lower.x_height#:=123.4/36pt#;   % eczx1000 % height of lowercase without ascenders
+lower.bar_height#:=67.2/36pt#;  % eczx1000 % height of crossbar in lowercase e
+lower.comma_depth#:=28.22/36pt#;% eczx1000 % depth of comma below baseline
+
+lower.flare#:=30.3/36pt#;       % eczx1000 % diameter of bulbs or breadth of terminals
+lower.cap_hair#:=39.65/36pt#;   % eczx1000 % uppercase hairline breadth
+lower.stem#:=41.1/36pt#;        % eczx1000 % lowercase stem breadth
+lower.cap_stem#:=41.4/36pt#;    % eczx1000 % uppercase stem breadth
+lower.cap_curve#:=42.7/36pt#;   % eczx1000 % uppercase curve breadth
+lower.cap_ess#:=40.8/36pt#;     % eczx1000 % breadth in middle of uppercase s
+
+lower.cap_jut#:=0pt#;           % eczx1000 % protrusion of uppercase serifs
+lower.beak_jut#:=0pt#;          % eczx1000 % horizontal protrusion of beak serifs
+lower.beak#:=1.11/36pt#;        % eczx1000 % vertical protrusion of beak serifs
+lower.slab#:=29.85/36pt#;       % eczx1000 % serif and arm thickness
+lower.cap_bar#:=28.19/36pt#;    % eczx1000 % uppercase bar thickness
+lower.cap_band#:=25.71/36pt#;   % eczx1000 % uppercase thickness above/below lobes
+lower.cap_notch_cut#:=45/36pt#; % eczx1000 % max breadth above/below uppercase notches
+
+lower.o#:=5/36pt#;              % eczx1000 % amount of overshoot for curves
+lower.apex_o#:=0pt#;            % eczx1000 % amount of overshoot for diagonal junctions
+
+lower.fudge:=0.88;              % eczx1000 % factor applied to weights of heavy characters
+
+lower.I_cap_jut#:=34/36pt#;     % cmbcsc10% Special parameters for serifs on uppercase I and Pi
+lower.I_beak#:=70/36pt#;        % cmbcsc10% Special parameters for serifs on uppercase I and Pi
+
+generate sans-IPiXicsc      % switch to the driver file

@@ -1,0 +1,6 @@
+% This is eczx0500.mf in text format as of May 3, 2012
+if unknown exbase: input exbase fi;
+
+
+gensize:=5;
+generate eczx

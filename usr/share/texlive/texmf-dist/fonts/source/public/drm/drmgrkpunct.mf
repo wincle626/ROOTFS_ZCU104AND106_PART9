@@ -1,0 +1,803 @@
+% +AMDG  This document was begun on 26 April 11EX, the feast
+% of St. Catherine of Siena, and it is humbly dedicated to
+% her and the Immaculate Heart of Mary for their prayers,
+% and to the Sacred Heart of Jesus for His mercy.
+
+picture hyphen;
+picture paren;
+picture period;
+picture opendoublequote;
+picture questionmark;
+picture bang;
+picture leftsinguill;
+picture leftdoubguill;
+picture slash;
+picture lessthan;
+picture opensquare;
+
+beginchar(oct"056",pwid#,pwid#,0); "The period .";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid);
+
+path period;
+period = z1..z2..z3..z4..cycle;
+fill period;
+
+%period := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"046",pwid#,pwid#,0); "Raised, smaller dot";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid);
+
+path period;
+period = z1..z2..z3..z4..cycle;
+fill period scaled 0.75 shifted (0,ex-2dotwid);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"073",pwid#,pwid#,0); "Raised, period-sized dot";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid);
+
+path period;
+period = z1..z2..z3..z4..cycle;
+fill period shifted (0,ex-2dotwid);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"054",pwid#,pwid#,0); "The comma ,";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid/2);
+z5 = z3 shifted (-dotwid/2,-3dotwid);
+z6 = z1 shifted (-o,-2.0dotwid);
+
+path commapost;
+commapost = z4..{dir -165}z5{right}..z6..z1..z2..z3..z4--cycle;
+fill commapost;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"035",pwid#,cap#,0); "The apostrophe";
+
+fill commapost shifted (0,h-2dotwid+o/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"074",pwid#,cap#,0); "rough breathing";
+
+fill commapost shifted (0,h-2dotwid+o/2)
+	reflectedabout ((w/2,h),(w/2,0));
+picture roughbreath;
+roughbreath := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"076",pwid#,cap#,0); "The apostrophe";
+
+fill commapost shifted (0,h-2dotwid+o/2);
+
+picture smoothbreath; smoothbreath := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+thinwid# = 0.4pt#;
+define_pixels(thinwid);
+
+beginchar("-",2pwid#,ex#,0); "The hyphen, -";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+hyphen := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"177",2pwid#,ex#,0); "The break hyphen, -";
+currentpicture := hyphen;
+endchar;
+
+beginchar(oct"000",3pwid#,ex#,0); "The en-dash, --";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"177",em#+2ss#,ex#,0); "The em-dash, ---";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"050",1.5pwid#,cap#,dep#); "The open parenthesis, (";
+
+z0 = (w,h+o);
+z1 = (w,-dep-o);
+z2 = (ss,(h-dep)/2);
+z3 = z2 shifted (thickl,0);
+
+path theparen; theparen = z1{dir 150}..{up}z3{up}..{dir 30}z0{dir
+	200}..{down}z2{down}..{dir -20}z1..cycle;
+fill theparen;
+
+paren := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"051",1.5pwid#,cap#,dep#); "The close parenthesis, )";
+
+currentpicture := paren rotatedaround ((w/2,(h-dep)/2),180);
+
+endchar;
+
+beginchar(oct"072",pwid#,ex#,0); "The colon, :";
+
+fill period;
+fill period shifted (0,ex-2dotwid-o);
+
+endchar;
+
+beginchar(oct"077",pwid#,ex#,0); "The semicolon, ;";
+
+fill period shifted (0,ex-2dotwid-o);
+fill commapost;
+
+endchar;
+
+beginchar(oct"034",pwid#,cap#,0); "The open quote, `";
+
+fill commapost rotatedaround ((w/2,h/2),180)
+	shifted (0,-0.5pwid);
+
+endchar;
+
+beginchar(oct"020",1.75pwid#,cap#,0); "The open double quote, ``";
+
+fill commapost rotatedaround ((w/2,h/2),180)
+	shifted (0,-2dotwid);
+fill commapost rotatedaround ((w/2,h/2),180)
+	shifted (-0.75pwid,-2dotwid);
+
+opendoublequote := currentpicture;
+
+endchar;
+
+beginchar(oct"021",1.75pwid#,cap#,0); "The close double quote, ''";
+
+fill commapost shifted (0pwid,h-2dotwid);
+fill commapost shifted (0.75pwid,h-2dotwid);
+
+endchar;
+
+beginchar(oct"255",1.75pwid#,cap#,0); "The baseline open double quote, ,,";
+
+fill commapost shifted (0pwid,0);
+fill commapost shifted (0.75pwid,0);
+
+endchar;
+
+beginchar(oct"041",1.5pwid#,cap#,0); "The exclamation point, !";
+
+z0 = (w/2-thickl/2,h);
+z1 = z0 shifted (thickl/2,o);
+z2 = z0 shifted (thickl,0);
+z3 = (x0+o,3dotwid);
+z4 = (x2-o,y3);
+z5 = 0.5[z3,z4] shifted (0,-o);
+
+fill z0..z1..z2--z4..z5..z3--cycle;
+fill fullcircle scaled 2dotwid shifted (x5,dotwid);
+
+
+bang := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"275",1.5pwid#,cap#,dep#); "The reverse exclamation point";
+
+currentpicture := bang rotatedaround ((w/2,(h-dep)/2),180);
+
+endchar;
+
+beginchar(oct"255",pwid#+2ss#,ex#,0); "Left single guillemet";
+
+z0 = (o,h/2);
+z1 = (w-3o,7h/8);
+z2 = (w-3o,h/8);
+z3 = 0.5[z0,z1];
+z4 = 0.5[z0,z2];
+z5 = 0.1[z3,z2];
+z6 = 0.1[z4,z1];
+z7 = z0 shifted (curvl,0);
+z8 = 0.5[z3,z12];
+z9 = 0.5[z4,z12];
+z10 = z1 shifted (2o,0);
+z11 = z2 shifted (2o,0);
+z12 = (w,h/2);
+
+path guillone; path guilltwo;
+guillone = z0{dir 10}..z5..{dir 60}z1..z10{dir -100}..z8..z7--cycle;
+guilltwo = z0{dir -10}..z6..{dir -60}z2..z11{dir 100}..z9..z7--cycle;
+fill guillone; fill guilltwo;
+
+leftsinguill := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"255",pwid#+2ss#,ex#,0); "Right single guillemet";
+
+fill guillone reflectedabout ((w/2,0),(w/2,h));
+fill guilltwo reflectedabout ((w/2,0),(w/2,h));
+
+endchar;
+
+beginchar(oct"173",1.5pwid#+2ss#,ex#,0); "Left double guillemet";
+
+fill guillone shifted (-o/2,0);
+fill guillone shifted (pwid/2+o/2,0);
+fill guilltwo shifted (-o/2,0);
+fill guilltwo shifted (pwid/2+o/2,0);
+
+leftdoubguill := currentpicture;
+
+endchar;
+
+beginchar(oct"175",1.5pwid#+2ss#,ex#,0); "Right double guillemet";
+
+fill guillone shifted (-o/2,0)
+	rotatedaround ((w/2,h/2),180);
+fill guillone shifted (pwid/2+o/2,0)
+	rotatedaround ((w/2,h/2),180);
+fill guilltwo shifted (-o/2,0)
+	rotatedaround ((w/2,h/2),180);
+fill guilltwo shifted (pwid/2+o/2,0)
+	rotatedaround ((w/2,h/2),180);
+
+endchar;
+
+beginchar(oct"255",1.4pwid#+2ss#,3ex#/4,0); "Lower 0 for pertriqua";
+
+zeroh = 1.2pwid;
+zerohh = 3ex/4;
+z0 = (w/2,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (w/2,0);
+z3 = z2 shifted (0,thinl);
+z4 = (w-ss,h/2);
+z5 = z4 shifted (-1.7thinl,0);
+z6 = (ss,h-zerohh/2);
+z7 = z6 shifted (thinl,0);
+
+fill z0..z4..z2..z6..cycle;
+unfill z1..z5..z3..z7..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"052",ex#,ex#,0); "Asterisk, *";
+
+z0 = (w/2,h/2);
+z1 = (w/2,o);
+z2 = (w/2,h-o);
+z3 = z1 rotatedaround (z0,60);
+z4 = z3 rotatedaround (z0,60);
+z5 = z4 rotatedaround (z0,120);
+z6 = z5 rotatedaround (z0,60);
+z7 = z6 rotatedaround (z0,60);
+
+pickup pencircle scaled thinl;
+
+draw z2--z1;
+draw z4--z6;
+draw z5--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"053",ex#,ex#,0); "Plus (addition) sign, +";
+
+pickup pencircle scaled thinl;
+top z0 = (w/2,h-o);
+bot z1 = (w/2,o);
+lft z2 = (o,h/2);
+rt z3 = (w-o,h/2);
+
+draw z0--z1;
+draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"057",ex#/2+2ss#,cap#,0); "The forward slash, /";
+
+pickup pencircle scaled thinl;
+lft z0 = (o,o);
+rt z1 = (w-o,h-o);
+
+draw z0--z1;
+
+slash := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"134",ex#/2+2ss#,cap#,0); "The backslash, \";
+
+currentpicture := slash reflectedabout ((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"042",1.75pwid#,cap#,0); "straight double quote";
+
+z0 = (w/2-thickl,h-o);
+z1 = z0 shifted (2accwid,-2accwid);
+z2 = z0 shifted (-2accwid,-2accwid);
+z3 = z0 shifted (0,-1.5pwid);
+z4 = z3 shifted (-accwid,o);
+z5 = z3 shifted (accwid,o);
+
+path singquote; singquote = z2..z0..z1--z5..z3..z4--cycle;
+
+fill singquote;
+fill singquote shifted (2thickl,0);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("#",em#+ss#,cap#,dep#); "The pound sign, #";
+
+full = h+d;
+
+z0 = (0.33w-hair,0.25full-dep+hair) shifted (ss,ss);
+z1 = (0.57w-hair,0.25full-dep+hair) shifted (ss,ss);
+z2 = (0.33w+hair,0.5full-dep+hair) shifted (ss,ss);
+z3 = (0.57w+hair,0.5full-dep+hair) shifted (ss,ss);
+z4 = 2[z0,z2];
+z5 = 2[z2,z0];
+z6 = 2[z1,z3];
+z7 = 2[z3,z1];
+z8 = 2[z2,z3];
+z9 = 2[z3,z2];
+z10 = 2[z0,z1];
+z11 = 2[z1,z0];
+
+pickup pencircle scaled thinl;
+
+draw z4--z5; draw z7--z6; draw z9--z8; draw z11--z10;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar("$",3em#/4+2ss#,cap#,0); "The dollar sign, $";
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (w-ss,3h/4);
+z3 = (w-ss,h/4);
+z4 = (ss,3h/4);
+z5 = (ss,h/4);
+z6 = z4 shifted (curvl,0);
+z7 = z3 shifted (-curvl,0);
+z8 = z0 shifted (0,-thinl);
+z9 = z1 shifted (0,thinl);
+
+urtbulb(2,10,11,12,13);
+ulftbulb(5,14,15,16,17);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{down}z7{down}..{left}z9{left}..{dir
+120}z16{right}..{up}z15{up}..{left}z14{left}..{down}z5{down}..{right}z1{right}..{up}z3{up}..{up}z6{up}..{right}z8{right}..{dir
+-60}z12{left}..{down}z11{down}..{right}z10{right}..{up}cycle;
+
+pickup pencircle scaled 1.2thinl;
+
+z20 = (w/2-3thickl/4,h+o);
+z21 = (w/2-3thickl/4,-o);
+z22 = (w/2+3thickl/4,h+o);
+z23 = (w/2+3thickl/4,-o);
+
+draw z20--z21; draw z22--z23;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+%beginchar("<",ex#,ex#,0); "The less than sign, <";
+%
+%z0 = (2o,h/2);
+%z1 = (w-2o,h-o);
+%z2 = (w-2o,o);
+%
+%pickup pencircle scaled thinl;
+%
+%draw z1--z0--z2;
+%
+%lessthan := currentpicture;
+%
+%penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+%endchar;
+%
+%beginchar(">",ex#,ex#,0); "The greater than sign, >";
+%currentpicture := lessthan reflectedabout ((w/2,h),(w/2,0));
+%penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+%endchar;
+
+beginchar(oct"075",ex#,ex#,0); "The equals sign, =";
+
+z0 = (2o,h/3);
+z1 = (w-2o,h/3);
+z2 = (2o,2h/3);
+z3 = (w-2o,2h/3);
+
+pickup pencircle scaled thinl;
+
+draw z0--z1;
+draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"045",5em#/6,cap#,0); "The perbiqua sign, %";
+
+z0 = (0.6zeroh,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (0.6zeroh,h-zerohh);
+z3 = z2 shifted (0,thinl);
+z4 = (1.2zeroh,h-zerohh/2);
+z5 = z4 shifted (-1.7thinl,0);
+z6 = (ss,h-zerohh/2);
+z7 = z6 shifted (thinl,0);
+
+fill z0..z4..z2..z6..cycle;
+unfill z1..z5..z3..z7..cycle;
+
+z10 = (w-0.6zeroh,zerohh);
+z11 = z10 shifted (0,-thinl);
+z12 = (w-0.6zeroh,0);
+z13 = z12 shifted (0,thinl);
+z14 = (w-ss,zerohh/2);
+z15 = z14 shifted (-1.7thinl,0);
+z16 = (w-1.2zeroh,zerohh/2);
+z17 = z16 shifted (thinl,0);
+
+fill z10..z14..z12..z16..cycle;
+unfill z11..z15..z13..z17..cycle;
+
+z22 = (w-ss,h);
+z23 = z22 shifted (0,-thinl);
+z20 = 0.5[z0,z22] shifted (0,-0.25pwid);
+z21 = z20 shifted (0,-thinl);
+z24 = (ss,-o);
+z25 = z24 shifted (0,0.75thinl);
+z26 = z24 shifted (0.75thinl,0);
+z27 = z23 shifted (-1.5thinl,-hair);
+
+fill z0..z20..z22--z23--z26..z24..z25--z27..z21..z1--cycle;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar("[",2pwid#,cap#+ss#,dep#); "The open square bracket, [";
+
+z0 = (w-ss,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (ss,h);
+z3 = z2 shifted (thinl,-thinl);
+z4 = (ss,-dep);
+z5 = z4 shifted (thinl,thinl);
+z6 = (w-ss,-dep);
+z7 = z6 shifted (0,thinl);
+z8 = 0.5[z0,z1] shifted (0,0);
+z9 = 0.5[z7,z6] shifted (0,0);
+
+path squarebrack;
+squarebrack = z0--z2--z4--z6--z7--z5--z3--z1--cycle;
+fill squarebrack;
+
+opensquare := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar("]",2pwid#,cap#+ss#,dep#); "The close square bracket, ]";
+fill squarebrack rotatedaround ((w/2,(h-dep)/2),180);
+endchar;
+
+beginchar("|",pwid#/2,cap#+ss#,dep#); "The pipe, |";
+
+z0 = (w/2,h-o);
+z1 = (w/2,-dep+o);
+
+pickup pencircle scaled thinl;
+draw z0--z1;
+
+endchar;
+
+%beginchar("{",1.8pwid#,cap#+ss#,dep#); "The open curly bracket, {";
+%
+%brackwid = 2thinl;
+%toth = h+d;
+%pickup pencircle xscaled brackwid yscaled (thinl);
+%top rt z0 = (w-ss,h);
+%bot rt z1 = (w-ss,-dep);
+%lft z2 = (ss,h-toth/2);
+%z3 = (3(x0-x2)/4,h-toth/4);
+%z4 = (3(x0-x2)/4,h-3toth/4);
+%
+%path curlybrack;
+%curlybrack = z0{left}..{down}z3..{left}z2{right}..z4{down}..{right}z1;
+%draw curlybrack;
+%
+%penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+%endchar;
+%
+%beginchar("}",1.8pwid#,cap#+ss#,dep#); "The close curly bracket, }";
+%pickup pencircle xscaled brackwid yscaled (thinl);
+%draw curlybrack rotatedaround ((w/2,(h-dep)/2),180);
+%endchar;
+
+beginchar(oct"255",4ex#/5,cap#,dep#); "The section symbol";
+
+toth = h+d;
+sh = 2toth/3-thinl+o;
+z0 = (w-ss,h-sh/4);
+z1 = (w/2,h+o);
+z2 = z1 shifted (0,-thinl);
+z3 = (ss,h-sh/4);
+z4 = z3 shifted (thinl,0);
+z5 = (w-ss,h-3sh/4);
+z6 = z5 shifted (-thinl,0);
+z7 = (w/2,h-sh);
+z8 = z7 shifted (0,-thinl);
+z9 = (w/2,h-sh/2+curvl/2);
+z10 = z9 shifted (0,-curvl);
+z11 = z0 shifted (-thinl,0);
+z12 = 0.5[z0,z11] shifted (0,-o);
+z13 = (ss,h-3sh/4);
+z14 = z13 shifted (thinl,0);
+z15 = 0.5[z13,z14] shifted (0,hair/2);
+
+path halfsect;
+halfsect = z0{up}..{left}z1{left}..{down}z3{down}..z10..{down}z6{down}..{left}z7{left}..{up}z14..z15..{down}z13{down}..{right}z8{right}..{up}z5{up}..z9..{up}z4{up}..{right}z2{right}..{down}z11..z12..cycle;
+fill halfsect;
+fill halfsect shifted (0,-sh/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"277",5em#/6+2ss#,cap#,0); "The British pound sign";
+
+z0 = (3w/4,h+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (w-ss-hair,4h/5);
+z3 = z2 shifted (-thinl,0);
+z4 = 0.5[z2,z3] shifted (0,-hair/2);
+z5 = (0.5w,4h/5);
+z6 = z5 shifted (-thickl,0);
+z7 = (w/2+thickl/2,h/4);
+z8 = z7 shifted (-thickl,0);
+z9 = (x8-thickl,-hair/4);
+z10 = z9 shifted (0,thinl);
+z12 = (ss,h/5);
+z13 = z12 shifted (thickl,0);
+z14 = 0.5[z8,z7] shifted (0,-thinl);
+z15 = z14 shifted (0,1.3thinl);
+z16 = (3w/4,-hair/4);
+z17 = z16 shifted (0,thinl);
+z18 = (w-ss-hair,userw);
+z19 = z18 shifted (0,thinl);
+z20 = 0.5[z18,z19] shifted (hair,0);
+
+z21 = (2ss,0.6h);
+z22 = (w-2ss,0.6h);
+
+fill
+z2{up}..{left}z0{left}..z6..z8..{left}z10{left}..{up}z13{up}..z14..{right}z16{right}..z18..z20..z19{dir
+200}..{left}z17{left}..z15..z12..z9..z7..z5..{right}z1{right}..{down}z3..z4..cycle;
+
+pickup pencircle scaled thinl;
+
+draw z21--z22;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"100",em#,cap#,0); "The at sign, @";
+
+z0 = (w/4-o,h/2);
+z1 = (3w/4-o,h/2);
+z2 = (w/2-o,3h/4);
+z3 = (w/2-o,h/4);
+z4 = z2 shifted (0,-thinl);
+z5 = z3 shifted (0,thinl);
+z6 = z0 shifted (thickl,0);
+z7 = z1 shifted (-0.8thickl,0);
+z8 = (x7,y5+2thinl);
+z9 = (x1,y5+2thinl);
+z10 = (x7,y3+2thinl);
+z11 = (x1,y3+2thinl);
+z12 = z11 shifted (thinl,-thinl);
+z13 = z12 shifted (0,-thinl);
+z14 = (w-o,h/2);
+z15 = z14 shifted (-thinl,0);
+z16 = (w/2,h);
+z17 = z16 shifted (0,-thinl);
+z18 = (o,h/2);
+z19 = z18 shifted (thinl,0);
+z20 = (w/2,0);
+z21 = z20 shifted (0,thinl);
+z22 = z12 shifted (thickl,-thickl);
+z23 = z22 shifted (0,-thinl);
+z24 = 0.5[z22,z23] shifted (o,0);
+z25 = (x7,y2-thinl/2);
+z26 = (x1,y2-thinl/2);
+
+fill z0..z2..z1..z3..cycle;
+unfill z6..z4..z7..z5..cycle;
+fill
+z26--z1--z11..z12..{up}z15{up}..{left}z17{left}..{down}z19{down}..{right}z21{right}..z22{dir
+30}..z24..z23{dir -150}..{left}z20{left}..{up}z18{up}..{right}z16{right}..{down}z14{down}..{left}z13{left}..z10--z7--z25--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"031",7.5em#/6,cap#,0); "The pertriqua sign, %";
+
+semw = 5em/6-ss;
+z0 = (0.6zeroh,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (0.6zeroh,h-zerohh);
+z3 = z2 shifted (0,thinl);
+z4 = (1.2zeroh,h-zerohh/2);
+z5 = z4 shifted (-1.7thinl,0);
+z6 = (ss,h-zerohh/2);
+z7 = z6 shifted (thinl,0);
+
+fill z0..z4..z2..z6..cycle;
+unfill z1..z5..z3..z7..cycle;
+
+z10 = (semw+ss-0.6zeroh,zerohh);
+z11 = z10 shifted (0,-thinl);
+z12 = (semw+ss-0.6zeroh,0);
+z13 = z12 shifted (0,thinl);
+z14 = (semw,zerohh/2);
+z15 = z14 shifted (-1.7thinl,0);
+z16 = (semw+ss-1.2zeroh,zerohh/2);
+z17 = z16 shifted (thinl,0);
+
+fill z10..z14..z12..z16..cycle;
+unfill z11..z15..z13..z17..cycle;
+
+z22 = (semw,h);
+z23 = z22 shifted (0,-thinl);
+z20 = 0.5[z0,z22] shifted (0,-0.25pwid);
+z21 = z20 shifted (0,-thinl);
+z24 = (ss,-o);
+z25 = z24 shifted (0,1.00thinl);
+z26 = z24 shifted (0.75thinl,0);
+z27 = z23 shifted (-1.8thinl,-hair);
+
+fill z0..z20..z22--z23--z26..z24..z25--z27..z21..z1--cycle;
+
+z30 = (w-0.6zeroh,zerohh);
+z31 = z30 shifted (0,-thinl);
+z32 = (w-0.6zeroh,0);
+z33 = z32 shifted (0,thinl);
+z34 = (w-ss,zerohh/2);
+z35 = z34 shifted (-1.7thinl,0);
+z36 = (w-1.2zeroh,zerohh/2);
+z37 = z36 shifted (thinl,0);
+
+fill z30..z34..z32..z36..cycle;
+unfill z31..z35..z33..z37..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"006",3em#/4,cap#,0); "sort of backwards questionmark";
+
+penpos0(thickl,90);
+z0r = (w-ss,h+o);
+penpos1(thickl,90);
+z1r = (w/2,h+o);
+penpos2(thinl,180);
+z2r = (ss,3h/4);
+penpos3(thickl,-90);
+z3 = (w/2,h/2);
+penpos4(thinl,-90);
+z4 = (3w/4,h/2);
+penpos5(thinl,0);
+z5 = z3;
+penpos6(thickl,0);
+z6 = (w/2,h/6);
+penpos7(thinl,0);
+z7 = (w/2,0-o);
+
+penstroke z0e..z1e..z2e..z3e..z4e;
+penstroke z5e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"007",3em#/4,cap#,dep#); "S with leg";
+
+penpos0(thinl,0);
+z0r = (w-ss,h+thickstroke);
+penpos1(thickl,-90);
+z1l = (3w/4,h+o);
+penpos2(thickl,-90);
+z2l = (w/4,h+o);
+penpos3(thinl,0);
+z3l = (ss,3h/4);
+penpos4(thickl,90);
+z4 = (w/2,h/2);
+penpos5(thinl,0);
+z5l = (w-ss,h/4);
+penpos6(thinl,-90);
+z6r = (w/2,0-o);
+penpos7(thickl,-90);
+z7r = (w/4,0-o);
+penpos8(1.5thinl,0);
+z8 = z6;
+penpos9(1.5thinl,0);
+z9 = (x8,-d);
+penpos10(1.5thinl,-90);
+z10r = (3w/4,-dep);
+penpos11(1.5thinl,-90);
+z11r = z9;
+
+penstroke z0e..z1e..z2e..z3e..z4e..z5e..{left}z6e..z7e;
+penstroke z8e--z9e; penstroke z10e--z11e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;

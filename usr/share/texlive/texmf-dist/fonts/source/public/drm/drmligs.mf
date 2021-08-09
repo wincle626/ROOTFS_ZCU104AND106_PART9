@@ -1,0 +1,242 @@
+% +AMDG  This document was begun on 19 August 2007, the Feast of St. John 
+% Eudes, and it is humbly dedicated to him and to the Immaculate Heart of Mary 
+% for their prayers, and to the Sacred Heart of Jesus for His mercy.
+
+ligtable "f" : "l" =: oct"035", "f" =: oct"033", 
+	"i" =: oct"034", "t" =: oct"040", "j" =: oct"027";
+ligtable oct"033" : "i" =: oct"036", "l" =: oct"037";
+ligtable "-" : "-" =: oct"025";
+ligtable oct"025" : "-" =: oct"026";
+ligtable "`" : "`" =: oct"020";
+ligtable "'" : "'" =: oct"021";
+ligtable "?" : "`" =: oct"276";
+ligtable "!" : "`" =: oct"275";
+ligtable ">" : ">" =: oct"024";
+ligtable "<" : "<" =: oct"023";
+
+ligtable "A" : oct"200" : oct "201" : oct"300" : oct"301" :
+	oct"302" : oct"303" : oct"304" : oct"305" : "C" kern-0.1u#,
+	"G" kern-0.1u#,"J" kern-0.1u#,
+	"O" kern-0.1u#,"Q" kern-0.1u#,"T" kern-0.2u#,"U" kern-0.2u#,
+	"V" kern-0.2u#,"W" kern-0.2u#,"Y" kern-0.2u#,
+	"c" kern-0.1u#,"d" kern-0.1u#,"e" kern-0.1u#,
+	"j" kern-0.05u#,"o" kern-0.1u#,"p" kern-0.05u#,
+	"q" kern-0.1u#,"t" kern-0.1u#,"u" kern-0.1u#,
+	"v" kern-.2u#,"w" kern-0.2u#,"y" kern-0.2u#,
+	"f" kern-0.1u#;
+ligtable "B" : "G" kern 0.1u#,"O" kern 0.1u#,
+	"Q" kern 0.1u#,"S" kern 0.1u#,"a" kern 0.1u#,
+	"d" kern 0.1u#,"e" kern 0.1u#,"g" kern 0.1u#,
+	"o" kern 0.1u#,"q" kern 0.1u#,"s" kern 0.1u#,
+	"c" kern 0.1u#,"u" kern 0.05u#;
+ligtable "C" : oct"202" : oct"203" : oct"307" : "v" kern -0.10u#, 
+	"w" kern -0.10u#,"y" kern -0.10u#;
+ligtable "D" : oct"204" : oct"320" : oct"336" : "C" kern 0.1u#,
+	"G" kern 0.2u#,"O" kern 0.1u#, "Q" kern 0.2u#,"S" kern 0.1u#,
+	"H" kern 0.1u#, "M" kern 0.1u#,"P" kern 0.1u#,
+	"S" kern 0.1u#,"X" kern -0.05u#,"Y" kern -0.05u#,
+	"V" kern -0.05u#,"W" kern -0.05u#,
+	"a" kern 0.1u#, "d" kern 0.1u#,"e" kern 0.1u#,
+	"g" kern 0.1u#, "o" kern 0.1u#,"q" kern 0.1u#,
+	"s" kern 0.1u#, "c" kern 0.1u#;
+ligtable "E" : oct"205" : oct"206" : oct"306" : 
+	oct"310" : oct"311" : oct"312" : oct"313" : 
+	oct"327" : "a" kern 0.1u#,"b" kern 0.1u#,
+	"c" kern 0.1u#,"d" kern 0.1u#,"f" kern 0.1u#,
+	"g" kern 0.1u#,"h" kern 0.1u#,"i" kern 0.1u#,
+	"k" kern 0.1u#,"l" kern 0.1u#,"m" kern 0.1u#,
+	"n" kern 0.1u#,"o" kern 0.1u#,"p" kern 0.1u#,
+	"q" kern 0.1u#,"r" kern 0.1u#,"s" kern 0.1u#,
+	"t" kern 0.1u#,"u" kern 0.1u#,"x" kern 0.1u#,
+	"z" kern 0.1u#;
+ligtable "F" : "A" kern -0.2u#,"a" kern -0.2u#,
+	"c" kern -0.2u#,"d" kern -0.2u#,"e" kern -0.2u#,
+	"g" kern -0.2u#,"m" kern -0.2u#,"n" kern -0.2u#,
+	"o" kern -0.2u#,"p" kern -0.2u#,"q" kern -0.2u#,
+	"r" kern -0.2u#,"t" kern -0.2u#,"v" kern -0.2u#,
+	"w" kern -0.2u#,"x" kern -0.2u#,"y" kern -0.2u#,
+	"z" kern -0.2u#;
+ligtable "G" : oct"207" : "A" kern -0.1u#,"B" kern -0.1u#,
+	"D" kern -0.1u#, "E" kern -0.1u#, "F" kern -0.1u#,
+	"H" kern -0.1u#, "I" kern -0.1u#, "J" kern -0.1u#,
+	"K" kern -0.1u#, "L" kern -0.1u#, "M" kern -0.1u#,
+	"N" kern -0.1u#, "P" kern -0.1u#, "R" kern -0.1u#,
+	"T" kern -0.1u#, "U" kern -0.1u#, "V" kern -0.1u#,
+	"W" kern -0.1u#,"X" kern -0.1u#,"Y" kern -0.1u#,
+	"b" kern -0.1u#,"h" kern -0.1u#,"k" kern -0.1u#,
+	"l" kern -0.1u#,"t" kern -0.1u#;
+ligtable "I" : oct"314" : oct"315" : oct"316" :
+	oct"317" : oct"235" : "t" kern-0.1u#;
+ligtable "K" : "C" kern -0.1u#,"G" kern -0.1u#,
+	"O" kern -0.1u#,"Q" kern -0.1u#,"u" kern -0.1u#,
+	"v" kern -0.2u#,"w" kern -0.2u#,"y" kern -0.2u#;
+ligtable "O" : oct"216" : oct"323" : oct"324" : 
+	oct"325" : oct"326" : oct"330" : "A" kern -0.05u#,
+	"C" kern 0.1u#,"G" kern 0.1u#,"O" kern 0.1u#,"Q" kern 0.1u#,
+	"S" kern 0.1u#,"V" kern -0.05u#,"W" kern -0.05u#,
+	"X" kern -0.05u#,"Y" kern -0.05u#,"c" kern 0.2u#,
+	"d" kern 0.2u#,"e" kern 0.2u#,
+	"g" kern 0.2u#,"o" kern 0.2u#,"q" kern 0.2u#,
+	"s" kern 0.2u#;
+ligtable "P" : "A" kern -0.1u#,"d" kern -0.05u#,
+	"o" kern -0.05u#;
+ligtable "Q" : "A" kern -0.05u#,"C" kern 0.1u#,
+	"G" kern 0.1u#,"O" kern 0.1u#,"Q" kern 0.1u#,
+	"S" kern 0.1u#,"V" kern -0.05u#,"W" kern -0.05u#,
+	"X" kern -0.05u#,"Y" kern -0.05u#,"c" kern 0.2u#,
+	"d" kern 0.2u#,"e" kern 0.2u#,
+	"g" kern 0.2u#,"o" kern 0.2u#,"q" kern 0.2u#,
+	"s" kern 0.2u#;
+ligtable "S" : oct"221" : oct"222" : oct"223" : 
+	"A" kern -0.1u#,"o" kern 0.1u#,
+	"q" kern 0.1u#,"s" kern 0.1u#,"a" kern 0.1u#,
+	"c" kern 0.1u#,"d" kern 0.1u#,"e" kern 0.1u#,
+	"g" kern 0.1u#,"y" kern-0.1u#;
+ligtable "T" : oct"224" : oct"225" : "A" kern -0.2u#,
+	"a" kern -0.1u#,
+	"c" kern -0.1u#,"d" kern -0.1u#,"e" kern -0.1u#,
+	"g" kern -0.1u#,"m" kern -0.1u#,"n" kern -0.1u#,
+	"o" kern -0.1u#,"p" kern -0.1u#,"q" kern -0.1u#,
+	"r" kern -0.1u#,"s" kern -0.1u#,"u" kern -0.1u#,
+	"v" kern -0.1u#,"w" kern -0.1u#,"x" kern -0.1u#,
+	"y" kern -0.2u#,"z" kern -0.1u#,"h" =: oct"136";
+ligtable "U" : oct"331" : oct"332" : oct"333" : 
+	oct"334" : oct"226" : oct"227" : "A" kern -0.05u#;
+ligtable "V" : "A" kern -0.2u#,"C" kern -0.05u#,
+	"G" kern -0.05u#,"O" kern -0.05u#,"Q" kern -0.05u#,
+	"a" kern -0.05u#,"c" kern -0.05u#,"d" kern -0.05u#,
+	"e" kern -0.05u#,"g" kern -0.05u#,"m" kern -0.05u#,
+	"n" kern -0.05u#,"o" kern -0.05u#,"p" kern -0.05u#,
+	"q" kern -0.05u#,"s" kern -0.05u#,"u" kern -0.05u#,
+	"v" kern -0.05u#,"w" kern -0.05u#,"x" kern -0.05u#,
+	"y" kern -0.05u#,"z" kern -0.05u#;
+ligtable "W" : "A" kern -0.2u#,"C" kern -0.05u#,
+	"G" kern -0.05u#,"O" kern -0.05u#,"Q" kern -0.05u#,
+	"a" kern -0.05u#,"c" kern -0.05u#,"d" kern -0.05u#,
+	"e" kern -0.05u#,"g" kern -0.05u#,"m" kern -0.05u#,
+	"n" kern -0.05u#,"o" kern -0.05u#,"p" kern -0.05u#,
+	"q" kern -0.05u#,"s" kern -0.05u#,"u" kern -0.05u#,
+	"v" kern -0.05u#,"w" kern -0.05u#,"x" kern -0.05u#,
+	"y" kern -0.05u#,"z" kern -0.05u#;
+ligtable "X" : "C" kern -0.05u#,"G" kern -0.05u#,
+	"O" kern -0.05u#,"Q" kern -0.05u#,"v" kern -0.05u#,
+	"w" kern -0.05u#,"y" kern -0.05u#;
+ligtable "Y" : oct"335" : oct"230" : "A" kern -0.2u#,
+	"C" kern -0.05u#,"G" kern -0.05u#,"O" kern -0.05u#,
+	"Q" kern -0.05u#, "a" kern -0.05u#,"c" kern -0.05u#,
+	"d" kern -0.05u#,"e" kern -0.05u#,"g" kern -0.05u#,
+	"m" kern -0.05u#,"n" kern -0.05u#,"o" kern -0.05u#,
+	"p" kern -0.05u#,"q" kern -0.05u#,"s" kern -0.05u#,
+	"u" kern -0.05u#,"v" kern -0.05u#,"w" kern -0.05u#,
+	"x" kern -0.05u#,"y" kern -0.05u#,"z" kern -0.05u#,
+	"r" kern -0.1u#,"t" kern -0.1u#;
+ligtable "a" : oct"240" : oct"241" : oct"340" : oct"341" :
+	oct"342" : oct"343" : oct"344" : oct"345" : 
+	"c" kern -0.05u#,"d" kern -0.05u#,
+	"e" kern -0.05u#,"o" kern -0.05u#,"q" kern -0.05u#,
+	"t" kern -0.1u#,"u" kern -0.1u#,"v" kern -0.1u#,
+	"w" kern -0.1u#,"y" kern -0.2u#,"p" kern -0.1u#,
+	"l" kern -0.1u#,"n" kern-0.1u#,"m" kern-0.05u#,
+	"k" kern-0.05u#;
+ligtable "b" : oct"376" : "o" kern 0.05u#,"c" kern 0.05u#,
+	"d" kern 0.05u#,"e" kern 0.05u#,"g" kern 0.05u#,"q" kern 0.05u#,
+	"s" kern 0.1u#,"x" kern -0.1u#,"y" kern -0.1u#,
+	"a" kern0.05u#;
+ligtable "e" : oct"245" : oct"246" : oct"346" : oct"350" : 
+	oct"351" : oct"352" : oct"353" : "c" kern 0.1u#,
+	"d" kern 0.1u#,"e" kern 0.05u#,
+	"g" kern 0.1u#,"o" kern 0.1u#,"x" kern -0.1u#,
+	"s" kern 0.1u#,"a" kern 0.05u#,"l" kern-0.05u#,
+	"y" kern-0.1u#,"t" kern -0.05u#,"m" kern-0.05u#,
+	"n" kern-0.05u#,"r" kern-0.05u#,"v" kern-0.1u#;
+ligtable "c" : oct"242" : oct"243" : oct"347" : 
+	"e" kern 0.1u#,"d" kern 0.1u#,"e" kern 0.1u#,
+	"g" kern 0.1u#,"o" kern 0.1u#,"x" kern -0.1u#,
+	"s" kern 0.1u#,"a" kern 0.1u#;
+ligtable "d" : oct"244" : oct"236" : "v" kern -0.1u#,
+	"y" kern-0.2u#,"i" kern-0.1u#,"u" kern-0.05u#,
+	"t" kern-0.1u#;
+ligtable "p" : "e" kern 0.05u#,"d" kern 0.05u#,"e" kern 0.05u#,
+	"g" kern 0.05u#,"o" kern 0.05u#,"x" kern -0.1u#,
+	"s" kern 0.1u#,"c" kern 0.05u#,"a" kern 0.1u#,
+	"w" kern-0.05u#,"v" kern-0.05u#;
+ligtable "o" : oct"370" : oct"362" : oct"363" : oct"364" :
+	oct"365" : oct"366" : "a" kern 0.1u#, "c" kern 0.1u#, 
+	"d" kern 0.1u#,"e" kern 0.1u#,"g" kern 0.1u#,
+	"o" kern 0.1u#,"q" kern 0.1u#,"s" kern 0.1u#,
+	"v" kern -0.05u#,"m" kern -0.05u#,"n" kern-0.05u#,
+	"w" kern -0.05u#,"l" kern-0.05u#,"i" kern-0.05u#;
+ligtable "s" : oct"261" : oct"262" : oct"263" : 
+	"a" kern 0.1u#, "c" kern 0.1u#, 
+	"d" kern 0.1u#,"e" kern 0.1u#,"g" kern 0.1u#,
+	"o" kern 0.1u#,"q" kern 0.1u#,"s" kern 0.1u#,
+	"i" kern 0.05u#;
+ligtable "m" : "e" kern-0.05u#,"o" kern-0.05u#,
+	"c" kern-0.05u#,"q" kern-0.05u#,"p" kern-0.1u#,
+	"b" kern-0.05u#,"y" kern-0.05u#;
+ligtable "g" : oct"247" : "a" kern 0.1u#,"b" kern 0.1u#,"c" kern 0.1u#,
+	"d" kern 0.1u#,"e" kern 0.1u#,"f" kern 0.1u#,
+	"g" kern 0.1u#,"h" kern 0.1u#,"i" kern 0.1u#,
+	"j" kern 0.1u#,"k" kern 0.1u#,"l" kern 0.1u#,
+	"m" kern 0.1u#,"n" kern 0.1u#,"o" kern 0.1u#,
+	"p" kern 0.1u#,"q" kern 0.1u#,"r" kern 0.1u#,
+	"s" kern 0.1u#,"t" kern 0.1u#,"u" kern 0.1u#,
+	"v" kern 0.1u#,"w" kern 0.1u#,"x" kern 0.1u#,
+	"y" kern 0.1u#,"z" kern 0.1u#;
+ligtable "h" : oct"136" : "a" kern 0.0u#, "b" kern -0.1u#,
+	"c" kern -0.05u#, "d" kern -0.1u#,"e" kern -0.05u#,
+	"f" kern -0.1u#, "g" kern -0.05u#,"h" kern -0.1u#,
+	"i" kern -0.1u#, "j" kern -0.1u#,"k" kern -0.1u#,
+	"l" kern -0.1u#, "m" kern -0.1u#,"n" kern -0.1u#,
+	"o" kern 0.00u#, "p" kern -0.1u#,"q" kern -0.05u#,
+	"r" kern -0.1u#, "s" kern -0.0u#,"t" kern -0.1u#,
+	"u" kern -0.1u#, "v" kern -0.1u#,"w" kern -0.1u#,
+	"x" kern -0.1u#, "y" kern -0.1u#,"z" kern -0.1u#;
+ligtable "j" : "a" kern 0.1u#,"b" kern 0.1u#,"c" kern 0.1u#,
+	"d" kern 0.1u#,"e" kern 0.1u#,"f" kern 0.1u#,
+	"g" kern 0.1u#,"h" kern 0.1u#,"i" kern 0.1u#,
+	"j" kern 0.1u#,"k" kern 0.1u#,"l" kern 0.1u#,
+	"m" kern 0.1u#,"n" kern 0.1u#,"o" kern 0.1u#,
+	"p" kern 0.1u#,"q" kern 0.1u#,"r" kern 0.1u#,
+	"s" kern 0.1u#,"t" kern 0.1u#,"u" kern 0.1u#,
+	"v" kern 0.1u#,"w" kern 0.1u#,"x" kern 0.1u#,
+	"y" kern 0.1u#,"z" kern 0.1u#;
+ligtable "k" : "c" kern -0.1u#,"d" kern -0.1u#,
+	"e" kern -0.1u#,"o" kern -0.1u#,"q" kern -0.1u#,
+	"k" kern -0.1u#,"l" kern-0.1u#,"m" kern-0.1u#,
+	"t" kern-0.1u#,"u" kern-0.1u#,"v" kern-0.1u#,
+	"w" kern-0.1u#,"y" kern-0.1u#;
+ligtable "l" : oct"250" : oct"251" : oct"252" : 
+	"l" kern -0.05u#,"y" kern-0.2u#,
+	"i" kern-0.05u#,"d" kern-0.05u#;
+ligtable "n" : oct"253" : oct"254" : oct"255" :
+	oct"361" : "g" kern 0.05u#, "a" kern 0.1u#,
+	"d" kern -0.05u#,"e" kern 0.0u#,"s" kern 0.1u#,
+	"t" kern-0.1u#,"w" kern-0.1u#,"v" kern-0.1u#,
+	"u" kern-0.1u#,"y" kern-0.2u#;
+ligtable "q" : "u" kern -0.1u#;
+ligtable "r" : oct"257" : "e" kern 0.05u#,"s" kern 0.02u#,
+	"g" kern 0.1u#,"k" kern-0.05u#,"b" kern-0.05u#,
+	"n" kern-0.05u#,"m" kern-0.05u#,"a" kern 0.05u#;
+ligtable "i" : oct"354" : oct"355" : oct"356" : oct"357" :
+	"s" kern 0.05u#,"t" kern -0.1u#,
+	"n" kern-0.1u#,"l" kern-0.05u#,"v" kern-0.05u#;
+ligtable "t" : oct"040" : oct"264" : oct"265" : 
+	"h" kern -0.05u#,"e" kern 0.00u#,
+	"o" kern 0.05u#,"s" kern 0.05u#,"a" kern 0.1u#,
+	"y" kern-0.05u#;
+ligtable "u" : oct"371" : oct"372" : oct"373" : oct"374" :
+	oct"266" : oct"267" : "n" kern -0.1u#,"t" kern -0.05u#,
+	"p" kern-0.05u#, "h" kern-0.1u#;
+ligtable "v" : "e" kern -0.1u#,"o" kern-0.1u#;
+ligtable "w" : "e" kern -0.1u#,"a" kern-0.05u#,
+	"o" kern-0.1u#,"q" kern-0.1u#,"c" kern-.1u#;
+ligtable "y" : oct"375" : oct"270" : "p" kern -0.1u#,"m" kern -0.05u#,
+	"o" kern-0.05u#,"e" kern-0.1u#;
+ligtable "(" : "a" kern-0.15u#, "c" kern-0.15u#,
+	"d" kern-0.15u#,"e" kern-0.15u#,"g" kern-0.15u#,
+	"i" kern-0.15u#,"j" kern-0.15u#,"m" kern-0.15u#,
+	"n" kern-0.15u#,"o" kern-0.15u#,"q" kern-0.15u#,
+	"s" kern-0.15u#,"t" kern-0.15u#,"u" kern-0.15u#,
+	"v" kern-0.15u#,"w" kern-0.15u#,"x" kern-0.15u#,
+	"z" kern-0.15u#;

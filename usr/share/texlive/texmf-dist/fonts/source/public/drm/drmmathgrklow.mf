@@ -1,0 +1,728 @@
+% +AMDG  This document was begun on 26 June 11EX, the
+% Commemoration of St. Paul and St. Peter, and it is humbly
+% dedicated to them and to the Immaculate Heart of Mary for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar(oct"013",ex#+2ss#,ex#,0); "The letter alpha";
+italcorr(ex#*slant);
+
+pickup pencircle scaled 1.5thinl;
+penpos0(thinl,90);
+bot z0 = (w-ss,0-o);
+penpos1(thinl,90);
+bot z1 = (w-ss-w/12,0-o);
+penpos2(thickl,45);
+z2r = z1r;
+penpos3(thickl,0);
+z3r = (x1r,h/2);
+penpos4(thinl,90);
+z4r = (w/2,h+o);
+penpos5(thickl,180);
+z5r = (ss,h/2);
+penpos6(thinl,270);
+z6r = (w/2,0-o);
+penpos7(thinl,270);
+z7l = (w-ss,h);
+penpos8(thickl,0);
+z8 = z3;
+
+penstroke z0e..z1e..z2e---z3e..z4e..z5e..z6e..{up}z8e{up}..{right}z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"014",ex#+2ss#,asch#,dep#); "The letter beta";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,-dep);
+penpos1(thickl,0);
+z1l = (ss+hair,0);
+penpos2(thickl,0);
+z2l = (ss+hair,3h/4);
+penpos3(thinl,-90);
+z3l = (w/2,h+o);
+penpos4(curvl,180);
+z4l = (w-ss-hair,y2);
+penpos5(thinl,90);
+z5 = (x2r,h/2);
+penpos6(curvl,0);
+z6r = (w-ss,h/4);
+penpos7(thinl,-90);
+z7r = z1r;
+
+penstroke z0e..z1e..z2e..z3e..z4e..{left}z5e;%
+penstroke z5e{right}..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"015",1.2ex#+2ss#,ex#,dep#); "The letter gamma";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,3h/4);
+penpos1(thinl,-135);
+z1l = (w/4,h+o);
+penpos2(thickl,200);
+z2 = (w/2,0);
+penpos3(thickl,180);
+z3 = (w/3,-dep);
+penpos4(thinl,135);
+z4l = (w-ss,h);
+penpos5(thickl,135);
+z5 = z2;
+
+penstroke z0e..z1e{dir 0}..z2e..z3e;%
+penstroke z5e{dir 45}..z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"016",ex#+2ss#,asch#,0); "The letter delta";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0r = (w-ss,4h/5);
+penpos1(thinl,90);
+z1r = (w/2,h+o);
+penpos2(thickl,180);
+z2r = (w/4,4h/5);
+penpos3(curvl,180);
+z3l = (w-ss,h/4);
+penpos4(thinl,90);
+z4l = (w/2,0-o);
+penpos5(curvl,0);
+z5l = (ss,h/4);
+penpos6(thinl,-90);
+z6 = (w/2,h/2);
+
+penstroke z0e..z1e..z2e..{down}z3e..z4e..z5e..z6e..z3e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"017",0.8ex#+2ss#,ex#,0); "The letter epsilon";
+italcorr(ex#*slant);
+
+penpos0(thinl,-90);
+z0l = (w-ss,h+o);
+penpos1(curvl,0);
+z1l = (ss,h/2);
+penpos2(thinl,90);
+z2l = (w-ss,0-o);
+penpos4(1.5thinl,45);
+z4 = z1;
+penpos3(1.5thinl,45);
+x3r = w-ss; y3r = y4r;
+
+penstroke z0e{left}..{down}z1e{down}..{right}z2e;
+penstroke z3e--z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"020",ex#+2ss#,asch#,dep#); "The letter zeta";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0 = (w/2,h+o);
+penpos1(1.5thinl,90);
+z1 = (3w/4,6h/8);
+penpos2(1.5thinl,180);
+z2l = (w-ss,7h/8);
+penpos3(1.5thinl,-90);
+z3 = (x1,15h/16);
+penpos4(curvl,0);
+z4l = (ss,h/2);
+penpos5(curvl,90);
+z5l = (w/2,0-o);
+penpos6(1.5thinl,0);
+z6r = (w-ss,-dep/3);
+penpos7(thickl,-90);
+z7r = (w/2,-dep);
+
+penstroke z0e..z1e..z2e..z3e{left}..z4e..{right}z5e{right}..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"021",ex#+2ss#,ex#,dep#); "The letter eta";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,4h/5);
+penpos1(thinl,-90);
+z1l = (x0r+hair,h+o);
+penpos3(thickl,180);
+z3r = (x1r+hair,3h/4);
+penpos2(thickl,180);
+z2r = (x3r,0);
+penpos5(thickl,0);
+z5r = (w-ss,3h/4);
+penpos4(thinl,90);
+z4r = ((x3+x5)/2,h+o);
+penpos6(thickl,0);
+z6 = (x5,-dep);
+
+penstroke z0e..z1e..z3e---z2e;
+penstroke z2e---z3e..z4e..z5e---z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"022",ex#+2ss#,asch#,0); "The letter theta";
+italcorr(ex#*slant);
+
+penpos0(curvl,0);
+z0l = (ss,h/2);
+penpos1(thinl,-90);
+z1l = (w/2,h+o);
+penpos2(curvl,180);
+z2l = (w-ss,h/2);
+penpos3(thinl,90);
+z3l = (w/2,0-o);
+penpos4(1.5thinl,90);
+z4 = z0;
+penpos5(1.5thinl,90);
+z5 = z2;
+
+penstroke z0e..z1e..z2e..z3e..cycle;
+penstroke z4e--z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"023",0.4ex#+2ss#,ex#,0); "The letter iota";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,h);
+penpos1(thickl,0);
+z1l = (ss,h/5);
+penpos2(thinl,90);
+z2l = (x1r+hair,0-o);
+penpos3(1.5thinl,180);
+z3r = (x2r+hair,y1);
+
+penstroke z0e---z1e..z2e..{up}z3e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"024",ex#+2ss#,ex#,0); "The letter kappa";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,h);
+penpos1(thickl,0);
+z1l = (ss,0);
+penpos3(1.5thinl,0);
+z3r = (w-ss-1.5thinl,h+o);
+penpos4(1.5thinl,-90);
+z4 = (x0r,h/2);
+penpos5(thickl,0);
+z5r = (3w/4,h/5);
+penpos6(1.5thinl,45);
+z6 = (w/2,h/2);
+penpos7(thinl,90);
+z7 = z4;
+penpos8(1.5thinl,90);
+z8l = (x5r+hair,0-o);
+penpos9(1.5thinl,180);
+z9l = (w-ss,h/5);
+
+penstroke z0e--z1e;
+penstroke z3e--z4e;
+penstroke z7e..z6e..z5e..z8e..z9e;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"025",ex#+2ss#,asch#,0); "The letter lambda";
+italcorr(ex#*slant);
+
+penpos0(1.5thinl,0);
+z0l = (ss,0);
+penpos1(1.5thinl,-45);
+z1 = (w/2,h/2);
+penpos2(thickl,0);
+z2l = (ss,h);
+penpos3(thickl,45);
+z3 = z1;
+penpos4(thickl,0);
+z4r = (w-ss,0);
+
+penstroke z2e{down}..z3e..z4e;
+penstroke z0e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"026",ex#+2ss#,ex#,dep#); "The letter mu";
+italcorr(ex#*slant);
+
+penpos0(thickl,180);
+z0r = (ss,-dep);
+penpos1(thickl,180);
+z1r = (ss,h);
+penpos2(thickl,180);
+z2r = (ss,curlh);
+penpos4(thickl,0);
+z4l = (w-ss-2curlw,y2);
+penpos5(thickl,0);
+z5l = (w-ss-2curlw,h);
+penpos3(thinl,-90);
+z3r = ((x2+x4)/2,0-o);
+botcurl(4,6,7);
+
+penstroke z0e--z1e;
+penstroke z1e---z2e..z3e..z4e---z5e;
+penstroke z5e--z4e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"027",1.2ex#+2ss#,ex#,0); "The letter nu";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+penpos0(thickl,0);
+z0 = (ss+2curlw,h-curlh);
+topcurl(0,1,2);
+penpos3(1.5thinl,45);
+x3r = x0r; y3l = 0-o;
+penpos4(thickl,180);
+z4l = (w-ss,h-thinl);
+penpos5(1.5thinl,-90);
+z5r = z4r;
+penpos6(thinl,0);
+z6r = z5r;
+penpos7(thinl,90);
+z7r = z6r;
+penpos8(1.5thinl,45);
+z8r = z3r;
+
+penstroke z2e..z1e..z0e---z8e;
+penstroke z8e..z3e{right}..{up}z4e;
+penstroke z4e..z5e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"030",ex#+2ss#,asch#,dep#); "The letter xi";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0 = (w/2,h+o);
+penpos1(1.5thinl,90);
+z1 = (3w/4,6h/8);
+penpos2(1.5thinl,180);
+z2l = (w-ss,7h/8);
+penpos3(1.5thinl,-90);
+z3 = (x1,15h/16);
+penpos4(curvl,0);
+z4l = (ss,3h/4);
+penpos5(thinl,90);
+z5 = (w/2,h/2-thinl);
+penpos6(thinl,180);
+z6 = (w/2+thickl,h/2);
+penpos7(thinl,-90);
+z7 = (w/2,h/2+thinl);
+penpos8(curvl,0);
+z8l = (ss,h/4);
+penpos12(curvl,90);
+z12l = (w/2,0-o);
+penpos13(1.5thinl,0);
+z13r = (w-ss,-dep/3);
+penpos14(thickl,-90);
+z14r = (w/2,-dep);
+
+penstroke
+z0e..z1e..z2e..z3e{left}..z4e..z5e..z6e..z7e..z8e..{right}z12e{right}..z13e..z14e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"031",ex#+2ss#,ex#,0); "The letter pi";
+italcorr(ex#*slant);
+
+penpos0(1.5thinl,0);
+z0 = (2w/3,h);
+penpos1(1.5thinl,0);
+z1 = (w/3,h);
+penpos2(thickl,0);
+z2 = (w/4,0);
+penpos3(thickl,0);
+z3 = (3w/4,0);
+penpos4(thinl,90);
+z4 = (ss,h-curlh);
+penpos5(thickl,90);
+z5r = (ss+curlw,h+o);
+penpos6(thickl,90);
+z6r = (w-ss,h+o);
+
+penstroke z4e..z5e---z6e;
+penstroke z1e{down}..z2e;
+penstroke z0e{down}..z3e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"032",ex#+2ss#,ex#,dep#); "The letter rho";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,-dep);
+penpos1(thickl,0);
+z1l = (ss,h/2);
+penpos2(thinl,-90);
+z2l = (w/2,h+o);
+penpos3(curvl,180);
+z3l = (w-ss,h/2);
+penpos4(thinl,90);
+z4l = (w/2,0-o);
+
+penstroke z0e---z1e..z2e..z3e..z4e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"033",ex#+2ss#,ex#,0); "The letter sigma";
+italcorr(ex#*slant);
+
+penpos0(1.5thinl,-90);
+z0l = (w,h+o);
+penpos1(thickl,0);
+z1l = (ss,h/2);
+penpos2(thinl,-90);
+z2l = (w/2,h+o);
+penpos3(curvl,180);
+z3l = (w-ss,h/2);
+penpos4(thinl,90);
+z4l = (w/2,0-o);
+penpos5(1.5thinl,-90);
+z5l = z2l;
+
+penstroke z1e..z2e..z3e..z4e..cycle;
+penstroke z1e..z5e---z0e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"034",ex#+2ss#,ex#,0); "The letter tau";
+italcorr(ex#*slant);
+
+penpos0(1.5thinl,0);
+z0 = (w/2,h);
+penpos1(1.5thinl,0);
+z1 = (w/2,0);
+penpos4(thinl,90);
+z4 = (ss,h-curlh);
+penpos5(thickl,90);
+z5r = (ss+curlw,h+o);
+penpos6(thickl,90);
+z6r = (w-ss,h+o);
+
+penstroke z4e..z5e---z6e;
+penstroke z0e{down}..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"035",1.2ex#+2ss#,ex#,0); "The letter upsilon";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+penpos0(thickl,0);
+z0 = (ss+2curlw,h-curlh);
+topcurl(0,1,2);
+penpos3(1.5thinl,90);
+x3r = w/2; y3l = 0-o;
+penpos4(thickl,180);
+z4l = (w-ss,h-thinl);
+penpos5(1.5thinl,-90);
+z5r = z4r;
+penpos6(thinl,0);
+z6r = z5r;
+penpos7(thinl,90);
+z7r = z6r;
+penpos8(1.5thinl,90);
+z8r = z3r;
+penpos9(1.5thinl,0);
+z9 = (x0,curlh);
+
+penstroke z2e..z1e..z0e{down}..z9e..{right}z8e{right}..{up}z4e;
+penstroke z4e..z5e..z6e..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"036",1.2ex#+2ss#,asch#,dep#); "The letter phi";
+italcorr(ex#*slant);
+
+penpos1(thickl,0);
+z1l = (ss,ex/2);
+penpos2(thinl,-90);
+z2l = (w/2,ex+o);
+penpos3(curvl,180);
+z3l = (w-ss,ex/2);
+penpos4(thinl,90);
+z4l = (w/2,0-o);
+
+penstroke z1e..z2e..z3e..z4e..cycle;
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot lft z5 = (ss,-dep);
+draw z0--z5;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"037",1.4ex#+2ss#,ex#,dep#); "The letter chi";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0r = (ss,h-curlh);
+penpos1(thickl,90);
+z1r = (ss+curlw,h);
+penpos2(thickl,0);
+z2 = (w/2,(h+dep)/2-dep);
+penpos3(thickl,90);
+z3l = (w-ss-curlw,-dep);
+penpos4(thinl,90);
+z4l = (w-ss,-dep+curlh);
+penpos5(thinl,-135);
+z5l = (w-ss,h-curlh/2);
+penpos6(thinl,-90);
+z6l = (w-ss-0.7curlw,h+o);
+penpos7(1.5thinl,0);
+z7 = z2;
+penpos8(thinl,-90);
+z8r = (ss+0.7curlw,-dep);
+penpos9(thinl,-135);
+z9r = (ss,-dep+curlh/2);
+
+penstroke z0e..z1e..z2e..z3e..z4e;
+penstroke z5e..z6e..tension 2.5..z7e;
+penstroke z9e..z8e..tension 2.5..z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"040",1.2ex#+2ss#,asch#,dep#); "The letter psi";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+penpos0(thickl,0);
+z0 = (ss+2curlw,ex-curlh);
+topcurl(0,1,2);
+penpos3(1.5thinl,90);
+x3r = w/2; y3l = 0-o;
+penpos4(thickl,180);
+z4l = (w-ss,ex-thinl);
+penpos5(1.5thinl,-90);
+z5r = z4r;
+penpos6(thinl,0);
+z6r = z5r;
+penpos7(thinl,90);
+z7r = z6r;
+penpos8(1.5thinl,90);
+z8r = z3r;
+penpos9(1.5thinl,0);
+z9 = (x0,curlh);
+
+penstroke z2e..z1e..z0e{down}..z9e..{right}z8e{right}..{up}z4e;
+penstroke z4e..z5e..z6e..z7e;
+pickup pencircle scaled 1.5thinl;
+top z10 = (w/2+1.5thinl,h+o);
+bot z11 = (w/2+1.5thinl,-dep);
+draw z10--z11;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"041",1.5ex#+2ss#,ex#,0); "The letter omega";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss+w/5,h);
+penpos1(curvl,0);
+z1l = (ss,h/2);
+penpos2(thinl,90);
+z2l = (w/3,0-o);
+penpos3(1.5thinl,180);
+z3 = (w/2,h/2);
+penpos4(thinl,-90);
+z4r = (2w/3,0-o);
+penpos5(curvl,0);
+z5r = (w-ss,h/2);
+penpos6(thinl,0);
+z6r = (w-ss-w/5,h);
+
+penstroke z0e..z1e..z2e{right}..z3e;
+penstroke z3e..{right}z4e..z5e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"042",0.8ex#+2ss#,ex#,0); "The letter varepsilon";
+italcorr(ex#*slant);
+
+penpos0(1.5thinl,225);
+z0l = (w-ss,h-curlh);
+penpos1(thickl,0);
+z1l = (ss,3h/4);
+penpos2(thinl,135);
+z2l = (w-ss,curlh);
+penpos3(thickl,0);
+z3l = (ss,h/4);
+penpos4(thinl,90);
+z4 = (w/2-thinl,h/2-thinl);
+penpos5(thinl,-90);
+z5 = (w/2-thinl,h/2+thinl);
+penpos6(thinl,180);
+z6 = (w/2+thinl,h/2);
+penpos7(thinl,-90);
+z7l = (w/2,h+o);
+penpos8(thinl,90);
+z8l = (w/2,0-o);
+
+penstroke z0e..z7e..z1e..z4e..z6e..z5e..z3e..z8e..z2e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"043",1.2ex#+2ss#,asch#,0); "The letter vartheta";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0 = (w-ss,ex);
+penpos1(thinl,0);
+z1 = (w/4,ex+((h-ex)/2));
+penpos2(thinl,-90);
+z2l = (w/2,h+o);
+penpos3(2thinl,180);
+z3 = (3w/4,y1);
+penpos4(thickl,180);
+z4 = (x3,2curlh);
+penpos6(thickl,0);
+z6l = (ss+1.5curlw,y4);
+penpos5(thinl,90);
+z5l = ((x6+x4)/2,0-o);
+penpos7(thickl,0);
+z7 = (x6,ex-1.5curlh);
+topcurl(7,8,9);
+
+penstroke
+z0e{left}..z1e..z2e..z3e---z4e..z5e..z6e---z7e..z8e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"044",1.5ex#+2ss#,ex#,0); "The letter varpi";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0l = (ss+2w/5,h);
+penpos1(curvl,0);
+z1l = (ss+hair,h/2);
+penpos2(thinl,90);
+z2l = (w/3,0-o);
+penpos3(1.5thinl,180);
+z3 = (w/2,h/2);
+penpos4(thinl,-90);
+z4r = (2w/3,0-o);
+penpos5(curvl,0);
+z5r = (w-ss-hair,h/2);
+penpos6(thinl,0);
+z6r = (w-ss-2w/5,h);
+
+penstroke z0e..z1e..z2e{right}..z3e;
+penstroke z3e..{right}z4e..z5e..z6e;
+penpos7(thinl,90);
+z7 = (ss,h-curlh);
+penpos8(thickl,90);
+z8r = (ss+curlw,h+o);
+penpos9(thickl,90);
+z9r = (w-ss,h+o);
+penstroke z7e..z8e---z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"045",ex#+2ss#,ex#,dep#); "The letter varrho";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,-dep/2);
+penpos1(thickl,0);
+z1l = (ss,h/2);
+penpos2(thinl,-90);
+z2l = (w/2,h+o);
+penpos3(curvl,180);
+z3l = (w-ss,h/2);
+penpos4(thinl,90);
+z4l = (w/2,0-o);
+penpos5(thinl,90);
+z5l = (w/2,-dep);
+penpos6(thickl,180);
+z6l = (w-ss-hair,-dep/2);
+
+penstroke z6e{down}..z5e..z0e---z1e..z2e..z3e..z4e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"046",ex#+2ss#,ex#,dep#); "The letter varsigma";
+italcorr(ex#*slant);
+
+penpos0(thinl,0);
+z0r = (w-ss,h-curlh);
+penpos1(thinl,90);
+z1r = (w-ss-curlw,h+o);
+penpos2(1.5thinl,90);
+z2r = (ss+1.5curlw,h+o);
+penpos3(curvl,180);
+z3r = (ss,h/2);
+penpos4(1.5thinl,-90);
+z4r = (w/2,0-o);
+penpos5(1.5thinl,180);
+z5l = (w-ss,0-curlh);
+penpos6(thinl,90);
+z6l = (w/2,-dep);
+
+penstroke
+z0e{up}..z1e..z2e..{down}z3e{down}..z4e{right}..z5e..z6e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"047",1.2ex#+2ss#,ex#,dep#); "The letter varphi";
+italcorr(ex#*slant);
+
+pickup pencircle yscaled thinl;
+penpos2(thickl,0);
+z2 = (ss+1.5curlw,h-curlh);
+topcurl(2,1,0);
+penpos3(thickl,180);
+z3l = (w-ss,3h/4);
+penpos4(thinl,90);
+z4l = ((x2+x3)/2,0-o);
+penpos5(thinl,-60);
+z5l = ((x4+x3)/2,h+o);
+penpos6(thickl,0);
+z6 = (x4,h/2);
+penpos7(thickl,0);
+z7 = (x6,-dep);
+penpos8(thickl,0);
+z8 = (x2,h/2);
+penpos9(thickl,180);
+z9 = (x3,h/2);
+
+penstroke z0e..z1e..z2e---z8e..z4e..z9e---z3e..z5e{left}..z6e---z7e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

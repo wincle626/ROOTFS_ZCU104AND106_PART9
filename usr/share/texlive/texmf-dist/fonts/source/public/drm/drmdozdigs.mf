@@ -1,0 +1,127 @@
+% +AMDG  This document was begun on 17 Feb 11EE, the day
+% after the Comm. of St. Simeon, EM, and it is humbly
+% dedicated to him and to the Immaculate Heart of Mary, for
+% their prayers, and to the Sacred Heart of Jesus for His
+% mercy.
+
+beginchar("X",0.8exw#+2ss#,ex#,0); "old-style digit X";
+
+z0 = (w/2,h+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (ss+o,2h/3);
+z3 = z2 shifted (bulbsh,bulbsh);
+z4 = z3 shifted (bulbsh,-bulbsh);
+z5 = z4 shifted (-bulbsh,-bulbsh);
+z6 = (w-ss-o,2h/3);
+z7 = z6 shifted (-thickl,0);
+z8 = (ss,1.5thinl);
+z9 = (x8,0);
+z10 = (w-ss,0);
+z11 = (w-ss,1.5thinl+thinl);
+z12 = z11 shifted (-thinl/2,0);
+z13 = z12 shifted (0,-thinl);
+z14 = z8 shifted (thickl,0);
+
+path two; two =
+z14--z13--z12--z11--z10--z9--z8{dir
+30}..{up}z7..{left}z1{left}..{dir
+230}z3{right}..{down}z4{down}..{left}z5{left}..{up}z2{up}..{right}z0{right}..z6{down}..{dir
+-160}cycle;
+fill two rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("E",0.9exw#+2ss#,ex#,dep#); "old-style digit E";
+
+threeh = (ex+dep);
+z0 = (w/2,h+o);
+z1 = (w/2,0-dep);
+z2 = (ss,.75threeh-dep);
+z3 = (ss,.25threeh-dep);
+z4 = z0 shifted (0,-thinstroke);
+z5 = z1 shifted (0,thinstroke);
+z6 = z8 shifted (-curvwid,0);
+z7 = z9 shifted (-curvwid,0);
+z8 = (w-ss,3threeh/4-dep);
+z9 = (w-ss,threeh/4-dep);
+z10 = (w/2-2thinstroke,threeh/2+thinstroke-dep);
+z11 = z10 shifted (0,-thinstroke);
+z20 = z10 shifted (1.5thickstroke,-thinstroke/2);
+z21 = z9 shifted (-o/4,0);
+z22 = z10 shifted (2thickl,0);
+z23 = z11 shifted (2thickl,0);
+
+ulftbulb(2,12,13,14,15);
+ulftbulb(3,16,17,18,19);
+
+path three; three =
+z2{up}..{right}z0{right}..{down}z8{down}..z20..{left}z11--z10{right}..z20..{down}z9{down}..{left}z1{left}..{up}z3{up}..{right}z16{right}..{down}z17{down}..{left}z18{dir
+-60}..{right}z5{right}..{up}z7{up}..{left}z11--z10{right}..{up}z6{up}..{left}z4{left}..{dir
+-120}z12{right}..{down}z13{down}..{left}z14{left}..{up}cycle;
+
+fill three rotatedaround ((w/2,(h-d)/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar("x",digwid#+2ss#,cap#,0); "The digit X";
+italcorr(ex#*slant);
+
+z0 = (w/2,h+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (ss,3h/4);
+z3 = z2 shifted (bulbsh,-bulbsh);
+z4 = z3 shifted (bulbsh,bulbsh);
+z5 = z4 shifted (-bulbsh,bulbsh);
+z6 = (w-ss,3h/4);
+z7 = z6 shifted (-curvl,0);
+z8 = (ss,thickl);
+z9 = z8 shifted (1.5thinl,0);
+z10 = (ss,0);
+z11 = (w-ss,0);
+z12 = z11 shifted (0,thickl);
+z13 = z12 shifted (0,thinl);
+z14 = z13 shifted (-thinl/2,0);
+z15 = z12 shifted (-thinl/2,0);
+
+path twopath; twopath =
+z5{right}..{down}z4{down}..{left}z3{left}..{up}z2{up}..{right}z0{right}..{down}z6{down}..{down}z9--z15--z14--z13--z11--z10--z8{up}..{up}z7{up}..{left}z1{left}..{dir
+-120}cycle;
+fill twopath rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar("e",digwid#+2ss#,cap#,0); "The digit E";
+italcorr(ex#*slant);
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (ss,.75h);
+z3 = (ss,.25h);
+z4 = z0 shifted (0,-thinstroke);
+z5 = z1 shifted (0,thinstroke);
+z6 = z8 shifted (-curvwid,0);
+z7 = z9 shifted (-curvwid,0);
+z8 = (w-ss,3h/4);
+z9 = (w-ss,h/4);
+z10 = (w/2-2thinstroke,h/2+thinstroke);
+z11 = z10 shifted (0,-thinstroke);
+z20 = z10 shifted (1.5thickstroke,-thinstroke/2);
+z21 = z9 shifted (-o/4,0);
+z22 = z10 shifted (1.5thickl,0);
+z23 = z11 shifted (1.5thickl,0);
+
+ulftbulb(2,12,13,14,15);
+ulftbulb(3,16,17,18,19);
+
+path threepath;
+threepath =
+z2{up}..{right}z0{right}..{down}z8{down}..z20..{left}z11--z10{right}..z20..{down}z9{down}..{left}z1{left}..{up}z3{up}..{right}z16{right}..{down}z17{down}..{left}z18{dir
+-60}..{right}z5{right}..{up}z7{up}..{left}z11--z10{right}..{up}z6{up}..{left}z4{left}..{dir
+-120}z12{right}..{down}z13{down}..{left}z14{left}..{up}cycle;
+fill threepath rotatedaround ((w/2,h/2),180);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;

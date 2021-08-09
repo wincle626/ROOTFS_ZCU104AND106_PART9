@@ -1,0 +1,863 @@
+% beuronbuchst.mf
+% Die Buchstaben der Beuroner Kunst
+% The letters of Beuronese art
+% Autor: K. Wehr
+% 1. November 2017
+% U.I.O.G.D.
+
+mode_setup;
+
+Schriftgr# := 1cc#;   % nominelle Schriftgröße
+hoe# := 2/3Schriftgr#;   % Höhe der Buchstaben
+
+font_size Schriftgr#;
+font_x_height 0.6hoe#;
+font_quad 1.5hoe#;
+font_normal_space f*2/3hoe#;
+font_normal_stretch f*1/3hoe#;
+font_normal_shrink f*1/6hoe#;
+
+
+S# := 0.11hoe#;   % Stiftbreite
+define_pixels(S);
+
+klAb# := f*1.0S#;   % kleinstmöglicher Buchstabenabstand
+grAb# := f*2.6S#;   % größtmöglicher Buchstabenabstand
+Ue:=0.2*S;   % Überstand der Rundungen nach oben und unten
+
+% Korrektur des solve-Makros, die Verschachtelungen erlaubt:
+vardef save_solve@#(expr true_x,false_x) =
+   save tx_, fx_, x_;
+   tx_ := true_x;
+   fx_ := false_x;
+   forever:
+   x_ := 0.5[tx_,fx_];
+   exitif abs(tx_-fx_) <= tolerance;
+   if @#(x_): tx_ else: fx_ fi := x_;
+   endfor
+   x_
+enddef;
+
+% Bestimme z.i so, dass die Gerade durch z.i und z.j zur Parallelen durch z.k
+% den Abstand S hat:
+def bestimme_Parallelenpunkt_A(suffix i, j, k) =
+   % Überprüfe, ob der Abstand der Geraden durch z.i und z.j zur Parallelen
+   % durch z.k größer ist als S, wobei die unbekannte Koordinate von z.i durch
+   % das Argument ersetzt wird:
+   vardef Abstand_groesser_S(expr Wert) =
+   pair Lotfuss;
+   if (unknown x.i):
+   Lotfuss = whatever[z.j,(Wert,y.i)];
+   Lotfuss-z.k = whatever*((Wert,y.i)-z.j) rotated 90;
+   else:
+   Lotfuss = whatever[z.j,(x.i,Wert)];
+   Lotfuss-z.k = whatever*((x.i,Wert)-z.j) rotated 90;
+   fi
+   length(Lotfuss-z.k) > S
+   enddef;
+
+   if (unknown x.i):
+   x.i = save_solve Abstand_groesser_S(x.j,x.k);
+   else:
+   y.i = save_solve Abstand_groesser_S(y.j,y.k);
+   fi
+enddef;
+
+% Bestimme den Punkt z.i links von der Geraden durch z.j und z.k so,
+% dass er von dieser Geraden den Abstand Ab hat:
+def bestimme_Parallelenpunkt_B(suffix i, j, k)(expr Ab) =
+   pair Lotfuss;
+   Lotfuss = z.j+Ab*unitvector(z.k-z.j) rotated 90;
+   z.i-Lotfuss = whatever*(z.k-z.j);
+enddef;
+
+
+Avn# := klAb#;   % Vor- und Nachbreite des A
+Ab# := f*1.15hoe#+2Avn#;   % Dickte des A
+define_pixels(Avn);
+
+beginchar("A",Ab#,hoe#,0); "Buchstabe A";
+x1 = w-x4 = Avn;
+x2 = w-x3;
+y1 = y2 = y3 = y4 = 0;
+z5 = (w/2,h-S);
+x6 = w-x7;
+y6 = y7 = h;
+bestimme_Parallelenpunkt_A(6,1,5);
+z5-z2 = whatever*(z6-z1);
+fill z1--z2--z5--z3--z4--z7--z6--cycle;
+picture ABild_teilweise, ABild;
+ABild_teilweise := currentpicture;
+z8 = 0.45[z2,z5];
+x9 = w/2;
+z10 = (w-x8,y8);
+% Winkel, in dem der Mittelbalken zur Horizontalen verläuft:
+Aalpha := 30;
+z9 = z8+whatever*(dir(-Aalpha));
+Abeta := angle(z5-z2);
+penpos8(whatever,-180+Abeta);
+penpos9(whatever,-90);
+penpos10(whatever,-Abeta);
+bestimme_Parallelenpunkt_B(8l,8,9)(S/2);
+z9l-z8l = whatever*(z9-z8);
+z10l-z9l = whatever*(z10-z9);
+penstroke z8e--z9e--z10e;
+penlabels(range 1 thru 10);
+ABild := currentpicture;
+endchar;
+
+
+Pvor# := grAb#;   % Vorbreite des P
+Pnach# := 0.4[klAb#,grAb#];   % Nachbreite des P
+Pb# := f*0.7hoe#+Pvor#+Pnach#;   % Dickte des P
+define_pixels(Pvor,Pnach);
+
+beginchar("P",Pb#,hoe#,0); "Buchstabe P";
+PBreite := w-Pvor-Pnach;   % wird für das B und das R benötigt
+pickup pensquare scaled S;
+lft bot z1 = (Pvor,0);
+lft top z2 = (Pvor,h);
+draw z1--z2;
+x3 = x1;
+y3 = 0.5[y1,y2];
+rt x4 = w-Pnach;
+y4 = 0.5[y2,y3];
+x5 = x6 = 0.5[x3,x4];
+y5 = y3;
+y6 = y2;
+pickup pencircle scaled S;
+draw z3---z5..z4..z6---z2;
+labels(range 1 thru 6);
+picture PBild;
+PBild := currentpicture;
+endchar;
+
+
+Bvor# := grAb#;   % Vorbreite des B
+Bnach# := 0.5[klAb#,grAb#];   % Nachbreite des B
+Bb# := f*0.85hoe#+Bvor#+Bnach#;   % Dickte des B
+define_pixels(Bvor,Bnach);
+
+beginchar("B",Bb#,hoe#,0); "Buchstabe B";
+pickup pensquare scaled S;
+lft bot z1 = (Bvor,0);
+lft top z2 = (Bvor,h);
+draw z1--z2;
+x3 = x1+2S;
+y3 = y5 = y9 = 0.55[y1,y2];
+x4-x2 = PBreite-S;
+y4 = 0.5[y2,y3];
+x5 = x6 = 0.5[x2,x4];
+y6 = y2;
+rt x7 = w-Bnach;
+y7 = 0.5[y1,y3];
+x8 = x9 = 0.5[x1,x7];
+y8 = y1;
+draw z3--z9;
+draw z3--z5;   % falls bei großer Stauchung z5 links von z3 liegt
+pickup pencircle scaled S;
+draw z1---z8..z7..{left}z9;
+draw z2---z6..z4..{left}z5;
+labels(range 1 thru 9);
+picture BBild;
+BBild := currentpicture;
+endchar;
+
+
+Ovn# := 0.3[klAb#,grAb#];   % Vor- und Nachbreite des O
+Ob# := f*1.1hoe#+2Ovn#;   % Dickte des O
+define_pixels(Ovn);
+
+beginchar("O",Ob#,hoe#,0); "Buchstabe O";
+pickup pencircle scaled S;
+lft x3 = Ovn;
+rt x1 = w-Ovn;
+x2 = x4 = w/2;
+y1 = y3 = h/2;
+top y2 = h+Ue;
+bot y4 = -Ue;
+OBreite := w-2Ovn;   % wird für das Q benötigt
+pair OUnten;   % wird für das G benötigt
+OUnten := z4;
+def OSpannung = ..tension 0.93.. enddef;
+path OPfad;   % wird für das C und das G benötigt
+OPfad := z1 OSpannung z2 OSpannung z3 OSpannung z4 OSpannung cycle;
+draw OPfad;
+labels(1,2,3,4);
+picture OBild;   % wird auch für das Q benötigt
+OBild := currentpicture;
+endchar;
+
+
+Cvor# := Ovn#;   % Vorbreite des C
+Cnach# := 0.55[klAb#,grAb#];   % Nachbreite des C
+Cb# := f*0.95hoe#+Cvor#+Cnach#;   % Dickte des C
+
+beginchar("C",Cb#,hoe#,0); "Buchstabe C";
+pickup pencircle scaled S;
+cutdraw subpath(0.5,3.5) of OPfad;
+picture CBild;
+CBild := currentpicture;
+endchar;
+
+
+Dvor# := grAb#;
+Dnach# := 0.4[klAb#,grAb#];
+Db# := f*0.95hoe#+Dvor#+Dnach#;
+define_pixels(Dvor,Dnach);
+
+beginchar("D",Db#,hoe#,0); "Buchstabe D";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Dvor;
+bot y1 = 0;
+top y2 = h;
+draw z1--z2;
+rt x3 = w-Dnach;
+y3 = 0.5[y1,y2];
+x4 = x5 = 0.4[x1,x3];
+y4 = y1;
+y5 = y2;
+pickup pencircle scaled S;
+draw z1---z4..z3..z5---z2;
+labels(range 1 thru 5);
+picture DBild;
+DBild := currentpicture;
+endchar;
+
+
+Evor# := 0.6[klAb#,grAb#];
+Enach# := 0.4[klAb#,grAb#];
+Eb# := f*0.8hoe#+Evor#+Enach#;
+define_pixels(Evor,Enach);
+
+beginchar("E",Eb#,hoe#,0); "Buchstabe E";
+interim autorounding := 0;
+EBreite := w-Evor-Enach;   % Breite der Glyphe
+pickup pencircle scaled S;
+lft x5 = Evor;
+lft x3 = Evor+1/8EBreite;
+top y2 = h+0.5Ue;
+bot y6 = -0.5Ue;
+x2 = x4 = x6 = Evor+0.53EBreite;
+x1-x2 = x2-x3;
+x7-x6 = x6-x5;
+y4 = 0.55[y6,y2];
+y5 = y7 = 0.5[y6,y4];
+y1 = y3 = 0.5[y4,y2];
+path Eoben, Eunten;
+Eoben = z1{up}..z2{left}..z3{down}..{right}z4;
+Eunten = z4{left}..z5{down}..z6{right}..{up}z7;
+cutdraw subpath(0.4,3.0) of Eoben;
+cutdraw subpath(0,2.7) of Eunten;
+labels(range 1 thru 7);
+picture EBild;
+EBild := currentpicture;
+endchar;
+
+
+Fvor# := grAb#;
+Fnach# := 0.1[klAb#,grAb#];
+Fb# := f*0.8hoe#+Fvor#+Fnach#;
+define_pixels(Fvor,Fnach);
+
+beginchar("F",Fb#,hoe#,0); "Buchstabe F";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Fvor;
+rt x3 = w-Fnach;
+bot y1 = 0;
+top y2 = top y3 = h;
+z4 = 0.5[z1,z2];
+x5 = 0.5[x2,x3];
+y5 = y4;
+draw z1--z2--z3;
+draw z4--z5;
+labels(range 1 thru 5);
+picture FBild;
+FBild := currentpicture;
+endchar;
+
+
+Gvor# := Ovn#;
+Gnach# := 0.4[klAb#,grAb#];
+Gb# := f*1.05*hoe#+Gvor#+Gnach#;
+define_pixels(Gvor, Gnach);
+
+beginchar("G",Gb#,hoe#,0); "Buchstabe G";
+Galpha:=65;   % Anfangswinkel in Punkt 1
+pickup pencircle scaled S;
+z4 = OUnten;
+rt x3 = w-Gnach;
+y3 = 0.35h;
+x2 = Gvor+0.6(w-Gvor-Gnach);
+y2 = 0.6h;
+x1 = 0.5[Gvor+S/2,x2];
+y1 = 0.25[y2,y4];
+cutdraw subpath(0.5,3) of OPfad & z4{right}..z3{up}..z2{left}..{-dir(Galpha)}z1;
+labels(range 1 thru 4);
+picture GBild;
+GBild := currentpicture;
+endchar;
+
+
+Hvn# := grAb#;
+Hb# := f*0.95hoe#+2Hvn#;
+define_pixels(Hvn);
+
+beginchar("H",Hb#,hoe#,0); "Buchstabe H";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Hvn;
+rt x3 = rt x4 = w-Hvn;
+bot y1 = bot y3 = 0;
+top y2 = top y4 = h;
+z5 = 0.5[z1,z2];
+z6 = 0.5[z3,z4];
+draw z1--z2;
+draw z3--z4;
+draw z5--z6;
+labels(range 1 thru 6);
+picture HBild;
+HBild := currentpicture;
+endchar;
+
+
+Ib# := S#+2grAb#;
+
+beginchar("I",Ib#,hoe#,0); "Buchstabe I";
+pickup pensquare scaled S;
+bot z1 = (0.5w,0);
+top z2 = (0.5w,h);
+draw z1--z2;
+labels(1,2);
+picture IBild;
+IBild := currentpicture;
+endchar;
+
+
+Jvor# := 0.2[klAb#,grAb#];
+Jnach# := 0.95[klAb#,grAb#];
+Jb# := f*0.75hoe#+Jvor#+Jnach#;
+define_pixels(Jvor,Jnach);
+
+beginchar("J",Jb#,hoe#,0); "Buchstabe J";
+interim autorounding := 0;
+pickup pencircle scaled S;
+lft x1 = Jvor;
+y1 = y3 = 0.35h;
+x2 = 0.5[x1,x3];
+bot y2 = -Ue;
+rt x3 = rt x4 = w-Jnach;
+y4 = h;
+cutdraw z1{down}..z2{right}..z3---z4;
+labels(1,2,3,4);
+picture JBild;
+JBild := currentpicture;
+endchar;
+
+
+Kvor# := grAb#;
+Knach# := 0.4[klAb#,grAb#];
+Kb# := f*0.85hoe#+Kvor#+Knach#;
+define_pixels(Kvor,Knach);
+
+beginchar("K",Kb#,hoe#,0); "Buchstabe K";
+pickup pensquare scaled S;
+lft bot z1 = (Kvor,0);
+lft top z2 = (Kvor,h);
+x3 = x4 = rt x1;
+y3 = h-y4;
+x5 = x3+S;
+y5 = 0.5[y1,y2];
+x6 = x8;
+x7 = x9 = w-Knach;
+y6 = y7 = 0;
+y8 = y9 = h;
+bestimme_Parallelenpunkt_B(3,7,5)(S);
+z8-z4 = whatever*(z9-z5);
+draw z1--z2;
+fill z4--z8--z9--z5--z7--z6--z3--cycle;
+labels(range 1 thru 9);
+picture KBild;
+KBild := currentpicture;
+endchar;
+
+
+beginchar("L",Fb#,hoe#,0); "Buchstabe L";
+pickup pensquare scaled S;
+lft bot z1 = (Fvor,0);
+lft top z2 = (Fvor,h);
+rt bot z3 = (w-Fnach,0);
+draw z1--z2;
+draw z1--z3;
+labels(1,2,3);
+picture LBild;
+LBild := currentpicture;
+endchar;
+
+
+Mvn# := grAb#;
+Mb# := f*1.1hoe#+2Mvn#;
+define_pixels(Mvn);
+
+beginchar("M",Mb#,hoe#,0); "Buchstabe M";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Mvn;
+rt x3 = rt x4 = w-Mvn;
+bot y1 = bot y3 = 0;
+top y2 = top y4 = h;
+x5 = x6 = 0.5w;
+y5 = 0.45h;
+x7 = x8 = rt x2;
+x9 = x10 = lft x4;
+y7 = y9;
+y8 = y10 = h;
+bestimme_Parallelenpunkt_A(7,5,8);
+z8-z6 = whatever*(z7-z5);
+draw z1--z2;
+draw z3--z4;
+fill z7--z5--z9--z10--z6--z8--cycle;
+labels(range 1 thru 10);
+picture MBild;
+MBild := currentpicture;
+endchar;
+
+
+Nvn# := grAb#;
+Nb# := f*1.05hoe#+2Nvn#;
+define_pixels(Nvn);
+
+beginchar("N",Nb#,hoe#,0); "Buchstabe N";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Nvn;
+rt x3 = rt x4 = w-Nvn;
+bot y1 = bot y3 = 0;
+top y2 = top y4 = h;
+x5 = x6 = rt x2;
+x7 = x8 = lft x3;
+y6 = h;
+y8 = 0;
+y6-y5 = y7-y8;
+bestimme_Parallelenpunkt_A(5,8,6);
+draw z1--z2;
+draw z3--z4;
+fill z5--z6--z7--z8..cycle;
+labels(range 1 thru 8);
+picture NBild;
+NBild := currentpicture;
+endchar;
+
+
+Qvor# := Ovn#;
+Qnach# := 0.9klAb#;
+Qb# := f*1.2hoe#+Qvor#+Qnach#;
+define_pixels(Qvor,Qnach);
+
+beginchar("Q",Qb#,hoe#,0); "Buchstabe Q";
+currentpicture := OBild;
+x4 = w-Qnach;
+y3 = y4 = 0;
+y1 = y2 = 0.35h;
+(x3-x1)/OBreite = (y1-y3)/h;
+x4-x2 = x3-x1;
+bestimme_Parallelenpunkt_B(2,1,3)(S);
+fill z1--z2--z4--z3--cycle;
+labels(1,2,3,4);
+picture QBild;
+QBild := currentpicture;
+endchar;
+
+
+Rvor# := grAb#;
+Rnach# := 0.2[klAb#,grAb#];
+Rb# := f*0.9hoe#+Rvor#+Rnach#;
+define_pixels(Rvor,Rnach);
+
+beginchar("R",Rb#,hoe#,0); "Buchstabe R";
+pickup pensquare scaled S;
+lft x1 = lft x2 = Rvor;
+bot y1 = 0;
+top y2 = h;
+x3 = x1+2S;
+y3 = y5 = 0.5[y1,y2];
+x4-x2 = PBreite-S;
+y4 = 0.5[y2,y3];
+x5 = x6 = 0.5[x2,x4];
+y6 = y2;
+bot y7 = 0;
+x8 = w-Rnach;
+z8 = z7+S/2*right;
+draw z1--z2;
+draw z3--z5;
+pickup pencircle scaled S;
+draw z2---z6..z4{down}..{left}z5;
+interim autorounding := 0;
+cutdraw z3{right}..z7---z8;
+labels(range 1 thru 8);
+picture RBild;
+RBild := currentpicture;
+endchar;
+
+
+Svor# := 0.35[klAb#,grAb#];
+Snach# := 0.5[klAb#,grAb#];
+Sb# := f*0.8hoe#+Svor#+Snach#;
+define_pixels(Svor,Snach);
+
+beginchar("S",Sb#,hoe#,0); "Buchstabe S";
+pickup pencircle scaled S;
+x2 = x4 = x6 = Svor+0.5(w-Svor-Snach);
+top y2 = h+1/4Ue;
+bot y6 = -1/2Ue;
+y4 = 0.55[y6,y2];
+rt x5 = w-Snach;
+x6-x7 = 1.2(x5-x6);
+y5 = y7 = 0.5[y6,y4];
+x4-x3 = 0.65(x5-x4);
+x1-x2 = 1.2(x2-x3);
+y1 = y3;
+(y3-y4)/(y2-y4) = (y4-y5)/(y4-y6);
+path SPfad;
+SPfad = z1{up}..z2{left}..z3{down}..z4..z5{down}..z6{left}..{up}z7;
+cutdraw subpath (0.3,5.75) of SPfad;
+labels(range 1 thru 7);
+picture SBild;
+SBild := currentpicture;
+endchar;
+
+
+Tvn# := 0.1[klAb#,grAb#];
+Tb# := f*0.95hoe#+2Tvn#;
+define_pixels(Tvn);
+
+beginchar("T",Tb#,hoe#,0); "Buchstabe T";
+pickup pensquare scaled S;
+bot z1 = (w/2,0);
+top z2 = (w/2,h);
+draw z1--z2;
+Talpha = 30;   % Neigungswinkel der Querstrichenden
+penpos3(whatever,-90-Talpha);
+penpos4(whatever,-90+Talpha);
+x3r = w-x4r = Tvn;
+y3l = y4l = h;
+y3l-y3r = y4l-y4r = S;
+penstroke z3e--z4e;
+penlabels(1,2,3,4);
+picture TBild;
+TBild := currentpicture;
+endchar;
+
+
+beginchar("U",Ab#,hoe#,0); "Buchstabe U";
+currentpicture := ABild_teilweise reflectedabout ((0,h/2),(w,h/2));
+picture VBild;
+VBild := currentpicture;
+endchar;
+
+
+beginchar("V",Ab#,hoe#,0); "Buchstabe V";
+currentpicture := VBild;
+endchar;
+
+
+Wvn# := klAb#;
+Wb# := f*1.8hoe#+2Wvn#;
+define_pixels(Wvn);
+
+beginchar("W",Wb#,hoe#,0); "Buchstabe W";
+x1 = w-x4 = Wvn;
+x2 = w-x3;
+y1 = y2 = y3 = y4 = h;
+x5 = w-x6;
+y5 = y6 = 0.8h;
+z7 = (1/2w,y5-S);
+x8 = w-x9;
+y8 = y9 = S;
+x10 = w-x13;
+x11 = w-x12;
+y10 = y11 = y12 = y13 = 0;
+vardef linker_Winkel_groesser(expr xWert) =
+   x8' := xWert;
+   y8' := y8;
+   x5' := whatever;
+   y5' := y5;
+   x10' := whatever;
+   y10' := y10;
+   bestimme_Parallelenpunkt_A(10',1,8');
+   bestimme_Parallelenpunkt_A(5',8',7);
+   180-angle(z1-z10') > angle(z5'-z8')
+enddef;
+x8 = save_solve linker_Winkel_groesser(x1+S,x7-S);
+bestimme_Parallelenpunkt_A(10,1,8);
+bestimme_Parallelenpunkt_A(5,8,7);
+z2-z8 = whatever*(z1-z10);
+z11-z7 = whatever*(z5-z8);
+fill z1--z2--z8--z5--z6--z9--z3--z4--z13--z12--z7--z11--z10--cycle;
+labels(range 1 thru 13);
+picture WBild;
+WBild := currentpicture;
+endchar;
+
+
+Xvn# := Knach#;
+XBreite# := f*1.05hoe#;
+Xb# := XBreite#+2Xvn#;
+define_pixels(Xvn);
+
+beginchar("X",Xb#,hoe#,0); "Buchstabe X";
+y1 = y2 = y3 = y4 = 0;
+y5 = y6 = y7 = y8 = h;
+x1 = x5 = w-x4 = w-x8 = Xvn;
+x2 = x6 = w-x3 = w-x7;
+bestimme_Parallelenpunkt_A(7,1,8);
+fill z1--z2--z8--z7--cycle;
+fill z3--z4--z6--z5--cycle;
+z9 = whatever[z4,z6] = whatever[z1,z7];   % Hilfspunkt für das Y
+Xmh = y9;
+labels(range 1 thru 9);
+picture XBild;
+XBild := currentpicture;
+endchar;
+
+
+Yvn# := klAb#;
+Yb# := XBreite#+2Yvn#;
+define_pixels(Yvn);
+
+beginchar("Y",Yb#,hoe#,0); "Buchstabe Y";
+pickup pensquare scaled S;
+x1 = w-x4 = Yvn;
+x2 = w-x3;
+y1 = y2 = y3 = y4 = h;
+x5 = x6 = x7 = x8 = 0.5w;
+y5 = Xmh;
+bestimme_Parallelenpunkt_A(3,5,4);
+z6-z1 = whatever*(z5-z2);
+bot y7 = 0;
+top y8 = y5;
+fill z1--z6--z4--z3--z5--z2--cycle;
+draw z7--z8;
+labels(range 1 thru 8);
+picture YBild;
+YBild := currentpicture;
+endchar;
+
+
+Zvn# := 0.6[klAb#,grAb#];
+Zb# := f*1.0hoe#+2Zvn#;
+define_pixels(Zvn);
+
+beginchar("Z",Zb#,hoe#,0); "Buchstabe Z";
+pickup pensquare scaled S;
+lft x1 = lft x3 = Zvn;
+rt x2 = rt x4 = w-Zvn;
+bot y1 = bot y2 = 0;
+top y3 = top y4 = h;
+draw z1--z2;
+draw z3--z4;
+x5 = lft x1;
+x8 = rt x4;
+y5 = y6 = top y1;
+y7 = y8 = bot y3;
+x8-x7 = x6-x5;
+bestimme_Parallelenpunkt_A(7,5,8);
+fill z5--z6--z8--z7--cycle;
+labels(range 1 thru 8);
+picture ZBild;
+ZBild := currentpicture;
+endchar;
+
+
+Tzb# := f*1.0hoe#;   % Dickte des Trennzeichens (Mittenpunkt)
+
+beginchar("/",Tzb#,hoe#,0); "Worttrennung";
+pickup pencircle scaled 1.5S;
+z1 = (w/2,h/2);
+drawdot z1;
+endchar;
+
+
+beginchar(":",1.4Tzb#,hoe#,0); "Doppelpunkt";
+pickup pencircle scaled 1.5S;
+x1 = x2 = w/2;
+y1 = h-y2 = 0.3h;
+drawdot z1;
+drawdot z2;
+endchar;
+
+
+Krvn# := 1.5grAb#;   % Vor- und Nachbreite des Kreuzzeichens (+)
+Krhoe# := 0.65hoe#;   % Höhe und Breite des Kreuzzeichens
+Krb# := Krhoe#+2Krvn#;   % Dickte des Kreuzzeichens
+define_pixels(Krhoe);
+
+beginchar("+",Krb#,hoe#,0); "Kreuz";
+pickup pensquare scaled S;
+x1 = x2 = w/2;
+y2 = h-y1;
+x4 = w-x3;
+y3 = y4 = h/2;
+rt x4-lft x3 = top y2-bot y1 = Krhoe;
+draw z1--z2;
+draw z3--z4;
+labels(1,2,3,4);
+endchar;
+
+
+Bsvn# := 0.4[klAb#,grAb#];   % Vor- und Nachbreite des Bindestrichs
+Bsb# := f*0.5hoe#+2Bsvn#;   % Dickte des Bindestrichs
+define_pixels(Bsvn);
+
+beginchar("-",Bsb#,hoe#,0); "Bindestrich";
+%x1r = Bsvn;
+%x2l = w-Bsvn;
+%y1 = y2 = h/2;
+%penpos1(whatever,-90-Talpha);
+%penpos2(whatever,-90-Talpha);
+%y1l-y1r = y2l-y2r = S;
+%penstroke z1e--z2e;
+%penlabels(1,2);
+pickup pensquare scaled S;
+lft x1 = w-rt x2 = Bsvn;
+y1 = y2 = h/2;
+draw z1--z2;
+endchar;
+
+
+% Griechisches Omega
+Omegavn# := Ovn#;   % Vor- und Nachbreite des Omega
+Omegab# := f*1.1hoe#+2Omegavn#;   % Dickte des Omega
+define_pixels(Omegavn);
+
+beginchar(141,Omegab#,hoe#,0); "Griechischer Buchstabe Omega";
+pickup pensquare scaled S;
+lft x1 = w-rt x9 = Omegavn+S/3;
+bot y1 = 0;
+y1 = y2 = y8 = y9;
+x2-x1 = x9-x8 = 0.25(w-2Omegavn);
+x3 = x2;
+x7 = x8;
+y3 = y7 = 1/5h;
+x5 = 0.5w;
+top y5 = h+Ue;
+lft x4 = w-rt x6 = Omegavn;
+y4 = y6 = 0.52[y3,y5];
+z3h = z3+S/2*right;
+z7h = z7+S/2*left;
+draw z1--z2--z3;
+draw z7--z8--z9;
+% Winkel, in dem die Rundung beginnt:
+Omegawinkel := 15;
+pickup pencircle scaled S;
+draw z3h{dir(180-Omegawinkel)}..z4{up}..z5..z6{down}..{dir(180+Omegawinkel)}z7h;
+pickup pencircle scaled 1.1S;
+cutoff(z3h,0);
+cutoff(z7h,180);
+labels(range 1 thru 9,3h,7h);
+endchar;
+
+beginchar("a",Ab#,hoe#,0); "Buchstabe a";
+currentpicture := ABild;
+endchar;
+
+beginchar("b",Bb#,hoe#,0); "Buchstabe b";
+currentpicture := BBild;
+endchar;
+
+beginchar("c",Cb#,hoe#,0); "Buchstabe c";
+currentpicture := CBild;
+endchar;
+
+beginchar("d",Db#,hoe#,0); "Buchstabe d";
+currentpicture := DBild;
+endchar;
+
+beginchar("e",Eb#,hoe#,0); "Buchstabe e";
+currentpicture := EBild;
+endchar;
+
+beginchar("f",Fb#,hoe#,0); "Buchstabe f";
+currentpicture := FBild;
+endchar;
+
+beginchar("g",Gb#,hoe#,0); "Buchstabe g";
+currentpicture := GBild;
+endchar;
+
+beginchar("h",Hb#,hoe#,0); "Buchstabe h";
+currentpicture := HBild;
+endchar;
+
+beginchar("i",Ib#,hoe#,0); "Buchstabe i";
+currentpicture := IBild;
+endchar;
+
+beginchar("j",Jb#,hoe#,0); "Buchstabe j";
+currentpicture := JBild;
+endchar;
+
+beginchar("k",Kb#,hoe#,0); "Buchstabe k";
+currentpicture := KBild;
+endchar;
+
+beginchar("l",Fb#,hoe#,0); "Buchstabe l";
+currentpicture := LBild;
+endchar;
+
+beginchar("m",Mb#,hoe#,0); "Buchstabe m";
+currentpicture := MBild;
+endchar;
+
+beginchar("n",Nb#,hoe#,0); "Buchstabe n";
+currentpicture := NBild;
+endchar;
+
+beginchar("o",Ob#,hoe#,0); "Buchstabe o";
+currentpicture := OBild;
+endchar;
+
+beginchar("p",Pb#,hoe#,0); "Buchstabe p";
+currentpicture := PBild;
+endchar;
+
+beginchar("q",Qb#,hoe#,0); "Buchstabe q";
+currentpicture := QBild;
+endchar;
+
+beginchar("r",Rb#,hoe#,0); "Buchstabe r";
+currentpicture := RBild;
+endchar;
+
+beginchar("s",Sb#,hoe#,0); "Buchstabe s";
+currentpicture := SBild;
+endchar;
+
+beginchar("t",Tb#,hoe#,0); "Buchstabe t";
+currentpicture := TBild;
+endchar;
+
+beginchar("u",Ab#,hoe#,0); "Buchstabe u";
+currentpicture := VBild;
+endchar;
+
+beginchar("v",Ab#,hoe#,0); "Buchstabe v";
+currentpicture := VBild;
+endchar;
+
+beginchar("w",Wb#,hoe#,0); "Buchstabe w";
+currentpicture := WBild;
+endchar;
+
+beginchar("x",Xb#,hoe#,0); "Buchstabe x";
+currentpicture := XBild;
+endchar;
+
+beginchar("y",Yb#,hoe#,0); "Buchstabe y";
+currentpicture := YBild;
+endchar;
+
+beginchar("z",Zb#,hoe#,0); "Buchstabe z";
+currentpicture := ZBild;
+endchar;
+
+input beuronkern;
+
+end

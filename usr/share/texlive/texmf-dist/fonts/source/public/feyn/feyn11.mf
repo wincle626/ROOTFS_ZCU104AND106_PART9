@@ -1,0 +1,47 @@
+% Feynman diagram font, 11pt display size, release 0.4.1, 2017 November 03.
+%
+% This software is copyright 1991, 1994, 2001-2, 2005, 2008-17, Norman Gray.
+% Mercurial revision 558acb5f2e14, 2017-11-03 14:43 +0000, tag 0.4.1 + 0
+
+font_identifier "FEYN"; font_size 11pt#;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First the base size
+
+module# := 11pt#;
+
+% phfudge is ... what?!
+phfudge# := 0pt#;		% must be, for \Diagram macro
+
+linewidth# := 0.85pt#;		% pen width
+thinlinewidth# := 0.55pt#;	% thin pen
+bigarrow# := 6.5pt#;		% size of arrows
+littlearrow# := 4.5pt#;
+blobr# := 7pt#;			% radius of blobs and crosses
+
+on_math_axis := 1;
+
+% Boson wiggles
+boson_wiggles := 4;             %this must be an even number
+boson_wiggles_loop_small := 4;
+boson_wiggles_loop_normal := 6;
+boson_wiggles_loop_large := 8;
+
+% We want the roman digits from the corresponding cmr font, and that's
+% all.  Therefore, we don't want to obey the `generate' command in
+% cmr??.mf.  To do this, we read in cmbase, and then set generate to
+% gobble its argument. 
+def gobble primary g=enddef;	% gobbles its argument
+input cmbase;			% Read it explicitly, rather than
+				% implicitly within cmr10
+let generate=gobble;
+input cmr11;			% ...but miss out the `generate roman'
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% To business....
+
+input feyn;
+
+end

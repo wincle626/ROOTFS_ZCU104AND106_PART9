@@ -1,0 +1,31 @@
+% Fetamont parameters (script, 10pt)
+if base_name="mf2outline":
+ font_name "Fetamont-Script";
+ font_fullname "Fetamont Script";
+ font_familyname "Fetamont Script";
+ font_os_weight 400;
+ font_os_width 5;
+fi
+font_identifier:="FFMW";
+font_size 10pt#;                   % the "design size" of this font
+ht#:=6pt#;                         % height of characters
+x_ht#:=4.5pt#;                     % x-height of characters
+acc_ht#:=2pt#;                     % height of the accents
+barheight#:=.45ht#;                % height of bar lines
+comma_depth#:=designsize*7/36pt#;  % depth of comma
+acc_depth#:=designsize*7/36pt#;    % depth of accents
+u#:=4/9pt#;                        % unit width
+xgap#:=0.6pt#;                     % horizontal adjustment
+ygap#:=(ht#/13.5u#)*xgap#;         % vertical adjustment (N and M)
+s#:=0;                             % extra space at the sides
+o#:=1/9pt#;                        % overshoot
+px#:=11.5/15pt#;                   % horizontal thickness of pen
+py#:=.6px#;                        % vertical pen thickness
+dotincr:=.4;                       % increasement of dot diameter
+prot:=60;                          % rotation angle of the pen
+slant:=0;                          % slanting amount
+craziness:=.1pt;                   % degree of haphazard variation
+superness:=.75;                    % parameter for superellipses
+has_variants:=1;                   % are random variants contained?
+
+input ffmbase                      % now generate the font

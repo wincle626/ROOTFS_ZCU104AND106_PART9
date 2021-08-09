@@ -1,0 +1,67 @@
+% THIS FILE WAS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
+%%AutoEnc_pm4rjsmeixkf4vzvravttty5og
+% Encoding created by otftotfm on Wed Dec 11 16:14:31 2019
+% Command line follows encoding
+/AutoEnc_pm4rjsmeixkf4vzvravttty5og [
+%00
+  /grave.sc /acute.sc /circumflex.sc /tilde.sc /dieresis /hungarumlaut.sc /ring /caron.sc
+  /breve.sc /macron /dotaccent.sc /cedilla /ogonek /uni04C0 /.notdef /.notdef
+%10
+  /quotedblleft /quotedblright /.notdef /.notdef /.notdef /endash.sc /emdash.sc /T_T.liga
+  /.notdef /dotlessi.sc /uni0237 /.notdef /.notdef /.notdef /.notdef /.notdef
+%20
+  /space /exclam /quotedbl /numbersign /dollar /percent.sc /ampersand.sc /quoteright
+  /parenleft /parenright /asterisk /plus.sc /comma /hyphen.sc /period /slash
+%30
+  /zero.sc /one.sc /two.sc /three.sc /four.sc /five.sc /six.sc /seven.sc
+  /eight.sc /nine.sc /colon.sc /semicolon.sc /less.sc /equal.sc /greater.sc /question
+%40
+  /at.sc /A /B /C /D /E /F /G
+  /H /I /J /K /L /M /N /O
+%50
+  /P /Q /R /S /T /U /V /W
+  /X /Y /Z /bracketleft /backslash /bracketright /asciicircum.sc /underscore
+%60
+  /quoteleft /a.sc /b.sc /c.sc /d.sc /e.sc /f.sc /g.sc
+  /h.sc /i.sc /j.sc /k.sc /l.sc /m.sc /n.sc /o.sc
+%70
+  /p.sc /q.sc /r.sc /s.sc /t.sc /u.sc /v.sc /w.sc
+  /x.sc /y.sc /z.sc /braceleft /bar.sc /braceright /asciitilde.sc /hyphen.sc
+%80
+  /.notdef /uni04B4 /uni04AC /uni0494 /uni04BA /.notdef /uni048E /uni04E0
+  /.notdef /uni049A /.notdef /uni049E /.notdef /uni04A2 /.notdef /uni04C7
+%90
+  /uni04E8 /uni04BC /uni04BE /uni048C /.notdef /uni04B2 /uni040F /uni04A8
+  /uni04B6 /.notdef /uni04D8 /.notdef /uni0401 /uni2116 /currency /section.sc
+%A0
+  /.notdef /uni04B5.sc /uni04AD.sc /uni0495.sc /uni04BB.sc /.notdef /uni048F.sc /uni04E1.sc
+  /.notdef /uni049B.sc /.notdef /uni049F.sc /.notdef /uni04A3.sc /.notdef /uni04C8.sc
+%B0
+  /uni04E9.sc /uni04BD.sc /uni04BF.sc /uni048D.sc /.notdef /uni04B3.sc /uni045F.sc /uni04A9.sc
+  /uni04B7.sc /.notdef /uni04D9.sc /.notdef /uni0451.sc /quotedblbase /guillemotleft.sc /guillemotright.sc
+%C0
+  /uni0410 /uni0411 /uni0412 /uni0413 /uni0414 /uni0415 /uni0416 /uni0417
+  /uni0418 /uni0419 /uni041A /uni041B /uni041C /uni041D /uni041E /uni041F
+%D0
+  /uni0420 /uni0421 /uni0422 /uni0423 /uni0424 /uni0425 /uni0426 /uni0427
+  /uni0428 /uni0429 /uni042A /uni042B /uni042C /uni042D /uni042E /uni042F
+%E0
+  /uni0430.sc /uni0431.sc /uni0432.sc /uni0433.sc /uni0434.sc /uni0435.sc /uni0436.sc /uni0437.sc
+  /uni0438.sc /uni0439.sc /uni043A.sc /uni043B.sc /uni043C.sc /uni043D.sc /uni043E.sc /uni043F.sc
+%F0
+  /uni0440.sc /uni0441.sc /uni0442.sc /uni0443.sc /uni0444.sc /uni0445.sc /uni0446.sc /uni0447.sc
+  /uni0448.sc /uni0449.sc /uni044A.sc /uni044B.sc /uni044C.sc /uni044D.sc /uni044E.sc /uni044F.sc
+] def
+% Command line: 'otftotfm --automatic --encoding=fontools_t2c
+% --tfm-directory=texmf/fonts/tfm/catharsis/cormorantgaramond
+% --vf-directory=texmf/fonts/vf/catharsis/cormorantgaramond
+% --type1-directory=texmf/fonts/type1/catharsis/cormorantgaramond
+% --truetype-directory=texmf/fonts/truetype/catharsis/cormorantgaramond
+% --encoding-directory=texmf/fonts/enc/dvips/cormorantgaramond
+% --map-file=texmf/fonts/map/dvips/cormorantgaramond/CormorantGaramond.map
+% --no-updmap --no-type1 --coding-scheme=TEX CYRILLIC FONT ENCODING - T2C
+% --feature=kern --feature=liga --feature=onum --feature=smcp --ligkern=f i
+% =: fi --ligkern=f l =: fl --ligkern=f f =: ff --ligkern=ff i =: ffi
+% --ligkern=ff l =: ffl --unicoding=germandbls =: SSsmall
+% CormorantGaramond-Bold.ttf CormorantGaramond-Bold-osf-sc-t2c'

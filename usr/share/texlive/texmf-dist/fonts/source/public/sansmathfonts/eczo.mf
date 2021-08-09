@@ -1,0 +1,136 @@
+% eczo.mf
+%
+% Content:
+%    Parameter for
+%    European CM-style Bold Extended Sans Serif Slanted Caps and Small Caps
+%
+% By Ariel Barton, March 2013
+%
+% Based on ecsx.mf and ecxc.mf by J"org Knappen
+%
+% Identical to eczx
+% except for the slant parameter
+%
+font_identifier:="ECSSBXSLCSC";
+font_size gensize*pt#;
+basedef                             (  5,      9,     10,     12);
+gendef   [1/36pt#]( u#             )(     15,     22,     24,     28); % ecxc
+gendef   [1/36pt#]( width_adj#     )( 12,     19,     22,     19); % ecsx
+gendef   [1/36pt#]( serif_fit#     )([-5],  [-8],   [-9],  [-10]); % ecsx
+gendef   [1/36pt#]( cap_serif_fit# )([-6],  [-9],  [-11],  [-15]); % ecsx
+gendef   [1/36pt#]( letter_fit#    )(  5,      5,      5,      5); % ecxc
+gendef   [1/36pt#]( body_height#   )(135,    243,    270,    324); % ecsx
+gendef   [1/36pt#]( asc_height#    )(130,    235,    260,    315); % ecsx
+gendef   [1/36pt#]( cap_height#    )(125,    225,    250,    300); % ecsx
+gendef   [1/36pt#]( fig_height#    )(125,    212,    250,    283); % ecsx
+gendef   [1/36pt#]( x_height#      )( 83,    149,    165,    198); % ecsx
+gendef   [1/36pt#]( math_axis#     )( 45,     80,     90,    108); % ecsx
+gendef   [1/36pt#]( bar_height#    )( 45,     80,     90,     95); % ecsx
+gendef   [1/36pt#]( comma_depth#   )( 19,     34,     38,     54); % ecsx
+gendef   [1/36pt#]( desc_depth#    )( 35,     62,     70,     84); % ecsx
+gendef   [1/36pt#]( acc_height#    )( 45,   67.5,     75,     90); % ecsx
+gendef   [1/36pt#]( dot_height#    )( 38,   67.5,     75,     90); % ecsx
+gendef   [1/36pt#]( udot_height#   )( 30,   53.1,     59,   70.8); % ecsx
+gendef   [1/36pt#]( crisp#         )( 12,     25,     26,     26); % ecsx
+gendef   [1/36pt#]( tiny#          )( 12,     24,     26,     26); % ecsx
+gendef   [1/36pt#]( fine#          )(  5,      7,      9,      9); % ecsx
+gendef   [1/36pt#]( thin_join#     )( 11,     18,     19,     21); % ecsx
+gendef   [1/36pt#]( hair#          )( 25,     40,     49,     50); % ecsx
+gendef   [1/36pt#]( stem#          )( 25,     41,     49,     50); % ecsx
+gendef   [1/36pt#]( curve#         )( 25,     41,     49,     50); % ecsx
+gendef   [1/36pt#]( ess#           )( 22,     35,     43,     44); % ecsx
+gendef   [1/36pt#]( flare#         )( 20,     39,     40,     41); % ecsx
+gendef   [1/36pt#]( dot_size#      )( 24,     40,     47,     48); % ecsx
+gendef   [1/36pt#]( cap_hair#      )( 24,     41,     48,     50); % ecsx
+gendef   [1/36pt#]( cap_stem#      )( 26,     43,     51,     54); % ecsx
+gendef   [1/36pt#]( cap_curve#     )( 26,     43,     51,     54); % ecsx
+gendef   [1/36pt#]( cap_ess#       )( 26,     43,     51,     52); % ecsx
+gendef   [1/36pt#]( rule_thickness#)( 16,     29,     30,     31); % ecsx
+gendef   [1/36pt#]( dish#          )(  0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( bracket#       )(  0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( jut#           )(  0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( cap_jut#       )(  0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( beak_jut#      )(  0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( beak#          )(.75,    1.1,    1.5,    1.8); % ecsx
+gendef   [1/36pt#]( vair#          )( 15,     22,     26,     27); % ecsx
+gendef   [1/36pt#]( notch_cut#     )( 25,     42,     49,     50); % ecsx
+gendef   [1/36pt#]( bar#           )( 13,     26,     26,     27); % ecsx
+gendef   [1/36pt#]( slab#          )( 18,     35,     36,     37); % ecsx
+gendef   [1/36pt#]( cap_bar#       )( 17,     33,     34,     35); % ecsx
+gendef   [1/36pt#]( cap_band#      )( 16,     30,     31,     32); % ecsx
+gendef   [1/36pt#]( cap_notch_cut# )( 23,     44,     45,     46); % ecsx
+gendef   [1/36pt#]( serif_drop#    )(  2,      2,      2,      2); % ecsx
+gendef   [1/36pt#]( stem_corr#     )(  1,      1,      1,      1); % ecsx
+gendef   [1/36pt#]( vair_corr#     )(  2,      2,      2,      2); % ecsx
+gendef   [1/36pt#]( apex_corr#     )( 15,     17,     18,     19); % ecsx
+gendef   [1/36pt#]( o#             )(  5,      7,      8,      9); % ecsx
+gendef   [1/36pt#]( apex_o#        )(  0,      0,      0,      0); % ecsx
+gendef            ( fudge          )(.88,     .88,    .88,    .88); % ecsx
+gendef            ( math_spread    )(.45,     .45,     .5,     .5); % ecsx
+slant:=sind 12/cosd 12;
+   superness:=3/4; % ecsx
+   superpull:=1/18; % ecsx
+   beak_darkness:=0; % ecsx
+square_dots:=true; % ecsx
+hefty:=true; % ecsx
+serifs:=false; % ecsx
+monospace:=false;
+variant_g:=false;
+low_asterisk:=false;
+math_fitting:=false;
+
+
+gendef   [1/36pt#]( lower.letter_fit#    )(   1.44,   1.44,   1.44,   1.44); % ecxc
+gendef   [1/36pt#]( lower.body_height#   )(     65,    173,    200,    254); % ecxc
+gendef            ( lower.fudge          )(    .88,     .88,    .88,    .88); % ecsx
+gendef   [1/36pt#]( lower.width_adj#           )(     12,     19,     22,     19); % ecsx
+gendef   [1/36pt#]( lower.cap_notch_cut#       )(     23,     44,     45,     46); % ecsx
+gendef   [1/36pt#]( lower.cap_jut#             )(      0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( lower.beak_jut#            )(      0,      0,      0,      0); % ecsx
+gendef   [1/36pt#]( lower.apex_o#              )(      0,      0,      0,      0); % ecsx
+
+
+gendef	[1/36pt#](	lower.u#	)(	11,	17,	18.3,	21.3);
+
+
+gendef	[1/36pt#](	lower.cap_serif_fit#	)(	[-4],	[-7.5483870968],	[-9.4285714286],	[-13.125]);
+
+gendef	[1/36pt#](	lower.cap_height#	)(	97.1659919028,	162.955465587,	188.2591093117,	228.7449392713);
+
+gendef	[1/36pt#](	lower.x_height#	)(	41.18875,	107.3006944444,	123.440625,	156.440625);
+
+gendef	[1/36pt#](	lower.bar_height#	)(	22.275,	57.4736842105,	67.2352941176,	74.9754901961);
+
+gendef	[1/36pt#](	lower.comma_depth#	)(	9.2285714286,	24.2857142857,	28.2285714286,	41.1428571429);
+
+gendef	[1/36pt#](	lower.stem#	)(	20.8333333333,	34.4184210526,	41.112195122,	42.0212765957);
+
+gendef	[1/36pt#](	lower.flare#	)(	13.1111111111,	29.5285714286,	30.3111111111,	31.031372549);
+
+gendef	[1/36pt#](	lower.dot_size#	)(	16.2580645161,	32.1568627451,	38.6071428571,	40.2580645161);
+
+gendef	[1/36pt#](	lower.cap_hair#	)(	15.5294117647,	32.3684210526,	39.6631578947,	41.25);
+
+gendef	[1/36pt#](	lower.cap_stem#	)(	19.5,	34.9489361702,	41.4,	43.8631578947);
+
+gendef	[1/36pt#](	lower.cap_curve#	)(	20.1290322581,	36.0019607843,	42.7472727273,	45.2360655738);
+
+gendef	[1/36pt#](	lower.cap_ess#	)(	16.25,	34.4,	40.8,	41.6);
+
+gendef	[1/36pt#](	lower.beak#	)(	0.51,	0.8031746032,	1.1142857143,	1.3371428571);
+
+gendef	[1/36pt#](	lower.slab#	)(	14.85,	28.875,	29.8588235294,	30.6);
+
+gendef	[1/36pt#](	lower.cap_bar#	)(	14.025,	27.225,	28.2,	28.9459459459);
+
+gendef	[1/36pt#](	lower.cap_band#	)(	13.2,	24.75,	25.7117647059,	26.4648648649);
+
+gendef	[1/36pt#](	lower.o#	)(	3.125,	4.375,	5,	5.625);
+
+
+clear_extra_memory;
+
+generate excsc
+
+endinput;
+

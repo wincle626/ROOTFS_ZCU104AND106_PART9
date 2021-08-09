@@ -1,0 +1,31 @@
+% Fetamont parameters (bold condensed oblique, 40pt)
+if base_name="mf2outline":
+ font_name "Fetamont-BoldCondensedOblique40";
+ font_fullname "Fetamont Bold Condensed Oblique40";
+ font_familyname "Fetamont";
+ font_os_weight 700;
+ font_os_width 3;
+ font_range(39.5,72,16);
+fi
+font_identifier:="FFMBCO";
+font_size 40pt#;                   % the "design size" of this font 
+ht#:=250/9pt#;                     % height of characters (=4*cmssdc10)
+x_ht#:=170/9pt#;                   % x-height of characters 
+acc_ht#:=75/9pt#;                  % height of the accents
+barheight#:=.45ht#;                % height of bar lines
+comma_depth#:=designsize*7/36pt#;  % depth of comma
+acc_depth#:=designsize*7/36pt#;    % depth of accents
+u#:=(1+sqrt5)/2pt#;                % unit width
+xgap#:=2.9pt#;                     % horizontal adjustment
+ygap#:=(ht#/13.5u#)*xgap#;         % vertical adjustment (N and M)
+s#:=.2;                            % extra space at the sides
+o#:=4/9pt#;                        % overshoot
+px#:=4pt#;                         % horizontal thickness of pen
+py#:=.9px#;                        % vertical pen thickness
+dotincr:=.4;                       % increasement of dot diameter
+prot:=0;                           % rotation angle of the pen
+slant:=1/4;                        % slanting amount
+craziness:=0;                      % degree of haphazard variation
+superness:=.8;                     % parameter for superellipses
+
+input ffmbase                      % now generate the font

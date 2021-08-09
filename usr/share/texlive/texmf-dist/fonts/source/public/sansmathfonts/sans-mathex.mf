@@ -1,0 +1,19 @@
+% Based on the Computer Modern source file mathex.mf by D E Knuth.
+
+% Edited by Ariel Barton to produce sans serif symbols
+
+% Date: 2013/03/22
+
+% The CM-style Math-Extension family (by D. E. Knuth, 1979--1985)
+
+font_coding_scheme:="TeX math extension";
+mode_setup; font_setup;
+
+input sans-bigdel;  % large delimiters
+input sans-bigop;  % large operators
+input bigacc;  % large accents
+
+font_x_height x_height#;
+font_quad 18u#+4letter_fit#;
+% (The calling file should give the other math extension font parameters.)
+bye.

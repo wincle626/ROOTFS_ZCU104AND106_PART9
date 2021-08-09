@@ -1,0 +1,906 @@
+
+cmchar "\textstyle up integral sign";
+beginchar(0,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle double up integral sign";
+beginchar(2,10u#+tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+rt x1r=hround(w-u-tdec); x9=w-tdec-x1; x7=w-tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+y19=y9;y18=y8;y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+y11=y1;y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-.5tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+penlabels(range 1 thru 19); endchar;
+
+cmchar "\textstyle triple up integral sign";
+beginchar(4,10u#+2tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos21(curve,0); pos22(hair,0); pos23(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+pos27(vair,-90); pos28(hair,-180); pos29(curve,-180);
+rt x1r=hround(w-2tdec-u); x9=w-2tdec-x1; x7=w-2tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+x29=x19+tdec;x27=x17+tdec;
+y29=y19=y9;y28=y18=y8;y27=y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+x21=x11+tdec;x23=x13+tdec;
+y21=y11=y1;y23=y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+bulb(23,22,21); bulb(27,28,29);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+filldraw haut shifted 2z0;
+filldraw bas shifted 2z0;
+penlabels(range 1 thru 29); endchar;
+
+cmchar "\textstyle fourth up integral sign";
+beginchar(6,10u#+3tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos21(curve,0); pos22(hair,0); pos23(vair,90);
+pos31(curve,0); pos32(hair,0); pos33(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+pos27(vair,-90); pos28(hair,-180); pos29(curve,-180);
+pos37(vair,-90); pos38(hair,-180); pos39(curve,-180);
+rt x1r=hround(w-3tdec-u); x9=w-3tdec-x1; x7=w-3tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+x29=x19+tdec;x27=x17+tdec;
+x39=x29+tdec;x37=x27+tdec;
+y39=y29=y19=y9;y38=y28=y18=y8;y37=y27=y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+x21=x11+tdec;x23=x13+tdec;
+x31=x21+tdec;x33=x23+tdec;
+y31=y21=y11=y1;y33=y23=y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-1.5tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+bulb(23,22,21); bulb(27,28,29);
+bulb(33,32,31); bulb(37,38,39);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+filldraw haut shifted 2z0;
+filldraw bas shifted 2z0;
+filldraw haut shifted 3z0;
+filldraw bas shifted 3z0;
+penlabels(range 1 thru 39); endchar;
+
+cmchar "\textstyle contour up integral sign";
+beginchar(8,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw fullcircle scaled .7w shifted z5;  % contour
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle contour double up integral sign";
+beginchar(10,10u#+tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+rt x1r=hround(w-u-tdec); x9=w-tdec-x1; x7=w-tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+y19=y9;y18=y8;y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+y11=y1;y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-.5tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+pickup rule.nib; autorounded;
+z50=z5+.5z0;
+draw fullcircle xscaled .75w yscaled .5w shifted z50;  % contour
+penlabels(range 1 thru 19); endchar;
+
+cmchar "\textstyle contour triple up integral sign";
+beginchar(12,10u#+2tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos21(curve,0); pos22(hair,0); pos23(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+pos27(vair,-90); pos28(hair,-180); pos29(curve,-180);
+rt x1r=hround(w-2tdec-u); x9=w-2tdec-x1; x7=w-2tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+x29=x19+tdec;x27=x17+tdec;
+y29=y19=y9;y28=y18=y8;y27=y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+x21=x11+tdec;x23=x13+tdec;
+y21=y11=y1;y23=y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+bulb(23,22,21); bulb(27,28,29);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+filldraw haut shifted 2z0;
+filldraw bas shifted 2z0;
+pickup rule.nib; autorounded;
+z50=z5+z0;
+draw fullcircle xscaled .8w yscaled .35w shifted z50;  % contour
+penlabels(range 1 thru 29); endchar;
+
+cmchar "\textstyle right arrow up contour up integral sign";
+beginchar(14,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw fullcircle scaled .7w shifted z5;  % contour
+pos51(1.35rule_thickness,90);pos52(1.2vair,135);pos53(1.2vair,45);
+x0=.345w;y0=.05w;
+z51=z5+z0;
+y52=y53=y51-.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle left arrow up contour up integral sign";
+beginchar(16,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw fullcircle scaled .7w shifted z5;  % contour
+x0=-.345w;y0=.05w;
+z51=z5+z0;
+pos51(1.35rule_thickness,90);pos52(1.2vair,135);pos53(1.2vair,45);
+y52=y53=y51-.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle right arrow down contour up integral sign";
+beginchar(18,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw fullcircle scaled .7w shifted z5;  % contour
+x0=.345w;y0=-.05w;
+z51=z5+z0;
+pos51(1.35rule_thickness,-90);pos52(1.2vair,135);pos53(1.2vair,45);
+y52=y53=y51+.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle left arrow down contour up integral sign";
+beginchar(20,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw fullcircle scaled .7w shifted z5;  % contour
+x0=-.345w;y0=-.05w;
+z51=z5+z0;
+pos51(1.35rule_thickness,-90);pos52(1.2vair,135);pos53(1.2vair,45);
+y52=y53=y51+.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle square up integral sign";
+beginchar(22,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-.5ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+x51=x52=x5+.35w;
+x53=x54=x5-.35w;
+y51=y54=y5+.35w;
+y52=y53=y5-.35w;
+draw z51--z52--z53--z54--cycle;
+penlabels(51,52,53,54);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle double square up integral sign";
+beginchar(24,10u#+tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-.5ic#); pickup fine.nib;
+path haut;
+path bas;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos11(curve,0); pos12(hair,0); pos13(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos17(vair,-90); pos18(hair,-180); pos19(curve,-180);
+rt x1r=hround(w-u-tdec); x9=w-tdec-x1; x7=w-tdec-x3=3u;
+x19=x9+tdec;x17=x7+tdec;
+y19=y9;y18=y8;y17=y7;
+x11=x1+tdec;x13=x3+tdec;
+y11=y1;y13=y3;
+x5=x4=x6; lft x5r=hround(.5w-.5tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(13,12,11); bulb(17,18,19);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted z0;
+filldraw bas shifted z0;
+pickup rule.nib; autorounded;
+z50=z5+.5z0; % au milieu
+x51=x54=x50-.55tdec-.35(w-tdec);
+x52=x53=x50+.55tdec+.35(w-tdec);
+y51=y52=y50+.35(w-tdec);
+y53=y54=y50-.35(w-tdec);
+draw z51--z52--z53--z54--cycle;
+penlabels(51,52,53,54);
+penlabels(range 1 thru 19); endchar;
+
+cmchar "\textstyle contour dot up integral sign";
+beginchar(26,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+cullit;
+pickup rule.nib; autorounded;
+unfill fullcircle scaled .7w shifted z5;  % hole
+cullit;
+draw fullcircle scaled .7w shifted z5;  % contour
+fill fullcircle scaled(1.3dot_size+eps) shifted z5;  % dot
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle right contour dot up integral sign";
+beginchar(28,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-.2ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+x61=x63=x5; y61=y62=y5-.45w; y63=y64=y5+.45w;
+x62=x64=1.3w;
+x0=w-.3w;y0=y5;
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+fill z61--z62--z64--z63--cycle;
+cullit;
+picture tempp;
+tempp = currentpicture;
+currentpicture:=nullpicture;
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+cullit;
+pickup rule.nib; autorounded;
+cull tempp keeping (1,infinity) withweight 3;
+addto tempp doublepath fullcircle scaled .7w shifted z0 withpen currentpen;  % contour
+cull tempp dropping (-infinity,3);
+unfill fullcircle scaled .7w shifted z0;  % hole
+cullit;
+fill fullcircle scaled(1.3dot_size+eps) shifted z0;  % dot
+currentpicture:=currentpicture+tempp;
+penlabels(range 0 thru 9); endchar;
+
+cmchar "\textstyle half contour dot up integral sign";
+beginchar(30,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+x61=x63=x5; y61=y62=y5-.45w; y63=y64=y5+.45w;
+x62=x64=w;
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+fill z61--z62--z64--z63--cycle;
+cullit;
+picture tempp;
+tempp = currentpicture;
+currentpicture:=nullpicture;
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+cullit;
+pickup rule.nib; autorounded;
+cull tempp keeping (1,infinity) withweight 3;
+addto tempp doublepath fullcircle scaled .7w shifted z5 withpen currentpen;  % contour
+cull tempp dropping (-infinity,3);
+unfill fullcircle scaled .7w shifted z5;  % hole
+cullit;
+fill fullcircle scaled(1.3dot_size+eps) shifted z5;  % dot
+currentpicture:=currentpicture+tempp;
+penlabels(range 0 thru 9); endchar;
+
+cmchar "\textstyle half square dot up integral sign";
+beginchar(32,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-.5ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+x61=x63=x5; y61=y62=y5-.5w; y63=y64=y5+.5w;
+x62=x64=w;
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+fill z61--z62--z64--z63--cycle;
+cullit;
+picture tempp;
+tempp = currentpicture;
+currentpicture:=nullpicture;
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+cullit;
+pickup rule.nib; autorounded;
+x51=x52=x5+.35w;
+x53=x54=x5-.35w;
+y51=y54=y5+.35w;
+y52=y53=y5-.35w;
+cull tempp keeping (1,infinity) withweight 3;
+addto tempp doublepath z51--z52--z53--z54--cycle withpen currentpen;  % square
+cull tempp dropping (-infinity,3);
+unfill z51--z52--z53--z54--cycle;  % hole
+cullit;
+fill fullcircle scaled(1.3dot_size+eps) shifted z5;  % dot
+currentpicture:=currentpicture+tempp;
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle circulation up integral sign";
+beginchar(34,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw halfcircle scaled .7w rotated 30 shifted z5;  % contour
+draw halfcircle scaled .7w rotated 120 shifted z5;  % contour
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle right arrow down half contour up integral sign";
+beginchar(36,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+x99=x5; y99=y5-.1w;
+pickup rule.nib; autorounded;
+draw halfcircle scaled .7w shifted z99;  % contour
+x0=.345w;y0=-.05w;
+z51=z99+z0;
+pos51(1.35rule_thickness,-90);pos52(1.2vair,135);pos53(1.2vair,45);
+y52=y53=y51+.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle right arrow up half contour up integral sign";
+beginchar(38,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+x99=x5; y99=y5+.1w;
+pickup rule.nib; autorounded;
+draw halfcircle scaled .7w rotated 180 shifted z99;  % contour
+pos51(1.35rule_thickness,90);pos52(1.2vair,135);pos53(1.2vair,45);
+x0=.345w;y0=.05w;
+z51=z99+z0;
+y52=y53=y51-.165w;
+x52=x51-.16w;
+x53=x51+.16w;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+penlabels(51,52,53);
+penlabels(range 1 thru 9); endchar;
+
+cmchar "\textstyle functional up integral sign";
+beginchar(40,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+y10=y5;
+x10=x9l;x5=.5[x10,x11];
+y11-y10=.102(y3-y7);
+draw z10..z11;
+penlabels(range 1 thru 11); endchar;
+
+cmchar "\textstyle bar up integral sign";
+beginchar(42,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+y10=y11=y5;
+x10=x9l;x5=.5[x10,x11];
+draw z10..z11;
+penlabels(range 1 thru 11); endchar;
+
+cmchar "\textstyle double bar up integral sign";
+beginchar(44,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+y10=y11=y5+u;
+y12=y13=y5-u;
+x10=x12=x9l;x5=.5[x10,x11]; x13=x11;
+draw z10..z11;
+draw z12..z13;
+penlabels(range 1 thru 13); endchar;
+
+cmchar "\textstyle x up integral sign";
+beginchar(46,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+x10=x12=x9l;x5=.5[x10,x11]; x13=x11;
+y10-y5=y5-y12;
+y12-y10=x11-x10;
+y10=y11;
+y12=y13;
+draw z10..z13;
+draw z12..z11;
+penlabels(range 1 thru 13); endchar;
+
+cmchar "\textstyle landup up integral sign";
+beginchar(48,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw halfcircle scaled .5w shifted z5;  % contour
+y10=y11=y12=y13=y5;
+x11+.25w=x12-.25w=x5;
+x10+1.5u=x11;
+x13-1.5u=x12;
+draw z10--z11;
+draw z12--z13;
+penlabels(range 1 thru 13); endchar;
+
+cmchar "\textstyle landdown up integral sign";
+beginchar(50,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib; autorounded;
+draw halfcircle scaled .5w rotated 180 shifted z5;  % contour
+y10=y11=y12=y13=y5;
+x11+.25w=x12-.25w=x5;
+x10+1.5u=x11;
+x13-1.5u=x12;
+draw z10--z11;
+draw z12--z13;
+penlabels(range 1 thru 13); endchar;
+
+cmchar "\textstyle larhk up integral sign";
+beginchar(52,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-.6ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+x51=0; y51=y5;
+pos51(1.35rule_thickness,0);pos52(1.2vair,45);pos53(1.2vair,135);
+y52=y51+.165w;
+y53=y51-.165w;
+x52=x51+.16w;
+x53=x51+.16w;
+x54=w-2u; y54=y5;
+x55=w-u; y55=y5-u;
+x56=x54; y56=y55-u;
+pickup fine.nib;
+filldraw z52l--z51l--z51r--z52r--cycle;
+filldraw z53r--z51r--z51l--z53l--cycle;
+pickup rule.nib; autorounded;
+draw z51--z54{right}..{down}z55{down}..{left}z56;
+penlabels(range 1 thru 56); endchar;
+
+cmchar "\textstyle up up integral sign";
+beginchar(54,10u#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+y10=y11=y3+u;
+x10=x8; x11=x2;
+draw z10..z11;
+penlabels(range 1 thru 11); endchar;
+
+cmchar "\textstyle down up integral sign";
+beginchar(56,10u#,0,100/54dh#);
+italcorr 0; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+rt x1r=hround(w-u); x9=w-x1; x7=w-x3=3u;
+x5=x4=x6; lft x5r=hround(.5w-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+filldraw stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+filldraw stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+pickup rule.nib;
+y10=y11=y7-u;
+x10=x8; x11=x2;
+draw z10..z11;
+penlabels(range 1 thru 11); endchar;
+
+cmchar "\textstyle dots up integral sign";
+beginchar(58,10u#+3tdec#,0,100/54dh#);
+italcorr 2u#; % \TeX\ kerning between upper limit and lower limit
+adjust_fit(0,-ic#); pickup fine.nib;
+path haut;
+path bas;
+path rond;
+x0=tdec;y0=0;
+pos1(curve,0); pos2(hair,0); pos3(vair,90); pos4(curve,180);
+pos31(curve,0); pos32(hair,0); pos33(vair,90);
+pos5(curve,180); pos5'(curve,0); z5'=z5; pos6(curve,0);
+pos7(vair,-90); pos8(hair,-180); pos9(curve,-180);
+pos37(vair,-90); pos38(hair,-180); pos39(curve,-180);
+rt x1r=hround(w-3tdec-u); x9=w-3tdec-x1; x7=w-3tdec-x3=3u;
+x39=x9+3tdec;x37=x7+3tdec;
+y39=y9;y38=y8;y37=y7;
+x31=x1+3tdec;x33=x3+3tdec;
+y31=y1;y33=y3;
+x5=x4=x6; lft x5r=hround(.5w-1.5tdec-.5curve);
+top y3r=0; bot y7r=-d; y9-.5curve=vround(top y7l+.25curve);
+y3-y1=y9-y7; y5=.5[y3,y7]=.5[y4,y6]; y4-y6=.6(y3-y7);
+bulb(3,2,1); bulb(7,8,9);  % bulbs
+bulb(33,32,31); bulb(37,38,39);
+haut:=stroke z3e{left}...z4e{(z5e-z4e)xscaled 1.1}
+ ..tension atleast 1 and atleast .8..{z5-z4}z5e;  % upper curve
+bas:=stroke z5'e{z6-z5}..tension atleast.8 and atleast 1
+ ..{(z6e-z5'e)xscaled 1.1}z6e...{left}z7e;  % lower curve
+filldraw haut;
+filldraw bas;
+filldraw haut shifted 3z0;
+filldraw bas shifted 3z0;
+pickup fine.nib;
+numeric dot_diam#; dot_diam#=dot_size#;
+define_whole_blacker_pixels(dot_diam);
+pos51(dot_diam,0);pos52(dot_diam,90);
+lft x51l=hround(.5w-.5dot_diam);
+y52=y5;
+z51=z52;
+rond:=z51l..z52l..z51r..z52r..cycle;
+filldraw rond shifted -.75z0;
+filldraw rond;
+filldraw rond shifted .75z0;
+penlabels(range 1 thru 39); endchar;
+

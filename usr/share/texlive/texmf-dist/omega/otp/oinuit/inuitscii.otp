@@ -1,0 +1,71 @@
+%%
+%% This is file `inuitscii.otp',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% oinuit.dtx  (with options: `inuitscii')
+%% 
+%%  (c) copyright 2002 Apostolos Syropoulos
+%%  This program can be redistributed and/or modified under the terms
+%%  of the LaTeX Project Public License Distributed from CTAN
+%%  archives in directory macros/latex/base/lppl.txt; either
+%%  version 1 of the License, or any later version.
+%%  use or alter this file in any way.
+%% 
+%%  Please report errors or suggestions for improvement to
+%% 
+%%     Apostolos Syropoulos
+%%     366, 28th October Str.
+%%     GR-671 00 Xanthi, GREECE
+%%     apostolo@ocean1.ee.duth.gr or apostolo@obelix.ee.duth.gr
+%% 
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%% Omega translation process inuitscii
+%% 2002/07/21 v1.0 Inuit ASCII to Unicode.
+input:  1;
+output: 2;
+tables:
+tabInuitSCII[@"81] = {
+@"1403, @"1404, @"1405, @"1406, @"140A, @"2026, @"140B, @"1431,
+@"1432, @"1433, @"1434, @"1438, @"1439, @"1449, @"144E, @"144F,
+@"1450, @"2018, @"2019, @"201C, @"201D, @"2022, @"2013, @"2014,
+@"1451, @"2122, @"1455, @"1456, @"1466, @"146D, @"146E, @"146F,
+@"00A0, @"1470, @"1472, @"1473, @"1483, @"148B, @"148C, @"148D,
+@"148E, @"00A9, @"1490, @"1491, @"14A1, @"14A5, @"00AE, @"14A6,
+@"FFFD, @"14A7, @"14A8, @"14AA, @"14AB, @"14BB, @"FFFD, @"14C2,
+@"14C3, @"14C4, @"14C5, @"14C7, @"14C8, @"14D0, @"14EF, @"14F0,
+@"14F1, @"14F2, @"14F4, @"14F5, @"1505, @"14D5, @"14D6, @"14D7,
+@"14D8, @"14DA, @"14DB, @"14EA, @"1528, @"1529, @"152A, @"152B,
+@"152D, @"152E, @"143E, @"1555, @"1556, @"1557, @"1558, @"1559,
+@"155A, @"155D, @"1546, @"1547, @"1548, @"1549, @"154B, @"154C,
+@"1550, @"157F, @"1580, @"1581, @"1582, @"1583, @"1584, @"1585,
+@"158F, @"1590, @"1591, @"1592, @"1593, @"1594, @"1595, @"1671,
+@"1672, @"1673, @"1674, @"1675, @"1676, @"1596, @"15A0, @"15A1,
+@"15A2, @"15A3, @"15A4, @"15A5, @"15A6, @"157C, @"FFFD, @"FFFD};
+expressions:
+`f' `f'     => @"FB00;
+`f' `i'     => @"FB01;
+`f' `l'     => @"FB02;
+`f' `f' `i' => @"FB03;
+`f' `f' `l' => @"FB04;
+@"00-@"7F       => \1;
+@"80-@"FF       => #(tabInuitSCII[\1-@"80]);
+.               => @"FFFD;
+%% 
+%%
+%% End of file `inuitscii.otp'.

@@ -1,0 +1,36 @@
+% +AMDG  This document was begun on 13 February 11EE,
+% Quinquegesima Sunday, and it is humbly dedicated to Our
+% Sorrowful Lord Jesus, for His mercy.
+
+beginchar("$",0.5em#+2ss#,ex#,0); "The dollar sign, $";
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (w-ss,3h/4);
+z3 = (w-ss,h/4);
+z4 = (ss,3h/4);
+z5 = (ss,h/4);
+z6 = z4 shifted (curvl,0);
+z7 = z3 shifted (-curvl,0);
+z8 = z0 shifted (0,-thinl);
+z9 = z1 shifted (0,thinl);
+
+urtbulb(2,10,11,12,13);
+ulftbulb(5,14,15,16,17);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{down}z7{down}..{left}z9{left}..{dir
+120}z16{right}..{up}z15{up}..{left}z14{left}..{down}z5{down}..{right}z1{right}..{up}z3{up}..{up}z6{up}..{right}z8{right}..{dir
+-60}z12{left}..{down}z11{down}..{right}z10{right}..{up}cycle;
+
+pickup pencircle scaled 1.2thinl;
+
+z20 = (w/2-1.5thickl/4,h+o);
+z21 = (w/2-1.5thickl/4,-o);
+z22 = (w/2+1.5thickl/4,h+o);
+z23 = (w/2+1.5thickl/4,-o);
+
+draw z20--z21; draw z22--z23;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;

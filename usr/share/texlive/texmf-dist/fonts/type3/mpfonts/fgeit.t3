@@ -1,0 +1,76 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 17 /ch17 put
+Encoding 70 /ch70 put
+Encoding 102 /ch102 put
+Encoding 112 /ch112 put
+/CharProcs 5 dict def
+CharProcs /.notdef { } put
+CharProcs /ch17 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0.4 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 2 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch70 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0.4 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 2 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch102 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0.4 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 2 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch112 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0.4 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 2 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/fgeit exch definefont pop

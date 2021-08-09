@@ -1,0 +1,78 @@
+% @@psencodingfile@{
+%   author = "A. Aubord, A. Tsolomitis",
+%   version = "1.0",
+%   date = "December 2017",
+%   filename = "didotOT1.enc",
+%   email = "atsol@aegean.gr",
+%   docstring = "Encoding for to use the GFS Didot fonts
+%                with the OT1 encoding for (bold-)italic of TeX"
+% @}
+% 
+/didotOT1it [
+% 0x00 
+  /Gamma /Delta /Theta /Lambda
+  /Xi /Pi /Sigma /Upsilon
+  /Phi /Psi /Omega
+  /ff /fi /fl 
+  /ffi /ffl 
+% 0x10
+ /dotlessi /dotlessj 
+ /grave /acute /caron /breve 
+ /Macronsmall /ring /Cedilla /germandbls
+ /ae /oe /oslash /AE
+ /OE /Oslash 
+% 0x20 (ASCII begins)
+ /space /exclam /quotedblright /numbersign
+ /sterling /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+% 0x30
+ /zero /one /two /three /four /five /six /seven
+ /eight /nine /colon /semicolon /exclamdown /equalorig /questiondown /question
+% 0x40
+ /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
+% 0x50
+ /P /Q /R /S /T /U /V /W
+ /X /Y /Z /bracketleft /quotedblleft /bracketright /Circumflexsmall /dotaccent
+% 0x60
+ /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
+% 0x70
+ /p /q /r /s /t /u /v /w
+ /x /y /z /endash /emdash /hungarumlaut /Tildesmall
+ /dieresis % rubout; ASCII ends
+%80
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+] def
+% LIGKERN f j =: fj ; f f =: ff ; f i =: fi ; f l =: fl ; 
+% LIGKERN f fi =: ffi ; ff i =: ffi ; f fl =: ffl ; ff l =: ffl ;
+% LIGKERN fi j =: fij ; i j =: ij ;
+% LIGKERN hyphen hyphen =: endash ; endash hyphen =: emdash ;
+% LIGKERN f b =: fb ; ff b =: ffb ; f h =: fh ; ff h =: ffh ; 
+% LIGKERN f k =: fk ; ff k =: ffk ; f t =: ft ; ff t =: fft ;
+% LIGKERN Q u =: Qu ; T h =: Th ; c h =: ch ; c k =: ck ;
+% LIGKERN I J =: IJ ;
+% LIGKERN t t =: tt ; t z =: tz ;
+
+%% LIGKERN Q u =: Qu ; T h =: Th ; c h =: ch ; c k =: ck ; c t =: ct ;
+%% LIGKERN s p =: sp ; s t =: uniFB06 ; t t =: tt ; t z =: tz ;
+
+
+
+
+
+
+

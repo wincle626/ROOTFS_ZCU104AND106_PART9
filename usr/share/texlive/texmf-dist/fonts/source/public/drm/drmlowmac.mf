@@ -1,0 +1,140 @@
+% +AMDG  This document was begun on 18 May 11EX, the feast
+% of St Bernardine of Siena, and it is humbly dedicated to
+% him and to the Immaculate Heart of Mary for their prayers,
+% and to the Sacred Heart of Jesus for His mercy.
+
+lserhl := 5lserh/6;
+lserwl := 5lserw/6;
+userhl := 5userh/6;
+userwl := 5userw/6;
+lsercl := 5lserc/6;
+usercl := 5userc/6;
+lserstepl := 5lserstep/6;
+userstepl := 5userstep/6;
+curvl := curvwid;
+slantl := slantwid;
+thickl := thickstroke;
+thinl := thinstroke;
+dotwid := 0.7dotwidth;
+
+picture lowz;
+picture lowy;
+picture lows;
+picture lowt;
+picture lowr;
+picture lowg;
+picture lowo;
+picture lowe;
+picture lowa;
+picture lowu;
+picture lowc;
+picture lowd;
+picture lowl;
+picture lown;
+picture dotlessi;
+picture dotlessj;
+picture filig;
+picture flig;
+picture fllig;
+
+%%%% the back serif for the "s" %%%%
+
+def sctbackserif(suffix i,j,k,l,m,n)(expr topbot) =
+z.j=z.i+(0,userhl/2);
+z.k=z.j-(userhl,0);
+z.l=z.k+(0,-1.5userwl);
+z.m=z.l+(userhl,0);
+if topbot = 1:
+path toplftserif; toplftserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+elseif topbot = 2:
+path botlftserif; botlftserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+fi;
+enddef;
+
+%%%% Define Lower Right Serif on Caps %%%%
+
+def lrserif(suffix i,j,k,l,m)(expr strokewidth) = 
+if strokewidth = 1:
+z.j=z.i+(lserwl/3,-lsercl/2);
+z.k=z.i+(lserwl,-lsercl);
+z.l=z.k-(0,lserstepl);
+z.m=z.l-(lserwl+thickl/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(lserwl/3,-lsercl/2);
+z.k=z.i+(lserwl+equalize/2,-lsercl);
+z.l=z.k-(0,lserstepl);
+z.m=z.l-(lserwl+thickl/2,0);
+fi
+enddef;
+
+%%%% Define Lower Left Serif on Caps %%%%
+
+def llserif(suffix i,j,k,l,m)(expr strokewidth) =
+if strokewidth = 1:
+z.j=z.i-(lserwl/3,lsercl/2);
+z.k=z.i-(lserwl,lsercl);
+z.l=z.k-(0,lserstepl);
+z.m=z.l+(lserwl+thickl/2,0);
+elseif strokewidth = 2:
+z.j=z.i-(lserwl/3,lsercl/2);
+z.k=z.i-(lserwl+equalize/2,lsercl);
+z.l=z.k-(0,lserstepl);
+z.m=z.l+(lserwl+thickl/2,0);
+fi
+enddef;
+
+%%%% Define Upper Right Serif on Caps %%%%
+
+def urserif(suffix i,j,k,l,m)(expr strokewidth) =
+if strokewidth = 1:
+z.j=z.i+(userwl/3,lsercl/2);
+z.k=z.i+(userwl,usercl);
+z.l=z.k+(0,userstepl);
+z.m=z.l-(userwl+thickl/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(userwl/3,lsercl/2);
+z.k=z.i+(userwl+equalize/2,usercl);
+z.l=z.k+(0,userstepl);
+z.m=z.l-(userwl+thickl/2,0);
+fi
+enddef;
+
+%%%% Define Upper Left Serif on Caps %%%%
+
+def ulserif(suffix i,j,k,l,m)(expr strokewidth) = 
+if strokewidth = 1:
+z.j=z.i+(-userwl/3,lsercl/2);
+z.k=z.i+(-userwl,usercl);
+z.l=z.k+(0,userstepl);
+z.m=z.l+(userwl+thickstroke/2,0);
+elseif strokewidth = 2:
+z.j=z.i+(-userwl/3,lsercl/2);
+z.k=z.i+(-(userwl+equalize/2),usercl);
+z.l=z.k+(0,userstep);
+z.m=z.l+(userwl+thickstroke/2,0);
+fi
+enddef;
+
+def rbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (bulbsh,-bulbsh);
+z.k=z.j shifted (-bulbsh,-bulbsh);
+z.l=z.k shifted (-bulbsh,bulbsh);
+enddef;
+
+def drtbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (bulbsh,-bulbsh);
+z.k=z.j shifted (bulbsh,bulbsh);
+z.l=z.k shifted (-bulbsh,bulbsh);
+enddef;
+
+def urtbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (-bulbsh,-bulbsh);
+z.k=z.j shifted (-bulbsh,bulbsh);
+z.l=z.k shifted (bulbsh,bulbsh);
+enddef;
+
+def dlftbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (bulbsh,-bulbsh);
+z.k=z.j shifted (bulbsh,bulbsh);
+z.l=z.k shifted (-bulbsh,bulbsh);
+enddef;

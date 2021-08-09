@@ -1,0 +1,24 @@
+% Date: 2019/04/05
+
+mode_setup;
+
+boolean gridfont; gridfont := true;
+fonttype = counttype; % Count stitches only -- don't draw anything
+
+def incrwidth (expr stsin, stsout) = stsin*wd# enddef;
+def decrwidth (expr stsin, stsout) = stsin*wd# enddef;
+boolean incrwidthdefined; incrwidthdefined = true;
+
+input knit_dimens;
+
+if known ps_output:
+	font_identifier := "KnittingSymbols-grid-incount";
+fi
+
+string Vtitle; Vtitle := "Knit grid font for checking stitch counts";
+
+input knit_symbols;
+
+input knit_grid_cables;
+
+end

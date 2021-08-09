@@ -1,0 +1,42 @@
+%
+% Copyright (C) 2019 Javier Bezos http://www.texnia.com
+%
+% 2019/10/07 v0.2
+%
+% This file may be distributed and/or modified under the conditions of
+% the MIT License. A version can be found at the end of this file.
+%
+% Repository: https://github.com/jbezos/gindex
+%
+% Required by gindex
+% ------------------
+
+item_0          "}\n\\addindexitem{"
+item_1          "}\n  \\addindexsubitem{"
+item_01         "}\n  \\addindexsubitem{"
+item_x1         "}{}\n  \\addindexsubitem{"
+item_2          "}\n    \\addindexsubsubitem{"
+item_12         "}\n    \\addindexsubsubitem{"
+item_x2         "}{}\n    \\addindexsubsubitem{"
+delim_0         "}{"
+delim_1         "}{"
+delim_2         "}{"
+group_skip      "}\n%\n\\addindexskip{"
+heading_prefix  "}\n%\n\\addindexheading{"
+heading_suffix  "}\n%\n{"
+preamble        "\\begin{theindex}\\indexpreamble\n\n{"
+postamble       "}\n\\indexflushitem\\indexpostamble\\end{theindex}"
+indent_space    ""
+indent_length   0
+delim_n         "\\indexpagessep "
+delim_r         "\\indexrangesep "
+
+% Modify to fit your own requirements
+% -----------------------------------
+
+headings_flag   -1       % Usually redefining \indexheading is better
+actual          '@'
+quote           '"'
+level           '!'
+page_precedence "rRnaA"
+keyword         "\\indexentry"

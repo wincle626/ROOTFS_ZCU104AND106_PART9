@@ -1,0 +1,94 @@
+% $Id: config.ps 41704 2016-07-14 22:33:33Z karl $
+% config.ps - configuration file for dvips.
+% Tomas Rokicki, Thomas Esser, Karl Berry, et al., 1986ff, public domain.
+
+% Memory available. Download the three-line PostScript file:
+%   %! Hey, we're PostScript
+%   /Times-Roman findfont 30 scalefont setfont 144 432 moveto
+%   vmstatus exch sub 40 string cvs show pop showpage
+% to determine this number. (It will be the only thing printed.)
+m 3500000
+
+% Run securely.  z2 disables both shell command execution in
+% `\special' and config files (via the `E' option) and opening of any
+% absolute filenames.  z1, the default, forbids shell escapes but
+% allows absolute filenames.  z0 allows both.  The corresponding
+% command line options are -R0|-R1|-R2
+z1
+
+% How to print, maybe with lp instead lpr, etc. If commented-out, output
+% will go into a file by default.
+%o |lpr
+
+% Default resolution of this device, in dots per inch.
+D 600
+X 600
+Y 600
+
+% Metafont mode.  (This is completely different from the -M
+% command-line option, which controls whether mktexpk is invoked.)
+% See ../../metafont/misc/modes.mf for a list of mode names.  This mode
+% and the D number above must agree, or mktexpk will get confused.
+M ljfour
+
+% Last resort bitmap sizes.
+R 300 600
+
+% Correct printer offset. You can use testpage.tex from the LaTeX
+% distribution to find these numbers.
+O 0pt,0pt
+
+% Bitmap font compression. Results in more compact output files, but
+% sometimes causes trouble. So the default is disabled. Set Z1 to enable
+% this feature.
+Z0
+
+% Partially download Type 1 fonts by default.  Only reason not to do
+% this is if you encounter bugs.  (Please report them to
+% @email{tex-k@tug.org} if you do.)
+j
+
+% This shows how to add your own map file.
+% Remove the comment and adjust the name:
+% p +myfonts.map
+
+% In the past, the a4size and letterSize definitions did not set the
+% paper size, but we want to set it if we can so that ps2pdf can work
+% properly.  So, a4 and a4size, and letter and letterSize, are made
+% identical here, and we prefer the a4/letter names -- texconfig uses them.
+%
+% In the definitions below, if we have setpagedevice, use that.
+% Else if we have the a4 resp. letter operator, use that.
+% Else do nothing to set the page size.
+% 
+% If you need to have no paper size stuff in the output at all, e.g., if
+% you are producing a multi-page document for further processing, use
+% -tnopaper (defined at end).  (With a single-page document, you can use -E.)
+%
+% emacs-page
+
+%
+% include the configuration for paper sizes
+%
+% WARNING FOR SYSTEM ADMINISTRATORS
+% If you make a copy and drop this line, you have to include 
+% paper sizes manually!
+cconfig-paper.ps
+
+% use -t unknown with a \special{papersize=...} for a nonstandard page size.
+@ unknown 0in 0in
+@+ % dvips-unknown
+@+ statusdict /setpageparams known { hsize vsize 0 1 statusdict begin {
+@+ setpageparams } stopped end } { true } ifelse { statusdict /setpage known
+@+ { hsize vsize 1 statusdict begin { setpage } stopped pop end } if } if
+
+% use -t nopaper to get no paper size stuff in the output at all.
+% This should remain as the last thing in the file, because the first
+% 0in 0in entry is chosen when there is nothing better; ordinarily, we
+% want to that to be "unknown", so that the correct nonstandard paper
+% size is output, instead of just being omitted.
+% http://groups.google.com/group/fr.comp.text.tex/browse_thread/thread/1b08961cf9b8a5ab/6b1d0b32443905e3
+% and mactex mailing list thread from 24 Sep 2009 11:36:26.
+@ nopaper 0in 0in
+@+ % dvips-nopaper
+

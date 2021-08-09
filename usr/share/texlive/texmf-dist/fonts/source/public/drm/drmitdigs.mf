@@ -1,0 +1,283 @@
+% +AMDG  This document was begun on 9 June 11EX, the
+% commemoration of Ss. Primus and Felicianus, M, and it is
+% humbly dedicated to them and to the Immaculate Heart of
+% Mary for their prayers, and to the Sacred Heart of Jesus
+% for His mercy.
+
+
+beginchar("1",digwid#+2ss#,cap#,0); "The digit 1";
+italcorr(ex#*slant);
+
+pickup pencircle scaled thinl;
+penpos0(thickl,0);
+z0 = (w/2,h);
+penpos1(thinl,-90);
+z1 = (w/2-2curlw,h-2curlh);
+penpos2(thickl,0);
+z2 = (w/2,0);
+
+penstroke z1e{right}..{up}z0e;
+penstroke z0e--z2e;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("2",digwid#+2ss#,cap#,0); "The digit 2";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0 = (w/2,5h/6);
+penpos1(thinl,0);
+z1 = (3w/5,3h/4);
+penpos2(thinl,-90);
+z2 = (w/2,3h/5);
+penpos3(thinl,180);
+z3 = (2w/5,(y0l+y2l)/2);
+penpos4(thickl,180);
+z4r = (ss,3h/4);
+penpos5(thinl,90);
+z5r = (w/2,h+o);
+penpos6(thickl,0);
+z6r = (w-ss,y4);
+penpos8(0.7thickl,-45);
+z8 = (w/2,2h/5);
+penpos7(thinl,-90);
+z7r = (ss,0-o);
+penpos9(1.75thinl,-90);
+z9r = (w/3,y7l);
+penpos10(2thinl,-90);
+z10r = (2w/3,0-o);
+penpos11(thickl,-90);
+z11r = (w-ss,y10);
+
+penstroke z3e..z0e..z1e..z2e..z4e..z5e..z6e..z8e..z7e;
+penstroke z7e..z9e..z10e..z11e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("3",digwid#+2ss#,cap#,0); "The digit 3";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0l = (ss,3h/4);
+penpos1(thinl,-90);
+z1l = (w/2,h+o);
+penpos2(thickl,180);
+z2l = (w-ss,3h/4);
+penpos3(thinl,90);
+z3 = (w/2,h/2);
+penpos4(thickl,0);
+z4r = (w-ss,h/4);
+penpos5(thinl,-90);
+z5r = (w/2,0-o);
+penpos6(thickl,180);
+z6r = (ss,h/4);
+penpos7(1.5thinl,90);
+z7 = z0 shifted (curlw,-curlh);
+penpos8(thinl,180);
+z8 = z7 shifted (curlw,curlh);
+penpos9(thinl,-90);
+z9 = z8 shifted (-curlw/2,curlh/2);
+penpos10(1.5thinl,90);
+z10 = z6 shifted (curlw,curlh);
+penpos11(thinl,0);
+z11 = z10 shifted (curlw,-curlh);
+penpos12(thinl,-90);
+z12 = z11 shifted (-curlw/2,-curlh/2);
+
+penstroke z9e..z8e..z7e..z0e{up}..z1e..z2e..z3e;
+penstroke z3e..z4e..z5e..{up}z6e..z10e..z11e..z12e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("4",digwid#+2ss#,cap#,0); "The digit 4";
+italcorr(ex#*slant);
+
+penpos0(thickl,0);
+z0r = (5w/6,h+o);
+penpos1(thickl,0);
+z1r = (5w/6,0);
+penpos2(thickl,0);
+z2r = (0.6w,h+o);
+penpos3(thickl,0);
+z3l = (ss,h/3);
+penpos4(thinl,-45);
+z4l = z3l;
+penpos5(thinl,-45);
+z5 = (w-ss,y4);
+penpos6(thickl,0);
+z6 = 0.25[z3,z2];
+z8 = (x1,y3);
+penpos7(thickl,0);
+z7 = 0.15[z8,z0];
+penpos9(0.75thickl,0);
+z9 = 0.65[z3,z2];
+penpos10(0.75thickl,0);
+z10 = 0.5[z8,z0];
+penpos11(0.5thickl,0);
+z11 = 0.9[z3,z2];
+penpos12(0.5thickl,0);
+z12 = 0.8[z8,z0];
+penpos13(thinl,0);
+z13 = z2;
+penpos14(thinl,0);
+z14 = z0;
+
+penstroke z3e--z6e--z9e--z11e--z13e;
+penstroke z1e--z7e--z10e--z12e--z14e;
+penstroke z4e--z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("5",digwid#+2ss#,cap#,0); "The digit 5";
+italcorr(ex#*slant);
+
+penpos0(thickl,90);
+z0r = (w-ss-thickl/2,h+o);
+penpos1(thickl,90);
+z1r = (ss+thickl/2,h+o);
+penpos2(thickl,90);
+z2 = (ss+thickl/3,h/2);
+penpos3(thickl,0);
+z3r = (w-ss,h/3);
+penpos4(thinl,-90);
+z4r = (w/2,0-o);
+penpos5(thickl,180);
+z5r = (ss,h/5);
+penpos6(thinl,0);
+z6l = z1l;
+penpos7(thinl,0);
+z7l = z2r;
+penpos8(1.5thinl,90);
+z8 = z5 shifted (curlw,curlh);
+penpos9(thinl,0);
+z9 = z8 shifted (curlw,-curlh);
+
+penstroke z0e--z1e--z2e;
+penstroke z6e--z7e;
+penstroke z2e..z3e..z4e..z5e..z8e..z9e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("6",digwid#+2ss#,cap#,0); "The digit 6";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0r = (2w/3,h+o);
+penpos1(2thinl,180);
+z1r = (ss+thinl,2h/3);
+penpos2(thickl,180);
+z2r = (ss,ex/2);
+penpos3(thinl,-90);
+z3r = (w/2,0-o);
+penpos4(thickl,0);
+z4r = (w-ss,ex/2);
+penpos5(thinl,90);
+z5r = (w/2,ex+o);
+penpos6(thinl,0);
+z6l = z0l;
+penpos7(thinl,-90);
+z7l = z6l;
+penpos8(thinl,180);
+z8l = z7l;
+
+penstroke z5e..z2e..z3e..z4e..cycle;
+penstroke z0e..z1e..z2e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("9",digwid#+2ss#,cap#,0); "The digit 9";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0l = (w/3,0-o);
+penpos1(2thinl,180);
+z1l = (w-ss-thinl,h/3);
+penpos2(thickl,180);
+z2l = (w-ss,h-ex/2);
+penpos3(thinl,90);
+z3l = (w/2,h-ex-o);
+penpos4(thickl,0);
+z4l = (ss,h-ex/2);
+penpos5(thinl,-90);
+z5l = (w/2,h+o);
+
+penstroke z5e..z2e..z3e..z4e..cycle;
+penstroke z0e..z1e..z2e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("7",digwid#+2ss#,cap#,0); "The digit 7";
+italcorr(ex#*slant);
+
+penpos0(thickl,90);
+z0r = (ss,h+o);
+penpos1(thickl,90);
+z1r = (w-ss,h+o);
+penpos2(1.5thinl,180);
+z2 = (w/3,h/2);
+penpos3(thickl,180);
+z3r = (w/3,0);
+penpos4(thinl,45);
+z4 = (ss,h/2);
+penpos5(thinl,45);
+z5 = 2[z4,z2] shifted (thickl,thickl);
+penpos6(thinl,45);
+z6 = z4 shifted (0,thickl);
+
+penstroke z0e--z1e;
+penstroke z1e..z2e..z3e;
+penstroke z6e--z5e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("8",digwid#+2ss#,cap#,0); "The digit 8";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0r = (w/2,h+o);
+penpos1(1.75thinl,0);
+z1r = (w-ss,3h/4);
+penpos2(1.75thinl,0);
+z2l = (ss,h/4);
+penpos3(thickl,180);
+z3r = (ss,3h/4);
+penpos4(thickl,180);
+z4l = (w-ss,h/4);
+penpos5(thinl,90);
+z5l = (w/2,0-o);
+penpos6(thinl,-45);
+z6 = (w/2,h/2);
+penpos7(thickl/2,-135);
+z7 = z6;
+
+penstroke
+z0e{right}..{down}z1e{down}..z6e..{down}z2e{down}..{right}z5e{right}..{up}z4e{up}..z7e..{up}z3e{up}..{right}cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar("0",digwid#+2ss#,cap#,0); "The digit 0";
+italcorr(ex#*slant);
+
+penpos0(thinl,90);
+z0r = (w/2,h+o);
+penpos1(thickl,0);
+z1r = (w-ss,h/2);
+penpos2(thinl,-90);
+z2r = (w/2,0-o);
+penpos3(thickl,180);
+z3r = (ss,h/2);
+
+penstroke z0e..z1e..z2e..z3e..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

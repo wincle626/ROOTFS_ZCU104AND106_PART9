@@ -1,0 +1,203 @@
+% +AMDG  This document was begun on 11 June 11EX, the feast
+% of St. Anthony of Padua, C, and it is humbly dedicated to
+% him and to the Immaculate Heart of Mary for their prayers,
+% and to the Sacred Heart of Jesus for His mercy.
+
+def topbotbars =
+penpos50(thinl,90);
+z50r = (0,h);
+penpos51(thinl,90);
+z51r = (w,h);
+penpos52(thinl,90);
+z52l = (0,0);
+penpos53(thinl,90);
+z53l = (w,0);
+penstroke z50e--z51e; penstroke z52e--z53e;
+enddef;
+
+beginchar(oct"100",thickstroke#+2lserw#+2ss#+2hair#,cap#,0);
+"Roman numeral I";
+
+topbotbars;
+z1 = (ss+hair+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+hair+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+lrserif(2,9,10,11,25)(1);
+llserif(1,12,13,14,26)(1);
+urserif(4,15,16,17,27)(1);
+ulserif(3,18,19,20,28)(1);
+
+path romone; romone = z14--z11--z10..z9..z2--z4..z15..z16--z17--z20--z19..
+	z18..z3--z1..z12..z13--z14--cycle;
+fill romone shifted (-ss/2,0);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"101",5em#/6+2ss#,cap#,0);
+"Roman numeral V";
+
+z1=(ss+userw,h-userh);
+z2=z1+(slantwid,0);
+z3=z1-(0,2h/3);
+z4=z3+(thickstroke,0);
+z5=((5em/6)-ss-userw,h-userh);
+z6=z5-(thinstroke,0);
+z7=z5-(0,2h/3);
+z8=z7-(thinstroke,0);
+z9=((5em/6)/2,0);
+z30=0.25[z9,z5];
+z10=z30 shifted (-0.7thinstroke,1.3thinstroke);
+
+ulserif(1,11,12,13,14)(1);
+urserif(2,15,16,17,18)(1);
+ulserif(6,19,20,21,22)(1);
+urserif(5,23,24,25,26)(1);
+
+path romfive; romfive = z9--z5..z23..z24--z25--z21--z20..z19..z6--z10--z2..z15..z16--z17--z13--z12--z11..z1--z9--cycle;
+
+topbotbars;
+fill romfive shifted (ss/2,0);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"102",5em#/6+2ss#,cap#,0); "Roman numeral X";
+
+z0 = (w/2,h/2);
+z1 = (ss+userw,h-userh);
+z2 = (w-ss-userw,h-userh);
+z3 = (ss+lserw,lserh);
+z4 = (w-ss-lserw,lserh);
+z5 = z1 shifted (slantwid,0);
+z6 = z4 shifted (-slantwid,0);
+z7 = z2 shifted (-thinstroke,0);
+z8 = z3 shifted (thinstroke,0);
+z41 = aa[z1,z6];
+z41 = ab[z7,z3];
+z42 = ac[z5,z4];
+z42 = ad[z7,z3];
+z43 = ae[z8,z2];
+z43 = af[z6,z1];
+z44 = ag[z8,z2];
+z44 = ah[z5,z4];
+
+ulserif(1,9,10,11,12)(1);
+urserif(5,13,14,15,16)(1);
+ulserif(7,17,18,19,20)(1);
+urserif(2,21,22,23,24)(1);
+llserif(3,25,26,27,28)(1);
+lrserif(8,29,30,31,32)(1);
+llserif(6,33,34,35,36)(1);
+lrserif(4,37,38,39,40)(1);
+
+topbotbars;
+fill z1--z41--z3..z25..z26--z27--z31--z30..z29..z8--z43--z6..z33..z34--z35--z39--z38..z37..z4--z44--z2..z21..z22--z23--z19--z18..z17..z7--z42--z5..z13..z14--z15--z11--z10..z9..z1--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"103",5em#/6+2ss#,cap#,0); "Roman numeral L";
+
+z1 = (ss+lserw,lserh);
+z2 = (x1+thickstroke,thinstroke);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+z5=(x4,thinstroke+thinl);
+z6=(w-ss-ssslant,thinl);
+z30=z6+(-thickstroke,thinstroke);
+upsideserif(6,7,29);
+
+llserif(1,12,13,14,26)(1);
+urserif(4,15,16,17,27)(1);
+ulserif(3,18,19,20,28)(1);
+
+fill z5--z4..z16..z16--z17--z20--z19..z18..z3--z1..z12..z13--z14--z6--z7..z29..z30--z5--cycle;
+
+topbotbars;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"104",5em#/6+2ss#,cap#,0); "Roman numeral C";
+
+z1=(w-ss-hair-userh,h-userh);
+z2=z1-(0,thickstroke);
+z3=(w-ss-hair-userh,userh);
+z4=z3+(0,thickstroke+o);
+z5=(w/2,h);
+z6=z5-(0,thinstroke);
+z7=(w/2,0);
+z8=z7+(0,thinstroke);
+z9=(ss,h/2+o);
+z10=z9+(curvwid,0);
+ctsideserif(1,11,12,13,14,2)(1);
+ctsideserif(4,15,16,17,18,3)(2);
+
+pickup cappen;
+path cbody; cbody=z3..{left}z7{left}..{up}z9{up}..{right}z5{right}..z1;
+path cinbody; cinbody=z2..z6..z10..z8..z4;
+
+fill cinbody & botserif & cbody & topserif & cycle;
+
+topbotbars;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"105",em#+2ss#,cap#,0); "Roman numeral D";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thickstroke,0);
+z13 = (x4,h);
+z14 = (x4,h-thinstroke);
+z15 = (w-ss,h/2);
+z16 = z15-(curvwid,0);
+z17 = (x2,0);
+z18 = z17+(0,thinstroke);
+z19 = (w/2,h);
+z20 = z19-(0,thinstroke);
+z21 = (w/2,0);
+z22 = z21+(0,thinstroke);
+llserif(1,5,6,7,8)(1);
+ulserif(3,9,10,11,12)(1);
+
+topbotbars;
+fill z17{right}..{right}z21..z15..{left}z19{left}..{left}z13--z11--z10..z9..z3--z1..z5..z6--z7--z17--cycle;
+unfill z18{right}..{right}z22..z16..{left}z20{left}..{left}z14--z18--cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"106",em#+2ss#,cap#,0); "Roman numeral M";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thinstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = z3 shifted (thinstroke,0);
+z5 = (w/2-thickstroke/3,0);
+z6 = (w-ss-lserw,lserh);
+z7 = z6 shifted (-thickstroke,0);
+z8 = (w-ss-userw,h-userh);
+z9 = z8 shifted (-thickstroke,0);
+z14 = z13 shifted (-2thickstroke/3,0);
+z23 = 0.22[z5,z9];
+z28 = 0.1[z23,z29];
+z29=z27+(2curvwid/3,0);
+
+urserif(8,10,11,12,13)(1);
+lrserif(6,15,16,17,18)(1);
+llserif(7,19,20,21,22)(1);
+ulserif(3,24,25,26,27)(1);
+llserif(1,30,31,32,33)(2);
+lrserif(2,34,35,36,37)(2);
+
+fill z5--z9--z7..z19..z20--z21--z17--z16..z15..z6--z8..z10..z11--z12--z14--z28--z29--z26--z25..z24..z3--z1..z30..z31--z32--z36--z35..z34..z2--z4--z5--cycle;
+
+topbotbars;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;

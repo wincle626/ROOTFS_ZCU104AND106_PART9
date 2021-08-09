@@ -1,0 +1,3555 @@
+% +AMDG  This document was begun on 1E May 11EX, and it is
+% humbly dedicated to the Immaculate Heart of Mary for her
+% prayers, and to the Sacred Heart of Jesus for His mercy.
+
+def ulftbulb(suffix i,j,k,l,m) =
+z.j=z.i shifted (bulbsh,bulbsh);
+z.k=z.j shifted (bulbsh,-bulbsh);
+z.l=z.k shifted (-bulbsh,-bulbsh);
+enddef;
+
+def ctsideserif(suffix i,j,k,l,m,n)(expr topbot) = 
+z.j=z.i+(0,userw/2);
+z.k=z.j+(userh,0);
+z.l=z.k-(0,2userw);
+z.m=z.l-(userh,0);
+if topbot = 1:
+path topserif; topserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+elseif topbot = 2:
+path botserif; botserif = z.i---z.j..tension 2..z.k---z.l..tension 2..z.m---z.n;
+fi;
+enddef;
+
+beginchar(oct"054",pwid#,pwid#,0); "The comma ,";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid/2);
+z5 = z3 shifted (-dotwid/2,-2.5dotwid);
+z6 = z1 shifted (-o,-1.5dotwid);
+
+path commapost;
+commapost = z4..{dir -165}z5{right}..z6..z1..z2..z3..z4--cycle;
+fill commapost;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"212",(3(em#+2ss#)/4),cap#,0); "The dollar sign, $, double lined";
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (w-ss,3h/4);
+z3 = (w-ss,h/4);
+z4 = (ss,3h/4);
+z5 = (ss,h/4);
+z6 = z4 shifted (curvl,0);
+z7 = z3 shifted (-curvl,0);
+z8 = z0 shifted (0,-thinl);
+z9 = z1 shifted (0,thinl);
+
+urtbulb(2,10,11,12,13);
+ulftbulb(5,14,15,16,17);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{down}z7{down}..{left}z9{left}..{dir
+120}z16{right}..{up}z15{up}..{left}z14{left}..{down}z5{down}..{right}z1{right}..{up}z3{up}..{up}z6{up}..{right}z8{right}..{dir
+-60}z12{left}..{down}z11{down}..{right}z10{right}..{up}cycle;
+
+pickup pencircle scaled 1.2thinl;
+
+z20 = (w/2-thinl,h+o);
+z21 = (w/2-thinl,-o);
+z22 = (w/2+thinl,h+o);
+z23 = (w/2+thinl,-o);
+
+draw z20--z21; draw z22--z23;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"044",(3(em#+2ss#)/4),cap#,0); "The dollar sign, $, single-lined";
+
+z0 = (w/2,h+o);
+z1 = (w/2,0-o);
+z2 = (w-ss,3h/4);
+z3 = (w-ss,h/4);
+z4 = (ss,3h/4);
+z5 = (ss,h/4);
+z6 = z4 shifted (curvl,0);
+z7 = z3 shifted (-curvl,0);
+z8 = z0 shifted (0,-thinl);
+z9 = z1 shifted (0,thinl);
+
+urtbulb(2,10,11,12,13);
+ulftbulb(5,14,15,16,17);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{down}z7{down}..{left}z9{left}..{dir
+120}z16{right}..{up}z15{up}..{left}z14{left}..{down}z5{down}..{right}z1{right}..{up}z3{up}..{up}z6{up}..{right}z8{right}..{dir
+-60}z12{left}..{down}z11{down}..{right}z10{right}..{up}cycle;
+
+pickup pencircle scaled 1.2thinl;
+
+z20 = (w/2,h+o);
+z21 = (w/2,-o);
+
+draw z20--z21;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"052",ex#,ex#,0); "Asterisk, *";
+
+z0 = (w/2,h/2);
+z1 = (w/2,o);
+z2 = (w/2,h-o);
+z3 = z1 rotatedaround (z0,60);
+z4 = z3 rotatedaround (z0,60);
+z5 = z4 rotatedaround (z0,120);
+z6 = z5 rotatedaround (z0,60);
+z7 = z6 rotatedaround (z0,60);
+
+pickup pencircle scaled thinl;
+
+draw z2--z1;
+draw z4--z6;
+draw z5--z3;
+
+picture asterisk; asterisk := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"057",ex#/2,cap#,0); "The forward slash, /";
+
+z0 = (o,o);
+z1 = (w-o,h-o);
+
+pickup pencircle scaled thinl;
+
+draw z0--z1;
+
+penlabels(0,1);
+endchar;
+
+beginchar(oct"055",ex#,ex#,0); "The equals sign, =";
+
+pickup pencircle scaled thickl;
+lft z0 = (ss,ex-thinl);
+rt z1 = (w-ss,y0);
+lft z2 = (ss,ex/2);
+rt z3 = (w-ss,y2);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8);
+endchar;
+
+beginchar(".",pwid#,pwid#,0); "The period .";
+
+z0 = (w/2,dotwid);
+z1 = z0 shifted (dotwid,0);
+z2 = z0 shifted (0,dotwid);
+z3 = z0 shifted (-dotwid,0);
+z4 = z0 shifted (0,-dotwid);
+
+path period;
+period = z1..z2..z3..z4..cycle;
+fill period;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"030",2ex#,theight#,0); "left-pointing arrow";
+
+pickup pencircle scaled thickl;
+lft z0 = (ss,h/2);
+rt z1 = (w-ss,h/2);
+top z2 = (x0 + 2thickl,h);
+bot z3 = (x0 + 2thickl,0);
+z4 = (x0 + thickl,3h/4);
+z5 = (x0 + thickl,h/3);
+
+path arrowpoint; path arrowshaft;
+arrowpoint = z2--z0--z3; arrowshaft = z0--z1;
+draw arrowpoint; draw arrowshaft;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"031",2ex#,theight#,0); "right-pointing arrow";
+pickup pencircle scaled thickl;
+draw arrowpoint rotatedaround ((w/2,h/2),180);
+draw arrowshaft rotatedaround ((w/2,h/2),180);
+endchar;
+
+beginchar(oct"040",1.2ex#+2ss#,asch#,0); "The Letter b";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,lserhl);
+z3 = z2 shifted (thickl,0);
+z12 = z1 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z19 = 0.5[z15,z17];
+z20 = (w-ss,(ex+o)/2);
+z21 = (x2,y19);
+z14 = 0.5[z22,z23] shifted (0,ex/2);
+z15 = z14 shifted (0,-thinl);
+z16 = 0.5[z22,z23] shifted (0,-ex/2-o);
+z17 = z16 shifted (0,thinl);
+z22 = z21 shifted (thickl,0);
+z23 = z20 shifted (-curvl,0);
+
+ulserif(0,4,5,6,7)(1);
+llserif(2,8,9,10,11)(1);
+
+fill z0..z4..z5--z6--z12--z13--z10--z9..z8..z2--cycle;
+fill
+z21{up}..{right}z14{right}..{down}z20{down}..{left}z16{left}..{up}z21..cycle;
+unfill
+z22{up}..{right}z15{right}..{down}z23{down}..{left}z17{left}..{up}z22..cycle;
+pickup pencircle scaled thinl;
+lft z30 = (ss,0.6h);
+top z31 = (3w/4,h-o);
+draw z30--z31;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"136",theight#+2ss#,cap#,dep#); "up-pointing arrow";
+pickup pencircle scaled thickl;
+draw arrowpoint rotated -90 shifted (ss,h);
+draw arrowshaft rotated -90 shifted (ss,h);
+endchar;
+
+beginchar(oct"137",theight#+2ss#,cap#,dep#); "down-pointing arrow";
+pickup pencircle scaled thickl;
+draw arrowpoint rotated 90 shifted (w-ss,-dep/2-ss);
+draw arrowshaft rotated 90 shifted (w-ss,-dep/2-ss);
+endchar;
+
+beginchar(oct"130",em#+2ss#,cap#,0); "Crusader cross";
+
+z0 = (w/2-2thickl,h);
+z1 = z0 shifted (4thickl,0);
+z2 = z0 shifted (0,-1.5thinl);
+z3 = z1 shifted (0,-1.5thinl);
+z4 = z2 shifted (thickl,0);
+z5 = z3 shifted (-thickl,0);
+z6 = (x4,h/2-thickl);
+z7 = (x5,h/2-thickl);
+
+path crosspart;
+crosspart = z0--z1--z3--z5--z7--z6--z4--z2--cycle;
+fill crosspart;
+fill crosspart rotatedaround ((w/2,h/2),90);
+fill crosspart rotatedaround ((w/2,h/2),180);
+fill crosspart rotatedaround ((w/2,h/2),270);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"131",em#+2ss#,cap#,0); "Crusader cross, outline";
+
+pickup pencircle scaled thinl;
+top z0 = (w/2-2thickl,h);
+z1 = z0 shifted (4thickl,0);
+z2 = z0 shifted (0,-1.5thinl);
+z3 = z1 shifted (0,-1.5thinl);
+z4 = z2 shifted (thickl,0);
+z5 = z3 shifted (-thickl,0);
+z6 = (x4,h/2+thickl);
+z7 = (x5,h/2+thickl);
+
+path crosspart;
+crosspart = z7--z5--z3--z1--z0--z2--z4--z6;
+draw crosspart;
+draw crosspart rotatedaround ((w/2,h/2),90);
+draw crosspart rotatedaround ((w/2,h/2),180);
+draw crosspart rotatedaround ((w/2,h/2),270);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"120",1.2ex#+2ss#,cap#,0); "Communion Chalice with Host";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,3h/4);
+rt z1 = (w-ss,3h/4);
+z2 = (w/2-thickl/2,h/2);
+z3 = (w/2+thickl/2,h/2);
+z4 = (x2,0+thickl);
+z5 = (x3,0+thickl);
+bot z6 = (w/4,0-o);
+bot z7 = (3w/4,0-o);
+z8 = (1/4)[z0,z1];
+z9 = (3/4)[z0,z1];
+z10 = (w/2,9h/10);
+z11 = z10 shifted (0,thickl);
+z12 = z11 shifted (0,1.5thickl);
+z13 = 0.5[z8,z9];
+path Hostray; Hostray = z11--z12;
+draw Hostray rotatedaround (z13,22.5);
+draw Hostray rotatedaround (z13,67.5);
+draw Hostray rotatedaround (z13,-22.5);
+draw Hostray rotatedaround (z13,-67.5);
+draw z2{left}..z0--z1..{left}z3;
+draw z2--z4; draw z3--z5;
+draw z6{up}..{right}z4; draw z7{up}..{left}z5; draw z6--z7;
+draw z8{up}..{right}z10{right}..{down}z9;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"144",1.2ex#+2ss#,cap#,0); "simple Latin cross";
+
+pickup pensquare scaled thinl;
+top z0 = (w/2-thickstroke/2,h);
+z1 = z0 shifted (thickstroke,0);
+lft z2 = (ss,2h/3+thickstroke/2);
+z3 = z2 shifted (0,-thickstroke);
+bot z4 = (w/2-thickstroke/2,0);
+z5 = z4 shifted (thickstroke,0);
+rt z6 = (w-ss,2h/3+thickstroke/2);
+z7 = z6 shifted (0,-thickstroke);
+z8 = (z0--z4) intersectionpoint (z2--z6);
+z9 = (z1--z5) intersectionpoint (z2--z6);
+z10 = (z0--z4) intersectionpoint (z3--z7);
+z11 = (z1--z5) intersectionpoint (z3--z7);
+
+path latincross;
+latincross = z0--z1--z9--z6--z7--z11--z5--z4--z10--z3--z2--z8--cycle;
+filldraw latincross;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"134",1.2ex#+2ss#,cap#,0); "outline simple Latin cross";
+pickup pensquare scaled thinl;
+draw latincross;
+endchar;
+
+beginchar(oct"117",em#+2ss#,cap#,0); "empty circle";
+
+pickup pencircle scaled 0.5thickl;
+path empcirc;
+empcirc = fullcircle scaled (w-2ss-thickl) shifted (w/2,h/2);
+draw empcirc;
+
+endchar;
+
+beginchar(oct"155",0.9em#+2ss#,cap#,0); "intertwined rings";
+
+pickup pencircle scaled (3thickl/4);
+draw fullcircle scaled (em/2) shifted (w/3,h/2);
+draw fullcircle scaled (em/2) shifted (2w/3,h/2);
+
+endchar;
+
+beginchar(oct"143",1.5em#+2ss#,cap#,0); "split rings";
+
+pickup pencircle scaled (3thickl/4);
+draw fullcircle scaled (em/2) shifted (w/4,h/2);
+draw fullcircle scaled (em/2) shifted (3w/4,h/2);
+draw (w/2,h-o)--(w/2,0+o);
+
+endchar;
+
+beginchar(oct"142",theight#+2ss#,theight#,0); "solid five-pointed star";
+
+z0 = (w/2,h/2);
+z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,72);
+z3 = z2 rotatedaround (z0,72);
+z4 = z3 rotatedaround (z0,72);
+z5 = z4 rotatedaround (z0,72);
+z6 = (z2--z5) intersectionpoint (z1--z4);
+z7 = (z2--z5) intersectionpoint (z1--z3);
+z8 = (z3--z5) intersectionpoint (z4--z1);
+z9 = (z4--z2) intersectionpoint (z3--z1);
+z10 = (z2--z4) intersectionpoint (z3--z5);
+
+path fivestar; fivestar = z1--z6--z5--z8--z4--z10--z3--z9--z2--z7--cycle;
+fill fivestar;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"152",theight#+2ss#,theight#,0); "empty five-pointed star";
+pickup pencircle scaled thinl;
+draw fivestar;
+endchar;
+
+beginchar(oct"141",theight#+2ss#,theight#,0); "solid six-pointed star";
+
+z0 = (w/2,h/2);
+z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,60);
+z3 = z2 rotatedaround (z0,60);
+z4 = z3 rotatedaround (z0,60);
+z5 = z4 rotatedaround (z0,60);
+z6 = z5 rotatedaround (z0,60);
+z7 = (z1--z3) intersectionpoint (z2--z6);
+z8 = (z1--z5) intersectionpoint (z2--z6);
+z9 = (z6--z4) intersectionpoint (z1--z5);
+z10 = (z6--z4) intersectionpoint (z3--z5);
+z11 = (z2--z4) intersectionpoint (z3--z5);
+z12 = (z2--z4) intersectionpoint (z3--z1);
+
+path davstar;
+davstar = z1--z7--z2--z12--z3--z11--z4--z10--z5--z9--z6--z8--cycle;
+fill davstar;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"151",theight#+2ss#,theight#,0); "empty six-pointed star";
+
+pickup pencircle scaled thinl;
+draw davstar;
+
+endchar;
+
+beginchar(oct"251",em#+2ss#,cap#,0); "copyright symbol";
+
+scalefactor = 0.5;
+
+pickup pencircle scaled 0.5thickl;
+draw empcirc;
+
+z0 = (w/2,h+o);
+z1 = z0 shifted (0,-(1/scalefactor)*thinl);
+z2 = (w/2,0-o);
+z3 = z2 shifted (0,(1/scalefactor)*thinl);
+z4 = (ss,h/2);
+z5 = z4 shifted ((1/scalefactor)*thickl,0);
+z6 = (w-ss-hair,3h/4);
+z7 = (w-ss,h/4);
+z8 = z6 shifted (0,1.5thickl);
+z9 = z8 shifted (-thickl,0);
+z10 = z9 shifted (0,-0.5thickl);
+z11 = z12 shifted (-(1/scalefactor)*thinl,0);
+z12 = z6 shifted (0,-(1/scalefactor)*thinl);
+z13 = z7 shifted (-(1/scalefactor)*thinl,0);
+
+path csymb;
+csymb = z6--z8--z9--z10..z0{left}..{down}z4{down}..{right}z2{right}..z7--z13
+..{left}z3{left}..{up}z5{up}..{right}z1{right}..z11--z12--cycle;
+
+fill csymb scaled scalefactor shifted
+	((scalefactor/2)*w,(scalefactor/2)*h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"253",em#+2ss#,cap#,0); "copyleft symbol";
+
+pickup pencircle scaled 0.5thickl;
+draw empcirc;
+fill csymb scaled scalefactor shifted
+	((scalefactor/2)*w,(scalefactor/2)*h) reflectedabout
+	((w/2,h),(w/2,0));
+
+endchar;
+
+beginchar(oct"204",ex#+2ss#,cap#,dep#); "dagger";
+
+z0 = (w/2,h+o);
+z1 = (w/2,-dep);
+z2 = (ss,2h/3);
+z3 = (w-ss,2h/3);
+z4 = (w/2,2h/3);
+z5 = 0.75[z4,z3];
+z6 = 0.75[z4,z2];
+z7 = z6 rotatedaround (z4,-90);
+z8 = z6 rotatedaround (z4,90);
+z9 = z5 shifted (0,thickl/2);
+z10 = z5 shifted (0,-thickl/2);
+z11 = z6 shifted (0,thickl/2);
+z12 = z6 shifted (0,-thickl/2);
+z13 = z7 shifted (thickl/2,0);
+z14 = z7 shifted (-thickl/2,0);
+z15 = z8 shifted (thickl/2,0);
+z16 = z8 shifted (-thickl/2,0);
+z17 = 1.0[z4,z8];
+z18 = z17 shifted (thickl/2,0);
+z19 = z17 shifted (-thickl/2,0);
+z20 = z0 shifted (thickl/2,-hair);
+z21 = z0 shifted (-thickl/2,-hair);
+z22 = z3 shifted (-hair,thickl/2);
+z23 = z3 shifted (-hair,-thickl/2);
+z24 = z2 shifted (hair,thickl/2);
+z25 = z2 shifted (hair,-thickl/2);
+z26 = z4 shifted (hair,hair);
+z27 = z4 shifted (hair,-hair);
+z28 = z4 shifted (-hair,-hair);
+z29 = z4 shifted (-hair,hair);
+z30 = z1 shifted (hair,hair);
+z31 = z1 shifted (-hair,hair);
+
+fill
+z0..z20--z13--z26--z9--z22..z3..z23--z10--z27--z15--z18--z30..z1..z31--z19--z16--z28--z12--z25..z2..z24--z11--z29--z14--z21..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"205",ex#+2ss#,cap#,dep#); "double dagger";
+
+z0 = (w/2,h+o);
+z1 = (w/2,(h-dep)/2);
+z2 = (ss,(3h-dep)/4);
+z3 = (w-ss,(3h-dep)/4);
+z4 = (w/2,(3h-dep)/4);
+z5 = 0.75[z4,z3];
+z6 = 0.75[z4,z2];
+z7 = z6 rotatedaround (z4,-90);
+z8 = z6 rotatedaround (z4,90);
+z9 = z5 shifted (0,thickl/2);
+z10 = z5 shifted (0,-thickl/2);
+z11 = z6 shifted (0,thickl/2);
+z12 = z6 shifted (0,-thickl/2);
+z13 = z7 shifted (thickl/2,0);
+z14 = z7 shifted (-thickl/2,0);
+z15 = z8 shifted (thickl/2,0);
+z16 = z8 shifted (-thickl/2,0);
+z17 = 1.0[z4,z8];
+z18 = z17 shifted (thickl/2,0);
+z19 = z17 shifted (-thickl/2,0);
+z20 = z0 shifted (thickl/2,-hair);
+z21 = z0 shifted (-thickl/2,-hair);
+z22 = z3 shifted (-hair,thickl/2);
+z23 = z3 shifted (-hair,-thickl/2);
+z24 = z2 shifted (hair,thickl/2);
+z25 = z2 shifted (hair,-thickl/2);
+z26 = z4 shifted (hair,hair);
+z27 = z4 shifted (hair,-hair);
+z28 = z4 shifted (-hair,-hair);
+z29 = z4 shifted (-hair,hair);
+z30 = z1 shifted (thickl/2,hair);
+z31 = z1 shifted (-thickl/2,hair);
+
+path halfdag;
+halfdag = 
+z0..z20--z13--z26--z9--z22..z3..z23--z10--z27--z15--z18--z30..z1..z31--z19--z16--z28--z12--z25..z2..z24--z11--z29--z14--z21..cycle;
+
+fill halfdag;
+fill halfdag shifted (0,-(h-dep)-o);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"247",4ex#/5,cap#,dep#); "The section symbol";
+
+toth = h+dep;
+sh = 2toth/3-thinl+o;
+z0 = (w-ss,h-sh/4);
+z1 = (w/2,h+o);
+z2 = z1 shifted (0,-thinl);
+z3 = (ss,h-sh/4);
+z4 = z3 shifted (thinl,0);
+z5 = (w-ss,h-3sh/4);
+z6 = z5 shifted (-thinl,0);
+z7 = (w/2,h-sh);
+z8 = z7 shifted (0,-thinl);
+z9 = (w/2,h-sh/2+curvl/2);
+z10 = z9 shifted (0,-curvl);
+z11 = z0 shifted (-thinl,0);
+z12 = 0.5[z0,z11] shifted (0,-o);
+z13 = (ss,h-3sh/4);
+z14 = z13 shifted (thinl,0);
+z15 = 0.5[z13,z14] shifted (0,hair/2);
+
+path halfsect;
+halfsect = 
+z0{up}..{left}z1{left}..{down}z3{down}..z10..{down}z6{down}..{left}z7{left}..{up}z14..z15..{down}z13{down}..{right}z8{right}..{up}z5{up}..z9..{up}z4{up}..{right}z2{right}..{down}z11..z12..cycle;
+fill halfsect;
+fill halfsect shifted (0,-sh/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"210",ex#+2ss#,ex#,0); "solid bullet";
+
+fill fullcircle scaled 5dotwid shifted (w/2,h-2.5dotwid);
+
+endchar;
+
+beginchar(oct"260",2pwid#+2ss#,cap#,0); "degree symbol";
+
+pickup pencircle scaled thinl;
+path degree; degree = fullcircle scaled 4dotwid shifted (w/2,h-2dotwid);
+draw degree;
+
+endchar;
+
+beginchar(oct"154",1.2em#+2ss#,cap#,0); "simple leaf";
+
+pickup pencircle scaled thinl;
+leafwid = ex;
+leaflen = 2.5leafwid;
+bot lft z0 = (ss,0);
+z1 = (leaflen,0);
+z2 = z1 rotatedaround (z0,40);
+z3 = 0.25[z0,z2];
+z4 = (2/3)[z0,z2];
+z5 = 0.5[z4,z2];
+z13 = 0.6[z0,z2];
+z6 = z5 rotatedaround (z4,45);
+z7 = z4 rotatedaround (z0,20);
+z8 = z4 rotatedaround (z0,-20);
+z9 = (z3--(x3,h)) intersectionpoint (z0..z7..z2);
+z10 = (z13--(x13,h)) intersectionpoint (z0..z7..z2);
+z11 = (z3--(w,y3)) intersectionpoint (z0..z8..z2);
+z12 = (z13--(w,y13)) intersectionpoint (z0..z8..z2);
+
+draw z0..z7..z2; draw z0..z8..z2;
+draw z0--z2;
+draw z3--z9; draw z13--z10;
+draw z3--z11; draw z13--z12;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"236",ex#+2ss#,ex#,0); "empty bullet";
+
+pickup pencircle scaled thinl;
+draw fullcircle scaled 5dotwid shifted (w/2,h-2.5dotwid);
+
+endchar;
+
+beginchar(oct"211",5em#/6+2ss#+pwid#,cap#,0); "degree Celsius symbol";
+
+z1=(w-ss-userh,h-userh);
+z2=z1-(0,thickstroke);
+z3=(w-ss-userh,userh);
+z4=z3+(0,thickstroke);
+z5=(w/2+pwid/2,h+o);
+z6=z5-(0,thinstroke);
+z7=(w/2+pwid/2,0);
+z8=z7+(0,thinstroke);
+z9=(ss+pwid,h/2+o);
+z10=z9+(curvwid,0);
+ctsideserif(1,11,12,13,14,2)(1);
+ctsideserif(4,15,16,17,18,3)(2);
+
+path cbody; cbody=z3..{left}z7{left}..{up}z9{up}..{right}z5{right}..z1;
+path cinbody; cinbody=z2..z6..z10..z8..z4;
+
+fill cinbody & botserif & cbody & topserif & cycle;
+pickup pencircle scaled thinl;
+draw degree shifted (-2pwid/3,0);
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"022",1.75pwid#,1.75pwid#,0); "straight baseline double quote";
+
+z0 = (w/2-thickl,h-o);
+z1 = z0 shifted (2accwid,-2accwid);
+z2 = z0 shifted (-2accwid,-2accwid);
+z3 = z0 shifted (0,-1.5pwid);
+z4 = z3 shifted (-accwid,o);
+z5 = z3 shifted (accwid,o);
+
+path singquote; singquote = z2..z0..z1--z5..z3..z4--cycle;
+
+fill singquote;
+fill singquote shifted (2thickl,0);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"047",3.5pwid#/4,cap#,0); "straight single quote";
+fill singquote shifted (0,h-1.75pwid);
+endchar;
+
+beginchar(oct"256",em#+2ss#,cap#,0); "registered symbol";
+
+scalefactor := 0.5;
+
+pickup pencircle scaled 0.5thickl;
+draw empcirc;
+
+z1 = (ss+lserwl,lserhl);
+z2 = z1 shifted (2thickstroke,0);
+z3 = (ss+userwl,h-userhl);
+z4 = (x3+2thickstroke,h-2thinstroke);
+z17 = ((ss+(2thickstroke/2)+lserwl),h);
+z19 = z4 shifted (1loopgap,0);
+z18 = z19 shifted (0,2thinstroke);
+z20 = (w-ss-thickstroke,3h/4);
+z21 = z20-(1.5curvwid,0);
+z22 = z24 shifted (loopgap,0);
+z23 = z22 shifted (0,2thinstroke);
+z30 = (x4,0);
+z24 = 0.5[z30,z17]; x24 := x4;
+z25 = z24+(0,2thinstroke);
+z26 = (w-2thickstroke-lserwl/2,0);
+z27 = z26 shifted (2thickstroke,0);
+z28 = z27+(0,lserstep);
+z29 = z28-(lserstep,0);
+z32 = z22+(2thickstroke,0);
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+
+path rpath; rpath = z18--z17--z12--z11--z10..z9..z3--z1..z5..z6--z7--z8--z15--z14..z13..z2--z24--z22---z26--z27--z28--z29--z32..z20..{left}z18..cycle;
+path runpath; runpath = z25{right}..{right}z23..z21..z19{left}..{left}z4--z25--cycle;
+
+fill rpath scaled scalefactor shifted
+	((scalefactor/2)*w+thinstroke/2,(scalefactor/2)*h);
+unfill runpath scaled scalefactor shifted
+	((scalefactor/2)*w+thinstroke/2,(scalefactor/2)*h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"255",em#+2ss#,cap#,0); "circled P";
+
+scalefactor := 0.5;
+
+pickup pencircle scaled 0.5thickl;
+draw empcirc;
+
+z1 = (ss+lserwl,lserhl);
+z2 = z1 shifted (2thickstroke,0);
+z3 = (ss+userwl,h-userhl);
+z4 = (x3 + 2thickstroke,h-2thinstroke);
+z17=((ss+(2thickstroke/2)+lserwl),h);
+z18=(w/2,h);
+z19=(w/2,h-2thinstroke);
+z20 = (w-ss,3h/4);
+z21 = z20 shifted (-2curvwid,0);
+z22=(x18,h/2);
+z23=z22+(0,2thinstroke);
+z30=(x4,0);
+z26 = z2 shifted (0,-lserhl);
+z27 = z4 shifted (0,thinstroke);
+z24 = 0.5[z26,z27]; y24 := y22;
+z25 = z24 shifted (0,2thinstroke);
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+
+path pfill; pfill = z18--z17--z12--z11--z10..z9..z3--z1..z5..z6--
+	z7--z8--z15--z14..z13..z2--z24..z22..z20..{left}z18..cycle;
+path punfill;
+punfill = z25{right}..{right}z23..z21..z19{left}..{left}z4--z25--cycle;
+
+fill pfill scaled scalefactor shifted
+	((scalefactor/2)*w,(scalefactor/2)*h);
+unfill punfill scaled scalefactor shifted
+	((scalefactor/2)*w,(scalefactor/2)*h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+beginchar(oct"057",ex#/2,cap#,0); "The forward slash, /";
+
+z0 = (o,o);
+z1 = (w-o,h-o);
+
+pickup pencircle scaled thinl;
+
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"133",2pwid#,cap#+ss#,dep#); "The open square double bracket";
+
+z0 = (w-ss,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (ss,h);
+z3 = z2 shifted (thinl,-thinl);
+z4 = (ss,-dep);
+z5 = z4 shifted (thinl,thinl);
+z6 = (w-ss,-dep);
+z7 = z6 shifted (0,thinl);
+z8 = 0.5[z0,z1] shifted (0,0);
+z9 = 0.5[z7,z6] shifted (0,0);
+z10 = z3 shifted (thickl,0);
+z11 = z5 shifted (thickl,0);
+
+path secline; secline = z10--z11;
+pickup pencircle scaled thinl;
+draw secline;
+
+path squarebrack;
+squarebrack = z0--z2--z4--z6--z7--z5--z3--z1--cycle;
+fill squarebrack;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"135",2pwid#,cap#+ss#,dep#); "The close square double bracket";
+fill squarebrack rotatedaround ((w/2,(h-dep)/2),180);
+pickup pencircle scaled thinl;
+draw secline rotatedaround ((w/2,(h-dep)/2),180);
+endchar;
+
+beginchar(oct"231",3em#/5+2ss#,cap#,0); "single-line pilcrow";
+
+z0 = (w-ss-lserw,lserhl);
+z1 = z0 shifted (-thickstroke,0);
+z2 = (w-ss-userw,h-userhl);
+z3 = z2 shifted (-thickstroke,0);
+urserif(2,4,5,6,7)(1);
+llserif(1,8,9,10,11)(1);
+lrserif(0,12,13,14,15)(1);
+z16 = (ss,3h/4);
+z17 = z16 shifted (curvwid,0);
+z18 = (x1,h/2);
+z19 = z18 shifted (thickstroke,0);
+
+fill
+z0..z12..z13--z14--z10--z9..z8..z1--z18{left}..{up}z16{up}..{right}z7--z6--z5..z4..z2--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"266",4em#/5+2ss#,cap#,0); "double-line pilcrow";
+
+pickup pencircle scaled thinl;
+z0 = (w-ss-lserw,lserhl);
+z1 = z0 shifted (-1.5thickstroke,0);
+z2 = (w-ss-userw,h-userhl);
+z3 = z2 shifted (-1.5thickstroke,0);
+urserif(2,4,5,6,7)(1);
+llserif(1,8,9,10,11)(1);
+lrserif(0,12,13,14,15)(1);
+lft z16 = (ss,3h/4);
+z17 = z16 shifted (curvwid,0);
+z18 = (x1,h/2);
+z19 = z18 shifted (1.5thickstroke,0);
+z20 = (x3,h);
+
+filldraw z20{left}..{down}z16{down}..{right}z18--cycle;
+draw
+z1..z8..z9--z10--z14--z13..z12..z0--z2..z4..z5--z6--z20--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"300",ex#+2ss#,ex#,0); "solid triangle bullet";
+
+pickup pencircle scaled thinstroke;
+z0 = (w/2-thinstroke-ss,h/2);
+z1 = (x0+w/2,y0);
+z2 = z1 rotatedaround (z0,120);
+z3 = z2 rotatedaround (z0,120);
+
+path tribull; tribull = z1--z2--z3--cycle;
+fill tribull;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"301",ex#+2ss#,ex#,0); "empty triangle bullet";
+
+pickup pencircle scaled thinstroke;
+
+draw tribull;
+
+endchar;
+
+beginchar(oct"224",digwid#+2ss#,cap#,0); "The interrobang";
+
+z0 = (w/2,h+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (w-ss,3h/4);
+z3 = z2 shifted (-1.5thinl,0);
+z4 = (ss,3h/4);
+z5 = (w/2-thickl/2,3dotwid);
+z6 = z5 shifted (thickl,0);
+z7 = (w/2-thickl/2,h/2);
+z8 = z7 shifted (thickl,0);
+z9 = z7 shifted (0,thinl);
+z10 = z9 shifted (thickl,0);
+z15 = z1 shifted (-thickl/2,-1.5thickl);
+z17 = z15 shifted (thickl,0);
+z16 = 0.5[z5,z6]; y16 := dotwid;
+z19 = 0.5[z15,z17] shifted (0,hair);
+
+drtbulb(4,11,12,13,14);
+
+fill
+z4{up}..{right}z0{right}..{down}z2{down}..{left}z8--z6--z5--z7{up}..{right}z10..{up}z3{up}..{left}z1{left}..{dir
+-115}z13{right}..z12..z11..cycle;
+fill z7--z15..z19..z17--z8--cycle;
+fill fullcircle scaled 2dotwid shifted z16;
+
+picture interrobang;
+interrobang := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"225",digwid#+2ss#,cap#,dep#); "The inverted interrobang";
+
+currentpicture := interrobang rotatedaround ((w/2,(h-dep)/2),180);
+
+endchar;
+
+beginchar(oct"302",1.2em#+2ss#,cap#,0); "The asterism";
+
+currentpicture := asterisk shifted (w/2-ex/2-ss,h/2) +
+	asterisk + asterisk shifted (w/2-ss,0);
+
+endchar;
+
+beginchar(oct"306",ex#+2ss#,ex#,0); "solid lozenge";
+
+pickup pencircle scaled thinl;
+top z0 = (w/2,h);
+rt z1 = (w-ss,h/2);
+bot z2 = (w/2,0);
+lft z3 = (ss,h/2);
+
+path lozenge; lozenge = z0--z1--z2--z3--cycle;
+fill lozenge;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"307",ex#+2ss#,ex#,0); "empty lozenge";
+
+pickup pencircle scaled thinl;
+draw lozenge;
+
+endchar;
+
+beginchar(oct"170",ex#+2ss#,ex#,0); "simple Greek cross";
+
+pickup pensquare scaled thinl;
+top z0 = (w/2-thickstroke/2,h);
+z1 = z0 shifted (thickstroke,0);
+rt z2 = (w-ss,h/2+thickstroke/2);
+z3 = z2 shifted (0,-thickstroke);
+bot z4 = (w/2-thickstroke/2,0);
+z5 = z4 shifted (thickstroke,0);
+lft z6 = (ss,h/2+thickstroke/2);
+z7 = z6 shifted (0,-thickstroke);
+z8 = (z0--z4) intersectionpoint (z6--z2);
+z9 = (z1--z5) intersectionpoint (z6--z2);
+z10 = (z7--z3) intersectionpoint (z0--z4);
+z11 = (z7--z3) intersectionpoint (z1--z5);
+
+path greekcross;
+greekcross = z0--z8--z6--z7--z10--z4--z5--z11--z3--
+	z2--z9--z1--cycle;
+filldraw greekcross;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"171",ex#+2ss#,ex#,0); "outline simple Greek cross";
+pickup pensquare scaled thinl;
+draw greekcross;
+endchar;
+
+beginchar(oct"172",ex#+2ss#,ex#,0); "simple saltire cross";
+
+pickup pencircle scaled thinl;
+lft z0 = (ss,h-thickl);
+z1 = z0 shifted (thickl,0) rotatedaround (z0,45);
+rt z2 = (w-ss,h-thickl);
+z3 = z2 shifted (-thickl,0) rotatedaround (z2,-45);
+lft z4 = (ss,thickl);
+z5 = z4 shifted (thickl,0) rotatedaround (z4,-45);
+rt z6 = (w-ss,thickl);
+z7 = z6 shifted (thickl,0) rotatedaround (z6,225);
+z8 = (z1--z6) intersectionpoint (z4--z3);
+z9 = (z0--z7) intersectionpoint (z4--z3);
+z10 = (z2--z5) intersectionpoint (z1--z6);
+z11 = (z0--z7) intersectionpoint (z5--z2);
+
+path saltire;
+saltire = z1--z8--z3--z2--z10--z6--z7--z11--z5--z4--z9--z0--cycle;
+filldraw saltire;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"173",ex#+2ss#,ex#,0); "outline simple saltire cross";
+pickup pencircle scaled thinl;
+draw saltire;
+endchar;
+
+beginchar(oct"074",1.8pwid#,cap#+ss#,dep#); "open wide angle bracket";
+
+pickup pencircle scaled thinl;
+top rt z0 = (w-ss,h);
+lft z1 = (ss,(h-dep)/2);
+bot rt z2 = (w-ss,-dep);
+
+path wideanglebrack; wideanglebrack = z0--z1--z2;
+draw wideanglebrack;
+
+endchar;
+
+beginchar(oct"076",1.8pwid#,cap#+ss#,dep#); "close wide angle bracket";
+
+pickup pencircle scaled thinl;
+draw wideanglebrack rotatedaround ((w/2,(h-dep)/2),180);
+
+endchar;
+
+beginchar(oct"025",3pwid#,ex#,0); "The en-dash, --";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"026",em#+2ss#,ex#,0); "The em-dash, ---";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"075",3pwid#,ex#,0); "The en-dash, --";
+
+z0 = (ss,3h/4);
+z1 = (w-ss,y0);
+z2 = z0 shifted (thinwid/2,thinwid/2);
+z3 = z2 shifted (0,-thinwid);
+z4 = z1 shifted (-thinwid/2,thinwid/2);
+z5 = z4 shifted (0,-thinwid);
+
+fill z2..z0..z3--z5..z1..z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"227",1.3em#,cap#,0); "trademark symbol, TM";
+
+z0 = (ss,h-2thinstroke);
+z1 = (ss,h);
+z2 = (ss+8thickstroke,h);
+z3 = (x2,y0);
+z4 = 0.5[z0,z3] shifted (-2thickstroke/2,0);
+z5 = z4 shifted (2thickstroke,0);
+z6 = z4 shifted (0,-8thickstroke);
+z7 = z6 shifted (2thickstroke,0);
+z8 = z0 shifted (0,-2hair);
+z9 = z8 shifted (2hair,0);
+z10 = z9 shifted (0,2hair);
+z11 = z6 shifted (-2hair,0);
+z12 = z11 shifted (0,2hair);
+z13 = z12 shifted (2hair,0);
+z14 = z7 shifted (2hair,0);
+z15 = z14 shifted (0,2hair);
+z16 = z15 shifted (-2hair,0);
+z17 = z3 shifted (0,-2hair);
+z18 = z17 shifted (-2hair,0);
+z19 = z18 shifted (0,2hair);
+
+path tradet;
+tradet = z4--z10--z9--z8--z1--z2--z17--z18--z19--z5--
+	z16--z15--z14--z11--z12--z13--cycle;
+
+z20 = z2 shifted (2hair,0);
+z21 = z20 shifted (2hair,0);
+z22 = z20 shifted (0,-2hair);
+z23 = z22 shifted (2hair,0);
+z24 = (x23,y15);
+z25 = z24 shifted (-2hair,0);
+z26 = z25 shifted (0,-2hair);
+z27 = z26 shifted (2hair,0);
+z28 = z27 shifted (2thickstroke,0);
+z29 = (x28,y23-2hair);
+z30 = z28 shifted (3thickstroke,0);
+z31 = z30 shifted (3thickstroke,0);
+z32 = (x31,y29-2hair);
+z33 = z31 shifted (2thickstroke,0);
+z34 = z33 shifted (2hair,0);
+z35 = z34 shifted (0,2hair);
+z36 = z35 shifted (-2hair,0);
+z37 = (x36,y21);
+z38 = z37 shifted (2hair,0);
+z39 = z38 shifted (0,-2hair);
+z40 = z39 shifted (-2hair,0);
+z41 = z30 shifted (0,2thickstroke+2hair);
+z42 = (x32-2thinstroke,y21);
+z43 = (x29+2thinstroke,y21);
+
+path tradem;
+tradem = z24--z25--z26--z27--z28--z29--z30--z32--
+	z31--z34--z35--z36--z40--z39--z38--z42--z41--z43--
+	z20--z22--z23--cycle;
+
+fill tradet scaled 0.5 shifted (ss,h-4thickstroke);
+fill tradem scaled 0.5 shifted (ss,h-4thickstroke);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"127",5em#/6+2ss#,cap#,0); "capital Omega";
+
+z0 = (ss,0);
+z1 = (w-ss,0);
+z2 = z0 shifted (thickstroke,0);
+z3 = z1 shifted (-thickstroke,0);
+z4 = z0 shifted (0,2lserhl);
+z5 = z1 shifted (0,2lserhl);
+z6 = z5 shifted (-lserstep,0);
+z7 = z4 shifted (lserstep,0);
+z8 = z2 shifted (thickstroke,0);
+z9 = z3 shifted (-thickstroke,0);
+z10 = (ss,h/2+2lserhl);
+z11 = (w-ss,h/2+2lserhl);
+z12 = z10 shifted (thickstroke,0);
+z13 = z11 shifted (-thickstroke,0);
+z14 = (w/2,h+o);
+z15 = z14 shifted (0,-thinstroke);
+z16 = z8 shifted (0,thinstroke);
+z17 = z9 shifted (0,thinstroke);
+z18 = z9 shifted (-thickstroke,0);
+z19 = z8 shifted (thickstroke,0);
+
+path omega; omega =
+	z8--z0--z4--z7{down}..{right}z16{dir 120}..{up}z10{up}..
+	{right}z14{right}..{down}z11{down}..{dir -120}z17{right}..
+	{up}z6--z5--z1--z18{dir 60}..{up}z13{up}..{left}z15{left}..
+	{down}z12{down}..{dir -60}z19--cycle;
+fill omega;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"115",5em#/6+2ss#,cap#,0); "upside-down capital Omega";
+fill omega rotatedaround ((w/2,h/2),180);
+endchar;
+
+beginchar(oct"213",ex#+2ss#,ex#,0); "old-style cents symbol";
+
+z0 = (w/2+hair,h+o);
+z1 = (w/2+hair,-o);
+z2 = (w-ss,0.7h);
+z3 = (w-ss,h/4);
+z4 = (ss,h/2);
+z9 = z0 shifted (0,-thinl);
+z10 = z4 shifted (curvl,0);
+z11 = z1 shifted (0,thinl);
+z12 = z3 shifted (0,hair/2);
+z13 = z12 shifted (-hair/2,0);
+z14 = (w-ss,h/2);
+
+urtbulb(2,5,6,7,8);
+
+path cpath; cpath =
+z1{right}..z3..z12..z13{dir -135}..{left}z11{left}..{up}z10{up}..{right}z9{right}..{dir
+-40}z7{left}..{down}z6..z5..z2..{left}z0{left}..z4..{right}z1..cycle;
+
+fill cpath;
+
+z15 = (w-ss,h+thickstroke);
+z16 = (ss,-thickstroke);
+pickup pencircle scaled thinl;
+draw z15--z16;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"214",ex#/phi+2ss#,asch#,0); "The Letter f";
+
+z0 = (ss+lserwl,lserhl);
+z1 = z0 shifted (thickl,0);
+z2 = (ss+lserwl,h-1.5userhl);
+z3 = z2 shifted (thickl,0);
+z12 = (x0,ex-thinl);
+z13 = z12 shifted (thickl,0);
+z14 = z12 shifted (0,thinl);
+z15 = z13 shifted (0,thinl);
+z16 = (ss+hair,y12);
+armlen = x12 - x16;
+z17 = z13 shifted (armlen,0);
+z18 = z16 shifted (0,thinl);
+z19 = z17 shifted (0,thinl);
+z20 = 0.5[z16,z18] shifted (-hair,0);
+z21 = 0.5[z19,z17] shifted (hair,0);
+z22 = (x19,y3);
+z27 = 0.5[z3,z22]; y27 := h+o;
+z28 = z27 shifted (0,-thinl);
+
+lrserif(1,4,5,6,7)(1);
+llserif(0,8,9,10,11)(1);
+dlftbulb(22,23,24,25,26);
+
+fill
+z1..z4..z5--z6--z10--z9..z8..z0--z12--z16..z20..z18--z14--z2{up}..{right}z27{right}..{down}z24..z23..z22..{right}z25{dir 160}..z28..{down}z3--z15--z19..z21..z17--z13--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"242",ex#+2ss#,ex#,0); "cents symbol";
+
+fill cpath;
+
+z15 = (w/2,h+thickstroke);
+z16 = (w/2,-thickstroke);
+pickup pencircle scaled thinl;
+draw z15--z16;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"244",em#+2ss#,cap#,0); "empty circle, rays";
+
+pickup pencircle scaled 0.5thickl;
+draw empcirc;
+top rt z0 = (w-ss,h);
+top lft z1 = (ss,h);
+bot rt z2 = (w-ss,0);
+bot lft z3 = (ss,0);
+z4 = (w/2,h/2);
+z5 = (z0--z4) intersectionpoint empcirc;
+z6 = (z3--z4) intersectionpoint empcirc;
+z7 = (z2--z4) intersectionpoint empcirc;
+z8 = (z1--z4) intersectionpoint empcirc;
+
+draw z3--z6; draw z2--z7; draw z5--z0; draw z8--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"206",pwid#+2ss#,cap#+ss#,dep#); "The double pipe";
+
+pickup pencircle scaled thinl;
+lft z0 = (w/2-thickstroke,h-o);
+lft z1 = (w/2-thickstroke,-dep+o);
+rt z2 = (w/2+thickstroke,h-o);
+rt z3 = (w/2+thickstroke,-dep+o);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4);
+endchar;
+
+beginchar(oct"326",ex#+2ss#,ex#,0); "The times sign";
+
+pickup pencircle scaled thinl;
+top lft z0 = (ss,h);
+top rt z1 = (w-ss,h);
+bot lft z2 = (ss,0);
+bot rt z3 = (w-ss,0);
+
+draw z0--z3; draw z1--z2;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"366",1.5ex#+2ss#,ex#,2dotwidth#); "The division sign";
+
+pickup pencircle scaled thinl;
+lft z0 = (ss,(h+d)/2-d);
+rt z1 = (w-ss,(h+d)/2-d);
+
+draw z0--z1;
+fill fullcircle scaled 2dotwid shifted (w/2,h-dotwid);
+fill fullcircle scaled 2dotwid shifted (w/2,-d+dotwid);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"032",ex#+2ss#,cap#,0); "High tie";
+
+penpos0(1.5thinl,0);
+z0l = (ss,3h/4);
+penpos1(1.5thinl,180);
+z1l = (w-ss,3h/4);
+penpos2(thickl,-90);
+z2l = (w/2,h+o);
+
+penstroke z0e..z2e..z1e;
+
+picture tie; tie := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"033",ex#+2ss#,ex#,0); "Low tie";
+
+currentpicture := tie shifted (0,-(cap-ex));
+
+endchar;
+
+beginchar(oct"035",ex#+2ss#,cap#,0); "High tie";
+
+currentpicture := tie shifted (0,-(cap-ex));
+
+endchar;
+
+beginchar(oct"034",3ex#/4+2ss#,cap#,0); "Narrow tie";
+
+penpos0(1.5thinl,0);
+z0l = (ss,3h/4);
+penpos1(1.5thinl,180);
+z1l = (w-ss,3h/4);
+penpos2(thickl,-90);
+z2l = (w/2,h+o);
+
+penstroke z0e..z2e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"156",1.2ex#+2ss#,cap#,0); "Eighth note";
+
+z0 = (ss,2w/8);
+z1 = (2w/8,4w/8-ss);
+z2 = (4w/8,2w/8);
+z3 = (2w/8,0-o);
+z5 = (x2,h+o);
+z6 = z5 shifted (-thinl,0);
+z7 = z2 shifted (-thinl,0);
+penpos8(thinl,0);
+z8 = 0.5[z6,z5];
+penpos9(1.25thinl,45);
+z9 = z8 shifted (thickl,-2thickl);
+penpos10(1.5thinl,0);
+z10 = z9 shifted (thickl,-thickl);
+penpos11(1.5thinl,0);
+z11l = z10 shifted (-thickl,-thickl);
+penpos12(1.5thinl,45);
+z12l = (x10r,y2);
+
+fill z0..z1..z2..z3..cycle;
+fill z6--z5--z2--z7--cycle;
+penstroke z8e..z9e..z10e..z11e;%..z12e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"176",1.8ex#+2ss#,ex#,0); "Large tilde";
+
+penpos0(1.5thickl,-30);
+z0l = (ss,h-8accwid);
+penpos1(1.5thickl,-90);
+z1l = (w/3,h+o);
+penpos2(1.5thickl,-90);
+%z2 = (2w/3,y0r);
+z2 = (2w/3,y0);
+penpos3(1.5thickl,-30);
+y3l = (y1l);
+x3r = (w-ss);
+
+penstroke z0e..{right}z1e;
+penstroke z1e{right}..{right}z2e;
+penstroke z2e{right}..z3e;
+%penstroke z0e..z1e..z2e..z3e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"200",ex#+2ss#,cap#,0); "Cupped tie";
+
+penpos0(1.5thinl,0);
+z0l = (ss,h+o);
+penpos1(1.5thinl,180);
+z1l = (w-ss,h+o);
+penpos2(thickl,90);
+z2l = (w/2,3h/4);
+
+penstroke z0e..z2e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"201",0.75ex#+2ss#,cap#,0); "Cupped tie";
+
+penpos0(1.5thinl,0);
+z0l = (ss,h+o);
+penpos1(1.5thinl,180);
+z1l = (w-ss,h+o);
+penpos2(thickl,90);
+z2l = (w/2,3h/4);
+
+penstroke z0e..z2e..z1e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"202",1.9pwid#+2ss#,cap#,0); "Close straight double quotes";
+
+z0 = (0,h-2accwid);
+z1 = z0 shifted (2accwid,2accwid);
+z2 = z1 shifted (2accwid,-2accwid);
+z3 = z0 shifted (accwid,-pwid);
+z4 = z3 shifted (accwid,-accwid);
+z5 = z4 shifted (accwid,accwid);
+z6 = 0.5[z1,z4];
+z7 = (w/4,h-1.5accwid-0.5pwid);
+z8 = (3w/4,h-1.5accwid-0.5pwid);
+
+path straight; straight = z0..z1..z2--z5..z4..z3--cycle;
+fill straight shifted (w/4-2accwid,0) rotatedaround (z7,-30);
+fill straight shifted (3w/4-2accwid,0) rotatedaround (z8,-30);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"203",1.9pwid#+2ss#,cap#,0); "Open straight double quotes";
+
+z7 = (w/4,h-1.5accwid-0.5pwid);
+z8 = (3w/4,h-1.5accwid-0.5pwid);
+
+fill straight shifted (w/4-2accwid,0) rotatedaround (z7,30);
+fill straight shifted (3w/4-2accwid,0) rotatedaround (z8,30);
+
+endchar;
+
+beginchar(oct"207",7.5em#/6,cap#,0); "The pertriqua sign, %";
+
+zeroh = 1.2pwid;
+zerohh = 3ex/4;
+semw = 5em/6-ss;
+z0 = (0.6zeroh,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (0.6zeroh,h-zerohh);
+z3 = z2 shifted (0,thinl);
+z4 = (1.2zeroh,h-zerohh/2);
+z5 = z4 shifted (-1.7thinl,0);
+z6 = (ss,h-zerohh/2);
+z7 = z6 shifted (thinl,0);
+
+fill z0..z4..z2..z6..cycle;
+unfill z1..z5..z3..z7..cycle;
+
+z10 = (semw+ss-0.6zeroh,zerohh);
+z11 = z10 shifted (0,-thinl);
+z12 = (semw+ss-0.6zeroh,0);
+z13 = z12 shifted (0,thinl);
+z14 = (semw,zerohh/2);
+z15 = z14 shifted (-1.7thinl,0);
+z16 = (semw+ss-1.2zeroh,zerohh/2);
+z17 = z16 shifted (thinl,0);
+
+fill z10..z14..z12..z16..cycle;
+unfill z11..z15..z13..z17..cycle;
+
+z22 = (semw,h);
+z23 = z22 shifted (0,-thinl);
+z20 = 0.5[z0,z22] shifted (0,-0.25pwid);
+z21 = z20 shifted (0,-thinl);
+z24 = (ss,-o);
+z25 = z24 shifted (0,1.00thinl);
+z26 = z24 shifted (0.75thinl,0);
+z27 = z23 shifted (-1.8thinl,-hair);
+
+fill z0..z20..z22--z23--z26..z24..z25--z27..z21..z1--cycle;
+
+z30 = (w-0.6zeroh,zerohh);
+z31 = z30 shifted (0,-thinl);
+z32 = (w-0.6zeroh,0);
+z33 = z32 shifted (0,thinl);
+z34 = (w-ss,zerohh/2);
+z35 = z34 shifted (-1.7thinl,0);
+z36 = (w-1.2zeroh,zerohh/2);
+z37 = z36 shifted (thinl,0);
+
+fill z30..z34..z32..z36..cycle;
+unfill z31..z35..z33..z37..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"215",5em#/6+ss#,cap#,0); "Capital C, slashed vertically";
+
+z1=(w-ss-userh,h-userh);
+z2=z1-(0,thickstroke);
+z3=(w-ss-userh,userh);
+z4=z3+(0,thickstroke);
+z5=(w/2,h+o);
+z6=z5-(0,thinstroke);
+z7=(w/2,0);
+z8=z7+(0,thinstroke);
+z9=(ss,h/2+o);
+z10=z9+(curvwid,0);
+ctsideserif(1,11,12,13,14,2)(1);
+ctsideserif(4,15,16,17,18,3)(2);
+
+pickup cappen;
+path cbody; cbody=z3..{left}z7{left}..{up}z9{up}..{right}z5{right}..z1;
+path cinbody; cinbody=z2..z6..z10..z8..z4;
+
+pickup pencircle scaled 2thinl;
+z20 = (3w/5,h+thinl);
+z21 = (3w/5,0-thinl);
+draw z20---z21;
+
+fill cinbody & botserif & cbody & topserif & cycle;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar(oct"216",2ss#+2thickstroke#+thinstroke#+6userw#+2hair#,cap#,0);
+"Capital W, double slashed horizontally";
+
+bottompoints=(w-2ss)/3;
+
+z1 = (ss+userw,h-userh);
+z2 = z1 shifted (thickstroke,0);
+z3 = z2 shifted (userw+hair+userw,0);
+z4 = z3 shifted (thickstroke,0);
+z5 = z4 shifted (userw+hair+userw+thinstroke,0);
+z6 = z5 shifted (-thinstroke,0);
+z7 = (w/3+thinstroke/2,0);
+z8 = (2w/3+thinstroke/2,0);
+z33=(w/2,3h/4);
+z34=z8+(.4thinstroke,2.2thickstroke);
+z35=z7+(0.4thinstroke,2.2thickstroke);
+z36=0.96[z8,z3];
+
+ulserif(1,9,10,11,12)(1);
+urserif(2,13,14,15,16)(1);
+ulserif(3,17,18,19,20)(1);
+urserif(4,21,22,23,24)(1);
+ulserif(6,25,26,27,28)(1);
+urserif(5,29,30,31,32)(1);
+
+y11 := y15 := y19 := y23 := y27 := y31 := h;
+
+fill z8--z5..z29..z30--z31--z27--z26..z25..z6--z34--z4..z21..z22--z23--z19--z18..z17..z3--z36--z35--z2..z13..z14--z15--z11--z10..z9..z1--z7--z33--z8--cycle;
+
+pickup pencircle scaled 1.5thinl;
+
+lft z40 = (ss,2h/3);
+lft z41 = (ss,0.4h);
+rt z42 = (w-ss,2h/3);
+rt z43 = (w-ss,0.4h);
+
+draw z40--z42; draw z41--z43;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"217",5em#/6+2ss#,cap#,0);
+"Capital N, double slashed, horizontally";
+
+z1 = (ss+userw,h-userh);
+z2=z1+(thinstroke,-0.3thickstroke);
+z3 = (ss+lserw,lserh);
+z4=z3+(thinstroke,0);
+z5=(w-ss-userw,h-userh);
+z6=z5-(thinstroke,0);
+z7=(w-ss-userw,-o);
+z28=z7+(-thinstroke,2thickstroke);
+z29=z27+(thickstroke/2,0);
+
+llserif(3,8,9,10,11)(1);
+lrserif(4,12,13,14,15)(1);
+ulserif(6,16,17,18,19)(1);
+urserif(5,20,21,22,23)(1);
+ulserif(1,24,25,26,27)(1);
+
+y26 := y27 := y29 := y18 := y22 := h;
+y10 := y14 := 0;
+
+fill z7--z5..z20..z21--z22--z18--z17..z16..z6--z28--z29--z27--z26--z25..z24..z1--z3..z8..z9--z10--z14--z13..z12..z4--z2--z7--cycle;
+
+pickup pencircle scaled 1.5thinl;
+
+lft z40 = (ss,2h/3);
+lft z41 = (ss,0.4h);
+rt z42 = (w-ss,2h/3);
+rt z43 = (w-ss,0.4h);
+
+draw z40--z42; draw z41--z43;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"220",em#+2ss#,cap#,0); "Capital G, slashed vertically";
+
+z1=(w-ss-userw-thickstroke/2,h-userh);
+z2=z1-(0,thickstroke);
+z3=(w-ss-userw,2userh);
+z5=(w/2,h+o);
+z6=z5-(0,thinstroke);
+z7=(w/2,0);
+z8=z7+(0,thinstroke);
+z9=(ss,h/2);
+z10=z9+(curvwid,0);
+z4=z3-(thickstroke,0);
+z11=(x3,h/2-userh);
+z12=z11-(thickstroke,0);
+
+ulserif(12,15,16,17,18)(1);
+urserif(11,19,20,21,22)(1);
+ctsideserif(1,23,24,25,26,2)(1);
+
+path gbody; gbody =
+z17--z21--z20..z19..z11--z3..{left}z7{left}..{up}z9{up}..{right}z5{right}..z1;
+path ginbody; ginbody = z2..{left}z6{left}..{down}z10{down}..{right}z8{right}..z4--z12..z15..z16--z17;
+
+fill gbody & topserif & ginbody & cycle;
+
+pickup pencircle scaled 2thinl;
+z30 = (w/2,h+thinl);
+z31 = (w/2,0-thinl);
+draw z30--z31;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"221",2em#/3+2ss#,cap#,0); "Capital P, slashed horizontally";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = (x3 + thickstroke,h-thinstroke);
+z17=((ss+(thickstroke/2)+lserw),h);
+z18=(w/2,h);
+z19=(w/2,h-thinstroke);
+z20 = (w-ss,3h/4);
+z21 = z20 shifted (-curvwid,0);
+z22=(x18,h/2);
+z23=z22+(0,thinstroke);
+z30=(x4,0);
+z26 = z2 shifted (0,-lserh);
+z27 = z4 shifted (0,thinstroke);
+z24 = 0.5[z26,z27];
+z25 = z24 shifted (0,thinstroke);
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+
+y11 := y12 := h;
+y7 := y8 := y15 := 0;
+
+fill z18--z17--z12--z11--z10..z9..z3--z1..z5..z6--
+	z7--z8--z15--z14..z13..z2--z24..z22..z20..{left}z18..cycle;
+unfill z25{right}..{right}z23..z21..z19{left}..{left}z4--z25--cycle;
+
+pickup pencircle scaled 2thinl;
+lft z40 = (ss,h/3);
+rt z41 = (w-ss,h/3);
+draw z40--z41;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,2223,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"243",5em#/6+2ss#,cap#,0);
+"The British pound sign, single-slashed";
+
+z0 = (2w/3,h+o);
+z1 = z0 shifted (0,-1.5thinl);
+z2 = (w-ss-hair,4h/5);
+z3 = z2 shifted (-1.5thinl,0);
+z4 = 0.5[z2,z3] shifted (0,-hair/2);
+z5 = (0.5w,4h/5);
+z6 = z5 shifted (-thickl,0);
+z7 = (w/2+thickl/2,h/7);
+z8 = z7 shifted (-thickl,0);
+z9 = (x8-thickl,-hair/4);
+z10 = z9 shifted (0,thinl);
+z12 = (ss,h/7);
+z13 = z12 shifted (thickl,0);
+z14 = 0.5[z8,z7] shifted (0,-thinl);
+z15 = z14 shifted (0,1.3thinl);
+z16 = (2w/3,-hair/4);
+z17 = z16 shifted (0,1.5thinl);
+z18 = (w-ss-hair,userw);
+z19 = z18 shifted (0,1.5thinl);
+z20 = 0.5[z18,z19] shifted (hair,0);
+z30 = (x9,y13+(y10+y13)/2);
+z31 = z30 shifted (0,1.5thinl);
+
+fill
+z2{up}..{left}z0{left}..z6..z8..{left}z10{left}..{up}z13{up}..z30..z14..{right}z16{right}..z18..z20..z19{dir
+200}..{left}z17{left}..z7..z31..z12..z9..z7..z5..{right}z1{right}..{down}z3..z4..cycle;
+
+picture britpound; britpound := currentpicture;
+
+pickup pencircle scaled 2thinl;
+lft z21 = (w/5,0.5h);
+rt z22 = (4w/5,0.5h);
+
+draw z21--z22;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"222",5em#/6+2ss#,cap#,0);
+"The British pound sign, double-slashed";
+
+currentpicture := britpound;
+pickup pencircle scaled 1.5thinl;
+lft z21 = (w/6,0.4h);
+rt z22 = (5w/6,0.4h);
+lft z23 = (w/6,0.6h);
+rt z24 = (5w/6,0.6h);
+
+draw z21--z22;
+draw z23--z24;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,2223,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"223",5em#/6+2ss#,cap#,0); "Recipe symbol";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+userw,h-userh);
+z4 = (x3+thickstroke,h-thinstroke);
+z17=((ss+(thickstroke/2)+lserw),h);
+z19 = z4 shifted (loopgap,0);
+z18 = z19 shifted (0,thinstroke);
+z20=(w-ss-thickstroke,3h/4);
+z21=z20-(curvwid,0);
+z22 = z24 shifted (loopgap,0);
+z23 = z22 shifted (0,thinstroke);
+z30=(x4,0);
+z24=0.5[z30,z17]; x24 := x4;
+z25=z24+(0,thinstroke);
+z26=(w-thickstroke-lserw/2,0);
+z27=z26+(lserw+lserstep,0);
+z28=z27+(0,lserstep);
+z29=z28-(lserstep,0);
+z32=z22+(thickstroke,0);
+z31=(1/thickstroke)[z32,z4];
+llserif(1,5,6,7,8)(1);
+lrserif(2,13,14,15,16)(1);
+ulserif(3,9,10,11,12)(1);
+
+y11 := y12 := h;
+y7 := y8 := y15 := 0;
+
+fill z18--z17--z12--z11--z10..z9..z3--z1..z5..z6--z7--z8--z15--z14..z13..z2--z24--z22---z26--z27--z28--z29--z32..z20..{left}z18..cycle;
+unfill z25{right}..{right}z23..z21..z19{left}..{left}z4--z25--cycle;
+
+pickup pencircle scaled 1.5thinl;
+top rt z40 = (w-ss,h/2);
+bot lft z41 = (w/2,0);
+draw z40--z41;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+
+endchar;
+
+beginchar(oct"226",1.2ex#+2ss#,asch#,0);
+"Lowercase d, slashed and underlined";
+
+z0 = (w-ss-lserwl,h-userhl);
+z1 = z0 shifted (-thickl,0);
+z2 = (x0,lserhl);
+z3 = z2 shifted (-thickl,0);
+z12 = z0 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z19 = 0.5[z15,z17]; y19 := ex/2;
+z20 = (x2,(ex+o)/2);
+z21 = (ss,(ex+o)/2);
+z14 = 0.5[z22,z23] shifted (0,ex/2);
+z15 = z14 shifted (0,-thinl);
+z16 = 0.5[z22,z23] shifted (0,-ex/2-o);
+z17 = z16 shifted (0,thinl);
+z22 = z21 shifted (curvl,0);
+z23 = z20 shifted (-thickl,0);
+
+ulserif(1,4,5,6,7)(1);
+lrserif(2,8,9,10,11)(1);
+
+fill z1..z4..z5--z6--z12--z2..z8..z9--z10--z13--z1--cycle;
+fill
+z21{up}..{right}z14{right}..{down}z20{down}..{left}z16{left}..{up}z21..cycle;
+unfill
+z22{up}..{right}z15{right}..{down}z23{down}..{left}z17{left}..{up}z22..cycle;
+
+pickup pencircle scaled 1.5thinl;
+lft z30 = (w/3,3h/4);
+rt z31 = (w-ss,3h/4);
+lft z32 = (ss,0-thickl);
+rt z33 = (w-ss,0-thickl);
+draw z30--z31; draw z32--z33;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"237",1.3em#,cap#,0); "SM";
+
+th = 8thickl+2thinl;
+z0 = (ss,3th/4);
+z1 = (3w/4-ss,3th/4);
+z2 = (3w/4-ss,th/4);
+z3 = (ss,th/4);
+z4 = (6w/16,th+o);
+z5 = (6w/16,0-o);
+z6 = z1 shifted (-2thickl,0);
+z7 = z4 shifted (0,-2thinl);
+z8 = z0 shifted (2thickl,0);
+z9 = z2 shifted (-2thickl,0);
+z10 = z5 shifted (0,2thinl);
+z11 = z3 shifted (2thickl,0);
+z12 = 0.5[z6,z1] shifted (0,-thickl);
+z13 = 0.5[z3,z11] shifted (0,thickl);
+
+pickup pencircle scaled 2;
+path sm; sm =
+z1{up}..{left}z4{left}..{down}z0{down}..{down}z9{down}..{left}z10{left}..{up}z11..z13..z3{down}..{right}z5{right}..{up}z2{up}..{up}z8{up}..{right}z7{right}..{down}z6..z12..cycle;
+
+fill sm scaled 0.5 shifted (ss,h-4thickl-thinl);
+fill tradem scaled 0.5 shifted (ss,h-4thickl);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"235",1.5ex#+2ss#,cap#,0); "The Letter e";
+
+z0 = (w/2,h+o);
+z1 = (w/2,-o);
+z2 = (w-ss,h/2);
+z3 = (w-ss-hair,h/4);
+z4 = (ss,h/2);
+z9 = z0 shifted (0,-thinl);
+z10 = z4 shifted (curvl,0);
+z11 = z1 shifted (0,thinl);
+z12 = z3 shifted (0,hair/2);
+z13 = z12 shifted (-hair/2,0);
+z14 = z2 shifted (-curvl,thinl);
+z15 = z10 shifted (0,thinl);
+
+fill
+z2{up}..{left}z0{left}..{down}z4{down}..{right}z1{right}..z3..z12..z13{dir
+-120}..{left}z11{left}..{up}z10{up}..z9..{down}z14--z15--z10--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"234",ex#+2ss#,cap#,0); "Simple perbiqua sign";
+
+pickup pencircle scaled 1.5thinl;
+top rt z0 = (w-ss,h+o);
+bot lft z1 = (ss,0-o);
+z2 = (ss+dotwid,h-dotwid);
+z3 = (w-ss-dotwid,dotwid);
+
+draw z0--z1;
+fill fullcircle scaled 2dotwid shifted z2;
+fill fullcircle scaled 2dotwid shifted z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"233",8em#/6+2ss#,cap#,0); "Numero (No) sign";
+
+z1 = (ss+userw,h-userh);
+z2=z1+(thinstroke,-0.3thickstroke);
+z3 = (ss+lserw,lserh);
+z4=z3+(thinstroke,0);
+z5=(5em/6-userw,h-userh);
+z6=z5-(thinstroke,0);
+z7=(5em/6-userw,-4o);
+z28=z7+(-thinstroke,2.5thickstroke);
+z29=z27+(thickstroke/2,0);
+
+llserif(3,8,9,10,11)(1);
+lrserif(4,12,13,14,15)(1);
+ulserif(6,16,17,18,19)(1);
+urserif(5,20,21,22,23)(1);
+ulserif(1,24,25,26,27)(1);
+
+y26 := y29 := y18 := y22 := y27 := h;
+y10 := y14 := 0;
+
+fill z7--z5..z20..z21--z22--z18--z17..z16..z6--z28--z29--z27--z26--z25..z24..z1--z3..z8..z9--z10--z14--z13..z12..z4--z2--z7--cycle;
+
+z30 = (w-ss-7em/24,h);
+z31 = (x30,h/2-thinl);
+z32 = (x30-(y30-y31)/2,h-(y30-y31)/2);
+z33 = (x30+(y30-y31)/2,h-(y30-y31)/2);
+z34 = z30 shifted (0,-thinl);
+z35 = z31 shifted (0,thinl);
+z36 = z32 shifted (thickl,0);
+z37 = z33 shifted (-thickl,0);
+z38 = z31 shifted (0,-thickl);
+pickup pencircle scaled 2thinl;
+lft z39 = (x32,y38);
+rt z40 = (x33,y38);
+
+fill z30..z33..z31..z32..cycle;
+unfill z34..z37..z35..z36..cycle;
+draw z39--z40;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"232",3em#/4+2ss#,cap#,0);
+"Capital B, slashed vertically";
+
+z1 = (ss+lserw,lserh);
+z2 = (x1+thickstroke,thinstroke);
+z3 = (ss+userw,h-userh);
+z4 = (x3+thickstroke,h-thinstroke);
+z30=(x4,0);
+z40 = z4 shifted (0,thinstroke);
+z25 = 0.5[z30,z40] shifted (0,thinstroke);
+z32 = z25 shifted (0,-thinstroke); 
+z24 = 0.5[z25,z32];
+z17=((ss+(thickstroke/2)+lserw),h);
+z18=(w/2,h);
+z19=(w/2,h-thinstroke);
+z20 = (w-ss-2o,3h/4);
+z21=z20-(curvwid,0);
+z23=z22+(0,thinstroke/2);
+z26 = z32 shifted (loopgap,0);
+z27 = (w-ss,h/4);
+z28=z27-(1.1curvwid,0);
+z29=(x18,0);
+z31=z29+(0,thinstroke);
+z33=z22-(0,thinstroke/2);
+z34 = z25 shifted (loopgap,0);
+z22 = 0.5[z34,z26];
+llserif(1,5,6,7,8)(1);
+ulserif(3,9,10,11,12)(1);
+
+path stemtoploop; stemtoploop = z33{right}..{up}z20{up}..{left}z18{left}..z40--z11--z10..z9..z3--z1..z5..z6--z7--z29;
+path stembotloop; stembotloop =
+z30..{right}z29{right}..{up}z27{up}..{left}z34--z33;
+path topinncirc; topinncirc = z25{right}..{right}z23..{up}z21{up}..{left}z19{left}..{left}z4--z25..cycle;
+path botinncirc; botinncirc = z2..{right}z31{right}..{up}z28{up}..z33{left}..{left}z32--cycle;
+
+fill stembotloop & stemtoploop..cycle;
+unfill topinncirc;
+unfill botinncirc;
+
+pickup pencircle scaled 1.5thinl;
+z44 = (3w/5,h+thickl);
+z45 = (3w/5,0-thickl);
+draw z44--z45;
+
+penlabels(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"230",9.8em#/6,cap#,0); "The perquadqua sign";
+
+z0 = (0.6zeroh,h);
+z1 = z0 shifted (0,-thinl);
+z2 = (0.6zeroh,h-zerohh);
+z3 = z2 shifted (0,thinl);
+z4 = (1.2zeroh,h-zerohh/2);
+z5 = z4 shifted (-1.7thinl,0);
+z6 = (ss,h-zerohh/2);
+z7 = z6 shifted (thinl,0);
+
+fill z0..z4..z2..z6..cycle;
+unfill z1..z5..z3..z7..cycle;
+
+z10 = (semw+ss-0.6zeroh,zerohh);
+z11 = z10 shifted (0,-thinl);
+z12 = (semw+ss-0.6zeroh,0);
+z13 = z12 shifted (0,thinl);
+z14 = (semw,zerohh/2);
+z15 = z14 shifted (-1.7thinl,0);
+z16 = (semw+ss-1.2zeroh,zerohh/2);
+z17 = z16 shifted (thinl,0);
+
+fill z10..z14..z12..z16..cycle;
+unfill z11..z15..z13..z17..cycle;
+
+z22 = (semw,h);
+z23 = z22 shifted (0,-thinl);
+z20 = 0.5[z0,z22] shifted (0,-0.25pwid);
+z21 = z20 shifted (0,-thinl);
+z24 = (ss,-o);
+z25 = z24 shifted (0,1.00thinl);
+z26 = z24 shifted (0.75thinl,0);
+z27 = z23 shifted (-1.8thinl,-hair);
+
+fill z0..z20..z22--z23--z26..z24..z25--z27..z21..z1--cycle;
+
+z30 = (w-0.6zeroh,zerohh);
+z31 = z30 shifted (0,-thinl);
+z32 = (w-0.6zeroh,0);
+z33 = z32 shifted (0,thinl);
+z34 = (w-ss,zerohh/2);
+z35 = z34 shifted (-1.7thinl,0);
+z36 = (w-1.2zeroh,zerohh/2);
+z37 = z36 shifted (thinl,0);
+
+fill z30..z34..z32..z36..cycle;
+unfill z31..z35..z33..z37..cycle;
+
+z40 = (w-1.8zeroh,zerohh);
+z41 = z40 shifted (0,-thinl);
+z42 = (w-1.8zeroh,0);
+z43 = z42 shifted (0,thinl);
+z44 = (w-1.2zeroh-ss,zerohh/2);
+z45 = z44 shifted (-1.7thinl,0);
+z46 = (w-2.4zeroh-ss,zerohh/2);
+z47 = z46 shifted (thinl,0);
+
+fill z40..z44..z42..z46..cycle;
+unfill z41..z45..z43..z47..cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"240",1.2pwid#,cap#+ss#,dep#);
+"The open inverse curly bracket";
+
+brackwid = 2thinl;
+totalh = h+d;
+pickup pencircle xscaled brackwid yscaled (thinl);
+top rt z0 = (w-ss,h);
+bot rt z1 = (w-ss,-dep);
+rt z2 = (w-ss,h-totalh/2);
+lft z3 = (ss,h-totalh/4);
+lft z4 = (ss,h-3totalh/4);
+
+path invcurlybrack;
+invcurlybrack = z0{left}..{down}z3..{right}z2{left}..z4{down}..{right}z1;
+draw invcurlybrack;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,100);
+endchar;
+
+beginchar(oct"241",1.2pwid#,cap#+ss#,dep#);
+"The close inverse curly bracket";
+pickup pencircle xscaled brackwid yscaled (thinl);
+draw invcurlybrack rotatedaround ((w/2,(h-dep)/2),180);
+endchar;
+
+beginchar(oct"245",5em#/6+2ss#,cap#,0); "The yen symbol";
+
+z0 = (w/2-thickstroke/2,h/2);
+z1 = (w/2+thickstroke/2,h/2);
+z2 = (ss+userw,h-userh);
+z3 = z2 shifted (thickstroke,0);
+z4 = (w-ss-userw,h-userh);
+z5 = z4 shifted (-thinstroke,0);
+z6 = (w/2-thickstroke/2,lserh);
+z7 = (w/2+thickstroke/2,lserh);
+z8 = 0.8[z0,z1] shifted (0,lserh/2);
+
+lrserif(7,14,15,16,17)(1);
+llserif(6,10,11,12,13)(1);
+ulserif(2,18,19,20,21)(1);
+urserif(3,22,23,24,25)(1);
+ulserif(5,26,27,28,29)(1);
+urserif(4,30,31,32,33)(1);
+
+fill
+z0--z6..z10..z11--z12--z16--z15..z14..z7--z1--z4..z30..z31--z32--z24--z28--z27..z26..z5--z8--z3..z22..z23--z24--z20--z19..z18..z2--z0--cycle;
+
+pickup pencircle scaled 1.5thinl;
+lft z40 = (ss,h/3);
+rt z41 = (w-ss,h/3);
+lft z42 = (ss,2h/3);
+rt z43 = (w-ss,2h/3);
+
+draw z40--z41; draw z42--z43;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"246",pwid#,cap#,dep#); "The broken pipe";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+bot z1 = (x0,h-(h+d)/2+thickl);
+top z2 = bot z1 shifted (0,-2thickl);
+bot z3 = (w/2,-d);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"257",em#,cap#,0); "high line";
+
+pickup pencircle scaled 1.5thinl;
+
+top lft z0 = (ss,h);
+top rt z1 = (w-ss,h);
+draw z0--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"254",em#,ex#,0); "inverted backwards L";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+top rt z1 = (w-ss,h);
+rt z2 = (w-ss,h/2);
+
+draw z0--z1--z2;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"252",3ex#/4+2ss#,cap#,0); "feminine ordinal";
+
+ordwid = 1.5ex+2ss;
+ordh = 1.5ex;
+z0 = (ss,3ordh/4);
+z1 = (x3/2,ordh+o);
+z2 = (ordwid-ss-lserwl,3ordh/4);
+z3 = (x2,lserhl);
+z8 = z7 shifted (0,lserhl);
+z9 = 0.5[z18,z19]; y9 := 0-o;
+z10 = (ss-o,ordh/4);
+z15 = z2 shifted (-2thickl,0);
+z16 = z1 shifted (0,-2thinl);
+z17 = z9 shifted (0,2thinl);
+z18 = z10 shifted (2thickl,0);
+z19 = z3 shifted (-2thickl,lserhl);
+z20 = (ordwid/2-2thickl,ordh/2);
+z21 = z20 shifted (thickl,-2thinl);
+z22 = 0.2[z15,z19];
+z23 = z19 shifted (-2thinl,0);
+z24 = z22 shifted (0,-2thickl/2);
+z25 = z16 shifted (thickl,0);
+
+lrserif(3,4,5,6,7)(1);
+drtbulb(0,11,12,13,14);
+
+path afill; afill =
+z13..z12..z11..z0{up}..{right}z1{right}..{down}z2--z3..z4..z5--z6--z7--z8..z9..{up}z10..z20..z22--z15{up}..{left}z16{left}..z13..cycle;
+path aunfill; aunfill = z18..z21..z24--z19..z17..cycle;
+fill afill scaled 0.5 shifted (ss,cap-0.75ex);
+unfill aunfill scaled 0.5 shifted (ss,cap-0.75ex);
+
+pickup pencircle scaled 1.5thinl;
+lft z30 = (ss,h/2-thinl);
+rt z31 = (w-ss,h/2-thinl);
+draw z30--z31;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"272",3ex#/4+2ss#,cap#,0); "masculine ordinal";
+
+z0 = (ordwid/2,ordh+o);
+z1 = z0 shifted (0,-2thinl);
+z2 = (ordwid-2ss,ordh/2);
+z3 = z2 shifted (-2curvl,0);
+z4 = (ordwid/2,0-o);
+z5 = z4 shifted (0,2thinl);
+z6 = (ss,ordh/2);
+z7 = z6 shifted (2curvl,0);
+
+path ofill; ofill = z0..z2..z4..z6..cycle;
+path ounfill; ounfill = z1..z3..z5..z7..cycle;
+
+fill ofill scaled 0.5 shifted (ss,cap-0.75ex);
+unfill ounfill scaled 0.5 shifted (ss,cap-0.75ex);
+
+pickup pencircle scaled 1.5thinl;
+lft z30 = (ss,h/2-thinl);
+rt z31 = (w-ss,h/2-thinl);
+draw z30--z31;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"250",2pwid#,cap#,0); "The diaresis";
+
+z0 = (w/4,h-dotwid);
+z1 = (3w/4,h-dotwid);
+
+fill fullcircle scaled 2dotwid shifted z0;
+fill fullcircle scaled 2dotwid shifted z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"261",em#,cap#,0); "The plus minus";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h);
+bot z1 = (w/2,0);
+lft z3 = (ss,h/2);
+rt z4 = (w-ss,h/2);
+lft z5 = (ss,0);
+rt z6 = (w-ss,0);
+
+draw z0--z1; draw z3--z4; draw z5--z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"270",cap#,cap#,0); "The reference mark";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h);
+bot rt z1 = (w-ss,0);
+top rt z2 = (w-ss,h);
+bot lft z3 = (ss,0);
+z4 = (w/2,h/2);
+z5 = z4 shifted (0,3h/8-hair);
+z6 = z4 shifted (-3w/8+hair,0);
+z7 = z4 shifted (0,-3h/8+hair);
+z8 = z4 shifted (3w/8-hair,0);
+
+draw z0--z1; draw z2--z3;
+fill fullcircle scaled 3dotwid shifted z5;
+fill fullcircle scaled 3dotwid shifted z6;
+fill fullcircle scaled 3dotwid shifted z7;
+fill fullcircle scaled 3dotwid shifted z8;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"267",pwid#,ex#,0); "The interpunct";
+
+z0 = (w/2,h-2dotwid);
+fill fullcircle scaled 2dotwid shifted z0;
+
+penlabels(0);
+endchar;
+
+beginchar(oct"262",0.8ex#+2ss#,cap#,0); "superscript digit 2";
+
+z0 = (w/2,ex+o);
+z1 = z0 shifted (0,-thinl);
+z2 = (ss+o,2ex/3);
+z3 = z2 shifted (bulbsh,bulbsh);
+z4 = z3 shifted (bulbsh,-bulbsh);
+z5 = z4 shifted (-bulbsh,-bulbsh);
+z6 = (w-ss-o,2ex/3);
+z7 = z6 shifted (-thickl,0);
+z8 = (ss,1.5thinl);
+z9 = (x8,0);
+z10 = (w-ss,0);
+z11 = (w-ss,1.5thinl+thinl);
+z12 = z11 shifted (-thinl/2,0);
+z13 = z12 shifted (0,-thinl);
+z14 = z8 shifted (thickl,0);
+
+path supertwo; supertwo =
+z14--z13--z12--z11--z10--z9--z8{dir
+30}..{up}z7..{left}z1{left}..{dir
+230}z3{right}..{down}z4{down}..{left}z5{left}..{up}z2{up}..{right}z0{right}..z6{down}..{dir
+-160}cycle;
+fill supertwo shifted (0,h-ex);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"263",0.8ex#+2ss#,cap#,0); "superscript digit 3";
+
+threehgt = (ex);
+z0 = (w/2,ex/2+o);
+z1 = (w/2,0-dep-o);
+z2 = (ss,.75threehgt-dep);
+z3 = (ss,.25threehgt-dep);
+z4 = z0 shifted (0,-thinstroke);
+z5 = z1 shifted (0,thinstroke);
+z6 = z8 shifted (-curvwid,0);
+z7 = z9 shifted (-curvwid,0);
+z8 = (w-ss,3threehgt/4-dep);
+z9 = (w-ss,threehgt/4-dep);
+z10 = (w/2-2thinstroke,threehgt/2+thinstroke-dep);
+z11 = z10 shifted (0,-thinstroke);
+z20 = z10 shifted (1.5thickstroke,-thinstroke/2);
+z21 = z9 shifted (-o/4,0);
+z22 = z10 shifted (1.5thickl,0);
+z23 = z11 shifted (1.5thickl,0);
+
+ulftbulb(2,12,13,14,15);
+ulftbulb(3,16,17,18,19);
+
+path supthree; supthree =
+z2{up}..{right}z0{right}..{down}z8{down}..z20..{left}z11--z10{right}..z20..{down}z9{down}..{left}z1{left}..{up}z3{up}..{right}z16{right}..{down}z17{down}..{left}z18{dir
+-60}..{right}z5{right}..{up}z7{up}..{left}z11--z10{right}..{up}z6{up}..{left}z4{left}..{dir
+-120}z12{right}..{down}z13{down}..{left}z14{left}..{up}cycle;
+
+fill supthree shifted (0,cap-ex/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"264",5pwid#/4,cap#,0); "prime mark";
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted (0,h-1.75pwid);
+endchar;
+
+beginchar(oct"265",1.2ex#+2ss#,ex#,dep#); "Upright mu";
+
+z0 = (ss+userwl,h-userhl);
+z1 = z0 shifted (thickl,0);
+z2 = (w-ss-lserwl,lserhl);
+z3 = z2 shifted (-thickl,0);
+z12 = z1 shifted (0,userhl);
+z13 = z3 shifted (0,-lserhl);
+z14 = (w/2,-o);
+z15 = z14 shifted (0,1.5thinl);
+z16 = (x0,h/4);
+z17 = 0.5[z16,z14] shifted (0,-lserwl);
+z18 = z17 shifted (3o,lserhl);
+z19 = z16 shifted (thickl,0);
+z20 = (w-ss-userwl,h-userhl);
+z21 = z20 shifted (-thickl,0);
+z22 = (x21,h/4);
+z23 = z22 shifted (thickl,0);
+z24 = 0.5[z23,z14] shifted (-2o,-lserwl);
+z29 = z20 shifted (0,userhl);
+z30 = z24 shifted (0,lserhl);
+z31 = (x16,-dep+lserhl);
+z32 = (x19,-dep+lserhl);
+
+ulserif(0,4,5,6,7)(1);
+lrserif(2,8,9,10,11)(1);
+ulserif(21,25,26,27,28)(1);
+llserif(31,33,34,35,36)(1);
+lrserif(32,37,38,39,40)(1);
+
+fill
+z1--z12--z6--z5..z4..z0--z16{down}..{right}z14{right}..{up}z23--z29--z27--z26..z25..z21--z22{down}..z15..{up}z19--cycle;
+fill z13--z10--z9..z8..z2--z23--z22--cycle;
+fill z16--z31..z33..z34--z35--z39--z38..z37..z32--z19--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"271",digwid#/2+2ss#,cap#,0); "The digit 1";
+
+z0 = (w/2-2thickstroke/2,lserhl);
+z1 = z0 shifted (2thickstroke,0);
+z10 = (w/2-2thickstroke/2,h-2userh);
+z11 = z10 shifted (2thickstroke,0);
+z12 = z11 shifted (0,2userh+o);
+z13 = z12 shifted (-2thickstroke,0);
+z14 = z10 shifted (-lserwl-o,0);
+z15 = z14 shifted (0,2thinl);
+
+llserif(0,2,3,4,5)(1);
+lrserif(1,6,7,8,9)(1);
+
+path supone; supone =
+z0..z2..z3--z4--z8--z7..z6..z1--z12--z13{down}..{left}z15--z14--z10--z0--cycle;
+
+fill supone scaled 0.5 shifted (w/4,h/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"273",ex#+2ss#,cap#,0); "Square root sign";
+
+pickup pencircle scaled 1.5thinl;
+
+penpos0(thinl,-45);
+lft z0 = (ss,h/4);
+penpos1(thinl,-45);
+z1 = (w/4,h/3);
+penpos3(1.5thinl,-90);
+bot z3 = (3w/4,h+o+thinl);
+penpos4(1.5thinl,-90);
+z4 = (w-ss,y3);
+penpos5(thickl,45);
+z5l = z1l;
+penpos6(thickl,45);
+z6l = (w/2,0-o);
+penpos2(1.5thinl,-45);
+z2r = z6r;
+penpos7(1.5thinl,-45);
+z7r = z3r;
+
+penstroke z0e--z1e;
+penstroke z5e--z6e;
+penstroke z2e--z7e..z3e--z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+def upsideserif(suffix i,j,k) = 
+z.j=z.i+(ssslant,2lserw);
+z.k=z.j-(lserh,lserw);
+enddef;
+
+def downsideserif(suffix i,j,k) = 
+z.j=z.i+(ssslant,-2lserw);
+z.k=z.j+(-lserh,lserw);
+enddef;
+
+beginchar(oct"277",5em#/6+2ss#,cap#,0); "The Euro sign";
+
+z1 = (ss+lserw,lserh);
+z2 = z1 shifted (thickstroke,0);
+z3 = (ss+lserw,h-lserh);
+z4 = (x3+thickstroke,h-thinstroke);
+z5=(x4,thinstroke);
+z6=(w-ss-ssslant,0);
+z30=z6+(-thickstroke,thinstroke);
+z8=(x6,h);
+z9=(x30,h-thinstroke);
+upsideserif(6,7,29);
+downsideserif(8,10,11);
+
+llserif(1,12,13,14,26)(1);
+ulserif(3,18,19,20,28)(1);
+
+y14 := y26 := y6 := 0;
+y20 := y28 := y8 := h;
+
+fill
+z1--z3..z18..z19--z20--z8--z10---z11..{left}z9--z4--z5--z30{right}..z29---z7--z6--z14--z13..z12..z1..cycle;
+
+pickup pencircle scaled 1.5thinstroke;
+lft z40 = (ss,0.35h);
+lft z41 = (ss,0.6h);
+rt z42 = (2w/3,0.35h);
+rt z43 = (5w/6,0.6h);
+draw z40--z42; draw z41--z43;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"174",ex#+2ss#,ex#,0); "simple heart";
+
+pickup pencircle scaled thinl;
+z0 = (w/4,h);
+z1 = (3w/4,h);
+z2 = (w/2,0);
+z3 = (w/2,h-ex/3);
+path heart; heart = z0..{down}z3{up}..z1..{dir -135}z2{dir 135}..cycle;
+filldraw heart;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80);
+endchar;
+
+beginchar(oct"175",ex#+2ss#,ex#,0); "simple heart outline";
+pickup pencircle scaled thinl;
+draw heart;
+endchar;
+
+beginchar(oct"303",2.4pwid#,cap#,0); "double prime mark";
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted (0,h-1.75pwid);
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted
+	(1.00pwid,h-1.75pwid);
+endchar;
+
+beginchar(oct"313",3.7pwid#,cap#,0); "triple prime mark";
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted (0,h-2.10pwid);
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted
+	(1.00pwid,h-2.10pwid);
+fill singquote rotatedaround ((w/2,pwid/2),-30) shifted
+	(2.00pwid,h-2.10pwid);
+endchar;
+
+beginchar(oct"153",1.2ex#+2ss#,cap#,0); "Genealogy:  male";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (ex-2ss-1.5thinl) shifted (ex/2,ex/2-2ss);
+top z2 = (ex-h/3,h+thickl);
+z3 = (z2--(ex/2,0)) intersectionpoint (fullcircle scaled
+	(ex-2ss-1.5thinl) shifted (ex/2,ex/2-2ss));
+z0 = 0.5[z2,z3] shifted (-ex/3,0);
+z1 = 0.5[z2,z3] shifted (ex/3,0);
+z20 = (ex/2,ex/2-2ss);
+
+path arrow; arrow = z0--z2--z3--z2--z1;
+draw arrow rotatedaround (z20,-30);
+
+picture mars; mars := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"145",1ex#+2ss#,cap#,0); "Genealogy:  female";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (w-2ss-1.5thinl) shifted (w/2,h-w/2+ss);
+bot z0 = (w/2,0);
+z1 = ((w/2,h-ex/2)--z0) intersectionpoint (fullcircle scaled
+	(w-2ss-1.5thinl) shifted (w/2,h-w/2+ss));
+z2 = 0.5[z0,z1] shifted (w/4,0);
+z3 = 0.5[z0,z1] shifted (-w/4,0);
+draw z1--z0;
+draw z2--z3;
+
+picture venus; venus := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"140",theight#+2ss#,theight#,0); "Star of David";
+
+z0 = (w/2,h/2);
+z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,60);
+z3 = z2 rotatedaround (z0,60);
+z4 = z3 rotatedaround (z0,60);
+z5 = z4 rotatedaround (z0,60);
+z6 = z5 rotatedaround (z0,60);
+z7 = (z1--z3) intersectionpoint (z2--z6);
+z8 = (z1--z5) intersectionpoint (z2--z6);
+z9 = (z6--z4) intersectionpoint (z1--z5);
+z10 = (z6--z4) intersectionpoint (z3--z5);
+z11 = (z2--z4) intersectionpoint (z3--z5);
+z12 = (z2--z4) intersectionpoint (z3--z1);
+
+pickup pencircle scaled thinl;
+draw z1--z3--z5--cycle;
+draw z2--z6--z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"150",theight#+2ss#,theight#,0); "Lined five-point star";
+
+z0 = (w/2,h/2);
+z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,72);
+z3 = z2 rotatedaround (z0,72);
+z4 = z3 rotatedaround (z0,72);
+z5 = z4 rotatedaround (z0,72);
+z6 = (z2--z5) intersectionpoint (z1--z4);
+z7 = (z2--z5) intersectionpoint (z1--z3);
+z8 = (z3--z5) intersectionpoint (z4--z1);
+z9 = (z4--z2) intersectionpoint (z3--z1);
+z10 = (z2--z4) intersectionpoint (z3--z5);
+
+pickup pencircle scaled thinl;
+draw z1--z3--z5--z2--z4--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"160",1.2em#+2ss#,em#,0);
+"Radiation symbol, no circle";
+
+z0 = (w/2,h/2);
+z1 = (x0,0);
+z2 = z1 rotatedaround (z0,30);
+z3 = z1 rotatedaround (z0,-30);
+z4 = 0.25[z0,z3];
+z5 = 0.25[z0,z2];
+z6 = 0.25[z0,z1];
+path raddiv; raddiv = z4--z3..z1..z2--z5..z6..cycle;
+fill raddiv;
+fill raddiv rotatedaround (z0,120);
+fill raddiv rotatedaround (z0,-120);
+fill fullcircle scaled 2dotwid shifted z0;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"161",1.2em#+2ss#,em#,0);
+"Radiation symbol, with circle";
+
+z0 = (w/2,h/2);
+fill raddiv;
+fill raddiv rotatedaround (z0,120);
+fill raddiv rotatedaround (z0,-120);
+fill fullcircle scaled 2dotwid shifted z0;
+
+pickup pencircle scaled thinl;
+z1 = (w/2,0);
+draw fullcircle scaled (h+3thinl) shifted (w/2,h/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"162",1.2em#+2ss#,em#,0);
+"Biohazard symbol, no circle";
+
+circwid = w/2;
+z0 = (w/2,h/2);
+z1 = z0 shifted (0,circwid/3);
+z2 = z1 rotatedaround (z0,-120);
+z3 = z1 rotatedaround (z0,120);
+z4 = z1 shifted (0,circwid/6);
+z5 = z4 rotatedaround (z0,-120);
+z6 = z4 rotatedaround (z0,120);
+% main trefoil circles
+fill fullcircle scaled circwid shifted z1;
+fill fullcircle scaled circwid shifted z2;
+fill fullcircle scaled circwid shifted z3;
+% smaller circles tangent to larger
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+% central circle
+unfill fullcircle scaled (circwid/6) shifted z0;
+unfill fullcircle scaled (circwid/6) shifted z0;
+unfill fullcircle scaled (circwid/6) shifted z0;
+% the underlying ring
+z7 = 2[z5,z0];
+z8 = (z4--z6) intersectionpoint (z5--z7);
+pickup pencircle scaled thinl;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+% erase the arcs
+pickup pencircle scaled (thinl/2);
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z4;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z4;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z5;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z5;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z6;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z6;
+z9 = 0.5[z0,z1];
+z10 = 0.5[z0,z3];
+z11 = 0.5[z0,z2];
+undraw z0--z9; undraw z0--z9; undraw z0--z9;
+undraw z0--z10; undraw z0--z10; undraw z0--z10;
+undraw z0--z11; undraw z0--z11; undraw z0--z11;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"163",1.2em#+2ss#,em#,0);
+"Biohazard symbol, with circle";
+
+z0 = (w/2,h/2);
+z1 = z0 shifted (0,circwid/3);
+z2 = z1 rotatedaround (z0,-120);
+z3 = z1 rotatedaround (z0,120);
+z4 = z1 shifted (0,circwid/6);
+z5 = z4 rotatedaround (z0,-120);
+z6 = z4 rotatedaround (z0,120);
+% main trefoil circles
+fill fullcircle scaled circwid shifted z1;
+fill fullcircle scaled circwid shifted z2;
+fill fullcircle scaled circwid shifted z3;
+% smaller circles tangent to larger
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z4;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z5;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+unfill fullcircle scaled (2circwid/3) shifted z6;
+% central circle
+unfill fullcircle scaled (circwid/6) shifted z0;
+unfill fullcircle scaled (circwid/6) shifted z0;
+unfill fullcircle scaled (circwid/6) shifted z0;
+% the underlying ring
+z7 = 2[z5,z0];
+z8 = (z4--z6) intersectionpoint (z5--z7);
+pickup pencircle scaled thinl;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+draw fullcircle scaled 2(y1-y0) shifted z0;
+% erase the arcs
+pickup pencircle scaled (thinl/2);
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z4;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z4;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z5;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z5;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z6;
+undraw fullcircle scaled (2circwid/3 - thinl/2) shifted z6;
+z9 = 0.5[z0,z1];
+z10 = 0.5[z0,z3];
+z11 = 0.5[z0,z2];
+undraw z0--z9; undraw z0--z9; undraw z0--z9;
+undraw z0--z10; undraw z0--z10; undraw z0--z10;
+undraw z0--z11; undraw z0--z11; undraw z0--z11;
+%surrounding circle
+pickup pencircle scaled thinl;
+draw fullcircle scaled (w-2ss) shifted (w/2,h/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"164",1.2em#+2ss#,cap#,0);
+"General warning sign";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,h/2);
+z1 = (w/2,h);
+bot lft z2 = (ss,0);
+bot rt z3 = (w-ss,0);
+path trisign; trisign = z1---z2---z3---cycle;
+draw trisign;
+
+z6 = (w/2,0);
+z4 = 0.6[z0,z1];
+z5 = 0.5[z0,z6];
+z7 = z4 shifted (thinl,-thinl);
+z8 = z4 shifted (-thinl,-thinl);
+z9 = z5 shifted (thinl/2,thinl/2);
+z10 = z5 shifted (-thinl/2,thinl/2);
+z11 = 0.4[z5,z6];
+
+fill z8..z4..z7---z9..z5..z10---cycle;
+fill fullcircle scaled dotwid shifted z11;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"165",1.2ex#+2ss#,cap#,0);
+"High voltage warning, no triangle";
+
+penpos0(thickl,15);
+z0 = (w/2,2h/3);
+penpos1(0.9thickl,15);
+z1 = (w/2-thinl,h/2);
+penpos2(0.9thickl,15);
+z2r = (x0r,y1r-thinl/32);
+penpos3(0.7thickl,15);
+z3l = (x1l,h/3);
+penpos4(0.7thickl,15);
+z4l = (x3+thinl/2,y3-thinl/4);
+penpos5(0.2thinl,15);
+z5r = (x3,h/6);
+
+penstroke z0e--z1e--z2e--z3e--z4e--z5e;
+picture lightningbolt; lightningbolt := currentpicture;
+currentpicture := nullpicture;
+currentpicture := lightningbolt scaled 2 shifted (-w/2+thickl/2,-h/3);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"166",1.2em#+2ss#,cap#,0);
+"High voltage warning, with triangle";
+
+currentpicture := lightningbolt scaled 1 shifted (w/4-thickl/2,0);
+pickup pencircle scaled 1.5thinl;
+draw trisign;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"330",1em#+2ss#,cap#,0);
+"Astronomy:  the sun";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (w-2ss-1.5thinl) shifted (w/2,h/2);
+fill fullcircle scaled (2dotwid) shifted (w/2,h/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"331",1em#+2ss#,cap#,0);
+"Astronomy:  the sun with one ray";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/4+ss+1.5thinl,h/4);
+draw fullcircle scaled (w/2) shifted z0;
+top rt z1 = (w-ss,h);
+z2 = (x0,h);
+z3 = (w,y0);
+z4 = (z0--z2) intersectionpoint (fullcircle scaled (w/2)
+	shifted z0) shifted (0,1.5thinl/2);
+z5 = (z0--z3) intersectionpoint (fullcircle scaled (w/2)
+	shifted z0) shifted (1.5thinl/2,0);
+draw z1--z4;
+draw z1--z5;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"332",em#+2ss#,cap#,0);
+"Astronomy:  waxing crescent";
+
+z0 = (w/2,h/2);
+path waxcres; waxcres = fullcircle scaled (w-2ss-1.5thinl) shifted z0;
+pickup pencircle scaled 1.5thinl;
+draw waxcres;
+draw waxcres shifted (-w/4,0);
+z1 = (waxcres) intersectionpoint (waxcres shifted (-w/4,0));
+z2 = z1 reflectedabout ((0,h/2),(w,h/2));
+unfill (x1,h)--(x1,0)--(-w/2,0)--(-w/2,h)--cycle;
+
+picture crescent; crescent := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"333",em#+2ss#,cap#,0);
+"Astronomy:  full moon";
+
+pickup pencircle scaled 1.5thinl;
+draw waxcres;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"334",em#+2ss#,cap#,0);
+"Astronomy:  waning crescent";
+currentpicture := crescent reflectedabout ((w/2,h),(w/2,0));
+endchar;
+
+beginchar(oct"335",em#+2ss#,cap#,0);
+"Astronomy:  new moon";
+
+pickup pencircle scaled 1.5thinl;
+filldraw waxcres;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"336",ex#+2ss#,cap#,0);
+"Astronomy:  Mercury";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (w-2ss-1.5thinl) shifted (w/2,h-2w/3+ss);
+bot z0 = (w/2,0);
+z1 = ((w/2,h-ex/2)--z0) intersectionpoint (fullcircle scaled
+	(w-2ss-1.5thinl) shifted (w/2,h-2w/3+ss));
+z2 = 0.5[z0,z1] shifted (w/4,0);
+z3 = 0.5[z0,z1] shifted (-w/4,0);
+draw z1--z0;
+draw z2--z3;
+z4 = ((w/2,h)--(w/2,h/2)) intersectionpoint (fullcircle
+	scaled (w-2ss-1.5thinl) shifted (w/2,h-2w/3+ss));
+top lft z5 = (ss,h);
+top rt z6 = (w-ss,h);
+draw z5..z4..z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"337",em#+2ss#,cap#,0);
+"Astronomy:  Earth, variant 1";
+
+pickup pencircle scaled 1.5thinl;
+draw waxcres;
+top z0 = (w/2,h);
+bot z1 = (w/2,0);
+lft z2 = (ss,h/2);
+rt z3 = (w-ss,h/2);
+
+draw z0--z1; draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"340",ex#+2ss#,cap#,0);
+"Astronomy:  Earth, variant 2";
+currentpicture := venus reflectedabout ((0,h/2),(w,h/2));
+endchar;
+
+beginchar(oct"341",em#+2ss#,cap#,0);
+"Astronomy:  Jupiter";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,2h/3);
+top z1 = (w/3,h+o);
+z2 = (w/2,2h/3);
+lft z3 = (ss,w/6);
+rt z4 = (w-ss,y3);
+bot z5 = (3w/4,0-o);
+top z6 = (x5,h+o);
+
+draw z0{up}..z1..z2..{left}z3--z4;
+draw z5--z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"342",1ex#+2ss#,cap#,dep#);
+"Astronomy:  Saturn";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/4,h+o);
+bot z1 = (x0,0-o);
+z2 = 0.5[z1,z0];
+z3 = (2w/3,2h/3);
+rt z4 = (w-ss,h/2);
+z5 = (w/2,0);
+z6 = (2w/3,-dep/2);
+lft z7 = (ss,5h/6);
+z8 = (z0--z2) intersectionpoint (z7--(w,y7));
+z9 = 2[z7,z8];
+
+draw z0--z1;
+draw z2..z3..z4..z5..z6;
+draw z7--z9;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"343",ex#+2ss#,cap#,0);
+"Astronomy:  Uranus, variant 1";
+
+currentpicture := venus reflectedabout ((0,h/2),(w,h/2));
+fill fullcircle scaled 1.5dotwid  shifted (w/2,0.3h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"344",em#+2ss#,cap#,0);
+"Astronomy:  Uranus, variant 2";
+
+pickup pencircle scaled 1.5thinl;
+
+top lft z0 = (ss,h+o);
+lft z1 = (ss,h/3);
+top rt z2 = (w-ss,h+o);
+rt z3 = (w-ss,y1);
+z4 = z0 shifted (thickl,0);
+z5 = z2 shifted (-thickl,0);
+z6 = z1 shifted (thickl,0);
+z7 = z3 shifted (-thickl,0);
+z8 = 0.5[z4,z6];
+z9 = 0.5[z5,z7];
+top z10 = (w/2,h+o);
+z11 = (w/2,0);
+draw fullcircle scaled 3dotwid shifted (w/2,2dotwid);
+z12 = (z10--z11) intersectionpoint (fullcircle scaled
+	3dotwid shifted (w/2,2dotwid));
+
+draw z0--z4--z6--z1;
+draw z2--z5--z7--z3;
+draw z8--z9;
+draw z10--z12;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"345",em#+2ss#,cap#,0);
+"Astronomy:  Neptune";
+
+pickup pencircle scaled 1.5thinl;
+
+top lft z0 = (ss+thickl,h+o);
+top rt z1 = (w-ss-thickl,h+o);
+lft z2 = z0 shifted (-1.2thickl,-thickl);
+rt z3 = z0 shifted (1.2thickl,-thickl);
+lft z4 = z1 shifted (-1.2thickl,-thickl);
+rt z5 = z1 shifted (1.2thickl,-thickl);
+top z6 = (w/2,h+o);
+lft z7 = z6 shifted (-1.2thickl,-thickl);
+rt z8 = z6 shifted (1.2thickl,-thickl);
+bot z9 = (w/2,0-o);
+lft z10 = (ss+thickl,h/2);
+rt z11 = (w-ss-thickl,y10);
+z12 = (w/2,h/3);
+z13 = 0.5[z12,z9];
+z14 = z13 shifted (-thickl,0);
+z15 = z13 shifted (thickl,0);
+
+draw z0---z10..z12..z11---z1;
+draw z2--z0--z3; draw z7--z6--z8; draw z4--z1--z5;
+draw z6--z9; draw z14--z15;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"346",ex#+2ss#,cap#,0);
+"Astronomy:  Ceres";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,3h/4);
+top z1 = (w/2,h+o);
+rt z2 = (w-ss,y0);
+z3 = (w/2,h-ex);
+bot z4 = (w/2,0-o);
+z5 = 0.5[z3,z4];
+z6 = z5 shifted (w/4,0);
+z7 = z5 shifted (-w/4,0);
+
+draw z0..z1..z2..z3--z4;
+draw z6--z7;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"347",ex#+2ss#,cap#,0);
+"Astronomy:  Pallas";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h+o);
+lft z1 = (ss,h-ex/2);
+rt z2 = (w-ss,y1);
+z3 = (w/2,h-ex);
+bot z4 = (w/2,0-o);
+z5 = 0.5[z3,z4];
+z6 = z5 shifted (w/4,0);
+z7 = z5 shifted (-w/4,0);
+
+draw z0--z2--z3--z1--cycle;
+draw z3--z4;
+draw z6--z7;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"350",ex#+2ss#,cap#,0);
+"Astronomy:  Juno, variant 1";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,h-ex/2);
+top z1 = (w/2,h+o);
+z2 = z1 rotatedaround (z0,45);
+z3 = z2 rotatedaround (z0,45);
+z4 = z3 rotatedaround (z0,45);
+z5 = z4 rotatedaround (z0,45);
+z6 = z5 rotatedaround (z0,45);
+z7 = z6 rotatedaround (z0,45);
+z8 = z7 rotatedaround (z0,45);
+bot z9 = (w/2,0-o);
+z10 = 0.5[z9,(w/2,h-ex)];
+z11 = z10 shifted (-w/4,0);
+z12 = z10 shifted (w/4,0);
+
+draw z1--z5; draw z8--z4; draw z7--z3; draw z2--z6;
+draw z0--z9; draw z11--z12;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"351",ex#+2ss#,cap#,0);
+"Astronomy:  Juno, variant 2";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (w-2ss-1.5thinl) shifted
+	(w/2,h-2w/3-ss);
+bot z0 = (w/2,0);
+z1 = ((w/2,h-ex/2)--z0) intersectionpoint (fullcircle scaled
+	(w-2ss-1.5thinl) shifted (w/2,h-2w/3-ss));
+z2 = 0.5[z0,z1] shifted (w/4,0);
+z3 = 0.5[z0,z1] shifted (-w/4,0);
+draw z1--z0;
+draw z2--z3;
+z4 = ((w/2,h)--(w/2,h/2)) intersectionpoint (fullcircle
+	scaled (w-2ss-1.5thinl) shifted (w/2,h-2w/3-ss));
+top lft z5 = (ss,h+o);
+top rt z6 = (w-ss,h+o);
+z7 = (2w/5,h+o);
+z8 = (3w/5,h+o);
+
+draw z4--z5; draw z4--z6; draw z4--z7; draw z4--z8;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"352",em#+2ss#,cap#,0);
+"Astronomy:  Vesta, variant 1";
+
+pickup pencircle scaled 1.5thinl;
+bot lft z0 = (ss,0);
+bot rt z1 = (w-ss,0);
+lft z2 = (ss,h-ex);
+rt z3 = (w-ss,h-ex);
+draw z0--z1--z3--z2--cycle;
+z4 = 0.5[z2,z3];
+top z5 = (w/4,h);
+top z6 = (3w/4,h);
+z7 = (w/5,h-ex/2);
+z8 = (4w/5,y7);
+draw z4{up}..{left}z5..z7;
+draw z4{up}..{right}z6..z8;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"353",ex#+2ss#,cap#,0);
+"Astronomy:  Vesta, variant 2";
+
+pickup pencircle scaled 1.5thinl;
+bot lft z0 = (ss,0);
+bot rt z1 = (w-ss,0);
+bot lft z2 = (ss+3hair,h/8);
+bot rt z3 = (w-ss-3hair,h/8);
+z4 = (x2,3h/4);
+z5 = (x3,3h/4);
+lft z6 = (ss,y4);
+rt z7 = (w-ss,y5);
+z8 = (w/2,h/2);
+draw z0--z1--z3--z2--cycle;
+draw z2--z4--z5--z3--cycle;
+draw z6--z7;
+draw z4--z8; draw z5--z8;
+z9 = (w/2,h+o);
+z10 = 0.5[z4,z5];
+path ray; ray = z10--z9;
+draw ray rotatedaround (z10,18);
+draw ray rotatedaround (z10,54);
+draw ray rotatedaround (z10,-18);
+draw ray rotatedaround (z10,-54);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"354",ex#+2ss#,cap#,0);
+"Astronomy:  Astraea, variant 1";
+
+pickup pencircle scaled 1.5thinl;
+top z0 = (w/2,h+o);
+lft z1 = (ss+hair,3h/4);
+rt z2 = (w-ss-hair,3h/4);
+bot z3 = (w/2,0-o);
+z4 = z1 shifted (-hair,hair);
+z5 = z1 shifted (hair,hair);
+z6 = z2 shifted (-hair,hair);
+z7 = z2 shifted (hair,hair);
+z8 = z3 shifted (-2hair,2hair);
+z9 = z3 shifted (2hair,2hair);
+
+draw z1..z0..z2;
+draw z4--z1; draw z5--z1;
+draw z6--z2; draw z7--z2;
+draw z0--z3;
+draw z8--z3; draw z9--z3;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"355",em#+2ss#,cap#,0);
+"Astronomy:  Astraea, variant 2";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,5h/6);
+rt z1 = (w-ss,y0);
+top z3 = (w/2,h+o);
+z4 = 0.5[z0,z1];
+bot z5 = (w/2,0-o);
+lft z6 = (ss,y5);
+rt z7 = (w-ss,y5);
+z8 = z6 shifted (w/4,0);
+z9 = z7 shifted (-w/4,0);
+z10 = ((x7+x9)/2,h/2);
+z11 = ((x6+x8)/2,h/2);
+z12 = (x10,y0);
+z13 = (x11,y0);
+z14 = z5 shifted (-thinl,0);
+z15 = z5 shifted (thinl,0);
+
+filldraw z7{up}..{dir -225}z10{dir 225}..{down}z9--cycle;
+filldraw z8{up}..{dir -225}z11{dir 225}..{down}z6--cycle;
+draw z0--z1; draw z3--z5; draw z14--z15;
+draw z10--z12; draw z11--z13;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"356",ex#+2ss#,cap#,0);
+"Astronomy:  Hebe";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+z2 = (w/2,h-ex);
+bot z3 = (w/2,0-o);
+lft bot z4 = (ss,0-o);
+rt bot z5 = (w-ss,0-o);
+
+draw z4--z5; draw z3--z2; draw z0--z1--z2--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"357",em#+2ss#,ex#,0);
+"Astronomy:  Iris";
+
+pickup pencircle scaled 1.5thinl;
+bot lft z0 = (ss,0-o);
+bot rt z1 = (w-ss,0-o);
+z2 = z0 shifted (thickl,0);
+z3 = z1 shifted (-thickl,0);
+top z4 = (w/2,h+o);
+z5 = z4 shifted (0,-thickl);
+draw z0--z1;
+draw z0{up}..z4..{down}z1;
+draw z2{up}..z5..{down}z3;
+
+fill fivestar scaled 0.3 shifted (0.37w,0.15h);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"360",em#+2ss#,cap#,0);
+"Astronomy:  Aries";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,3h/4);
+rt z1 = (w-ss,3h/4);
+z2 = (w/6,h+o);
+z3 = (5w/6,h+o);
+z4 = (w/2,h/4);
+z5 = (w/2,0-o);
+draw z0..z2..{dir -60}z4--z5--z4{dir 60}..z3..z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"361",em#+2ss#,cap#,0);
+"Astronomy:  Taurus";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled (2w/3) shifted (w/2,w/3);
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+z2 = ((w/2,h)--(w/2,0)) intersectionpoint
+	(fullcircle scaled (2w/3) shifted (w/2,w/3));
+draw z0{right}..{right}z2{right}..{right}z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"362",em#+2ss#,cap#,0);
+"Astronomy:  Gemini";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot lft z2 = (ss,0-o);
+bot rt z3 = (w-ss,0-o);
+z4 = 0.5[z0,z1] shifted (0,-thickl);
+z5 = 0.5[z2,z3] shifted (0,thickl);
+
+path topgemline; topgemline = z0..z4..z1;
+path botgemline; botgemline = z2..z5..z3;
+
+z6 = ((w/3,h)--(w/3,0)) intersectionpoint topgemline;
+z7 = ((w/3,h)--(w/3,0)) intersectionpoint botgemline;
+z8 = ((2w/3,h)--(2w/3,0)) intersectionpoint topgemline;
+z9 = ((2w/3,h)--(2w/3,0)) intersectionpoint botgemline;
+
+draw topgemline; draw botgemline;
+draw z6--z7; draw z8--z9;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"363",em#+2ss#,ex#,0);
+"Astronomy:  Cancer";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 3dotwid shifted (2dotwid+ss,h-2.5dotwid);
+draw fullcircle scaled 3dotwid shifted (w-2dotwid-ss,2.5dotwid);
+z0 = ((2dotwid,h)--(2dotwid,0)) intersectionpoint
+	(fullcircle scaled 3dotwid shifted (2dotwid+ss,h-2.5dotwid));
+z1 = (halfcircle scaled 3dotwid shifted (w-2dotwid-ss,2.5dotwid)
+	rotatedaround ((w-2dotwid,2.5dotwid),180))
+	intersectionpoint ((w-2dotwid,0)--(w-2dotwid,h));
+top z2 = (w/2,h+o);
+bot z3 = (w/2,0-o);
+rt z4 = (w-ss,h-thickl);
+lft z5 = (ss,thickl);
+
+draw z0..z2..z4;
+draw z1..z3..z5;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"364",0.8em#+2ss#,cap#,dep#);
+"Astronomy:  Leo";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 4dotwid shifted (ss+3dotwid,2dotwid);
+z0 = (fullcircle scaled 4dotwid shifted (ss+3dotwid,2dotwid))
+	intersectionpoint ((w,2dotwid)--(0,2dotwid));
+z1 = (ss+3dotwid,2h/3);
+top z2 = (2w/3,h+o);
+rt z3 = (w-ss,2h/3);
+z4 = (2w/3,-dep/2);
+bot z5 = (3w/4,-dep);
+rt z6 = (w-ss,-dep/2);
+
+draw z0{up}..z1..{right}z2{right}..z3..z4..z5..z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"365",0.8em#+2ss#,cap#,dep#);
+"Astronomy:  Virgo";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (0,h+o);
+bot lft z1 = (ss,0);
+top z2 = (w/3,h+o);
+top z3 = (2w/3-thinl,h+o);
+bot z4 = (w/3,0+o);
+bot z5 = (2w/3-thinl,0+o);
+rt z6 = (w,2h/3);
+bot z7 = (5w/6,-d);
+z8 = ((x4+x1)/2,-d/2);
+z9 = 0.5[z0,z2];
+z10 = 0.5[z2,z3];
+z11 = z0 shifted (ss,-2thickl);
+z12 = z2 shifted (0,-2thickl);
+z13 = z3 shifted (0,-2thickl);
+z14 = 0.5[z13,z5];
+
+draw z0--z1;
+draw z1--z11{up}..{right}z9{right}..{down}z12--z4;
+draw z4--z12{up}..{right}z10{right}..{down}z13---z5..z7;
+draw z14..{dir 20}z6{down}..z8;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"367",em#+2ss#,ex#,0);
+"Astronomy:  Libra";
+
+pickup pencircle scaled 1.5thinl;
+bot lft z0 = (ss,0);
+bot rt z1 = (w-ss,0);
+draw z0--z1;
+top z2 = (w/2,h+o);
+z3 = (2w/5,h/3);
+z4 = (3w/5,h/3);
+lft z5 = (ss,h/3);
+rt z6 = (w-ss,h/3);
+draw z5--z3..z2..z4--z6;
+
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"370",0.8em#+2ss#,cap#,dep#);
+"Astronomy:  Scorpius";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (0,h+o);
+bot lft z1 = (ss,0);
+top z2 = (w/3,h+o);
+top z3 = (2w/3-thinl,h+o);
+bot z4 = (w/3,0+o);
+z5 = (2w/3-thinl,0-thinl);
+rt z7 = (w-ss,-d/2);
+z9 = 0.5[z0,z2];
+z10 = 0.5[z2,z3];
+z11 = z0 shifted (ss,-2thickl);
+z12 = z2 shifted (0,-2thickl);
+z13 = z3 shifted (0,-2thickl);
+z14 = 0.5[z13,z5];
+z15 = z7 shifted (-thickl,thickl);
+z16 = z7 shifted (-thickl,-thickl);
+
+draw z0--z1;
+draw z1--z11{up}..{right}z9{right}..{down}z12--z4;
+draw z4--z12{up}..{right}z10{right}..{down}z13--z5;
+draw z14---z5{down}..{right}z7;
+draw z15--z7; draw z16--z7;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"371",em#+2ss#,cap#,0);
+"Astronomy:  Sagittarius";
+
+pickup pencircle scaled 1.5thinl;
+
+bot lft z0 = (ss,0-o);
+top rt z1 = (w-ss,h+o);
+draw z0--z1;
+z2 = (w/2,y1);
+z3 = (x1,h-w/2);
+draw z2--z1; draw z3--z1;
+z4 = 0.4[z0,z1];
+z7 = 0.4[z0,z4];
+z5 = z7 rotatedaround (z4,90);
+z6 = z7 rotatedaround (z4,-90);
+draw z5--z6;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"372",em#+2ss#,cap#,dep#);
+"Astronomy:  Capricorn";
+
+pickup pencircle scaled 1.5thinl;
+
+top z0 = (ss,h+o);
+z1 = (w/3,0);
+top z2 = (w/2,h+o);
+z3 = (2w/3,0);
+z4 = (w/2,-3d/4);
+bot z5 = (w/3,-d);
+z6 = (x1,h/3);
+
+draw z0{right}..{down}z6--z1--z6{up}..{dir 45}z2{dir
+	-45}..{down}z3;
+draw z3..z4..z5;
+draw fullcircle scaled 3dotwid shifted (w-2dotwid,dotwid);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"373",em#+2ss#,ex#,0);
+"Astronomy:  Aquarius";
+
+pickup pencircle scaled 1.5thinl;
+lft z0 = (ss,2h/3);
+z1 = (ss+w/4,2h/3+thickl);
+z2 = (ss+w/4+w/16,2h/3);
+z3 = (ss+2w/4+w/16,2h/3+thickl);
+z4 = (ss+2w/4+2w/16,2h/3);
+z5 = (ss+3w/4+2w/16,2h/3+thickl);
+z6 = (ss+3w/4+3w/16,2h/3);
+
+path aqr; aqr = z0--z1--z2--z3--z4--z5--z6;
+draw aqr; draw aqr shifted (0,-h/3-thickl/2);
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"374",0.8em#+2ss#,cap#,0);
+"Astronomy:  Pisces";
+
+pickup pencircle scaled 1.5thinl;
+
+top lft z0 = (ss,h+o);
+bot lft z1 = (ss,0-o);
+top rt z2 = (w-ss,h+o);
+bot rt z3 = (w-ss,0-o);
+z4 = (w/3,h/2);
+z5 = (2w/3,h/2);
+lft z6 = (ss,h/2);
+rt z7 = (w-ss,h/2);
+draw z0..z4..z1; draw z2..z5..z3; draw z6--z7;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"375",ex#+2ss#,cap#,0);
+"Astronomy:  Pluto";
+
+pickup pencircle scaled 1.5thinl;
+z0 = (w/2,h/2+1.5thinl);
+bot z1 = (w/2,0-o);
+z3 = 0.5[z0,z1];
+z4 = z3 shifted (-w/4,0);
+z5 = z3 shifted (w/4,0);
+draw z0--z1; draw z4--z5;
+z8 = 0.5[z0,(w/2,h+o)] shifted (0,1thinl);
+lft z6 = (ss,y8);
+rt z7 = (w-ss,y8);
+draw z6{down}..{right}z0{right}..{up}z7;
+draw fullcircle scaled (h/2-thickl-1.5thinl) shifted z8;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"376",ex#+2ss#,cap#,0);
+"Astronomy:  Pluto, variant";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+bot lft z1 = (ss,0-o);
+top z2 = (w/2,h+o);
+rt z3 = (w-ss,3h/4);
+z4 = 0.5[z1,z0];
+bot rt z5 = (w-ss,0-o);
+z6 = (x2,y4);
+
+draw z0--z1--z5;
+draw z0---z2..z3..z6---z4;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"377",em#+2ss#,cap#,0);
+"Astronomy:  Comet";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 4dotwid shifted (ss+2.5dotwid,2.5dotwid);
+z0 = ((ss,0)--(w-ss,h)) intersectionpoint
+	(fullcircle scaled 4dotwid shifted (ss+2.5dotwid,2.5dotwid));
+top rt z1 = (w-ss,h+o);
+z7 = (ss+2.5dotwid,2.5dotwid);
+z2 = z1 rotatedaround (z7,25);
+z3 = z1 rotatedaround (z7,-25);
+z4 = z0 rotatedaround (z7,60);
+z5 = z0 rotatedaround (z7,-60);
+z8 = 0.7[z5,z3];
+z9 = 0.7[z4,z2];
+z10 = 0.8[z0,z1];
+draw z0--z10; draw z4--z9; draw z5--z8;
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"310",ex#+2ss#,ex#,0);
+"Astronomy:  quadrature";
+
+pickup pencircle scaled 1.5thinl;
+top lft z0 = (ss,h+o);
+top rt z1 = (w-ss,h+o);
+bot rt z2 = (w-ss,0-o);
+bot lft z3 = (ss,0-o);
+draw z0--z1--z2--z3--cycle;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"311",em#+2ss#,cap#,0);
+"Astronomy:  opposition";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 4dotwid shifted
+	(2.5dotwid+ss,2.5dotwid);
+draw fullcircle scaled 4dotwid shifted
+	(w-2.5dotwid-ss,h-2.5dotwid);
+z0 = (2.5dotwid+ss,2.5dotwid);
+z1 = (w-2.5dotwid-ss,h-2.5dotwid);
+z2 = (z0--z1) intersectionpoint
+	(fullcircle scaled 4dotwid shifted
+	(w-2.5dotwid-ss,h-2.5dotwid));
+z3 = (z1--z0) intersectionpoint
+	(fullcircle scaled 4dotwid shifted
+	(2.5dotwid+ss,2.5dotwid));
+draw z2--z3;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"312",em#-2.5dotwidth#+2ss#,ex#,0);
+"Astronomy:  conjunction";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 4dotwid shifted
+	(2.5dotwid+ss,2.5dotwid);
+z0 = (2.5dotwid+ss,2.5dotwid);
+top rt z1 = (w-ss,h+o);
+z2 = (z0--z1) intersectionpoint
+	(fullcircle scaled 4dotwid shifted
+	(2.5dotwid+ss,2.5dotwid));
+draw z2--z1;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"315",em#+2ss#,cap#,0);
+"Astronomy:  ascending node";
+
+pickup pencircle scaled 1.5thinl;
+draw fullcircle scaled 4dotwid shifted (3dotwid,2dotwid);
+draw fullcircle scaled 4dotwid shifted (w-3dotwid,2dotwid);
+z0 = ((3dotwid,h)--(3dotwid,0)) intersectionpoint
+	(fullcircle scaled 4dotwid shifted (3dotwid,2dotwid));
+z1 = ((w-3dotwid,h)--(w-3dotwid,0)) intersectionpoint
+	(fullcircle scaled 4dotwid shifted (w-3dotwid,2dotwid));
+top z2 = (w/2,h+o);
+
+draw z0..z2..z1;
+
+picture astnode; astnode := currentpicture;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51);
+endchar;
+
+beginchar(oct"314",em#+2ss#,cap#,0);
+"Astronomy:  descending node";
+currentpicture := astnode rotatedaround ((w/2,h/2),180);
+endchar;

@@ -1,0 +1,27 @@
+% +AMDG  This document was begun on 3 July 11EX, the feast
+% of St. Irenaeus, EM, and it is humbly dedicated to him and
+% to the Immaculate Heart of Mary for their prayers, and to
+% the Sacred Heart of Jesus for His mercy.
+
+beginchar(oct"140",0.6ex#+2ss#,asch#,0); "Cursive l";
+italcorr(asch#*slant);
+
+penpos0(thinl,0);
+z0l = (ss,0);
+penpos1(thinl,0);
+z1r = (w-ss,3h/4);
+penpos2(1.5thinl,90);
+z2r = (w/2,h+o);
+penpos3(thickl,180);
+z3r = (ss,3h/4);
+penpos4(thickl,180);
+z4l = (w-ss,0);
+penpos5(thickl,180);
+z5 = (w/2,h/4);
+penpos6(thinl,0);
+z6 = z5;
+
+penstroke z0e..z6e..z1e..z2e..z3e..z5e..z4e;
+
+penlabels(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
+endchar;

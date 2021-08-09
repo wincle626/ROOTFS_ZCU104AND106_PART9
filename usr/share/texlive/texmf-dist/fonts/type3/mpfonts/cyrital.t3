@@ -1,0 +1,673 @@
+8 dict dup begin
+/FontType 3 def
+/FontMatrix [ 0.001 0 0 0.001 0 0 ] def
+/FontBBox [ 0 0 0 0 ] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+Encoding 0 /ch0 put
+Encoding 1 /ch1 put
+Encoding 2 /ch2 put
+Encoding 3 /ch3 put
+Encoding 4 /ch4 put
+Encoding 5 /ch5 put
+Encoding 6 /ch6 put
+Encoding 7 /ch7 put
+Encoding 8 /ch8 put
+Encoding 9 /ch9 put
+Encoding 10 /ch10 put
+Encoding 11 /ch11 put
+Encoding 12 /ch12 put
+Encoding 13 /ch13 put
+Encoding 14 /ch14 put
+Encoding 15 /ch15 put
+Encoding 16 /ch16 put
+Encoding 17 /ch17 put
+Encoding 18 /ch18 put
+Encoding 19 /ch19 put
+Encoding 20 /ch20 put
+Encoding 21 /ch21 put
+Encoding 22 /ch22 put
+Encoding 23 /ch23 put
+Encoding 24 /ch24 put
+Encoding 25 /ch25 put
+Encoding 26 /ch26 put
+Encoding 27 /ch27 put
+Encoding 28 /ch28 put
+Encoding 29 /ch29 put
+Encoding 30 /ch30 put
+Encoding 31 /ch31 put
+Encoding 32 /ch32 put
+Encoding 33 /ch33 put
+Encoding 34 /ch34 put
+Encoding 35 /ch35 put
+Encoding 36 /ch36 put
+Encoding 37 /ch37 put
+Encoding 38 /ch38 put
+Encoding 39 /ch39 put
+Encoding 40 /ch40 put
+Encoding 41 /ch41 put
+Encoding 42 /ch42 put
+Encoding 43 /ch43 put
+Encoding 44 /ch44 put
+Encoding 45 /ch45 put
+Encoding 46 /ch46 put
+Encoding 47 /ch47 put
+Encoding 48 /ch48 put
+Encoding 49 /ch49 put
+Encoding 50 /ch50 put
+Encoding 51 /ch51 put
+Encoding 52 /ch52 put
+Encoding 53 /ch53 put
+Encoding 54 /ch54 put
+Encoding 55 /ch55 put
+Encoding 56 /ch56 put
+Encoding 57 /ch57 put
+Encoding 58 /ch58 put
+Encoding 59 /ch59 put
+Encoding 60 /ch60 put
+Encoding 61 /ch61 put
+Encoding 62 /ch62 put
+Encoding 63 /ch63 put
+Encoding 64 /ch64 put
+Encoding 65 /ch65 put
+Encoding 66 /ch66 put
+Encoding 67 /ch67 put
+Encoding 68 /ch68 put
+Encoding 69 /ch69 put
+Encoding 70 /ch70 put
+Encoding 71 /ch71 put
+Encoding 72 /ch72 put
+Encoding 73 /ch73 put
+Encoding 74 /ch74 put
+Encoding 75 /ch75 put
+Encoding 76 /ch76 put
+Encoding 77 /ch77 put
+Encoding 78 /ch78 put
+Encoding 79 /ch79 put
+Encoding 80 /ch80 put
+Encoding 81 /ch81 put
+Encoding 82 /ch82 put
+Encoding 83 /ch83 put
+Encoding 84 /ch84 put
+Encoding 85 /ch85 put
+Encoding 86 /ch86 put
+Encoding 87 /ch87 put
+Encoding 88 /ch88 put
+Encoding 89 /ch89 put
+Encoding 90 /ch90 put
+Encoding 91 /ch91 put
+Encoding 92 /ch92 put
+Encoding 93 /ch93 put
+Encoding 94 /ch94 put
+Encoding 95 /ch95 put
+Encoding 96 /ch96 put
+Encoding 97 /ch97 put
+Encoding 98 /ch98 put
+Encoding 99 /ch99 put
+Encoding 100 /ch100 put
+Encoding 101 /ch101 put
+Encoding 102 /ch102 put
+Encoding 103 /ch103 put
+Encoding 104 /ch104 put
+Encoding 105 /ch105 put
+Encoding 106 /ch106 put
+Encoding 107 /ch107 put
+Encoding 108 /ch108 put
+Encoding 109 /ch109 put
+Encoding 110 /ch110 put
+Encoding 111 /ch111 put
+Encoding 112 /ch112 put
+Encoding 113 /ch113 put
+Encoding 114 /ch114 put
+Encoding 115 /ch115 put
+Encoding 116 /ch116 put
+Encoding 117 /ch117 put
+Encoding 118 /ch118 put
+Encoding 119 /ch119 put
+Encoding 120 /ch120 put
+Encoding 121 /ch121 put
+Encoding 122 /ch122 put
+Encoding 123 /ch123 put
+Encoding 124 /ch124 put
+Encoding 125 /ch125 put
+Encoding 126 /ch126 put
+Encoding 127 /ch127 put
+/CharProcs 129 dict def
+CharProcs /.notdef { } put
+CharProcs /ch0 {
+0 0 setcharwidth
+} put
+CharProcs /ch1 {
+0 0 setcharwidth
+} put
+CharProcs /ch2 {
+0 0 setcharwidth
+} put
+CharProcs /ch3 {
+0 0 setcharwidth
+} put
+CharProcs /ch4 {
+0 0 setcharwidth
+} put
+CharProcs /ch5 {
+0 0 setcharwidth
+} put
+CharProcs /ch6 {
+0 0 setcharwidth
+} put
+CharProcs /ch7 {
+0 0 setcharwidth
+} put
+CharProcs /ch8 {
+0 0 setcharwidth
+} put
+CharProcs /ch9 {
+0 0 setcharwidth
+} put
+CharProcs /ch10 {
+0 0 setcharwidth
+} put
+CharProcs /ch11 {
+0 0 setcharwidth
+} put
+CharProcs /ch12 {
+0 0 setcharwidth
+} put
+CharProcs /ch13 {
+0 0 setcharwidth
+} put
+CharProcs /ch14 {
+0 0 setcharwidth
+} put
+CharProcs /ch15 {
+0 0 setcharwidth
+} put
+CharProcs /ch16 {
+0 0 setcharwidth
+} put
+CharProcs /ch17 {
+0 0 setcharwidth
+} put
+CharProcs /ch18 {
+0 0 setcharwidth
+} put
+CharProcs /ch19 {
+0 0 setcharwidth
+} put
+CharProcs /ch20 {
+0 0 setcharwidth
+} put
+CharProcs /ch21 {
+0 0 setcharwidth
+} put
+CharProcs /ch22 {
+0 0 setcharwidth
+} put
+CharProcs /ch23 {
+0 0 setcharwidth
+} put
+CharProcs /ch24 {
+0 0 setcharwidth
+} put
+CharProcs /ch25 {
+0 0 setcharwidth
+} put
+CharProcs /ch26 {
+0 0 setcharwidth
+} put
+CharProcs /ch27 {
+0 0 setcharwidth
+} put
+CharProcs /ch28 {
+0 0 setcharwidth
+} put
+CharProcs /ch29 {
+0 0 setcharwidth
+} put
+CharProcs /ch30 {
+0 0 setcharwidth
+} put
+CharProcs /ch31 {
+0 0 setcharwidth
+} put
+CharProcs /ch32 {
+0 0 setcharwidth
+} put
+CharProcs /ch33 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch34 {
+0 0 setcharwidth
+} put
+CharProcs /ch35 {
+0 0 setcharwidth
+} put
+CharProcs /ch36 {
+0 0 setcharwidth
+} put
+CharProcs /ch37 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto stroke
+} put
+CharProcs /ch38 {
+0 0 setcharwidth
+} put
+CharProcs /ch39 {
+0 0 setcharwidth
+} put
+CharProcs /ch40 {
+0 0 setcharwidth
+} put
+CharProcs /ch41 {
+0 0 setcharwidth
+} put
+CharProcs /ch42 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch43 {
+0 0 setcharwidth
+} put
+CharProcs /ch44 {
+0 0 setcharwidth
+} put
+CharProcs /ch45 {
+0 0 setcharwidth
+} put
+CharProcs /ch46 {
+0 0 setcharwidth
+} put
+CharProcs /ch47 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0.00008 moveto
+0 -0.00008 lineto stroke
+} put
+CharProcs /ch48 {
+0 0 setcharwidth
+} put
+CharProcs /ch49 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch50 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch51 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch52 {
+0 0 setcharwidth
+} put
+CharProcs /ch53 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch54 {
+0 0 setcharwidth
+} put
+CharProcs /ch55 {
+0 0 setcharwidth
+ 1 1 1 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch56 {
+0 0 setcharwidth
+} put
+CharProcs /ch57 {
+0 0 setcharwidth
+} put
+CharProcs /ch58 {
+0 0 setcharwidth
+} put
+CharProcs /ch59 {
+0 0 setcharwidth
+} put
+CharProcs /ch60 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch61 {
+0 0 setcharwidth
+} put
+CharProcs /ch62 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinecap 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto stroke
+} put
+CharProcs /ch63 {
+0 0 setcharwidth
+} put
+CharProcs /ch64 {
+0 0 setcharwidth
+} put
+CharProcs /ch65 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath fill
+} put
+CharProcs /ch66 {
+0 0 setcharwidth
+} put
+CharProcs /ch67 {
+0 0 setcharwidth
+} put
+CharProcs /ch68 {
+0 0 setcharwidth
+} put
+CharProcs /ch69 {
+0 0 setcharwidth
+} put
+CharProcs /ch70 {
+0 0 setcharwidth
+} put
+CharProcs /ch71 {
+0 0 setcharwidth
+} put
+CharProcs /ch72 {
+0 0 setcharwidth
+} put
+CharProcs /ch73 {
+0 0 setcharwidth
+} put
+CharProcs /ch74 {
+0 0 setcharwidth
+} put
+CharProcs /ch75 {
+0 0 setcharwidth
+} put
+CharProcs /ch76 {
+0 0 setcharwidth
+} put
+CharProcs /ch77 {
+0 0 setcharwidth
+} put
+CharProcs /ch78 {
+0 0 setcharwidth
+} put
+CharProcs /ch79 {
+0 0 setcharwidth
+} put
+CharProcs /ch80 {
+0 0 setcharwidth
+} put
+CharProcs /ch81 {
+0 0 setcharwidth
+} put
+CharProcs /ch82 {
+0 0 setcharwidth
+} put
+CharProcs /ch83 {
+0 0 setcharwidth
+} put
+CharProcs /ch84 {
+0 0 setcharwidth
+} put
+CharProcs /ch85 {
+0 0 setcharwidth
+} put
+CharProcs /ch86 {
+0 0 setcharwidth
+} put
+CharProcs /ch87 {
+0 0 setcharwidth
+} put
+CharProcs /ch88 {
+0 0 setcharwidth
+} put
+CharProcs /ch89 {
+0 0 setcharwidth
+} put
+CharProcs /ch90 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch91 {
+0 0 setcharwidth
+} put
+CharProcs /ch92 {
+0 0 setcharwidth
+} put
+CharProcs /ch93 {
+0 0 setcharwidth
+} put
+CharProcs /ch94 {
+0 0 setcharwidth
+} put
+CharProcs /ch95 {
+0 0 setcharwidth
+} put
+CharProcs /ch96 {
+0 0 setcharwidth
+} put
+CharProcs /ch97 {
+0 0 setcharwidth
+} put
+CharProcs /ch98 {
+0 0 setcharwidth
+} put
+CharProcs /ch99 {
+0 0 setcharwidth
+} put
+CharProcs /ch100 {
+0 0 setcharwidth
+} put
+CharProcs /ch101 {
+0 0 setcharwidth
+} put
+CharProcs /ch102 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch103 {
+0 0 setcharwidth
+} put
+CharProcs /ch104 {
+0 0 setcharwidth
+ 0 0 0 setrgbcolor 0 0 dtransform truncate idtransform setlinewidth pop
+ [] 0 setdash 1 setlinejoin 10 setmiterlimit
+newpath 0 0 moveto
+0 0 lineto
+0 0 lineto
+0 0 lineto
+ closepath
+gsave fill grestore stroke
+} put
+CharProcs /ch105 {
+0 0 setcharwidth
+} put
+CharProcs /ch106 {
+0 0 setcharwidth
+} put
+CharProcs /ch107 {
+0 0 setcharwidth
+} put
+CharProcs /ch108 {
+0 0 setcharwidth
+} put
+CharProcs /ch109 {
+0 0 setcharwidth
+} put
+CharProcs /ch110 {
+0 0 setcharwidth
+} put
+CharProcs /ch111 {
+0 0 setcharwidth
+} put
+CharProcs /ch112 {
+0 0 setcharwidth
+} put
+CharProcs /ch113 {
+0 0 setcharwidth
+} put
+CharProcs /ch114 {
+0 0 setcharwidth
+} put
+CharProcs /ch115 {
+0 0 setcharwidth
+} put
+CharProcs /ch116 {
+0 0 setcharwidth
+} put
+CharProcs /ch117 {
+0 0 setcharwidth
+} put
+CharProcs /ch118 {
+0 0 setcharwidth
+} put
+CharProcs /ch119 {
+0 0 setcharwidth
+} put
+CharProcs /ch120 {
+0 0 setcharwidth
+} put
+CharProcs /ch121 {
+0 0 setcharwidth
+} put
+CharProcs /ch122 {
+0 0 setcharwidth
+} put
+CharProcs /ch123 {
+0 0 setcharwidth
+} put
+CharProcs /ch124 {
+0 0 setcharwidth
+} put
+CharProcs /ch125 {
+0 0 setcharwidth
+} put
+CharProcs /ch126 {
+0 0 setcharwidth
+} put
+CharProcs /ch127 {
+0 0 setcharwidth
+} put
+/BuildGlyph {exch begin CharProcs exch get exec end} bind def
+/BuildChar {1 index /Encoding get exch get 1 index /BuildGlyph get exec} bind def
+end
+/cyrital exch definefont pop
